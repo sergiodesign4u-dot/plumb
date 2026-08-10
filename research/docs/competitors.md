@@ -4,7 +4,7 @@ Three groups, five per group. HARD is the same product for the same audience, SO
 
 Every fact below comes from a page opened in the browser on **2026-08-11**. Anything taken from a search summary rather than the page itself is marked `[?]` and is not treated as a fact. Only public, pre-login pages were opened. No accounts were created.
 
-Status: HARD collected. SOFT and ASPIRATIONAL pending.
+Status: HARD and SOFT collected. ASPIRATIONAL pending.
 
 ## HARD
 
@@ -50,6 +50,49 @@ Status: HARD collected. SOFT and ASPIRATIONAL pending.
 - Audience: data teams, with non-technical business users named as the people who get self-serve access
 - No specific BI integrations named on the page, only "dozens of out-of-the-box integrations", `[?]`
 - Pricing (`getdbt.com/pricing`): Developer free, one seat, Semantic Layer not included. Starter $100/seat/month, five developer seats, Semantic Layer basic. Enterprise and Enterprise+ custom, Semantic Layer advanced
+
+## SOFT
+
+| Product | Type | Why in this group | What to study |
+| --- | --- | --- | --- |
+| Looker | BI platform with a semantic model | The classic market answer to "we have different numbers": define the logic once in LookML | How a governed definition is surfaced to a reader who never opens LookML |
+| Omni | Modern BI with a promotable semantic model | Same job from the other side: ad hoc work gets promoted into governed logic instead of being forbidden | The promotion moment: how an ungoverned number becomes a governed one |
+| Cube | API-first semantic layer | Definitions as a service for apps and agents rather than for people | Reader pricing and what a viewer role is actually allowed to see |
+| Monte Carlo | Data observability, now positioned as agent trust | Answers "is this number broken" but for the data engineer, not for the person reading the number | How an incident is explained to somebody who did not build the pipeline |
+| Sifflet | Data observability with a business-facing frame | Closest to our idea that doubt belongs in front of the business, not only in an engineering channel | How "why it happened" is presented, and to whom |
+
+### Facts collected
+
+**Looker** (`cloud.google.com/looker`, opened 2026-08-11; screen: `research/screens/soft-looker-home.png`)
+- H1 "Looker", H2 "Agentic BI platform for organizations"
+- Sub: "Go beyond static dashboards with a governed intelligence experience. Leveraging the power of Gemini and Google Cloud's Agentic Data Cloud, Looker delivers the most intelligent BI solution by combining foundational AI, cloud-first infrastructure, industry leading APIs, and our flexible semantic layer."
+- On LookML: "By defining business logic in LookML, you create the definitive source of truth for your metrics-whether they are powering a chart or an AI agent. This vital backbone serves as the infrastructure for human analysts and LLMs alike, eliminating agent hallucinations and ensuring total consistency"
+- Product highlights listed: Conversational Analytics Agents, composable agentic BI platform, open and trusted semantic model, self-service BI
+- Pricing (`cloud.google.com/looker/pricing`): three editions, Standard (under 50 users), Enterprise, Embed, all "Call sales", no dollar figures. Each edition includes 10 Standard Users and 2 Developer Users. Three license types: Developer, Standard, Viewer, where Viewer gets folders, boards, dashboards and Looks only. Conversational Analytics token overage from 2026-10-01: $3.00 per 1M input data tokens, $20.00 per 1M output data tokens
+
+**Omni** (`omni.co`, opened 2026-08-11; screen: `research/screens/soft-omni-home.png`)
+- Hero: "The AI analytics platform". Sub: "Omni turns your data into a source of truth for AI, so anyone can get answers they trust."
+- Governance model on the page: "experts define core logic, while everyone else contributes domain expertise"
+- Personas addressed: data teams drowning in ad hoc requests, business teams tired of waiting, product teams needing AI without roadmap disruption
+- Pricing: no numbers on the homepage, and `omni.co/pricing` returns HTTP 404. Public per-seat pricing is `[?]`
+
+**Cube** (`cube.dev`, opened 2026-08-11; screen: `research/screens/soft-cube-home.png`)
+- Hero: "The agentic analytics platform built on a semantic layer". Sub: "AI answers your team - and your customers - can trust. Grounded in your semantic model, governed end to end."
+- Positioning: chat, workbooks and dashboards grounded on "a single governed model - so every answer ties back to the same numbers"
+- Pricing (`cube.dev/pricing`), public with numbers: Free forever, Starter $40 per developer per month, Premium $80 per developer per month, Enterprise custom. On Premium, extra seats are Explorer $40 per user per month and **Viewer $20 per user per month**
+- The page does not mention an open-source core, although Cube is widely described as open source elsewhere, so that is `[?]` here
+
+**Monte Carlo** (`montecarlodata.com` redirects to `montecarlo.ai`, opened 2026-08-11; screen: `research/screens/soft-montecarlo-home.png`)
+- Hero: "Trust your agents in production". Sub: "Monte Carlo is the agent trust platform that unifies data and agent observability to monitor, troubleshoot, and improve production AI systems."
+- The category leader in data observability now leads with agent trust, not with data quality. The old domain redirects to the new one
+- Personas listed in solutions: Data Engineers, Data Analysts, Data Governance, CDAOs
+- Platform features named in the footer: Root Cause Analysis, Lineage and Impact, Performance
+- Pricing: no public numbers, the pricing link is a request for pricing
+
+**Sifflet** (`siffletdata.com`, opened 2026-08-11; screen: `research/screens/soft-sifflet-home.png`)
+- Hero: "The Control Plane for Data and AI". Sub: "We catch data issues before they reach the business, show exactly why they happened, and how to fix it. So the data behind every decision is one you can trust."
+- Personas addressed: Data Engineers, Data Leaders, Data Users, Data Governance Leaders
+- Pricing: no numbers, "Contact us" and "Start for Free Now"
 
 ### Known gap in this round
 
