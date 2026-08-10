@@ -177,4 +177,8 @@ What changes when answered: whether provenance needs a machine-readable surface 
 
 ### Known gap in this round
 
+Checked on 2026-08-11 whether Refero could close this gap: it cannot. Searches for lineage graphs, metric detail pages and data warehouse consoles return consumer and developer SaaS (Resend, Intercom, n8n, GlossGenius, Vercel, Anthropic console), and not one product from this competitor set. Refero indexes the categories it indexes, and enterprise data tooling is not among them. Recorded here so nobody spends the search twice. The route that will work is public documentation, which carries real interface screenshots without an account.
+
+One useful thing did come out of that search: Resend puts its freshness marker in "a small update timestamp footer" (`refero.design/pages/9d0debce-382e-442d-91a2-31a623730246`). That is a live example of the pattern our first design principle forbids, and it is worth keeping as a counter-reference.
+
 None of the fifteen show the actual product surface without an account. Every claim about how a number, a definition or a lineage graph is *presented* is therefore `[?]` until it is seen in a public demo, a product tour or documentation screenshots. This matters more for Plumb than it would for another product, because the reading surface is exactly what we are designing. Closing this gap is the first thing to do before the matrix.
