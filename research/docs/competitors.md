@@ -175,10 +175,55 @@ What changes when answered: the business model hypothesis, and the activation me
 Addressee: a data lead in a target company, plus me as owner for the scope call.
 What changes when answered: whether provenance needs a machine-readable surface inside the MVP. If yes, the MVP grows an API and the IA grows a whole branch. If no, we stay a human-facing product while the entire market moves the other way, and that has to be a deliberate choice rather than an oversight.
 
+## Product surfaces, taken from public documentation
+
+The marketing sites hide the product behind a login. The documentation does not. Everything below comes from documentation pages opened on 2026-08-11, which describe the real interface and embed real screenshots of it. This is second-hand compared with using the product, and it is marked as such wherever the doc describes rather than shows.
+
+**PowerMetrics, the metric overview** (`support.powermetrics.app`, article 37726220561559; screen: `research/screens/ui-powermetrics-metric-overview.png`)
+- The banner carries the metric name, the connected service, the "number of days of stored history" and the "last time your data was refreshed"
+- A certified metric shows "a blue check mark" beside its name. When certification is removed, the page shows who removed it plus the date and time. A metric that was never certified shows "None" in the About tab
+- "If there are issues with the metric, you'll see an error overlay on top of the service icon"
+- Layout: four micro views across the top, one full-window metric view in the centre, two half-window views below. Personalisation persists between sessions, and "Reset all views" sits in the 3-dot menu
+
+**Select Star, lineage** (`docs.selectstar.com/features/lineage`; screen: `research/screens/ui-selectstar-lineage-docs.png`)
+- Four modes: Upstream, Downstream, Downstream Dashboards, and Explore, where Explore "shows an advanced lineage graph that allows to navigate the flow of data at a column level"
+- Stated limit: "Not all columns are shown in the lineage graph. Select star only shows columns that have any lineage. If a column has no lineage, it is not shown."
+- Filtering by Data Type, Search Term and Exclude Search Term, where "Search Term and Exclude Search Term are not able to be layered/applied simultaneously"
+- No graph size limit or depth control is documented, `[?]`
+
+**Secoda, lineage** (`docs.secoda.co/features/data-lineage`; screen: `research/screens/ui-secoda-lineage-docs.png`)
+- Graph with arrows on each node, a search bar to "find and zoom in on a specific node, including columns", and a fullscreen view
+- Clicking a column opens "its own Impact Analysis showing what is upstream and downstream of that column". From any node, three dots and "Analyze Impact" give a list view of dependencies, filterable by resource type and integration
+- Permissions reach into the graph: "Admins can view all nodes in the lineage, including resources outside their teams. Editors and Viewers only see lineage for resources they have access to."
+- Export PNG and Export to CSV
+
+**dbt Catalog** (`docs.getdbt.com/docs/explore/explore-projects`; screen: `research/screens/ui-dbt-catalog-docs.png`)
+- Data health signals with four states: Healthy, Caution, Degraded, Unknown. They appear in search results next to the model name, on resource detail pages, and in a sidebar Health column, with detail on hover
+- A source has a source freshness section: whether the refresh succeeded, when the source was last loaded, the timestamp of the run that generated the data, and the run ID
+- The status bar under a resource title carries last run time, run success, materialization, row count and model size
+- Right-clicking a lineage node refocuses the graph three ways: node with both directions, downstream only, upstream only
+- Column-level lineage is an Enterprise and Enterprise+ feature, not available on Starter
+
+**Sifflet, incidents** (`docs.siffletdata.com/docs/incidents`; screen: `research/screens/ui-sifflet-incidents-docs.png`)
+- An incident carries Status (Open, In Progress, Closed), Severity inherited from the triggering monitors, an Assignee, and a timeline with first failure, last failure and last run
+- The Overview tab has three sections: Overview, Details, and Root Cause Analysis, the last one written by their AI agent and updated as monitors are added
+- A Notifications tab shows which destinations are active for this incident, with rules managed centrally
+- Controls named: Create Jira / ServiceNow issue, Edit, More, and a "Failing monitors only" toggle
+
+### What this changes in our gaps
+
+Two of the four gaps written above are narrower than they looked, and saying so is the point of having opened the documentation.
+
+- **Ownership on the claim is partly occupied.** PowerMetrics already shows who removed a certification and when. What it does not do is carry that name and time on the definition itself, always visible, where the number is read. Our version is the always-on case, not the exception case
+- **Doubt as a vocabulary is partly occupied.** dbt already runs four health states, Healthy, Caution, Degraded, Unknown, rather than one red alarm. What it does not do is put them in front of a business reader: they live in a catalog that a non-analyst has no reason to open
+- **The remaining gap is sharper than before.** Every one of these products makes provenance a destination: a lineage graph, a catalog page, an incident. Somebody has to go there, and to go there they must already suspect something. Nobody attaches provenance to the number at the moment it is read by somebody who does not suspect anything yet
+- **Two constraints we now know about.** Permissions reach into lineage (Secoda restricts the graph to what a viewer may access), which limits how much provenance a free reader can be shown. And column-level lineage sits behind an Enterprise tier at dbt, which says something about what it costs to build and what it is worth
+- **One deliberate difference to record.** Sifflet's doubt is an incident: it has a status, an assignee and a workflow. Ours is not an incident, it is an annotation on a number, with no assignee and nothing to close. That difference decides a large part of the IA, so it belongs in the decision log rather than in a passing remark
+
 ### Known gap in this round
 
 Checked on 2026-08-11 whether Refero could close this gap: it cannot. Searches for lineage graphs, metric detail pages and data warehouse consoles return consumer and developer SaaS (Resend, Intercom, n8n, GlossGenius, Vercel, Anthropic console), and not one product from this competitor set. Refero indexes the categories it indexes, and enterprise data tooling is not among them. Recorded here so nobody spends the search twice. The route that will work is public documentation, which carries real interface screenshots without an account.
 
 One useful thing did come out of that search: Resend puts its freshness marker in "a small update timestamp footer" (`refero.design/pages/9d0debce-382e-442d-91a2-31a623730246`). That is a live example of the pattern our first design principle forbids, and it is worth keeping as a counter-reference.
 
-None of the fifteen show the actual product surface without an account. Every claim about how a number, a definition or a lineage graph is *presented* is therefore `[?]` until it is seen in a public demo, a product tour or documentation screenshots. This matters more for Plumb than it would for another product, because the reading surface is exactly what we are designing. Closing this gap is the first thing to do before the matrix.
+None of the fifteen show the actual product surface without an account. That gap is now closed for five of them through public documentation, in the section above. It stays open for the other ten, and it stays partly open even for the five: documentation describes an interface and shows selected screenshots of it, which is not the same as walking through the product. Claims about visual detail, density and behaviour under a narrow viewport remain `[?]`. Every claim about how a number, a definition or a lineage graph is *presented* is therefore `[?]` until it is seen in a public demo, a product tour or documentation screenshots. This matters more for Plumb than it would for another product, because the reading surface is exactly what we are designing. Closing this gap is the first thing to do before the matrix.
