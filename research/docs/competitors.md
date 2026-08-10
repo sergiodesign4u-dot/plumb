@@ -4,7 +4,7 @@ Three groups, five per group. HARD is the same product for the same audience, SO
 
 Every fact below comes from a page opened in the browser on **2026-08-11**. Anything taken from a search summary rather than the page itself is marked `[?]` and is not treated as a fact. Only public, pre-login pages were opened. No accounts were created.
 
-Status: HARD and SOFT collected. ASPIRATIONAL pending.
+Status: all three groups collected, matrix and open questions written.
 
 ## HARD
 
@@ -94,6 +94,87 @@ Status: HARD and SOFT collected. ASPIRATIONAL pending.
 - Personas addressed: Data Engineers, Data Leaders, Data Users, Data Governance Leaders
 - Pricing: no numbers, "Contact us" and "Start for Free Now"
 
+## ASPIRATIONAL
+
+| Product | Type | Why in this group | What to study |
+| --- | --- | --- | --- |
+| Datadog | Infrastructure observability | The bar for showing state and freshness in a dense interface and letting people go deep without losing context | How a broken state reads next to a healthy one at a glance |
+| Grafana | Open observability platform | The bar for reading state at any width, phone included | What survives at narrow width and what is dropped |
+| Snowflake Horizon Catalog | Governance inside the data platform | Our landscape: if governance moves into the warehouse, Plumb has to know where it is still needed | What the platform gives away for free and where a separate product still has room |
+| Databricks Unity Catalog | Governance inside the data platform | Same pressure from the other side of the market | Same |
+| Hex | Notebook and data app platform | The best in category at explaining how a result was produced | How the steps behind a number are shown without turning into a wall of code |
+
+### Facts collected
+
+**Datadog** (`datadoghq.com`, opened 2026-08-11; screen: `research/screens/asp-datadog-home.png`)
+- Hero: "AI-Powered Observability and Security". Sub: "See inside any stack, any app, at any scale, anywhere."
+- Personas addressed: engineers and developers, IT operations, business users, security
+- No pricing numbers on the homepage
+
+**Grafana** (`grafana.com`, opened 2026-08-11; screen: `research/screens/asp-grafana-home.png`)
+- Page title: "Full-stack observability for the agentic era". Hero: "AI for observability. Observability for AI. One platform for both." Sub: "Full-stack observability with Grafana Cloud"
+- Free Forever plan, open standards named: OpenTelemetry, Prometheus
+- No dollar figures on the homepage
+
+**Snowflake Horizon Catalog** (`snowflake.com/en/product/features/horizon/`, opened 2026-08-11; screen: `research/screens/asp-snowflake-horizon.png`)
+- Hero: "Snowflake Horizon Catalog". Sub: "Govern and find data and AI assets across Snowflake and external catalogs. Enterprise context, lineage, data quality monitoring and AI guardrails mean every answer is traceable and trusted."
+- Named capabilities: column-level lineage, data quality monitoring, natural language discovery, sensitive data classification and masking, access controls
+- Whether governance is included in platform licensing or priced separately is not stated on the page, `[?]`
+
+**Databricks Unity Catalog** (`databricks.com/product/unity-catalog`, opened 2026-08-11; screen: `research/screens/asp-databricks-unity-catalog.png`)
+- Hero: "Unified governance for data, apps and AI agents". Sub: "Ensure your data, models, agents and apps are discoverable, governed and secure"
+- Named: "Automated lineage", described as "End-to-end automated column-level lineage for data and AI assets to simplify impact analysis, troubleshooting, governance and AI audits"
+- Metric views are not named on this page, `[?]`
+- Pricing not stated on the page
+
+**Hex** (`hex.tech`, opened 2026-08-11; screen: `research/screens/asp-hex-home.png`)
+- Hero: "The AI Analytics Platform where trust meets insight". Sub: "Finally — anyone can get data insights grounded in the facts of their business. Hex has a flexible approach to context that earns trust without slowing you down."
+- Trust is framed as grounding in a context engine (semantic models, database descriptions, business rules), not as showing the working
+- Tiers named: Community (free), Professional, Team, Enterprise. No numbers on the homepage
+
+## Matrix: the five most relevant
+
+| | PowerMetrics | Secoda | Atlan | dbt Semantic Layer | Sifflet |
+| --- | --- | --- | --- | --- | --- |
+| **Audience** | Growing companies, non-technical business users plus data teams | Whole data org including Data Consumers, Business Ops, PMs | Enterprise data teams and stakeholders | Data teams, with business users as consumers | Data engineers, leaders, users, governance |
+| **What the product is built on** | The metric as a first-class object | The asset catalog | The enterprise metadata graph | The dbt model | The pipeline and its incidents |
+| **Key mechanism** | Metric Catalog with defined and certified metrics | Search plus lineage plus governance in one UI | Metrics layer as the standard for KPI definitions | Definitions compiled once, served everywhere | Catch the issue before the business sees it and explain why |
+| **Where trust is shown** | On the metric, as certification | In the catalog, next to the asset | In the governance layer | In the API contract | In the incident |
+| **Monetization** | Public: $24 and $35 per month annually, extra users $288 and $420 per year, capped at 50 and 200 metrics | Tiers with no public numbers, viewers unlimited | Contact sales only | Free developer tier, $100 per seat per month for Starter | No public numbers, free entry offered |
+
+## Three common patterns
+
+1. **Trust is sold as a property of the answering system, not of the number.** Ten out of ten products opened here lead with AI in 2026: Looker sells a semantic layer "eliminating agent hallucinations", Omni turns data into "a source of truth for AI", Cube sells "AI answers your team can trust", Monte Carlo sells agent trust outright. The subject of the sentence is always the system that answers, never the figure being read.
+2. **Definition governance lives in a producer tool, and the last mile is delegated.** LookML, dbt, the semantic layer and the catalog all own the definition, then hand the number to a BI surface owned by somebody else. No product in this set treats the reading surface as its own product.
+3. **Pricing is mostly opaque.** Seven of the ten have no public numbers. Public figures exist only at PowerMetrics, Cube and dbt. In a market where the buyer is a data lead, contact-sales is the default rather than the exception.
+
+## Three differences
+
+1. **Reader pricing splits the market.** Secoda gives unlimited viewers on every tier, Cube charges $20 per viewer per month, Looker makes Viewer a separate license type. There is no market norm to inherit here, only a choice to make.
+2. **The object of the product differs, and it decides the interface.** A metric as object (PowerMetrics) produces metric cards. An asset catalog (Secoda, Select Star, Atlan) produces tables and graphs. An incident (Monte Carlo, Sifflet) produces an alert feed. Same job, three completely different screens.
+3. **The pricing lever differs.** Metric count caps at PowerMetrics (50 and 200), pure seats at dbt ($100 per seat), consumption at Looker (token overage from 2026-10-01 at $3 and $20 per 1M tokens).
+
+## Our gaps
+
+- **Provenance at the point of reading, on a phone.** Every product in this set assumes a desktop working session. Nobody sells the five minutes before a meeting, which is exactly when a wrong number does its damage.
+- **Doubt addressed to a business reader.** Sifflet comes closest by promising to explain "exactly why they happened", but the incident is still routed to people who own pipelines. A reader who is not on that channel sees a number with no warning at all.
+- **Ownership visible on the claim.** Certification exists (PowerMetrics), but the pattern is a badge, not a name and a time attached to a definition where somebody reads it.
+- **The space Monte Carlo just vacated.** The category leader moved up to agent trust. Trust in a number read by a person is now less defended than it was a year ago.
+
+## Three open questions
+
+**1. Do readers pay?**
+Addressee: me as product owner, no stakeholder exists yet.
+What changes when answered: the business model line in `CLAUDE.md`, whether the MVP needs a shared read-only link at all, and whether the reading surface must work for somebody with no account. This is a pricing decision that reaches straight into the IA.
+
+**2. Does charging by metric count actually punish filling the registry?**
+Addressee: analysts at three target companies, none interviewed yet. Until then it stays a guess.
+What changes when answered: the business model hypothesis, and the activation metric in AARRR. If a cap does not hurt adoption, the whole "seats not metrics" argument in the brief loses its ground.
+
+**3. Is an AI agent a second reader of our number, and does it read the same surface?**
+Addressee: a data lead in a target company, plus me as owner for the scope call.
+What changes when answered: whether provenance needs a machine-readable surface inside the MVP. If yes, the MVP grows an API and the IA grows a whole branch. If no, we stay a human-facing product while the entire market moves the other way, and that has to be a deliberate choice rather than an oversight.
+
 ### Known gap in this round
 
-None of the five show the actual product surface without an account. Every claim about how a number, a definition or a lineage graph is *presented* is therefore `[?]` until it is seen in a public demo, a product tour or documentation screenshots. This matters more for Plumb than it would for another product, because the reading surface is exactly what we are designing. Closing this gap is the first thing to do before the matrix.
+None of the fifteen show the actual product surface without an account. Every claim about how a number, a definition or a lineage graph is *presented* is therefore `[?]` until it is seen in a public demo, a product tour or documentation screenshots. This matters more for Plumb than it would for another product, because the reading surface is exactly what we are designing. Closing this gap is the first thing to do before the matrix.
