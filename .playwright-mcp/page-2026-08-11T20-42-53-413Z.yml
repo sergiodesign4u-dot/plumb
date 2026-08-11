@@ -1,0 +1,42 @@
+- generic [ref=f29e2]:
+  - group [ref=f29e3]:
+    - generic "Contents ▾" [ref=f29e4] [cursor=pointer]
+  - main [ref=f29e5]:
+    - generic [ref=f29e6]:
+      - paragraph [ref=f29e7]: Plumb · Stage 03b · Information Architecture
+      - heading "Every node, one chip at a time" [level=1] [ref=f29e8]
+      - paragraph [ref=f29e9]: The launcher for the detail layer. Each node gets a specification and its own page, and appears here as a chip the moment it is written. This hub fills up as the work proceeds rather than being drawn all at once.
+      - generic [ref=f29e10]:
+        - generic [ref=f29e11]: Opened 2026-08-11
+        - generic [ref=f29e12]: 37 nodes planned, 29 of them MVP
+        - generic [ref=f29e13]:
+          - text: "Registry:"
+          - code [ref=f29e14]: ia/_nav.js
+    - generic [ref=f29e15]:
+      - generic [ref=f29e16]:
+        - generic [ref=f29e17]: "01"
+        - heading "Nodes" [level=2] [ref=f29e18]
+      - paragraph [ref=f29e19]:
+        - text: "Two groups, exactly as the map declares them:"
+        - strong [ref=f29e20]: global elements
+        - text: ", which are page-level nodes with their own state matrices rather than decoration, and"
+        - strong [ref=f29e21]: pages
+        - text: . The tree they come from is on the
+        - link "sitemap page" [ref=f29e22] [cursor=pointer]:
+          - /url: sitemap.html
+        - text: .
+      - generic [ref=f29e24]:
+        - heading "Global elements" [level=3] [ref=f29e25]
+        - link "0.1 Global navigation section" [active] [ref=f29e27] [cursor=pointer]:
+          - /url: navigation.html
+          - generic [ref=f29e28]: "0.1"
+          - generic [ref=f29e29]: Global navigation
+          - generic [ref=f29e30]: section
+    - paragraph [ref=f29e32]:
+      - text: Plumb, stage 03b of 13. The node data is
+      - code [ref=f29e33]: ia/docs/sitemap.md
+      - text: ", the per-node sources are"
+      - code [ref=f29e34]: ia/docs/pages/
+      - text: ", and the chips above are rendered from"
+      - code [ref=f29e35]: ia/_nav.js
+      - text: .
