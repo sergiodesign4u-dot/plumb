@@ -1,5 +1,7 @@
 # Plumb
 
+**Live: https://sergiodesign4u-dot.github.io/plumb/** &nbsp; Stage 01: https://sergiodesign4u-dot.github.io/plumb/research/research.html
+
 Metric trust tool for B2B teams. One place holds the canonical definition of every metric, and the provenance, freshness and breakage of a number are shown right where the number is read.
 
 This repository holds the whole design pipeline for the product, not just the research phase: every stage adds its documents and its own page you can open in a browser.
@@ -12,14 +14,13 @@ This repository holds the whole design pipeline for the product, not just the re
 - `_nav.js` - the single navigation registry of the project. Every page renders its sidebar from it.
 - `_nav.css` - the look of that sidebar, in one place.
 - `research/` - everything we know about the market and the people. Shared by stages 01, 02 and CJM.
-
-Live pages: published at stage 01 step 10, link goes here.
+- `.nojekyll` - required. GitHub Pages runs Jekyll by default and Jekyll skips paths starting with an underscore, which is where the whole navigation lives.
 
 ## Status
 
 | Stage | Status |
 | --- | --- |
-| Foundation Research | In progress |
+| Foundation Research | Done. Fifteen competitors, benchmark on trust at the point of reading, canvas, funnel, chosen pattern, critique in two instruments, page published |
 | User Research (Personas + JTBD) | Not started |
 | CJM (As-Is + To-Be) | Not started |
 | Information Architecture (Base + Detail) | Not started |
