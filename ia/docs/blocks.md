@@ -118,3 +118,72 @@ Order reasoned from 360, top to bottom.
 **Checked against rule 3, that a reference is an input.** D1 puts controls second and the definition in a hidden tab; R1 has states and no definition; R2 has provenance rows and no primary value; R3 puts freshness last. **Nothing above appears in this order in any source.** Block 3 before block 4 is ours, and it follows from design principle 1 rather than from anybody's page.
 
 **Two things every source in this bank has in common, and they are the gap.** Not one of the five puts a definition in words on the reading surface, and not one puts a person's name on the claim. That is the same gap `competitors.md` reached from the other direction, now confirmed at the level of page composition.
+
+### Addendum, found while collecting T2 and belonging here
+
+**dbt puts a share control on the resource details page itself:** *"In the upper right corner of the resource details page, you can [...] Click the Share icon to copy the page's link to your clipboard"* (`docs.getdbt.com/docs/explore/explore-projects`, opened 2026-08-12). **TAKE, as confirmation rather than as a new block.** Copying a permanent link from the object being read is the right primitive for node 2.8, and it is now evidenced in the category rather than only reasoned from the backlog. The difference stays where it was: their link carries a page, ours carries the moment the number was read.
+
+---
+
+## T2. Listing with search
+
+**Nodes:** 4.1 the metric registry, 4.2 empty with no metrics yet, 4.3 the search-result state, and 3.1 sources. Four nodes, all MVP, **all of them the analyst's**. The reader never sees a listing, by the rule in `CLAUDE.md`: a list with search is the rejected "catalog and search" pattern, and the moment it becomes the reader's entry point the chosen pattern has been changed without saying so.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D3 | dbt Catalog, `docs.getdbt.com/docs/explore/explore-projects`. Screen: `research/screens/ui-dbt-catalog-docs.png` | Domain, documentation substitute | 2026-08-12, this session |
+| D4 | Secoda search, `docs.secoda.co/features/search`. Screen: `research/screens/ui-secoda-search-docs.png` | Domain, documentation substitute | 2026-08-12, this session |
+| R4 | TravelPerk invoices, `refero.design/pages/53698c28-13ea-4d0b-aa52-e0d558c40d3c` | Craft, outside the category | 2026-08-12 |
+| R5 | n8n users, `refero.design/pages/add935ed-8659-4352-9056-04aeba163b33` | Craft, outside the category | 2026-08-12 |
+| R6 | Exactly.ai, no results, `refero.design/pages/40c167a2-1c0a-4337-94fd-bac77dc3c341` | Craft, for node 4.3 | 2026-08-12 |
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Barrier it works on |
+| --- | --- | --- | --- | --- | --- |
+| D3 | **Search across resource names, column names, descriptions, warehouse relations and code** | TAKE, narrowed to name and definition text | R2 answer once, R5 | MVP | Phase D: the same question is known to reach the analyst repeatedly (S8). Search that reaches **into the definition text** is how a standing answer gets found instead of retyped. Column names and code are not ours to search, we hold metadata only |
+| D3 | **Sidebar with Resources, File Tree and Database tabs** | DO NOT TAKE | Nothing | Out | Three browse structures imply a taxonomy. We have one object type and a flat list, and the global nav has two items by decision. Inventing tabs here would be inventing a taxonomy to fill them |
+| D3 | **Health signal to the right of the resource name, under a Health column** | DO DIFFERENTLY | Main job, node 0.4 | MVP | **The position is right and the payload is wrong.** We keep a state at the right of the row and replace the aggregate with the compact form from node 0.4: the state name and the age, in words |
+| D3 | **Soft access controls: all matching resources shown, with clear indicators for items you have no access to** | **TAKE, and it settles an open question** | R1, node 2.9 | MVP | Phase B: the number arrives with no route back (S5). Showing that a thing exists and is not yours to see beats hiding it, because a person who cannot see the row cannot even ask about it. This is a live precedent for the open question of what may be shown to somebody with no access |
+| D3 | **Notice in a search result that a resource contains the searched column** | DO NOT TAKE | Nothing | Out | We expose no columns. Metadata only |
+| D3 | **"Latest updates": recent job runs, changed properties, lineage and issues** | DO NOT TAKE | Would trace to R3, and fails on form | ПОТІМ at best | Design principle 2. A change is a fact about the metric and belongs on the metric. **As a feed it becomes an activity stream, and an activity stream of state changes is the incident tool by another name** |
+| D3 | **Model versions in the list and in the title: prerelease, latest, old** | DO NOT TAKE | Nothing in MVP | ПОТІМ | Version history deeper than the previous definition is out of scope by the brief. A version label in the list would promise a history we do not keep |
+| D4 | **Search opens on popular resources plus personal recent searches** | DO DIFFERENTLY | R2, R5 | MVP | Our pre-query state is the list itself. A registry small enough to read is better than a ranked selection of it, and the analyst arriving at the registry usually knows the name they want |
+| D4 | **Popularity ranking: views over the last 90 days, boosted further by views in Tableau and Looker** | **DO NOT TAKE, and this is the sharpest refusal in T2** | Would trace to nothing | Out | Phase G (S9): a figure keeps being used long after it stopped being computed. **Popularity is a proxy for authority, and this product exists because proxies for authority break.** Ranking by how often a metric is looked at makes the most-quoted metric the easiest to find and the least examined, which is the failure we are selling against |
+| D4 | **Sort by relevance, popularity, last modified, date created** | TAKE one, refuse two | R2 | MVP for name, ПОТІМ for freshness | Sort by name is the default because the analyst is looking for a specific metric. Sort by freshness is a real second case and waits. Popularity and personal-usage relevance are refused for the reason above |
+| D4 | **Ask AI inside the search panel** | DO NOT TAKE | Would trace to the main job, and was already rejected | Out | "Conversational answer" is one of the four patterns rejected with grounds in `ux-patterns.md` at stage 01. Recorded here because a competitor has since put it in the search box, which is where this decision will be questioned again |
+| D4 | **Saved views of common searches** | DO NOT TAKE | Nothing | ПОТІМ | No job underneath it at this size of registry |
+| D4 | **Search reachable by typing `/` from any screen** | TAKE | R2 | MVP | The base layer already made search a persistent affordance rather than a navigation item. This is the cheapest way to honour that |
+| R4 | **Page title plus a one-line subtitle** | TAKE the title, the subtitle ПОТІМ | R5 | MVP | A registry needs to say what it is. A subtitle with a documentation link is for a product that already has documentation |
+| R4 | **Search field whose placeholder names what is searched** ("Search for a document ID") | TAKE | R2 | MVP | Phase D (S8). A placeholder that names the field removes the guess about whether searching the definition text works at all |
+| R4 | **Three filter dropdowns: status, payment profile, time frame** | DO NOT TAKE in MVP | Nothing yet | ПОТІМ | Facets by source, owner and freshness are already recorded as a ПОТІМ candidate. Adding them now would be inventing filters for a registry whose size we do not know |
+| R4 | **Sortable table, six columns, sort arrow on the first** | TAKE, reduced to three columns | Main job, R1, R5 | MVP | Name, state with age, owner. Three fields, because every extra column is one more thing to fit at 360, and the row exists to get somebody to the card |
+| R4 | **The empty state rendered inside the table, with the header row still visible** | **TAKE, and it is the best block in this type** | R5, nodes 4.2 and 4.3 | MVP | An empty list that keeps its columns shows what the list would hold. An empty state that replaces the whole table teaches nothing and reads as a broken page |
+| R4 | **Result count line under the table** ("1 to 0 of 0 results") | TAKE | R2 | MVP | Cheap honesty, and the zero case is exactly the one that needs saying out loud |
+| R5 | **Count beside the title** ("3 users") | TAKE | R5 | MVP | The registry saying how many metrics it holds is the closest thing an analyst has to a sense of whether the work is done |
+| R5 | **A temporal column in the row** ("Last Active") | TAKE, as the age of the number | Main job, node 0.4 | MVP | Confirms from outside the category that a time belongs in the row, not only on the detail page |
+| R5 | **Row overflow menu with three actions** | DO NOT TAKE in MVP | R5 | ПОТІМ | In MVP a row does one thing: it opens the metric. Row actions arrive when there is more than one thing to do |
+| R5 | **A global setting toggled from inside the list page** (enforce 2FA) | DO NOT TAKE | Nothing | Out | A settings control on a listing mixes two jobs on one page. Ours lives in the account corner, which is already marked jobless |
+| R5 | **Upgrade notice bar above the table** | DO NOT TAKE in MVP | Nothing | ПОТІМ | Plan and seats are cluster 5 and entirely ПОТІМ |
+| R6 | **"No results found", a line of advice, and one Reset all action** | TAKE the structure | R2, node 4.3 | MVP | **The single reset action is what stops 4.3 being a dead end**, and a dead end in the analyst's own registry is the cheapest kind to avoid |
+| R6 | **Centred illustration above the message** | DO NOT TAKE at this stage | Nothing structural | ПОТІМ, stage 06 | Illustration is a visual-stage decision. Recorded so it is not silently dropped, and so the block is not drawn as a hole in a black and white wireframe |
+
+### Our composition
+
+**One template serves both listings**, which is the reuse decision this stage is meant to apply rather than rediscover: 4.1 the metric registry and 3.1 sources differ in their three columns and in nothing else.
+
+1. **Title with a count**
+2. **Search field**, placeholder naming that it searches names and definition text
+3. **The table**: name, state with age, owner. For 3.1: name, reachability, last successful run
+4. **Result count line**
+5. **The primary action**: define a metric, or connect a source
+
+**4.2, no metrics yet:** the same page with the count at zero, **the table header retained**, one sentence saying nothing is defined yet, and one route to defining the first.
+
+**4.3, no match:** the same page, the query still in the field, one sentence, and one reset action. Never a dead end.
+
+**Checked against rule 3.** D3 leads with a lineage graph and three browse trees; D4 leads with popularity; R4 leads with three filters; R5 leads with an upgrade bar and a security toggle. **Nothing above matches any of them.** What is ours is the refusal of ranking and the narrowing to three columns, and both come from the product's own argument rather than from a page.
+
+**One competitor mechanism recorded as a live risk rather than a footnote.** Both domain sources rank or surface by popularity, and both count views made outside the tool. If our registry ever needs ordering beyond alphabetical, that is the moment to reread this row, because popularity is the ordering everyone reaches for and it is the one this product cannot use.

@@ -1,0 +1,208 @@
+- generic [active] [ref=f63e1]:
+  - banner [ref=f63e2]:
+    - generic [ref=f63e5]:
+      - generic [ref=f63e6]:
+        - button "Open table of contents" [ref=f63e7] [cursor=pointer]
+        - link [ref=f63e10] [cursor=pointer]:
+          - /url: /
+          - img "Logo" [ref=f63e11]
+      - button "[object Object]" [ref=f63e13] [cursor=pointer]
+      - button "More" [ref=f63e18] [cursor=pointer]
+  - main [ref=f63e28]:
+    - generic [ref=f63e29]:
+      - text: For the complete documentation index, see
+      - link "llms.txt" [ref=f63e30] [cursor=pointer]:
+        - /url: https://docs.secoda.co/llms.txt
+      - text: . This page is also available as
+      - link "Markdown" [ref=f63e31] [cursor=pointer]:
+        - /url: https://docs.secoda.co/features/search.md
+      - text: .
+    - generic [ref=f63e32]:
+      - generic [ref=f63e33]:
+        - generic [ref=f63e34]:
+          - generic [ref=f63e35]:
+            - button "Copy" [ref=f63e36] [cursor=pointer]
+            - button "More" [ref=f63e40] [cursor=pointer]
+          - button "On this page" [ref=f63e43] [cursor=pointer]
+        - navigation "Breadcrumb" [ref=f63e46]:
+          - list [ref=f63e47]:
+            - listitem [ref=f63e48]:
+              - link "Features" [ref=f63e49] [cursor=pointer]:
+                - /url: /features
+        - heading "Search" [level=1] [ref=f63e50]
+        - paragraph [ref=f63e51]: Best practices for how to use Search within Secoda
+      - generic [ref=f63e53]:
+        - paragraph [ref=f63e54]: Search is super important to Secoda users and we are constantly improving the functionality to provide the best experience.
+        - paragraph [ref=f63e55]: You can search for any data resource using Secoda's search, including tables, columns, collections, dictionary terms, documents, metrics and questions. You can search for terms in plain language, or by the table name and data source if you already know what you're looking for.
+        - heading "How to Search Direct link to heading" [level=2] [ref=f63e56]:
+          - generic [ref=f63e57]: How to Search
+          - link "Direct link to heading" [ref=f63e59] [cursor=pointer]:
+            - /url: "#how-to-search"
+        - paragraph [ref=f63e62]: When you first click into Search, it'll show your workspace's Popular resources as well as your personal Recent searches.
+        - note "Information" [ref=f63e63]:
+          - paragraph [ref=f63e68]:
+            - text: Popular resources in Secoda are calculated by summing the number of views in Secoda over the last 90 days, with the number of views/queries extracted from the source 24 hours from the extraction. Learn more about
+            - link "Popularity" [ref=f63e70] [cursor=pointer]:
+              - /url: /features/popularity
+            - text: .
+        - paragraph [ref=f63e75]:
+          - text: You can also search directly from the Home page,
+          - link "within the Catalog" [ref=f63e77] [cursor=pointer]:
+            - /url: /features/search#search-within-the-catalog
+          - text: ", or by typing"
+          - code [ref=f63e78]: /
+          - text: from any screen.
+        - heading "How Search works Direct link to heading" [level=2] [ref=f63e83]:
+          - generic [ref=f63e84]: How Search works
+          - link "Direct link to heading" [ref=f63e86] [cursor=pointer]:
+            - /url: "#how-search-works"
+        - paragraph [ref=f63e89]: "Our search functionality leverages popularity boosting, taking into account both internal and external interactions:"
+        - paragraph [ref=f63e90]:
+          - strong [ref=f63e91]: "Internal Popularity Boosting:"
+        - list [ref=f63e92]:
+          - listitem [ref=f63e93]:
+            - generic [ref=f63e94]: •
+            - paragraph [ref=f63e97]:
+              - strong [ref=f63e98]: "Views within Secoda:"
+              - text: The more a resource is viewed within Secoda, the higher it will rank in search results.
+          - listitem [ref=f63e99]:
+            - generic [ref=f63e100]: •
+            - paragraph [ref=f63e103]:
+              - strong [ref=f63e104]: "User Interaction within Secoda:"
+              - text: Resources gain additional boost points if the current user has recently interacted with them, whether it's a Catalog resource, Document, Term, or Question. This personalizes search results based on user activity.
+        - paragraph [ref=f63e105]:
+          - strong [ref=f63e106]: "External Popularity Boosting:"
+        - list [ref=f63e107]:
+          - listitem [ref=f63e108]:
+            - generic [ref=f63e109]: •
+            - paragraph [ref=f63e112]:
+              - strong [ref=f63e113]: "External Interactions:"
+              - text: Queries and views in external tools like Tableau or Looker contribute to the popularity score of a resource, enhancing its visibility in search results.
+        - paragraph [ref=f63e114]:
+          - strong [ref=f63e115]: "Enhanced Search Ranking Strategy:"
+        - list [ref=f63e116]:
+          - listitem [ref=f63e117]:
+            - generic [ref=f63e118]: •
+            - paragraph [ref=f63e121]:
+              - strong [ref=f63e122]: "Exact Title Match:"
+              - text: Highest priority is given to resources with titles that exactly match the search term. For exact title matches, we also recommend searching for the title in
+              - strong [ref=f63e123]: quotations
+              - text: .
+        - list [ref=f63e128]:
+          - listitem [ref=f63e129]:
+            - generic [ref=f63e130]: •
+            - paragraph [ref=f63e133]:
+              - strong [ref=f63e134]: "Title Prefix Match:"
+              - text: Searches for resources where the title starts with the search term.
+          - listitem [ref=f63e135]:
+            - generic [ref=f63e136]: •
+            - paragraph [ref=f63e139]:
+              - strong [ref=f63e140]: "Phrase Match in Title:"
+              - text: Ranks resources where the title contains the search term as a phrase.
+          - listitem [ref=f63e141]:
+            - generic [ref=f63e142]: •
+            - paragraph [ref=f63e145]:
+              - strong [ref=f63e146]: "Phrase Match in Description:"
+              - text: Looks for the search term as an exact phrase within the resource's description.
+          - listitem [ref=f63e147]:
+            - generic [ref=f63e148]: •
+            - paragraph [ref=f63e151]:
+              - strong [ref=f63e152]: "Phrase Match in Documentation:"
+              - text: Identifies the term within the resource's documentation, though with a lower priority.
+          - listitem [ref=f63e153]:
+            - generic [ref=f63e154]: •
+            - paragraph [ref=f63e157]:
+              - strong [ref=f63e158]: "Wildcard Match in Full Title:"
+              - text: Gives the highest importance to resources where the full title contains the search term anywhere.
+        - paragraph [ref=f63e159]: This approach ensures that the most relevant and interacted-with documents are prominently displayed, aiding users in quickly finding the most pertinent and popular content.
+        - heading "Search views Direct link to heading" [level=2] [ref=f63e160]:
+          - generic [ref=f63e161]: Search views
+          - link "Direct link to heading" [ref=f63e163] [cursor=pointer]:
+            - /url: "#search-views"
+        - paragraph [ref=f63e166]:
+          - text: Read up on
+          - link "Views" [ref=f63e167] [cursor=pointer]:
+            - /url: /features/views#managing-search-views
+          - text: for easy access to your common searches.
+        - heading "Search from the sidebar Direct link to heading" [level=2] [ref=f63e168]:
+          - generic [ref=f63e169]: Search from the sidebar
+          - link "Direct link to heading" [ref=f63e171] [cursor=pointer]:
+            - /url: "#search-from-the-sidebar"
+        - paragraph [ref=f63e174]: Searching can be daunting if you’re not sure exactly what you’re looking for. We’ve tried to make it as seamless as possible by adding features to help filter down your search.
+        - heading "Ask AI Direct link to heading" [level=3] [ref=f63e175]:
+          - generic [ref=f63e176]: Ask AI
+          - link "Direct link to heading" [ref=f63e178] [cursor=pointer]:
+            - /url: "#ask-ai"
+        - paragraph [ref=f63e181]:
+          - text: The
+          - link "Secoda AI" [ref=f63e183] [cursor=pointer]:
+            - /url: https://www.secoda.co/blog/transforming-data-discovery-using-secoda-ai
+          - link "Assistant" [ref=f63e187] [cursor=pointer]:
+            - /url: /features/ai-assistant
+          - text: improves user experience when searching for resources. Once you’ve enabled it, you can find the AI Assistant on the lefthand panel under Search. You can also Ask AI right from the main Search. This feature will be helpful for business users who might not know where to begin when looking at data. Read more about it
+          - link "here" [ref=f63e189] [cursor=pointer]:
+            - /url: https://docs.secoda.co/features/ai-assistant
+          - text: .
+        - heading "Sort Direct link to heading" [level=3] [ref=f63e192]:
+          - generic [ref=f63e193]: Sort
+          - link "Direct link to heading" [ref=f63e195] [cursor=pointer]:
+            - /url: "#sort"
+        - paragraph [ref=f63e198]: You’re able to sort by Relevance, Popularity, Last modified and Date created.
+        - list [ref=f63e199]:
+          - listitem [ref=f63e200]:
+            - generic [ref=f63e201]: •
+            - paragraph [ref=f63e204]: Relevance is measured by your personal usage (tables, dashboards, docs that you’ve worked on and are relevant to you)
+          - listitem [ref=f63e205]:
+            - generic [ref=f63e206]: •
+            - paragraph [ref=f63e209]:
+              - text: Popularity is measured by how often a resource is clicked into in your workspace as well as how often it’s queried outside of the workspace (Read more about this
+              - link "Popularity" [ref=f63e210] [cursor=pointer]:
+                - /url: /features/popularity
+              - text: )
+          - listitem [ref=f63e211]:
+            - generic [ref=f63e212]: •
+            - paragraph [ref=f63e215]: Last modified will show you the most recently updated resources
+          - listitem [ref=f63e216]:
+            - generic [ref=f63e217]: •
+            - paragraph [ref=f63e220]: Date created will show you the most recently created resources
+        - heading "All filters Direct link to heading" [level=3] [ref=f63e225]:
+          - generic [ref=f63e226]: All filters
+          - link "Direct link to heading" [ref=f63e228] [cursor=pointer]:
+            - /url: "#all-filters"
+        - paragraph [ref=f63e231]: If you know what kind of resource you are searching for, you can filter down to that type in the All filter dropdown. There you will see every type of resources from Apps to Questions.
+        - heading "Add filter Direct link to heading" [level=3] [ref=f63e236]:
+          - generic [ref=f63e237]: Add filter
+          - link "Direct link to heading" [ref=f63e239] [cursor=pointer]:
+            - /url: "#add-filter"
+        - paragraph [ref=f63e242]: You can get even more granular with filters in the Add filter section. For example, if you are looking for all resources containing PII tags, this feature allows you to filter down your results.
+        - heading "View Direct link to heading" [level=3] [ref=f63e247]:
+          - generic [ref=f63e248]: View
+          - link "Direct link to heading" [ref=f63e250] [cursor=pointer]:
+            - /url: "#view"
+        - paragraph [ref=f63e253]: The view filter allows you to toggle on/off the different kinds of information related to the results from your search.
+    - generic [ref=f63e258]:
+      - paragraph [ref=f63e259]:
+        - text: Last updated
+        - time [ref=f63e260]: 9 months ago
+      - generic [ref=f63e262]:
+        - paragraph [ref=f63e263]: Was this helpful?
+        - generic [ref=f63e264]:
+          - button "Yes, it was!" [ref=f63e265] [cursor=pointer]
+          - button "Not sure" [ref=f63e269] [cursor=pointer]
+          - button "No" [ref=f63e273] [cursor=pointer]
+  - contentinfo [ref=f63e277]:
+    - radiogroup [ref=f63e282]:
+      - radio "Switch to light theme" [checked] [ref=f63e283] [cursor=pointer]
+      - radio "Switch to system theme" [ref=f63e286] [cursor=pointer]
+      - radio "Switch to dark theme" [ref=f63e289] [cursor=pointer]
+  - dialog "Cookies" [ref=f63e292]:
+    - paragraph [ref=f63e293]:
+      - text: This site uses cookies to deliver its service and to analyze traffic. By browsing this site, you accept the
+      - link "privacy policy" [ref=f63e294] [cursor=pointer]:
+        - /url: https://docs.secoda.co/policies/privacy-policy
+      - text: .
+    - button "Close" [ref=f63e295] [cursor=pointer]
+    - generic [ref=f63e298]:
+      - button "Accept" [ref=f63e299] [cursor=pointer]
+      - button "Reject" [ref=f63e301] [cursor=pointer]
+  - alert [ref=f63e303]

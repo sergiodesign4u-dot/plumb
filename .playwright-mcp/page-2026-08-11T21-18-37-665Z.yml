@@ -1,0 +1,918 @@
+- generic [active] [ref=f54e1]:
+  - generic [ref=f54e2]:
+    - region "Skip to main content":
+      - link "Skip to main content" [ref=f54e3] [cursor=pointer]:
+        - /url: "#__docusaurus_skipToContent_fallback"
+    - banner [ref=f54e4]:
+      - link "Join us at dbt Summit, September 15–18 in Las Vegas. Come learn, swap ideas, and spend time with the dbt community as we shape the future of data and AI." [ref=f54e5] [cursor=pointer]:
+        - /url: https://www.getdbt.com/dbt-summit/?utm_medium=internal&utm_source=docs&utm_campaign=q3-2027_dbt-summit-2026_aw&utm_content=dbt-summit____&utm_term=all_all__
+      - button "Close" [ref=f54e7] [cursor=pointer]
+    - navigation "Main" [ref=f54e11]:
+      - generic [ref=f54e12]:
+        - generic [ref=f54e13]:
+          - button "Toggle navigation bar" [ref=f54e14] [cursor=pointer]
+          - link [ref=f54e17] [cursor=pointer]:
+            - /url: /
+            - img "dbt Logo" [ref=f54e19]
+          - 'button "dbt version: v2" [ref=f54e21] [cursor=pointer]':
+            - generic [ref=f54e25]: dbt version
+            - generic [ref=f54e26]: v2
+            - generic [ref=f54e27]: ▾
+        - button "Search (Command+K)" [ref=f54e29] [cursor=pointer]
+    - main [ref=f54e36]:
+      - generic [ref=f54e40]:
+        - article [ref=f54e41]:
+          - generic [ref=f54e42]:
+            - navigation "Breadcrumbs" [ref=f54e43]:
+              - list [ref=f54e44]:
+                - listitem [ref=f54e45]:
+                  - link "Home page" [ref=f54e46] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=f54e49]:
+                  - link "Explore your data" [ref=f54e50] [cursor=pointer]:
+                    - /url: /docs/explore/explore-your-data
+                - listitem [ref=f54e51]:
+                  - generic [ref=f54e52]: Discover data with dbt Catalog
+            - button "Copy page options" [ref=f54e54] [cursor=pointer]: Copy page
+          - button "On this page" [ref=f54e61] [cursor=pointer]
+          - generic [ref=f54e62]:
+            - generic [ref=f54e63]:
+              - heading "Discover data with Catalog" [level=1] [ref=f54e64]
+              - button "dbt platform | Starter, Enterprise, Enterprise+. Show availability details" [ref=f54e66] [cursor=pointer]:
+                - generic [ref=f54e67]:
+                  - generic [ref=f54e68]: dbt platform
+                  - generic [ref=f54e69]: "|"
+                  - generic [ref=f54e70]: Starter, Enterprise, Enterprise+
+                - generic [ref=f54e71]: ⓘ
+            - paragraph [ref=f54e72]:
+              - paragraph [ref=f54e73]:
+                - text: With Catalog, you can view your project's
+                - link "resources" [ref=f54e74] [cursor=pointer]:
+                  - /url: /docs/build/projects
+                - text: (such as models, tests, and metrics), their lineage , and
+                - link "model consumption" [ref=f54e75] [cursor=pointer]:
+                  - /url: /docs/explore/view-downstream-exposures
+                - text: to gain a better understanding of its latest production state.
+            - paragraph [ref=f54e76]:
+              - text: Use Catalog to navigate and manage your projects within dbt to help you and other data developers, analysts, and consumers discover and leverage your dbt resources. Catalog integrates with the
+              - link "Studio IDE" [ref=f54e77] [cursor=pointer]:
+                - /url: /docs/platform/studio-ide/develop-in-studio
+              - text: ","
+              - link "dbt Insights" [ref=f54e78] [cursor=pointer]:
+                - /url: /docs/explore/dbt-insights
+              - text: ","
+              - link "Orchestrator" [ref=f54e79] [cursor=pointer]:
+                - /url: /docs/deploy/deployments
+              - text: ", and"
+              - link "Canvas" [ref=f54e80] [cursor=pointer]:
+                - /url: /docs/platform/canvas
+              - text: to help you develop or view your dbt resources.
+            - heading [level=2] [ref=f54e81] [cursor=pointer]:
+              - text: Prerequisites
+              - link "Direct link to Prerequisites" [ref=f54e82]:
+                - /url: "#prerequisites"
+            - list [ref=f54e83]:
+              - listitem [ref=f54e84]:
+                - text: You have a dbt account on the
+                - link "Starter, Enterprise, or Enterprise+ plan" [ref=f54e85] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/pricing/
+                - text: .
+              - listitem [ref=f54e86]:
+                - text: You have set up a
+                - link "production" [ref=f54e87] [cursor=pointer]:
+                  - /url: /docs/deploy/deploy-environments#set-as-production-environment
+                - text: or
+                - link "staging" [ref=f54e88] [cursor=pointer]:
+                  - /url: /docs/deploy/deploy-environments#create-a-staging-environment
+                - text: deployment environment for each project you want to explore.
+              - listitem [ref=f54e89]:
+                - text: You have at least one successful job run in the deployment environment. Note that
+                - link "CI jobs" [ref=f54e90] [cursor=pointer]:
+                  - /url: /docs/deploy/ci-jobs
+                - text: do not update Catalog.
+              - listitem [ref=f54e91]:
+                - text: You are on the Catalog page. To do this, select
+                - strong [ref=f54e92]: Catalog
+                - text: from the top-level navigation in dbt.
+            - heading [level=2] [ref=f54e93] [cursor=pointer]:
+              - text: Generate metadata
+              - link "Direct link to Generate metadata" [ref=f54e94]:
+                - /url: "#generate-metadata"
+            - paragraph [ref=f54e95]:
+              - text: Catalog uses the metadata provided by the
+              - link "Discovery API" [ref=f54e96] [cursor=pointer]:
+                - /url: /docs/dbt-apis/discovery-api
+              - text: to display the details about
+              - link "the state of your dbt project" [ref=f54e97] [cursor=pointer]:
+                - /url: /docs/dbt-apis/project-state
+              - text: . The metadata that's available depends on the
+              - link "deployment environment" [ref=f54e98] [cursor=pointer]:
+                - /url: /docs/deploy/deploy-environments
+              - text: you've designated as
+              - emphasis [ref=f54e99]: production
+              - text: or
+              - emphasis [ref=f54e100]: staging
+              - text: in your dbt project.
+            - paragraph [ref=f54e101]:
+              - text: Catalog also allows you to ingest metadata from your data warehouse, giving you visibility into external resources in Catalog. For information on supported warehouses, refer to
+              - link "External metadata ingestion" [ref=f54e102] [cursor=pointer]:
+                - /url: /docs/explore/external-metadata-ingestion#prerequisites
+              - text: .
+            - heading [level=2] [ref=f54e103] [cursor=pointer]:
+              - text: dbt metadata
+              - link "Direct link to dbt metadata" [ref=f54e104]:
+                - /url: "#dbt-metadata"
+            - paragraph [ref=f54e105]:
+              - text: If you're using a
+              - link "hybrid project setup" [ref=f54e106] [cursor=pointer]:
+                - /url: /docs/deploy/hybrid-setup
+              - text: and uploading artifacts from dbt Core, make sure to follow the
+              - link "setup instructions" [ref=f54e107] [cursor=pointer]:
+                - /url: /docs/deploy/hybrid-setup#connect-project-in-dbt-cloud
+              - text: to connect your project in dbt. This enables Catalog to access and display your metadata correctly.
+            - list [ref=f54e108]:
+              - listitem [ref=f54e109]:
+                - text: To ensure all metadata is available in Catalog, run
+                - code [ref=f54e110]: dbt build
+                - text: and
+                - code [ref=f54e111]: dbt docs generate
+                - text: as part of your job in your production or staging environment. Running these two commands ensures all relevant metadata (like lineage, test results, documentation, and more) is available in Catalog.
+              - listitem [ref=f54e112]:
+                - text: Catalog automatically retrieves the metadata updates after each job run in the production or staging deployment environment so it always has the latest results for your project. This includes deploy and merge jobs.
+                - list [ref=f54e113]:
+                  - listitem [ref=f54e114]: Note that CI jobs don't update Catalog. This is because they don't reflect the production state and don't provide the necessary metadata updates.
+              - listitem [ref=f54e115]: To view a resource and its metadata, you must define the resource in your project and run a job in the production or staging environment.
+              - listitem [ref=f54e116]:
+                - text: The resulting metadata depends on the
+                - link "commands" [ref=f54e117] [cursor=pointer]:
+                  - /url: /docs/deploy/job-commands
+                - text: executed by the jobs.
+            - heading [level=3] [ref=f54e118] [cursor=pointer]:
+              - text: When dbt creates model metadata
+              - link "Direct link to When dbt creates model metadata" [ref=f54e119]:
+                - /url: "#when-dbt-creates-model-metadata"
+            - paragraph [ref=f54e120]: "dbt populates a model's metadata in Catalog when both of the following conditions are met:"
+            - list [ref=f54e121]:
+              - listitem [ref=f54e122]: The model is defined in your dbt project (it exists in the manifest).
+              - listitem [ref=f54e123]:
+                - text: The model appears in the
+                - code [ref=f54e124]: run_results
+                - text: of a
+                - link [ref=f54e125] [cursor=pointer]:
+                  - /url: /reference/commands/build
+                  - code [ref=f54e126]: dbt build
+                - text: ","
+                - link [ref=f54e127] [cursor=pointer]:
+                  - /url: /reference/commands/run
+                  - code [ref=f54e128]: dbt run
+                - text: ", or"
+                - link [ref=f54e129] [cursor=pointer]:
+                  - /url: /reference/commands/clone
+                  - code [ref=f54e130]: dbt clone
+                - text: command, regardless of the run's success or failure status. Note that
+                - code [ref=f54e131]: dbt docs generate
+                - text: alone does not create model entries in Catalog. It provides supplementary metadata like column details and descriptions for models that already exist.
+            - heading [level=3] [ref=f54e132] [cursor=pointer]:
+              - text: When dbt removes model metadata
+              - link "Direct link to When dbt removes model metadata" [ref=f54e133]:
+                - /url: "#when-dbt-removes-model-metadata"
+            - paragraph [ref=f54e134]: "dbt removes a model's metadata from Catalog in these two cases:"
+            - list [ref=f54e135]:
+              - listitem [ref=f54e136]:
+                - strong [ref=f54e137]: Model removed from project
+                - text: ": If a model is deleted from your dbt project (and therefore no longer exists in the manifest), its metadata is removed after a subsequent job run in which the model is no longer included."
+              - listitem [ref=f54e138]:
+                - strong [ref=f54e139]: Environment inactivity
+                - text: ": If an environment has had no job runs in the past 3 months, all metadata for that environment is purged. To prevent this, schedule jobs to run at least once every 3 months."
+            - generic [ref=f54e141]:
+              - textbox "Search table" [ref=f54e146]:
+                - /placeholder: Search table...
+              - table [ref=f54e147]:
+                - rowgroup [ref=f54e148]:
+                  - row [ref=f54e149]:
+                    - columnheader "To view in Catalog Filter by To view in Catalog" [ref=f54e150]:
+                      - generic [ref=f54e152]:
+                        - generic [ref=f54e153] [cursor=pointer]: To view in Catalog
+                        - button "Filter by To view in Catalog" [ref=f54e156] [cursor=pointer]:
+                          - generic [ref=f54e157]: ˅
+                    - columnheader "You must successfully run Filter by You must successfully run" [ref=f54e159]:
+                      - generic [ref=f54e161]:
+                        - generic [ref=f54e162] [cursor=pointer]: You must successfully run
+                        - button "Filter by You must successfully run" [ref=f54e164] [cursor=pointer]:
+                          - generic [ref=f54e165]: ˅
+                - rowgroup [ref=f54e167]:
+                  - row [ref=f54e168]:
+                    - cell "All metadata" [ref=f54e169]
+                    - cell [ref=f54e170]:
+                      - link "dbt build" [ref=f54e171] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: ","
+                      - link "dbt docs generate" [ref=f54e172] [cursor=pointer]:
+                        - /url: /reference/commands/cmd-docs
+                      - text: ", and"
+                      - link "dbt source freshness" [ref=f54e173] [cursor=pointer]:
+                        - /url: /reference/commands/source#dbt-source-freshness
+                      - text: together as part of the same job in the environment
+                  - row [ref=f54e174]:
+                    - cell "Model lineage, details, or results" [ref=f54e175]
+                    - cell [ref=f54e176]:
+                      - link "dbt run" [ref=f54e177] [cursor=pointer]:
+                        - /url: /reference/commands/run
+                      - text: or
+                      - link "dbt build" [ref=f54e178] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: on a given model within a job in the environment
+                  - row [ref=f54e179]:
+                    - cell "Columns and statistics for models, sources, and snapshots" [ref=f54e180]
+                    - cell [ref=f54e181]:
+                      - link "dbt docs generate" [ref=f54e182] [cursor=pointer]:
+                        - /url: /reference/commands/cmd-docs
+                      - text: within
+                      - link "a job" [ref=f54e183] [cursor=pointer]:
+                        - /url: /docs/explore/build-and-view-your-docs
+                      - text: in the environment
+                  - row [ref=f54e184]:
+                    - cell "Data test results" [ref=f54e185]
+                    - cell [ref=f54e186]:
+                      - link "dbt test" [ref=f54e187] [cursor=pointer]:
+                        - /url: /reference/commands/test
+                      - text: or
+                      - link "dbt build" [ref=f54e188] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: within a job in the environment
+                  - row [ref=f54e189]:
+                    - cell "Unit test results" [ref=f54e190]
+                    - cell [ref=f54e191]:
+                      - link "dbt test" [ref=f54e192] [cursor=pointer]:
+                        - /url: /reference/commands/test
+                      - text: or
+                      - link "dbt build" [ref=f54e193] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: within a job in the environment. Unit tests are typically run in development or CI environments, so their results rarely appear in production Catalog.
+                  - row [ref=f54e194]:
+                    - cell "Source freshness results" [ref=f54e195]
+                    - cell [ref=f54e196]:
+                      - link "dbt source freshness" [ref=f54e197] [cursor=pointer]:
+                        - /url: /reference/commands/source#dbt-source-freshness
+                      - text: within a job in the environment
+                  - row [ref=f54e198]:
+                    - cell "Snapshot details" [ref=f54e199]
+                    - cell [ref=f54e200]:
+                      - link "dbt snapshot" [ref=f54e201] [cursor=pointer]:
+                        - /url: /reference/commands/snapshot
+                      - text: or
+                      - link "dbt build" [ref=f54e202] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: within a job in the environment
+                  - row [ref=f54e203]:
+                    - cell "Seed details" [ref=f54e204]
+                    - cell [ref=f54e205]:
+                      - link "dbt seed" [ref=f54e206] [cursor=pointer]:
+                        - /url: /reference/commands/seed
+                      - text: or
+                      - link "dbt build" [ref=f54e207] [cursor=pointer]:
+                        - /url: /reference/commands/build
+                      - text: within a job in the environment
+            - generic [ref=f54e208]:
+              - generic [ref=f54e209]: tip
+              - paragraph [ref=f54e214]:
+                - text: If your organization works in both dbt Core and Cloud, you can unify these workflows by automatically uploading dbt Core artifacts into dbt Cloud and viewing them in Catalog for a more connected dbt experience. To learn more, visit
+                - link "hybrid projects" [ref=f54e215] [cursor=pointer]:
+                  - /url: /docs/deploy/hybrid-projects
+                - text: .
+            - heading [level=3] [ref=f54e216] [cursor=pointer]:
+              - text: External metadata ingestion
+              - link "Preview" [ref=f54e217]:
+                - /url: https://docs.getdbt.com/docs/dbt-versions/product-lifecycles
+              - link "Direct link to external-metadata-ingestion-" [ref=f54e218]:
+                - /url: "#external-metadata-ingestion-"
+            - paragraph [ref=f54e219]:
+              - text: Connect directly to your data warehouse with
+              - link "external metadata ingestion" [ref=f54e220] [cursor=pointer]:
+                - /url: /docs/explore/external-metadata-ingestion
+              - text: ", giving you visibility into tables, views, and other resources that aren't defined in dbt with Catalog."
+            - paragraph [ref=f54e221]:
+              - text: We create dbt metadata and pull external metadata. Catalog uses the metadata provided by the
+              - link "Discovery API" [ref=f54e222] [cursor=pointer]:
+                - /url: /docs/dbt-apis/discovery-api
+              - text: to display details about the state of your project. The available metadata depends on which
+              - link "deployment environment" [ref=f54e223] [cursor=pointer]:
+                - /url: /docs/deploy/deploy-environments
+              - text: you’ve designated as production or staging in your dbt project.
+            - heading [level=2] [ref=f54e224] [cursor=pointer]:
+              - text: Catalog overview
+              - link "Direct link to Catalog overview" [ref=f54e225]:
+                - /url: "#catalog-overview"
+            - generic [ref=f54e226]:
+              - generic [ref=f54e227]:
+                - link "Global navigation" [ref=f54e231] [cursor=pointer]:
+                  - /url: /docs/explore/global-navigation
+                - link "Starter" [ref=f54e232] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/pricing
+                - link "Enterprise" [ref=f54e233] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/pricing
+                - link "Enterprise +" [ref=f54e234] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/pricing
+              - paragraph [ref=f54e236]:
+                - text: Catalog introduces the ability to widen your search by including dbt resources (models, seeds, snapshots, sources, exposures, and more) across your entire account. This broadens the results returned and gives you greater insight into all the assets across your dbt projects. Learn more in
+                - link "Global navigation" [ref=f54e237] [cursor=pointer]:
+                  - /url: /docs/explore/global-navigation
+                - text: or in our
+                - link "video overview" [ref=f54e238] [cursor=pointer]:
+                  - /url: https://www.loom.com/share/ae93b3d241cd439fbe5f98f5e6872113?
+                - text: .
+            - paragraph [ref=f54e239]: "Navigate the Catalog overview page to access your project's resources and metadata. The page includes the following sections:"
+            - list [ref=f54e240]:
+              - listitem [ref=f54e241]:
+                - strong [ref=f54e242]: Search bar
+                - text: —
+                - link "Search" [ref=f54e243] [cursor=pointer]:
+                  - /url: "#search-resources"
+                - text: for resources in your project by keyword. You can also use filters to refine your search results.
+              - listitem [ref=f54e244]:
+                - strong [ref=f54e245]: Sidebar
+                - text: — Use the left sidebar to browse your project's
+                - link "resources, file tree, and database" [ref=f54e246] [cursor=pointer]:
+                  - /url: "#browse-with-the-sidebar"
+                - text: in the lower section of the sidebar. You can also browse model
+                - link "performance" [ref=f54e247] [cursor=pointer]:
+                  - /url: /docs/explore/model-performance
+                - text: and
+                - link "project recommendations" [ref=f54e248] [cursor=pointer]:
+                  - /url: /docs/explore/project-recommendations
+                - text: depending on your plan. Refer to
+                - link "Availability by plan" [ref=f54e249] [cursor=pointer]:
+                  - /url: "#availability-by-plan"
+                - text: for more info.
+                - list [ref=f54e250]:
+                  - listitem [ref=f54e251]: Find your project recommendations within your project's landing page.*
+              - listitem [ref=f54e252]:
+                - strong [ref=f54e253]: Lineage graph
+                - text: — Explore your project's or account's
+                - link "lineage graph" [ref=f54e254] [cursor=pointer]:
+                  - /url: "#project-lineage"
+                - text: to visualize the relationships between resources.
+              - listitem [ref=f54e255]:
+                - strong [ref=f54e256]: Latest updates
+                - text: — View the latest changes or issues related to your project's resources, including the most recent job runs, changed properties, lineage, and issues.
+              - listitem [ref=f54e257]:
+                - strong [ref=f54e258]: Marts and public models
+                - text: — View the
+                - link "marts" [ref=f54e259] [cursor=pointer]:
+                  - /url: /best-practices/how-we-structure/1-guide-overview#guide-structure-overview
+                - text: and
+                - link "public models" [ref=f54e260] [cursor=pointer]:
+                  - /url: /docs/mesh/govern/model-access#access-modifiers
+                - text: in your project. You can also navigate to all public models in your account through this view.
+              - listitem [ref=f54e261]:
+                - strong [ref=f54e262]: Model query history
+                - text: — Use
+                - link "model query history" [ref=f54e263] [cursor=pointer]:
+                  - /url: /docs/explore/model-query-history
+                - text: to track consumption queries on your models for deeper insights.
+              - listitem [ref=f54e264]:
+                - strong [ref=f54e265]: Visualize downstream exposures
+                - text: —
+                - link "Set up" [ref=f54e266] [cursor=pointer]:
+                  - /url: /docs/platform-integrations/downstream-exposures-tableau
+                - text: and
+                - link "visualize downstream exposures" [ref=f54e267] [cursor=pointer]:
+                  - /url: /docs/explore/view-downstream-exposures
+                - text: to automatically expose relevant data models from Tableau to enhance visibility.
+              - listitem [ref=f54e268]:
+                - strong [ref=f54e269]: Data health signals
+                - text: — View the
+                - link "data-health-signals" [ref=f54e270] [cursor=pointer]:
+                  - /url: /docs/explore/data-health-signals
+                - text: for each resource to understand its health and performance.
+            - heading [level=3] [ref=f54e271] [cursor=pointer]:
+              - text: Catalog permissions
+              - link "Direct link to Catalog permissions" [ref=f54e272]:
+                - /url: "#catalog-permissions"
+            - paragraph [ref=f54e273]: When using global navigation and searching across your projects, the following permissions apply.
+            - list [ref=f54e274]:
+              - listitem [ref=f54e275]: Your project access permissions determine which dbt projects appear in the left-hand menu of the global navigation.
+              - listitem [ref=f54e276]: In Catalog searches, we use soft access controls, you'll see all matching resources in search results, with clear indicators for items you don't have access to.
+              - listitem [ref=f54e277]:
+                - text: For external metadata, the global platform credential controls which resources metadata users can discover. See
+                - link "External metadata ingestion" [ref=f54e278] [cursor=pointer]:
+                  - /url: /docs/explore/external-metadata-ingestion
+                - text: for more details.
+            - heading [level=3] [ref=f54e279] [cursor=pointer]:
+              - text: Availability by plan
+              - link "Direct link to Availability by plan" [ref=f54e280]:
+                - /url: "#availability-by-plan"
+            - paragraph [ref=f54e281]: "Catalog is available on all Starter, Enterprise, and Enterprise+ plans. However, certain features are only available on Enterprise and Enterprise+ plans:"
+            - generic [ref=f54e283]:
+              - textbox "Search table" [ref=f54e288]:
+                - /placeholder: Search table...
+              - table [ref=f54e289]:
+                - rowgroup [ref=f54e290]:
+                  - row [ref=f54e291]:
+                    - columnheader "Feature Filter by Feature" [ref=f54e292]:
+                      - generic [ref=f54e294]:
+                        - generic [ref=f54e295] [cursor=pointer]: Feature
+                        - button "Filter by Feature" [ref=f54e297] [cursor=pointer]:
+                          - generic [ref=f54e298]: ˅
+                    - columnheader "Starter Filter by Starter" [ref=f54e300]:
+                      - generic [ref=f54e302]:
+                        - generic [ref=f54e303] [cursor=pointer]: Starter
+                        - button "Filter by Starter" [ref=f54e305] [cursor=pointer]:
+                          - generic [ref=f54e306]: ˅
+                    - columnheader "Enterprise Filter by Enterprise" [ref=f54e308]:
+                      - generic [ref=f54e310]:
+                        - generic [ref=f54e311] [cursor=pointer]: Enterprise
+                        - button "Filter by Enterprise" [ref=f54e313] [cursor=pointer]:
+                          - generic [ref=f54e314]: ˅
+                    - columnheader "Enterprise+ Filter by Enterprise+" [ref=f54e316]:
+                      - generic [ref=f54e318]:
+                        - generic [ref=f54e319] [cursor=pointer]: Enterprise+
+                        - button "Filter by Enterprise+" [ref=f54e321] [cursor=pointer]:
+                          - generic [ref=f54e322]: ˅
+                - rowgroup [ref=f54e324]:
+                  - row [ref=f54e325]:
+                    - cell "Core lineage & resource browsing" [ref=f54e326]
+                    - cell "✅" [ref=f54e327]
+                    - cell "✅" [ref=f54e328]
+                    - cell "✅" [ref=f54e329]
+                  - row [ref=f54e330]:
+                    - cell [ref=f54e331]:
+                      - link "Global navigation" [ref=f54e332] [cursor=pointer]:
+                        - /url: /docs/explore/global-navigation
+                    - cell "✅" [ref=f54e333]
+                    - cell "✅" [ref=f54e334]
+                    - cell "✅" [ref=f54e335]
+                  - row [ref=f54e336]:
+                    - cell [ref=f54e337]:
+                      - link "Data health signals" [ref=f54e338] [cursor=pointer]:
+                        - /url: /docs/explore/data-health-signals
+                    - cell "✅" [ref=f54e339]
+                    - cell "✅" [ref=f54e340]
+                    - cell "✅" [ref=f54e341]
+                  - row [ref=f54e342]:
+                    - cell [ref=f54e343]:
+                      - link "Model performance" [ref=f54e344] [cursor=pointer]:
+                        - /url: /docs/explore/model-performance
+                    - cell "❌" [ref=f54e345]
+                    - cell "✅" [ref=f54e346]
+                    - cell "✅" [ref=f54e347]
+                  - row [ref=f54e348]:
+                    - cell [ref=f54e349]:
+                      - link "Project recommendations" [ref=f54e350] [cursor=pointer]:
+                        - /url: /docs/explore/project-recommendations
+                    - cell "❌" [ref=f54e351]
+                    - cell "✅" [ref=f54e352]
+                    - cell "✅" [ref=f54e353]
+                  - row [ref=f54e354]:
+                    - cell [ref=f54e355]:
+                      - link "Column-level lineage" [ref=f54e356] [cursor=pointer]:
+                        - /url: /docs/explore/column-level-lineage
+                    - cell "❌" [ref=f54e357]
+                    - cell "✅" [ref=f54e358]
+                    - cell "✅" [ref=f54e359]
+                  - row [ref=f54e360]:
+                    - cell [ref=f54e361]:
+                      - link "Multi-project lineage" [ref=f54e362] [cursor=pointer]:
+                        - /url: /docs/explore/explore-multiple-projects
+                    - cell "❌" [ref=f54e363]
+                    - cell "✅" [ref=f54e364]
+                    - cell "✅" [ref=f54e365]
+                  - row [ref=f54e366]:
+                    - cell [ref=f54e367]:
+                      - link "Model query history" [ref=f54e368] [cursor=pointer]:
+                        - /url: /docs/explore/model-query-history
+                    - cell "❌" [ref=f54e369]
+                    - cell "✅" [ref=f54e370]
+                    - cell "✅" [ref=f54e371]
+                  - row [ref=f54e372]:
+                    - cell [ref=f54e373]:
+                      - link "Downstream exposures" [ref=f54e374] [cursor=pointer]:
+                        - /url: /docs/explore/view-downstream-exposures
+                    - cell "❌" [ref=f54e375]
+                    - cell "✅" [ref=f54e376]
+                    - cell "✅" [ref=f54e377]
+                  - row [ref=f54e378]:
+                    - cell [ref=f54e379]:
+                      - link "Data health tile" [ref=f54e380] [cursor=pointer]:
+                        - /url: /docs/explore/data-tile
+                    - cell "❌" [ref=f54e381]
+                    - cell "✅" [ref=f54e382]
+                    - cell "✅" [ref=f54e383]
+                  - row [ref=f54e384]:
+                    - cell [ref=f54e385]:
+                      - link "External metadata ingestion" [ref=f54e386] [cursor=pointer]:
+                        - /url: /docs/explore/external-metadata-ingestion
+                    - cell "❌" [ref=f54e387]
+                    - cell "✅" [ref=f54e388]
+                    - cell "✅" [ref=f54e389]
+            - generic [ref=f54e390]:
+              - generic [ref=f54e391]: On-demand learning
+              - paragraph [ref=f54e396]:
+                - text: If you enjoy video courses, check out our
+                - link "dbt Catalog on-demand course" [ref=f54e397] [cursor=pointer]:
+                  - /url: https://learn.getdbt.com/courses/dbt-catalog
+                - text: and learn how to best explore your dbt project(s)!
+            - heading [level=2] [ref=f54e398] [cursor=pointer]:
+              - text: Explore your project's lineage graph
+              - link "Direct link to Explore your project's lineage graph" [ref=f54e399]:
+                - /url: "#project-lineage"
+            - paragraph [ref=f54e400]:
+              - text: Catalog provides a visualization of your project's DAG that you can interact with. To access the project's full lineage graph, select
+              - strong [ref=f54e401]: Overview
+              - text: in the left sidebar and click the
+              - strong [ref=f54e402]: Explore Lineage
+              - text: button on the main (center) section of the page.
+            - paragraph [ref=f54e403]:
+              - text: If you don't see the project lineage graph immediately, click
+              - strong [ref=f54e404]: Render Lineage
+              - text: . It can take some time for the graph to render depending on the size of your project and your computer's available memory. The graph of very large projects might not render so you can select a subset of nodes by using selectors, instead.
+            - paragraph [ref=f54e405]: The nodes in the lineage graph represent the project's resources and the edges represent the relationships between the nodes. Nodes are color-coded and include iconography according to their resource type.
+            - paragraph [ref=f54e406]:
+              - text: By default, Catalog shows the project's
+              - link "applied state" [ref=f54e407] [cursor=pointer]:
+                - /url: /docs/dbt-apis/project-state#definition-logical-vs-applied-state-of-dbt-nodes
+              - text: lineage. That is, it shows models that have been successfully built and are available to query, not just the models defined in the project.
+            - paragraph [ref=f54e408]:
+              - text: To explore the lineage graphs of tests and macros, view
+              - link "their resource details pages" [ref=f54e409] [cursor=pointer]:
+                - /url: "#view-resource-details"
+              - text: . By default, Catalog excludes these resources from the full lineage graph unless a search query returns them as results.
+            - group [ref=f54e410]:
+              - generic "How can I interact with the full lineage graph?" [ref=f54e411] [cursor=pointer]
+            - heading [level=3] [ref=f54e415] [cursor=pointer]:
+              - text: Example of full lineage graph
+              - link "Direct link to Example of full lineage graph" [ref=f54e416]:
+                - /url: "#example-of-full-lineage-graph"
+            - paragraph [ref=f54e417]: "To explore a model in your project's lineage graph in Catalog:"
+            - list [ref=f54e418]:
+              - listitem [ref=f54e419]: Select your project in the left sidebar.
+              - listitem [ref=f54e420]:
+                - text: Click the
+                - strong [ref=f54e421]: View lineage
+                - text: button.
+              - listitem [ref=f54e422]: Click a model to view the description.
+            - generic [ref=f54e423]:
+              - link [ref=f54e425] [cursor=pointer]:
+                - /url: "#"
+                - img "Example of full lineage graph" [ref=f54e426]
+              - generic [ref=f54e427]: Example of full lineage graph
+            - heading [level=2] [ref=f54e428] [cursor=pointer]:
+              - text: Lenses
+              - link "Direct link to Lenses" [ref=f54e429]:
+                - /url: "#lenses"
+            - paragraph [ref=f54e430]:
+              - text: The
+              - strong [ref=f54e431]: Lenses
+              - text: feature is available from your
+              - link "project's lineage graph" [ref=f54e432] [cursor=pointer]:
+                - /url: "#project-lineage"
+              - text: (lower right corner). Lenses are like map layers for your DAG. Lenses make it easier to understand your project's contextual metadata at scale, especially to distinguish a particular model or a subset of models.
+            - paragraph [ref=f54e433]: When you apply a lens, tags become visible on the nodes in the lineage graph, indicating the layer value along with coloration based on that value. If you're significantly zoomed out, only the tags and their colors are visible in the graph.
+            - paragraph [ref=f54e434]: Lenses are helpful to analyze a subset of the DAG if you're zoomed in, or to find models/issues from a larger vantage point.
+            - group [ref=f54e435]:
+              - generic "List of available lenses" [ref=f54e436] [cursor=pointer]
+            - heading [level=3] [ref=f54e440] [cursor=pointer]:
+              - text: Example of lenses
+              - link "Direct link to Example of lenses" [ref=f54e441]:
+                - /url: "#example-of-lenses"
+            - paragraph [ref=f54e442]:
+              - text: Example of applying the
+              - strong [ref=f54e443]: Materialization type
+              - emphasis [ref=f54e444]: lens
+              - text: on a zoomed-out lineage graph. In the bottom-left corner, open
+              - strong [ref=f54e445]: Lenses
+              - text: and select
+              - strong [ref=f54e446]: Materialization type
+              - text: ". Each node displays a colored badge for its related materialization type:"
+            - list [ref=f54e447]:
+              - listitem [ref=f54e448]: Table
+              - listitem [ref=f54e449]: View
+              - listitem [ref=f54e450]: Incremental
+              - listitem [ref=f54e451]: Ephemeral
+              - listitem [ref=f54e452]: Materialized View.
+            - generic [ref=f54e453]:
+              - link [ref=f54e455] [cursor=pointer]:
+                - /url: "#"
+                - img "Example of the Materialization type lens" [ref=f54e456]
+              - generic [ref=f54e457]: Example of the Materialization type lens
+            - paragraph [ref=f54e458]:
+              - text: Example of applying the
+              - strong [ref=f54e459]: Test status
+              - emphasis [ref=f54e460]: lens
+              - text: on a lineage graph filtered to models. In the bottom-left corner, open
+              - strong [ref=f54e461]: Lenses
+              - text: and select
+              - strong [ref=f54e462]: Test status
+              - text: ". Each node displays a colored badge for its latest test status:"
+            - list [ref=f54e463]:
+              - listitem [ref=f54e464]: Pass
+              - listitem [ref=f54e465]: Error
+              - listitem [ref=f54e466]: Fail
+              - listitem [ref=f54e467]: Warn
+              - listitem [ref=f54e468]: Skipped
+              - listitem [ref=f54e469]: Reused.
+            - generic [ref=f54e470]:
+              - link [ref=f54e472] [cursor=pointer]:
+                - /url: "#"
+                - img "Example of the Test Status lens" [ref=f54e473]
+              - generic [ref=f54e474]: Example of the Test Status lens
+            - heading [level=2] [ref=f54e475] [cursor=pointer]:
+              - text: Keyword search
+              - link "Direct link to Keyword search" [ref=f54e476]:
+                - /url: "#search-resources"
+            - paragraph [ref=f54e477]: With Catalog, global navigation provides a search experience allowing you to find dbt resources across all your projects, as well as non-dbt resources in Snowflake.
+            - paragraph [ref=f54e478]: You can locate resources in your project by performing a keyword search in the search bar. All resource names, column names, resource descriptions, warehouse relations, and code matching your search criteria will be displayed as a list on the main (center) section of the page. When searching for an exact column name, the results show all relational nodes containing that column in their schemas. If there's a match, a notice in the search result indicates the resource contains the specified column. Also, you can apply filters to further refine your search results.
+            - group [ref=f54e479]:
+              - generic "Search features" [ref=f54e480] [cursor=pointer]
+            - group [ref=f54e484]:
+              - generic "Filters side panel" [ref=f54e485] [cursor=pointer]
+            - group [ref=f54e489]:
+              - generic "Global navigation" [ref=f54e490] [cursor=pointer]
+            - heading [level=3] [ref=f54e494] [cursor=pointer]:
+              - text: Example of keyword search
+              - link "Direct link to Example of keyword search" [ref=f54e495]:
+                - /url: "#example-of-keyword-search"
+            - paragraph [ref=f54e496]:
+              - text: Example of results from searching on the keyword
+              - code [ref=f54e497]: customers
+              - text: and applying the filters models, description, and code.
+              - link "Data health signals" [ref=f54e498] [cursor=pointer]:
+                - /url: /docs/explore/data-health-signals
+              - text: are visible to the right of the model name in the search results.
+            - heading [level=2] [ref=f54e499] [cursor=pointer]:
+              - text: Browse with the sidebar
+              - link "Direct link to Browse with the sidebar" [ref=f54e500]:
+                - /url: "#browse-with-the-sidebar"
+            - paragraph [ref=f54e501]: From the sidebar, you can browse your project's resources, its file tree, and the database.
+            - list [ref=f54e502]:
+              - listitem [ref=f54e503]:
+                - strong [ref=f54e504]: Resources
+                - text: tab — All resources in the project organized by type. Select any resource type in the list and all those resources in the project will display as a table in the main section of the page. For a description on the different resource types (like models, metrics, and so on), refer to
+                - link "About dbt projects" [ref=f54e505] [cursor=pointer]:
+                  - /url: /docs/build/projects
+                - text: .
+                - list [ref=f54e506]:
+                  - listitem [ref=f54e507]:
+                    - link "Data health signals" [ref=f54e508] [cursor=pointer]:
+                      - /url: /docs/explore/data-health-signals
+                    - text: are visible to the right of the resource name under the
+                    - strong [ref=f54e509]: Health
+                    - text: column.
+              - listitem [ref=f54e510]:
+                - strong [ref=f54e511]: File Tree
+                - text: tab — All resources in the project organized by the file in which they are defined. This mirrors the file tree in your dbt project repository.
+              - listitem [ref=f54e512]:
+                - strong [ref=f54e513]: Database
+                - text: tab — All resources in the project organized by the database and schema in which they are built. This mirrors your data platform's structure that represents the
+                - link "applied state" [ref=f54e514] [cursor=pointer]:
+                  - /url: /docs/dbt-apis/project-state
+                - text: of your project.
+            - heading [level=2] [ref=f54e515] [cursor=pointer]:
+              - text: Integrated tool access
+              - link "Direct link to Integrated tool access" [ref=f54e516]:
+                - /url: "#integrated-tool-access"
+            - paragraph [ref=f54e517]:
+              - text: Users with a
+              - link "developer license" [ref=f54e518] [cursor=pointer]:
+                - /url: /docs/platform/manage-access/about-user-access#license-based-access-control
+              - text: or an analyst seat* can open a resource directly from the Catalog in the Studio IDE to view its model files, in Insights to query it, or in Canvas for visual editing.
+            - paragraph [ref=f54e519]:
+              - text: "* The"
+              - link "Analyst license type" [ref=f54e520] [cursor=pointer]:
+                - /url: /docs/platform/manage-access/about-user-access?version=1.12#licenses
+              - text: is not available for new purchase.
+            - heading [level=2] [ref=f54e521] [cursor=pointer]:
+              - text: View model versions
+              - link "Direct link to View model versions" [ref=f54e522]:
+                - /url: "#view-model-versions"
+            - paragraph [ref=f54e523]:
+              - text: If models in the project are versioned, you can see which
+              - link "version of the model" [ref=f54e524] [cursor=pointer]:
+                - /url: /docs/mesh/govern/model-versions
+              - text: is being applied —
+              - code [ref=f54e525]: prerelease
+              - text: ","
+              - code [ref=f54e526]: latest
+              - text: ", and"
+              - code [ref=f54e527]: old
+              - text: — in the title of the model's details page and in the model list from the sidebar.
+            - heading [level=2] [ref=f54e528] [cursor=pointer]:
+              - text: View resource details
+              - link "Direct link to View resource details" [ref=f54e529]:
+                - /url: "#view-resource-details"
+            - paragraph [ref=f54e530]: You can view the definition and latest run results of any resource in your project. To find a resource and view its details, you can interact with the lineage graph, use search, or browse the Catalog.
+            - paragraph [ref=f54e531]:
+              - text: The details (metadata) available to you depends on the resource's type, its definition, and the
+              - link "commands" [ref=f54e532] [cursor=pointer]:
+                - /url: /docs/deploy/job-commands
+              - text: that run within jobs in the production environment.
+            - paragraph [ref=f54e533]: "In the upper right corner of the resource details page, you can:"
+            - list [ref=f54e534]:
+              - listitem [ref=f54e535]:
+                - text: Click the
+                - link "Open in Studio IDE" [ref=f54e536] [cursor=pointer]:
+                  - /url: "#open-in-ide"
+                - text: icon to examine the resource using the
+                - link "Studio IDE" [ref=f54e537] [cursor=pointer]:
+                  - /url: /docs/platform/studio-ide/develop-in-studio
+                - text: .
+              - listitem [ref=f54e538]: Click the Share icon to copy the page's link to your clipboard.
+            - group [ref=f54e539]:
+              - generic "What details are available for a model?" [ref=f54e540] [cursor=pointer]
+            - group [ref=f54e544]:
+              - generic "What details are available for an exposure?" [ref=f54e545] [cursor=pointer]
+            - group [ref=f54e549]:
+              - generic "What details are available for a test?" [ref=f54e550] [cursor=pointer]
+            - group [ref=f54e554]:
+              - generic "What details are available for each source table within a source collection?" [ref=f54e555] [cursor=pointer]
+            - heading [level=3] [ref=f54e559] [cursor=pointer]:
+              - text: Example of model details
+              - link "Direct link to Example of model details" [ref=f54e560]:
+                - /url: "#example-of-model-details"
+            - paragraph [ref=f54e561]: "To view a model's details page in Catalog:"
+            - list [ref=f54e562]:
+              - listitem [ref=f54e563]: Select your project in the sidebar.
+              - listitem [ref=f54e564]:
+                - text: Click
+                - strong [ref=f54e565]: Models
+                - text: .
+              - listitem [ref=f54e566]:
+                - text: Under
+                - strong [ref=f54e567]: Models
+                - text: ", select a model (for example,"
+                - code [ref=f54e568]: customers
+                - text: ).
+            - paragraph [ref=f54e569]:
+              - text: On the
+              - strong [ref=f54e570]: General
+              - text: tab, you can review the description, latest status, and lineage graph. Select
+              - strong [ref=f54e571]: Full Lineage
+              - text: to open the full graph view.
+            - generic [ref=f54e573]:
+              - generic [ref=f54e574]:
+                - generic [ref=f54e576]:
+                  - link [ref=f54e578] [cursor=pointer]:
+                    - /url: "#"
+                    - img "Example of resource details" [ref=f54e579]
+                  - generic [ref=f54e580]: Example of resource details
+                - generic [ref=f54e582]:
+                  - link [ref=f54e584] [cursor=pointer]:
+                    - /url: "#"
+                    - img "Example of downstream exposure details for Tableau." [ref=f54e585]
+                  - generic [ref=f54e586]: Example of downstream exposure details for Tableau.
+              - generic: prev
+              - generic [ref=f54e587] [cursor=pointer]: next
+              - generic [ref=f54e588]:
+                - generic [ref=f54e589] [cursor=pointer]
+                - generic [ref=f54e590] [cursor=pointer]
+            - heading [level=2] [ref=f54e591] [cursor=pointer]:
+              - text: Staging environment
+              - link "Direct link to Staging environment" [ref=f54e592]:
+                - /url: "#staging-environment"
+            - paragraph [ref=f54e593]:
+              - text: Catalog supports views for
+              - link "staging deployment environments" [ref=f54e594] [cursor=pointer]:
+                - /url: /docs/deploy/deploy-environments#staging-environment
+              - text: ", in addition to the production environment. This gives you a unique view into your pre-production data workflows, with the same tools available in production, while providing an extra layer of scrutiny."
+            - paragraph [ref=f54e595]:
+              - text: You can explore the metadata from your production or staging environment to inform your data development lifecycle. Just
+              - link "set a single environment" [ref=f54e596] [cursor=pointer]:
+                - /url: /docs/deploy/deploy-environments
+              - text: per dbt project as "production" or "staging," and ensure the proper metadata has been generated then you'll be able to view it in Catalog. Refer to
+              - link "Generating metadata" [ref=f54e597] [cursor=pointer]:
+                - /url: /docs/explore/explore-projects#generate-metadata
+              - text: for more details.
+            - heading [level=2] [ref=f54e598] [cursor=pointer]:
+              - text: Related content
+              - link "Direct link to Related content" [ref=f54e599]:
+                - /url: "#related-content"
+            - list [ref=f54e600]:
+              - listitem [ref=f54e601]:
+                - link "Enterprise permissions" [ref=f54e602] [cursor=pointer]:
+                  - /url: /docs/platform/manage-access/enterprise-permissions
+              - listitem [ref=f54e603]:
+                - link "About model governance" [ref=f54e604] [cursor=pointer]:
+                  - /url: /docs/mesh/govern/about-model-governance
+              - listitem [ref=f54e605]:
+                - text: Blog on
+                - link "What is data mesh?" [ref=f54e606] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/blog/what-is-data-mesh-the-definition-and-importance-of-data-mesh
+            - generic [ref=f54e607]:
+              - heading "Was this page helpful?" [level=2] [ref=f54e608]
+              - generic [ref=f54e610]:
+                - button "Yes" [ref=f54e611]
+                - button "No" [ref=f54e614]
+              - generic [ref=f54e617]:
+                - generic [ref=f54e618]:
+                  - link "Privacy policy" [ref=f54e619] [cursor=pointer]:
+                    - /url: https://www.getdbt.com/cloud/privacy-policy
+                  - link "Create a GitHub issue" [ref=f54e620] [cursor=pointer]:
+                    - /url: https://github.com/dbt-labs/docs.getdbt.com/issues
+                - paragraph [ref=f54e622]:
+                  - text: This site is protected by reCAPTCHA and the Google
+                  - link "Privacy Policy" [ref=f54e623] [cursor=pointer]:
+                    - /url: https://policies.google.com/privacy
+                  - text: and
+                  - link "Terms of Service" [ref=f54e624] [cursor=pointer]:
+                    - /url: https://policies.google.com/terms
+                  - text: apply.
+          - generic [ref=f54e626]:
+            - link "Edit this page" [ref=f54e628] [cursor=pointer]:
+              - /url: https://github.com/dbt-labs/docs.getdbt.com/edit/current/website/docs/docs/explore/explore-projects.md
+            - generic [ref=f54e633]:
+              - text: Last updated on
+              - time [ref=f54e635]: Aug 11, 2026
+        - navigation "Docs pages" [ref=f54e636]:
+          - link "Next Data health signals »" [ref=f54e637] [cursor=pointer]:
+            - /url: /docs/explore/data-health-signals
+            - generic [ref=f54e638]: Next
+            - generic [ref=f54e639]: Data health signals »
+    - contentinfo [ref=f54e640]:
+      - generic [ref=f54e644]:
+        - generic [ref=f54e646]:
+          - generic [ref=f54e647]:
+            - generic [ref=f54e648]: Get started
+            - heading "Start building with dbt." [level=2] [ref=f54e649]
+            - paragraph [ref=f54e650]: The free dbt VS Code extension is the best way to develop locally with the dbt Fusion Engine.
+          - generic [ref=f54e651]:
+            - link "Install free extension" [ref=f54e652] [cursor=pointer]:
+              - /url: https://marketplace.visualstudio.com/items?itemName=dbtLabsInc.dbt
+            - link "Request your demo" [ref=f54e653] [cursor=pointer]:
+              - /url: https://www.getdbt.com/contact
+        - generic [ref=f54e655]:
+          - link [ref=f54e657] [cursor=pointer]:
+            - /url: /
+            - img "dbt Labs" [ref=f54e658]
+          - generic [ref=f54e659]:
+            - generic [ref=f54e660]:
+              - heading "Resources" [level=5] [ref=f54e661]
+              - link "VS Code Extension" [ref=f54e662] [cursor=pointer]:
+                - /url: /docs/about-dbt-extension
+              - link "Resource Hub" [ref=f54e663] [cursor=pointer]:
+                - /url: https://www.getdbt.com/resources
+              - link "dbt Learn" [ref=f54e664] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-learn
+              - link "Certification" [ref=f54e665] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-certification
+              - link "Developer Blog" [ref=f54e666] [cursor=pointer]:
+                - /url: /blog
+            - generic [ref=f54e667]:
+              - heading "Community" [level=5] [ref=f54e668]
+              - link "Join the Community" [ref=f54e669] [cursor=pointer]:
+                - /url: /community/join
+              - link "Become a Contributor" [ref=f54e670] [cursor=pointer]:
+                - /url: /community/contribute
+              - link "Open Source dbt Packages" [ref=f54e671] [cursor=pointer]:
+                - /url: https://hub.getdbt.com/
+              - link "Community Forum" [ref=f54e672] [cursor=pointer]:
+                - /url: https://discourse.getdbt.com/
+            - generic [ref=f54e673]:
+              - heading "Support" [level=5] [ref=f54e674]
+              - link "Contact Support" [ref=f54e675] [cursor=pointer]:
+                - /url: /docs/dbt-support
+              - link "Professional Services" [ref=f54e676] [cursor=pointer]:
+                - /url: https://www.getdbt.com/services
+              - link "Find a Partner" [ref=f54e677] [cursor=pointer]:
+                - /url: https://www.getdbt.com/partner-directory
+              - link "System Status" [ref=f54e678] [cursor=pointer]:
+                - /url: https://status.getdbt.com/
+            - generic [ref=f54e679]:
+              - heading "Connect with Us" [level=5] [ref=f54e680]
+              - generic [ref=f54e681]:
+                - link "GitHub" [ref=f54e682] [cursor=pointer]:
+                  - /url: https://github.com/dbt-labs/docs.getdbt.com
+                - link "LinkedIn" [ref=f54e685] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/dbtlabs/mycompany/
+                - link "YouTube" [ref=f54e688] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCVpBwKK-ecMEV75y1dYLE5w
+                - link "Instagram" [ref=f54e691] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dbt_labs/
+                - link "X" [ref=f54e694] [cursor=pointer]:
+                  - /url: https://x.com/dbt_labs
+                - link "Bluesky" [ref=f54e697] [cursor=pointer]:
+                  - /url: https://bsky.app/profile/getdbt.com
+                - link "Community Slack" [ref=f54e700] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/community/join-the-community/
+          - generic [ref=f54e703]:
+            - generic [ref=f54e704]: © 2026 dbt Labs, LLC. All Rights Reserved.
+            - generic [ref=f54e705]:
+              - link "Terms of Service" [ref=f54e706] [cursor=pointer]:
+                - /url: https://www.getdbt.com/terms-of-use/
+              - link "Privacy Policy" [ref=f54e707] [cursor=pointer]:
+                - /url: https://www.getdbt.com/cloud/privacy-policy/
+              - link "Security" [ref=f54e708] [cursor=pointer]:
+                - /url: https://www.getdbt.com/security/
+              - button "Cookie Settings" [ref=f54e709] [cursor=pointer]
+  - dialog "Fivetran's Use of Cookies" [ref=f54e711]:
+    - generic [ref=f54e712]:
+      - generic [ref=f54e713]:
+        - generic:
+          - heading "Fivetran's Use of Cookies" [level=2] [ref=f54e714]
+          - generic [ref=f54e715]:
+            - text: By clicking "Accept All Cookies", you consent to the storage of cookies on your device for improved site navigation, analyzing site usage, and supporting our marketing efforts.
+            - link "More information about your privacy, opens in a new tab" [ref=f54e716] [cursor=pointer]:
+              - /url: https://www.fivetran.com/legal/privacy
+              - text: Refer to our Privacy Notice section on "Cookies and similar tracking technology" for more details.
+      - generic [ref=f54e718]:
+        - button "Accept All Cookies" [ref=f54e720] [cursor=pointer]
+        - button "Personalize My Choices, Opens the preference center dialog" [ref=f54e721] [cursor=pointer]: Personalize My Choices
