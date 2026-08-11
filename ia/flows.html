@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flows - Plumb</title>
+<meta name="description" content="Four user flows for Plumb, traced onto the To-Be phases: the main job, two related jobs of the reader, and the analyst's setup, with decisions, states and both ends.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: the diagram frame and the colour legend */
+  .diagram{ border:1px solid var(--rule-strong); background:#fff; padding:14px 10px;
+            margin:18px 0 10px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .diagram .mermaid{ min-width:300px; }
+  .legend{ font-family:var(--sans); font-size:12.5px; color:var(--muted);
+           display:flex; flex-wrap:wrap; gap:8px 20px; margin:14px 0 4px; }
+  .legend span{ display:inline-flex; align-items:center; gap:8px; }
+  .sw{ width:18px; height:12px; border:1px solid var(--rule-strong); background:var(--panel); flex:none; }
+  .sw.ok{ background:#eaf2ee; border-color:var(--accent); }
+  .sw.no{ background:#f7e9e6; border-color:var(--down); }
+  .after{ font-family:var(--sans); font-size:14px; line-height:1.55; }
+  .after dt{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:14px; }
+  .after dd{ margin:3px 0 0; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:18px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03a &middot; Information Architecture</p>
+    <h1>Four routes, drawn to prove they hold and not to look tidy</h1>
+    <p class="standfirst lede">Flows are traced onto the To-Be phases, with the As-Is barriers supplying the decision points and the dead ends. Every diagram carries decisions, states and both ends, so what is drawn is the route rather than the happy path.</p>
+    <div class="dateline">
+      <span>Drawn 2026-08-11</span>
+      <span>One true dead end, and it belongs to the reader</span>
+      <span>Source: <code>ia/docs/flows.md</code></span>
+    </div>
+  </header>
+
+  <!-- Legend ............................................................ -->
+  <section id="legend">
+    <div class="sec-head"><span class="sec-num">01</span><h2>How to read the colour</h2></div>
+
+    <p><strong>Colour is semantic here, not decorative.</strong> Green marks the two ends of the happy path, the start and the closed job, and the path between them is drawn with green arrows. Red marks a true dead end: a node with no route to the goal. Grey is everything in between, including an error that recovers back into the flow.</p>
+
+    <div class="legend">
+      <span><i class="sw ok"></i> Both ends of the happy path</span>
+      <span><i class="sw no"></i> A true dead end, no route to the goal</span>
+      <span><i class="sw"></i> Steps, decisions, loading, empty, recoverable errors</span>
+    </div>
+
+    <p class="note">Every screen node exists in the concept sitemap. Nodes that are states or steps rather than screens are named as such under each diagram. <strong>No new screen appeared while drawing these</strong>, which is a small confirmation that the map came out of jobs rather than being assembled loosely.</p>
+  </section>
+
+  <!-- Flow 1 ............................................................ -->
+  <section id="flow-main">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Main job: how far the number can be trusted</h2></div>
+
+    <p>Traces the first three To-Be steps. The decision points come from the barriers at the phases where the number is taken and where the doubt happens.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart TD
+    Start(["A link to a number arrives, in a deck or a chat"]) --> A1["A1. The number card opens, no account"]
+    A1 --> Perm{"Readable without an account?"}
+    Perm -->|no| Dead1["Dead end: nothing to see, no home, no way in"]
+    Perm -->|yes| Load["Loading: value queried at read time"]
+    Load --> Src{"Is the source reachable?"}
+    Src -->|no| Down["State: source is down. Definition, owner and last run still shown"]
+    Down --> Who["The name and date on the claim, on A1"]
+    Src -->|yes| Fresh["The value, as of, age, expected cadence"]
+    Fresh --> Chg{"Definition changed since the link?"}
+    Chg -->|no| Enough{"Enough to stand behind it?"}
+    Chg -->|yes| Changed["State: definition changed since saved, with the previous one"]
+    Changed --> Enough
+    Enough -->|no| A2["A2. Where this number came from"]
+    A2 --> Enough
+    Enough -->|yes| Win(["Job closed: the reader knows how far the number can be trusted"])
+    Who --> Win
+
+    classDef success fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef dead fill:#f7e9e6,stroke:#8c3b2e,color:#14161a;
+    classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
+    class Start,Win success;
+    class Dead1 dead;
+    class A1,Perm,Load,Src,Down,Who,Fresh,Chg,Changed,Enough,A2 neutral;
+    linkStyle 0,1,3,4,7,8,9,14 stroke:#1f5c4e,stroke-width:2px;
+      </pre>
+    </div>
+
+    <div class="flag">
+      <b>Activation node: A1</b>
+      <p>Activation is the first time a metric card is opened by somebody other than the author of its definition. It is the first node after the start and sits at <strong>zero taps from arrival</strong>, which is what the funnel asked for: the product does not defer its first value behind anything.</p>
+    </div>
+
+    <dl class="after">
+      <dt>Decisions</dt>
+      <dd>Whether the card is readable without an account. Whether the source answers. Whether the definition changed after the link was made. Whether what is shown is enough to stand behind.</dd>
+      <dt>States</dt>
+      <dd>Loading while the value is queried, because we store no rows and the number is pulled at read time. "Source is down", which still shows the definition, the owner and the last successful run. "Definition changed after this was saved", carrying the previous definition as a line.</dd>
+    </dl>
+
+    <div class="flag warn">
+      <b>The one true dead end, and it was predicted before it was drawn</b>
+      <p>A reader who lands on a card they may not see has nowhere to go: no home, no menu, no account and nothing to sign into. It is red because there is no route to the goal from there, and it is <strong>the direct price of flattening the reader's navigation to nothing</strong>.</p>
+    </div>
+
+    <p><strong>A consequence of metadata-only, visible here for the first time.</strong> When the source is down there is no value at all, not even a stale one, because we keep no copy. The route does not die there: the definition, the owner and the age of the last successful run are enough to close the main job in its honest form, since the job is to know how far a number can be trusted, not to hold one. This is the node where the main job and the job "who is answerable" join.</p>
+  </section>
+
+  <!-- Flow 2 ............................................................ -->
+  <section id="flow-who">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Who is answerable</h2></div>
+
+    <p>The open question about the owner's contact route becomes a decision here rather than staying a note in the inventory.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart TD
+    S2(["The number does not match what I expected"]) --> C2a["A1. The card, name and date already visible"]
+    C2a --> Route{"A route to reach them?"}
+    Route -->|"yes, a route is shown"| Ask["Leaves our product to ask that specific person"]
+    Route -->|"unknown at IA time, name only"| Name["The name alone: I know who, not how"]
+    Ask --> W2(["Job closed: a specific person instead of a guess"])
+    Name --> W2
+
+    classDef success fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef dead fill:#f7e9e6,stroke:#8c3b2e,color:#14161a;
+    classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
+    class S2,W2 success;
+    class C2a,Route,Ask,Name neutral;
+    linkStyle 0,1,2,4 stroke:#1f5c4e,stroke-width:2px;
+      </pre>
+    </div>
+
+    <dl class="after">
+      <dt>Decisions</dt>
+      <dd>One, and its answer is unknown: whether we may show a route to the owner at all. The reader has no account, and what a data lead considers safe to show is an open question in the personas file.</dd>
+      <dt>Why both branches close the job</dt>
+      <dd>The job is worded as finding out <strong>who</strong> is answerable, so knowing the name closes it and the asking happens outside our product. The branch without a route is not red, and it is not free either: it returns the reader to working out how to reach somebody, which is exactly the friction we claim to remove. <strong>It is the weakest branch in this IA.</strong></dd>
+      <dt>No screen for a person</dt>
+      <dd>The owner is visible on the card and set when the metric is defined, and never gets a page of their own.</dd>
+    </dl>
+  </section>
+
+  <!-- Flow 3 ............................................................ -->
+  <section id="flow-stale">
+    <div class="sec-head"><span class="sec-num">04</span><h2>An old figure does not travel as a current one</h2></div>
+
+    <p>This flow settled a fork the entity inventory had left open, which is what flows are for.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart TD
+    S3(["I come back to a number I saved weeks ago"]) --> L3["Loading: the value is queried again"]
+    L3 --> Mark{"Link carries the reading moment?"}
+    Mark -->|no| D3["Dead end: we can say the definition changed, never that it changed since YOUR reading"]
+    Mark -->|yes| Cmp{"Changed since that moment?"}
+    Cmp -->|yes| Ch3["State: definition changed since saved, with the previous one"]
+    Cmp -->|no| Ok3["State: as of, age, expected cadence"]
+    Ch3 --> W3(["Job closed: an old figure does not travel as a current one"])
+    Ok3 --> W3
+
+    classDef success fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef dead fill:#f7e9e6,stroke:#8c3b2e,color:#14161a;
+    classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
+    class S3,W3 success;
+    class D3 dead;
+    class L3,Mark,Cmp,Ch3,Ok3 neutral;
+    linkStyle 0,1,3,4,6 stroke:#1f5c4e,stroke-width:2px;
+      </pre>
+    </div>
+
+    <div class="flag">
+      <b>What this flow decided</b>
+      <p>The reading was left undecided in the inventory: either a stored object, or a moment encoded in the link. The flow shows there is no third option and no neutral one. <strong>If the link does not carry the moment it was read, this job cannot be served at all</strong>: the state degrades to "the definition changed at some point", which asks the reader to remember when they took the number, and that is the very thing they came to us to avoid.</p>
+      <p style="margin-top:8px"><strong>Resolution: the moment travels in the link, and a reading is not an object.</strong> That keeps one permanent URL per metric and stores nothing about a reader who has no account.</p>
+    </div>
+
+    <dl class="after">
+      <dt>Decisions</dt><dd>Whether the link carries the reading moment. Whether the definition changed since it.</dd>
+      <dt>States</dt><dd>Loading, "definition changed after this was saved" with the previous definition, and the ordinary "as of".</dd>
+    </dl>
+  </section>
+
+  <!-- Flow 4 ............................................................ -->
+  <section id="flow-setup">
+    <div class="sec-head"><span class="sec-num">05</span><h2>The definition stops living in somebody's head</h2></div>
+
+    <p>The secondary persona. Included because this work is the precondition of every flow above, and because these are the only errors in the product a person can actually fix.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart TD
+    S4(["An analyst brings a metric under control"]) --> D1s["D1. Sign in through SSO"]
+    D1s --> C1s["C1. Connect a source"]
+    C1s --> Lc["Loading: testing the connection"]
+    Lc --> Conn{"Does the source answer?"}
+    Conn -->|no| Er1["Error: connection failed. Returns to C1"]
+    Er1 --> C1s
+    Conn -->|yes| C3s["C3. Metric registry"]
+    C3s --> Emp["Empty: no metrics yet, one route to the first"]
+    Emp --> C2s["C2. Define a metric: text, owner, source"]
+    C2s --> Q{"Definition returns a value?"}
+    Q -->|no| Er2["Error: definition does not run. Returns to C2"]
+    Er2 --> C2s
+    Q -->|yes| Save["The metric is saved and gets its permanent URL"]
+    Save --> B1s["B1. Send this number"]
+    B1s --> W4(["Setup complete, and this is deliberately NOT activation"])
+
+    classDef success fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef dead fill:#f7e9e6,stroke:#8c3b2e,color:#14161a;
+    classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
+    class S4,W4 success;
+    class D1s,C1s,Lc,Conn,Er1,C3s,Emp,C2s,Q,Er2,Save,B1s neutral;
+    linkStyle 0,1,2,3,6,7,8,9,12,13,14 stroke:#1f5c4e,stroke-width:2px;
+      </pre>
+    </div>
+
+    <dl class="after">
+      <dt>No red node here, and that is not carelessness</dt>
+      <dd>Both errors recover: a failed connection returns to the source screen and a definition that does not run returns to the definition screen. The analyst has credentials, an account and a way back, which is exactly what the reader in the first flow does not have.</dd>
+      <dt>The end of this flow is not activation, and the label says so</dt>
+      <dd>Connecting a source and writing a definition are setup. Activation happens in the first flow, when a second person opens the card. Naming it here stops a later stage from treating a completed analyst setup as the moment of value.</dd>
+      <dt>Decisions and states</dt>
+      <dd>Whether the source answers and whether the definition returns a value. Loading while the connection is tested, an empty registry on the first run, and two recoverable errors.</dd>
+    </dl>
+  </section>
+
+  <footer class="note">
+    <p>Plumb, stage 03a of 13. Full detail in <code>ia/docs/flows.md</code>. The concept map, the navigation model and the traceability matrix are on the next page of this stage.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        background: '#ffffff',
+        primaryColor: '#f6f5f1',
+        primaryTextColor: '#14161a',
+        primaryBorderColor: '#c9c6bf',
+        lineColor: '#6b7076',
+        secondaryColor: '#f6f5f1',
+        tertiaryColor: '#fcfcfa',
+        fontFamily: 'ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif',
+        fontSize: '14px'
+      },
+      flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis' }
+    });
+  }
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'legend',      label:'How to read the colour' },
+    { id:'flow-main',   label:'Main job' },
+    { id:'flow-who',    label:'Who is answerable' },
+    { id:'flow-stale',  label:'The old figure' },
+    { id:'flow-setup',  label:'The analyst setup' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

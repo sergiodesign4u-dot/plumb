@@ -19,9 +19,11 @@ Objects first, screens second. Screens only show objects, and objects grow out o
 | E3 | **Source connection** | Warehouse type, reachability, time of the last successful run, expected cadence | The main job **as a precondition**: with no source a number has no age and no state. The wording is inherited from `jtbd.md`, which already calls this a precondition rather than a job of its own |
 | E4 | **Owner of the claim** | Name, role, a route for reaching them `[?]` | R1. **The `[?]` is load-bearing:** asking a specific person requires a route, the reader has no account, and whether we may show a contact at all is unknown |
 | E5 | **Analyst account** | Name, email, SSO identity, workspace | R5 and R2: writing and owning definitions requires signing in |
-| E6 | **Reading** `[?]` | A metric plus the definition version that was current when the number was taken, plus a timestamp | R4. What is in question is not the need but the **form** |
+| E6 | **Reading**, resolved at step 4 | Not an object. The moment of reading travels **encoded in the link**, and nothing about the reader is stored | R4 |
 
-**E6 deserves its own paragraph, because it is the first real fork in this IA.** The backlog requires a definition snapshot at read time, without which the state "definition changed after this was saved" has nothing to compare against. But T1 gave us **one permanent URL per metric**, not per reading. So either the snapshot is encoded in the link itself and there is no entity, or a reading is a stored object, and then we are storing something about a reader who has no account. Both have consequences, and this is not the place to settle it. It is carried into step 2 marked `[?]`.
+**E6 deserved its own paragraph, because it was the first real fork in this IA, and step 4 settled it.** The backlog requires a definition snapshot at read time, without which the state "definition changed after this was saved" has nothing to compare against. But T1 gave us **one permanent URL per metric**, not per reading. So either the snapshot is encoded in the link itself and there is no entity, or a reading is a stored object, and then we are storing something about a reader who has no account.
+
+**Resolved in flow 3: the moment is carried in the link, and a reading is not an object.** The flow showed there is no third option. If the link does not carry the moment it was read, the state degrades to "the definition changed at some point", which asks the reader to remember when they took the number, and that is the very thing they came to us to avoid. Encoding it keeps the permanent URL per metric and adds no record about an accountless reader.
 
 ### Under question, because no job sits under them
 
