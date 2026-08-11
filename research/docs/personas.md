@@ -96,7 +96,11 @@ Personas are named by behaviour rather than given invented human names. A name w
 
 **Context.** PM, marketer or finance, 25 to 45, non-technical. Arrives **from exposure**, not from curiosity: a deck due, a meeting within the hour, a decision with their name on it (`CLAUDE.md`, `[?]`). How often this happens and what surface they read in are both unknown, holes 3 and 6. *Answers: the flow does not start at a home page or a search box, it starts at one number opened from a link.*
 
-**Jobs (draft; canonical wording is set at step 3 and mirrored here).** Judge whether a number still holds before putting their name next to it. Find out who to ask when it does not. Understand **what kind** of wrong it is when it is wrong.
+**Jobs.** Canonical wording, identical to `jtbd.md`, no second edition of any job exists.
+
+- **Main job.** When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.
+- **R1.** When a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person instead of putting doubt into a channel.
+- **R4.** When I come back to a number I saved earlier, I want to know whether anything about it changed since, so that an old figure does not travel as a current one. Marked a hypothesis in `jtbd.md`: nothing shows that anyone reopens a saved link.
 
 **Pains.** The number arrives stripped of everything that would let them judge it. Provenance is a destination that has to be chosen, and choosing it requires already suspecting something (`competitors.md`, shown for the five documented surfaces). The state vocabulary exists in the market and sits where they have no reason to go (`docs.getdbt.com/docs/explore/explore-projects`). Where access is given, the free role sees least: in Looker, Viewer gets folders, boards, dashboards and Looks only (`competitors.md`). *Answers: what the product removes, and how we will see that it did.*
 
@@ -110,7 +114,11 @@ Personas are named by behaviour rather than given invented human names. A name w
 
 **Context.** 28 to 40, data team of 1 to 5 inside a company of 50 to 300. Arrives **on somebody else's trigger**: an inbound "why is this number different", several times a week (`CLAUDE.md`, `[?]`, hole 11). *Answers: their flow starts from an interruption, so the entry screen is search and jump to a metric, not a dashboard.*
 
-**Jobs (draft).** Answer once and have the answer stay answered. Make a definition and its owner visible without being in the room. Make a change to a definition visible to everyone who already read the number.
+**Jobs.** Canonical wording, identical to `jtbd.md`.
+
+- **R2.** When the same question about a number reaches me again, I want to answer it once and have the answer keep answering, so that I stop being the only route to it. This is the analyst's job of main-job weight; `jtbd.md` records why it is not a second main job.
+- **R3.** When I change what a number means, I want the people who already used it to find out, so that my correction reaches the decisions it affects.
+- **R5.** When I bring a new metric under control, I want to state once what it means and who owns it, so that the definition stops living in somebody's head.
 
 **Pains.** Manual digging per question. Being a human API to their own data. A reputation that depends on their availability (`CLAUDE.md`, `[?]`). From the market: definition governance lives in producer tools, certification is a badge, and a name appears only when the badge is **removed** (`support.powermetrics.app`, article 37726220561559).
 
