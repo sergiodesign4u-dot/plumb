@@ -28,7 +28,9 @@
 - **URL:** `/sources`. Root of its own cluster, no breadcrumb above it
 - **Indexation:** `noindex`. Behind sign-in, and it names the customer's infrastructure
 
-## The template, and the two places it did not survive
+## Content blocks, mobile-first priority
+
+### The template, and the two places it did not survive
 
 | Block from node 4.1 | Here | Verdict |
 | --- | --- | --- |
@@ -49,14 +51,14 @@
 The bank wrote 3.1's columns by analogy with 4.1: name, reachability, last successful run. **Read against node 0.4, two of those are the same fact.**
 
 - 0.4 refuses "Healthy" by name: a thing with nothing wrong carries its age, not a badge. So a reachable connection is expressed **as the time it last answered**.
-- And an unreachable one is expressed as "Source is down since 07:40", which already carries a time.
+- And an unreachable one is expressed as "Source is down. Last run 07:40", which already carries a time.
 
 **So reachability and last successful run are one column in both directions**, and the third column is free. It is filled with the thing the analyst actually needs at the moment this page matters.
 
 | Column | What it holds |
 | --- | --- |
 | **Name** | Warehouse type and the database or account. Snowflake, `ANALYTICS.PROD` |
-| **State** | "Last answered 09:12, 3 h ago", or "Source is down since 07:40". **The reader's exact words**, from node 0.4, never "unhealthy", "degraded" or "error" |
+| **State** | "As of 09:12, 3 h ago", or "Source is down. Last run 07:40". **The reader's exact words**, from node 0.4, never "unhealthy", "degraded" or "error" |
 | **Metrics on it** | **How many metrics stop answering if this connection does.** A count from our own store, no warehouse query |
 
 **The third column is a block the bank did not have, so it is named out loud and entered into the bank with its tracing.** It traces to the inbound barrier: the analyst is asked "why is this number different", and when a source is down the difference between answering one person and answering five before they ask is knowing which metrics are affected. **It is a count and not a score**, so design principle 2 is intact: no aggregate, no health percentage, nothing to interpret.

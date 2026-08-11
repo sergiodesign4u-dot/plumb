@@ -15,7 +15,7 @@ Stage 03b, step 4. **This file exists to stop the composition of a page being in
 
 **Refero was checked before any collection and works.** It also confirms what stage 01 recorded: this competitor set is not indexed there, so every Refero search here is by page type and job, never by industry. That is not a workaround, it is the point of the second source.
 
-**The domain half is unobtainable for three types, and they carry the MVP.** None of the fifteen competitors shows the product surface without an account, and we do not log in. For **T1 (the card), T2 (listings) and T3 (forms)**, which hold 21 of the 30 MVP nodes, there is no competitor page of that type to open.
+**The domain half is unobtainable for three types, and they carry the MVP.** None of the fifteen competitors shows the product surface without an account, and we do not log in. For **T1 (the card), T2 (listings) and T3 (forms)**, which hold 21 of the MVP nodes, there is no competitor page of that type to open.
 
 **The named substitute, so nothing is silently taken from the model's head:** public documentation of the real product, which carries interface descriptions and embedded screenshots without an account, plus barriers from `cjm-as-is.md` and jobs from `jtbd.md`. Every documentation source below was **opened in this session** and is dated. This is second-hand next to using the product, and it is marked as such wherever the documentation describes rather than shows.
 
@@ -55,7 +55,7 @@ Nodes are grouped by page type, not one by one. States and dialogs inherit the t
 
 ## T1. Object detail, the read surface
 
-**Nodes:** 2.1 the card, 2.2 to 2.6 and 2.9 to 2.10 its states, 2.7 the source layer, 2.8 send. Ten nodes, all MVP. This is the type the product has to win on and the only one the primary persona ever sees.
+**Nodes:** 2.1 the card, 2.2 to 2.6 and 2.9 to 2.10 its states, 2.7 the source layer, 2.8 send. Ten nodes, **nine of them MVP**: 2.9 moved to ПОТІМ at step 8, because restriction is a workspace policy and cluster 5 is deferred. This is the type the product has to win on and the only one the primary persona ever sees.
 
 ### Sources
 
@@ -146,7 +146,7 @@ Order reasoned from 360, top to bottom.
 | D3 | **Search across resource names, column names, descriptions, warehouse relations and code** | TAKE, narrowed to name and definition text | R2 answer once, R5 | MVP | Phase D: the same question is known to reach the analyst repeatedly (S8). Search that reaches **into the definition text** is how a standing answer gets found instead of retyped. Column names and code are not ours to search, we hold metadata only |
 | D3 | **Sidebar with Resources, File Tree and Database tabs** | DO NOT TAKE | Nothing | Out | Three browse structures imply a taxonomy. We have one object type and a flat list, and the global nav has two items by decision. Inventing tabs here would be inventing a taxonomy to fill them |
 | D3 | **Health signal to the right of the resource name, under a Health column** | DO DIFFERENTLY | Main job, node 0.4 | MVP | **The position is right and the payload is wrong.** We keep a state at the right of the row and replace the aggregate with the compact form from node 0.4: the state name and the age, in words |
-| D3 | **Soft access controls: all matching resources shown, with clear indicators for items you have no access to** | **TAKE, and it settles an open question** | R1, node 2.9 | MVP | Phase B: the number arrives with no route back (S5). Showing that a thing exists and is not yours to see beats hiding it, because a person who cannot see the row cannot even ask about it. This is a live precedent for the open question of what may be shown to somebody with no access |
+| D3 | **Soft access controls: all matching resources shown, with clear indicators for items you have no access to** | **TAKE, and it settles an open question** | R1, node 2.9 | **ПОТІМ, with 2.9** | Phase B: the number arrives with no route back (S5). Showing that a thing exists and is not yours to see beats hiding it, because a person who cannot see the row cannot even ask about it. This is a live precedent for the open question of what may be shown to somebody with no access |
 | D3 | **Notice in a search result that a resource contains the searched column** | DO NOT TAKE | Nothing | Out | We expose no columns. Metadata only |
 | D3 | **"Latest updates": recent job runs, changed properties, lineage and issues** | DO NOT TAKE | Would trace to R3, and fails on form | ПОТІМ at best | Design principle 2. A change is a fact about the metric and belongs on the metric. **As a feed it becomes an activity stream, and an activity stream of state changes is the incident tool by another name** |
 | D3 | **Model versions in the list and in the title: prerelease, latest, old** | DO NOT TAKE | Nothing in MVP | ПОТІМ | Version history deeper than the previous definition is out of scope by the brief. A version label in the list would promise a history we do not keep |
@@ -199,7 +199,7 @@ Order reasoned from 360, top to bottom.
 
 **The search field does not survive the reuse.** A US B2B company of 50 to 300 people has one to three warehouse connections, so search over 3.1 is dead weight, and a field that returns everything it is given teaches that search in this product is pointless. **This is agreement with node 0.1 rather than a deviation:** search was always a persistent affordance over the registry, and sources were never in its scope.
 
-**The three columns written above for 3.1 collapse into two.** "Reachability" and "last successful run" are the same fact in both directions once node 0.4 is applied: a connection with nothing wrong carries the time it last answered, not a badge, and a connection that is down reads "Source is down since 07:40", which already carries a time. The line above was written by analogy with 4.1 and is corrected here.
+**The three columns written above for 3.1 collapse into two.** "Reachability" and "last successful run" are the same fact in both directions once node 0.4 is applied: a connection with nothing wrong carries the time it last answered, not a badge, and a connection that is down reads "Source is down. Last run 07:40", which already carries a time. The line above was written by analogy with 4.1 and is corrected here.
 
 | Block added | Traces to | Why it is taken |
 | --- | --- | --- |
@@ -253,7 +253,7 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 | D5 | **Member filters and condition filters, up to ten conditions per dimension** | DO NOT TAKE | Would trace to nothing | Out | Filters build a query. We are not a query builder, and building one would put us back in the BI category the product is defined against |
 | D5 | **Per-dimension checkboxes for "as a filter" and "as a segment", plus Deselect all** | DO NOT TAKE | Nothing | Out | Segmentation is exploration. Design principle 3 |
 | D5 | **The stated constraint that measure and dimensions must come from one table or view** | TAKE, as a validated condition | R5, node 4.6 | MVP | A constraint the person cannot see until it fails is a bad error. If ours has an equivalent, it is checked when the definition runs and named in 4.6 |
-| D6 | **Permissions reaching into what a viewer may see** (Secoda restricts the lineage graph by access) | TAKE as a limit on what 4.4 can promise | R1, node 2.9 | MVP | Recorded at stage 01 and still binding: whatever the analyst writes here, the reader may be shown less. The definition form should not imply that everything typed into it travels |
+| D6 | **Permissions reaching into what a viewer may see** (Secoda restricts the lineage graph by access) | TAKE as a limit on what 4.4 can promise | R1, node 2.9 | **ПОТІМ, with 2.9** | Recorded at stage 01 and still binding: whatever the analyst writes here, the reader may be shown less. The definition form should not imply that everything typed into it travels |
 | R7 | **Three-part layout: environment list, the form, and an allowlisting panel beside it** | TAKE the pairing of form and side panel | R5 | MVP | The information the person needs from **their** side sits next to the field it unblocks. At 360 the panel stacks above the fields it explains, not below |
 | R7 | **"Test connection" as a secondary action beside "Save changes"** | **TAKE, and this is the best block in the type** | R5, nodes 3.3 and 3.4 | MVP | Testing before saving is how a person finds out that credentials are wrong **while they still have the form open**. Save-then-discover is the version that produces a broken source in a list |
 | R7 | **Key and value pairs for extra connection options with an "Add new" link** | DO NOT TAKE in MVP | Nothing yet | ПОТІМ | An open-ended options grid is for a product supporting many drivers. Three warehouse types do not need one yet |
@@ -324,7 +324,7 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 | D7, D8 | **SSO placed last, or not placed at all** | **DO DIFFERENTLY, and it is the whole point of 1.1** | P2, precondition of R5 and R2 | MVP | Both competitors treat the enterprise route as the exception. For a product whose buyer imposes SSO before the security review, the exception route is the main one |
 | D7 | **A contextual notice above the fields, explaining why an account may already exist** | TAKE the slot | P2 | MVP | A gate has exactly one moment to explain an unexpected situation, and it is before the action rather than after it fails |
 | D7 | **A legal line under the action** ("by signing in, you agree to the Terms, unless a prior agreement is in effect") | TAKE | Legal, and node 0.2 | MVP | The clause about a prior agreement is worth copying: in US B2B at this size the contract is usually signed before anybody logs in, and boilerplate that ignores that is wrong on its face |
-| D7, D8 | **A route to create an account, on the sign-in page** | DO NOT TAKE in MVP | Nothing | ПОТІМ | Self-serve sign-up is an acquisition mechanism and cluster 6 is entirely ПОТІМ. Recorded rather than dropped: when it arrives, it arrives here |
+| D7, D8 | **A route to create an account, on the sign-in page** | DO NOT TAKE in MVP | Nothing | ПОТІМ | Self-serve sign-up is an acquisition mechanism, and the acquisition half of cluster 6 is ПОТІМ. Recorded rather than dropped: when it arrives, it arrives here |
 | D8 | **Language selector** | DO NOT TAKE | Nothing | Out | One language, English. The project boundary settles this and no node multiplies by language |
 | R10 | **An SSO-only page with one field and one action** | TAKE as the shape | P2 | MVP | Confirms from outside the category that a gate with a single route is a normal page rather than a stripped one |
 | R10 | **A workspace shortname as the field** | DO NOT TAKE | Nothing | Out | A shortname is something a person has to be told and then remember. Their work email routes them without asking them to know anything |
@@ -414,7 +414,7 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 
 ## T6. The public landing
 
-**Node:** 6.1, the product page. One node, labelled ПОТІМ, **in this round for one reason**: it is the only subject the SEO layer of this stage has. Nothing in the MVP subset is indexed, because the card is public but noindex and everything else is private or transactional.
+**Node:** 6.1, the product page. One node, **labelled ПОТІМ when this was written and moved to MVP at step 8**, taken into this round for one reason: it is the only subject the SEO layer of this stage has. Nothing in the MVP subset is indexed, because the card is public but noindex and everything else is private or transactional.
 
 **It is also the node that shares a canonical component with T1.** The growth mechanic recorded in `CLAUDE.md` is that the public page **renders the real card component**, not a picture of it. That single decision is what separates our hero block from every source below.
 
@@ -558,7 +558,7 @@ The T6 sources above were opened for the landing. **6.2 and 6.3 are the same typ
 
 ## T7. Content, legal and support, collected in the ПОТІМ round
 
-**Nodes:** 6.4 documentation, 6.5 privacy policy, 6.6 terms of service, 6.7 support and contact. Four nodes, all ПОТІМ. **This type gets a template map rather than a composition**, which is the reuse decision the pipeline names for legal pages.
+**Nodes:** 6.4 documentation, 6.5 privacy policy, 6.6 terms of service, 6.7 support and contact. Four nodes. **6.5 and 6.6 moved to MVP at step 8**, because the MVP footer names them; 6.4 and 6.7 stay ПОТІМ. **This type gets a template map rather than a composition**, which is the reuse decision the pipeline names for legal pages.
 
 | # | Source | Kind | Opened |
 | --- | --- | --- | --- |
@@ -588,6 +588,6 @@ The T6 sources above were opened for the landing. **6.2 and 6.3 are the same typ
 
 **Both deferred types were collected in the ПОТІМ round** and are recorded above: T5 (5.1, 5.2) with a barrier in place of its domain half, and T7 (6.4 to 6.7) with a template map rather than a composition.
 
-**The domain half was documentation rather than product for three types.** T1, T2 and T3 hold 21 of the 30 MVP nodes, and for all three the product surface is behind a login that we do not pass. Documentation describes an interface and shows selected screenshots of it, which is not the same as using it. **Everything in those three types about density, behaviour under a narrow viewport, and what a screen feels like in the hand remains unknown**, and stage 04 should treat the compositions above as structure rather than as evidence about experience.
+**The domain half was documentation rather than product for three types.** T1, T2 and T3 hold 21 of the MVP nodes, and for all three the product surface is behind a login that we do not pass. Documentation describes an interface and shows selected screenshots of it, which is not the same as using it. **Everything in those three types about density, behaviour under a narrow viewport, and what a screen feels like in the hand remains unknown**, and stage 04 should treat the compositions above as structure rather than as evidence about experience.
 
 **Three types had a genuinely public domain half:** T4, T8 and T6, where the competitor page was opened live in this session. Those are also the three where the comparison column says "where we are better" rather than naming a barrier, and the difference in confidence between the two halves of this bank is worth carrying forward rather than smoothing over.

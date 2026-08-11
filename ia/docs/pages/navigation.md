@@ -89,3 +89,5 @@ Rows are the zones of the component. Columns are who is looking and on what.
 
 1. **Whether the wordmark should link anywhere at all.** It currently goes to the registry because that is where a signed-in analyst starts, and a product with no home page has no obvious answer.
 2. **What the account menu does when a workspace has one analyst**, which is the common shape at 50 to 300 people. Two of its three items lead to nodes labelled ПОТІМ.
+
+   **Answered at step 8, because the audit made it a defect rather than a question.** An MVP component may not offer routes to nodes that do not exist in MVP. **So in MVP the account corner carries sign out and nothing else.** Workspace and people, and plan and seats, appear in it when cluster 5 does, and the corner is designed to take them without changing shape.

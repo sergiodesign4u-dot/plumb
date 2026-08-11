@@ -80,7 +80,7 @@
       </table>
     </div>
 
-    <p><strong>The domain half of the sources is missing for three types, and they carry the MVP.</strong> None of the fifteen competitors shows a product surface without an account, and we do not log in, so for T1, T2 and T3, which hold 21 of the 30 MVP nodes, there is no competitor page of that type to open. The named substitute is public documentation of the real product, opened and dated in session, plus barriers from the As-Is journey. For those three types the column "where we are better" holds <strong>the barrier a block works on</strong> rather than a comparison, because there is nobody to compare against on the same surface.</p>
+    <p><strong>The domain half of the sources is missing for three types, and they carry the MVP.</strong> None of the fifteen competitors shows a product surface without an account, and we do not log in, so for T1, T2 and T3, which hold 21 of the MVP nodes, there is no competitor page of that type to open. The named substitute is public documentation of the real product, opened and dated in session, plus barriers from the As-Is journey. For those three types the column "where we are better" holds <strong>the barrier a block works on</strong> rather than a comparison, because there is nobody to compare against on the same surface.</p>
 
     <p><strong>Not one MVP page is indexed.</strong> The card is public but noindex, and the registry, sources, sign-in and system pages are private or transactional. That is why the public landing is in the round for one node: the SEO layer belongs to this stage and would otherwise have no subject.</p>
 
@@ -207,9 +207,60 @@
 
     <h3>What this bank does not cover</h3>
 
-    <p><strong>Two types deferred, six nodes, all ПОТІМ:</strong> account settings, and content, legal and support. Neither blocks anything in the MVP round, and T7 will need its own domain pass when it comes, because legal pages have a template map rather than a composition.</p>
+    <p><strong>Both deferred types were collected in the ПОТІМ round</strong> and are in the bank: T5, account settings, whose domain half stays a named barrier because no competitor exposes a settings screen without an account; and T7, content, legal and support, which got its own domain pass and a template map rather than a composition. <strong>T6 was also extended</strong> with a live pass over both competitors' pricing pages and both trust centres.</p>
 
-    <p><strong>The confidence in this bank is not even, and that is carried forward rather than smoothed over.</strong> For T1, T2 and T3, which hold 21 of the 30 MVP nodes, the domain half was documentation rather than product, because the surface is behind a login we do not pass. Documentation describes an interface and shows selected screenshots of it. <strong>Density, behaviour at a narrow viewport, and what a screen feels like in the hand remain unknown for those three</strong>, so stage 04 should treat their compositions as structure rather than as evidence about experience. For T4, T8 and T6 the competitor page was opened live, and only there does the comparison column mean what it says.</p>
+    <p><strong>The confidence in this bank is not even, and that is carried forward rather than smoothed over.</strong> For T1, T2 and T3, which hold 21 of the MVP nodes, the domain half was documentation rather than product, because the surface is behind a login we do not pass. Documentation describes an interface and shows selected screenshots of it. <strong>Density, behaviour at a narrow viewport, and what a screen feels like in the hand remain unknown for those three</strong>, so stage 04 should treat their compositions as structure rather than as evidence about experience. For T4, T8 and T6 the competitor page was opened live, and only there does the comparison column mean what it says.</p>
+  </section>
+
+
+  <!-- Audit ............................................................. -->
+  <section id="audit">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Was &rarr; became</h2></div>
+
+    <p>Step 8, in two instruments over both axes, then a second pass over every node the repairs touched. <strong>Codex ran first and blind, read-only</strong>, without seeing our own table; our own pass ran in parallel and was mechanical where it could be, counting node rows, template sections, cross-references and scope dependencies. <strong>Thirteen findings in the first pass and nine in the second</strong>, every one verified in the file before anything was repaired.</p>
+
+    <div class="tw">
+      <table>
+        <caption>First pass, and the four that changed what gets built</caption>
+        <thead><tr><th>Was</th><th>Became</th><th>Found by</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The MVP footer could not render its own composition.</strong> Its minimal variant is the only global surface the reader ever sees and it carries privacy, terms and one route to what Plumb is. All three targets were ПОТІМ</td><td><strong>6.1, 6.5 and 6.6 moved to MVP.</strong> A publicly reachable product cannot ship a footer whose every link is a 404, and node 1.1 already says "you agree to the Terms of Service". The MVP grew from 31 nodes to 33, in the public surface rather than in the product</td><td>Both</td></tr>
+          <tr><td><strong>2.9, not readable without an account, was MVP</strong> and depended on a workspace policy that is entirely ПОТІМ</td><td><strong>2.9 moved to ПОТІМ.</strong> It has no MVP trigger: in MVP every card is readable. <strong>2.10 stayed MVP</strong>, because 2.4 routes to it when a source is down, which has nothing to do with permission. The inheritance rule is broken here on purpose and the exception is named in the map</td><td>Codex</td></tr>
+          <tr><td><strong>Node 3.1 called its wording canonical while rewording it.</strong> "Last answered 09:12" and "Source is down since 07:40", both attributed to node 0.4</td><td><strong>0.4's exact words restored:</strong> "As of 09:12, 3 h ago" and "Source is down. Last run 07:40". <strong>This is the drift node 0.4 exists to prevent, committed by the node that cites it</strong>, which is why it is the sharpest finding of the pass</td><td>Codex</td></tr>
+          <tr><td><strong>The template said every node needs its own file, page and chip.</strong> Read literally, 42 nodes needed 42 files; the practice had consolidated states into their parents since step 6</td><td><strong>The real rule was written down:</strong> derived nodes are specified inside their parent and share its chip, with 2.7 and 2.8 as the two named exceptions that earned pages of their own. <strong>The map is the register of nodes; the registry is the register of pages</strong></td><td>Codex</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>The rest of the first pass, repaired without changing scope</caption>
+        <thead><tr><th>Was</th><th>Became</th></tr></thead>
+        <tbody>
+          <tr><td>Sitemap transition rows for 0.1, 0.2 and 3.3 were narrower than the specifications</td><td>Widened to match. <strong>This is what made the next finding visible</strong></td></tr>
+          <tr><td>The MVP account corner offered two items that lead to ПОТІМ nodes</td><td>In MVP it carries sign out only, and is designed to take the rest without changing shape</td></tr>
+          <tr><td>Global nodes 0.1 to 0.4 used a section shape with no exception recorded</td><td>The exception is recorded, and what a section must carry instead is fixed: the decision, a state matrix, transitions, indexation and accessibility</td></tr>
+          <tr><td>system-pages.md was missing five template sections, and 7.3's retry existed in the map and nowhere else</td><td>The sections are written, and the retry is specified: it reloads the address the person was on, because 7.3 catches the reader as often as the analyst and the reader has no home</td></tr>
+          <tr><td>The legal map fixed a meta <em>pattern</em> where finished copy was required</td><td>Titles, descriptions, canonicals and robots written out per page. <strong>The legal bodies stay a marker</strong>, because they are counsel's deliverable and this stage may not draft them</td></tr>
+          <tr><td>2.8 and 2.7 had no "URL and breadcrumbs" section</td><td>Both now say they have no URL of their own, and 2.7 records its addressable anchor</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Second pass, and it is the one that justifies having a second pass</caption>
+        <thead><tr><th>What the repairs broke</th><th>Became</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Promoting 6.1 made the footer's full variant render inside the MVP</strong>, pointing at four pages that are not there. The first repair created the second defect</td><td><strong>One rule replaced nine annotations:</strong> a navigational element renders only the targets that exist in the current scope, and is designed to take the rest without changing shape. It covers the account corner, the footer columns and the legal rail at once</td></tr>
+          <tr><td>Nine leftovers still asserting the pre-repair version: cluster 2 saying "every node here is MVP", the bank still calling 2.9, 6.1, 6.5 and 6.6 by their old labels, two counts of "30 MVP nodes", two contradicting scope tables inside footer.md, and a heading still reading "cannot count"</td><td>All repaired. <strong>Every one of them was a sentence next to a corrected sentence</strong>, which is exactly the failure mode a second pass exists to catch</td></tr>
+          <tr><td>The count was stated as 42 nodes, 32 MVP</td><td><strong>42 nodes, 33 MVP</strong>, counted mechanically from the table rather than from arithmetic</td></tr>
+          <tr><td>The new derived-node exception contradicted the registry, which carries chips for 2.7 and 2.8</td><td>The exception now names them: a derived node appears in the registry exactly when it has a page of its own</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>One verdict is ours against the second instrument.</strong> Codex read node 4.1's "no loading state for the table" against the map's route from 4.5 into 4.1 and called it an unresolved rule. <strong>Not confirmed:</strong> arriving from 4.5 is a navigation into a rendered list, not a state of the list. The row survives as a clarifying clause in 4.1 rather than as a change, and it is recorded here rather than dropped, because a finding we disagreed with is still evidence about where the documents read ambiguously.</p>
   </section>
 
   <footer class="note">
@@ -229,7 +280,8 @@
   window.NAV_BASE = '../';
   window.NAV_SECTIONS = [
     { id:'hub',  label:'Nodes' },
-    { id:'bank', label:'Block bank by type' }
+    { id:'bank',  label:'Block bank by type' },
+    { id:'audit', label:'Was to became' }
   ];
 </script>
 <script src="../_nav.js"></script>

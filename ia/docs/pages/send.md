@@ -6,6 +6,12 @@
 
 ---
 
+## URL and breadcrumbs
+
+- **No URL of its own.** A dialog over node 2.1, opened from the card and closed back to it. The card's address does not change, which is what keeps the reader's one permanent link the only address they hold
+- **Breadcrumbs:** none
+- **Indexation:** inherits `noindex` from 2.1
+
 ## Purpose and jobs
 
 **Purpose.** Hand this number to somebody else so that its provenance goes with it.

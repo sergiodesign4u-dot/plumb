@@ -83,7 +83,19 @@ The rule is that a promise in the footer without a node makes the map and the pr
 | 6.6 Terms of service | Standard for US B2B, and the buyer's security review asks for it | ПОТІМ |
 | 6.7 Support and contact | The trust strip makes a claim; somebody has to be reachable about it | ПОТІМ |
 
-All three get their labels here, since they have no parent screen to inherit from, and all three are ПОТІМ: the MVP is one card and the analyst's setup, and none of these three carries a job.
+All three got their labels here, since they have no parent screen to inherit from.
+
+**Two of the three changed at step 8, and this node is why.** The audit asked a mechanical question: can an MVP component render its own composition inside the MVP? **It could not.** The minimal variant above is the only global surface the reader ever sees, it carries privacy, terms and one route to what Plumb is, and all three targets were ПОТІМ. A publicly reachable product cannot ship a footer whose every link is a 404, and node 1.1's legal line already says "you agree to the Terms of Service".
+
+| Node | Scope | Why |
+| --- | --- | --- |
+| 6.5 Privacy policy | **MVP, changed at step 8** | The minimal footer names it, and for this product the page is an argument rather than a formality |
+| 6.6 Terms of service | **MVP, changed at step 8** | Node 1.1 references it by name |
+| 6.7 Support and contact | ПОТІМ, unchanged | The minimal variant does not carry it. It is named in the **full** variant only, which lives on cluster 6 |
+
+**And 6.1 moved with them**, for the same test applied to "one route to what Plumb is". That change is recorded in `ia/docs/sitemap.md` with the rest.
+
+**The second pass then found what the promotion created.** With 6.1 in MVP, the **full** variant now renders inside the MVP, and its columns point at 6.2, 6.3, 6.4 and 6.7, which are not there. **The rule is the one the map now states once for the whole product: a navigational element renders only the targets that exist in the current scope, and it is designed to take the rest without changing shape.** So in MVP the full variant carries what exists, the columns grow as cluster 6 arrives, and no link in this product is ever rendered to a page that is not there.
 
 ---
 

@@ -187,11 +187,17 @@
       <table>
         <thead><tr><th>Node</th><th>Why it exists</th><th>Scope</th></tr></thead>
         <tbody>
-          <tr><td><strong>6.5 Privacy policy</strong></td><td>A footer that claims something about data has to lead somewhere. For a product whose whole claim is that it stores no rows, this page is an argument rather than a formality</td><td>ПОТІМ</td></tr>
-          <tr><td><strong>6.6 Terms of service</strong></td><td>Standard for US B2B, and the buyer's security review asks for it</td><td>ПОТІМ</td></tr>
-          <tr><td><strong>6.7 Support and contact</strong></td><td>The trust strip makes a claim, and somebody has to be reachable about it</td><td>ПОТІМ</td></tr>
+          <tr><td><strong>6.5 Privacy policy</strong></td><td>A footer that claims something about data has to lead somewhere. For a product whose whole claim is that it stores no rows, this page is an argument rather than a formality</td><td><strong>MVP, changed at step 8</strong></td></tr>
+          <tr><td><strong>6.6 Terms of service</strong></td><td>Standard for US B2B, and the buyer's security review asks for it. Node 1.1 references it by name</td><td><strong>MVP, changed at step 8</strong></td></tr>
+          <tr><td><strong>6.7 Support and contact</strong></td><td>The trust strip makes a claim, and somebody has to be reachable about it. <strong>The minimal variant does not carry it</strong>, so it stays deferred</td><td>ПОТІМ</td></tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="flag warn">
+      <b>Why two of the three changed at step 8, and this node is the reason</b>
+      <p>The audit asked a mechanical question: <strong>can an MVP component render its own composition inside the MVP?</strong> It could not. The minimal variant is the only global surface the reader ever sees, it carries privacy, terms and one route to what Plumb is, and all three targets were ПОТІМ. <strong>A publicly reachable product cannot ship a footer whose every link is a 404</strong>, and node 1.1's legal line already says "you agree to the Terms of Service". <strong>6.1 moved with them</strong>, for the same test applied to "one route to what Plumb is".</p>
+      <p style="margin-top:8px"><strong>The second pass then found what the promotion created.</strong> With 6.1 in MVP the <strong>full</strong> variant now renders inside the MVP, and its columns point at 6.2, 6.3, 6.4 and 6.7, which are not there. The rule the map now states once for the whole product: <strong>a navigational element renders only the targets that exist in the current scope, and it is designed to take the rest without changing shape.</strong></p>
     </div>
 
     <div class="flag warn">

@@ -53,14 +53,35 @@ A metric has one current definition version and a pointer to the previous one; n
 
 **How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the five nodes with no parent are named below.
 
-**Eight clusters, 41 nodes, 30 of them MVP.** Four were added at step 3: three the footer promised, and the state vocabulary, which turned out to be a canonical list consumed by four surfaces rather than a paragraph inside the card. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 30 MVP nodes, and that is the honest count the two estimates in this stage depend on.
+**Eight clusters, 42 nodes, 33 of them MVP.** Four were added at step 3: three the footer promised, and the state vocabulary, which turned out to be a canonical list consumed by four surfaces rather than a paragraph inside the card. **3.5 was added at step 6** and the counts were revised at step 8. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 33 MVP nodes, and that is the honest count the two estimates in this stage depend on.
+
+### Four scope labels changed at step 8, and the audit is why
+
+**The audit found that the MVP footer could not render its own minimal composition inside the MVP.** Node 0.2 is MVP, it is the only global surface the reader ever sees, and its minimal variant carries privacy, terms and one route to what Plumb is. **All three targets were labelled ПОТІМ.** A publicly reachable product cannot ship a footer whose every link is a 404, and node 1.1's legal line already references the Terms of Service.
+
+| Node | Was | Is | Why |
+| --- | --- | --- | --- |
+| **6.1 Product page** | ПОТІМ | **MVP** | The minimal footer needs a destination for "what is this", and **node 7.1's route for a signed-out reader is 6.1**. Without it the reader's 404 is the dead end 7.1 exists to prevent. It is also the only indexed page in the map, so with it deferred the MVP carries no page at all for the structural SEO layer this stage produced |
+| **6.5 Privacy policy** | ПОТІМ | **MVP** | A public page carrying a footer cannot ship without one, and for this product the page is an argument rather than boilerplate |
+| **6.6 Terms of service** | ПОТІМ | **MVP** | Node 1.1 states "you agree to the Terms of Service", and that has to lead somewhere |
+| **2.9 Not readable without an account** | MVP | **ПОТІМ** | It has no MVP trigger. Restriction is a workspace policy and cluster 5 is entirely ПОТІМ, so in MVP every card is readable and this state cannot fire. **2.10 stays MVP**, because 2.4 routes to it when a source is down |
+
+**The cost is named rather than hidden:** the MVP grew by two nodes net, from 31 to 33, and it grew in the public surface rather than in the product. That is the honest consequence of shipping a page a stranger can open.
+
+### One rule replaces nine annotations, and the second pass is what produced it
+
+Widening the transition rows made every remaining MVP node that points at a ПОТІМ node visible at once. There are nine, and they are all the same shape: **a navigational element listing more destinations than the current scope contains.** The account corner lists cluster 5. The footer's full variant lists the whole public surface. The legal rail links to the trust page.
+
+**The rule, stated once and referenced everywhere: a navigational element renders only the targets that exist in the current scope, and it is designed to take the rest without changing shape.**
+
+That is what node 0.1 now does with the account corner, what node 0.2 does with its columns, and what the rail in nodes 6.5 and 6.6 does with the trust link. **It is not a workaround.** The alternative is either shipping links that 404, which is the defect this audit opened with, or dragging six pages into the MVP to satisfy a menu, which is scope led by furniture.
 
 ### Cluster 0. Global frame
 
 | # | Name | Type | Group | Includes | Transitions | Serves | Scope |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0.1 | Global navigation | section | global | Metrics, Sources, persistent search, account corner | 4.1, 3.1, 5.1 | P2. **The reader never sees this** | MVP |
-| 0.2 | Footer | section | global | Product identity, trust link, legal | 6.2, 6.4 | Both, minimally | MVP |
+| 0.1 | Global navigation | section | global | Metrics, Sources, persistent search, account corner | 4.1, 3.1, 4.3, 5.1, 5.2 | P2. **The reader never sees this** | MVP |
+| 0.2 | Footer | section | global | Product identity, trust link, legal | 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7 | Both, minimally | MVP |
 | 0.3 | Toast and inline feedback | section | global | Sent, saved, failed, retry | Returns to the originating node | Both | MVP |
 | 0.4 | State vocabulary | section | global | The canonical wording and rules for as of, source is down, definition changed, empty | Consumed by 2.1, 4.1, 4.3, 4.7 | Both. **Discovered at step 3, label assigned here** | MVP |
 
@@ -74,7 +95,9 @@ A metric has one current definition version and a pointer to the previous one; n
 
 ### Cluster 2. The number card
 
-The reader's whole product. Every node here is MVP because the card is the one thing this product has to win on.
+The reader's whole product. **Every node here is MVP except one**, because the card is the one thing this product has to win on.
+
+**The exception is named rather than fixed silently, which is what the inheritance rule requires.** Derived nodes inherit the label of the screen they belong to, and **2.9 does not**: its parent 2.1 is MVP and 2.9 is ПОТІМ. It is not inherited from the card, it is inherited from **the workspace policy that produces it**, and that policy is cluster 5. A state that cannot fire is not MVP because its parent is.
 
 | # | Name | Type | Group | Includes | Transitions | Serves | Scope |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -86,7 +109,7 @@ The reader's whole product. Every node here is MVP because the card is the one t
 | 2.6 | Empty: the query returned nothing | state | pages | The reason in words. **Never a zero** | 2.7 | P1 | MVP |
 | 2.7 | Where this number came from | section | pages | Source, last run, what it ran against. One hop, in words | 2.1 | P1 | MVP |
 | 2.8 | Send this number | dialog | pages | The permanent link, one action, the moment of reading carried in it | 0.3 | Both. Delivery, not recruitment | MVP |
-| 2.9 | State: not readable without an account | state | pages | What is missing and why, no login wall theatre | 2.10 or a dead end | P1 | MVP |
+| 2.9 | State: not readable without an account | state | pages | What is missing and why, no login wall theatre | 2.10 or a dead end | P1 | **ПОТІМ, changed at step 8** |
 | 2.10 | State: the owner is named, the number is not shown | state | pages | Name and date, no value | End, partial close | P1, R1 | MVP |
 
 ### Cluster 3. Sources
@@ -95,7 +118,7 @@ The reader's whole product. Every node here is MVP because the card is the one t
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 3.1 | Sources | page | pages | List of connections, reachability, last successful run | 3.2 | P2 | MVP |
 | 3.2 | Connect a source | page | pages | Warehouse type, credentials, expected cadence | 3.3 | P2, R5 and the main job as a precondition | MVP |
-| 3.3 | Loading: testing the connection | state | pages | Progress, what is being tried | 3.4 or 4.2 | P2 | MVP |
+| 3.3 | Loading: testing the connection | state | pages | Progress, what is being tried | 3.4, or 4.2 on a first connection and 3.1 on a later one | P2 | MVP |
 | 3.4 | Error: connection failed | state | pages | Which half failed, credentials or reachability | 3.2 | P2 | MVP |
 | 3.5 | Empty: no sources connected | state | pages | What stopped working, and one route. **Not a first-run screen** | 3.2 | P2 | MVP |
 
@@ -126,12 +149,12 @@ Jobless by construction, and that is recorded rather than repaired.
 
 | # | Name | Type | Group | Includes | Transitions | Serves | Scope |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 6.1 | Product page | page | pages | The real card component rendered live | 6.3, 1.1 | Acquisition | ПОТІМ |
+| 6.1 | Product page | page | pages | The real card component rendered live | 6.3, 1.1 | Acquisition | **MVP, changed at step 8** |
 | 6.2 | Trust and security | page | pages | SOC 2 position, SSO, metadata only | 6.1 | The buyer, who has no product surface | ПОТІМ |
 | 6.3 | Pricing | page | pages | Seats, free readers | 1.1 | Acquisition | ПОТІМ |
 | 6.4 | Documentation | page | pages | How a definition is written and read | 6.1 | Both | ПОТІМ |
-| 6.5 | Privacy policy | page | pages | What is stored and what is not | 6.2 | Legal, and an argument for a metadata-only product | ПОТІМ |
-| 6.6 | Terms of service | page | pages | Standard US B2B terms | 6.2 | Legal, asked for in the security review | ПОТІМ |
+| 6.5 | Privacy policy | page | pages | What is stored and what is not | 6.2 | Legal, and an argument for a metadata-only product | **MVP, changed at step 8** |
+| 6.6 | Terms of service | page | pages | Standard US B2B terms | 6.2 | Legal, asked for in the security review | **MVP, changed at step 8** |
 | 6.7 | Support and contact | page | pages | A route to a person | 6.1 | Both | ПОТІМ |
 
 ### Cluster 7. System nodes

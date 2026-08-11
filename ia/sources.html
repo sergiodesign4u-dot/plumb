@@ -95,14 +95,14 @@
 
     <h3>The third column, because the bank's three collapse into two</h3>
 
-    <p>The bank wrote 3.1's columns by analogy with 4.1: name, reachability, last successful run. <strong>Read against node 0.4, two of those are the same fact.</strong> 0.4 refuses "Healthy" by name, so a reachable connection is expressed as the time it last answered; and an unreachable one reads "Source is down since 07:40", which already carries a time. <strong>Reachability and last run are one column in both directions</strong>, and the third is free.</p>
+    <p>The bank wrote 3.1's columns by analogy with 4.1: name, reachability, last successful run. <strong>Read against node 0.4, two of those are the same fact.</strong> 0.4 refuses "Healthy" by name, so a reachable connection is expressed as the time it last answered; and an unreachable one reads "Source is down. Last run 07:40", which already carries a time. <strong>Reachability and last run are one column in both directions</strong>, and the third is free.</p>
 
     <div class="tw">
       <table>
         <thead><tr><th>Column</th><th>What it holds</th></tr></thead>
         <tbody>
           <tr><td><strong>Name</strong></td><td>Warehouse type and the database or account. Snowflake, <code>ANALYTICS.PROD</code></td></tr>
-          <tr><td><strong>State</strong></td><td>"Last answered 09:12, 3 h ago", or "Source is down since 07:40". <strong>The reader's exact words</strong>, from node 0.4, never "unhealthy", "degraded" or "error"</td></tr>
+          <tr><td><strong>State</strong></td><td>"As of 09:12, 3 h ago", or "Source is down. Last run 07:40". <strong>The reader's exact words</strong>, from node 0.4, never "unhealthy", "degraded" or "error"</td></tr>
           <tr><td><strong>Metrics on it</strong></td><td><strong>How many metrics stop answering if this connection does.</strong> A count from our own store, no warehouse query</td></tr>
         </tbody>
       </table>
@@ -121,10 +121,10 @@
         <div class="bw wide">
           <div class="topline"><span class="ttl">Sources</span><span class="cnt">2</span><span class="sp"></span><span class="btn">Connect a source</span></div>
           <table class="grid">
-            <thead><tr><th>Name &darr;</th><th>State</th><th>Metrics on it</th></tr></thead>
+            <thead><tr><th>Name &darr;</th><th>State at last run</th><th>Metrics on it</th></tr></thead>
             <tbody>
-              <tr><td class="nm">Snowflake<span>ANALYTICS.PROD</span></td><td>Last answered 09:12, 3 h ago</td><td>8</td></tr>
-              <tr><td class="nm">BigQuery<span>finance-prod</span></td><td>Source is down since 07:40</td><td>4</td></tr>
+              <tr><td class="nm">Snowflake<span>ANALYTICS.PROD</span></td><td>As of 09:12, 3 h ago</td><td>8</td></tr>
+              <tr><td class="nm">BigQuery<span>finance-prod</span></td><td>Source is down. Last run 07:40</td><td>4</td></tr>
             </tbody>
           </table>
           <div class="tail">2 of 2</div>
@@ -137,8 +137,8 @@
           <div class="topline"><span class="ttl">Sources</span><span class="cnt">2</span></div>
           <span class="btn full">Connect a source</span>
           <div class="rows">
-            <div class="row"><div class="nm">Snowflake, ANALYTICS.PROD</div><div class="ln">Last answered 09:12, 3 h ago</div><div class="ln">8 metrics on it</div></div>
-            <div class="row"><div class="nm">BigQuery, finance-prod</div><div class="ln">Source is down since 07:40</div><div class="ln">4 metrics on it</div></div>
+            <div class="row"><div class="nm">Snowflake, ANALYTICS.PROD</div><div class="ln">As of 09:12, 3 h ago</div><div class="ln">8 metrics on it</div></div>
+            <div class="row"><div class="nm">BigQuery, finance-prod</div><div class="ln">Source is down. Last run 07:40</div><div class="ln">4 metrics on it</div></div>
           </div>
           <div class="tail">2 of 2</div>
         </div>

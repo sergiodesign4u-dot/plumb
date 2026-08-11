@@ -104,7 +104,7 @@ A definition in words does not compute anything. Something has to make the metri
 
 **That third row is a decision, not an oversight.** It is also the same distinction node 0.4 draws for the reader: empty is a state, not an error, and it is never a zero.
 
-### 4.7, and the consequence we can state but cannot count
+### 4.7, and the consequence we state without a number
 
 **Editing a definition puts state 2.5 on cards that were already sent.** That has to be visible **before** saving, which is exactly the shape of the info banner taken from R8 in the bank: *"changing these details will require a reconnect"* becomes *"cards already sent will show that this definition changed"*.
 

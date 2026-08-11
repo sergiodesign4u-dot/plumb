@@ -2,7 +2,11 @@
 
 Stage 03b, fixed at step 5. **Every node under `ia/docs/pages/` uses this shape**, so that thirty specifications can be read the same way and stage 04 never has to guess where something lives.
 
-A node is not done until it has three things: this md, its own `ia/<node>.html`, and a chip in `ia/_nav.js`.
+A node is not done until it is **specified, rendered and reachable**. For a page node that means three things: this md, its own `ia/<node>.html`, and a chip in `ia/_nav.js`.
+
+**Derived nodes usually do not get their own three, and that is the reuse decision this stage runs on.** A state, a dialog or a section of a screen is normally specified **inside its parent's page**, appears in that parent's states section, and is reached through the parent's chip.
+
+**The exception, because two nodes take it.** A derived node gets its own page and its own chip when it carries enough decisions to need one: **2.7, the source layer, and 2.8, the send dialog.** Both are still parts of node 2.1 and neither has a URL of its own, which is written in each. **The registry lists pages, not nodes**, so a derived node appears in it exactly when it has a page. Node 2.1 carries seven states, 4.4 carries three, 7.1 carries the other three system nodes. **This was agreed at the step 6 estimate gate and is written here because the sentence above was read as requiring 42 files.** The map is the register of nodes; `ia/_nav.js` is the register of pages.
 
 ---
 
@@ -51,5 +55,7 @@ A node is not done until it has three things: this md, its own `ia/<node>.html`,
 ## Deviations this project takes, recorded once here
 
 **There is no node 0.0 and there is no Home.** The pipeline's reference page is normally the Home. This product deliberately has none: `CLAUDE.md` records that global navigation belongs to the analyst and that the reader has no header, no menu and no home. The reference node is therefore **6.1, the product page**, which is the acquisition front door and the only indexed page in the whole map. Inventing a 0.0 to match the template would contradict a decision the IA has already made and defended.
+
+**The four global nodes predate this template and keep their own shape.** Nodes 0.1 to 0.4 were written at steps 2 and 3, before this file existed at step 5. They are sections rather than pages: they have no URL, no primary call to action and no responsive stack of their own, because they appear inside other pages. **What they must carry instead is fixed:** the decision the node records, a state matrix, transitions, and an indexation and accessibility note. All four do. Retrofitting them into a page shape would produce eight sections reading "not applicable".
 
 **Almost nothing is indexed.** The number card is public and `noindex` by the decision at node 0.2, because indexing it would publish customers' numbers. The registry, sources, the definition editor, sign in and the system pages are private or transactional. **So the A to E block appears in full on 6.1 and on the rest of cluster 6, and everywhere else section 11 is one line saying noindex, no schema, and why.**

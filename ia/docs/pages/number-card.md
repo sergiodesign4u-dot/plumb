@@ -79,6 +79,8 @@ Seven, and every one of them is a node in the map.
 
 **2.2 is the one people get wrong, so it is spelled out.** A loading state that greys the whole card would hide the definition and the attribution, which are already known and cost nothing to render. **Only the value waits.** This is also what keeps the LCP of node 6.1 off the warehouse.
 
+**2.9 moved to ПОТІМ at step 8, and 2.10 stayed MVP.** The audit found that 2.9 has no MVP trigger: restriction is a workspace policy, cluster 5 is entirely ПОТІМ, and in MVP every card is readable. **2.10 stays**, because node 2.4 routes to it when a source is down, which has nothing to do with permission. The specification below is unchanged and waits for the policy that produces it.
+
 **2.9 and 2.10 are the reader's dead end, narrowed rather than accepted.** The base layer left a red node here: a reader who lands on a card they may not see has no home, no menu and no account. **2.10 is the narrowing:** showing who owns the claim closes R1 in its reduced form and costs no screen. Whether we may show the owner to somebody with no access is **open research**, and the branch in flow 1 asks it rather than assuming it. dbt's soft access controls, collected at T2, are a live precedent on the yes side.
 
 **Combination rules, from node 0.4.** Source down and definition changed: both shown, source down first. Empty and definition changed: both, empty first. Source down and empty: impossible.

@@ -8,6 +8,33 @@
 
 ---
 
+## Purpose and jobs
+
+**Purpose.** Keep a failure from becoming a dead end, for a person who may have no account and no other address.
+
+**Jobs served: none directly.** 7.1 and 7.2 sit on the failure path of the main job, which is the phase of `cjm-to-be.md` where the reader arrives at a number and cannot get it.
+
+## URL and breadcrumbs
+
+| Node | URL | Breadcrumbs | Indexation and status |
+| --- | --- | --- | --- |
+| 7.1 | **No URL of its own.** Rendered at whatever address failed | None for the reader. The signed-in rendering keeps the analyst's trail | `noindex, follow`, real HTTP 404 |
+| 7.2 | The same. Rendered at the address that failed | None | `noindex`, HTTP 500 |
+| 7.3 | `/maintenance`, and every address redirects to it while it is on | None | `noindex`, HTTP 503 with `Retry-After` |
+| 7.4 | No URL. A section on cluster 6 pages | None | Not indexed as a page |
+
+## Content blocks, mobile-first priority
+
+**7.1:** what was expected here, the two causes, the one thing to do, footer. **7.2:** what broke, what is safe to assume, retry, footer. **7.3:** what is happening, until when if known, whose data is unaffected, retry. **7.4:** one line and two controls, on cluster 6 only.
+
+## Filters and facets
+
+**None on any of the four.** There is nothing to filter on a page whose whole content is one message.
+
+## Primary call to action
+
+**One per page, and each names its destination.** 7.1 signed out: none, because the honest act is to ask the sender, and a button that goes nowhere useful is the wall this node refuses. 7.1 signed in: back to the registry. **7.2 and 7.3: retry**, which reloads the same address rather than sending anybody home, because the address the reader holds is the only one they have.
+
 ## 7.1, the 404, and it renders two ways from one node
 
 ### The negative reference, quoted in full because it is the whole argument
@@ -75,6 +102,8 @@ Three blocks: **what broke**, **what is safe to assume about the number they wer
 Duration if known, and one sentence that is specific to this product rather than generic.
 
 **"Your data is not affected."** In a metadata-only product a maintenance window means the definitions are unreachable, and the customer's warehouse is untouched and still answering everybody else. That is worth saying, because the reader's mental model is that we hold the numbers, and this is the one moment the architecture is visible to them.
+
+**The retry the map names is specified here rather than implied.** One control, "Try again", which reloads the address the person was on. **It does not go home**, because 7.3 catches the reader as often as the analyst and the reader has no home. If the window is still open the same page returns with the time updated, which is a state rather than a failure to act on.
 
 - **Indexation:** `noindex`. HTTP status 503 with `Retry-After` when the duration is known
 

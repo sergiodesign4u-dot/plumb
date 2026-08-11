@@ -1,6 +1,6 @@
 # 6.4 to 6.7, the content and legal template map
 
-**Pages:** Documentation, Privacy policy, Terms of service, Support and contact · **Type:** page · **Nodes:** 6.4, 6.5, 6.6, 6.7 · **Scope:** ПОТІМ · **Group:** pages
+**Pages:** Documentation, Privacy policy, Terms of service, Support and contact · **Type:** page · **Nodes:** 6.4, 6.5, 6.6, 6.7 · **Scope:** 6.5 and 6.6 MVP after step 8, 6.4 and 6.7 ПОТІМ · **Group:** pages
 
 **A template map rather than four compositions**, which is the reuse decision the pipeline names for pages of this kind. Four documents, one shell, one rail, and **one of the four is deliberately not on the shell.**
 
@@ -11,6 +11,17 @@
 **Purpose.** Hold the documents a customer reads before signing and the one page that explains how the product is used.
 
 **Jobs served: none.** Jobless by construction, like the rest of cluster 6. **6.4 is the closest to serving one:** it is where R5 and the main job would be explained rather than performed.
+
+## URL and breadcrumbs
+
+| Node | URL | Breadcrumbs | Indexation |
+| --- | --- | --- | --- |
+| 6.4 Documentation | `/docs` | none | `index, follow` |
+| 6.5 Privacy policy | `/legal/privacy` | Legal > Privacy policy | `index, follow` |
+| 6.6 Terms of service | `/legal/terms` | Legal > Terms of service | `index, follow` |
+| 6.7 Support and contact | `/support` | none | `index, follow` |
+
+**The `/legal/` prefix is the rail made structural.** Two documents share a parent so a reviewer who opens one can find the other, and so the cookie document has an address to arrive at when node 7.4 needs one.
 
 ## The shell
 
@@ -54,7 +65,7 @@ The live privacy notice writes its sections as questions: "What personal data do
 
 **The one legal page that is also an argument.** Its content is the table from node 6.2: definitions, owners, connection settings and nothing about readers.
 
-**The row that matters is the absence.** A privacy policy that can say "we hold no copy of your data rows and nothing about who read a number" is making the product's case in the document a reviewer trusts least to be making a case.
+**The row that matters is the absence.** A privacy policy that can say "we hold no copy of your data rows and nothing that identifies who read a number" is making the product's case in the document a reviewer trusts least to be making a case.
 
 ### 6.6, terms of service
 
@@ -105,7 +116,20 @@ None.
 
 ## SEO block, shared by the map
 
-### A. Meta tags
+### A. Meta tags, written out per page
+
+**The audit found the pattern stated where finished copy was required.** The legal *bodies* are counsel's deliverable and this stage may not draft them, but the meta tags are ours and are written here.
+
+| Node | title | description |
+| --- | --- | --- |
+| **6.4** | `How Plumb definitions are written and read` (43) | `A definition in Plumb is a sentence, not a formula. This is how one is written, and what the states beside a number mean when you read it.` (144) |
+| **6.5** | `Privacy policy: what Plumb stores and what it never does` (56) | `Plumb keeps metric definitions, owners and connection settings. It keeps no copy of your data rows and nothing that identifies the people who read a number.` (155) |
+| **6.6** | `Terms of service for Plumb` (26) | `The terms that govern use of Plumb, including the clause that a prior agreement signed with us takes precedence over these.` (122) |
+| **6.7** | `Support and contact at Plumb` (28) | `How to reach a person at Plumb, what to expect, and where to report a security issue.` (85) |
+
+**Canonical:** the absolute form of each URL. **hreflang:** none, one language. **robots:** `index, follow` on all four, because a legal page that cannot be found before a call is a legal page that generates one. **Open Graph:** title and description as above, `og:type` `website`.
+
+### A note on the rest of the pattern
 
 Per page, and only the pattern is fixed here: **title is the document name plus the product name**, description is one sentence saying what the document governs. **`index, follow` on all four.** They answer real queries, and a legal page that cannot be found before a call is a legal page that generates one.
 

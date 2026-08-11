@@ -68,7 +68,7 @@ The card queries the source at read time. **The registry does not, and must not.
 
 **The honest cost, stated rather than buried.** The registry can be out of date about a source that went down five minutes ago. What mitigates it is the shape of the product rather than a patch: **opening the card queries live, so the truth is always one tap away**, and the time in the row says when it was last established.
 
-**One line so this does not look like it contradicts node 4.7.** A last-run timestamp on the metric is not a reading log. There is no who, no count and no history: one field, overwritten. That is why the registry can show a time and node 4.7 still cannot say how many cards were sent.
+**One line so this does not look like it contradicts node 4.7.** A last-run timestamp on the metric is not a reading log. There is no who, no count and no history: one field, overwritten. That is why the registry can show a time and node 4.7 still names no number when a definition changes.
 
 ## Search
 
@@ -110,7 +110,7 @@ The card queries the source at read time. **The registry does not, and must not.
 
 | Node | State | What happens |
 | --- | --- | --- |
-| **4.1** | The list | Rows sorted by name. No loading state for the table, for the reason above |
+| **4.1** | The list | Rows sorted by name. **No loading state for the table**, for the reason above. Arriving here from 4.5, a definition that has just run, is a navigation into a rendered list and not a state of this node |
 | **4.2** | **No metrics yet** | The count at zero, the structure of the list retained, one sentence, one route |
 | **4.3** | **Search results** | The query still in the field, the matches, the count line. And the no-match case below |
 | | Offline or degraded | The page renders and search says it cannot reach the registry. Node 0.1 |

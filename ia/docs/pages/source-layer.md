@@ -6,6 +6,12 @@
 
 ---
 
+## URL and breadcrumbs
+
+- **No URL of its own, and one addressable anchor.** It is a section of node 2.1, opened in place at `#source` on the card's own address, so a person who opens the depth and then sends the link sends the card rather than a second page
+- **Breadcrumbs:** none
+- **Indexation:** inherits `noindex` from 2.1
+
 ## Purpose and jobs
 
 **Purpose.** Let a reader who has decided to look closer see what produced this number, in words, without entering a tool.
