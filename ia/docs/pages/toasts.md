@@ -81,6 +81,8 @@ That asymmetry is worth stating, because it sets the tone: for the reader, feedb
 
 ---
 
-## Open question this node hands forward
+## The question this node handed forward, and its answer
 
-**Whether a reader ever needs a failure toast at all.** The only action they take is copying a link, and if that fails there is a fallback: the URL is on screen and can be selected. If the answer is no, the reader's half of this component is a single success message, and the assertive path is analyst-only.
+**Asked here:** whether a reader ever needs a failure toast at all. The only action they take is copying a link, and if that fails there is a fallback: the URL is on screen and can be selected.
+
+**Answered at node 2.8, and the answer is no.** The send dialog puts the link on screen, visible and selectable, before anything is copied, so a clipboard failure has its fallback already in view. **The reader's half of this component is therefore a single success message, and the assertive announcement path is analyst-only.** Recorded here rather than left open, so no later stage designs a failure toast for a persona that has no use for one.

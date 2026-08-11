@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.8 Send this number - Plumb</title>
+<meta name="description" content="Node 2.8: delivery, not recruitment. The dialog where a number leaves one person and reaches another, and where the forwarding decision gets made.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; position:relative; }
+  .bw.wide{ min-width:430px; }
+  .nm{ font-size:13px; font-weight:700; }
+  .val{ font-size:28px; font-weight:700; letter-spacing:-.025em; line-height:1.1; margin:5px 0 0; }
+  .stl{ border-top:1px solid #14161a; margin-top:8px; padding-top:7px; }
+  .stl b{ display:block; }
+  .stl span{ color:#6b7076; }
+  .dim{ opacity:.35; }
+  .dlg{ border:1px solid #14161a; background:#fff; padding:12px 11px; }
+  .dlg.over{ position:absolute; left:12px; right:12px; top:64px; box-shadow:0 6px 0 rgba(0,0,0,.08); }
+  .dlg.sheet{ margin-top:10px; border-bottom-width:0; }
+  .dlg h5{ margin:0 0 8px; font-family:var(--sans); font-size:12.5px; font-weight:700;
+           text-transform:none; letter-spacing:normal; color:#14161a; }
+  .link{ border:1px solid #14161a; padding:7px 8px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+         font-size:11px; word-break:break-all; line-height:1.45; background:#f4f4f2; }
+  .willsee{ color:#6b7076; font-size:11px; margin-top:8px; line-height:1.45; }
+  .acts{ display:flex; gap:8px; margin-top:10px; flex-wrap:wrap; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; }
+  .btn.full{ flex:1; text-align:center; }
+  .toast{ border:1px solid #14161a; padding:8px 10px; margin-top:10px;
+          display:flex; align-items:center; gap:10px; }
+  .toast .sp{ flex:1; }
+  .unfurl{ border:1px solid #14161a; border-left-width:4px; background:#fff; padding:11px 12px;
+           font-family:var(--sans); font-size:12px; max-width:420px; margin:14px 0; }
+  .unfurl .t{ font-weight:700; }
+  .unfurl .d{ color:#6b7076; margin-top:4px; line-height:1.45; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 2.8 &middot; pages</p>
+    <h1>Delivery, not recruitment</h1>
+    <p class="standfirst lede">The node where a number leaves one person and reaches another, and the third of the four capabilities the first test needs. Without it the card reaches nobody and the product is a page with no reason to be opened. Everything that looks like growth has been refused here on purpose.</p>
+    <div class="dateline">
+      <span>Type: dialog</span>
+      <span>Scope: MVP</span>
+      <span>Opens from node 2.1</span>
+      <span>Source: <code>ia/docs/pages/send.md</code></span>
+    </div>
+  </header>
+
+  <!-- Why ............................................................... -->
+  <section id="why">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Why a dialog and not just a button</h2></div>
+
+    <p>A copy-link button with a toast would be smaller, and it was the obvious first answer. <strong>The dialog earns its place on one argument: you should be able to see what you are passing on.</strong></p>
+
+    <ol>
+      <li><strong>The link is visible and selectable</strong>, which is the failure route when the clipboard is unavailable. Node 0.3 already named that fallback.</li>
+      <li><strong>For a trust product, seeing what you are about to send is not decoration.</strong> The whole premise is that a number should not travel without its provenance, and a person handing one on can reasonably want to look at what leaves their hands.</li>
+    </ol>
+
+    <p><strong>No URL of its own, and the contrast with node 2.7 is deliberate.</strong> The source layer is addressable because it is content somebody would want to link to. This is a transient action with nothing to return to. <strong>The rule is not that everything gets a URL. It is that anything worth linking to gets one</strong>, and a send dialog is a door, not a room.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Job</th><th>How this node serves it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>R2.</strong> Answer once</td><td>Sending the card instead of re-explaining the number. The standing answer keeps answering</td></tr>
+          <tr><td><strong>P1, social</strong> (thin, and named as thin)</td><td>Sending the card rather than the bare figure is itself a visible act of checking</td></tr>
+          <tr><td>The main job, for the recipient</td><td>Everything here is in service of somebody else's arrival at node 2.1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Blocks ............................................................ -->
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Six blocks, and one that is not from the bank</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Content</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Heading</td><td>What this does, one line</td></tr>
+          <tr><td>2</td><td><strong>The link</strong>, visible and selectable</td><td>The full URL, including the parameters carrying the moment of reading</td></tr>
+          <tr><td>3</td><td><strong>What the recipient will see</strong>, one line</td><td>The metric name, the current definition and its state. <strong>The unfurl promise made honest</strong></td></tr>
+          <tr><td>4</td><td>Copy, the primary action</td><td></td></tr>
+          <tr><td>5</td><td>Share, where a native share sheet exists</td><td>Secondary, and absent where there is none</td></tr>
+          <tr><td>6</td><td>Close</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Block 3 is not in the block bank and is named here rather than added quietly.</strong> It traces to design principle 1: a person sending a number should know whether the number is what travels. It answers, on the sending side, the same question the unfurl decision at node 2.1 answers on the receiving side.</p>
+
+    <div class="unfurl">
+      <div class="t">Weekly active accounts &middot; Plumb</div>
+      <div class="d">Distinct accounts with at least one session in the last 7 days. Open to see the current value, when it was computed and who declared this definition.</div>
+    </div>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, dialog over the card, card still legible</div>
+        <div class="bw wide">
+          <div class="dim">
+            <div class="nm">Weekly active accounts</div>
+            <div class="val">18,432</div>
+            <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          </div>
+          <div class="dlg over">
+            <h5>Send this number</h5>
+            <div class="link">plumb.app/m/8f2c41?v=7&amp;t=2026-08-12T14:25</div>
+            <div class="willsee">They will see the metric name, the current definition and its state. The value is not in the preview.</div>
+            <div class="acts"><span class="btn">Copy</span><span class="btn">Close</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, sheet from the bottom, nothing scrolls inside</div>
+        <div class="bw">
+          <div class="dim">
+            <div class="nm">Weekly active accounts</div>
+            <div class="val">18,432</div>
+            <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          </div>
+          <div class="dlg sheet">
+            <h5>Send this number</h5>
+            <div class="link">plumb.app/m/8f2c41?v=7&amp;t=2026-08-12T14:25</div>
+            <div class="willsee">They will see the name, the definition and its state. The value is not in the preview.</div>
+            <div class="acts"><span class="btn full">Copy</span><span class="btn">Share</span></div>
+            <div class="toast"><span class="sp">Link copied</span><span class="btn">x</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>At 360 nothing scrolls inside the dialog</strong>, and that constraint is what keeps block 3 to a single line. The link wraps rather than truncating: <strong>a truncated URL cannot be checked by eye</strong>, which would defeat the reason the dialog exists.</p>
+  </section>
+
+  <!-- Link .............................................................. -->
+  <section id="link">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The decision inside the link</h2></div>
+
+    <p><strong>What is copied:</strong> <code>/m/&lt;stable-id&gt;?v=&lt;definition-version&gt;&amp;t=&lt;sent-at&gt;</code>. <strong>The stamp is taken when Send is pressed, not when the page was opened</strong>, because the sender is handing on what they are looking at now.</p>
+
+    <div class="flag">
+      <b>The forwarding decision, which no earlier artefact had</b>
+      <p>A reader who received a link and presses Send <strong>mints a new one, stamped from their own reading.</strong> They do not propagate the stamp they received.</p>
+      <p style="margin-top:8px">The alternative fails on its own terms. State 2.5 answers <strong>"has the definition changed since you read this"</strong>, and "you" has to mean the person who sent it, not a stranger three hops back. A chain carrying the first stamp forever would tell the fifth recipient about a change that happened before four other people had already looked and been satisfied.</p>
+    </div>
+
+    <p><strong>The honest cost, stated rather than hidden.</strong> If the sender saw the "definition changed" state and forwards anyway, that state does not travel: the recipient gets a clean card stamped now. <strong>The changed state is a fact about a reading, not a property of the number</strong>, and it belongs to whoever did the reading. If it matters, it is theirs to say.</p>
+
+    <p><strong>What we do not control:</strong> somebody pasting a URL by hand. That is copy and paste rather than this node, and pretending otherwise would be designing for an act we cannot observe.</p>
+  </section>
+
+  <!-- Refusals .......................................................... -->
+  <section id="refusals">
+    <div class="sec-head"><span class="sec-num">04</span><h2>What this node refuses, and it is most of what a share dialog usually is</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Refused</th><th>Who does it</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Granting view or edit access on share</strong></td><td>PowerMetrics: share with users or groups, granting view or edit access</td><td>The card is already open at its link with no account. <strong>Access is a workspace question</strong>, cluster 5, entirely ПОТІМ. A permission control here would move tenancy onto the reader's only screen</td></tr>
+          <tr><td><strong>An email field, an invite, a "sign up to see more"</strong></td><td>Most products with a share action</td><td><strong>Delivery, not recruitment.</strong> The reader-invites-reader mechanic is named in the rules as carrying no job underneath it, precisely so it cannot claim screens on equal footing with work people actually do</td></tr>
+          <tr><td>A message or note attached to the link</td><td>Slack-style share sheets</td><td>The message belongs in the channel the person is already using. We would be building a worse version of the tool they are about to paste into</td></tr>
+          <tr><td>Send to a person inside Plumb</td><td>Every collaboration product</td><td>The recipient has no account, by decision. There is no directory to send to, and building one would give the reader a user object the whole IA refuses them</td></tr>
+          <tr><td>Anything that rewrites the link on the way out</td><td>Products that shorten or brand outgoing links</td><td>A permanent URL that is rewritten on the way out is not permanent</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">05</span><h2>States, the canonical dialog, and a question closed</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>State</th><th>What happens</th></tr></thead>
+        <tbody>
+          <tr><td>Open</td><td>The link is visible and selected on open, so a keyboard user can copy without hunting</td></tr>
+          <tr><td>Copied</td><td>Toast from node 0.3, auto-dismissing because nothing is lost: the link is in the clipboard and still on screen</td></tr>
+          <tr><td><strong>Clipboard unavailable</strong></td><td><strong>No error toast.</strong> The link is on screen and selectable, so the fallback is already in view</td></tr>
+          <tr><td>Sending a card whose source is down</td><td>Allowed, and the link works. The recipient gets the same honest state. <strong>Nothing is blocked here because the number is inconvenient</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>An open question from node 0.3, now closed</b>
+      <p>0.3 asked whether a reader ever needs a failure toast at all. <strong>The answer is no</strong>, and the reason is block 2: the link is on screen before anything is copied, so a clipboard failure has its fallback already visible. The reader's half of the feedback component is <strong>a single success message</strong>, and the assertive announcement path is analyst-only. Node 0.3 has been amended in both its source and its page.</p>
+    </div>
+
+    <p><strong>This node defines the canonical dialog.</strong> Focus is trapped, Escape closes, focus returns to the trigger, targets are 44 by 44 CSS pixels. Later nodes that need a dialog reference this rather than restating it.</p>
+
+    <p><strong>Emotional support:</strong> one mechanism lands here, and the table already calls it thin. P1 social, be seen as somebody who checks rather than somebody who forwards, supported only by the fact that provenance travels with the number. <strong>The table marks that job <code>[?]</code> throughout and the mark is kept:</strong> nothing in the research says anybody wants to be seen this way. <strong>If the job turns out to be imaginary, nothing on this page changes</strong>, because the same block also serves R2, which is evidenced.</p>
+
+    <h3>SEO</h3>
+    <p>Part of node 2.1 and therefore <code>noindex</code>. No canonical, no structured data, no SEO text, and no URL of its own.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#2.8">&larr; Structure (2.8)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '2.8 Send this number';
+  window.NAV_SECTIONS = [
+    { id:'why',      label:'Why a dialog' },
+    { id:'blocks',   label:'Blocks and wireframes' },
+    { id:'link',     label:'The decision inside the link' },
+    { id:'refusals', label:'What it refuses' },
+    { id:'states',   label:'States and the canonical dialog' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

@@ -19,6 +19,7 @@ window.IA_NAV = [
   { label: 'State vocabulary',   file: 'state-vocabulary.html', group: 'global', node: '0.4', type: 'section' },
   { label: 'The number card',    file: 'number-card.html', group: 'pages', node: '2.1', type: 'page' },
   { label: 'Where this number came from', file: 'source-layer.html', group: 'pages', node: '2.7', type: 'section' },
+  { label: 'Send this number',   file: 'send.html', group: 'pages', node: '2.8', type: 'dialog' },
   { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' }
 ];
 
