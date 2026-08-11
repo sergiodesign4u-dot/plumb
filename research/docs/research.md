@@ -248,4 +248,27 @@ Format: if / then / because [data].
 | 7 | What can a free reader be shown when the source's own permissions restrict it? | Me as owner for the scope call, plus a data lead for the reality | How deep depth-on-request can go for an unpaid reader, which is the implementation of design principle 4 | Open |
 | 8 | How often does the reader's need actually arrive: weekly, monthly, or only when contradicted? | Business consumers at three target companies | The retention instrument. A monthly need makes a 4-week return rate noise rather than a signal, and it feeds question 5 on whether the chosen pattern or its alternative is right | Open |
 
-Questions 1 to 3 came out of the competitor round, 4 to 8 out of the strategy, funnel and pattern work. Question 8 was promoted out of the stage unknowns in `aarrr.md` during the step 9 critique, because unlike the other eight unknowns there it has an addressee. Stage 02 step 1 reads this table as its list of candidate holes about people, and steps 5 and 6 take the most dangerous of them into critique and targeted follow-up research.
+Questions 1 to 3 came out of the competitor round, 4 to 8 out of the strategy, funnel and pattern work. Question 8 stays open after the follow-up research at step 6, recorded in section 8 below. Question 8 was promoted out of the stage unknowns in `aarrr.md` during the step 9 critique, because unlike the other eight unknowns there it has an addressee. Stage 02 step 1 reads this table as its list of candidate holes about people, and steps 5 and 6 take the most dangerous of them into critique and targeted follow-up research.
+
+---
+
+## 8. Follow-up research after personas
+
+Added 2026-08-11 at stage 02 step 6. Targeted collection against the most dangerous question from the personas critique, not a second research round. The rest of this file is untouched.
+
+**The question.** What surface do these people read numbers in today, and does a business reader arrive at a number through a link somebody sent, or by opening a dashboard themselves? It is the footing of the entry-point behaviour, of the first-screen decision and of the pattern choice.
+
+**What was found, with dates on the material rather than only on the visit.**
+
+- **dbt Community Forum**, thread "What does 'self-serve' in analytics mean to you?" (`discourse.getdbt.com/t/712`, opened 2026-08-11, posts dated 2019-11 to 2019-12). A practitioner: "If there is a question you are getting asked frequently and you find yourself pulling the same data for multiple users, then it almost always is a good use of your time to set that up as a dashboard". Another, on the reader: "most 'business users' like product managers have a lot on their plate already, and beyond understanding / reporting on their domain, it's unlikely most of them will be able to dedicate the time necessary to deeply explore their data or make sense of it".
+- **Hacker News**, comment on "Notes on the Perfidy of Dashboards" (`news.ycombinator.com/item?id=28329709`, dated 2021-08-27): "The main problem is that it's not easy to drill down into a metric in most BI tools because the connection between the dashboard and the source data is usually missing".
+
+**What that changes.** Two claims that had rested on our own brief now have a source outside it: the analyst is repeatedly asked the same question, and the business reader does not invest time in digging. One thing is new rather than confirmed: the field's default answer to the repeated question is **to build a dashboard**, so that is what our registry is hired against, not a competitor product. And the missing link between a number and its source is described from outside the vendor category, which is the first non-vendor voice we have on the central gap.
+
+**What it does not change.** The question itself is **not** answered. Nothing found says whether a business reader arrives by a link or opens a dashboard themselves, so the first-screen decision still rests on an assumption, and it stays hole 6 in `personas.md`.
+
+**Routes that failed, recorded so nobody spends them twice.** Reddit search returns HTTP 403 without an account, so r/analytics and r/dataengineering are closed to this pipeline. The Metabase community forum was searched on five behavioural queries and carries technical support threads, not consumption behaviour. A general web search on the behavioural phrasing returned unrelated SaaS listings.
+
+**Age caveat, which qualifies everything above.** The two usable sources are from 2019 and 2021. They support the shape of the problem rather than its present intensity, and this market has visibly moved since: fourteen of the fifteen pages opened in this round lead with AI.
+
+---

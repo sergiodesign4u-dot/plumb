@@ -12,7 +12,7 @@ Support is marked on every job, because most of what we know about these people 
 
 > **When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.**
 
-**Persona:** P1, the reader. **Support:** market.
+**Persona:** P1, the reader. **Support:** the market evidences the **gap**, not the hiring. Corrected during the step 5 critique, because the earlier label read as though the market proved a person hires this job. It does not: that a reader will do this is the riskiest assumption in `lean-ux-canvas.md` block 7, and it is what the first test exists to settle.
 
 **Where it comes from.** The gap that provenance is a destination which has to be chosen, and choosing it requires already suspecting something (`competitors.md`, shown for the five documented product surfaces). Benchmark criteria 5 and 8, where no product of five scores above 3 on attribution and the strongest failure is a stale value that looks exactly like a fresh one (`benchmark.md`). The riskiest assumption in `lean-ux-canvas.md` block 7 is this job failing to be hired.
 
@@ -34,7 +34,9 @@ Adjacent work in the same context, not steps toward the main job. Steps of a jou
 
 ### R1. Who is answerable
 
-> **When a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person instead of putting doubt into a channel.**
+> **When a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person rather than guess who to ask.**
+
+The earlier wording ended "instead of putting doubt into a channel", which asserted what happens today. `personas.md` lists three alternatives and marks which one actually happens as `[?]`, so the job now states the progress without asserting the current behaviour.
 
 **Persona:** P1. **Support:** market. Attribution scores 3 or below in all five benchmark products while several score 5 on freshness (`benchmark.md`). PowerMetrics names a person only when certification is **removed** (`support.powermetrics.app`, article 37726220561559). And the market's own model of doubt has a human owner: a Sifflet incident carries an assignee (`docs.siffletdata.com/docs/incidents`).
 
@@ -45,6 +47,8 @@ Adjacent work in the same context, not steps toward the main job. Steps of a jou
 > **When the same question about a number reaches me again, I want to answer it once and have the answer keep answering, so that I stop being the only route to it.**
 
 **Persona:** P2. **Support:** brief `[?]` for the frequency, market for the shape. Definition governance lives in a producer tool and the last mile is delegated to a surface owned by somebody else (`competitors.md`, pattern 2), which is the structural reason the analyst keeps being asked.
+
+**Follow-up research, 2026-08-11.** A practitioner states the pattern in his own words on the dbt Community Forum (`discourse.getdbt.com/t/712`, thread dated 2019-11): "If there is a question you are getting asked frequently and you find yourself pulling the same data for multiple users, then it almost always is a good use of your time to set that up as a dashboard". Two things follow. The repeated question is real and named by someone who is not us, which lifts this job off the brief. And **the default answer in the field is a dashboard**, so a dashboard, not a competitor product, is what R2 is actually hired against today. Age noted: 2019.
 
 **Solution-agnostic check.** A wiki, a pinned Slack message, dbt docs or a metric card could all be hired. This is also the job most easily faked by a document nobody reads, which is why the funnel measures it on the reader's side rather than on the analyst's.
 
@@ -68,9 +72,9 @@ Adjacent work in the same context, not steps toward the main job. Steps of a jou
 
 > **When I bring a new metric under control, I want to state once what it means and who owns it, so that the definition stops living in somebody's head.**
 
-**Persona:** P2. **Support:** market. The metric as a first-class object with defined and certified metrics is a real product shape (`competitors.md`, PowerMetrics), and Atlan sells the metrics layer as "a single source of truth for all KPI definitions".
+**Persona:** P2. **Support:** market for the **product shape**, `[?]` for the motivation. The metric as a first-class object with defined and certified metrics is a real product shape (`competitors.md`, PowerMetrics), and Atlan sells the metrics layer as "a single source of truth for all KPI definitions". That vendors build this is evidence; that an analyst wants the definition out of their head is our inference, corrected during the step 5 critique.
 
-**Solution-agnostic check.** A spreadsheet, a Notion page, dbt model documentation or a registry could all be hired. This is the job our activation depends on being done, which is exactly why the pricing refuses to tax it.
+**Solution-agnostic check.** A spreadsheet, a Notion page, dbt model documentation or a registry could all be hired. Activation **depends on this job having been done**, and is not this job: activation is measured when a second person opens a card, and writing a definition is setup. The pricing refuses to tax this job for exactly that reason, since taxing setup suppresses the thing activation waits on.
 
 ### The two pairs
 
@@ -109,11 +113,11 @@ Importance does not exist as a ready number anywhere in the research, so **every
 | Job | P1 reader (primary) | P2 analyst | Signal the score stands on |
 | --- | --- | --- | --- |
 | **Main**, judge a number before standing behind it | **3** | `[?]` | P1: their arrival trigger is exposure, and the whole benchmark dimension plus the riskiest assumption sit on this job. P2: the research says nothing about how an analyst judges somebody else's number |
-| **R1**, who is answerable | **3** | 1 | P1: attribution scores 3 or below in all five benchmark products, and the market's own model of doubt carries an assignee. P2: they usually **are** the answerable person |
+| **R1**, who is answerable | **3** | 1 `[?]` | P1: attribution scores 3 or below in all five benchmark products, and the market's own model of doubt carries an assignee. P2: scored low because we assume they **are** the answerable person, which is an inference with no signal in the research |
 | **R2**, answer once | `-` | **3** | P2: interruption frequency from the brief `[?]`, plus the structural fact that the last mile is delegated |
-| **R3**, the correction travels | 2 | **3** | P1 receives the change, P2 sends it. Signal: the state "definition changed after this was saved" is in MVP scope |
+| **R3**, the correction travels | 2 `[?]` | **3** `[?]` | P1 receives the change, P2 sends it. **No signal about people exists.** The earlier justification cited our own MVP scope, which is evidence about us, not about how much this matters to anyone. Corrected at step 5 |
 | **R4**, the old number does not travel as new | **3** `[?]` | 1 | The retention mechanic and benchmark criterion 8, no false calm. But **the job itself is a hypothesis**, so its importance is inferred from a mechanism we invented |
-| **R5**, the definition stops living in a head | `-` | **3** | The metric as a first-class object is a real product shape in the market, and this is our activation |
+| **R5**, the definition stops living in a head | `-` | **3** | The metric as a first-class object is a real product shape in the market, and the whole category is built on selling it. The earlier cell also said "this is our activation", which contradicted our own definition of activation and is removed |
 
 Emotional and social jobs are not scored here. Their importance would be a guess placed on top of a `[?]`, which is not an estimate.
 
@@ -134,7 +138,7 @@ Emotional and social jobs are not scored here. Their importance would be a guess
 
 **Two jobs qualify honestly, not three, and the third is not padded with invented importance.**
 
-1. **The main job.** P1 importance 3, not closed by the market. The cell that justifies it: provenance is a destination in all fifteen products, so the need to tell whether a number can be trusted **where it is read** is served by nobody.
+1. **The main job.** P1 importance 3, not closed by the market. The cell that justifies it: provenance is a destination, shown for the five products whose surfaces we could see and inferred for the other ten, so the need to tell whether a number can be trusted **where it is read** is served by nobody in this set.
 2. **R1, who is answerable.** P1 importance 3, not closed by the market. The cell that justifies it: attribution scores 3 or below across all five benchmark products while several score 5 on freshness, so the market has proved the habit of showing age and has not proved the habit of showing who is accountable.
 
 **A third, conditional: R4.** It qualifies on both columns, but its own importance is `[?]` because the job itself is a hypothesis: there is no evidence that anyone reopens a saved link. It is recorded as conditional, and the condition is explicit. If follow-up research or the first cohort shows that saved numbers are not revisited, R4 leaves the core and the retention mechanic leaves with it.
@@ -216,6 +220,28 @@ Ordered by what breaks if the line is wrong, not by how wrong it is.
 3. **Finding 14** decides what the card carries, which is the product.
 4. **Finding 8** decides that ownership is one name rather than a workflow.
 5. **Findings 1, 5 and 7** decide the MVP core, since importance scores feed it directly.
+
+### Status after the follow-up research at step 6
+
+All 16 findings were repaired in place, each one re-read in the file before it was touched. The repairs are visible in the files rather than silent: where a line was corrected, the correction says what the earlier version claimed.
+
+**What the follow-up research changed, rather than just marked.**
+
+- **R2 came off the brief.** A practitioner names the repeated question in his own words, and the same sentence tells us the field's default answer is to build a dashboard. R2 is hired against a dashboard today, not against a competitor product.
+- **P2 got a real mood quote**, from that same thread. P1 still has none: what exists is analysts talking about business readers, never a business reader talking.
+- **The reader's unwillingness to dig has a source outside our brief now**, dated 2019, in a practitioner's description of product managers having no time to explore their data.
+
+**What is still open and dangerous, in order.**
+
+| Residual risk | Standing after step 6 |
+| --- | --- |
+| Does the reader arrive by a link somebody sent, or by opening a dashboard themselves | **Still `[?]`.** Nothing found addresses it. It decides the first screen of the primary flow, and it is hole 6 |
+| What convinces the reader, the whole list on the card | **Still `[?]`.** Derived from how other products score, not from a reader. Most expensive unverified line in `personas.md` |
+| Does a data steward role exist at 50 to 300 | **Still `[?]`.** The invented claim that it does not was removed; ownership as one name is now recorded as a design decision |
+| Does anyone reopen a saved number | **Still `[?]`.** R4 stays a conditional member of the MVP core |
+| Is the reader the right primary | **Unchanged by step 6.** The correction to the catalog claim narrowed the evidence without reversing it: the destination, in whatever form, is still what the reader does not visit |
+
+**Age of the evidence, stated because it qualifies everything above.** The two usable sources are dated 2019 and 2021. They support the **shape** of the problem, not its current intensity, and the market has visibly moved since: ten of the fifteen pages opened in stage 01 now lead with AI.
 
 ### Three targeted questions for the follow-up research, most dangerous first
 

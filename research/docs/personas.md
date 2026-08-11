@@ -29,7 +29,7 @@ Where a slice has neither, it says so.
 
 - **Analyst:** stop being a human API to their own data, plus the reputation of being the person whose numbers are trusted (`CLAUDE.md`, `[?]`).
 - **Reader:** not being caught out in front of leadership (`CLAUDE.md`, `[?]`).
-- **Buyer:** a short security review, which is why metadata-only is a sales argument rather than an excuse (`CLAUDE.md`).
+- **Buyer:** a short security review, which is why metadata-only is a sales argument rather than an excuse (`CLAUDE.md`, `[?]`, same standing as the other two lines in this list).
 - **How the market frames the same demand:** Secoda sells "trusted answers fast and at scale", Sifflet sells "so the data behind every decision is one you can trust" (`competitors.md`). This is evidence about **how these people are sold to**, and it must not be read as evidence of what motivates them.
 
 ### 3. What they fear and what stops them
@@ -45,8 +45,8 @@ The thinnest slice. Almost all of it is the brief.
 
 The best-supported slice, because the evidence here is market fact rather than our own writing.
 
-- **Pricing opacity decides who can evaluate alone.** Seven of the ten HARD and SOFT products publish no seat price, so an analyst cannot self-serve an evaluation of them. Only PowerMetrics, Cube and dbt can be evaluated without talking to sales (`competitors.md`).
-- **Trust today attaches to a person, not to a system.** Sifflet models doubt as an incident with an assignee, a severity and a timeline (`docs.siffletdata.com/docs/incidents`): in the market's own design, doubt has a human owner.
+- **Pricing opacity decides what can be judged before a conversation.** Seven of the ten HARD and SOFT products publish no seat price; only PowerMetrics, Cube and dbt do (`competitors.md`). Corrected during the step 5 critique: this proves an analyst cannot compare cost without talking to sales, not that the product cannot be evaluated at all. Our own file records Sifflet offering "Start for Free Now".
+- **In the market's model of doubt there is a human owner.** A Sifflet incident carries an assignee, a severity and a timeline (`docs.siffletdata.com/docs/incidents`). Corrected during the step 5 critique: that is one vendor's design decision. Whether trust attaches to a person rather than to a system for our readers is `[?]`.
 - **The existing trust signal in the category is a badge.** A certified metric in PowerMetrics carries a blue check mark next to its name (`support.powermetrics.app`, article 37726220561559).
 
 ### 5. Where they break today
@@ -75,8 +75,12 @@ The first five rows already have an addressee: they come from the open questions
 | 10 | Does the title "data lead" exist at 50 to 300 people, or is it a founder or an engineering manager? | Analysts at target companies | New. Hits the primary persona directly |
 | 11 | How often is the analyst actually interrupted? | Analysts at target companies | `CLAUDE.md`, `[?]` |
 | 12 | Is the analyst the buyer or the influencer? | Head of data | New |
+| 13 | Does a data lead expect an agent to read our numbers, and would they trust one that did? | A data lead in a target company | Human half of `research.md` OQ3, inherited during the step 5 critique |
+| 14 | What does a data lead consider safe to show a reader who has no access to the source? | A data lead, plus me for the scope half | Human half of `research.md` OQ7, inherited during the step 5 critique |
 
-**Three open questions in `research.md` are not about people and stay unresolved there:** whether readers pay (OQ1), whether an AI agent is a second reader of our surface (OQ3), and what a free reader may be shown when the source's own permissions restrict it (OQ7). Those are decisions about model, scope and architecture, and this stage does not close them.
+**Three open questions in `research.md` are decisions about model, scope and architecture, and this stage does not close them:** whether readers pay (OQ1), whether an AI agent is a second reader of our surface (OQ3), and what a free reader may be shown when the source's own permissions restrict it (OQ7).
+
+**Corrected during the step 5 critique:** two of those three name a person as addressee, OQ3 a data lead and OQ7 a data lead plus the owner, so their human half does belong here. It is inherited as holes 13 and 14 in the table above: what a data lead expects an agent to read, and what a data lead says a free reader may be shown. The scope half stays in `research.md`.
 
 ### Honest coverage of the five slices
 
@@ -94,7 +98,7 @@ Personas are named by behaviour rather than given invented human names. A name w
 
 ### P1. The reader who is about to be quoted &nbsp;&nbsp; PRIMARY
 
-**Context.** PM, marketer or finance, 25 to 45, non-technical. Arrives **from exposure**, not from curiosity: a deck due, a meeting within the hour, a decision with their name on it (`CLAUDE.md`, `[?]`). How often this happens and what surface they read in are both unknown, holes 3 and 6. *Answers: the flow does not start at a home page or a search box, it starts at one number opened from a link.*
+**Context.** PM, marketer or finance, 25 to 45, non-technical. Arrives **from exposure**, not from curiosity: a deck due, a meeting within the hour, a decision with their name on it (`CLAUDE.md`, `[?]`). How often this happens and what surface they read in are both unknown, holes 3 and 6. *Answers: the flow does not start at a home page or a search box, it starts at one number opened from a link.* That answer is an **inference drawn from a brief-only trigger**, `[?]`, and it decides the first screen of the primary flow, so hole 6 is the one that settles it.
 
 **Jobs.** Canonical wording, identical to `jtbd.md`, no second edition of any job exists.
 
@@ -104,15 +108,19 @@ Personas are named by behaviour rather than given invented human names. A name w
 
 **Pains.** The number arrives stripped of everything that would let them judge it. Provenance is a destination that has to be chosen, and choosing it requires already suspecting something (`competitors.md`, shown for the five documented surfaces). The state vocabulary exists in the market and sits where they have no reason to go (`docs.getdbt.com/docs/explore/explore-projects`). Where access is given, the free role sees least: in Looker, Viewer gets folders, boards, dashboards and Looks only (`competitors.md`). *Answers: what the product removes, and how we will see that it did.*
 
-**Choice triggers.** They do not choose the product, they choose whether to trust this number. Convincing: a name and a date on the claim, an age in relative time, a named state instead of a red dash (`benchmark.md`, criteria 5 and 8, where no product scores above 3 on attribution). Repelling: a bare figure, a trust score that cannot be interrogated, a login wall. *Answers: what the card must carry as proof, and what it must never do.*
+**Choice triggers.** Working assumption, not an observation: they do not choose the product, they choose whether to trust this number. A reader can also simply refuse the tool, and nothing rules that out, `[?]`. What we expect to convince them, and this is **derived from how other products score in the benchmark rather than from anything a reader said**: a name and a date on the claim, an age in relative time, a named state instead of a red dash (`benchmark.md`, criteria 5 and 8). What we expect to repel: a bare figure, a trust score that cannot be interrogated, a login wall. The whole list is `[?]` and it decides what the card carries, which makes it the most expensive unverified line in this file. *Answers: what the card must carry as proof, and what it must never do.*
 
-**Demographic facts, each with its consequence.** Non-technical → a lineage graph is not readable to them, so depth on request must be legible without knowledge of the stack. Unpaid → they cannot be asked to create an account, which is where the activation product decision comes from (`aarrr.md`).
+**Demographic facts, each with its consequence.** Non-technical → depth on request must be legible without knowledge of the stack. The footed half is that a lineage graph requires a mental model of the stack (`research.md`, section 6); that our specific reader fails that bar is `[?]`. Unpaid → they cannot be asked to create an account, which is where the activation product decision comes from (`aarrr.md`).
 
-**Mood quote.** `[?]`. No verbatim user quote exists anywhere in the research and none will be synthesised. Queued for the follow-up research at step 6, because stage 05 needs a real voice to set tone against.
+**Mood quote.** Still `[?]` after the follow-up research at step 6, and none will be synthesised. What was found there is analysts talking **about** business readers, never a business reader talking. The closest is a practitioner describing them from outside (`discourse.getdbt.com/t/712`, thread dated 2019-12):
+
+> "most 'business users' like product managers have a lot on their plate already, and beyond understanding / reporting on their domain, it's unlikely most of them will be able to dedicate the time necessary to deeply explore their data or make sense of it"
+
+That is evidence about the reader's behaviour, not their voice. Stage 05 still needs a voice, and the only route left to it is talking to one.
 
 ### P2. The data lead who is asked &nbsp;&nbsp; secondary
 
-**Context.** 28 to 40, data team of 1 to 5 inside a company of 50 to 300. Arrives **on somebody else's trigger**: an inbound "why is this number different", several times a week (`CLAUDE.md`, `[?]`, hole 11). *Answers: their flow starts from an interruption, so the entry screen is search and jump to a metric, not a dashboard.*
+**Context.** 28 to 40, data team of 1 to 5 inside a company of 50 to 300. Arrives **on somebody else's trigger**: an inbound "why is this number different", several times a week (`CLAUDE.md`, `[?]`, hole 11). *Answers: their flow starts from an interruption, so the entry screen is search and jump to a metric, not a dashboard.* Same standing as P1's entry: an inference from a brief-only trigger, `[?]`.
 
 **Jobs.** Canonical wording, identical to `jtbd.md`.
 
@@ -124,9 +132,13 @@ Personas are named by behaviour rather than given invented human names. A name w
 
 **Choice triggers.** Whether the product can be evaluated without talking to sales: seven of the ten HARD and SOFT products cannot, and only PowerMetrics, Cube and dbt publish a seat price (`competitors.md`). Whether it demands access to rows, where metadata-only is our argument (`CLAUDE.md`). *Answers: what the public surface and the first run must prove before anyone talks to us.*
 
-**Demographic facts, each with its consequence.** Team of 1 to 5 → there is no rota and every question lands on the same person → the product has to answer **in their absence**. Company of 50 to 300 → no data steward role exists → ownership is one name, not a workflow.
+**Demographic facts, each with its consequence.** Team of 1 to 5 → we expect no rota, so every question lands on the same person → the product has to answer **in their absence**. The team size is from the brief; the absence of a rota is inference, `[?]`. Company of 50 to 300 → **whether a data steward role exists at that size is `[?]`**, and the earlier claim that it does not was invented. Ownership as one name rather than a workflow therefore stands as a design decision, not as a finding, and hole 10 is what would settle it.
 
-**Mood quote.** `[?]`, same reason.
+**Mood quote.** Found in the follow-up research, and it is a real practitioner voice rather than a synthesis. From the dbt Community Forum thread "What does 'self-serve' in analytics mean to you?" (`discourse.getdbt.com/t/712`, opened 2026-08-11, thread dated 2019-11):
+
+> "If there is a question you are getting asked frequently and you find yourself pulling the same data for multiple users, then it almost always is a good use of your time to set that up as a dashboard"
+
+It carries the tone stage 05 needs and it also carries a warning: **the practitioner's default answer to R2 is to build a dashboard**, not to write a definition. That is our real competitor for that job. Note the age: 2019, so it describes the shape of the problem rather than its current intensity.
 
 ### Not a persona: the buyer
 
@@ -138,7 +150,7 @@ Recorded as a **constraint rather than a persona**, and that is not a formality.
 
 **Criterion of primacy used here:** primary is the one whose needs are **not** met by designing for the other. Criterion and evidence are two different things, so the evidence follows separately.
 
-**Evidence, and it is asymmetric.** Designing for the analyst produces a catalog. Catalogs already exist in all fifteen competitor products, and the reader does not go to them: provenance is a destination requiring prior suspicion (`competitors.md`). Designing for the reader produces a card, and the analyst is still served, because the registry, search and jump by name stay in MVP scope as the analyst's side of the same product (`ux-patterns.md`, what survives of the rejected catalog pattern). Three more things point the same way: the riskiest assumption is about the reader (`lean-ux-canvas.md` block 7), the activation node is defined on the reader, and four of the five funnel product decisions land on the reader's card (`aarrr.md`).
+**Evidence, and it is asymmetric.** Designing for the analyst produces a catalog, and the analyst-facing destination already exists across this market in one of three forms, a catalog, a lineage graph or an incident feed, shown for the five products whose documentation we opened and inferred for the other ten (`competitors.md`). Corrected during the step 5 critique: the earlier wording claimed catalogs in all fifteen, and five of the fifteen are not catalogs at all. The load-bearing half survives the correction, since what the reader does not visit is the destination, whatever form it takes. Designing for the reader produces a card, and the analyst is still served, because the registry, search and jump by name stay in MVP scope as the analyst's side of the same product (`ux-patterns.md`, what survives of the rejected catalog pattern). Three more things point the same way: the riskiest assumption is about the reader (`lean-ux-canvas.md` block 7), the activation node is defined on the reader, and four of the five funnel product decisions land on the reader's card (`aarrr.md`).
 
 **The price of this choice, stated plainly:** the interface is built around the person who never pays.
 
