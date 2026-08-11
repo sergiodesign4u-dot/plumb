@@ -56,8 +56,56 @@
     <div id="ia-structure"></div>
   </section>
 
+  <!-- Bank .............................................................. -->
+  <section id="bank">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Block bank by page type</h2></div>
+
+    <p><strong>This is the rule of origin for what goes on a page.</strong> Every other artefact here carries one: a research fact cites a source, a CJM emotion carries mining evidence or a <code>[?]</code>, a To-Be feature traces to a barrier. The composition of a page had none, and a page composition invented with no source is the median of every product ever seen: hero, filter, cards, pagination. The full bank is <code>ia/docs/blocks.md</code>.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Eight types, because states and dialogs inherit the type of their parent</caption>
+        <thead><tr><th>Type</th><th>Nodes</th><th>Total</th><th>MVP</th><th>Bank</th></tr></thead>
+        <tbody>
+          <tr><td><strong>T1. Object detail, the read surface</strong></td><td>2.1 to 2.10</td><td>10</td><td>10</td><td><strong>Collected</strong></td></tr>
+          <tr><td>T2. Listing with search</td><td>3.1, 4.1, 4.2, 4.3</td><td>4</td><td>4</td><td>In the round</td></tr>
+          <tr><td>T3. Form and editor</td><td>3.2 to 3.4, 4.4 to 4.7</td><td>7</td><td>7</td><td>In the round</td></tr>
+          <tr><td>T4. Gate (SSO)</td><td>1.1 to 1.3</td><td>3</td><td>3</td><td>In the round</td></tr>
+          <tr><td>T8. System page</td><td>7.1 to 7.4</td><td>4</td><td>2</td><td>In the round</td></tr>
+          <tr><td>T6. Public landing</td><td>6.1, 6.2, 6.3</td><td>3</td><td>0</td><td>6.1 only, as the SEO reference</td></tr>
+          <tr><td>T5. Account settings</td><td>5.1, 5.2</td><td>2</td><td>0</td><td>Deferred</td></tr>
+          <tr><td>T7. Content, legal, support</td><td>6.4 to 6.7</td><td>4</td><td>0</td><td>Deferred</td></tr>
+          <tr><td>T0. Global frame</td><td>0.1 to 0.4</td><td>4</td><td>4</td><td>Done at steps 2 and 3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The domain half of the sources is missing for three types, and they carry the MVP.</strong> None of the fifteen competitors shows a product surface without an account, and we do not log in, so for T1, T2 and T3, which hold 21 of the 30 MVP nodes, there is no competitor page of that type to open. The named substitute is public documentation of the real product, opened and dated in session, plus barriers from the As-Is journey. For those three types the column "where we are better" holds <strong>the barrier a block works on</strong> rather than a comparison, because there is nobody to compare against on the same surface.</p>
+
+    <p><strong>Not one MVP page is indexed.</strong> The card is public but noindex, and the registry, sources, sign-in and system pages are private or transactional. That is why the public landing is in the round for one node: the SEO layer belongs to this stage and would otherwise have no subject.</p>
+
+    <h3>T1, the read surface: sources and what they gave</h3>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Source</th><th>Kind</th><th>The one thing it settled</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://support.powermetrics.app/hc/en-us/articles/37726220561559">PowerMetrics metric overview</a></td><td>Domain, documentation</td><td>Their metric page keeps the details in an <strong>About tab that hides and shows</strong>, and opens on charts. That single structural difference is the largest one between their page and our card</td></tr>
+          <tr><td><a href="https://docs.getdbt.com/docs/explore/data-health-signals">dbt data health signals</a></td><td>Domain, documentation</td><td>The published criteria show a stale upstream source and a missing description producing <strong>the same yellow</strong>. Our refusal of any aggregate stops being a preference and becomes evidenced</td></tr>
+          <tr><td><a href="https://refero.design/pages/7957c520-682f-4b22-ba1d-d86b77ed661c">Zendesk Status</a></td><td>Craft, outside the category</td><td>The condition stated in a full sentence before any detail, with the last-update time beside it</td></tr>
+          <tr><td><a href="https://refero.design/pages/c0dab7d7-c912-49c0-afa0-afa018efb5b9">Enode asset detail</a></td><td>Craft, outside the category</td><td>Label and value rows are the cheapest readable form for provenance, and they collapse to one column at 360</td></tr>
+          <tr><td><a href="https://refero.design/pages/9d0debce-382e-442d-91a2-31a623730246">Resend metrics</a></td><td>Craft, <strong>counter-reference</strong></td><td>Freshness in a page footer and the definition behind a tooltip: design principles 1 and 3 broken in one well-made screen</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>What all five have in common is the gap.</strong> Not one puts a definition in words on the reading surface, and not one puts a person's name on the claim. The competitor research reached that conclusion from the outside; the bank now confirms it at the level of page composition.</p>
+
+    <p><strong>One competitor motion recorded rather than discovered later:</strong> dbt ships data health tiles as an embeddable iFrame for a BI dashboard, which is movement towards the place of reading, our strategic dimension. What travels in that tile is the aggregate signal, not the definition, the attribution or a route to a person.</p>
+  </section>
+
   <footer class="note">
-    <p>Plumb, stage 03b of 13. The node data is <code>ia/docs/sitemap.md</code>, the per-node sources are <code>ia/docs/pages/</code>, and the chips above are rendered from <code>ia/_nav.js</code>.</p>
+    <p>Plumb, stage 03b of 13. The node data is <code>ia/docs/sitemap.md</code>, the block bank is <code>ia/docs/blocks.md</code>, the per-node sources are <code>ia/docs/pages/</code>, and the chips above are rendered from <code>ia/_nav.js</code>.</p>
   </footer>
 
   </main>
@@ -72,7 +120,8 @@
   })();
   window.NAV_BASE = '../';
   window.NAV_SECTIONS = [
-    { id:'hub', label:'Nodes' }
+    { id:'hub',  label:'Nodes' },
+    { id:'bank', label:'Block bank by type' }
   ];
 </script>
 <script src="../_nav.js"></script>

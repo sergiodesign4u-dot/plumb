@@ -18,7 +18,7 @@ One list, one wording, one set of rules for when each applies. Every screen refe
 
 | Source | What it gives us | What we take and what we refuse |
 | --- | --- | --- |
-| dbt catalog, `docs.getdbt.com/docs/explore/explore-projects`, opened 2026-08-11. "Data health signals offer a quick, at-a-glance view of data health. These icons indicate whether a model is Healthy, Caution, Degraded, or Unknown", and "Hover over an icon to view detailed information about the model's health" | A working four-state vocabulary already exists in this market | **Take:** that named states beat a binary. **Refuse:** the icon-plus-hover delivery. A state that needs a hover cannot exist on a phone, and our reader is on one |
+| dbt catalog, `docs.getdbt.com/docs/explore/data-health-signals`, re-opened 2026-08-12 at step 4. "Data health signals offer a quick, at-a-glance view of data health when browsing your resources in Catalog. They keep you informed on the status of your resource's health using the indicators Healthy, Caution, Degraded, or Unknown", and "In the Health column on each resource's details page. Hover over or click the signal to view detailed information" | A working four-state vocabulary already exists in this market | **Take:** that named states beat a binary. **Refuse:** the delivery, an icon whose meaning arrives only on hover or click. A state that needs an interaction to be read does not exist on a phone, and our reader is on one |
 | GitHub Status, `benchmark.md` mechanism 1: five named component states and four named incident stages instead of a binary up or down | The mechanism underneath, ambiguity aversion: a named trouble stays usable, an unnamed one gets discounted entirely | **Take:** the naming. **Refuse:** the incident stages, which are a workflow, and design principle 2 forbids one here |
 
 **What we do differently, in one line:** the same idea, moved from a catalog that a non-analyst never opens onto the object the reader is already looking at, and written in words rather than an icon.
@@ -54,7 +54,7 @@ Three states, and **there is no fourth**. "Healthy" is not a state in this produ
 
 - **No severity.** A state is not high, medium or low. Severity implies triage, triage implies a queue, and a queue is the incident tool.
 - **No assignee and nothing to close.** A state ends when the underlying fact ends.
-- **No aggregate.** No health percentage, no trust score, no "99.4% reliable". A score cannot be interrogated, so it replaces one number nobody can defend with a second one.
+- **No aggregate.** No health percentage, no trust score, no "99.4% reliable". A score cannot be interrogated, so it replaces one number nobody can defend with a second one. **Evidenced at step 4 rather than asserted:** dbt publishes the criteria behind its signal (`docs.getdbt.com/docs/explore/data-health-signals`, opened 2026-08-12), and Caution fires if any one of these is true, "Not built in the last 30 days", "Tests are not configured", "One or more upstream sources are stale", or "Missing a description". A stale source and an unwritten sentence of prose produce the same yellow, and the person reading it cannot tell which they have.
 - **No colour-only encoding.** Every state is legible in words with the colour removed, which is both an accessibility requirement and the reason these can survive a black and white wireframe.
 - **No "Healthy".** Saying a number is fine is a claim we would have to defend; showing its age is a fact.
 

@@ -1,0 +1,315 @@
+- generic [active] [ref=f45e1]:
+  - generic [ref=f45e2]:
+    - region "Skip to main content":
+      - link "Skip to main content" [ref=f45e3] [cursor=pointer]:
+        - /url: "#__docusaurus_skipToContent_fallback"
+    - banner [ref=f45e4]:
+      - link "Join us at dbt Summit, September 15–18 in Las Vegas. Come learn, swap ideas, and spend time with the dbt community as we shape the future of data and AI." [ref=f45e5] [cursor=pointer]:
+        - /url: https://www.getdbt.com/dbt-summit/?utm_medium=internal&utm_source=docs&utm_campaign=q3-2027_dbt-summit-2026_aw&utm_content=dbt-summit____&utm_term=all_all__
+      - button "Close" [ref=f45e7] [cursor=pointer]
+    - navigation "Main" [ref=f45e11]:
+      - generic [ref=f45e12]:
+        - generic [ref=f45e13]:
+          - button "Toggle navigation bar" [ref=f45e14] [cursor=pointer]
+          - link [ref=f45e17] [cursor=pointer]:
+            - /url: /
+            - img "dbt Logo" [ref=f45e19]
+          - 'button "dbt version: v2" [ref=f45e21] [cursor=pointer]':
+            - generic [ref=f45e25]: dbt version
+            - generic [ref=f45e26]: v2
+            - generic [ref=f45e27]: ▾
+        - button "Search (Command+K)" [ref=f45e29] [cursor=pointer]
+    - main [ref=f45e36]:
+      - generic [ref=f45e40]:
+        - article [ref=f45e41]:
+          - generic [ref=f45e42]:
+            - navigation "Breadcrumbs" [ref=f45e43]:
+              - list [ref=f45e44]:
+                - listitem [ref=f45e45]:
+                  - link "Home page" [ref=f45e46] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=f45e49]:
+                  - link "Explore your data" [ref=f45e50] [cursor=pointer]:
+                    - /url: /docs/explore/explore-your-data
+                - listitem [ref=f45e51]:
+                  - link "Discover data with dbt Catalog" [ref=f45e52] [cursor=pointer]:
+                    - /url: /docs/explore/explore-projects
+                - listitem [ref=f45e53]:
+                  - generic [ref=f45e54]: Data health signals
+            - button "Copy page options" [ref=f45e56] [cursor=pointer]: Copy page
+          - button "On this page" [ref=f45e63] [cursor=pointer]
+          - generic [ref=f45e64]:
+            - generic [ref=f45e65]:
+              - heading [level=1] [ref=f45e66]:
+                - text: Data health signals
+                - link "Preview" [ref=f45e67] [cursor=pointer]:
+                  - /url: https://docs.getdbt.com/docs/dbt-versions/product-lifecycles
+              - button "dbt platform | Starter, Enterprise, Enterprise+. Show availability details" [ref=f45e69] [cursor=pointer]:
+                - generic [ref=f45e70]:
+                  - generic [ref=f45e71]: dbt platform
+                  - generic [ref=f45e72]: "|"
+                  - generic [ref=f45e73]: Starter, Enterprise, Enterprise+
+                - generic [ref=f45e74]: ⓘ
+            - paragraph [ref=f45e75]:
+              - text: Data health signals offer a quick, at-a-glance view of data health when browsing your resources in Catalog. They keep you informed on the status of your resource's health using the indicators
+              - strong [ref=f45e76]: Healthy
+              - text: ","
+              - strong [ref=f45e77]: Caution
+              - text: ","
+              - strong [ref=f45e78]: Degraded
+              - text: ", or"
+              - strong [ref=f45e79]: Unknown
+              - text: .
+            - paragraph [ref=f45e80]: Note, we don’t calculate data health for non-dbt resources.
+            - list [ref=f45e81]:
+              - listitem [ref=f45e82]:
+                - text: Supported resources are
+                - link "models" [ref=f45e83] [cursor=pointer]:
+                  - /url: /docs/build/models
+                - text: ","
+                - link "sources" [ref=f45e84] [cursor=pointer]:
+                  - /url: /docs/build/sources
+                - text: ", and"
+                - link "exposures" [ref=f45e85] [cursor=pointer]:
+                  - /url: /docs/build/exposures
+                - text: .
+              - listitem [ref=f45e86]: For accurate health data, ensure the resource is up-to-date and had a recent job run.
+              - listitem [ref=f45e87]:
+                - text: Each data health signal reflects key data health components, such as test success status, missing resource descriptions, missing tests, absence of builds in 30-day windows,
+                - link "and more" [ref=f45e88] [cursor=pointer]:
+                  - /url: "#data-health-signal-criteria"
+                - text: .
+            - generic [ref=f45e89]:
+              - link [ref=f45e91] [cursor=pointer]:
+                - /url: "#"
+                - img "View data health signals for your models." [ref=f45e92]
+              - generic [ref=f45e93]: View data health signals for your models.
+            - heading [level=2] [ref=f45e94] [cursor=pointer]:
+              - text: Access data health signals
+              - link "Direct link to Access data health signals" [ref=f45e95]:
+                - /url: "#access-data-health-signals"
+            - paragraph [ref=f45e96]: "Access data health signals in the following places:"
+            - list [ref=f45e97]:
+              - listitem [ref=f45e98]:
+                - text: In the
+                - link "search function" [ref=f45e99] [cursor=pointer]:
+                  - /url: /docs/explore/explore-projects#search-resources
+                - text: or under
+                - strong [ref=f45e100]: Models
+                - text: ","
+                - strong [ref=f45e101]: Sources
+                - text: ", or"
+                - strong [ref=f45e102]: Exposures
+                - text: in the
+                - strong [ref=f45e103]: Resource
+                - text: tab.
+                - list [ref=f45e104]:
+                  - listitem [ref=f45e105]:
+                    - text: For sources, the data health signal also indicates the
+                    - link "source freshness" [ref=f45e106] [cursor=pointer]:
+                      - /url: /docs/deploy/source-freshness
+                    - text: status.
+              - listitem [ref=f45e107]:
+                - text: In the
+                - strong [ref=f45e108]: Health
+                - text: column on
+                - link "each resource's details page" [ref=f45e109] [cursor=pointer]:
+                  - /url: /docs/explore/explore-projects#view-resource-details
+                - text: . Hover over or click the signal to view detailed information.
+              - listitem [ref=f45e110]:
+                - text: In the
+                - strong [ref=f45e111]: Health
+                - text: column of public models tables.
+              - listitem [ref=f45e112]:
+                - text: In the
+                - link "DAG lineage graph" [ref=f45e113] [cursor=pointer]:
+                  - /url: /docs/explore/explore-projects#project-lineage
+                - text: . Click any node to open the node details panel where you can view it and its details.
+              - listitem [ref=f45e114]:
+                - text: In
+                - link "Data health tiles" [ref=f45e115] [cursor=pointer]:
+                  - /url: /docs/explore/data-tile
+                - text: through an embeddable iFrame and visible in your BI dashboard.
+            - generic [ref=f45e116]:
+              - link [ref=f45e118] [cursor=pointer]:
+                - /url: "#"
+                - img "Access data health signals in multiple places in dbt Catalog." [ref=f45e119]
+              - generic [ref=f45e120]: Access data health signals in multiple places in dbt Catalog.
+            - heading [level=2] [ref=f45e121] [cursor=pointer]:
+              - text: Data health signal criteria
+              - link "Direct link to Data health signal criteria" [ref=f45e122]:
+                - /url: "#data-health-signal-criteria"
+            - paragraph [ref=f45e123]: Each resource has a health state that is determined by specific set of criteria. Select the following tabs to view the criteria for that resource type.
+            - generic [ref=f45e124]:
+              - tablist [ref=f45e125]:
+                - tab "Models" [selected] [ref=f45e126] [cursor=pointer]
+                - tab "Sources" [ref=f45e127] [cursor=pointer]
+                - tab "Exposures" [ref=f45e128] [cursor=pointer]
+              - tabpanel [ref=f45e130]:
+                - paragraph [ref=f45e131]: "The health state of a model is determined by the following criteria:"
+                - generic [ref=f45e133]:
+                  - textbox "Search table" [ref=f45e138]:
+                    - /placeholder: Search table...
+                  - table [ref=f45e139]:
+                    - rowgroup [ref=f45e140]:
+                      - row [ref=f45e141]:
+                        - columnheader [ref=f45e142]:
+                          - generic [ref=f45e144]:
+                            - strong [ref=f45e146] [cursor=pointer]: Health state
+                            - button "Filter by Health state" [ref=f45e148] [cursor=pointer]:
+                              - generic [ref=f45e149]: ˅
+                        - columnheader [ref=f45e151]:
+                          - generic [ref=f45e153]:
+                            - strong [ref=f45e155] [cursor=pointer]: Criteria
+                            - button "Filter by Criteria" [ref=f45e157] [cursor=pointer]:
+                              - generic [ref=f45e158]: ˅
+                    - rowgroup [ref=f45e160]:
+                      - row [ref=f45e161]:
+                        - cell [ref=f45e162]:
+                          - text: ✅
+                          - strong [ref=f45e163]: Healthy
+                        - cell [ref=f45e164]:
+                          - text: "All of the following must be true: - Built successfully in the last run- Built in the last 30 days- Model has tests configured- All tests passed- All upstream"
+                          - link "sources are fresh" [ref=f45e165] [cursor=pointer]:
+                            - /url: /docs/build/sources#source-data-freshness
+                          - text: or freshness is not applicable (set to
+                          - code [ref=f45e166]: "null"
+                          - text: )- Has a description
+                      - row [ref=f45e167]:
+                        - cell [ref=f45e168]:
+                          - text: 🟡
+                          - strong [ref=f45e169]: Caution
+                        - 'cell "One of the following must be true: - Not built in the last 30 days - Tests are not configured - Tests return warnings - One or more upstream sources are stale: - Has a freshness check configured - Freshness check ran in the past 30 days - Freshness check returned a warning - Missing a description" [ref=f45e170]': "One of the following must be true: - Not built in the last 30 days- Tests are not configured- Tests return warnings- One or more upstream sources are stale: - Has a freshness check configured - Freshness check ran in the past 30 days - Freshness check returned a warning- Missing a description"
+                      - row [ref=f45e171]:
+                        - cell [ref=f45e172]:
+                          - text: 🔴
+                          - strong [ref=f45e173]: Degraded
+                        - 'cell "One of the following must be true: - Model failed to build - Model has failing tests - One or more upstream sources are stale: - Freshness check hasn’t run in the past 30 days - Freshness check returned an error" [ref=f45e174]': "One of the following must be true: - Model failed to build- Model has failing tests- One or more upstream sources are stale: - Freshness check hasn’t run in the past 30 days - Freshness check returned an error"
+                      - row [ref=f45e175]:
+                        - cell [ref=f45e176]:
+                          - text: ⚪
+                          - strong [ref=f45e177]: Unknown
+                        - cell "- Unable to determine health of resource; no job runs have processed the resource." [ref=f45e178]
+            - generic [ref=f45e179]:
+              - heading "Was this page helpful?" [level=2] [ref=f45e180]
+              - generic [ref=f45e182]:
+                - button "Yes" [ref=f45e183]
+                - button "No" [ref=f45e186]
+              - generic [ref=f45e189]:
+                - generic [ref=f45e190]:
+                  - link "Privacy policy" [ref=f45e191] [cursor=pointer]:
+                    - /url: https://www.getdbt.com/cloud/privacy-policy
+                  - link "Create a GitHub issue" [ref=f45e192] [cursor=pointer]:
+                    - /url: https://github.com/dbt-labs/docs.getdbt.com/issues
+                - paragraph [ref=f45e194]:
+                  - text: This site is protected by reCAPTCHA and the Google
+                  - link "Privacy Policy" [ref=f45e195] [cursor=pointer]:
+                    - /url: https://policies.google.com/privacy
+                  - text: and
+                  - link "Terms of Service" [ref=f45e196] [cursor=pointer]:
+                    - /url: https://policies.google.com/terms
+                  - text: apply.
+          - generic [ref=f45e198]:
+            - link "Edit this page" [ref=f45e200] [cursor=pointer]:
+              - /url: https://github.com/dbt-labs/docs.getdbt.com/edit/current/website/docs/docs/explore/data-health-signals.md
+            - generic [ref=f45e205]:
+              - text: Last updated on
+              - time [ref=f45e207]: Aug 11, 2026
+        - navigation "Docs pages" [ref=f45e208]:
+          - link "Previous « Column-level lineage" [ref=f45e209] [cursor=pointer]:
+            - /url: /docs/explore/column-level-lineage
+            - generic [ref=f45e210]: Previous
+            - generic [ref=f45e211]: « Column-level lineage
+          - link "Next Explore multiple projects »" [ref=f45e212] [cursor=pointer]:
+            - /url: /docs/explore/explore-multiple-projects
+            - generic [ref=f45e213]: Next
+            - generic [ref=f45e214]: Explore multiple projects »
+    - contentinfo [ref=f45e215]:
+      - generic [ref=f45e219]:
+        - generic [ref=f45e221]:
+          - generic [ref=f45e222]:
+            - generic [ref=f45e223]: Get started
+            - heading "Start building with dbt." [level=2] [ref=f45e224]
+            - paragraph [ref=f45e225]: The free dbt VS Code extension is the best way to develop locally with the dbt Fusion Engine.
+          - generic [ref=f45e226]:
+            - link "Install free extension" [ref=f45e227] [cursor=pointer]:
+              - /url: https://marketplace.visualstudio.com/items?itemName=dbtLabsInc.dbt
+            - link "Request your demo" [ref=f45e228] [cursor=pointer]:
+              - /url: https://www.getdbt.com/contact
+        - generic [ref=f45e230]:
+          - link [ref=f45e232] [cursor=pointer]:
+            - /url: /
+            - img "dbt Labs" [ref=f45e233]
+          - generic [ref=f45e234]:
+            - generic [ref=f45e235]:
+              - heading "Resources" [level=5] [ref=f45e236]
+              - link "VS Code Extension" [ref=f45e237] [cursor=pointer]:
+                - /url: /docs/about-dbt-extension
+              - link "Resource Hub" [ref=f45e238] [cursor=pointer]:
+                - /url: https://www.getdbt.com/resources
+              - link "dbt Learn" [ref=f45e239] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-learn
+              - link "Certification" [ref=f45e240] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-certification
+              - link "Developer Blog" [ref=f45e241] [cursor=pointer]:
+                - /url: /blog
+            - generic [ref=f45e242]:
+              - heading "Community" [level=5] [ref=f45e243]
+              - link "Join the Community" [ref=f45e244] [cursor=pointer]:
+                - /url: /community/join
+              - link "Become a Contributor" [ref=f45e245] [cursor=pointer]:
+                - /url: /community/contribute
+              - link "Open Source dbt Packages" [ref=f45e246] [cursor=pointer]:
+                - /url: https://hub.getdbt.com/
+              - link "Community Forum" [ref=f45e247] [cursor=pointer]:
+                - /url: https://discourse.getdbt.com/
+            - generic [ref=f45e248]:
+              - heading "Support" [level=5] [ref=f45e249]
+              - link "Contact Support" [ref=f45e250] [cursor=pointer]:
+                - /url: /docs/dbt-support
+              - link "Professional Services" [ref=f45e251] [cursor=pointer]:
+                - /url: https://www.getdbt.com/services
+              - link "Find a Partner" [ref=f45e252] [cursor=pointer]:
+                - /url: https://www.getdbt.com/partner-directory
+              - link "System Status" [ref=f45e253] [cursor=pointer]:
+                - /url: https://status.getdbt.com/
+            - generic [ref=f45e254]:
+              - heading "Connect with Us" [level=5] [ref=f45e255]
+              - generic [ref=f45e256]:
+                - link "GitHub" [ref=f45e257] [cursor=pointer]:
+                  - /url: https://github.com/dbt-labs/docs.getdbt.com
+                - link "LinkedIn" [ref=f45e260] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/dbtlabs/mycompany/
+                - link "YouTube" [ref=f45e263] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCVpBwKK-ecMEV75y1dYLE5w
+                - link "Instagram" [ref=f45e266] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dbt_labs/
+                - link "X" [ref=f45e269] [cursor=pointer]:
+                  - /url: https://x.com/dbt_labs
+                - link "Bluesky" [ref=f45e272] [cursor=pointer]:
+                  - /url: https://bsky.app/profile/getdbt.com
+                - link "Community Slack" [ref=f45e275] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/community/join-the-community/
+          - generic [ref=f45e278]:
+            - generic [ref=f45e279]: © 2026 dbt Labs, LLC. All Rights Reserved.
+            - generic [ref=f45e280]:
+              - link "Terms of Service" [ref=f45e281] [cursor=pointer]:
+                - /url: https://www.getdbt.com/terms-of-use/
+              - link "Privacy Policy" [ref=f45e282] [cursor=pointer]:
+                - /url: https://www.getdbt.com/cloud/privacy-policy/
+              - link "Security" [ref=f45e283] [cursor=pointer]:
+                - /url: https://www.getdbt.com/security/
+              - button "Cookie Settings" [ref=f45e284] [cursor=pointer]
+  - dialog "Fivetran's Use of Cookies" [ref=f45e286]:
+    - generic [ref=f45e287]:
+      - generic [ref=f45e288]:
+        - generic:
+          - heading "Fivetran's Use of Cookies" [level=2] [ref=f45e289]
+          - generic [ref=f45e290]:
+            - text: By clicking "Accept All Cookies", you consent to the storage of cookies on your device for improved site navigation, analyzing site usage, and supporting our marketing efforts.
+            - link "More information about your privacy, opens in a new tab" [ref=f45e291] [cursor=pointer]:
+              - /url: https://www.fivetran.com/legal/privacy
+              - text: Refer to our Privacy Notice section on "Cookies and similar tracking technology" for more details.
+      - generic [ref=f45e293]:
+        - button "Accept All Cookies" [ref=f45e295] [cursor=pointer]
+        - button "Personalize My Choices, Opens the preference center dialog" [ref=f45e296] [cursor=pointer]: Personalize My Choices

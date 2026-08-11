@@ -1,0 +1,1334 @@
+- generic [active] [ref=f34e1]:
+  - link "Skip to main content" [ref=f34e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f34e3]:
+    - link [ref=f34e5] [cursor=pointer]:
+      - /url: /hc/en-us
+      - img "PowerMetrics Help Center Help Center home page" [ref=f34e6]
+    - button "Toggle navigation menu" [ref=f34e8] [cursor=pointer]
+  - main [ref=f34e11]:
+    - generic [ref=f34e13]:
+      - generic [ref=f34e14]:
+        - navigation "Breadcrumb" [ref=f34e15]:
+          - list [ref=f34e16]:
+            - listitem [ref=f34e17]:
+              - link "PowerMetrics Help Center" [ref=f34e18] [cursor=pointer]:
+                - /url: /hc/en-us
+            - listitem [ref=f34e19]:
+              - text: ">"
+              - link "Metrics" [ref=f34e20] [cursor=pointer]:
+                - /url: /hc/en-us/categories/37637849609111-Metrics
+            - listitem [ref=f34e21]:
+              - text: ">"
+              - link "Viewing, Exploring, and Analyzing Metrics" [ref=f34e22] [cursor=pointer]:
+                - /url: /hc/en-us/sections/39286160835095-Viewing-Exploring-and-Analyzing-Metrics
+        - search [ref=f34e24]:
+          - searchbox "Search the Help Centre" [ref=f34e25]
+      - generic [ref=f34e26]:
+        - complementary "Articles in this section" [ref=f34e27]:
+          - generic [ref=f34e28]:
+            - button "Articles in this section" [ref=f34e29]
+            - text: Articles in this section
+        - article [ref=f34e32]:
+          - generic [ref=f34e33]:
+            - heading "How do I view and personalize metrics? The metric overview" [level=1] [ref=f34e34]
+            - generic [ref=f34e37]:
+              - generic [ref=f34e38]:
+                - time [ref=f34e39]: 1 month ago
+                - text: ·
+              - text: Updated
+          - generic [ref=f34e42]:
+            - paragraph [ref=f34e43]: The PowerMetrics metric overview is a dedicated page where you can visualize a metric from multiple perspectives, apply date ranges and filters, personalize each view, overlay analyses, set and track goals, and access metric details — all in one place. Personalizations are saved per user and persist between sessions; you can reset any view to its defaults at any time.
+            - paragraph [ref=f34e44]:
+              - text: As with all PowerMetrics features, the overview page is flexible and customizable. In this article, you'll learn how to
+              - strong [ref=f34e45]: personalize
+              - text: and
+              - strong [ref=f34e46]: view
+              - text: your metrics. For detailed information on
+              - strong [ref=f34e47]: editing
+              - text: a metric's underlying data and configuration, see
+              - link "\"How do I edit metrics?\"" [ref=f34e48] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726244977047-editing-metrics
+            - paragraph [ref=f34e49]: "This article includes:"
+            - list [ref=f34e50]:
+              - listitem [ref=f34e51]:
+                - link "How do I open a metric?" [ref=f34e52] [cursor=pointer]:
+                  - /url: "#open"
+              - listitem [ref=f34e53]:
+                - link "How do I navigate the metric overview?" [ref=f34e54] [cursor=pointer]:
+                  - /url: "#design"
+                - list [ref=f34e55]:
+                  - listitem [ref=f34e56]:
+                    - link "General metric settings and actions" [ref=f34e57] [cursor=pointer]:
+                      - /url: "#general"
+                  - listitem [ref=f34e58]:
+                    - link "Date range, filtering, and aggregation" [ref=f34e59] [cursor=pointer]:
+                      - /url: "#date_filt_agg"
+                  - listitem [ref=f34e60]:
+                    - link "Metric goals and metric details" [ref=f34e61] [cursor=pointer]:
+                      - /url: "#goals_about"
+              - listitem [ref=f34e62]:
+                - link "How do I interact with and personalize metrics?" [ref=f34e63] [cursor=pointer]:
+                  - /url: "#personalize"
+                - list [ref=f34e64]:
+                  - listitem [ref=f34e65]:
+                    - 'link "Metric views: Summary charts and textual descriptions" [ref=f34e66] [cursor=pointer]':
+                      - /url: "#micro_views"
+                  - listitem [ref=f34e67]:
+                    - 'link "Metric views: Other visualization types" [ref=f34e68] [cursor=pointer]':
+                      - /url: "#other_views"
+              - listitem [ref=f34e69]:
+                - link "Frequently asked questions" [ref=f34e70] [cursor=pointer]:
+                  - /url: "#faqs"
+            - heading "How do I open a metric?" [level=2] [ref=f34e71]
+            - paragraph [ref=f34e72]: Begin by going to your list of metrics and selecting the one you want to open.
+            - heading "To open a metric:" [level=3] [ref=f34e73]
+            - list [ref=f34e74]:
+              - listitem [ref=f34e75]:
+                - text: Click
+                - strong [ref=f34e76]: Metrics
+                - text: in the left navigation sidebar.
+              - listitem [ref=f34e77]: In your list of metrics, select the one you want to open. The metric overview opens in view mode.When you open a metric, it’s immediately visualized using the most appropriate aggregation type and the most effective selection of chart styles. These automatic settings are based on the metric’s data and whether the metric has segments or has metric goals applied to it.
+            - heading "How do I navigate the metric overview?" [level=2] [ref=f34e78]
+            - paragraph [ref=f34e79]:
+              - text: In the metric overview, you can access
+              - strong [ref=f34e80]: general metric settings
+              - text: (for example, the metric name and associated service),
+              - strong [ref=f34e81]: perform actions
+              - text: (for example, editing, sharing, and deleting) and view and modify the
+              - strong [ref=f34e82]: date range and filters
+              - text: for all of the metric views on the page. You can also see and add
+              - strong [ref=f34e83]: metric goals
+              - text: and access essential
+              - strong [ref=f34e84]: details about the metric
+              - text: .
+              - strong [ref=f34e85]: "Note:"
+              - text: Depending on the metric type and configuration, you may also be able to view and modify the
+              - strong [ref=f34e86]: aggregation
+              - text: settings.
+            - paragraph [ref=f34e87]:
+              - text: In the central area of the overview, you’ll see
+              - strong [ref=f34e88]: several representations of the metric
+              - text: . These are called
+              - strong [ref=f34e89]: metric views
+              - text: or
+              - strong [ref=f34e90]: visualizations
+              - text: .
+            - heading "General metric settings and actions" [level=3] [ref=f34e91]
+            - paragraph [ref=f34e92]:
+              - text: The banner that spans the top of the page includes the
+              - strong [ref=f34e93]: metric name
+              - text: and the
+              - strong [ref=f34e94]: service it’s connected to
+              - text: ", for example, this metric is called “Account Impressions” and it’s connected to data from an Instagram Business account."
+              - strong [ref=f34e95]: "Note:"
+              - text: You can change the image that’s used for the service icon.
+              - link "Learn more here." [ref=f34e96] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726259507479-changing-metric-icons
+            - paragraph [ref=f34e97]:
+              - text: Beside the metric name, you’ll see the
+              - strong [ref=f34e98]: number of days of stored history
+              - text: in the metric and the
+              - strong [ref=f34e99]: last time your data was refreshed
+              - text: .
+              - strong [ref=f34e100]: "Note:"
+              - text: Refresh information doesn’t display for data warehouse, semantic layer, or dbt Semantic Layer metrics. For those metric types, data is updated in PowerMetrics to align with the source data automatically via a webhook, or by using a cache expiry strategy, or manually on an as-needed basis.
+              - img "Overview page banner showing metric name, service, stored history, and last refresh time" [ref=f34e101]
+            - paragraph [ref=f34e102]:
+              - strong [ref=f34e103]: If the metric has been
+              - link [ref=f34e104] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726271747095-certifying-metrics
+                - strong [ref=f34e105]: certified
+              - text: ", a"
+              - img "Blue check mark indicating a certified metric" [ref=f34e106]
+              - text: blue check mark will display beside its name. If there are issues with the metric, you’ll see an error overlay on top of the service icon.
+            - paragraph [ref=f34e107]:
+              - strong [ref=f34e108]: "Clicking the 3-dot menu in the top-right corner gives you access to these actions:"
+              - text: Edit, Share, Duplicate, Open in Explorer, Add to (or Remove from) Starred, Add to dashboard, Tags, Goals, About, Reset all views, and Delete (as described below).
+              - strong [ref=f34e109]: "Note:"
+              - text: Many of these options are also available as quick-access buttons beside the 3-dot menu.
+            - list [ref=f34e110]:
+              - listitem [ref=f34e111]:
+                - strong [ref=f34e112]: "Editing the metric:"
+                - text: Click "Edit" to make integral changes to a metric.
+                - link "Learn more about editing metrics." [ref=f34e113] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726244977047-editing-metrics
+              - listitem [ref=f34e114]:
+                - strong [ref=f34e115]: "Sharing the metric:"
+                - text: You can share metrics with users or groups, granting view or edit access. Recipients will see the original, default version of the metric overview. Your personalized changes will not be visible to them.
+                - link "Learn more about sharing metrics." [ref=f34e116] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726246265623-sharing-metrics
+              - listitem [ref=f34e117]:
+                - strong [ref=f34e118]: "Duplicating the metric:"
+                - text: When you duplicate a metric, you create a new metric with the same settings and configuration as the original metric.
+                - strong [ref=f34e119]: "Note:"
+                - text: Certification, associated goals, and historical data for the original metric are not copied over.
+              - listitem [ref=f34e120]:
+                - strong [ref=f34e121]: "Open in Explorer:"
+                - text: If you notice something interesting and want to dig a bit deeper, click here to open the main metric view (the one that displays in the overview under the micro-views) in Explorer. If you've personalized the view, the version in Explorer will include those settings. Otherwise, the default version of the view will display.
+                - link "Learn more about exploring." [ref=f34e122] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726226712599-analyzing-your-metrics-in-explorer
+              - listitem [ref=f34e123]:
+                - strong [ref=f34e124]: "Adding the metric to your starred list:"
+                - text: To get quick access to the metrics you refer to most often, you can add them to your "Starred" list.
+                - link "Learn more about creating a list of favourite metrics." [ref=f34e125] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726227793559-managing-your-metrics#star
+              - listitem [ref=f34e126]:
+                - strong [ref=f34e127]: "Adding the metric to a dashboard:"
+                - text: Either add the metric to a new or an existing dashboard. The metric will display on the dashboard using the most suitable chart type based on its data and available segmentation and will retain all personalized customizations you made to it.
+                - link "Learn more about displaying metrics on a dashboard." [ref=f34e128] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726228465815-creating-metric-dashboards
+              - listitem [ref=f34e129]:
+                - strong [ref=f34e130]: "Adding tags to the metric:"
+                - text: Applying tags to metrics is a great way to categorize them for specific audiences or around related themes.
+                - link "Learn how to add and remove metric tags." [ref=f34e131] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726187434263-powermetrics-introduction-to-asset-tags
+              - listitem [ref=f34e132]:
+                - strong [ref=f34e133]: "Goals:"
+                - text: This button hides and displays the "Goals" tab, where you view, edit, or delete existing goals and add new goals.
+              - listitem [ref=f34e134]:
+                - strong [ref=f34e135]: "About:"
+                - text: This button hides and displays the "About" tab, where you can access lots of useful information about the metric.
+              - listitem [ref=f34e136]:
+                - strong [ref=f34e137]: "Resetting the metric view:"
+                - text: Click
+                - strong [ref=f34e138]: Reset all views
+                - text: if you’ve made changes to the metric views but want to return to the original, default version you started with. Resetting is a quick, risk-free way to start over - your metric’s underlying data will not be affected.
+                - strong [ref=f34e139]: "Note:"
+                - text: This action resets
+                - emphasis [ref=f34e140]: all
+                - text: of the views in the overview. You can also reset individual views.
+              - listitem [ref=f34e141]:
+                - strong [ref=f34e142]: "Deleting the metric:"
+                - text: Deleting a metric removes it (and its goals, if applicable) from the account.
+            - heading "Date range, filtering, and aggregation" [level=3] [ref=f34e143]
+            - paragraph [ref=f34e144]:
+              - text: Below the top banner is the area where you
+              - strong [ref=f34e145]: view, and optionally change
+              - text: ", the"
+              - strong [ref=f34e146]: date range
+              - text: ","
+              - strong [ref=f34e147]: filtering
+              - text: ", and"
+              - strong [ref=f34e148]: aggregation type
+              - text: that’s being applied to all of the metric views on the page.
+            - paragraph [ref=f34e149]:
+              - img "Date range, filtering, and aggregation controls on the metric overview page" [ref=f34e150]
+            - paragraph [ref=f34e151]:
+              - strong [ref=f34e152]: "Note:"
+              - text: The ability to view and modify aggregation depends on the metric type and configuration settings. See the "Aggregation" section below for more information.
+            - heading "Date range" [level=4] [ref=f34e153]
+            - paragraph [ref=f34e154]:
+              - text: Choose the date range you want to display for all of the metric views on the page. Select from
+              - strong [ref=f34e155]: pre-set options
+              - text: ", for example, \"Auto\", \"Maximum date range\", \"Today\", and \"Last 7 days\", or click"
+              - strong [ref=f34e156]: Custom
+              - text: to apply a
+              - strong [ref=f34e157]: unique date range
+              - text: .
+            - paragraph [ref=f34e158]: When using the "Auto" setting (default), PowerMetrics will use the date range that it considers the most appropriate based on the time ranges available in the source data.
+            - paragraph [ref=f34e159]:
+              - text: The default first day of the week is Monday, however,
+              - link "this setting can be modified by your Account Administrator" [ref=f34e160] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726177661847-powermetrics-modifying-the-first-day-of-the-week
+              - text: if needed.
+            - heading "Filtering" [level=4] [ref=f34e161]
+            - paragraph [ref=f34e162]: You can filter your data by selecting the members to include or exclude for each dimension. For example, if the dimension is "Channel", you might choose to filter on "Direct", "Email", and "Organic Search" to see data for those specific channels.
+            - paragraph [ref=f34e163]:
+              - text: You can apply filters
+              - strong [ref=f34e164]: by member
+              - text: or
+              - strong [ref=f34e165]: by condition
+              - text: . By default, the first time you apply filters to a metric, you’ll see the UI for member filtering. To filter by condition, click the “Condition filters” link, as shown below.
+              - strong [ref=f34e166]: "Note:"
+              - text: You can apply up to 10 filter conditions/dimension.
+              - strong [ref=f34e167]: "Tip:"
+              - text: If your metric includes a lot of members, use the
+              - strong [ref=f34e168]: Search
+              - text: feature to quickly find them.
+            - paragraph [ref=f34e169]:
+              - img "Filter panel showing member filtering and the Condition filters link" [ref=f34e170]
+            - paragraph [ref=f34e171]:
+              - strong [ref=f34e172]: "Note:"
+              - text: For best results, use fewer than 20 members. If your metric includes 20 members, all members above the first 20 will be grouped together under “Other” in your visualization.
+            - paragraph [ref=f34e173]:
+              - strong [ref=f34e174]: "After applying filters:"
+            - list [ref=f34e175]:
+              - listitem [ref=f34e176]:
+                - strong [ref=f34e177]: To see a tooltip that lists the applied filters
+                - text: ", hover over each filter."
+              - listitem [ref=f34e178]:
+                - strong [ref=f34e179]: To view and modify filters
+                - text: ", click the filter tile."
+              - listitem [ref=f34e180]:
+                - strong [ref=f34e181]: If your browser window is too narrow to display all of the filters
+                - text: ", click the"
+                - strong [ref=f34e182]: Filters applied
+                - text: button (as shown below) to open the “Applied filters” dialog.
+                - img "Filters applied button shown when the filter list is collapsed" [ref=f34e183]
+                - text: In the
+                - strong [ref=f34e184]: Applied filters
+                - text: dialog, click the drop-down to display
+                - strong [ref=f34e185]: all
+                - text: filters or only the ones that are
+                - strong [ref=f34e186]: active
+                - text: . You can also
+                - strong [ref=f34e187]: clear all filters
+                - text: . (See below.)
+                - img "Applied filters dialog with options to show all filters, active filters, or clear all filters" [ref=f34e188]
+              - listitem [ref=f34e189]:
+                - strong [ref=f34e190]: To see all of the applied filters
+                - text: ", and, optionally,"
+                - strong [ref=f34e191]: remove them
+                - text: ", click the “Includes: x filters” link, as shown below."
+                - img "Includes x filters link and the filter removal panel" [ref=f34e192]
+            - heading "Aggregation" [level=4] [ref=f34e193]
+            - paragraph [ref=f34e194]: Choose how you want the metric's value to be aggregated. Aggregating data is a process wherein many values are returned as a single value, for example, as a sum, an average, a count of rows, a max, and a min. Available aggregation methods depend on the type of data in your metric.
+            - paragraph [ref=f34e195]:
+              - strong [ref=f34e196]: "Note:"
+              - text: The ability to modify aggregation depends on the metric type and configuration settings. You can allow the default aggregation to be overridden when creating or editing
+              - strong [ref=f34e197]: custom metrics
+              - text: . For
+              - strong [ref=f34e198]: calculated metrics
+              - text: ", the aggregation type and modification option doesn’t display at all. This is because the values shown for calculated metrics are the result of a formula, and not the result of an aggregated set of values. Modifying the default aggregation for"
+              - strong [ref=f34e199]: instant metrics
+              - text: is not recommended, as they’re created for you using the most appropriate settings.
+            - heading "Metric goals and metric details" [level=3] [ref=f34e200]
+            - paragraph [ref=f34e201]:
+              - text: The
+              - strong [ref=f34e202]: Goals
+              - text: and
+              - strong [ref=f34e203]: About
+              - text: panels display on the right side of the metric overview page. You can
+              - strong [ref=f34e204]: choose to hide or display these panels
+              - text: ", by clicking the"
+              - strong [ref=f34e205]: Goals
+              - img "Goals button" [ref=f34e206]
+              - text: and
+              - strong [ref=f34e207]: About
+              - img "About button" [ref=f34e208]
+              - text: quick access buttons on the top right of the page. When displayed, you can also use the quick access buttons to switch between the open panels.
+              - img "Goals and About tab buttons" [ref=f34e209]
+            - heading "Metric goals" [level=4] [ref=f34e210]
+            - paragraph [ref=f34e211]:
+              - text: Select the
+              - strong [ref=f34e212]: Goals
+              - text: tab to
+              - strong [ref=f34e213]: view
+              - text: ","
+              - strong [ref=f34e214]: edit
+              - text: ", or"
+              - strong [ref=f34e215]: delete
+              - strong [ref=f34e216]: existing goals
+              - text: and to
+              - strong [ref=f34e217]: add new goals
+              - text: .
+            - list [ref=f34e218]:
+              - listitem [ref=f34e219]:
+                - strong [ref=f34e220]: To view a goal in Explorer
+                - text: ", click"
+                - strong [ref=f34e221]: View goal in Explorer
+                - text: . This opens the metric with the goal visualized in Explorer.
+                - link "Learn more about exploring metrics." [ref=f34e222] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726226712599-analyzing-your-metrics-in-explorer
+                - img "View goal in Explorer option in the Goals panel" [ref=f34e223]
+            - paragraph [ref=f34e224]:
+              - strong [ref=f34e225]: "Note:"
+              - text: You can also view goals in metric visualizations in the overview page (depending on their chart type and style).
+              - link "See ”Other interactive options”." [ref=f34e226] [cursor=pointer]:
+                - /url: "#other_options"
+            - list [ref=f34e227]:
+              - listitem [ref=f34e228]:
+                - strong [ref=f34e229]: To edit or delete an existing goal
+                - text: ", select the goal’s"
+                - strong [ref=f34e230]: 3-dot menu
+                - text: ", and click either"
+                - strong [ref=f34e231]: Edit
+                - text: or
+                - strong [ref=f34e232]: Delete
+                - text: .
+                - img "3-dot menu showing Edit and Delete options for a goal" [ref=f34e233]
+            - list [ref=f34e234]:
+              - listitem [ref=f34e235]:
+                - strong [ref=f34e236]: To add new goal(s)
+                - text: ", if you haven’t added any goals yet for the metric, click"
+                - img "Add new goal button" [ref=f34e237]
+                - text: . If you’ve already added at least one goal for the metric, beside
+                - strong [ref=f34e238]: Goals & Notifications
+                - text: ", click the"
+                - img "Add more goals button" [ref=f34e239]
+                - text: button.
+                - link "Learn more about adding metric goals." [ref=f34e240] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726232850071-adding-goals-to-metrics
+            - heading "Metric details" [level=4] [ref=f34e241]
+            - paragraph [ref=f34e242]:
+              - text: To access metric details, click the
+              - strong [ref=f34e243]: About
+              - text: tab. Following is a list of
+              - strong [ref=f34e244]: all
+              - text: the information you may find, however,
+              - strong [ref=f34e245]: what you see varies based on the metric type
+              - text: ":"
+            - list [ref=f34e246]:
+              - listitem [ref=f34e247]:
+                - text: A
+                - strong [ref=f34e248]: description
+                - text: for the metric (if you entered one when you created or edited it).
+              - listitem [ref=f34e249]:
+                - text: The
+                - strong [ref=f34e250]: type
+                - text: of metric (instant, instant (calculated), custom, direct to warehouse, semantic layer, dbt™ Semantic Layer, or calculated).
+              - listitem [ref=f34e251]:
+                - text: For
+                - strong [ref=f34e252]: instant metrics
+                - text: ", you can see a"
+                - strong [ref=f34e253]: definition
+                - text: and access a
+                - strong [ref=f34e254]: link to MetricHQ
+                - text: (if applicable). You can also see the
+                - strong [ref=f34e255]: service
+                - text: the metric’s connected to, for example, Google Analytics. For
+                - strong [ref=f34e256]: instant (calculated) metrics
+                - text: ", you see similar options, including a link to"
+                - strong [ref=f34e257]: view the calculation
+                - text: ", where you can click a metric in the calculation to open its overview page."
+              - listitem [ref=f34e258]:
+                - text: For
+                - strong [ref=f34e259]: calculated metrics
+                - text: ", you can click"
+                - strong [ref=f34e260]: View calculation
+                - text: and select each metric to go to its overview page.
+              - listitem [ref=f34e261]:
+                - text: For
+                - strong [ref=f34e262]: dbt Semantic Layer metrics
+                - text: ", the aggregation method displays (simple, ratio, cumulative, or derived)."
+              - listitem [ref=f34e263]:
+                - text: The metric
+                - strong [ref=f34e264]: owner
+                - text: and when it was
+                - strong [ref=f34e265]: last edited
+                - text: .
+              - listitem [ref=f34e266]:
+                - text: The
+                - strong [ref=f34e267]: tags
+                - text: that are applied to the metric.
+                - strong [ref=f34e268]: "Note:"
+                - text: You can also edit (add and remove) tags here.
+                - link "Learn more about tags." [ref=f34e269] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726187434263-powermetrics-introduction-to-asset-tags
+              - listitem [ref=f34e270]:
+                - text: The amount of
+                - strong [ref=f34e271]: data history
+                - text: that’s being
+                - strong [ref=f34e272]: stored
+                - text: .
+              - listitem [ref=f34e273]:
+                - text: The
+                - strong [ref=f34e274]: default value
+                - text: (aggregation type) that was selected when creating the metric.
+              - listitem [ref=f34e275]:
+                - text: The
+                - strong [ref=f34e276]: date or time dimension
+                - text: (name of the date or time column in the associated data source or data feed) and
+                - strong [ref=f34e277]: available segments
+                - text: . These items display as
+                - strong [ref=f34e279]: pink
+                - text: text, indicating they are settings that were selected when the metric was created.
+              - listitem [ref=f34e280]:
+                - text: The
+                - strong [ref=f34e281]: semantic layer metric name
+                - text: . The name of the metric in the dbt Semantic Layer project.
+              - listitem [ref=f34e282]:
+                - text: The name of the
+                - strong [ref=f34e283]: service
+                - text: the metrics were imported from (dbt Semantic Layer metrics) or the warehouse service (direct to warehouse) or semantic layer service (semantic layer metrics).
+              - listitem [ref=f34e284]:
+                - strong [ref=f34e285]: The metric's certification status.
+                - text: If a metric is certified the name of the person who certified it and the date and time of certification displays. If a metric has had its certification removed, the name of the person who removed the certification and the date and time it was removed displays. If a metric is not, and has never been, certified, “None” displays.
+                - link "Learn more about certifying metrics." [ref=f34e286] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726271747095-certifying-metrics
+              - listitem [ref=f34e287]:
+                - text: A link to the associated
+                - strong [ref=f34e288]: data feed
+                - text: (for metrics based on data feeds). Note that data feeds for instant metrics are created and managed by PowerMetrics. For
+                - strong [ref=f34e289]: custom metrics
+                - text: ", you can see (and open) the"
+                - strong [ref=f34e290]: data source
+                - text: or
+                - strong [ref=f34e291]: data feed
+                - text: the metric’s connected to. (If you see a "No access" message, either your
+                - link "role" [ref=f34e292] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726190491159-powermetrics-roles-and-permissions
+                - text: doesn't allow access or the data source or data feed hasn't been shared with you.)
+            - heading "How do I interact with and personalize metrics in the overview?" [level=2] [ref=f34e293]
+            - paragraph [ref=f34e294]: A variety of metric views display in the overview, helping you visualize your data effectively from multiple perspectives.
+            - paragraph [ref=f34e295]: Each view is customizable. Your personalizations are retained so you’ll see them the next time you sign in to PowerMetrics. You can also quickly reset all or individual metric views to their original settings as many times as you like, an essential requirement when investigating and learning from your data.
+            - paragraph [ref=f34e296]:
+              - strong [ref=f34e297]: "Tip:"
+              - text: If you see the
+              - strong [ref=f34e298]: No data for the selected date range
+              - text: message when you open a metric, it may be because the default date range of
+              - strong [ref=f34e299]: Last 30 days
+              - text: is not applicable to your data. Try changing the date range, for example, to
+              - strong [ref=f34e300]: Auto
+              - text: or
+              - strong [ref=f34e301]: Maximum date range
+              - text: instead.
+            - 'heading "Metric views: Summary charts and textual descriptions" [level=3] [ref=f34e302]'
+            - paragraph [ref=f34e303]:
+              - strong [ref=f34e304]: Across the top of the metric view area
+              - text: ", you’ll see"
+              - strong [ref=f34e305]: four “micro” metric views
+              - text: . (See below.) These can be used to display the metric’s current data and compare it to data from other periods and to display textual information about the metric.
+            - paragraph [ref=f34e306]:
+              - img "Four micro metric views displayed across the top of the metric view area" [ref=f34e307]
+            - paragraph [ref=f34e308]:
+              - text: Clicking the
+              - strong [ref=f34e309]: 3-dot menu
+              - text: "for these metric views gives you access to the following options:"
+            - list [ref=f34e310]:
+              - listitem [ref=f34e311]:
+                - strong [ref=f34e312]: Expand (and collapse)
+                - text: the metric view, by clicking the
+                - strong [ref=f34e313]: 3-dot menu
+                - text: on the view and selecting the appropriate choice. When a metric view is in expand mode, you can cycle through all of the views in the overview page.
+              - listitem [ref=f34e314]:
+                - strong [ref=f34e315]: "View queries:"
+                - text: "View dbt and SQL queries for dbt Semantic Layer metric visualizations and SQL queries for direct to warehouse and semantic layer metric visualizations. You can access detailed instructions by service in these sections of the Knowledge Base:"
+                - link "Creating data warehouse metrics" [ref=f34e316] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/sections/37640363106455-Creating-Data-Warehouse-Metrics
+                - text: and
+                - link "Creating semantic layer metrics." [ref=f34e317] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/sections/37640326720791-Creating-Semantic-Layer-Metrics
+                - strong [ref=f34e318]: "Note:"
+                - text: This option is not applicable to the textual micro view.
+              - listitem [ref=f34e319]:
+                - strong [ref=f34e320]: "Personalize view:"
+                - text: You can display your metric information as a
+                - strong [ref=f34e321]: Summary
+                - strong [ref=f34e322]: chart
+                - text: or as
+                - strong [ref=f34e323]: text that tells you about the metric
+                - text: .
+                - list [ref=f34e324]:
+                  - listitem [ref=f34e325]:
+                    - text: If you choose
+                    - img "Summary icon" [ref=f34e326]
+                    - strong [ref=f34e327]: Summary
+                    - text: the metric view will display data as a single aggregated value for a specific time period, as selected by you from the drop-down list. (See below.) This is a handy way to see your current data at a glance and compare it to data from other periods.
+                    - strong [ref=f34e328]: "Note:"
+                    - text: For more information, hover over the value to see a detailed tool tip. If an asterisk (*) displays after the value, this indicates the comparison period is incomplete.
+                    - img "Summary view showing metric data as a single aggregated value with period comparison options" [ref=f34e329]
+                    - text: When you select
+                    - strong [ref=f34e330]: Current period
+                    - text: ", the aggregated value of all the metric data in the current time range (based on when it was last refreshed) will display. When you select"
+                    - strong [ref=f34e331]: Previous period
+                    - text: or
+                    - strong [ref=f34e332]: Same period (last year)
+                    - text: ", you can choose whether to see the comparison as a"
+                    - strong [ref=f34e333]: percentage change
+                    - text: or as a
+                    - strong [ref=f34e334]: value change
+                    - text: ", or to"
+                    - strong [ref=f34e335]: show both values for a more informative comparison
+                    - text: . When you select
+                    - strong [ref=f34e336]: Custom period (offset)
+                    - text: ", you can choose either"
+                    - strong [ref=f34e337]: Ahead
+                    - text: or
+                    - strong [ref=f34e338]: Back
+                    - text: and then enter the
+                    - strong [ref=f34e339]: number of days, weeks, months, or years
+                    - text: for the comparison.Under
+                    - strong [ref=f34e340]: Display
+                    - text: ", optionally, turn off the"
+                    - strong [ref=f34e341]: Abbreviate long values
+                    - text: setting. (It’s turned on by default.) When activated, this setting shortens the display for long values in the visualization.
+                  - listitem [ref=f34e342]:
+                    - text: If you choose
+                    - img "Details icon" [ref=f34e343]
+                    - strong [ref=f34e344]: Details
+                    - text: the metric view will display textual information about the metric.
+                    - img "Details view showing textual information about the metric" [ref=f34e345]
+                    - text: Under
+                    - strong [ref=f34e346]: "Type:"
+                    - list [ref=f34e347]:
+                      - listitem [ref=f34e348]:
+                        - text: For instant metrics, if you choose
+                        - strong [ref=f34e349]: MetricHQ definition
+                        - text: ", and there’s an applicable definition in"
+                        - link "MetricHQ" [ref=f34e350] [cursor=pointer]:
+                          - /url: https://www.metrichq.org/
+                        - text: for the metric, it will display along with a link you can click to go to its page in MetricHQ.
+                      - listitem [ref=f34e351]:
+                        - text: If you choose
+                        - strong [ref=f34e352]: About
+                        - text: ", the view will display useful information for the metric, including, its owner, when it was last edited, the type (instant, instant (calculated), custom, direct to warehouse, semantic layer, dbt Semantic Layer, or calculated), and the associated service (for instant metrics only)."
+                      - listitem [ref=f34e353]:
+                        - text: If you choose
+                        - strong [ref=f34e354]: Description
+                        - text: ", you'll see a description (if you entered one when creating or editing the metric). For dbt Semantic Layer metrics, you'll see the definition from the dbt Semantic Layer project (or a customized description if you chose to override the default one when configuring the metric)."
+                  - listitem [ref=f34e355]:
+                    - strong [ref=f34e356]: "Reset view:"
+                    - text: This option removes your personalizations and returns an individual metric view to its original default settings.
+            - 'heading "Metric views: Other visualization types" [level=3] [ref=f34e357]'
+            - paragraph [ref=f34e358]:
+              - strong [ref=f34e359]: Under the micro metric views
+              - text: ", you’ll see a single,"
+              - strong [ref=f34e360]: full-window size metric view
+              - text: followed by
+              - strong [ref=f34e361]: two half-window size metric views
+              - text: . These views provide a larger set of visualization options than the micro views (in fact, you can personalize them to use any chart and style that’s applicable to your data). Typically, the default visualizations in this section include a line/area chart, a table, and a bar/column chart, however, the default chart types may vary depending on the metric’s data.
+            - heading "Changing segment by and over properties using dynamic metric view titles" [level=4] [ref=f34e362]
+            - paragraph [ref=f34e363]:
+              - text: For these three metric views (if the visualization includes segments), PowerMetrics applies a
+              - strong [ref=f34e364]: dynamic title
+              - text: that
+              - strong [ref=f34e365]: refers to the metric visualization’s segmentation and over properties
+              - text: . For example, a metric named “New Users” that includes the segments “Channel” and “Medium” and a date column, will display as “New Users by Channel over Time
+              - emphasis [ref=f34e366]: (selected time period)
+              - text: ”.
+              - strong [ref=f34e367]: Clicking on an underlined title component
+              - text: (for example, “Channel” or “Time”, as shown below) enables you to
+              - strong [ref=f34e368]: change the segmentation and the time periodicity in the title and the visualization
+              - text: .
+            - paragraph [ref=f34e369]:
+              - img "Dynamic metric title with a clickable Segment by component highlighted" [ref=f34e370]
+            - paragraph [ref=f34e371]:
+              - img "Dynamic metric title with a clickable Over (time period) component highlighted" [ref=f34e372]
+            - paragraph [ref=f34e373]: By default, the X-Axis displays time but bar charts enable you to select either a time dimension to group by or a non-time-related dimension. (See below.)
+            - paragraph [ref=f34e374]:
+              - img "Over options for bar charts showing time dimension and non-time dimension choices" [ref=f34e375]
+            - paragraph [ref=f34e376]:
+              - strong [ref=f34e377]: "Note:"
+              - text: You can also change the "segment by" and "over" properties when personalizing a metric view, as described in the next section "Other interactive options".
+            - heading "Other interactive options" [level=4] [ref=f34e378]
+            - paragraph [ref=f34e379]:
+              - text: Click the
+              - strong [ref=f34e380]: 3-dot menu
+              - text: in the upper-right corner of the metric view to
+              - strong [ref=f34e381]: access the following actions
+              - text: ": Expand, Open in Explorer, Download as CSV, Add to dashboard, Sort, Personalize view, and Reset view."
+              - strong [ref=f34e382]: "Note:"
+              - text: You can also get quick access to several of these options by hovering near the
+              - strong [ref=f34e383]: 3-dot menu
+              - text: . (See below.)
+            - paragraph [ref=f34e384]:
+              - img "3-dot menu with hover quick-access options for a main metric visualization" [ref=f34e385]
+            - list [ref=f34e386]:
+              - listitem [ref=f34e387]:
+                - strong [ref=f34e388]: "Expand (and collapse):"
+                - text: Expand and collapse the metric view. When a metric view is in Expand mode, you can cycle through all of the views in the overview page.
+              - listitem [ref=f34e389]:
+                - strong [ref=f34e390]: "Open in Explorer:"
+                - text: If you notice something interesting and want to dig a bit deeper, open the metric view in Explorer. You’ll be free to experiment with your data, trying out different scenarios, including adding multiple metrics into one visualization. Exploring your metrics is a free-form way to analyze your data and get answers to your questions.
+                - link "Learn more about exploring." [ref=f34e391] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726226712599-analyzing-your-metrics-in-explorer
+              - listitem [ref=f34e392]:
+                - strong [ref=f34e393]: "Add to dashboard:"
+                - text: Add the metric to a new or an existing dashboard.
+                - link "Learn more about displaying metrics on a dashboard." [ref=f34e394] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726228465815-creating-metric-dashboards
+              - listitem [ref=f34e395]:
+                - strong [ref=f34e396]: "Sort:"
+                - text: Sorting options depend on the selected chart type and style. For example, with stacked area charts, you can sort the x-axis and legend items, with pie charts, you can sort the order of slices in the pie, and with pivot tables, you can sort the order of rows and columns. For list and pivot tables, you can also apply sorting dynamically by clicking on the visualization’s column headers (without the need to access the 3-dot menu).If you apply sorting and want to return to the original data order, click the
+                - strong [ref=f34e397]: Reset view
+                - text: button (accessed by clicking the
+                - strong [ref=f34e398]: 3-dot menu
+                - text: for a metric view).
+                - strong [ref=f34e399]: "Note:"
+                - text: The sorting feature is not applicable to summary, scatter, and bubble charts, or tree maps. Ranked tables have their own built-in sorting.
+              - listitem [ref=f34e400]:
+                - strong [ref=f34e401]: "Download as CSV:"
+                - text: Download the computed data that’s shown in the metric visualization.
+                - link "Learn more about downloading metric visualizations as CSV files." [ref=f34e402] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726234211095-downloading-metric-visualizations-as-csv-files
+              - listitem [ref=f34e403]:
+                - strong [ref=f34e404]: "View queries:"
+                - text: View dbt and SQL queries for dbt Semantic Layer metric visualizations and SQL queries for direct to warehouse and semantic layer metric visualizations.
+              - listitem [ref=f34e405]:
+                - strong [ref=f34e406]: "Personalize view:"
+                - text: As you make personalized changes, the metric view dynamically updates with each choice you make. If, after applying personalized settings, you want to return to the visualization's original, default settings, click
+                - strong [ref=f34e407]: Reset view
+                - text: .
+            - heading "PERSONALIZATION OPTIONS" [level=4] [ref=f34e408]
+            - paragraph [ref=f34e409]:
+              - text: See below for a list of
+              - strong [ref=f34e410]: all
+              - text: available options.
+              - strong [ref=f34e411]: "Note:"
+              - text: Option availability depends on the metric's data and your chosen chart type/style.
+            - paragraph [ref=f34e412]:
+              - strong [ref=f34e413]: "Note about total values:"
+              - text: Total values always reflect the metric
+              - emphasis [ref=f34e414]: without
+              - text: segmentation. Depending on the aggregation and metric type, the total may not equal the sum of all visible chart values. For example, in calculated metrics, the total is the formula result applied to unsegmented operands. Total values display as orange in charts.
+            - paragraph [ref=f34e415]:
+              - strong [ref=f34e416]: "Quick reference for all personalization options:"
+            - list [ref=f34e417]:
+              - listitem [ref=f34e418]:
+                - link [ref=f34e419] [cursor=pointer]:
+                  - /url: "#chart_type"
+                  - strong [ref=f34e420]: "Chart type and style:"
+                - text: Bar, line, pie, table, and more
+              - listitem [ref=f34e421]:
+                - link [ref=f34e422] [cursor=pointer]:
+                  - /url: "#segment"
+                  - strong [ref=f34e423]: "Segment by:"
+                - text: Break down data by a dimension (region, product, rep, etc.)
+              - listitem [ref=f34e424]:
+                - link [ref=f34e425] [cursor=pointer]:
+                  - /url: "#over"
+                  - strong [ref=f34e426]: "Over:"
+                - text: Time periodicity grouping (daily, weekly, monthly, quarterly)
+              - listitem [ref=f34e427]:
+                - link [ref=f34e428] [cursor=pointer]:
+                  - /url: "#comparison"
+                  - strong [ref=f34e429]: "Comparison:"
+                - text: Compare to a previous or custom period
+              - listitem [ref=f34e430]:
+                - link [ref=f34e431] [cursor=pointer]:
+                  - /url: "#analyses"
+                  - strong [ref=f34e432]: "Analyses:"
+                - text: Linear trend, moving average, normal range, or forecast
+              - listitem [ref=f34e433]:
+                - link [ref=f34e434] [cursor=pointer]:
+                  - /url: "#goals"
+                  - strong [ref=f34e435]: "Goals:"
+                - text: Display goal targets on compatible chart types
+              - listitem [ref=f34e436]:
+                - strong [ref=f34e437]: "Table-specific:"
+                - link "Columns" [ref=f34e438] [cursor=pointer]:
+                  - /url: "#columns"
+                - text: ","
+                - link "rows" [ref=f34e439] [cursor=pointer]:
+                  - /url: "#rows"
+                - text: ","
+                - link "wrap text" [ref=f34e440] [cursor=pointer]:
+                  - /url: "#wrap_text"
+                - text: ","
+                - link "display top/bottom" [ref=f34e441] [cursor=pointer]:
+                  - /url: "#top_bottom_display"
+              - listitem [ref=f34e442]:
+                - strong [ref=f34e443]: "Chart-specific:"
+                - link "Break lines for blank values" [ref=f34e444] [cursor=pointer]:
+                  - /url: "#break_lines"
+                - text: ","
+                - link "show values as labels" [ref=f34e445] [cursor=pointer]:
+                  - /url: "#show_values_as_labels"
+                - text: ","
+                - link "abbreviate long values" [ref=f34e446] [cursor=pointer]:
+                  - /url: "#abbreviate_long_values"
+                - text: ","
+                - link "legend position" [ref=f34e447] [cursor=pointer]:
+                  - /url: "#legend_position"
+                - text: ","
+                - link "axis settings" [ref=f34e448] [cursor=pointer]:
+                  - /url: "#axis_settings"
+                - text: ","
+                - link "range" [ref=f34e449] [cursor=pointer]:
+                  - /url: "#range"
+                - text: ","
+                - link "series settings" [ref=f34e450] [cursor=pointer]:
+                  - /url: "#series_settings"
+                - text: ","
+                - link "cumulative view" [ref=f34e451] [cursor=pointer]:
+                  - /url: "#cumulative_view"
+                - text: ","
+                - link "colour and bubbles" [ref=f34e452] [cursor=pointer]:
+                  - /url: "#colour_bubbles"
+                - text: ","
+                - link "breakdown by" [ref=f34e453] [cursor=pointer]:
+                  - /url: "#breakdown_by"
+            - heading "Chart Type and Style" [level=4] [ref=f34e454]
+            - paragraph [ref=f34e456]:
+              - text: Choose a chart type and style combination to display your data meaningfully. For example, to create a bar chart with stacked columns, select
+              - strong [ref=f34e457]: Bar / Column
+              - text: type +
+              - strong [ref=f34e458]: Stacked Column
+              - text: style.
+            - paragraph [ref=f34e459]:
+              - strong [ref=f34e460]: "Available chart types:"
+              - text: bar and column, line and area, pie and donut, tree map, radar plot, waterfall, heat map, summary, and table.
+              - strong [ref=f34e461]: Available styles
+              - text: depend on the chosen chart type.
+              - link "Learn more about chart types and styles." [ref=f34e462] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726181870231-introduction-to-metric-visualizations
+            - paragraph [ref=f34e463]:
+              - img "Chart type and style panel with Bar/Column type and Stacked Column style selected" [ref=f34e464]
+            - heading "Wrap text" [level=4] [ref=f34e465]
+            - paragraph [ref=f34e467]:
+              - text: For
+              - strong [ref=f34e468]: all table styles
+              - text: ": wrap text in columns. For"
+              - strong [ref=f34e469]: pivot tables
+              - text: ": define the number of wrapped rows (2–5) to maintain consistent"
+              - strong [ref=f34e470]: row height
+              - text: .
+            - paragraph [ref=f34e471]:
+              - img "Wrap text toggle and row height setting in the table personalization panel" [ref=f34e472]
+            - heading "Display Top or Bottom" [level=4] [ref=f34e473]
+            - paragraph [ref=f34e475]:
+              - text: For
+              - strong [ref=f34e476]: ranked tables
+              - text: ": choose whether to display the"
+              - strong [ref=f34e477]: Top
+              - text: or
+              - strong [ref=f34e478]: Bottom
+              - text: rows and the
+              - strong [ref=f34e479]: Number of rows
+              - text: to show.
+            - paragraph [ref=f34e480]:
+              - img "Display Top or Bottom setting with number of rows option for ranked tables" [ref=f34e481]
+            - heading "Columns" [level=4] [ref=f34e482]
+            - paragraph [ref=f34e484]:
+              - text: For
+              - strong [ref=f34e485]: list
+              - text: and
+              - strong [ref=f34e486]: pivot tables
+              - text: ": select columns to display. If the metric view is segmented by date/time, also select a"
+              - strong [ref=f34e487]: time periodicity
+              - text: (for example, weekly, monthly, quarterly).
+            - paragraph [ref=f34e488]:
+              - text: Enable
+              - strong [ref=f34e489]: Show total(s)
+              - text: to display summary values. (See the
+              - link "totals note above" [ref=f34e490] [cursor=pointer]:
+                - /url: "#totals-note"
+              - text: for how totals are calculated.)
+              - strong [ref=f34e491]: Pivot tables
+              - text: also show sub-totals when multiple dimensions (columns) are selected. The option is disabled if no dimensions (columns) are selected.
+            - paragraph [ref=f34e492]:
+              - strong [ref=f34e493]: Hide blank periods
+              - text: is available when the metric view is segmented by date/time.
+            - paragraph [ref=f34e494]:
+              - img "Columns panel showing monthly date range with Show total and Hide blank periods options" [ref=f34e495]
+            - paragraph [ref=f34e496]:
+              - text: For
+              - strong [ref=f34e497]: list tables
+              - text: ": drag and drop column names to reorder them. Click \"x\" to remove a column."
+            - paragraph [ref=f34e498]:
+              - img "List of columns with drag handles for reordering and x buttons for removal" [ref=f34e499]
+            - heading "Rows" [level=4] [ref=f34e500]
+            - paragraph [ref=f34e502]:
+              - text: For
+              - strong [ref=f34e503]: pivot tables
+              - text: ": select row(s) to display. Drag and drop to reorder, or click the \"x\" to remove. If segmented by date/time, select a time periodicity."
+            - paragraph [ref=f34e504]:
+              - text: Enable
+              - strong [ref=f34e505]: Show totals
+              - text: to display summary values and sub-totals (when multiple dimensions (rows) are selected). (See the
+              - link "totals note above" [ref=f34e506] [cursor=pointer]:
+                - /url: "#totals-note"
+              - text: for how totals are calculated.)
+            - paragraph [ref=f34e507]:
+              - strong [ref=f34e508]: Hide blank periods
+              - text: is available when the view is segmented by date/time.
+            - paragraph [ref=f34e509]:
+              - img "Rows panel showing monthly date range with Show totals and Hide blank periods options" [ref=f34e510]
+            - heading "Break lines for blank values" [level=4] [ref=f34e511]
+            - paragraph [ref=f34e513]:
+              - text: For
+              - strong [ref=f34e514]: line charts
+              - text: and
+              - strong [ref=f34e515]: "radar plots:"
+              - text: choose whether to break chart lines at data gaps (default) or draw a continuous line between known data points.
+            - paragraph [ref=f34e516]:
+              - img "Break lines for blank values toggle in the chart personalization panel" [ref=f34e517]
+            - heading "Show values as labels" [level=4] [ref=f34e518]
+            - paragraph [ref=f34e520]: Display values as labels directly in your chart. Not available for tables or summary charts.
+            - paragraph [ref=f34e521]:
+              - img "Show values as labels toggle in the chart personalization panel" [ref=f34e522]
+            - heading "Abbreviate long values" [level=4] [ref=f34e523]
+            - paragraph [ref=f34e525]: When enabled, abbreviates long values in the visualization. For example, “43,213” displays as “43.2K”.
+            - paragraph [ref=f34e526]:
+              - img "Abbreviate long values toggle in the chart personalization panel" [ref=f34e527]
+            - heading "Legend position" [level=4] [ref=f34e528]
+            - paragraph [ref=f34e530]:
+              - text: For
+              - strong [ref=f34e531]: charts with a legend
+              - text: ": position it at the bottom, right, left, or top. Select"
+              - strong [ref=f34e532]: None
+              - text: to remove the legend.
+            - paragraph [ref=f34e533]:
+              - 'img "Legend position options: bottom, right, left, top, and none" [ref=f34e534]'
+            - heading "Colour and Bubbles" [level=4] [ref=f34e535]
+            - paragraph [ref=f34e537]:
+              - text: For
+              - strong [ref=f34e538]: tree maps with a packed bubble style
+              - text: ": under"
+              - strong [ref=f34e539]: Colours
+              - text: ", choose the dimensions to segment by. Under"
+              - strong [ref=f34e540]: Bubbles
+              - text: ", choose how to group the data."
+            - paragraph [ref=f34e541]:
+              - img "Colour and Bubbles panel for tree maps with packed bubble style" [ref=f34e542]
+            - heading "Breakdown by" [level=4] [ref=f34e543]
+            - paragraph [ref=f34e545]:
+              - text: For
+              - strong [ref=f34e546]: tree maps
+              - text: ": choose the dimension(s) by which to break down the data."
+            - paragraph [ref=f34e547]:
+              - img "Breakdown by panel for tree maps" [ref=f34e548]
+            - heading "Segment by" [level=4] [ref=f34e549]
+            - paragraph [ref=f34e551]: Choose the dimension(s) by which to segment the data to see it from different perspectives. For example, segment sales by region, sales rep, or product type.
+            - paragraph [ref=f34e552]:
+              - text: For
+              - strong [ref=f34e553]: donut charts
+              - text: ","
+              - strong [ref=f34e554]: line
+              - text: and
+              - strong [ref=f34e555]: smooth line charts
+              - text: ", and"
+              - strong [ref=f34e556]: bar
+              - text: and
+              - strong [ref=f34e557]: column charts
+              - text: "(excluding “stacked” and “colour by category” styles): enable"
+              - strong [ref=f34e558]: Show total(s)
+              - text: to display summary values. (See the
+              - link "totals note above" [ref=f34e559] [cursor=pointer]:
+                - /url: "#totals-note"
+              - text: for how totals are calculated.)
+            - paragraph [ref=f34e560]:
+              - img "Segment by panel with Show total option enabled" [ref=f34e561]
+            - heading "Over" [level=4] [ref=f34e562]
+            - paragraph [ref=f34e564]:
+              - text: Choose how to group your data by time periodicity. PowerMetrics sets this automatically based on the selected date range, for example, "Last 7 days" > "Auto (Daily)"; "Last 8 weeks" > "Auto (Weekly)". Override the auto-selection by choosing an alternate option from the drop-down. By default, the x axis displays time but
+              - strong [ref=f34e565]: bar charts
+              - text: enable you to select either a time dimension to group by or a non-time-related dimension.
+            - paragraph [ref=f34e566]:
+              - strong [ref=f34e567]: "Note:"
+              - text: "Quarterly periods are: Q1 starts Jan 1, Q2 starts Apr 1, Q3 starts Jul 1, Q4 starts Oct 1."
+            - paragraph [ref=f34e568]:
+              - text: For
+              - strong [ref=f34e569]: bar
+              - text: and
+              - strong [ref=f34e570]: column charts
+              - text: ": enable"
+              - strong [ref=f34e571]: Show total(s)
+              - text: to display summary values. (See the
+              - link "totals note above" [ref=f34e572] [cursor=pointer]:
+                - /url: "#totals-note"
+              - text: for how totals are calculated.)
+            - paragraph [ref=f34e573]:
+              - img "Over panel with time periodicity options and Show total setting" [ref=f34e574]
+            - heading "Series" [level=4] [ref=f34e575]
+            - paragraph [ref=f34e577]:
+              - text: Available for
+              - strong [ref=f34e578]: line/area charts
+              - text: (with a few exceptions, as noted below). Use the
+              - strong [ref=f34e579]: Series
+              - text: dropdown to apply settings to
+              - strong [ref=f34e580]: all members/metrics
+              - text: or to a
+              - strong [ref=f34e581]: specific member/metric
+              - text: .
+            - list [ref=f34e582]:
+              - listitem [ref=f34e583]:
+                - strong [ref=f34e584]: Show points
+                - text: "- show or hide data points in"
+                - strong [ref=f34e585]: line charts
+                - text: .
+                - img "Show points toggle for line charts" [ref=f34e586]
+              - listitem [ref=f34e587]:
+                - strong [ref=f34e588]: Line thickness
+                - text: "- choose thickness. For"
+                - strong [ref=f34e589]: area charts
+                - text: ", also includes a"
+                - strong [ref=f34e590]: None
+                - text: option.
+                - img "Line thickness options for line and area charts" [ref=f34e591]
+              - listitem [ref=f34e592]:
+                - strong [ref=f34e593]: Line style
+                - text: "- solid, dashed, dotted, etc."
+                - img "Line style options including solid, dashed, and dotted" [ref=f34e594]
+              - listitem [ref=f34e595]:
+                - strong [ref=f34e596]: Fill area
+                - text: "- gradient or solid fill for"
+                - strong [ref=f34e597]: area charts
+                - text: . Only available when
+                - strong [ref=f34e598]: All members
+                - text: is selected under
+                - strong [ref=f34e599]: Series
+                - text: .
+                - img "Fill area options showing gradient and solid fill for area charts" [ref=f34e600]
+            - heading "Vertical axis or Horizontal axis" [level=4] [ref=f34e601]
+            - paragraph [ref=f34e603]:
+              - text: Available for
+              - strong [ref=f34e604]: bar/column
+              - text: and
+              - strong [ref=f34e605]: line/area charts
+              - text: (with a few exceptions, as noted below).
+            - paragraph [ref=f34e606]:
+              - strong [ref=f34e607]: Vertical axis settings
+              - text: are available for bar/column charts with a vertical axis and line/area charts.
+            - paragraph [ref=f34e608]:
+              - strong [ref=f34e609]: Horizontal axis settings
+              - text: are available for bar/column charts with a horizontal axis.
+            - list [ref=f34e610]:
+              - listitem [ref=f34e611]:
+                - strong [ref=f34e612]: Show values
+                - text: "- show or hide axis values"
+              - listitem [ref=f34e613]:
+                - strong [ref=f34e614]: Show axis line
+                - text: "- show or hide the axis line"
+              - listitem [ref=f34e615]:
+                - strong [ref=f34e616]: Show gridlines
+                - text: "- show or hide gridlines"
+              - listitem [ref=f34e617]:
+                - strong [ref=f34e618]: Axis label
+                - text: "- select"
+                - strong [ref=f34e619]: None
+                - text: (remove label),
+                - strong [ref=f34e620]: Auto
+                - text: (uses metric name), or
+                - strong [ref=f34e621]: Custom
+                - text: (enter your own label, where available by chart type).
+                - 'img "Axis label options: None, Auto, and Custom" [ref=f34e622]'
+            - heading "Range" [level=4] [ref=f34e623]
+            - paragraph [ref=f34e625]: "Choose a range for the selected axis:"
+            - list [ref=f34e626]:
+              - listitem [ref=f34e627]:
+                - strong [ref=f34e628]: Include zero
+                - text: "- makes it easier to read overall values in context"
+              - listitem [ref=f34e629]:
+                - strong [ref=f34e630]: Adaptive
+                - text: "- collapses the axis to a floor above zero; better for seeing changes in large numbers"
+            - paragraph [ref=f34e631]:
+              - strong [ref=f34e632]: "Note:"
+              - text: Not applicable to 100% stacked column and area charts.
+            - paragraph [ref=f34e633]:
+              - 'img "Range options: Include zero (default) and Adaptive" [ref=f34e634]'
+            - heading "Goals" [level=4] [ref=f34e635]
+            - paragraph [ref=f34e637]:
+              - text: Display goal targets on your visualization.
+              - link "Learn more about adding goals to metrics." [ref=f34e638] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726232850071-adding-goals-to-metrics
+            - list [ref=f34e639]:
+              - listitem [ref=f34e640]:
+                - strong [ref=f34e641]: "Auto-show compatible goals enabled:"
+                - text: Compatible goals display automatically when visualization settings match.
+                - img "Goals panel with Auto-show compatible goals enabled" [ref=f34e642]
+              - listitem [ref=f34e643]:
+                - strong [ref=f34e644]: "Auto-show compatible goals disabled:"
+                - text: Check the box beside each goal you want to display.
+                - img "Goals panel with Auto-show disabled, showing checkbox to select individual goals" [ref=f34e645]
+              - listitem [ref=f34e646]:
+                - strong [ref=f34e647]: If a goal doesn’t display
+                - text: ": Hover over the"
+                - img "Info button" [ref=f34e648]
+                - strong [ref=f34e649]: Info button
+                - text: to see why.
+                - img "Info button tooltip explaining why the goal is not displaying" [ref=f34e650]
+              - listitem [ref=f34e651]:
+                - strong [ref=f34e652]: "Goal does not align with visualization settings:"
+                - text: click
+                - img "Info button" [ref=f34e653]
+                - text: to open the dialog, then click
+                - strong [ref=f34e654]: Update visualization settings to show goal
+                - text: .
+                - strong [ref=f34e655]: "Note:"
+                - text: If you want to return to the previous visualization settings, you'll need to do so manually; settings won't auto-revert if you stop displaying the goal.
+                - img "Dialog showing the Update visualization settings to show goal option" [ref=f34e656]
+              - listitem [ref=f34e657]:
+                - strong [ref=f34e658]: "Summary charts - maximum one goal at a time:"
+                - text: If a summary chart has more than one goal, to display a different goal, click
+                - img "Info button" [ref=f34e659]
+                - text: ", then click"
+                - strong [ref=f34e660]: Reorder goals to show this goal
+                - text: . You can also drag and drop goals to reorder them.
+                - img "Reorder goals to show this goal option in the goals panel" [ref=f34e661]
+            - heading "Goal options" [level=4] [ref=f34e662]
+            - paragraph [ref=f34e663]:
+              - text: Available for
+              - strong [ref=f34e664]: threshold or recurring target goals in bar/column charts
+              - text: ":"
+            - list [ref=f34e665]:
+              - listitem [ref=f34e666]:
+                - strong [ref=f34e667]: Highlight delta
+                - text: "- visually emphasizes the difference between current values and goal targets"
+              - listitem [ref=f34e668]:
+                - strong [ref=f34e669]: Bullet chart style
+                - text: "- displays the goal target"
+                - strong [ref=f34e670]: as a solid line
+                - text: or
+                - strong [ref=f34e671]: continuous dashed line
+                - text: superimposed on each bar/column
+            - paragraph [ref=f34e672]:
+              - img "Highlight delta and bullet chart style goal options" [ref=f34e673]
+            - heading "Show as cumulative" [level=4] [ref=f34e674]
+            - paragraph [ref=f34e676]:
+              - text: For
+              - strong [ref=f34e677]: line charts
+              - text: ": display data as a cumulative sequence to illustrate growth over the selected date range."
+            - list [ref=f34e678]:
+              - listitem [ref=f34e679]: Available for custom metrics with "override aggregation" enabled
+              - listitem [ref=f34e680]: Not available for instant metrics, dbt™ Semantic Layer metrics, or metrics with aggregation set to average, count rows, max, or min
+              - listitem [ref=f34e681]: Cannot be combined with Normal range or Forecast analysis
+            - paragraph [ref=f34e682]:
+              - img "Show as cumulative toggle in the chart personalization panel" [ref=f34e683]
+            - heading "Comparison" [level=4] [ref=f34e684]
+            - paragraph [ref=f34e686]: "Compare your data to another time period: previous period, same period (last year), or custom offset period."
+            - paragraph [ref=f34e687]:
+              - 'img "Comparison options: None, vs previous period, vs same period last year, vs custom period offset" [ref=f34e688]'
+            - paragraph [ref=f34e689]:
+              - strong [ref=f34e690]: "How comparisons display by chart type:"
+            - list [ref=f34e691]:
+              - listitem [ref=f34e692]:
+                - strong [ref=f34e693]: Line
+                - text: and
+                - strong [ref=f34e694]: "area charts:"
+                - text: comparative period shown as a lighter-coloured dashed line
+              - listitem [ref=f34e695]:
+                - strong [ref=f34e696]: Bar
+                - text: and
+                - strong [ref=f34e697]: column
+                - strong [ref=f34e698]: "charts:"
+                - text: comparative period shown as lighter-coloured bars/columns
+              - listitem [ref=f34e699]:
+                - strong [ref=f34e700]: Tables
+                - text: and
+                - strong [ref=f34e701]: summary charts
+                - text: ": choose to display"
+                - strong [ref=f34e702]: percentage change
+                - text: ","
+                - strong [ref=f34e703]: value change
+                - text: (delta), or a
+                - strong [ref=f34e704]: comparison value
+                - text: . green = positive trend, red = negative trend)
+              - listitem [ref=f34e705]:
+                - text: For
+                - strong [ref=f34e706]: tables
+                - text: ", comparative data displays in a fixed column beside the value it’s being compared to."
+              - listitem [ref=f34e707]:
+                - text: For
+                - strong [ref=f34e708]: list
+                - text: and
+                - strong [ref=f34e709]: pivot tables
+                - text: ", you can also show"
+                - strong [ref=f34e710]: comparisons for goal values
+                - text: and a
+                - strong [ref=f34e711]: percentage of row or column total
+            - paragraph [ref=f34e712]:
+              - img "Comparison options for tables including vs goal comparison" [ref=f34e713]
+            - list [ref=f34e714]:
+              - listitem [ref=f34e715]:
+                - text: For
+                - strong [ref=f34e716]: "summary charts:"
+                - text: comparative data displays below the current value
+                - img "sSummary chart showing current value and comparison value below it" [ref=f34e717]
+            - paragraph [ref=f34e718]:
+              - strong [ref=f34e719]: "Comparison rules and limitations:"
+            - list [ref=f34e720]:
+              - listitem [ref=f34e721]: Comparisons are made between equivalent time period types (e.g., "Today" compares to "Yesterday").
+              - listitem [ref=f34e722]:
+                - text: Not available when the date range is set to
+                - strong [ref=f34e723]: Auto
+                - text: or
+                - strong [ref=f34e724]: Maximum date range
+                - text: .
+              - listitem [ref=f34e725]: Not applicable to segmented line charts or stacked bar/column charts. To see comparisons, set segmentation to "None" and ensure dates display on the x-axis.
+              - listitem [ref=f34e726]: When comparing a partial period, the comparison covers the equivalent partial period of the previous period. For example, if you’re halfway through a month and compare to the previous month, your metric is compared to the same period of the previous month. An asterisk (*) after a value indicates the comparison period is incomplete.
+              - listitem [ref=f34e727]:
+                - text: The visualization shows
+                - strong [ref=f34e728]: “--”
+                - text: when there’s no difference in values, no comparable data, or the date range doesn't support comparison.
+              - listitem [ref=f34e729]: If a legend is shown, the comparative period displays as the last item and can be toggled to show/hide by clicking its name.
+            - heading "Analyses" [level=4] [ref=f34e730]
+            - paragraph [ref=f34e732]: Overlay analytical models on your data to identify trends, outliers, and forecasts.
+            - list [ref=f34e733]:
+              - listitem [ref=f34e734]:
+                - strong [ref=f34e735]: No analysis
+                - text: "- shows current data with no overlay"
+              - listitem [ref=f34e736]:
+                - strong [ref=f34e737]: Linear trend
+                - text: "- adds a straight trend line showing the general data direction"
+              - listitem [ref=f34e738]:
+                - strong [ref=f34e739]: Moving average
+                - text: "- smooths fluctuating data"
+              - listitem [ref=f34e740]:
+                - strong [ref=f34e741]: Normal range
+                - text: "- highlights outliers (values outside the expected range). Outliers display as red (below normal) and green (above normal), based on the metric's favourable trend setting."
+                - link "Learn more about normal range analysis." [ref=f34e742] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726258960151-analyzing-your-current-and-future-data-normal-range-and-forecast#normal_range
+              - listitem [ref=f34e743]:
+                - strong [ref=f34e744]: Forecast
+                - text: "- predicts future metric performance. The forecast data is added to the horizontal axis title and a shaded cone-shaped area and dotted line are added to the chart."
+                - link "Learn more about forecast analysis." [ref=f34e745] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726258960151-analyzing-your-current-and-future-data-normal-range-and-forecast#forecast
+            - paragraph [ref=f34e746]:
+              - strong [ref=f34e747]: "Note:"
+              - text: The ability to access advanced analyses (normal range and forecast) features depends on your pricing plan.
+            - paragraph [ref=f34e748]:
+              - strong [ref=f34e749]: "Analysis compatibility:"
+            - list [ref=f34e750]:
+              - listitem [ref=f34e751]:
+                - strong [ref=f34e752]: "Linear trend and Moving average:"
+                - text: Applicable to bar, column, and line/area charts (not stacked variations). Metrics that don't have multiple time values will default to bar charts. Dates must be on the x-axis (or y-axis for horizontal bar charts).
+              - listitem [ref=f34e753]:
+                - strong [ref=f34e754]: "Normal range:"
+                - text: Applicable to unsegmented, non-cumulative bar and line charts with time on the x-axis (or y-axis for horizontal bar charts). Not available with “Show as cumulative”.
+              - listitem [ref=f34e755]:
+                - strong [ref=f34e756]: "Forecast:"
+                - text: Applicable to unsegmented, non-cumulative line charts with time on the x-axis. Not available with “Show as cumulative”.
+            - paragraph [ref=f34e757]:
+              - img "Analyses options panel with Normal range selected" [ref=f34e758]
+            - heading "Frequently asked questions" [level=2] [ref=f34e759]
+            - heading "What is the PowerMetrics metric overview?" [level=3] [ref=f34e760]
+            - paragraph [ref=f34e761]: The metric overview is a dedicated page in PowerMetrics that lets you visualize a single metric from multiple perspectives, apply date ranges and filters, personalize each view, overlay analyses (trend lines, forecasts, normal range), set and track goals, and access metric details, all without editing the metric's underlying configuration.
+            - heading "How do I open a metric in PowerMetrics?" [level=3] [ref=f34e762]
+            - paragraph [ref=f34e763]:
+              - text: Click
+              - strong [ref=f34e764]: Metrics
+              - text: in the left navigation sidebar to open your list of metrics, then select the metric you want to view. The metric overview opens automatically in view mode.
+            - heading "How do I personalize a metric view?" [level=3] [ref=f34e765]
+            - paragraph [ref=f34e766]:
+              - text: Click the
+              - strong [ref=f34e767]: 3-dot menu
+              - text: on any metric view and select
+              - strong [ref=f34e768]: Personalize view
+              - text: . From there you can change the chart type and style, segment by a dimension, adjust time periodicity (Over), add comparisons or analyses, and more. Changes apply immediately and are saved per user.
+            - heading "How do I reset a metric view to its defaults?" [level=3] [ref=f34e769]
+            - paragraph [ref=f34e770]:
+              - text: To reset a single view, click its
+              - strong [ref=f34e771]: 3-dot menu
+              - text: and select
+              - strong [ref=f34e772]: Reset view
+              - text: . To reset all views on the page at once, click the
+              - strong [ref=f34e773]: 3-dot menu
+              - text: in the top-right corner of the page and select
+              - strong [ref=f34e774]: Reset all views
+              - text: . Neither action affects the metric's underlying data.
+            - heading "What is the Auto date range in PowerMetrics?" [level=3] [ref=f34e775]
+            - paragraph [ref=f34e776]:
+              - text: The
+              - strong [ref=f34e777]: Auto
+              - text: date range (the default) lets PowerMetrics choose the most appropriate date range based on the time ranges available in the metric's source data. You can override it at any time by selecting a different pre-set option or entering a custom date range.
+            - heading "How do I filter a metric by dimension?" [level=3] [ref=f34e778]
+            - paragraph [ref=f34e779]: In the date range and filter area below the metric banner, click the dimension you want to filter on, then select the members to include or exclude. You can filter by member or by condition. Filters apply to all metric views on the page simultaneously.
+            - heading "How do I add a goal to a metric?" [level=3] [ref=f34e780]
+            - paragraph [ref=f34e781]:
+              - text: Open the metric overview and click the
+              - strong [ref=f34e782]: Goals
+              - text: button in the top-right area to open the Goals panel. If no goals exist yet, click the
+              - strong [ref=f34e783]: + New goal
+              - text: button. If goals already exist, click the
+              - strong [ref=f34e784]: +
+              - text: button beside
+              - strong [ref=f34e785]: Goals & Notifications
+              - text: . For full instructions, see
+              - link "Adding goals to metrics" [ref=f34e786] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726232850071-adding-goals-to-metrics
+              - text: .
+            - heading "What information is in the About tab?" [level=3] [ref=f34e787]
+            - paragraph [ref=f34e788]: The About tab shows metric type, owner, last edited date, data history, default aggregation, available segments, associated data feed or service, tags, and certification status. The exact fields displayed depend on the metric type.
+          - generic [ref=f34e789]:
+            - generic [ref=f34e791]:
+              - text: Have more questions?
+              - link "Submit a request" [ref=f34e792] [cursor=pointer]:
+                - /url: /hc/en-us/requests/new
+            - link "Return to top" [ref=f34e794] [cursor=pointer]:
+              - /url: "#article-container"
+          - generic [ref=f34e798]:
+            - heading "Related articles" [level=2] [ref=f34e799]
+            - list [ref=f34e800]:
+              - listitem [ref=f34e801]:
+                - link "How do I use Explorer in PowerMetrics to investigate and analyze metric data?" [ref=f34e802] [cursor=pointer]:
+                  - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBeIV9JPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJes%2BdFPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJzL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjI2NzEyNTk5LUhvdy1kby1JLXVzZS1FeHBsb3Jlci1pbi1Qb3dlck1ldHJpY3MtdG8taW52ZXN0aWdhdGUtYW5kLWFuYWx5emUtbWV0cmljLWRhdGEGOwhUOglyYW5raQY%3D--1ccd52959f3a18d9abfb30ca32d7899810d32ff8
+              - listitem [ref=f34e803]:
+                - link "How do I certify metrics?" [ref=f34e804] [cursor=pointer]:
+                  - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBe0BtVPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJes%2BdFPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI%2FL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjcxNzQ3MDk1LUhvdy1kby1JLWNlcnRpZnktbWV0cmljcwY7CFQ6CXJhbmtpBw%3D%3D--e436ae8e11f496f4aa57ad276b741f2737149c00
+              - listitem [ref=f34e805]:
+                - link "How do I create PowerMetrics dashboards?" [ref=f34e806] [cursor=pointer]:
+                  - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJdIctJPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJes%2BdFPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJOL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjI4NDY1ODE1LUhvdy1kby1JLWNyZWF0ZS1Qb3dlck1ldHJpY3MtZGFzaGJvYXJkcwY7CFQ6CXJhbmtpCA%3D%3D--312797df6c3b98b5c1843585e3d6a98780ea02a9
+              - listitem [ref=f34e807]:
+                - link "How do I add goals to metrics?" [ref=f34e808] [cursor=pointer]:
+                  - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJcutdJPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJes%2BdFPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJEL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjMyODUwMDcxLUhvdy1kby1JLWFkZC1nb2Fscy10by1tZXRyaWNzBjsIVDoJcmFua2kJ--51564efa8d8308cc1341b45b602b8312e36ee973
+              - listitem [ref=f34e809]:
+                - link "How do I create Twilio metrics?" [ref=f34e810] [cursor=pointer]:
+                  - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBcrlUCuIzoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJes%2BdFPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJFL2hjL2VuLXVzL2FydGljbGVzLzM5MjMxMzE0Nzk5MzgzLUhvdy1kby1JLWNyZWF0ZS1Ud2lsaW8tbWV0cmljcwY7CFQ6CXJhbmtpCg%3D%3D--6d94f9ff0d75d3153bda234857b516c483eac6dc
+  - contentinfo [ref=f34e811]:
+    - generic "Help centre footer links" [ref=f34e813]:
+      - generic [ref=f34e814]:
+        - generic [ref=f34e815]:
+          - heading "Get help" [level=3] [ref=f34e816]
+          - list [ref=f34e817]:
+            - listitem [ref=f34e818]:
+              - link "Help Centre" [ref=f34e819] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/
+            - listitem [ref=f34e820]:
+              - link "Submit a ticket" [ref=f34e821] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/requests/new
+            - listitem [ref=f34e822]:
+              - link "Get help building" [ref=f34e823] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/services
+            - listitem [ref=f34e824]:
+              - link "Find a Partner" [ref=f34e825] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/partners
+            - listitem [ref=f34e826]:
+              - link "Book a demo" [ref=f34e827] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/demo
+            - listitem [ref=f34e828]:
+              - link "Klips Help Centre" [ref=f34e829] [cursor=pointer]:
+                - /url: https://support.klipfolio.com/hc/
+        - generic [ref=f34e830]:
+          - heading "Learn" [level=3] [ref=f34e831]
+          - list [ref=f34e832]:
+            - listitem [ref=f34e833]:
+              - link "Videos" [ref=f34e834] [cursor=pointer]:
+                - /url: https://www.youtube.com/playlist?list=PLA9s2rVJrUY19bAXw8NOwikflZ9Ll1-Mx
+            - listitem [ref=f34e835]:
+              - link "Case studies" [ref=f34e836] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/case-studies
+            - listitem [ref=f34e837]:
+              - link "Webinars" [ref=f34e838] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/webinars
+            - listitem [ref=f34e839]:
+              - link "Podcast" [ref=f34e840] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/podcast
+        - generic [ref=f34e841]:
+          - heading "Product" [level=3] [ref=f34e842]
+          - list [ref=f34e843]:
+            - listitem [ref=f34e844]:
+              - link "PowerMetrics features" [ref=f34e845] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/
+            - listitem [ref=f34e846]:
+              - link "Dashboard templates" [ref=f34e847] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/dashboard-templates
+            - listitem [ref=f34e848]:
+              - link "Integrations" [ref=f34e849] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/integrations
+            - listitem [ref=f34e850]:
+              - link "Semantic layer" [ref=f34e851] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/integrations/semantic-layer
+            - listitem [ref=f34e852]:
+              - link "What’s new" [ref=f34e853] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/whats-new
+            - listitem [ref=f34e854]:
+              - link "Pricing" [ref=f34e855] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/pricing
+        - generic [ref=f34e856]:
+          - heading "More" [level=3] [ref=f34e857]
+          - list [ref=f34e858]:
+            - listitem [ref=f34e859]:
+              - link "About" [ref=f34e860] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/about
+            - listitem [ref=f34e861]:
+              - link "News" [ref=f34e862] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/news
+            - listitem [ref=f34e863]:
+              - link "Blog" [ref=f34e864] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/blog
+            - listitem [ref=f34e865]:
+              - link "MetricHQ" [ref=f34e866] [cursor=pointer]:
+                - /url: https://www.metrichq.org/
+      - generic [ref=f34e868]:
+        - generic [ref=f34e869]:
+          - link "Klipfolio PowerMetrics" [ref=f34e870] [cursor=pointer]:
+            - /url: https://www.powermetrics.app
+            - img "Klipfolio PowerMetrics"
+          - generic [ref=f34e871]:
+            - text: © 2026 Klipfolio Inc. All rights reserved.
+            - link "More legal stuff." [ref=f34e872] [cursor=pointer]:
+              - /url: https://www.powermetrics.app/legal
+        - generic [ref=f34e873]: Made in Canada

@@ -1,0 +1,1833 @@
+[    1631ms] TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.
+    at https://docs.getdbt.com/js/checkboxes.js:13:10
+[    2657ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/95ce8a/000000000000000077588a3d/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/e32df6/000000000000000077588a4e/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/dd126b/00000000000000007755bcc6/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/ac73e9/000000000000000077588a48/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/b03643/000000000000000077588a3f/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/c77c44/00000000000000007735944d/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2664ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/d86b45/0000000000000000775828cf/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    2665ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://use.typekit.net/af/82802b/000000000000000077588a5b/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 @ https://docs.getdbt.com/docs/explore/explore-projects:402
+[    3101ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://docs.getdbt.com/_vercel/insights/script.js:0
+[    3101ms] [ERROR] Refused to execute script from 'https://docs.getdbt.com/_vercel/insights/script.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ https://docs.getdbt.com/docs/explore/explore-projects:0
+[    3102ms] [LOG] [Vercel Web Analytics] Failed to load script from /_vercel/insights/script.js. Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information. @ https://docs.getdbt.com/assets/js/main.8feb4399.js:40
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at p
+    at r (https://docs.getdbt.c…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3971ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at d (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at d (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at d (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3972ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at d (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at d (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at d (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at E (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at d (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3973ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at d (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3974ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at E (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at d (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3975ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ol
+    at u (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3976ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at link
+    at Lightbox (https://docs.getdbt.…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at Lightbox (https://docs.getdbt.c…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3977ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at link
+    at Lightbox (https://docs.getdbt.…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at Lightbox (https://docs.getdbt.c…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at link
+    at Lightbox (https://docs.getdbt.…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at Lightbox (https://docs.getdbt.c…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3978ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3979ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3980ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3981ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at details
+    at Expandable (https://docs.ge…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h3
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ol
+    at u (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at DocCarousel (https://docs.getdb…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3982ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at p
+    at u (https://docs.getdbt.com/assets…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at h2
+    at d (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615693)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at u (https://docs.getdbt.com/assets/js/8c673…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at ul
+    at a (https://docs.getdbt.com/asset…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at k (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at O (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at footer
+    at c (https://docs.getdbt.com/a…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at nav
+    at i (https://docs.getdbt.com/asse…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at div
+    at div
+    at Q (https://docs.getd…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at ab (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:540905)
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615516)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588516
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588523)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: 
+    at footer
+    at na (https://docs.getdbt.com/…s.getdbt.com/assets/js/main.8feb4399.js:4:631954), digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
+[    3983ms] [ERROR] Docusaurus React Root onRecoverableError: Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+    at l (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:615180)
+    at iM (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593467)
+    at https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593334
+    at iO (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:593341)
+    at iS (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:590093)
+    at ix (https://docs.getdbt.com/assets/js/main.8feb4399.js:4:588648)
+    at x (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40214)
+    at MessagePort.L (https://docs.getdbt.com/assets/js/main.8feb4399.js:11:40744) {componentStack: , digest: null} @ https://docs.getdbt.com/assets/js/main.8feb4399.js:36
