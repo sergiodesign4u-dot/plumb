@@ -10,7 +10,7 @@ One warning that applies to the whole sheet. Everything here about the market is
 
 **The problem in the market.** Two people bring different figures for the same metric to the same meeting, and the half hour that follows is spent working out whose figure is right rather than deciding anything. The expensive version is quieter: nobody argues, and a decision gets made on a number nobody owns.
 
-That much the category already says out loud, in its own words: dbt frames it as "inconsistent metrics, slow queries, and scattered tools can quickly erode trust" (`getdbt.com/product/semantic-layer`), PowerMetrics as "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers, AI makes it worse, not better" (`powermetrics.app`), Sifflet promises to "catch data issues before they reach the business" (`siffletdata.com`). All three in `competitors.md`. The problem is not the hypothesis. Our answer to it is.
+That much the category already says out loud, in its own words: dbt frames it as "inconsistent metrics, slow queries, and scattered tools can quickly erode trust" (`getdbt.com/product/semantic-layer`), PowerMetrics as "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers", followed by the claim that AI makes that worse rather than better (`powermetrics.app`), Sifflet promises to "catch data issues before they reach the business" (`siffletdata.com`). All three in `competitors.md`. The problem is not the hypothesis. Our answer to it is.
 
 **The business problem for us specifically.** The definition is already owned: by dbt, Looker's LookML, Atlan's metrics layer. What nobody owns is the last mile. Every product in the set governs the definition inside a producer tool and then hands the number to a reading surface built by somebody else (`competitors.md`, common pattern 2). The number arrives in front of the person who will act on it stripped of everything that would let them judge it, and the products that do carry state make it a destination: a lineage graph, a catalog page, an incident. Somebody has to decide to go there, and to decide that they must already suspect something (`competitors.md`, "What this changes in our gaps").
 
@@ -28,7 +28,7 @@ What has to become true for this to be a business, and how we would know. No bas
 | --- | --- | --- | --- | --- |
 | 1 | The registry gets filled | Metrics carrying both a definition and a named owner, per team, in the first 7 days | 10 metrics [hypothesis] | Baseline `[?]` |
 | 2 | Readers actually arrive | Distinct business readers who open at least one metric card per paid analyst seat, day 30 | 8 readers per paid seat [hypothesis] | Baseline `[?]` |
-| 3 | Reading becomes a habit, not a rescue | Share of those readers who return in a week they were not sent a link | 40% [hypothesis] | Baseline `[?]` |
+| 3 | Reading becomes a habit, not a rescue | 4-week reader return: readers active in week 1 who open a card again in week 4 | 35% [hypothesis] | Baseline `[?]`, instrument owned by `aarrr.md` |
 | 4 | The reconciliation tax drops | Self-reported "why is this number different" interruptions per analyst per week, asked before and after | Halved [hypothesis] | Baseline `[?]`, and self-report is a weak instrument, named as such |
 | 5 | It monetises the way the model says | Paying teams, seats billed to analysts only, readers free | First 10 paying teams [hypothesis] | Open, see open question 1 in `competitors.md` |
 | 6 | The purchasing gate stays reachable | SOC 2 Type II named as a later goal with a trust surface present in the IA from the start (`CLAUDE.md`) | Not MVP, not forgotten | Deliberate |
@@ -48,6 +48,8 @@ Three parties, and one of them deliberately gets no product surface.
 This persona is not our invention: Secoda names Data Consumers, Business Operations and Product Managers on its own site, Sifflet names Data Users (`competitors.md`). What we claim is not that they exist but that they are served badly, and there is a concrete reason: Secoda's permissions reach into lineage, so "Editors and Viewers only see lineage for resources they have access to" (`docs.secoda.co/features/data-lineage`), and dbt keeps its four health states inside a catalog a non-analyst has no reason to open.
 
 **3. Head of data or COO. Buyer, not user.** Signs, asks about SOC 2 and SSO, never opens the product daily. Kept outside the product surface on purpose: three personas competing for 15 to 30 screens means none of them gets drawn properly (`CLAUDE.md`).
+
+All three descriptions are taken from the brief in `CLAUDE.md` rather than observed. Ages, team sizes, interruption frequency and buyer behaviour are assumptions, `[?]` until stage 02 interviews people.
 
 **Not a user, and it is a live question, not an omission.** An AI agent reading our numbers. The entire competitor set is moving that way in 2026 and we are staying human-facing for the MVP, which is a deliberate choice recorded as open question 3 in `competitors.md`, not an oversight.
 
@@ -71,7 +73,7 @@ What each side is hiring the product to do, in JTBD phrasing.
 - When something is broken, I want to be told what kind of broken it is, so I can judge whether it matters for my decision instead of discarding the whole thing.
 - When I read on a phone five minutes before a meeting, I want the trust signal to survive that width, so the check happens at the only moment I actually have.
 
-The last one is the outcome no competitor in the set serves. Every product opened assumes a desktop working session (`competitors.md`, gaps).
+The last one is the outcome no competitor in the set positions itself on: not one of the fifteen pages opened mentions a phone, a meeting or the minutes before one (`competitors.md`, gaps). How their interfaces behave at that width is `[?]`.
 
 **Buyer**
 
@@ -167,5 +169,5 @@ For two weeks, the analyst answers every "why is this number different" with tha
 
 - **The riskiest assumption (block 7)** is read by stage 02 when personas and jobs are cut, by CJM step 9, and by stage 07 step 6, which has to name the one screen that puts the assumption on trial.
 - **User outcomes (block 4)** feed the key task at step 7 of this stage, where the UX pattern is chosen.
-- **Business outcomes (block 2)** are the input to AARRR at step 6: outcome 1 is activation, outcome 2 is referral in disguise, outcome 3 is retention.
+- **Business outcomes (block 2)** are the input to AARRR at step 6, and the mapping is not one to one. Outcome 1, the registry getting filled, is the analyst's setup, which AARRR deliberately does **not** count as activation. Activation is measured on outcome 2, the reader arriving, and outcome 2 also carries referral. Outcome 3 is retention.
 - **The trust score refusal and the "not an incident" line (block 5)** belong in `docs/decisions.md`, since both are decisions that shape the IA and neither is derivable from the code.

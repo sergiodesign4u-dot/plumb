@@ -16,19 +16,19 @@ Rules that hold throughout. Every fact about the market comes from a page opened
 
 ### Five findings
 
-**1. Provenance exists in every product and lives nowhere near the reader.** Lineage, catalog and incident are all destinations. To travel to one you must already suspect something, and the person we care about does not suspect anything yet (`competitors.md`).
+**1. Provenance exists in every product and lives nowhere near the reader.** Lineage, catalog and incident are all destinations. To travel to one you must already suspect something, and the person we care about does not suspect anything yet. The strength of this is worth stating exactly: it is **shown** for the five products whose documentation we opened, PowerMetrics, Select Star, Secoda, dbt and Sifflet, and **inferred** for the other ten from their positioning, since none of the fifteen shows a product surface without an account (`competitors.md`).
 
 **2. Attribution on the claim is unoccupied, and this was confirmed from two independent corpora.** In the category, certification is a badge and the name appears only in the exception case: PowerMetrics shows who removed a certification and when (`support.powermetrics.app`, article 37726220561559). Outside the category, across five best-in-class products chosen for exactly this dimension, not one scores above 3 on attribution while several score 5 on freshness (`benchmark.md`).
 
 **3. The category changed its subject in 2026 and vacated our ground while doing it.** Fourteen of the fifteen pages opened put AI or agents in the headline or subheading, always with the answering system as the subject of the sentence, never the figure being read. `montecarlodata.com` now redirects to `montecarlo.ai` and the observability leader sells "Trust your agents in production". Trust in a number read by a person is less defended than it was a year ago.
 
-**4. Nobody serves the moment that matters, and the failure is measurable rather than aesthetic.** Every product opened assumes a desktop working session. In the benchmark, run at a verified 360 px viewport, the only product that overflowed was Yahoo Finance, `clientWidth` 360 against `scrollWidth` 364, which is also the product with the best freshness line in the set. Good trust design does not automatically survive the width where the check actually happens.
+**4. Nobody serves the moment that matters, and the failure is measurable rather than aesthetic.** Not one of the fifteen pages opened positions itself on reading away from a desk: no phone, no meeting, no minutes before one. How those interfaces behave at a narrow viewport is a separate question and stays `[?]`, since none of them can be reached without an account. In the benchmark, run at a verified 360 px viewport, the only product that overflowed was Yahoo Finance, `clientWidth` 360 against `scrollWidth` 364, which is also the product with the best freshness line in the set. Good trust design does not automatically survive the width where the check actually happens.
 
 **5. There is no pricing norm for readers, only a choice.** Secoda gives unlimited viewers on all three tiers, Cube charges $20 per viewer per month, Looker makes Viewer a separate license type, PowerMetrics caps metrics at 50 and 200. Our model is therefore a decision we own and must defend, not one we inherit.
 
 ### What the research confirmed, narrowed and changed in the brief
 
-**Confirmed.** The problem is real and the market says it out loud in its own words: dbt writes "inconsistent metrics, slow queries, and scattered tools can quickly erode trust", PowerMetrics leads with "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers, AI makes it worse, not better". The positioning line in `CLAUDE.md`, that Plumb is not built to visualise data but to make a number defensible, survives contact with fifteen products.
+**Confirmed.** The problem is real and the market says it out loud in its own words: dbt writes "inconsistent metrics, slow queries, and scattered tools can quickly erode trust", PowerMetrics leads with "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers", then says AI makes that worse rather than better. The positioning line in `CLAUDE.md`, that Plumb is not built to visualise data but to make a number defensible, survives contact with fifteen products.
 
 **Narrowed, and this is the most useful outcome of opening the documentation.** Two of the four gaps we thought we had are partly occupied. Doubt as a vocabulary already exists: dbt runs four health states, Healthy, Caution, Degraded and Unknown, with detail on hover. Ownership on the claim already exists as an exception: PowerMetrics names who removed a certification. Our version of both is **placement**, not invention. Saying that plainly is worth more than an unchecked claim of novelty, because the design work is now aimed at the right thing.
 
@@ -47,6 +47,8 @@ The one-sheet version is `lean-ux-canvas.md`. This is the same strategy with the
 - **Analyst or data lead.** Primary user and the payer. 28 to 40, company of 50 to 300, data team of 1 to 5. Interrupted several times a week by "why is this number different", and every answer costs manual digging.
 - **Business consumer of the number.** PM, marketer, finance, 25 to 45. Unpaid, and the one the market underserves. Not our invention as a persona: Secoda names Data Consumers, Business Operations and Product Managers on its own site, Sifflet names Data Users. What we claim is that they are served badly, and there is a documented reason, since permissions and catalog placement both cut them out.
 - **Head of data or COO.** Buyer, not user. Asks about SOC 2 and SSO, never opens the product daily. Kept off the product surface so that three personas do not compete for 15 to 30 screens.
+
+All three descriptions come from the brief in `CLAUDE.md`, not from observation. The ages, the team sizes, the interruption frequency and the buyer's behaviour are assumptions we wrote down before the research, and they stay `[?]` until stage 02 interviews people. They are here because the product was designed against them, not because they were verified.
 
 **Jobs, in the reader's and the analyst's own terms.** Full list in `lean-ux-canvas.md` block 4. The two that decide the product:
 
@@ -89,9 +91,13 @@ That definition is deliberate instrument design: the activation event and the ev
 | Revenue | Analyst | Activated workspaces buying a seat within 30 days | 20% | No metric limits and no reader seat; only analyst write access is billable |
 | Referral | Reader | Distinct readers per paid analyst seat, day 30 | 8 | A reader invites a reader in one action, bounded by email domain |
 
+Four of those five targets come from nowhere and are placeholders to be replaced by the first cohort. Only the 30-day window has an external anchor, the PowerMetrics 30-day trial. A stated number can be shown wrong; an unstated one cannot, which is the whole reason they are written down.
+
 Every baseline is `[?]`: no product, no cohort, and nothing to borrow from a category where seven of the ten HARD and SOFT products publish no seat price.
 
 **Two conclusions that cost us something.** Retention is the weakest stage and our own scope cut made it so: notification routing is out of MVP, so nothing reaches out and the stage rests entirely on a permanent URL plus a card that has something new to say when reopened. And referral grows readers, not logos: metrics are internal, cards travel inside a company, so the loop raises readers per seat and produces almost no new accounts. New accounts have to be earned in acquisition.
+
+**One requirement this funnel puts on the IA, and it needs a reader.** The retention metric can only tell "came back alone" from "was sent the link again" if the share event is recorded next to the open event. That is an event-model requirement, not a screen: stage 03a step 4 has to carry it into the flow of the main job, otherwise the metric silently measures the analyst instead of the reader (`aarrr.md`, Retention).
 
 **One consequence for the next stage.** Four of the five product decisions land on the same object. The card must work with no account, keep one permanent address, carry no upgrade wall and serve as the public demo. The reading surface is not one screen among fifteen, it is the load-bearing object of the IA.
 
@@ -127,7 +133,7 @@ Fifteen products in three groups, all opened 2026-08-11, public and pre-login pa
 
 | Gap | Evidence | Source |
 | --- | --- | --- |
-| Provenance at the point of reading, on a phone | Every product assumes a desktop working session; provenance is always a destination | `competitors.md`, all fifteen |
+| Provenance at the point of reading, on a phone | None of the fifteen positions itself on reading away from a desk; provenance is a destination in all five whose product surface we could see | `competitors.md`, positioning across fifteen, surfaces for five |
 | Doubt addressed to a business reader | Sifflet explains why, but routes the incident to people who own pipelines; dbt's four states live in a catalog a non-analyst never opens | `docs.siffletdata.com/docs/incidents`, `docs.getdbt.com/docs/explore/explore-projects` |
 | Ownership visible on the claim, always on | Certification is a badge; the name appears only when it is removed | `support.powermetrics.app`, article 37726220561559 |
 | Trust for a human reader, as a defended position | The category leader moved to agent trust and left it | `montecarlo.ai` |
@@ -178,7 +184,7 @@ One honest note on the three mechanism names. Ambiguity aversion, cost of verifi
 
 **The key task**, derived from the goal and audience in `CLAUDE.md` and the user outcomes in the canvas: decide, in seconds and in the place where the number is being read, whether this number can be put in front of somebody else.
 
-**Entry-point behaviour: the number is read away from the system that produced it.** It decides the location of the product before any other question is asked. If the reader is inside the producing tool, a catalog, a graph or a board are all legitimate answers. If the reader is outside, all three lose by default, because each requires leaving what you are doing and arriving with a question already formed.
+**Entry-point behaviour: the number is read away from the system that produced it.** This is an assumption taken from the brief and from the shape of the market, not an observation, `[?]` until stage 02 asks a reader directly, and it is the weakest link in the chain below. It decides the location of the product before any other question is asked. If the reader is inside the producing tool, a catalog, a graph or a board are all legitimate answers. If the reader is outside, all three lose by default, because each requires leaving what you are doing and arriving with a question already formed.
 
 Five patterns were compared, taxonomy by **where trust information lives**: on the object, in a directory, in the structure behind it, in a dedicated surface of its own, in an answer you ask for. Full comparison in `ux-patterns.md`.
 
@@ -194,6 +200,8 @@ Five patterns were compared, taxonomy by **where trust information lives**: on t
 
 **What does not fit: the conversational answer**, and this is the crowded position, not an empty one. Four grounds. It moves the problem up a level, since the reader now has to trust the answering system in order to check the number. It cannot obey design principle 1, because a chat reply is bare by construction. It is where almost every competitor already stands, so it is the one place where being right buys the least. And it fights our own metadata-only architecture by inviting questions about rows we deliberately do not hold. The distinction that must not be lost: rejecting the agent as our interface says nothing about the agent as a reader of our surface, which is a separate open question.
 
+**One live counter-reference, kept on purpose.** Resend puts its freshness marker in a small update timestamp footer (`refero.design/pages/9d0debce-382e-442d-91a2-31a623730246`, checked 2026-08-11). That is the pattern design principle 1 forbids, in a shipped product, which makes it more useful than an invented bad example. Reader named: stage 06 step 1, as an anti-reference when the visual language is searched.
+
 **None of the four rejected patterns is discarded whole.** Catalog and search stays as the analyst's side, the registry list and jump-by-name. The lineage graph stays as depth on request, behind the one-line provenance. The dedicated doubt surface gives up its best asset, the named state vocabulary, which moves onto the card. That is the argument that the choice is about locus rather than taste.
 
 ---
@@ -204,7 +212,7 @@ Five patterns were compared, taxonomy by **where trust information lives**: on t
 
 | # | Gap | What it rests on | Source |
 | --- | --- | --- | --- |
-| 1 | Provenance is a destination in every product, so it reaches only readers who already suspect | Lineage, catalog and incident are all separate surfaces across all fifteen | `competitors.md` |
+| 1 | Provenance is a destination, so it reaches only readers who already suspect | Shown in the five documented product surfaces, inferred for the other ten from positioning | `competitors.md`, documentation section |
 | 2 | Doubt never reaches a business reader | Sifflet routes incidents to pipeline owners; dbt's four states live in a catalog | `docs.siffletdata.com/docs/incidents`, `docs.getdbt.com/docs/explore/explore-projects` |
 | 3 | Attribution on the claim is absent, always-on | Nobody above 3 of 5 in the benchmark; PowerMetrics names the person only on removal | `benchmark.md`, `support.powermetrics.app` |
 | 4 | Narrow width is unserved, and good trust design does not survive it by default | Yahoo Finance overflows at a measured 360 while scoring 5 on freshness | `benchmark.md`, `bench-yahoo-finance-360.png` |
@@ -221,11 +229,11 @@ Format: if / then / because [data].
 
 **H3.** If every definition carries a name and a date, always visible, then trust transfers from the individual analyst to the product, **because** not one of five best-in-class products scores above 3 on attribution while several score 5 on freshness, so the market has proved the adjacency habit but not the accountability one (`benchmark.md`).
 
-**H4.** If the card is readable with no account at one permanent URL, then readers per paid analyst seat rises to the level the pricing depends on, **because** there is no reader-pricing norm to violate and the alternatives on offer all reduce what a reader may see (`competitors.md`, difference 1; `docs.secoda.co/features/data-lineage`).
+**H4.** If the card is readable with no account at one permanent URL, then readers per paid analyst seat rises to the level the pricing depends on, **because** there is no reader-pricing norm to violate, and the one competitor whose viewer experience is documented cuts it down: Secoda restricts the lineage graph to what a viewer may access (`competitors.md`, difference 1; `docs.secoda.co/features/data-lineage`). What Cube and Looker show their paid viewers is `[?]`.
 
 **H5.** If we never cap metric count, then registry filling is not penalised at the exact moment it is most fragile, **because** the one competitor with public pricing caps at 50 and 200 metrics, placing the cap directly on the behaviour that is our activation (`powermetrics.app/pricing`).
 
-**H6.** If the trust signal survives a measured 360 px, then the check happens in the five minutes before a meeting rather than not at all, **because** the one benchmark product that overflowed at 360 is also the one with the best freshness line, which shows the two qualities are independent and must be verified separately (`benchmark.md`).
+**H6.** If the trust signal survives a measured 360 px, then the check happens in the five minutes before a meeting rather than not at all, **because** the one benchmark product that overflowed at 360 is one of the three that score 5 on freshness adjacency, which shows the two qualities are independent and must be verified separately (`benchmark.md`).
 
 ### Open questions
 
@@ -238,5 +246,6 @@ Format: if / then / because [data].
 | 5 | Is the reader's need single-number or portfolio-shaped? | Business consumers at three target companies | The chosen pattern. Portfolio-shaped means the status board becomes the product and the card becomes its detail view | Open |
 | 6 | Does an account-free card survive a US B2B security review? | Head of data or COO as buyer, at one target company | Whether the no-account read stays in MVP, and how early SOC 2 Type II work has to start | Open |
 | 7 | What can a free reader be shown when the source's own permissions restrict it? | Me as owner for the scope call, plus a data lead for the reality | How deep depth-on-request can go for an unpaid reader, which is the implementation of design principle 4 | Open |
+| 8 | How often does the reader's need actually arrive: weekly, monthly, or only when contradicted? | Business consumers at three target companies | The retention instrument. A monthly need makes a 4-week return rate noise rather than a signal, and it feeds question 5 on whether the chosen pattern or its alternative is right | Open |
 
-Questions 1 to 3 came out of the competitor round, 4 to 7 out of the strategy, funnel and pattern work. Stage 02 step 1 reads this table as its list of candidate holes about people, and steps 5 and 6 take the most dangerous of them into critique and targeted follow-up research.
+Questions 1 to 3 came out of the competitor round, 4 to 8 out of the strategy, funnel and pattern work. Question 8 was promoted out of the stage unknowns in `aarrr.md` during the step 9 critique, because unlike the other eight unknowns there it has an addressee. Stage 02 step 1 reads this table as its list of candidate holes about people, and steps 5 and 6 take the most dangerous of them into critique and targeted follow-up research.

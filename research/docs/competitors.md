@@ -38,7 +38,7 @@ Status: all three groups collected, matrix and open questions written.
 - Pricing: no public numbers, contact sales
 
 **PowerMetrics** (`powermetrics.app`, opened 2026-08-11; screens: `research/screens/hard-powermetrics-home.png`)
-- Hero: "When your AI knows your business, so do you." Sub: "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers, AI makes it worse — not better."
+- Hero: "When your AI knows your business, so do you." Sub, quoted up to the dash the page itself uses: "When metrics are inconsistent, definitions conflict, and teams can't agree on numbers", followed by the claim that AI makes that worse rather than better
 - Product is organised around metrics as objects: Metric Catalog, Defined Metrics, Certified Metrics
 - Audience stated as growing companies, explicitly including non-technical business users alongside data teams
 - Pricing (`powermetrics.app/pricing`), public with numbers: Launch $24/month billed annually, starts at 2 users, extra users $288/user/year, 50 metrics, 4-hour refresh. Professional $35/month billed annually, starts at 3 users, extra users $420/user/year, 200 metrics, 1-hour refresh with a 15-minute option. Custom tier on request. A user is "a named individual who can log into Klipfolio with a unique email address"
@@ -128,7 +128,7 @@ Status: all three groups collected, matrix and open questions written.
 - Pricing not stated on the page
 
 **Hex** (`hex.tech`, opened 2026-08-11; screen: `research/screens/asp-hex-home.png`)
-- Hero: "The AI Analytics Platform where trust meets insight". Sub: "Finally — anyone can get data insights grounded in the facts of their business. Hex has a flexible approach to context that earns trust without slowing you down."
+- Hero: "The AI Analytics Platform where trust meets insight". Sub, quoted from after the dash the page itself uses: "anyone can get data insights grounded in the facts of their business. Hex has a flexible approach to context that earns trust without slowing you down."
 - Trust is framed as grounding in a context engine (semantic models, database descriptions, business rules), not as showing the working
 - Tiers named: Community (free), Professional, Team, Enterprise. No numbers on the homepage
 
@@ -156,7 +156,7 @@ Status: all three groups collected, matrix and open questions written.
 
 ## Our gaps
 
-- **Provenance at the point of reading, on a phone.** Every product in this set assumes a desktop working session. Nobody sells the five minutes before a meeting, which is exactly when a wrong number does its damage.
+- **Provenance at the point of reading, on a phone.** Not one of the fifteen positions itself on the moment of reading away from a desk: no page opened mentions a phone, a meeting or the minutes before one. That is a claim about positioning, which is what these pages can prove. How their interfaces actually behave at a narrow viewport is a different question and stays `[?]`, as stated at the end of this file. Nobody sells the five minutes before a meeting, which is exactly when a wrong number does its damage.
 - **Doubt addressed to a business reader.** Sifflet comes closest by promising to explain "exactly why they happened", but the incident is still routed to people who own pipelines. A reader who is not on that channel sees a number with no warning at all.
 - **Ownership visible on the claim.** Certification exists (PowerMetrics), but the pattern is a badge, not a name and a time attached to a definition where somebody reads it.
 - **The space Monte Carlo just vacated.** The category leader moved up to agent trust. Trust in a number read by a person is now less defended than it was a year ago.

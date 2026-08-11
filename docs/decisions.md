@@ -6,6 +6,40 @@ This file is never loaded into a session automatically and it is not meant to be
 
 ---
 
+## 2026-08-11. Critique of the research, two instruments, full log
+
+Codex ran first and blind, read-only (`codex exec --sandbox read-only`, since the plugin default would have given it write access), over `research/docs` with `AGENTS.md` and `CLAUDE.md` as context. It never saw my table. My own pass ran in parallel on the one class it cannot do, conclusions without grounds, which needs the product rather than the text. Merged afterwards.
+
+**Dedup criterion:** two rows counted as one finding when they point at the same sentence in the same file and name the same defect. That merged four Codex rows into two, since he filed the desktop-session claim and the behavioural-mechanism claim twice each, once as "fact without a source" and once as "contradiction between files". They are one repair each.
+
+**Result: 16 confirmed, 1 withdrawn at verification.** Codex found 8 that I had missed, I found 5 that he could not see, 3 were found by both.
+
+| # | Class | Where | Finding | Found by | Outcome |
+| --- | --- | --- | --- | --- | --- |
+| 1 | fact without source | `research.md:47`, `lean-ux-canvas.md:44` | Analyst interruption frequency stated as fact about our users | Codex | Fixed: one line saying all persona detail comes from the brief and is `[?]` until stage 02 |
+| 2 | fact without source | `research.md:49`, `lean-ux-canvas.md:50` | Buyer behaviour stated as fact | Codex | Fixed by the same line |
+| 3 | fact without source, contradiction | `competitors.md:159` against `:229`, plus `research.md:25`, `lean-ux-canvas.md:74`, `ux-patterns.md:27` | "Every product assumes a desktop working session" against our own "behaviour under a narrow viewport remains `[?]`" | both | Fixed in all four: the claim is now about positioning, which the pages can prove, and narrow-width behaviour stays `[?]` |
+| 4 | fact without source, contradiction | `benchmark.md:64,66,68` against `research.md:169` | Three behavioural mechanisms stated bare in the level file while the synthesis marks them `[?]` | both | Fixed: the honest note now lives in `benchmark.md` too. Step 8 caught the class and repaired only the synthesis |
+| 5 | fact without source | `aarrr.md:23` | Claim about what enterprise contact-sales keywords cost | Codex | Fixed: cost claim dropped, the decision kept and re-argued from what we do know |
+| 6 | fact without source | `aarrr.md:121` | "US B2B asks about SSO in the first call" sourced to our own brief | Codex | Fixed: marked `[?]`, decision kept |
+| 7 | contradiction | `lean-ux-canvas.md:170` against `research.md:78-80` | The canvas handed AARRR "outcome 1, registry gets filled, is activation" while AARRR defines activation on the reader and explicitly excludes registry filling | Codex | Fixed: the mapping is now stated as not one to one, activation sits on outcome 2 |
+| 8 | contradiction | `lean-ux-canvas.md:31` against `research.md:89` | Retention target 40% against 35%, two different definitions under one name | Codex | Fixed: one instrument, the 4-week return at 35%, owned by `aarrr.md` |
+| 9 | orphan | `competitors.md:227` | The Resend counter-reference had no reader | both | Fixed: named as an anti-reference for stage 06 step 1, recorded in `research.md` section 6 |
+| 10 | orphan | `aarrr.md:107` | The requirement to record the share event next to the open event reached nobody | Codex | Fixed: named as an event-model requirement for stage 03a step 4, in `research.md` section 3 |
+| 11 | orphan | `aarrr.md:31-35, 99-103, 158-162` | Nine stage unknowns with no addressee and no place in the open questions table | Codex | Fixed: the rule is now stated in `aarrr.md`, and the one with an addressee was promoted to open question 8 |
+| 12 | conclusion without grounds | `research.md:19, 130, 207` | "Provenance is a destination in all fifteen" has product-surface evidence for five | Claude | Fixed: shown for five, inferred for ten, said in both places |
+| 13 | conclusion without grounds | `research.md:181` | The entry-point behaviour carries `[?]` in `ux-patterns.md` and lost it in the synthesis, while the whole pattern choice rests on it | Claude | Fixed: marker restored and named as the weakest link in the chain |
+| 14 | conclusion without grounds | `research.md`, H4 | "the alternatives all reduce what a reader may see" rests on one data point | Claude | Fixed: scoped to Secoda, Cube and Looker marked `[?]` |
+| 15 | conclusion without grounds | `research.md`, H6 | Yahoo Finance called "the one with the best freshness line" while three products score 5 | Claude | Fixed: "one of the three" |
+| 16 | conclusion without grounds | `aarrr.md`, metric summary | Five targets labelled hypotheses, none naming where it came from | Claude | Fixed: four are named as placeholders, only the 30-day window has an external anchor |
+| 17 | fact without source | `aarrr.md:29` | "The head of data appears at the seat purchase, not before" filed as an unsourced fact | Codex | **Withdrawn at verification:** the line is item 3 under a **Hypotheses** heading. Codex read the line without its heading |
+
+**Two things fixed while verifying, outside both tables.** The PowerMetrics and Hex quotations carried em dashes from the source pages, which the project forbids in output files, and the synthesis had silently replaced one with a comma inside quotation marks, that is, misquoted it. Both are now quoted up to the dash instead of through it. Second, Codex counted 25 screenshots where there are 26; it changes no finding and is recorded so the number is not trusted later.
+
+**What the second instrument bought, stated so it can be judged next time.** Eight findings my own pass missed, six of them in the class step 8 had already audited. The common cause in all six: I treated `CLAUDE.md` as a source. The brief is not a source, it is our own assumption, and every claim about people or the market that leans only on it walked through my filter as a fact. Codex has no such loyalty because he does not know what we decided in the chat. The reverse holds too: not one of my five class-4 findings appeared in his table, because each needs the chain from decision back to the fact that holds it, and that is not visible in the text.
+
+---
+
 ## 2026-08-11. Doubt is an annotation, not an incident, and there is no trust score
 
 Two product decisions that shape the IA more than their size suggests. Both are now folded into design principle 2 in `CLAUDE.md`, which is where the forbidding lives; the grounds are here.

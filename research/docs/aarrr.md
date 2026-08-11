@@ -20,7 +20,7 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 - **A public, real metric card as the artefact people land on.** Not a screenshot of one.
 - **Data practitioner communities.** dbt Slack, Locally Optimistic and similar. Whether these are still the live watering holes in 2026 is `[?]`, not checked on a page in this session.
 - **The vacated position.** `montecarlodata.com` now redirects to `montecarlo.ai` and the leader sells agent trust (`competitors.md`). Trust in a number read by a person is momentarily unclaimed, and that is a positioning line, not a channel.
-- **Not a channel for us:** paid search against Atlan, Secoda or Select Star keywords. Enterprise contact-sales categories bid these up and we have no sales motion to catch what lands.
+- **Not a channel for us:** paid search against Atlan, Secoda or Select Star keywords. Not because of what it costs, which we have not checked, `[?]`, but because a click bought against a contact-sales competitor lands on a self-serve product with no sales motion behind it.
 
 **Hypotheses**
 
@@ -118,7 +118,7 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 
 - Seat-based. Analyst seats are paid, readers are free or near free.
 - The paywall sits on write access: defining, owning and connecting. Reading is never metered.
-- SSO through WorkOS or Auth0 because US B2B asks in the first call (`CLAUDE.md`), and SOC 2 Type II as the later purchasing gate.
+- SSO through WorkOS or Auth0, and SOC 2 Type II as the later purchasing gate. That US B2B asks about SSO in the first call is stated in `CLAUDE.md`, which is our own brief rather than a source, so it stays `[?]` until a buyer conversation confirms it.
 
 **Hypotheses**
 
@@ -168,6 +168,12 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 
 ---
 
+## Where the stage unknowns live
+
+Every stage above carries a "what is unknown" block, and those nine items deliberately stay here rather than in the open questions table of `research.md`. The table takes only questions with an addressee, because stage 02 reads it as a list of people to ask, and a question addressed to nobody is dead weight there. These are addressed to instrumentation and to time: most of them answer themselves in the first cohort.
+
+One of them does have an addressee and has been promoted: how often the reader's need actually arrives. It is question 8 in `research.md`, because it decides both the retention instrument and whether the chosen UX pattern or its alternative is right.
+
 ## Metric summary
 
 | Stage | Whose funnel | The one metric | Target [all hypotheses] | Baseline |
@@ -177,6 +183,8 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 | Retention | Reader | 4-week reader return | 35% | `[?]` |
 | Revenue | Analyst | Activated workspaces buying a seat within 30 days | 20% | `[?]` |
 | Referral | Reader | Distinct readers per paid analyst seat, day 30 | 8 | `[?]` |
+
+**Where these five numbers come from, said plainly: four of them come from nowhere.** Only the 30-day window in Revenue has an external anchor, PowerMetrics running a 30-day full-access trial. The rest are placeholders whose single function is to be replaced by the first cohort, and their value is that a stated number can be shown wrong in public while an unstated one cannot. Do not treat any of them as a forecast, and do not let a later stage quote them as a benchmark.
 
 | Stage | The one product decision |
 | --- | --- |

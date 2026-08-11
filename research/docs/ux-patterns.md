@@ -24,7 +24,7 @@ Five behaviours the design has to survive. Honesty first: **not one of these was
 
 **B4. The reader has no vocabulary for what is wrong, only for whether to use it.** A stale number, a broken source and a changed definition are three different situations, and to a business reader today they all present as "the dashboard looks weird". Rests on: dbt already runs four named health states, Healthy, Caution, Degraded and Unknown, but keeps them in a catalog a non-analyst has no reason to open (`docs.getdbt.com/docs/explore/explore-projects`). So the vocabulary exists in the market and does not reach this person.
 
-**B5. The reading happens at the worst possible width.** Five minutes before a meeting, on a phone, in a corridor. Rests on: the platform decision in `CLAUDE.md` and the gap found in the research, where every product opened assumes a desktop working session (`competitors.md`, gaps). Frequency `[?]`.
+**B5. The reading happens at the worst possible width.** Five minutes before a meeting, on a phone, in a corridor. Rests on: the platform decision in `CLAUDE.md` and the gap found in the research, where not one of the fifteen pages opened positions itself on reading away from a desk (`competitors.md`, gaps). Frequency `[?]`, and so is how those interfaces actually behave at that width.
 
 ### The most critical: B1, and it is the entry point
 

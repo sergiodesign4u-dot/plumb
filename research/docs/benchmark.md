@@ -67,6 +67,8 @@ Nobody scores above 3 on criterion 5, attribution on the claim. Every one of the
 
 **3. Expectation and reality side by side, with age in relative time.** From FlightAware, "Landed 13 minutes ago" plus scheduled against actual times printed together. Apply on the freshness line of a number: "as of 14:05, 20 minutes ago, expected hourly". The mechanism is comparison without arithmetic: a reader judges deviation instantly when both figures are present, and a relative age is read faster than a timestamp, which matters most in the five minutes before a meeting.
 
+**One honest note on the three mechanism names.** Ambiguity aversion, cost of verification and comparison without arithmetic are framing borrowed from general behavioural literature, not claims verified against a source opened in this session. What is observed is what the products do, which is screenshotted and cited above. The named mechanism is our explanation of why it works, `[?]` in the same sense any explanation is.
+
 ## One mechanism that will not work for us
 
 **Aggregate uptime percentage, as in "99.42% over the past 90 days".** It works for GitHub because a service is either callable or not, and the average of that over time is a real property of the service. A metric is not like that. A single figure of the same shape would read as "this number is 99.4% correct", a claim nobody can defend, and worse, it would let a reader skip the only question that matters at the moment of reading: is this particular number, right now, something I can put in front of my boss. We deliberately do not build a trust score.
