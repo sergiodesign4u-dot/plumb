@@ -97,7 +97,7 @@ Four decisions from stage 01 that later stages read rather than re-derive. Singl
 
 Rules from stage 03a, not a retelling of the map. The map itself is `ia/docs/sitemap.md` and the routes are `ia/docs/flows.md`.
 
-**Top level: five clusters by intent, thirteen screens, seven of them MVP.** Read a number and judge it (card, source layer); hand it on (send); bring a metric under control (connect a source, define a metric, registry); sign in and be accountable (sign-in, workspace, plan); and a public surface of four pages that carry no job by construction.
+**Top level: five clusters by intent, thirteen screens, and the detail layer resolved them into 42 nodes, 33 of them MVP.** Read a number and judge it (card, source layer); hand it on (send); bring a metric under control (connect a source, define a metric, registry); sign in and be accountable (sign-in, workspace, plan); and a public surface of four pages that carry no job by construction.
 
 **Main flow.** A link arrives, the card opens with no account, the value is queried at read time, and the definition, the states, the age and the attribution are all present on arrival. Depth opens on one action.
 
@@ -109,13 +109,19 @@ Rules from stage 03a, not a retelling of the map. The map itself is `ia/docs/sit
 
 **A state gets no entity.** "As of", "source is down" and "definition changed" are computed and store nothing. *Forbids:* a state acquiring a list, a status, a queue or an assignee, which is exactly how this product would turn into an incident tool.
 
-### Three rules the detail layer runs on
+### Four rules the detail layer runs on
 
 **Stance: 360px is the base, and block priority is reasoned from the phone.** The platform line above already says mobile-first; this adds the number and the direction of reasoning. Desktop and mobile are one fully responsive layout, not two designs. *Forbids:* ordering blocks on a wide canvas and then hiding the surplus on a phone.
 
 **Two layers of IA, and the second one is per page.** The global layer is stage 03a and is done. Every screen now gets its own specification: blocks, states, components, SEO. *Forbids:* a wireframe inventing structure that no node describes. A hole found later is repaired **upwards**, in the IA, not patched in the stage that found it.
 
 **SEO is decided here, ahead of any drawing.** The structural layer, URL and slug, H1 and H2, breadcrumbs, schema, indexing and internal linking, belongs to the IA. The wireframe validates the layout only, and production supplies final copy and real query volumes. Every indexed page carries a complete block; private and transactional zones carry noindex and no schema.
+
+**A navigational element renders only the targets that exist in the current scope**, and is designed to take the rest without changing shape. Found at the 03b audit, where the MVP footer pointed at three pages that were not in the MVP. *Forbids:* shipping a menu, a footer column or a rail whose links 404, and equally forbids dragging pages into the MVP to satisfy a menu.
+
+**Canonical components are defined once and the node that defines them is named.** The number card is node 2.1, the listing is 4.1, the dialog is 2.8, the error page is 7.1, the document shell is 6.4, the settings shell is 5.1, and the state wording is 0.4. *Forbids:* a later stage restating any of them. Changing one means walking the list of copies recorded in its node.
+
+**Four things about the reader are architecture, not preference.** The card is readable at a permanent URL with no account; nothing that identifies a reader is stored, and the one anonymous counter is never rendered; the reader has no home, header or menu; and the definition, the states, the age and the attribution are all on the first screen.
 
 ## Tech stack hypothesis
 

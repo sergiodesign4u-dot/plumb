@@ -9,6 +9,8 @@
 - CJM To-Be: https://sergiodesign4u-dot.github.io/plumb/research/cjm-to-be.html
 - IA Flows: https://sergiodesign4u-dot.github.io/plumb/ia/flows.html
 - IA Concept map: https://sergiodesign4u-dot.github.io/plumb/ia/concept-map.html
+- IA Sitemap (node tree): https://sergiodesign4u-dot.github.io/plumb/ia/sitemap.html
+- IA Structure (node hub, block bank, audit): https://sergiodesign4u-dot.github.io/plumb/ia/structure.html
 
 Metric trust tool for B2B teams. One place holds the canonical definition of every metric, and the provenance, freshness and breakage of a number are shown right where the number is read.
 
@@ -42,7 +44,7 @@ Index only. The conclusions live in the files and on the pages, and a second edi
 | Foundation Research | Done. Fifteen competitors, benchmark on trust at the point of reading, canvas, funnel, chosen pattern, critique in two instruments, page published |
 | User Research (Personas + JTBD) | Done. Two behavioural personas with the reader as primary, one main job and five related, matrix, MVP core of two jobs, critique in two instruments, both pages published |
 | CJM (As-Is + To-Be) | Done. Seven As-Is phases with four evidenced barriers and no measured emotion, nine mined sources, four growth zones, six traced To-Be steps, eleven backlog items with one orphan cut, two critiques in two instruments, both pages published |
-| Information Architecture (Base + Detail) | In progress. Base layer done: entity inventory, thirteen screens in five clusters by intent with seven MVP, navigation with the main job at zero taps, four flows with decisions and states, traceability matrix with no job orphans, two critiques in two instruments, both pages published. Detail layer next |
+| Information Architecture (Base + Detail) | Done. Base: entity inventory, thirteen screens in five clusters by intent, navigation with the main job at zero taps, four flows, traceability matrix, two critiques. Detail: 42 nodes with 33 MVP, a block bank built by page type from live competitor pages plus craft references, eighteen specified node pages with SEO decided ahead of drawing, audit in two instruments over both axes plus a second pass, four scope labels changed by it, four pages published |
 | Wireframes | Not started |
 | Voice | Not started |
 | Concept | Not started |
