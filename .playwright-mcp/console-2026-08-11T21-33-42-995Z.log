@@ -1,0 +1,51 @@
+[    2524ms] [ERROR] Faro
+ Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property @ https://app.secoda.co/assets/index-ByEc_lA7.js:5
+[    2710ms] [LOG] trackBatchEvents not sent: [Object] @ https://app.secoda.co/assets/index-ByEc_lA7.js:3932
+[    3335ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://app.secoda.co/api/v2/auth/user/me/:0
+[    4502ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://app.secoda.co/api/v2/auth/user/me/:0
+[   11170ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://app.secoda.co/api/v2/auth/user/me/:0
+[   15340ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://app.secoda.co/api/v2/auth/user/me/:0
+[   15341ms] [ERROR] Unhandled Promise rejection: t.stack.split is not a function ; Zone: <root> ; Task: Promise.then ; Value: TypeError: t.stack.split is not a function
+    at k1t (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1079)
+    at pGi (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1651)
+    at Object.u [as pushError] (https://app.secoda.co/assets/index-ByEc_lA7.js:16:597)
+    at Rd (https://app.secoda.co/assets/index-ByEc_lA7.js:73:11105)
+    at Object.onError (https://app.secoda.co/assets/index-ByEc_lA7.js:3907:7513)
+    at Object.a [as onError] (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:499956)
+    at f (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:494988)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:3894:495422
+    at Re.invoke (https://app.secoda.co/assets/index-ByEc_lA7.js:33:109839)
+    at me.run (https://app.secoda.co/assets/index-ByEc_lA7.js:33:104896)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:34:643
+    at Re.invokeTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:110498)
+    at me.runTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:105563)
+    at bt (https://app.secoda.co/assets/index-ByEc_lA7.js:33:112683) TypeError: t.stack.split is not a function
+    at k1t (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1079)
+    at pGi (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1651)
+    at Object.u [as pushError] (https://app.secoda.co/assets/index-ByEc_lA7.js:16:597)
+    at Rd (https://app.secoda.co/assets/index-ByEc_lA7.js:73:11105)
+    at Object.onError (https://app.secoda.co/assets/index-ByEc_lA7.js:3907:7513)
+    at Object.a [as onError] (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:499956)
+    at f (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:494988)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:3894:495422
+    at Re.invoke (https://app.secoda.co/assets/index-ByEc_lA7.js:33:109839)
+    at me.run (https://app.secoda.co/assets/index-ByEc_lA7.js:33:104896)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:34:643
+    at Re.invokeTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:110498)
+    at me.runTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:105563)
+    at bt (https://app.secoda.co/assets/index-ByEc_lA7.js:33:112683) @ https://app.secoda.co/assets/index-ByEc_lA7.js:30
+[   15347ms] TypeError: t.stack.split is not a function
+    at k1t (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1079)
+    at pGi (https://app.secoda.co/assets/index-ByEc_lA7.js:32:1651)
+    at Object.u [as pushError] (https://app.secoda.co/assets/index-ByEc_lA7.js:16:597)
+    at Rd (https://app.secoda.co/assets/index-ByEc_lA7.js:73:11105)
+    at Object.onError (https://app.secoda.co/assets/index-ByEc_lA7.js:3907:7513)
+    at Object.a [as onError] (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:499956)
+    at f (https://app.secoda.co/assets/index-ByEc_lA7.js:3894:494988)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:3894:495422
+    at Re.invoke (https://app.secoda.co/assets/index-ByEc_lA7.js:33:109839)
+    at me.run (https://app.secoda.co/assets/index-ByEc_lA7.js:33:104896)
+    at https://app.secoda.co/assets/index-ByEc_lA7.js:34:643
+    at Re.invokeTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:110498)
+    at me.runTask (https://app.secoda.co/assets/index-ByEc_lA7.js:33:105563)
+    at bt (https://app.secoda.co/assets/index-ByEc_lA7.js:33:112683)

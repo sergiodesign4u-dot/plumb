@@ -1,0 +1,9 @@
+[    1016ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://cdn.pendo.io/agent/static/14949aea-1511-49ab-4210-f103ca44596c/pendo.js:0
+[    2352ms] [WARNING] Manifest: property 'start_url' ignored, should be same origin as document. @ https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/manifest.json:0
+[    4371ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cloud.getdbt.com/api/v2/whoami/:0
+[    4374ms] [WARNING] [LaunchDarkly] The waitForInitialization function was called without a timeout specified. In a future version a default timeout will be applied. @ https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-BZ-08e_P.js:82
+[    4403ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cloud.getdbt.com/api/v3/accounts/?include_related=[]:0
+[    4843ms] [INFO] [LaunchDarkly] LaunchDarkly client initialized @ https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-BZ-08e_P.js:82
+[    4861ms] [INFO] [LaunchDarkly] Opening stream connection to https://clientstream.launchdarkly.com/eval/60aeadfd72e2410e8d614990/eyJraW5kIjoidXNlciIsImtleSI6InVuaW5pdGlhbGl6ZWRfdXNlcl9mcm9tX2Zyb250ZW5kIiwiZmlyc3ROYW1lIjoiIiwibGFzdE5hbWUiOiIiLCJlbWFpbCI6IiIsInJhbmRvbV9pZCI6ODksImFjdGl2ZV9hY2NvdW50X2lkIjoidW5rbm93biIsImFjdGl2ZV9hY2NvdW50X3BsYW4iOiJ1bmtub3duIiwiaXNfc3RhZmYiOmZhbHNlLCJsYXN0X2xvZ2luX2Vwb2NoIjoiIiwiZGF0ZV9qb2luZWRfZXBvY2giOiIiLCJhY2NvdW50X2pvaW5lZF9lcG9jaCI6IiJ9 @ https://cloud-ui.cdn.getdbt.com/dbt-ui/cloud-ui/assets/index-BZ-08e_P.js:82
+[    5003ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cloud.getdbt.com/api/v3/accounts/?include_related=[]:0
+[    5117ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://cloud.getdbt.com/api/v3/user-preferences/:0

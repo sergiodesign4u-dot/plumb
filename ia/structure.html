@@ -70,7 +70,7 @@
           <tr><td><strong>T1. Object detail, the read surface</strong></td><td>2.1 to 2.10</td><td>10</td><td>10</td><td><strong>Collected</strong></td></tr>
           <tr><td><strong>T2. Listing with search</strong></td><td>3.1, 4.1, 4.2, 4.3</td><td>4</td><td>4</td><td><strong>Collected</strong></td></tr>
           <tr><td><strong>T3. Form and editor</strong></td><td>3.2 to 3.4, 4.4 to 4.7</td><td>7</td><td>7</td><td><strong>Collected</strong></td></tr>
-          <tr><td>T4. Gate (SSO)</td><td>1.1 to 1.3</td><td>3</td><td>3</td><td>In the round</td></tr>
+          <tr><td><strong>T4. Gate (SSO)</strong></td><td>1.1 to 1.3</td><td>3</td><td>3</td><td><strong>Collected</strong></td></tr>
           <tr><td>T8. System page</td><td>7.1 to 7.4</td><td>4</td><td>2</td><td>In the round</td></tr>
           <tr><td>T6. Public landing</td><td>6.1, 6.2, 6.3</td><td>3</td><td>0</td><td>6.1 only, as the SEO reference</td></tr>
           <tr><td>T5. Account settings</td><td>5.1, 5.2</td><td>2</td><td>0</td><td>Deferred</td></tr>
@@ -139,6 +139,26 @@
     <p><strong>An open question closed here.</strong> Node 0.4 asked what "expected hourly" says when no cadence is known. The domain answer is that <strong>freshness is configured, not discovered</strong>: PowerMetrics learns it from a webhook the customer calls or a cache TTL the customer picks. So the expected-cadence field the base layer put in the connection form is a requirement rather than an assumption. The other half, how old is old, stays open.</p>
 
     <p><strong>One silent-wrong-number generator worth naming.</strong> Their documentation warns that the first day of the week and the time zone must match the warehouse, or weekly figures come out wrong without anything looking broken. That is precisely the failure this product sells against, so in ours it is a stated assumption of the connection rather than a setting somebody has to go and find.</p>
+
+    <h3>T4, the gate: the first type whose domain half is public</h3>
+
+    <p>Competitor sign-in pages need no account to look at, so both domain sources here were <strong>opened live rather than read about</strong>, and the comparison column is a real comparison instead of a barrier.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Source</th><th>Kind</th><th>What is actually on the page</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://cloud.getdbt.com/login">dbt Cloud sign-in</a></td><td>Domain, live, HARD competitor</td><td>Heading, a notice for people arriving from the extension, email, password, reset link, Continue, a legal line, a route to create a company account. <strong>No SSO control anywhere on the page</strong></td></tr>
+          <tr><td><a href="https://cubecloud.dev/auth">Cube Cloud sign-in</a></td><td>Domain, live, SOFT competitor</td><td>Language selector, email, password, Forgot password, Sign in, GitHub, Google, and last a "single sign-on" link that reveals a field. <strong>SSO is fifth</strong></td></tr>
+          <tr><td><a href="https://refero.design/pages/3775da7a-b67a-4c79-818f-b78dcffd8005">Riverside SSO</a></td><td>Craft, outside the category</td><td>Work email as the field, and the error for an address not recognised for SSO. That specific case is what keeps our failure state from being a generic "something went wrong"</td></tr>
+          <tr><td><a href="https://refero.design/pages/af3d65d1-4b70-4fb8-af79-cd2b30acf69c">Sketch SSO</a></td><td>Craft, outside the category</td><td>A single-route gate is a normal page rather than a stripped one. Their field is a workspace shortname, which we refuse: it is something a person must be told and then remember</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The comparison, stated plainly.</strong> Both competitors sell into US B2B, where the research records that SSO is asked about on the first call. In one the SSO route is fifth and in the other it is not on the page. <strong>Ours is the only route, and there is no password field to fail on.</strong> That is not austerity: no password means no reset, no expiry and no rotation, which is three fewer nodes than a conventional gate.</p>
+
+    <p><strong>One line worth copying from dbt verbatim:</strong> "By signing in, you agree to dbt Cloud's Terms of Service unless a prior agreement is in effect." At this company size the contract is usually signed before anybody logs in, and boilerplate that ignores that is wrong on its face.</p>
   </section>
 
   <footer class="note">

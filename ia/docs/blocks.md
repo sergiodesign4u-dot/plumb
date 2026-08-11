@@ -256,3 +256,66 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 **3.3 and 4.5, running:** progress in place, naming what is being tried, no modal. **3.4 and 4.6, failed:** the banner at the top saying the attempt failed, the inline message on the field that caused it, and **the form still filled in**.
 
 **Checked against rule 3.** D5 opens on a table picker and never asks what the metric means. R7 has no meaning field at all because a database resource has no meaning. R8 is a modal. R9 is a multi-step KYC flow. **The definition in words as the first field appears in none of them**, and it is the whole point of ours.
+
+---
+
+## T4. The gate
+
+**Nodes:** 1.1 sign in through SSO, 1.2 the identity provider is answering, 1.3 authentication failed. Three nodes, all MVP.
+
+**The first type in this bank whose domain half is public.** Competitor sign-in pages need no account to look at, so both domain sources below were opened live rather than read about, and **the "where we are better" column is a real comparison here** instead of a barrier.
+
+**Sign in is a gate, not a place.** That line is already in the traceability matrix as the reason 1.1 carries no X against any job while not being an orphan, and it is the standard every block below is judged against.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D7 | dbt Cloud sign-in, `cloud.getdbt.com/login` (redirects to `auth.cloud.getdbt.com`). Screen: `research/screens/ui-dbt-login.png` | **Domain, live page, HARD competitor** | 2026-08-12, this session |
+| D8 | Cube Cloud sign-in, `cubecloud.dev/auth`. Screen: `research/screens/ui-cube-login.png` | **Domain, live page, SOFT competitor** | 2026-08-12, this session |
+| R10 | Sketch SSO shortname, `refero.design/pages/af3d65d1-4b70-4fb8-af79-cd2b30acf69c` | Craft, an SSO-only gate with an error state | 2026-08-12 |
+| R11 | Riverside SSO, `refero.design/pages/3775da7a-b67a-4c79-818f-b78dcffd8005` | Craft, SSO with an unrecognised-email error | 2026-08-12 |
+| R12 | Loom sign-in, `refero.design/pages/1d97431a-469e-46df-a25b-3ccbb31d09b5` | Craft, the maximal version of this page | 2026-08-12 |
+
+### What the live pages actually show, since this is the part usually taken from memory
+
+**dbt Cloud, in order:** heading "Sign in", the line "Login to dbt Cloud.", a contextual notice for people arriving from the dbt extension, email, password with a show-and-hide control, "Reset password", "Continue", a legal line reading *"By signing in, you agree to dbt Cloud's Terms of Service unless a prior agreement is in effect"*, and a route to create a company account. **There is no SSO control on this page at all.**
+
+**Cube Cloud, in order:** a language selector, "Welcome back!", a sign-up link, email, password, "Forgot password?", "Sign in", then "Sign In with GitHub", "Sign In with Google", and last a "single sign-on" link that reveals a field and a "Log in via SSO" button.
+
+**The comparison, stated plainly.** Both of these sell into US B2B, where `research.md` records that SSO is asked about on the first call. **In one the SSO route is fifth, and in the other it is not on the page.** Ours is the only route, and the page has no password field to fail on.
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Where we are better, and why |
+| --- | --- | --- | --- | --- | --- |
+| D7, D8 | **Email and password fields** | **DO NOT TAKE, at all** | Nothing | Out | The tech hypothesis already commits to OIDC and SAML through a provider. A password field we do not use is an attack surface, a support queue and a reset flow, and every one of those is a node this stage would have to write |
+| D7 | **"Reset password" link** | DO NOT TAKE | Nothing | Out | Falls with the field above. **This is the clearest saving in the type:** no password means no reset, no expiry, no rotation, and three fewer nodes than a conventional gate |
+| D8 | **GitHub and Google buttons above the SSO link** | DO NOT TAKE | Nothing | Out | A personal account signing into a company workspace is the thing SSO exists to prevent. Our secondary persona is an employee whose company has an identity provider |
+| D7, D8 | **SSO placed last, or not placed at all** | **DO DIFFERENTLY, and it is the whole point of 1.1** | P2, precondition of R5 and R2 | MVP | Both competitors treat the enterprise route as the exception. For a product whose buyer imposes SSO before the security review, the exception route is the main one |
+| D7 | **A contextual notice above the fields, explaining why an account may already exist** | TAKE the slot | P2 | MVP | A gate has exactly one moment to explain an unexpected situation, and it is before the action rather than after it fails |
+| D7 | **A legal line under the action** ("by signing in, you agree to the Terms, unless a prior agreement is in effect") | TAKE | Legal, and node 0.2 | MVP | The clause about a prior agreement is worth copying: in US B2B at this size the contract is usually signed before anybody logs in, and boilerplate that ignores that is wrong on its face |
+| D7, D8 | **A route to create an account, on the sign-in page** | DO NOT TAKE in MVP | Nothing | ПОТІМ | Self-serve sign-up is an acquisition mechanism and cluster 6 is entirely ПОТІМ. Recorded rather than dropped: when it arrives, it arrives here |
+| D8 | **Language selector** | DO NOT TAKE | Nothing | Out | One language, English. The project boundary settles this and no node multiplies by language |
+| R10 | **An SSO-only page with one field and one action** | TAKE as the shape | P2 | MVP | Confirms from outside the category that a gate with a single route is a normal page rather than a stripped one |
+| R10 | **A workspace shortname as the field** | DO NOT TAKE | Nothing | Out | A shortname is something a person has to be told and then remember. Their work email routes them without asking them to know anything |
+| R11 | **Work email as the field, and the error when it is not recognised for SSO** | **TAKE, both** | P2, node 1.3 | MVP | This is the real failure of an SSO gate: not a wrong password but an address that belongs to no configured workspace. **Naming that specific case is what stops 1.3 being a generic "something went wrong"** |
+| R11 | **"Back to log in" as a route out of the error** | TAKE | P2, node 1.3 | MVP | The flow critique already required that authentication failure has a route out. This is what it is |
+| R12 | **Five provider buttons, a divider, an email field and a disabled Continue** | DO NOT TAKE | Nothing | Out | The maximal version of this page, kept in the bank as the ceiling we are not building towards. Every provider added here is another way for the wrong identity to enter a company workspace |
+| R12 | **The primary action disabled until the field is valid** | DO DIFFERENTLY | P2 | MVP | A disabled button with no stated reason is a dead end that looks like a bug. Ours stays enabled and answers on submit, which is also what makes 1.3 reachable |
+
+### Our composition
+
+1. **Product name**, small, because a gate is not a landing page
+2. **Heading**, one line
+3. **Work email**, one field
+4. **Continue with SSO**, one action
+5. **A contextual notice slot**, used only when there is something true to say
+6. **The legal line**, with the prior-agreement clause
+7. **Footer** (node 0.2)
+
+**1.2, the identity provider is answering:** progress in place, saying whose answer is being waited for, and no cancel that strands somebody between two systems.
+
+**1.3, failed:** the reason named, and **the case that matters named separately**, which is an address belonging to no configured workspace. One route back.
+
+**Checked against rule 3.** D7 has no SSO at all, D8 buries it fifth, R10 asks for a shortname, R12 offers five providers. **A single-route SSO gate with a work email and no password appears in none of the four**, and what makes it ours is a decision about who signs in rather than a preference about layout.
