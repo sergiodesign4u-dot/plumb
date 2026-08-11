@@ -167,6 +167,66 @@ Different input from the matrix, as required: the inventory is the Solutions blo
 
 ---
 
+## Assumptions and open risks
+
+Critique of `personas.md` and `jtbd.md` in two instruments, 2026-08-11. Codex ran first, blind and read-only, checking both files against `research.md`; the parallel pass covered the classes that need the product rather than the text. Neither set saw the other before merging. Nothing here is fixed yet: repairs happen at step 6, after the follow-up research, and each one is re-read in the file before it is touched.
+
+**16 findings. Codex found 9 that the first pass missed, the first pass found 3 Codex could not see, 4 were found by both.**
+
+### Divergences first: lines called confirmed that the second instrument found unfooted
+
+This is the expensive part of the second instrument, and all five are the same mistake in different places: **market evidence for a gap was written up as market evidence for a person's behaviour.**
+
+| # | Where | Called | Codex found | Who |
+| --- | --- | --- | --- | --- |
+| 1 | `jtbd.md`, main job | Support: market | The market proves the gap exists, not that a person hires this job. The behaviour itself is the riskiest assumption | both |
+| 2 | `personas.md:48` | Market fact | "No public seat price" was widened into "an analyst cannot self-serve an evaluation". Our own file records Sifflet offering "Start for Free Now" | Codex |
+| 3 | `personas.md:49` | Market fact | One vendor's incident model carrying an assignee was widened into "trust today attaches to a person, not to a system" | Codex |
+| 4 | `jtbd.md:137`, `personas.md:141` | Market fact | "In all fifteen" where the source says shown for five, inferred for ten. The personas version is worse: it says catalogs exist in all fifteen, and Monte Carlo, Sifflet, Datadog, Grafana and Cube are not catalogs | both, different sentences, one cause |
+| 5 | `jtbd.md:114`, `:116` | Signal for an importance score | Our own MVP scope was used as the signal. That a mechanism is planned is evidence about us, not about how much a job matters to a person | Codex |
+
+### The full table
+
+| # | Class | Where | Finding | Who found |
+| --- | --- | --- | --- | --- |
+| 1 | Divergence | `jtbd.md` main job | Support labelled market; the market supports the gap, not the hiring | both |
+| 2 | Divergence | `personas.md:48` | No public price widened to cannot be evaluated | Codex |
+| 3 | Divergence | `personas.md:49` | One assignee widened to trust attaches to a person | Codex |
+| 4 | Divergence | `jtbd.md:137`, `personas.md:141` | Five documented surfaces widened to all fifteen; catalogs claimed for products that are not catalogs. **This one holds the primary choice** | both |
+| 5 | Divergence | `jtbd.md:114`, `:116` | Importance scored from our own scope rather than from a signal about people | Codex |
+| 6 | Divergence | `jtbd.md:73`, `:116` | R5 described as the job activation depends on, next to a definition that calls writing a definition setup rather than activation. True as a dependency, ambiguous as written | Codex |
+| 7 | Divergence | `jtbd.md:112` | R1 scored 1 for P2 on the signal "they usually are the answerable person", which exists nowhere in the research | both |
+| 8 | No footing | `personas.md:127` | Team size 1 to 5 turned into "there is no rota", and 50 to 300 turned into "no data steward role exists". The second is invented outright, and it decides that ownership is one name rather than a workflow | both |
+| 9 | No footing | `personas.md:109` | "A lineage graph is not readable to them" stated as fact about our reader. **Corrected at verification:** `research.md` section 6 does carry "requires a mental model of the stack", so the property is footed; what is unfooted is that our specific reader fails that bar | Codex |
+| 10 | No footing | `jtbd.md:37` | R1 asserts that doubt goes into a channel today, while `personas.md` lists that as one of three alternatives and marks which one happens as `[?]` | Codex |
+| 11 | No footing | `jtbd.md:69` | R5 labelled market-supported, where the market shows a product shape and not a person's motivation | Codex |
+| 12 | No footing | `personas.md:32` | Buyer's short security review stated without `[?]` while neighbouring lines in the same list carry it | Codex |
+| 13 | Orphan | `personas.md:79` | OQ3 and OQ7 were excluded as not about people, but both name a data lead as addressee. Their human half never reached the personas | Codex |
+| 14 | No footing | `personas.md:107` | The list of what convinces the reader is derived from how well **other products** score in the benchmark, not from anything our reader said. It decides what the card carries | Claude |
+| 15 | No footing | `personas.md:107` | "They do not choose the product, they choose whether to trust this number" is an inference stated as fact. A reader can also simply refuse the tool | Claude |
+| 16 | No footing | `personas.md:95`, `:113` | "The flow starts at one number opened from a link" and "the entry screen is search" are design inferences drawn from a brief-only trigger. They decide the first screen of both flows | Claude |
+| - | Negative check | both files | No persona without jobs and no job without a persona. Confirmed by Codex, and it is worth recording that a class came back empty | Codex |
+
+### The most dangerous of them, by what they decide
+
+Ordered by what breaks if the line is wrong, not by how wrong it is.
+
+1. **Finding 4** decides the primary persona. The argument for the reader rests on catalogs being universal and unvisited; the universal half is not true as written.
+2. **Finding 16** decides the first screen of both flows, and through it the shape of the IA at 03a.
+3. **Finding 14** decides what the card carries, which is the product.
+4. **Finding 8** decides that ownership is one name rather than a workflow.
+5. **Findings 1, 5 and 7** decide the MVP core, since importance scores feed it directly.
+
+### Three targeted questions for the follow-up research, most dangerous first
+
+| # | Question | Why it is the most dangerous | Where to look, public and pre-login |
+| --- | --- | --- | --- |
+| 1 | **What surface do these people read numbers in today, and does a business reader arrive at a number through a link somebody sent, or by opening a dashboard themselves?** | It is the footing of B1, of the first-screen decision and of the whole pattern choice. If they open dashboards themselves, the destination problem is smaller than we claimed and the catalog pattern comes back into play | Practitioner forums where stacks are described in passing (r/dataengineering, r/analytics, r/BusinessIntelligence), public dbt community discussion, and review sites where reviewers describe how business users consume numbers (G2 and Capterra entries for Looker, Metabase and PowerMetrics) |
+| 2 | **How do people talk about being wrong with a number in front of others: does the check happen before or after being contradicted, and is checking visible to anyone else?** | It closes the riskiest assumption from the reader's side, plus the social job that is currently a hypothesis and the entire convincing and repelling list | Review mining on G2 for the observability products, where reviewers describe real incidents, plus forum threads about wrong numbers in board decks and reporting |
+| 3 | **Who owns a metric definition at a company of 50 to 300, and does the title "data lead" exist there at all?** | It decides whether ownership is one name or a workflow, and it hits the primary persona directly: if there is no such role, P2 is a different person than we drew | Public job postings from companies of that size, which name titles and duties in the open, and vendor persona pages that already name the roles they sell to (Secoda names Data Leads) |
+
+---
+
 ## What this file hands forward
 
 - **The main job** is read by CJM step 1, which takes the focus of one primary persona times one main job, and by 03a steps 1 to 5, where a screen without a job is an orphan.
