@@ -72,9 +72,9 @@
           <tr><td><strong>T3. Form and editor</strong></td><td>3.2 to 3.4, 4.4 to 4.7</td><td>7</td><td>7</td><td><strong>Collected</strong></td></tr>
           <tr><td><strong>T4. Gate (SSO)</strong></td><td>1.1 to 1.3</td><td>3</td><td>3</td><td><strong>Collected</strong></td></tr>
           <tr><td><strong>T8. System page</strong></td><td>7.1 to 7.4</td><td>4</td><td>2</td><td><strong>Collected</strong></td></tr>
-          <tr><td>T6. Public landing</td><td>6.1, 6.2, 6.3</td><td>3</td><td>0</td><td>6.1 only, as the SEO reference</td></tr>
-          <tr><td>T5. Account settings</td><td>5.1, 5.2</td><td>2</td><td>0</td><td>Deferred</td></tr>
-          <tr><td>T7. Content, legal, support</td><td>6.4 to 6.7</td><td>4</td><td>0</td><td>Deferred</td></tr>
+          <tr><td><strong>T6. Public landing</strong></td><td>6.1, 6.2, 6.3</td><td>3</td><td>0</td><td><strong>Collected for 6.1</strong>, the SEO reference</td></tr>
+          <tr><td>T5. Account settings</td><td>5.1, 5.2</td><td>2</td><td>0</td><td>Deferred, not lost</td></tr>
+          <tr><td>T7. Content, legal, support</td><td>6.4 to 6.7</td><td>4</td><td>0</td><td>Deferred, not lost</td></tr>
           <tr><td>T0. Global frame</td><td>0.1 to 0.4</td><td>4</td><td>4</td><td>Done at steps 2 and 3</td></tr>
         </tbody>
       </table>
@@ -180,7 +180,36 @@
 
     <p><strong>The 500 gets a block that appears in none of the sources:</strong> what is safe to assume about the number they were looking at. The answer is nothing, because we did not get it. An error page in a trust product has to say whether what it showed can still be believed.</p>
 
-    <p><strong>Real data for the cookie question, which was left as a named discrepancy.</strong> dbt Labs runs a full consent platform on its marketing site, with "Accept All Cookies", "Personalize My Choices" and a searchable vendor list. Cube shows a US visitor no banner at all. <strong>Two live US B2B data companies, two opposite answers</strong>, so the ПОТІМ label on the cookie notice is a genuine choice rather than an oversight. What stays refused is the shape: a modal about tracking on top of a card that promises we store nothing about the reader would be the worst possible first contact.</p>
+    <p><strong>Real data for the cookie question, which was left as a named discrepancy.</strong> dbt Labs runs a full consent platform on its marketing site, with "Accept All Cookies", "Personalize My Choices" and a searchable vendor list. Secoda shows a plain "We use cookies" banner. Cube shows a US visitor nothing at all. <strong>Three live US B2B data companies, and two of the three show a banner</strong>, so the ПОТІМ label on the cookie notice is a genuine choice rather than an oversight, and step 7 gets evidence instead of an assumption. What stays refused is the shape: a modal about tracking on top of a card that promises we store nothing about the reader would be the worst possible first contact.</p>
+
+    <h3>T6, the public landing: the only page in this stage that SEO can attach to</h3>
+
+    <p>One node, 6.1, in the round because <strong>nothing in the MVP subset is indexed</strong> and the SEO layer would otherwise have no subject. It also shares the canonical card component with T1.</p>
+
+    <div class="tw">
+      <table>
+        <caption>The structural SEO layer, read off the live pages rather than assumed</caption>
+        <thead><tr><th></th><th><a href="https://www.getdbt.com/">dbt Labs</a></th><th><a href="https://www.secoda.co/">Secoda</a></th></tr></thead>
+        <tbody>
+          <tr><td>H1</td><td>One, a two-line brand statement</td><td>One, "The AI platform for data and analytics"</td></tr>
+          <tr><td>Canonical</td><td>Not found on the page</td><td>Present</td></tr>
+          <tr><td>Open Graph</td><td>Partial</td><td>title, description, image, type</td></tr>
+          <tr><td><strong>Structured data</strong></td><td><strong>None. Zero ld+json blocks</strong></td><td><strong>One block, type CreativeWork</strong>, the generic default a site builder emits</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Both competitors ship effectively no product structured data.</strong> That is a cheap and real advantage in the layer this stage owns, and it is exactly the kind of thing that is invisible from a screenshot and only appears because the page was opened.</p>
+
+    <p><strong>The row this type turns on.</strong> Every source puts a product screenshot or a framed demo image beside the headline. <strong>Ours is the real card component, live, with a real metric in it.</strong> A product whose claim is that a number carries its provenance can prove that claim in its own hero instead of illustrating it.</p>
+
+    <p><strong>Two refusals worth naming.</strong> dbt opens on corporate news and Secoda opens on borrowed authority ("As seen on TV"). Borrowed authority is the opposite of what this product sells, since we are asking people to stop trusting numbers because of where they appeared.</p>
+
+    <h3>What this bank does not cover</h3>
+
+    <p><strong>Two types deferred, six nodes, all ПОТІМ:</strong> account settings, and content, legal and support. Neither blocks anything in the MVP round, and T7 will need its own domain pass when it comes, because legal pages have a template map rather than a composition.</p>
+
+    <p><strong>The confidence in this bank is not even, and that is carried forward rather than smoothed over.</strong> For T1, T2 and T3, which hold 21 of the 30 MVP nodes, the domain half was documentation rather than product, because the surface is behind a login we do not pass. Documentation describes an interface and shows selected screenshots of it. <strong>Density, behaviour at a narrow viewport, and what a screen feels like in the hand remain unknown for those three</strong>, so stage 04 should treat their compositions as structure rather than as evidence about experience. For T4, T8 and T6 the competitor page was opened live, and only there does the comparison column mean what it says.</p>
   </section>
 
   <footer class="note">

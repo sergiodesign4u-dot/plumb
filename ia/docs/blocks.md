@@ -358,7 +358,7 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 | D11 | **Not-found rendered as a state inside the app shell, not a separate page** ("The resource can't be found. Secoda may be out of sync with the source or the resource may not exist in this workspace") | **TAKE the shape for the signed-in half** | P2, node 7.1 | MVP | It names **two different causes** and does not pretend to know which. That is honest, and it is the same discipline node 0.4 applies to states on a number |
 | D11, R15 | **Keeping the shell and the navigation around the error for a signed-in person** | TAKE | P2 | MVP | An analyst who mistypes a URL should not lose their navigation. This splits 7.1 into two renderings of one node, which is a real finding rather than a preference |
 | D12 | **A consent banner with "Accept All Cookies" and "Personalize My Choices", plus a vendor list with search and filters** | **DO NOT TAKE the shape** | Legal, node 7.4 | ПОТІМ, and see the discrepancy below | This is what a consent platform looks like at scale. On the number card it would be **a modal about tracking sitting on top of a page that promises we store nothing about the reader**, which is the worst possible first contact |
-| D12 vs D10 | **The split itself: dbt runs a consent platform, Cube shows no banner at all to a US visitor** | Record, decide at step 7 | Legal | ПОТІМ | Two live US B2B data companies, two opposite answers. The label on 7.4 stays ПОТІМ and this is the evidence that it is a genuine choice rather than an oversight |
+| D12, D10, D14 | **The split itself: dbt runs a full consent platform, Secoda shows a plain "We use cookies" banner, Cube shows a US visitor nothing at all** | Record, decide at step 7 | Legal | ПОТІМ | Three live US B2B data companies, and **two of the three show a banner**. Corrected after collecting T6, where the third data point turned up. The label on 7.4 stays ПОТІМ, and the evidence now says a banner is the majority behaviour rather than an even split |
 | R13 | **Message, one line of explanation, one clearly named recovery action** | TAKE | Both, nodes 7.1 and 7.2 | MVP | Three blocks is the whole page. Everything beyond them is decoration on an error |
 | R13 | **"Back to Safety" as the button label** | DO NOT TAKE the wording | Node 7.1 | MVP | A friendly label that does not say where it goes. Ours names the destination, because a reader with no account needs to know what they are about to get |
 | R14 | **An emoji and a help chat in the corner** | DO NOT TAKE | Nothing | Out | Support chat is not in the MVP, and an emoji is the visual stage's decision, not this one |
@@ -380,3 +380,77 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 **7.4, the cookie notice:** ПОТІМ, with the discrepancy carried openly into step 7.
 
 **Checked against rule 3.** D9 has no route at all, D10 has twenty-five, R13 has one that does not say where it goes, R14 has a chat widget. **Naming two possible causes without choosing between them appears in none of them**, and it is the same rule the state vocabulary already runs on.
+
+---
+
+## T6. The public landing
+
+**Node:** 6.1, the product page. One node, labelled ПОТІМ, **in this round for one reason**: it is the only subject the SEO layer of this stage has. Nothing in the MVP subset is indexed, because the card is public but noindex and everything else is private or transactional.
+
+**It is also the node that shares a canonical component with T1.** The growth mechanic recorded in `CLAUDE.md` is that the public page **renders the real card component**, not a picture of it. That single decision is what separates our hero block from every source below.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D13 | dbt Labs, `getdbt.com` | **Domain, live, HARD competitor** | 2026-08-12, this session |
+| D14 | Secoda, `secoda.co` | **Domain, live, HARD competitor** | 2026-08-12, this session |
+| R16 | Exa product page, `refero.design/pages/f0347b6b-8e02-48f9-ac4c-d7e6d79651b8` | Craft, for the live demo frame | 2026-08-12 |
+| R17 | 1Password Enterprise, `refero.design/pages/976c2a5e-47d2-481c-b71f-fc140dc415d1` | Craft, for the enterprise trust shape | 2026-08-12 |
+| R18 | Cal.com landing, `refero.design/pages/f76f52ca-8b08-450b-ac05-4d781ecdd084` | Craft, outside the category | 2026-08-12 |
+
+### The structural SEO layer, measured rather than assumed
+
+This is the layer this stage owns, so it was read off the live pages instead of guessed.
+
+| | dbt Labs (D13) | Secoda (D14) |
+| --- | --- | --- |
+| H1 | One, a two-line brand statement | One, "The AI platform for data and analytics" |
+| Title | "Deliver trusted data with dbt \| dbt Labs" | "Secoda - The AI platform for data and analytics" |
+| Meta description | Present, generic | Present, specific and readable |
+| Canonical | Not found on the page | Present |
+| Open Graph | Partial | title, description, image, type |
+| **Structured data** | **None. Zero `ld+json` blocks** | **One block, and its type is `CreativeWork`** |
+
+**Both competitors ship effectively no product structured data.** One has none at all; the other has a single generic block of the type a site builder emits by default. **That is a cheap, real advantage available in the structural layer**, and it is the kind of thing that is invisible from a screenshot and only shows up because the page was opened.
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Where we are better, and why |
+| --- | --- | --- | --- | --- | --- |
+| D13, D14 | **Hero: headline, subline, two calls to action** | TAKE the slot | Acquisition | ПОТІМ | Standard and correct. What goes in it is where we differ |
+| D13, D14, R16 | **A product screenshot or a framed demo image beside the headline** | **DO DIFFERENTLY, and this is the row the type turns on** | The growth mechanic in `CLAUDE.md` | ПОТІМ | **Ours is the real card component with a real metric in it, live.** A product whose claim is that a number carries its provenance can prove that claim in its own hero instead of illustrating it. R16 gets closest with a large centred demo frame, and it is still an image |
+| D13 | **A merger and corporate-news banner above the hero** | DO NOT TAKE | Nothing | Out | The first block on the page is about the company rather than the reader's problem |
+| D14 | **"As seen on TV" as the first section after the hero** | DO NOT TAKE | Nothing | Out | Borrowed authority is the opposite of what this product sells. We are asking people to stop trusting numbers because of where they appeared |
+| D13, D14, R17 | **Customer logo wall** | TAKE, ПОТІМ, and only when true | Acquisition | ПОТІМ | Honest and standard. It is empty until there are customers, and an invented one on a trust product would be the worst possible lie |
+| D13 | **Benefit triad: quality and trust, efficiency and cost, better AI** | TAKE the shape, one claim | Acquisition | ПОТІМ | Three claims where one would do. Ours is the strategic dimension: whether a number can be judged where it is read |
+| D14 | **"Powered by your metadata control plane"** | DO NOT TAKE the register | Acquisition | ПОТІМ | Written for a data lead. **Our page has to be readable by the person who never pays**, since the primary persona is the one who arrives at a card |
+| R17, R18 | **FAQ accordion near the bottom** | TAKE | Acquisition, and **SEO: `FAQPage` structured data** | ПОТІМ | The one block on this page with a structural SEO payload, and neither competitor ships it |
+| R17, R18 | **Testimonial carousel** | DO NOT TAKE in this form | Acquisition | ПОТІМ | A carousel hides most of its content from a phone and from a crawler. If quotes are worth showing, they are worth showing stacked |
+| R16 | **A pricing panel inside the landing page** | DO NOT TAKE | Nothing | ПОТІМ | Pricing is node 6.3 and has its own URL, which is also the version that can rank for its own query |
+| D13, D14, R17 | **Multi-column footer with the whole sitemap** | TAKE, as node 0.2 already defines it | Node 0.2 | MVP for the footer itself | Already specified. The landing does not get its own footer |
+| D13 | **No structured data at all** | **DO NOT TAKE** | SEO structure, decided at this stage | ПОТІМ | `SoftwareApplication` plus `Organization` on the product page, and `FAQPage` on the FAQ block. Cheap, and it is the layer this stage exists to decide |
+| D14 | **Canonical and full Open Graph** | TAKE | SEO structure | ПОТІМ | The better of the two on this row, and worth copying rather than improving on |
+
+### Our composition
+
+1. **Hero**: one claim, and **the live card component beside it**, rendering a real metric with its state, its definition and its attribution
+2. **The problem in one block**: two people, two numbers, half an hour
+3. **What the product is**: the definition, the states, the attribution, the link. Four things, each one sentence
+4. **Who it is for**, naming the reader first and the analyst second
+5. **Trust**: metadata only, no copy of customer rows, with a route to node 6.2
+6. **FAQ**, carrying `FAQPage`
+7. **One call to action**
+8. **Footer** (node 0.2)
+
+**Checked against rule 3.** D13 opens on corporate news, D14 opens on borrowed authority, R16 puts pricing inside the page, R17 and R18 lead with logos and testimonials. **A hero whose product image is the running product appears in none of them.**
+
+---
+
+## What this bank does not cover, said plainly
+
+**Two types were deferred and are not lost:** T5, account settings (5.1 and 5.2), and T7, content, legal and support (6.4 to 6.7). Six nodes between them, every one ПОТІМ, and neither blocks anything in the MVP round. When they are collected, T7 in particular will need its own domain pass, because legal pages have a template map rather than a composition.
+
+**The domain half was documentation rather than product for three types.** T1, T2 and T3 hold 21 of the 30 MVP nodes, and for all three the product surface is behind a login that we do not pass. Documentation describes an interface and shows selected screenshots of it, which is not the same as using it. **Everything in those three types about density, behaviour under a narrow viewport, and what a screen feels like in the hand remains unknown**, and stage 04 should treat the compositions above as structure rather than as evidence about experience.
+
+**Three types had a genuinely public domain half:** T4, T8 and T6, where the competitor page was opened live in this session. Those are also the three where the comparison column says "where we are better" rather than naming a barrier, and the difference in confidence between the two halves of this bank is worth carrying forward rather than smoothing over.
