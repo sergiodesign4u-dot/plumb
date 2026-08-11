@@ -109,6 +109,14 @@ Rules from stage 03a, not a retelling of the map. The map itself is `ia/docs/sit
 
 **A state gets no entity.** "As of", "source is down" and "definition changed" are computed and store nothing. *Forbids:* a state acquiring a list, a status, a queue or an assignee, which is exactly how this product would turn into an incident tool.
 
+### Three rules the detail layer runs on
+
+**Stance: 360px is the base, and block priority is reasoned from the phone.** The platform line above already says mobile-first; this adds the number and the direction of reasoning. Desktop and mobile are one fully responsive layout, not two designs. *Forbids:* ordering blocks on a wide canvas and then hiding the surplus on a phone.
+
+**Two layers of IA, and the second one is per page.** The global layer is stage 03a and is done. Every screen now gets its own specification: blocks, states, components, SEO. *Forbids:* a wireframe inventing structure that no node describes. A hole found later is repaired **upwards**, in the IA, not patched in the stage that found it.
+
+**SEO is decided here, ahead of any drawing.** The structural layer, URL and slug, H1 and H2, breadcrumbs, schema, indexing and internal linking, belongs to the IA. The wireframe validates the layout only, and production supplies final copy and real query volumes. Every indexed page carries a complete block; private and transactional zones carry noindex and no schema.
+
 ## Tech stack hypothesis
 
 **Front:** React and TypeScript, Next.js App Router. Reason: Plumb has a public part that needs SEO and server rendering (product page, docs, pricing) and an app behind login. One repo covers both.

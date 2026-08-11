@@ -1,0 +1,847 @@
+- generic [ref=f23e2]:
+  - group [ref=f23e3]:
+    - generic "Contents ▾" [ref=f23e4] [cursor=pointer]
+  - main [ref=f23e5]:
+    - generic [ref=f23e6]:
+      - paragraph [ref=f23e7]: Plumb · Stage 01 · Foundation Research
+      - heading "What we know before anything is designed" [level=1] [ref=f23e8]
+      - paragraph [ref=f23e9]: Fifteen competitors opened page by page, five best-in-class products from other categories scored on one dimension, a strategy sheet, a funnel and a deliberate choice of pattern. This page is the research as it stands, including the parts of it that are still assumptions.
+      - generic [ref=f23e10]:
+        - generic [ref=f23e11]: Assembled 2026-08-11
+        - generic [ref=f23e12]: Sources cited inline, unknowns marked
+        - generic [ref=f23e13]:
+          - text: Full detail in
+          - code [ref=f23e14]: research/docs/
+        - generic [ref=f23e15]: "Updated after publication: follow-up research after personas, section 08"
+    - generic [ref=f23e16]:
+      - generic [ref=f23e17]:
+        - generic [ref=f23e18]: "01"
+        - heading "Introduction" [level=2] [ref=f23e19]
+      - paragraph [ref=f23e20]:
+        - strong [ref=f23e21]: Goal.
+        - text: "Remove the daily friction of reconciliation, when two people arrive at a meeting with different numbers for the same thing and spend half an hour working out whose number is right. The expensive version is quieter: nobody argues, and a decision gets made on a number nobody owns."
+      - paragraph [ref=f23e22]:
+        - strong [ref=f23e23]: Problem.
+        - text: "The definition is already owned by producer tools: dbt, Looker's LookML, Atlan's metrics layer. What nobody owns is the last mile. The number arrives in front of the person who will act on it stripped of everything that would let them judge it."
+      - paragraph [ref=f23e24]:
+        - strong [ref=f23e25]: Approach.
+        - text: Seven levels, from the concrete to the synthesis. Playwright first for every page, documentation used where the product sits behind a login, and no accounts created anywhere.
+      - heading "Five findings" [level=3] [ref=f23e26]
+      - list [ref=f23e27]:
+        - listitem [ref=f23e28]:
+          - strong [ref=f23e29]: Provenance exists in every product and lives nowhere near the reader.
+          - text: "Lineage, catalog and incident are all destinations. To travel to one you must already suspect something, and the person we care about does not suspect anything yet. Strength stated exactly: shown for the five products whose documentation we opened, inferred for the other ten from positioning."
+        - listitem [ref=f23e30]:
+          - strong [ref=f23e31]: Attribution on the claim is unoccupied, confirmed from two independent corpora.
+          - text: In the category, certification is a badge and the name appears only when it is removed. Outside the category, across five products chosen for this dimension, not one scores above 3 on attribution while several score 5 on freshness.
+        - listitem [ref=f23e32]:
+          - strong [ref=f23e33]: The category changed its subject in 2026 and vacated our ground.
+          - text: Fourteen of the fifteen pages opened put AI or agents in the headline.
+          - code [ref=f23e34]: montecarlodata.com
+          - text: now redirects to
+          - code [ref=f23e35]: montecarlo.ai
+          - text: and the observability leader sells "Trust your agents in production".
+        - listitem [ref=f23e36]:
+          - strong [ref=f23e37]: Nobody positions on the moment that matters.
+          - text: Not one of the fifteen pages mentions a phone, a meeting, or the minutes before one. How those interfaces behave at a narrow viewport stays unknown, since none can be reached without an account.
+        - listitem [ref=f23e38]:
+          - strong [ref=f23e39]: There is no reader-pricing norm, only a choice.
+          - text: Unlimited viewers at Secoda, $20 per viewer per month at Cube, a separate Viewer license at Looker, metric caps of 50 and 200 at PowerMetrics.
+      - heading "What the research confirmed, narrowed and changed" [level=3] [ref=f23e40]
+      - paragraph [ref=f23e41]:
+        - strong [ref=f23e42]: Confirmed.
+        - text: The market names the problem in its own words. dbt writes that "inconsistent metrics, slow queries, and scattered tools can quickly erode trust". The positioning line in the brief, that Plumb is not built to visualise data but to make a number defensible, survives contact with fifteen products.
+      - paragraph [ref=f23e43]:
+        - strong [ref=f23e44]: Narrowed, and this is the most useful outcome of opening the documentation.
+        - text: "Two of the four gaps we thought we had are partly occupied. Doubt as a vocabulary already exists: dbt runs four health states. Ownership on the claim already exists as an exception: PowerMetrics names who removed a certification. Our version of both is"
+        - strong [ref=f23e45]: placement
+        - text: ", not invention."
+      - paragraph [ref=f23e46]:
+        - strong [ref=f23e47]: Changed.
+        - text: "Mobile-first stopped being a preference and became the measured gap. Permissions reach into provenance, which touches the free-reader model directly. Column-level lineage sits behind Enterprise at dbt, which says what depth costs. And two decisions the brief could not have anticipated: our doubt is not an incident, and we build no trust score."
+    - generic [ref=f23e48]:
+      - generic [ref=f23e49]:
+        - generic [ref=f23e50]: ■
+        - heading "Lean UX Canvas" [level=2] [ref=f23e51]
+      - paragraph [ref=f23e52]:
+        - text: Jeff Gothelf, Lean UX Canvas v2. Executive summary of the strategy below. Full sheet in
+        - code [ref=f23e53]: research/docs/lean-ux-canvas.md
+        - text: .
+      - generic [ref=f23e55]:
+        - generic [ref=f23e56]:
+          - heading "1. Business problem" [level=5] [ref=f23e57]
+          - paragraph [ref=f23e58]: Prove there is a business in owning the moment of reading, not the definition. The definition is already owned by dbt, LookML and Atlan. If there is no business in the last mile, Plumb is a feature of dbt.
+        - generic [ref=f23e59]:
+          - heading "2. Business outcomes" [level=5] [ref=f23e60]
+          - list [ref=f23e61]:
+            - listitem [ref=f23e62]: "Registry filled: 10 metrics with owner in 7 days"
+            - listitem [ref=f23e63]: "Readers arrive: 8 per paid seat by day 30"
+            - listitem [ref=f23e64]: "Habit: 35% four-week reader return"
+            - listitem [ref=f23e65]: First 10 paying teams
+          - paragraph [ref=f23e66]: Every target a hypothesis, every baseline unknown.
+        - generic [ref=f23e67]:
+          - heading "3. Users" [level=5] [ref=f23e68]
+          - list [ref=f23e69]:
+            - listitem [ref=f23e70]:
+              - strong [ref=f23e71]: Analyst or data lead.
+              - text: Primary user, and the payer
+            - listitem [ref=f23e72]:
+              - strong [ref=f23e73]: Business consumer.
+              - text: Unpaid, underserved by the market
+            - listitem [ref=f23e74]:
+              - strong [ref=f23e75]: Head of data or COO.
+              - text: Buyer, deliberately given no product surface
+        - generic [ref=f23e76]:
+          - heading "4. User outcomes and benefits" [level=5] [ref=f23e77]
+          - paragraph [ref=f23e78]: "Reader: when I am about to paste a number into a deck, I want to know in a few seconds whether it still holds, so I am not caught out in front of leadership."
+          - paragraph [ref=f23e79]: "Analyst: when I am asked for the third time this week why two dashboards disagree, I want to answer once and have the answer stay answered."
+        - generic [ref=f23e80]:
+          - heading "5. Solutions (MVP)" [level=5] [ref=f23e81]
+          - list [ref=f23e82]:
+            - listitem [ref=f23e83]: One source connection, metric registry with definition and owner
+            - listitem [ref=f23e84]: Number card carrying provenance, age and state
+            - listitem [ref=f23e85]: Named states instead of one alarm
+            - listitem [ref=f23e86]: Attribution on every definition
+            - listitem [ref=f23e87]: "Not built: trust score, incident workflow"
+        - generic [ref=f23e88]:
+          - heading "6. Hypotheses" [level=5] [ref=f23e89]
+          - paragraph [ref=f23e90]: Six, in the "if / then / because" form, in section 07 below. One of them is the assumption the whole idea rests on.
+        - generic [ref=f23e91]:
+          - heading "7. Riskiest assumption" [level=5] [ref=f23e92]
+          - paragraph [ref=f23e93]:
+            - strong [ref=f23e94]: A business consumer will read the number in Plumb, before they use it, instead of using the figure they already have in the dashboard, the Slack message or the deck.
+          - paragraph [ref=f23e95]: A value risk, not a feasibility risk. Rendering a card next to a number is not hard. Getting a person under time pressure to check something they did not doubt is the whole bet.
+        - generic [ref=f23e96]:
+          - heading "8. First test" [level=5] [ref=f23e97]
+          - paragraph [ref=f23e98]: "Three companies, five metrics each, static pages made by hand, no build. For two weeks the analyst answers every \"why is this number different\" with the link and nothing else. The signal that decides it is not the open rate: it is whether any reader stopped using a number because the card told them not to. If that never happens in two weeks, the assumption is not confirmed, whatever the open rate says."
+    - generic [ref=f23e99]:
+      - generic [ref=f23e100]:
+        - generic [ref=f23e101]: "02"
+        - heading "Strategy" [level=2] [ref=f23e102]
+      - paragraph [ref=f23e103]: The one-sheet version is above. This is the same strategy with the reasoning attached.
+      - heading "Audience" [level=3] [ref=f23e104]
+      - paragraph [ref=f23e105]: Three parties, one deliberately without a product surface.
+      - list [ref=f23e106]:
+        - listitem [ref=f23e107]:
+          - strong [ref=f23e108]: Analyst or data lead.
+          - text: Primary user and the payer. 28 to 40, company of 50 to 300, data team of 1 to 5. Interrupted several times a week by "why is this number different".
+        - listitem [ref=f23e109]:
+          - strong [ref=f23e110]: Business consumer of the number.
+          - text: "PM, marketer, finance. Unpaid, and the one the market underserves. Not our invention as a persona: Secoda names Data Consumers, Business Operations and Product Managers on its own site."
+        - listitem [ref=f23e111]:
+          - strong [ref=f23e112]: Head of data or COO.
+          - text: Buyer, not user. Kept off the product surface so three personas do not compete for 15 to 30 screens.
+      - paragraph [ref=f23e113]: All three descriptions come from the brief, not from observation. Ages, team sizes, interruption frequency and buyer behaviour are assumptions, and they stay unverified until stage 02 interviews people. They are here because the product was designed against them, not because they were checked.
+      - heading "Business model" [level=3] [ref=f23e114]
+      - paragraph [ref=f23e115]: "Seat-based, analyst seats paid, readers free or near free, no cap on metric count. The reasoning is mechanical rather than generous: the value of Plumb grows with the number of people who see a number with its provenance, so charging per reader taxes our own growth mechanism, and charging per metric taxes activation."
+      - generic [ref=f23e116]:
+        - generic [ref=f23e117]: The riskiest assumption
+        - paragraph [ref=f23e118]: A business consumer will read the number in Plumb, before they use it, instead of using the figure they already have in the dashboard, the Slack message or the deck.
+      - paragraph [ref=f23e119]: "The quiet argument that it really is the risky one: not a single product in the fifteen treats the reading surface as its own product. Either all of them missed it, or the last mile is hard to take."
+    - generic [ref=f23e120]:
+      - generic [ref=f23e121]:
+        - generic [ref=f23e122]: "03"
+        - heading "AARRR" [level=2] [ref=f23e123]
+      - paragraph [ref=f23e124]:
+        - text: Two structural facts shape everything in the table.
+        - strong [ref=f23e125]: "The funnel has two bodies and one wallet:"
+        - text: the analyst pays and never spreads, the reader spreads and never pays, and any metric that averages them looks healthiest exactly when the readers stop coming.
+      - generic [ref=f23e126]:
+        - generic [ref=f23e127]: The activation node
+        - paragraph [ref=f23e128]:
+          - strong [ref=f23e129]: The first time a metric card is opened by somebody other than the person who wrote its definition.
+          - text: Connecting a source, writing a definition and naming an owner are setup, not activation. The activation event and the event predicted by the riskiest assumption are the same event, so the funnel cannot read green while the strategy is wrong.
+      - table [ref=f23e131]:
+        - caption [ref=f23e132]: One metric and one product decision per stage. Every target is a hypothesis, every baseline unknown.
+        - rowgroup [ref=f23e133]:
+          - row [ref=f23e134]:
+            - columnheader "Stage" [ref=f23e135]
+            - columnheader "Whose funnel" [ref=f23e136]
+            - columnheader "The one metric" [ref=f23e137]
+            - columnheader "Target" [ref=f23e138]
+            - columnheader "The one product decision" [ref=f23e139]
+        - rowgroup [ref=f23e140]:
+          - row [ref=f23e141]:
+            - cell "Acquisition" [ref=f23e142]
+            - cell "Analyst" [ref=f23e143]
+            - cell "Qualified workspaces per week" [ref=f23e144]
+            - cell "5/wk" [ref=f23e145]
+            - cell "The public page renders the real card component, not a picture of it" [ref=f23e146]
+          - row [ref=f23e147]:
+            - cell [ref=f23e148]:
+              - strong [ref=f23e149]: Activation
+            - cell [ref=f23e150]:
+              - strong [ref=f23e151]: Reader
+            - cell [ref=f23e152]:
+              - strong [ref=f23e153]: Workspaces where a second person opens a card within 7 days
+            - cell "50%" [ref=f23e154]
+            - cell [ref=f23e155]:
+              - strong [ref=f23e156]: A card is readable through its link with no account
+          - row [ref=f23e157]:
+            - cell "Retention" [ref=f23e158]
+            - cell "Reader" [ref=f23e159]
+            - cell "Four-week reader return" [ref=f23e160]
+            - cell "35%" [ref=f23e161]
+            - cell "One permanent URL per metric, and it is what copy gives you" [ref=f23e162]
+          - row [ref=f23e163]:
+            - cell "Revenue" [ref=f23e164]
+            - cell "Analyst" [ref=f23e165]
+            - cell "Activated workspaces buying a seat within 30 days" [ref=f23e166]
+            - cell "20%" [ref=f23e167]
+            - cell "No metric limits and no reader seat; only analyst write access is billable" [ref=f23e168]
+          - row [ref=f23e169]:
+            - cell "Referral" [ref=f23e170]
+            - cell "Reader" [ref=f23e171]
+            - cell "Distinct readers per paid analyst seat, day 30" [ref=f23e172]
+            - cell "8" [ref=f23e173]
+            - cell "A reader invites a reader in one action, bounded by email domain" [ref=f23e174]
+      - paragraph [ref=f23e175]: Four of those five targets come from nowhere and are placeholders to be replaced by the first cohort. Only the 30-day window has an external anchor, the PowerMetrics 30-day trial. A stated number can be shown wrong; an unstated one cannot, which is the whole reason they are written down.
+      - heading "Two conclusions that cost us something" [level=3] [ref=f23e176]
+      - paragraph [ref=f23e177]:
+        - strong [ref=f23e178]: Retention is the weakest stage and our own scope cut made it so.
+        - text: Notification routing is out of MVP, so nothing reaches out, and the stage rests entirely on a permanent URL plus a card that has something new to say when reopened.
+      - paragraph [ref=f23e179]:
+        - strong [ref=f23e180]: Referral grows readers, not logos.
+        - text: Metrics are internal, cards travel inside a company, so the loop raises readers per seat and produces almost no new accounts. New accounts have to be earned in acquisition.
+      - paragraph [ref=f23e181]:
+        - strong [ref=f23e182]: One requirement this funnel puts on the IA.
+        - text: The retention metric can only tell "came back alone" from "was sent the link again" if the share event is recorded next to the open event. Stage 03a step 4 has to carry that into the flow of the main job, otherwise the metric silently measures the analyst instead of the reader.
+    - generic [ref=f23e183]:
+      - generic [ref=f23e184]:
+        - generic [ref=f23e185]: "04"
+        - heading "Competitors" [level=2] [ref=f23e186]
+      - paragraph [ref=f23e187]: Fifteen products in three groups, all opened 2026-08-11, public and pre-login pages only. HARD is the same product for the same audience, SOFT is a different product solving the same job, ASPIRATIONAL is a category benchmark for craft.
+      - paragraph [ref=f23e188]: Evidence, scroll sideways. Each screenshot proves a stated fact.
+      - generic [ref=f23e189]:
+        - figure "PowerMetrics Public pricing with numbers, metric caps at 50 and 200" [ref=f23e190]:
+          - img "PowerMetrics homepage" [ref=f23e191]
+          - generic [ref=f23e192]:
+            - generic [ref=f23e193]: PowerMetrics
+            - text: Public pricing with numbers, metric caps at 50 and 200
+        - figure "Secoda Names Data Consumers, Business Ops and PMs. Viewers unlimited on all tiers" [ref=f23e194]:
+          - img "Secoda homepage" [ref=f23e195]
+          - generic [ref=f23e196]:
+            - generic [ref=f23e197]: Secoda
+            - text: Names Data Consumers, Business Ops and PMs. Viewers unlimited on all tiers
+        - figure "Select Star Column-level lineage sold as the product" [ref=f23e198]:
+          - img "Select Star homepage" [ref=f23e199]
+          - generic [ref=f23e200]:
+            - generic [ref=f23e201]: Select Star
+            - text: Column-level lineage sold as the product
+        - figure "Atlan The one page of fifteen with no AI in the headline" [ref=f23e202]:
+          - img "Atlan metrics layer page" [ref=f23e203]
+          - generic [ref=f23e204]:
+            - generic [ref=f23e205]: Atlan
+            - text: The one page of fifteen with no AI in the headline
+        - figure "dbt \"Inconsistent metrics ... can quickly erode trust\"" [ref=f23e206]:
+          - img "dbt Semantic Layer page" [ref=f23e207]
+          - generic [ref=f23e208]:
+            - generic [ref=f23e209]: dbt
+            - text: "\"Inconsistent metrics ... can quickly erode trust\""
+        - figure "Looker Viewer is a separate license type; token overage priced from 2026-10-01" [ref=f23e210]:
+          - img "Looker homepage" [ref=f23e211]
+          - generic [ref=f23e212]:
+            - generic [ref=f23e213]: Looker
+            - text: Viewer is a separate license type; token overage priced from 2026-10-01
+        - figure "Omni Pricing page returns 404, per-seat price unknown" [ref=f23e214]:
+          - img "Omni homepage" [ref=f23e215]
+          - generic [ref=f23e216]:
+            - generic [ref=f23e217]: Omni
+            - text: Pricing page returns 404, per-seat price unknown
+        - figure "Cube Viewer priced at $20 per user per month" [ref=f23e218]:
+          - img "Cube homepage" [ref=f23e219]
+          - generic [ref=f23e220]:
+            - generic [ref=f23e221]: Cube
+            - text: Viewer priced at $20 per user per month
+        - figure "Monte Carlo Old domain redirects; the leader now sells agent trust" [ref=f23e222]:
+          - img "Monte Carlo homepage" [ref=f23e223]
+          - generic [ref=f23e224]:
+            - generic [ref=f23e225]: Monte Carlo
+            - text: Old domain redirects; the leader now sells agent trust
+        - figure "Sifflet Promises to show exactly why an issue happened" [ref=f23e226]:
+          - img "Sifflet homepage" [ref=f23e227]
+          - generic [ref=f23e228]:
+            - generic [ref=f23e229]: Sifflet
+            - text: Promises to show exactly why an issue happened
+        - figure "Datadog The bar for dense state in one view" [ref=f23e230]:
+          - img "Datadog homepage" [ref=f23e231]
+          - generic [ref=f23e232]:
+            - generic [ref=f23e233]: Datadog
+            - text: The bar for dense state in one view
+        - figure "Grafana The bar for state at any width" [ref=f23e234]:
+          - img "Grafana homepage" [ref=f23e235]
+          - generic [ref=f23e236]:
+            - generic [ref=f23e237]: Grafana
+            - text: The bar for state at any width
+        - figure "Snowflake Horizon Governance moving into the warehouse" [ref=f23e238]:
+          - img "Snowflake Horizon Catalog page" [ref=f23e239]
+          - generic [ref=f23e240]:
+            - generic [ref=f23e241]: Snowflake Horizon
+            - text: Governance moving into the warehouse
+        - figure "Unity Catalog Automated column-level lineage as a platform feature" [ref=f23e242]:
+          - img "Databricks Unity Catalog page" [ref=f23e243]
+          - generic [ref=f23e244]:
+            - generic [ref=f23e245]: Unity Catalog
+            - text: Automated column-level lineage as a platform feature
+        - figure "Hex Trust framed as grounding, not as showing the working" [ref=f23e246]:
+          - img "Hex homepage" [ref=f23e247]
+          - generic [ref=f23e248]:
+            - generic [ref=f23e249]: Hex
+            - text: Trust framed as grounding, not as showing the working
+      - table [ref=f23e251]:
+        - caption [ref=f23e252]: "The matrix: the five most relevant products."
+        - rowgroup [ref=f23e253]:
+          - row [ref=f23e254]:
+            - columnheader [ref=f23e255]
+            - columnheader "PowerMetrics" [ref=f23e256]
+            - columnheader "Secoda" [ref=f23e257]
+            - columnheader "Atlan" [ref=f23e258]
+            - columnheader "dbt Semantic Layer" [ref=f23e259]
+            - columnheader "Sifflet" [ref=f23e260]
+        - rowgroup [ref=f23e261]:
+          - row [ref=f23e262]:
+            - rowheader "Built on" [ref=f23e263]
+            - cell "The metric as a first-class object" [ref=f23e264]
+            - cell "The asset catalog" [ref=f23e265]
+            - cell "The enterprise metadata graph" [ref=f23e266]
+            - cell "The dbt model" [ref=f23e267]
+            - cell "The pipeline and its incidents" [ref=f23e268]
+          - row [ref=f23e269]:
+            - rowheader "Key mechanism" [ref=f23e270]
+            - cell "Metric Catalog, defined and certified metrics" [ref=f23e271]
+            - cell "Search plus lineage plus governance in one UI" [ref=f23e272]
+            - cell "Metrics layer as the KPI definition standard" [ref=f23e273]
+            - cell "Definitions compiled once, served everywhere" [ref=f23e274]
+            - cell "Catch the issue before the business sees it" [ref=f23e275]
+          - row [ref=f23e276]:
+            - rowheader "Where trust is shown" [ref=f23e277]
+            - cell "On the metric, as certification" [ref=f23e278]
+            - cell "In the catalog, next to the asset" [ref=f23e279]
+            - cell "In the governance layer" [ref=f23e280]
+            - cell "In the API contract" [ref=f23e281]
+            - cell "In the incident" [ref=f23e282]
+          - row [ref=f23e283]:
+            - rowheader "Monetisation" [ref=f23e284]
+            - cell "$24 and $35 per month annually, capped at 50 and 200 metrics" [ref=f23e285]
+            - cell "No public numbers, viewers unlimited" [ref=f23e286]
+            - cell "Contact sales only" [ref=f23e287]
+            - cell "Free developer tier, $100 per seat per month" [ref=f23e288]
+            - cell "No public numbers" [ref=f23e289]
+      - heading "Three common patterns" [level=3] [ref=f23e290]
+      - list [ref=f23e291]:
+        - listitem [ref=f23e292]:
+          - strong [ref=f23e293]: Trust is sold as a property of the answering system, not of the number.
+          - text: Fourteen of the fifteen pages put AI or agents in the headline. The subject of the sentence is always the system that answers.
+        - listitem [ref=f23e294]:
+          - strong [ref=f23e295]: Definition governance lives in a producer tool and the last mile is delegated.
+          - text: No product in this set treats the reading surface as its own product.
+        - listitem [ref=f23e296]:
+          - strong [ref=f23e297]: Pricing is mostly opaque.
+          - text: Seven of the ten HARD and SOFT products publish no seat price.
+      - heading "What the documentation changed" [level=3] [ref=f23e298]
+      - paragraph [ref=f23e299]: The marketing sites hide the product behind a login. The documentation does not, and opening it narrowed two of our four gaps.
+      - generic [ref=f23e300]:
+        - figure "PowerMetrics, metric overview Certification shows who removed it and when. The exception case, not the always-on case" [ref=f23e301]:
+          - img "PowerMetrics metric overview documentation" [ref=f23e302]
+          - generic [ref=f23e303]:
+            - generic [ref=f23e304]: PowerMetrics, metric overview
+            - text: Certification shows who removed it and when. The exception case, not the always-on case
+        - 'figure "dbt Catalog Four health states already exist: Healthy, Caution, Degraded, Unknown" [ref=f23e305]':
+          - img "dbt Catalog documentation" [ref=f23e306]
+          - generic [ref=f23e307]:
+            - generic [ref=f23e308]: dbt Catalog
+            - text: "Four health states already exist: Healthy, Caution, Degraded, Unknown"
+        - figure "Select Star, lineage Only columns that have lineage are shown; no depth control documented" [ref=f23e309]:
+          - img "Select Star lineage documentation" [ref=f23e310]
+          - generic [ref=f23e311]:
+            - generic [ref=f23e312]: Select Star, lineage
+            - text: Only columns that have lineage are shown; no depth control documented
+        - figure "Secoda, lineage Viewers only see lineage for resources they can access" [ref=f23e313]:
+          - img "Secoda lineage documentation" [ref=f23e314]
+          - generic [ref=f23e315]:
+            - generic [ref=f23e316]: Secoda, lineage
+            - text: Viewers only see lineage for resources they can access
+        - figure "Sifflet, incidents Status, severity, assignee, timeline. Ours has none of those" [ref=f23e317]:
+          - img "Sifflet incidents documentation" [ref=f23e318]
+          - generic [ref=f23e319]:
+            - generic [ref=f23e320]: Sifflet, incidents
+            - text: Status, severity, assignee, timeline. Ours has none of those
+      - table [ref=f23e322]:
+        - caption [ref=f23e323]: Gaps, and what each rests on.
+        - rowgroup [ref=f23e324]:
+          - row [ref=f23e325]:
+            - columnheader "Gap" [ref=f23e326]
+            - columnheader "What it rests on" [ref=f23e327]
+        - rowgroup [ref=f23e328]:
+          - row [ref=f23e329]:
+            - cell "Provenance is a destination, so it reaches only readers who already suspect" [ref=f23e330]
+            - cell "Shown in the five documented product surfaces, inferred for the other ten from positioning" [ref=f23e331]
+          - row [ref=f23e332]:
+            - cell "Doubt never reaches a business reader" [ref=f23e333]
+            - cell "Sifflet routes incidents to pipeline owners; dbt's four states live in a catalog" [ref=f23e334]
+          - row [ref=f23e335]:
+            - cell "Attribution on the claim is absent, always-on" [ref=f23e336]
+            - cell "Nobody above 3 of 5 in the benchmark; PowerMetrics names the person only on removal" [ref=f23e337]
+          - row [ref=f23e338]:
+            - cell "Narrow width is unserved, and good trust design does not survive it by default" [ref=f23e339]
+            - cell "Yahoo Finance overflows at a measured 360 while scoring 5 on freshness" [ref=f23e340]
+          - row [ref=f23e341]:
+            - cell "Trust for a human reader is momentarily undefended" [ref=f23e342]
+            - cell "The observability leader moved to agent trust" [ref=f23e343]
+          - row [ref=f23e344]:
+            - cell "No reader-pricing norm exists to inherit" [ref=f23e345]
+            - cell "Unlimited viewers, $20 per viewer, separate Viewer license and metric caps, all in one market" [ref=f23e346]
+      - paragraph [ref=f23e347]: "The honest limit of this round: none of the fifteen shows its product surface without an account. Documentation closed that gap for five and left it open for ten, and even for the five it describes an interface rather than letting anyone walk through it. Every claim about visual density and narrow-width behaviour in this set remains unverified. Refero was checked on 2026-08-11 and does not index this category, so that route is closed."
+    - generic [ref=f23e348]:
+      - generic [ref=f23e349]:
+        - generic [ref=f23e350]: "05"
+        - heading "Benchmark" [level=2] [ref=f23e351]
+      - generic [ref=f23e352]:
+        - generic [ref=f23e353]: The dimension
+        - paragraph [ref=f23e354]:
+          - strong [ref=f23e355]: Trust without leaving the place of reading.
+          - text: Can a person tell how far a number can be trusted, right where they read it, without going anywhere to find out.
+      - paragraph [ref=f23e356]:
+        - text: "Five products from other categories entirely, chosen because this dimension is the core of what each does. Not the aspirational competitors above: those are leaders of our own category, and a benchmark that stays inside the category can only find the category's own ceiling. Narrow-width results are measured, not estimated: the viewport was set so that"
+        - code [ref=f23e357]: clientWidth
+        - text: reads exactly 360, and overflow was read as
+        - code [ref=f23e358]: scrollWidth > clientWidth
+        - text: .
+      - generic [ref=f23e359]:
+        - figure "GitHub Status, 36 Five named component states, four named incident stages, each stamped" [ref=f23e360]:
+          - img "GitHub Status page" [ref=f23e361]
+          - generic [ref=f23e362]:
+            - generic [ref=f23e363]: GitHub Status, 36
+            - text: Five named component states, four named incident stages, each stamped
+        - figure "FlightAware, 32 \"Landed 13 minutes ago\", scheduled printed against actual" [ref=f23e364]:
+          - img "FlightAware live flight page" [ref=f23e365]
+          - generic [ref=f23e366]:
+            - generic [ref=f23e367]: FlightAware, 32
+            - text: "\"Landed 13 minutes ago\", scheduled printed against actual"
+        - figure "Wikipedia, 30 Evidence on the sentence; missing evidence stated in place" [ref=f23e368]:
+          - img "Wikipedia article with citations" [ref=f23e369]
+          - generic [ref=f23e370]:
+            - generic [ref=f23e371]: Wikipedia, 30
+            - text: Evidence on the sentence; missing evidence stated in place
+        - 'figure "NWS forecast, 28 Uncertainty in the value''s own terms: \"A 40 percent chance of showers\"" [ref=f23e372]':
+          - img "National Weather Service point forecast" [ref=f23e373]
+          - generic [ref=f23e374]:
+            - generic [ref=f23e375]: NWS forecast, 28
+            - text: "Uncertainty in the value's own terms: \"A 40 percent chance of showers\""
+        - figure "Yahoo Finance, 26 The canonical number carrying its own age, with the warning placed above it" [ref=f23e376]:
+          - img "Yahoo Finance quote page" [ref=f23e377]
+          - generic [ref=f23e378]:
+            - generic [ref=f23e379]: Yahoo Finance, 26
+            - text: The canonical number carrying its own age, with the warning placed above it
+        - figure "Yahoo at a measured 360 clientWidth 360, scrollWidth 364. The only overflow in the set" [ref=f23e380]:
+          - img "Yahoo Finance measured at 360 px" [ref=f23e381]
+          - generic [ref=f23e382]:
+            - generic [ref=f23e383]: Yahoo at a measured 360
+            - text: clientWidth 360, scrollWidth 364. The only overflow in the set
+      - table [ref=f23e385]:
+        - caption [ref=f23e386]: Eight criteria, scale 1 to 5. All five opened 2026-08-11.
+        - rowgroup [ref=f23e387]:
+          - row [ref=f23e388]:
+            - columnheader "Criterion" [ref=f23e389]
+            - columnheader "Wikipedia" [ref=f23e390]
+            - columnheader "Yahoo" [ref=f23e391]
+            - columnheader "GitHub" [ref=f23e392]
+            - columnheader "FlightAware" [ref=f23e393]
+            - columnheader "NWS" [ref=f23e394]
+        - rowgroup [ref=f23e395]:
+          - row [ref=f23e396]:
+            - cell "1 Freshness adjacency" [ref=f23e397]
+            - cell "2" [ref=f23e398]
+            - cell "5" [ref=f23e399]
+            - cell "5" [ref=f23e400]
+            - cell "5" [ref=f23e401]
+            - cell "2" [ref=f23e402]
+          - row [ref=f23e403]:
+            - cell "2 State vocabulary" [ref=f23e404]
+            - cell "4" [ref=f23e405]
+            - cell "3" [ref=f23e406]
+            - cell "5" [ref=f23e407]
+            - cell "4" [ref=f23e408]
+            - cell "3" [ref=f23e409]
+          - row [ref=f23e410]:
+            - cell "3 Provenance in one action" [ref=f23e411]
+            - cell "5" [ref=f23e412]
+            - cell "2" [ref=f23e413]
+            - cell "4" [ref=f23e414]
+            - cell "3" [ref=f23e415]
+            - cell "3" [ref=f23e416]
+          - row [ref=f23e417]:
+            - cell "4 Uncertainty explicit" [ref=f23e418]
+            - cell "3" [ref=f23e419]
+            - cell "3" [ref=f23e420]
+            - cell "4" [ref=f23e421]
+            - cell "4" [ref=f23e422]
+            - cell "5" [ref=f23e423]
+          - row [ref=f23e424]:
+            - cell "5 Attribution on the claim" [ref=f23e425]
+            - cell "2" [ref=f23e426]
+            - cell "3" [ref=f23e427]
+            - cell "3" [ref=f23e428]
+            - cell "2" [ref=f23e429]
+            - cell "3" [ref=f23e430]
+          - row [ref=f23e431]:
+            - cell "6 Layperson legibility" [ref=f23e432]
+            - cell "4" [ref=f23e433]
+            - cell "4" [ref=f23e434]
+            - cell "5" [ref=f23e435]
+            - cell "5" [ref=f23e436]
+            - cell "4" [ref=f23e437]
+          - row [ref=f23e438]:
+            - cell "7 Survives 360, measured" [ref=f23e439]
+            - cell "5" [ref=f23e440]
+            - cell "2" [ref=f23e441]
+            - cell "5" [ref=f23e442]
+            - cell "5" [ref=f23e443]
+            - cell "5" [ref=f23e444]
+          - row [ref=f23e445]:
+            - cell "8 No false calm" [ref=f23e446]
+            - cell "5" [ref=f23e447]
+            - cell "4" [ref=f23e448]
+            - cell "5" [ref=f23e449]
+            - cell "4" [ref=f23e450]
+            - cell "3" [ref=f23e451]
+          - row [ref=f23e452]:
+            - cell "Total" [ref=f23e453]
+            - cell "30" [ref=f23e454]
+            - cell "26" [ref=f23e455]
+            - cell "36" [ref=f23e456]
+            - cell "32" [ref=f23e457]
+            - cell "28" [ref=f23e458]
+      - generic [ref=f23e459]:
+        - generic [ref=f23e460]: The pattern across all five
+        - paragraph [ref=f23e461]: Nobody scores above 3 on attribution. Every one of these products tells you how old a value is, several tell you how uncertain it is, and not one tells you who is answerable for it. That is the same hole the competitor set has, reached from a completely different direction.
+      - heading "Top three mechanisms into the MVP" [level=3] [ref=f23e462]
+      - list [ref=f23e463]:
+        - listitem [ref=f23e464]:
+          - strong [ref=f23e465]: A named state vocabulary instead of one alarm.
+          - text: From GitHub Status. A stale number, a broken source and a changed definition become three states with three treatments, never one red badge.
+        - listitem [ref=f23e466]:
+          - strong [ref=f23e467]: Evidence on the claim, one action away.
+          - text: From Wikipedia. A provenance marker on the number and on the definition, opening inline rather than routing to a lineage screen.
+        - listitem [ref=f23e468]:
+          - strong [ref=f23e469]: Expectation and reality side by side, with age in relative time.
+          - text: "From FlightAware. On the freshness line: \"as of 14:05, 20 minutes ago, expected hourly\"."
+      - list [ref=f23e470]:
+        - listitem [ref=f23e471]: stale
+        - listitem [ref=f23e472]: source is down
+        - listitem [ref=f23e473]: definition changed after this was saved
+        - listitem [ref=f23e474]: as of 14:05, 20 minutes ago
+      - heading "One mechanism that will not work for us" [level=3] [ref=f23e475]
+      - paragraph [ref=f23e476]:
+        - strong [ref=f23e477]: An aggregate uptime figure, as in "99.42% over the past 90 days".
+        - text: It works for GitHub because a service is either callable or not. A metric is not like that. The same shape would read as "this number is 99.4% correct", which nobody can defend, and it would let the reader skip the only question that matters at the moment of reading. We build no trust score.
+      - paragraph [ref=f23e478]: The three mechanism names, ambiguity aversion, cost of verification and comparison without arithmetic, are framing borrowed from general behavioural literature rather than sources opened in this session. What is observed is what the products do. The named mechanism is our explanation of why it works.
+    - generic [ref=f23e479]:
+      - generic [ref=f23e480]:
+        - generic [ref=f23e481]: "06"
+        - heading "Patterns" [level=2] [ref=f23e482]
+      - paragraph [ref=f23e483]:
+        - strong [ref=f23e484]: "The key task:"
+        - text: decide, in seconds and in the place where the number is being read, whether this number can be put in front of somebody else.
+      - paragraph [ref=f23e485]:
+        - strong [ref=f23e486]: "Entry-point behaviour: the number is read away from the system that produced it."
+        - text: "This is an assumption taken from the brief and from the shape of the market, not an observation, and it is the weakest link in the chain below. It decides the location of the product before any other question is asked: if the reader is inside the producing tool, a catalog, a graph or a board are all legitimate answers; if the reader is outside, all three lose by default."
+      - paragraph [ref=f23e487]:
+        - text: Five patterns were compared, the taxonomy by
+        - strong [ref=f23e488]: where trust information lives
+        - text: ": on the object, in a directory, in the structure behind it, in a dedicated surface of its own, in an answer you ask for."
+      - generic [ref=f23e489]:
+        - generic [ref=f23e490]: Chosen
+        - paragraph [ref=f23e491]:
+          - strong [ref=f23e492]: Evidence on the claim.
+          - text: Trust information is attached to the object being read and travels with it, one line immediately, depth on request.
+      - paragraph [ref=f23e493]:
+        - strong [ref=f23e494]: Three reasons.
+        - text: It is the only locus that survives the entry-point behaviour, and it serves the reader's job verbatim. It is the open gap, confirmed from two independent corpora. And it is the only one of the five still legible at a measured 360 px, which four of the five funnel decisions already assume.
+      - table [ref=f23e496]:
+        - caption [ref=f23e497]: The four rejected patterns, and what survives of each inside the chosen one.
+        - rowgroup [ref=f23e498]:
+          - row [ref=f23e499]:
+            - columnheader "Pattern" [ref=f23e500]
+            - columnheader "Rejected because" [ref=f23e501]
+            - columnheader "Kept for" [ref=f23e502]
+        - rowgroup [ref=f23e503]:
+          - row [ref=f23e504]:
+            - cell "Catalog and search" [ref=f23e505]
+            - cell "A destination, and the reader does not travel before they suspect. For an unpaid reader it is also the emptiest version of itself, since permissions cut the directory down" [ref=f23e506]
+            - 'cell "The analyst''s own side: the registry list and jump-by-name" [ref=f23e507]'
+          - row [ref=f23e508]:
+            - cell "Lineage graph" [ref=f23e509]
+            - cell "Requires a mental model of the stack, degrades as it grows, and is not a proposition at 360 px" [ref=f23e510]
+            - cell "Depth on request, behind the one-line provenance" [ref=f23e511]
+          - row [ref=f23e512]:
+            - cell "Dedicated doubt surface" [ref=f23e513]
+            - cell "A reader who is not on the channel cannot tell an incident that exists from one that does not" [ref=f23e514]
+            - cell "Its named state vocabulary, which moves onto the card" [ref=f23e515]
+          - row [ref=f23e516]:
+            - cell "Conversational answer" [ref=f23e517]
+            - cell "Moves the trust question up a level, cannot obey the bare-number principle, is the most crowded position in the category, and fights our metadata-only architecture" [ref=f23e518]
+            - cell "Nothing in the interface. The agent as a reader of our surface is a separate open question" [ref=f23e519]
+      - paragraph [ref=f23e520]:
+        - strong [ref=f23e521]: The alternative, and the condition under which it wins.
+        - text: "The status board form: named states in a grid, no search, no navigation. It wins if the reader's need turns out to be portfolio-shaped rather than single-number shaped. The signal to watch, named in advance so this stays a decision and not a mood: readers opening three or more distinct cards in one session, repeatedly, on a schedule."
+      - paragraph [ref=f23e522]:
+        - strong [ref=f23e523]: One live counter-reference, kept on purpose.
+        - text: "Resend puts its freshness marker in a small update timestamp footer. That is the pattern our first design principle forbids, in a shipped product, which makes it more useful than an invented bad example. Reader named: stage 06, as an anti-reference when the visual language is searched."
+    - generic [ref=f23e524]:
+      - generic [ref=f23e525]:
+        - generic [ref=f23e526]: "07"
+        - heading "Conclusions" [level=2] [ref=f23e527]
+      - heading "Six hypotheses" [level=3] [ref=f23e528]
+      - generic [ref=f23e529]:
+        - generic [ref=f23e530]:
+          - paragraph [ref=f23e531]:
+            - generic [ref=f23e532]: H1
+            - generic [ref=f23e533]: the riskiest assumption
+          - generic [ref=f23e534]:
+            - term [ref=f23e535]: If
+            - definition [ref=f23e536]: a business reader meets freshness, source state and definition on the same line as the value
+            - term [ref=f23e537]: Then
+            - definition [ref=f23e538]: they will check before acting rather than after being contradicted
+            - term [ref=f23e539]: Because
+            - definition [ref=f23e540]: every existing route to provenance is a destination that requires prior suspicion, across all fifteen products
+        - generic [ref=f23e541]:
+          - paragraph [ref=f23e542]:
+            - generic [ref=f23e543]: H2
+            - generic [ref=f23e544]: states
+          - generic [ref=f23e545]:
+            - term [ref=f23e546]: If
+            - definition [ref=f23e547]: "the three states are named and treated distinctly: stale, source down, definition changed"
+            - term [ref=f23e548]: Then
+            - definition [ref=f23e549]: a number on a bad day stays usable instead of being discarded whole
+            - term [ref=f23e550]: Because
+            - definition [ref=f23e551]: the four-state vocabulary already works where it is deployed and simply never reaches a non-analyst
+        - generic [ref=f23e552]:
+          - paragraph [ref=f23e553]:
+            - generic [ref=f23e554]: H3
+            - generic [ref=f23e555]: attribution
+          - generic [ref=f23e556]:
+            - term [ref=f23e557]: If
+            - definition [ref=f23e558]: every definition carries a name and a date, always visible
+            - term [ref=f23e559]: Then
+            - definition [ref=f23e560]: trust transfers from the individual analyst to the product
+            - term [ref=f23e561]: Because
+            - definition [ref=f23e562]: not one of five best-in-class products scores above 3 on attribution while several score 5 on freshness, so the market proved the adjacency habit but not the accountability one
+        - generic [ref=f23e563]:
+          - paragraph [ref=f23e564]:
+            - generic [ref=f23e565]: H4
+            - generic [ref=f23e566]: reach
+          - generic [ref=f23e567]:
+            - term [ref=f23e568]: If
+            - definition [ref=f23e569]: the card is readable with no account at one permanent URL
+            - term [ref=f23e570]: Then
+            - definition [ref=f23e571]: readers per paid analyst seat rises to the level the pricing depends on
+            - term [ref=f23e572]: Because
+            - definition [ref=f23e573]: there is no reader-pricing norm to violate, and the one competitor whose viewer experience is documented cuts it down
+        - generic [ref=f23e574]:
+          - paragraph [ref=f23e575]:
+            - generic [ref=f23e576]: H5
+            - generic [ref=f23e577]: pricing
+          - generic [ref=f23e578]:
+            - term [ref=f23e579]: If
+            - definition [ref=f23e580]: we never cap metric count
+            - term [ref=f23e581]: Then
+            - definition [ref=f23e582]: registry filling is not penalised at the exact moment it is most fragile
+            - term [ref=f23e583]: Because
+            - definition [ref=f23e584]: the one competitor with public pricing caps at 50 and 200 metrics, placing the cap directly on the behaviour that is our activation
+        - generic [ref=f23e585]:
+          - paragraph [ref=f23e586]:
+            - generic [ref=f23e587]: H6
+            - generic [ref=f23e588]: width
+          - generic [ref=f23e589]:
+            - term [ref=f23e590]: If
+            - definition [ref=f23e591]: the trust signal survives a measured 360 px
+            - term [ref=f23e592]: Then
+            - definition [ref=f23e593]: the check happens in the five minutes before a meeting rather than not at all
+            - term [ref=f23e594]: Because
+            - definition [ref=f23e595]: the one benchmark product that overflowed at 360 is one of the three scoring 5 on freshness, which shows the two qualities are independent and must be verified separately
+      - heading "Open questions" [level=3] [ref=f23e596]
+      - table [ref=f23e598]:
+        - caption [ref=f23e599]: Stage 02 reads this table as its list of candidate holes about people. A question with no addressee does not enter it.
+        - rowgroup [ref=f23e600]:
+          - row [ref=f23e601]:
+            - columnheader "#" [ref=f23e602]
+            - columnheader "Question" [ref=f23e603]
+            - columnheader "Addressee" [ref=f23e604]
+            - columnheader "What changes in the product" [ref=f23e605]
+        - rowgroup [ref=f23e606]:
+          - row [ref=f23e607]:
+            - cell "1" [ref=f23e608]
+            - cell "Do readers pay?" [ref=f23e609]
+            - cell "Me as product owner" [ref=f23e610]
+            - cell "The business model, whether a shared read-only link is in MVP, whether the reading surface must work with no account" [ref=f23e611]
+          - row [ref=f23e612]:
+            - cell "2" [ref=f23e613]
+            - cell "Does charging by metric count actually punish filling the registry?" [ref=f23e614]
+            - cell "Analysts at three target companies" [ref=f23e615]
+            - cell "The pricing lever and the activation metric. If a cap does not hurt adoption, the seats-not-metrics argument loses its ground" [ref=f23e616]
+          - row [ref=f23e617]:
+            - cell "3" [ref=f23e618]
+            - cell "Is an AI agent a second reader of our number?" [ref=f23e619]
+            - cell "A data lead, plus me for the scope call" [ref=f23e620]
+            - cell "Whether provenance needs a machine-readable surface. If yes, the MVP grows an API and the IA grows a branch" [ref=f23e621]
+          - row [ref=f23e622]:
+            - cell "4" [ref=f23e623]
+            - cell "Does the reader check before acting, or only after being contradicted?" [ref=f23e624]
+            - cell "Business consumers at three target companies" [ref=f23e625]
+            - cell "Everything. This is H1, and the first test exists to answer it" [ref=f23e626]
+          - row [ref=f23e627]:
+            - cell "5" [ref=f23e628]
+            - cell "Is the reader's need single-number or portfolio-shaped?" [ref=f23e629]
+            - cell "Business consumers at three target companies" [ref=f23e630]
+            - cell "The chosen pattern. Portfolio-shaped means the status board becomes the product and the card its detail view" [ref=f23e631]
+          - row [ref=f23e632]:
+            - cell "6" [ref=f23e633]
+            - cell "Does an account-free card survive a US B2B security review?" [ref=f23e634]
+            - cell "Head of data or COO as buyer" [ref=f23e635]
+            - cell "Whether the no-account read stays in MVP, and how early SOC 2 Type II work has to start" [ref=f23e636]
+          - row [ref=f23e637]:
+            - cell "7" [ref=f23e638]
+            - cell "What can a free reader be shown when the source's own permissions restrict it?" [ref=f23e639]
+            - cell "Me for the scope call, plus a data lead for the reality" [ref=f23e640]
+            - cell "How deep depth-on-request can go for an unpaid reader" [ref=f23e641]
+          - row [ref=f23e642]:
+            - cell "8" [ref=f23e643]
+            - cell "How often does the reader's need actually arrive?" [ref=f23e644]
+            - cell "Business consumers at three target companies" [ref=f23e645]
+            - cell "The retention instrument. A monthly need makes a four-week return rate noise rather than signal" [ref=f23e646]
+    - generic [ref=f23e647]:
+      - generic [ref=f23e648]:
+        - generic [ref=f23e649]: "08"
+        - heading "Follow-up research after personas" [level=2] [ref=f23e650]
+      - paragraph [ref=f23e651]: Added 2026-08-11 at stage 02 step 6, after this page was published. Targeted collection against the most dangerous question from the personas critique, not a second research round.
+      - paragraph [ref=f23e652]:
+        - strong [ref=f23e653]: The question.
+        - text: What surface do these people read numbers in today, and does a business reader arrive at a number through a link somebody sent, or by opening a dashboard themselves? It is the footing of the entry-point behaviour, of the first-screen decision and of the pattern choice.
+      - heading "What was found" [level=3] [ref=f23e654]
+      - paragraph [ref=f23e655]: Dates are given for the material, not only for the visit.
+      - generic [ref=f23e656]:
+        - generic [ref=f23e657]: dbt Community Forum, thread dated 2019
+        - paragraph [ref=f23e658]: "\"If there is a question you are getting asked frequently and you find yourself pulling the same data for multiple users, then it almost always is a good use of your time to set that up as a dashboard\""
+        - paragraph [ref=f23e659]: "\"most 'business users' like product managers have a lot on their plate already, and beyond understanding / reporting on their domain, it's unlikely most of them will be able to dedicate the time necessary to deeply explore their data or make sense of it\""
+      - generic [ref=f23e660]:
+        - generic [ref=f23e661]: Hacker News, 2021
+        - paragraph [ref=f23e662]: "\"The main problem is that it's not easy to drill down into a metric in most BI tools because the connection between the dashboard and the source data is usually missing\""
+      - paragraph [ref=f23e663]:
+        - strong [ref=f23e664]: What that changes.
+        - text: "Two claims that had rested on our own brief now have a source outside it: the analyst is repeatedly asked the same question, and the business reader does not invest time in digging. One thing is new rather than confirmed: the field's default answer to the repeated question is"
+        - strong [ref=f23e665]: to build a dashboard
+        - text: ", so that is what our registry is hired against, not a competitor product. And the missing link between a number and its source is described from outside the vendor category, which is the first non-vendor voice we have on the central gap."
+      - paragraph [ref=f23e666]:
+        - strong [ref=f23e667]: What it does not change.
+        - text: The question itself is not answered. Nothing found says whether a business reader arrives by a link or opens a dashboard themselves, so the first-screen decision still rests on an assumption.
+      - paragraph [ref=f23e668]:
+        - strong [ref=f23e669]: Routes that failed, recorded so nobody spends them twice.
+        - text: Reddit search returns HTTP 403 without an account. The Metabase community forum was searched on five behavioural queries and carries technical support threads, not consumption behaviour. A general web search on the behavioural phrasing returned unrelated SaaS listings.
+        - strong [ref=f23e670]: "Age caveat:"
+        - text: the two usable sources are from 2019 and 2021. They support the shape of the problem rather than its present intensity, and this market has visibly moved since.
+    - generic [ref=f23e671]:
+      - generic [ref=f23e672]:
+        - generic [ref=f23e673]: "09"
+        - heading "Follow-up research after the CJM critique" [level=2] [ref=f23e674]
+      - paragraph [ref=f23e675]: Added 2026-08-11 at stage 02+ step 6, after this page was published. Recorded here rather than only in the CJM file because it is new outside evidence about the primary persona.
+      - paragraph [ref=f23e676]:
+        - strong [ref=f23e677]: The question.
+        - text: How does a business reader feel while waiting on an answer about a number? It was asked because the CJM critique withdrew the only plotted point on the As-Is emotional curve, a negative of intensity 3, on the grounds that its sources report waiting and not how waiting feels.
+      - paragraph [ref=f23e678]:
+        - strong [ref=f23e679]: "Result on the question: nothing, and the point stayed withdrawn."
+        - text: No public source was found in which a business reader reports their own feeling while waiting on an answer about a number. The As-Is map now carries no emotional intensity at any phase, and says so.
+      - heading "Result off the question, which is where the value landed" [level=3] [ref=f23e680]
+      - paragraph [ref=f23e681]: Hacker News comment 28050270, dated 2021-08-03. The author identifies as a CFO that has used spreadsheets my entire career (30+years). This is the only source in this research spoken in the first person by somebody holding our primary persona's role.
+      - generic [ref=f23e682]:
+        - generic [ref=f23e683]: On waiting
+        - paragraph [ref=f23e684]: "\"To get a SQL/Python (or other programming language) solution requires submitting a request to IT and then waiting two years to work up the priority queue. This is not a complaint against IT and the priority process.\""
+      - generic [ref=f23e685]:
+        - generic [ref=f23e686]: On a stale figure hiding in plain sight
+        - paragraph [ref=f23e687]: "\"you get the scenario the author describes of hard-coded values in cells that once contained formulas. These are almost impossible to find in worksheets with large numbers of tabs and thousands of formulas.\""
+        - paragraph [ref=f23e688]: "\"people really do not track properly what each version contains and what are the true differences\""
+      - paragraph [ref=f23e689]:
+        - strong [ref=f23e690]: What it changes.
+        - text: The second quote gives the "number travels on" phase its first evidenced barrier, which promotes a growth zone the CJM had rejected for having no parent. It is also the first outside support for benchmark criterion 8, no false calm, coming from a person rather than from a product page.
+      - paragraph [ref=f23e691]:
+        - strong [ref=f23e692]: What it does not change.
+        - text: The object is a spreadsheet, not a metric surface, so it is the right population and the wrong artefact. It says nothing about whether a reader returns to a number they saved. And a CFO working in spreadsheets is one data point about where finance people work, not an answer to what surface our reader reads a number in.
+      - paragraph [ref=f23e693]:
+        - strong [ref=f23e694]: Method note worth keeping.
+        - text: The stage 02 round concluded that the Hacker News corpus was exhausted for this question. It was not. This source came up on roughly the thirteenth query phrasing, which is a fact about our queries rather than about the corpus.
+      - generic [ref=f23e695]:
+        - generic [ref=f23e696]: Updated after publication, IA base, stage 03a
+        - paragraph [ref=f23e697]:
+          - text: No new collection happened, and two open questions acquired a precise place in a route, which is what an IA is supposed to do to a research gap.
+          - strong [ref=f23e698]: "What a data lead considers safe to show a reader with no access is now a branch in the main flow:"
+          - text: "either the owner is named and the reader has somebody to ask, or the route is a dead end with no home and nothing to sign into. Both endings are drawn, and the answer decides which one real readers meet. A second half was not in this file before: whether we may show a"
+          - strong [ref=f23e699]: route
+          - text: to reach that person, not only their name.
+        - paragraph [ref=f23e700]:
+          - strong [ref=f23e701]: "And one hole nothing here covers at all:"
+          - text: what happens to a metric whose owner has left the company. The product prevents an unowned metric at creation and prevents nothing afterwards, and we do not track employment. Full detail in
+          - code [ref=f23e702]: research/docs/research.md
+          - text: ", section 10."
+    - generic [ref=f23e703]:
+      - generic [ref=f23e704]:
+        - generic [ref=f23e705]: □
+        - heading "Before and after" [level=2] [ref=f23e706]
+      - paragraph [ref=f23e707]:
+        - text: The research was criticised in two instruments. Codex ran first, blind and read-only, over the source files; a parallel pass covered the one class it cannot do, conclusions that do not follow from any fact above. Sixteen findings confirmed, one withdrawn on verification. The full log is in
+        - code [ref=f23e708]: docs/decisions.md
+        - text: .
+      - table [ref=f23e710]:
+        - caption [ref=f23e711]: Five representative repairs out of sixteen, plus the one that was withdrawn.
+        - rowgroup [ref=f23e712]:
+          - row [ref=f23e713]:
+            - columnheader "Type" [ref=f23e714]
+            - columnheader "Found" [ref=f23e715]
+            - columnheader "Became" [ref=f23e716]
+            - columnheader "Who found it" [ref=f23e717]
+            - columnheader "Status" [ref=f23e718]
+        - rowgroup [ref=f23e719]:
+          - row [ref=f23e720]:
+            - cell "Contradiction" [ref=f23e721]
+            - cell "The canvas handed the funnel \"registry gets filled is activation\", while the funnel defines activation on the reader and explicitly excludes registry filling" [ref=f23e722]
+            - cell "The mapping is stated as not one to one. Activation sits on the reader arriving" [ref=f23e723]
+            - cell "Codex" [ref=f23e724]
+            - cell "Fixed" [ref=f23e725]
+          - row [ref=f23e726]:
+            - cell "Fact without a source" [ref=f23e727]
+            - cell "\"Every product assumes a desktop working session\", against our own note that narrow-viewport behaviour is unknown" [ref=f23e728]
+            - cell "A claim about positioning, which the pages can prove, with behaviour at that width left unknown" [ref=f23e729]
+            - cell "both" [ref=f23e730]
+            - cell "Fixed" [ref=f23e731]
+          - row [ref=f23e732]:
+            - cell "Contradiction" [ref=f23e733]
+            - cell "Retention target 40% in one file, 35% in another, two definitions under one name" [ref=f23e734]
+            - 'cell "One instrument: the four-week return at 35%, owned by the funnel file" [ref=f23e735]'
+            - cell "Codex" [ref=f23e736]
+            - cell "Fixed" [ref=f23e737]
+          - row [ref=f23e738]:
+            - cell "Conclusion without grounds" [ref=f23e739]
+            - cell "\"Provenance is a destination in all fifteen\", where product-surface evidence exists for five" [ref=f23e740]
+            - cell "Shown for five, inferred for ten, said in both places it appears" [ref=f23e741]
+            - cell "Claude" [ref=f23e742]
+            - cell "Fixed" [ref=f23e743]
+          - row [ref=f23e744]:
+            - cell "Orphan" [ref=f23e745]
+            - cell "The requirement to record the share event next to the open event reached no later stage" [ref=f23e746]
+            - cell "Named as an event-model requirement for stage 03a, in the funnel section above" [ref=f23e747]
+            - cell "Codex" [ref=f23e748]
+            - cell "Fixed" [ref=f23e749]
+          - row [ref=f23e750]:
+            - cell "Fact without a source" [ref=f23e751]
+            - cell "\"The head of data appears at the seat purchase, not before\" filed as an unsourced fact" [ref=f23e752]
+            - cell "Left as written" [ref=f23e753]
+            - cell "Codex" [ref=f23e754]
+            - cell [ref=f23e755]:
+              - strong [ref=f23e756]: "Withdrawn at verification:"
+              - text: the line is item 3 under a Hypotheses heading, which Codex read without its heading
+      - generic [ref=f23e757]:
+        - generic [ref=f23e758]: What the second instrument bought
+        - paragraph [ref=f23e759]: "Codex found eight things the first pass missed, six of them in the class that pass had already audited. The common cause in all six: the brief was being treated as a source. It is not a source, it is our own assumption, so every claim about people or the market resting on it walked through as fact. The reverse holds too: not one of the five conclusion-level findings appeared in his table, because each needs the chain from a decision back to the fact that holds it, and that chain is not visible in the text."
+    - paragraph [ref=f23e761]:
+      - text: Plumb, stage 01 of 13. Sources for every claim are in
+      - code [ref=f23e762]: research/docs/research.md
+      - text: and the five level files beside it. Unknowns are marked rather than filled in.
