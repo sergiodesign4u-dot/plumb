@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personas - Plumb</title>
+<meta name="description" content="Two behavioural personas for Plumb, built on the foundation research: the reader who is about to be quoted, and the data lead who is asked.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="_page.css">
+<style>
+  /* page-local only: the persona identity strip, which research.html has no equivalent of */
+  .persona-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 14px; margin:56px 0 4px; }
+  .persona-head h2{ font-size:1.6rem; font-weight:600; margin:0; letter-spacing:-.01em; }
+  @media (min-width:900px){ .persona-head h2{ font-size:1.9rem; } }
+  .tag{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+        padding:3px 9px; border-radius:2px; border:1px solid var(--rule-strong); color:var(--muted); }
+  .tag.primary{ color:#fff; background:var(--accent); border-color:var(--accent); }
+  .persona-rule{ border:0; border-top:1px solid var(--rule-strong); margin:10px 0 18px; }
+  .block{ margin:22px 0; }
+  .block > h4{ margin-top:0; }
+  .status{ font-family:var(--sans); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; }
+  .status.ok{ color:var(--accent); }
+  .status.hyp{ color:var(--stale); }
+  .obs{ display:grid; gap:12px; margin:18px 0 8px; }
+  @media (min-width:900px){ .obs{ grid-template-columns:1fr 1fr; } }
+  .obs .card p{ margin:0 0 8px; font-size:.95rem; }
+  .obs .card p:last-child{ margin:0; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 02 &middot; User Research</p>
+    <h1>Two people, and what we actually know about them</h1>
+    <p class="standfirst lede">Personas here are behavioural hypotheses with a named source, not portraits. There is no primary data about our users yet, so every line traces either to the brief, which is our own assumption, or to an artefact somebody else made. Both are marked.</p>
+    <div class="dateline">
+      <span>Assembled 2026-08-11</span>
+      <span>Two behavioural groups, and the data does not give a third</span>
+      <span>Source: <code>research/docs/personas.md</code></span>
+    </div>
+  </header>
+
+  <!-- Observations ...................................................... -->
+  <section id="observations">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Observations</h2></div>
+
+    <p>What the research says about people, and with what standing. Two origins, and they are not equivalent. <strong>Brief</strong> is `CLAUDE.md`, written before the research, which makes it our assumption rather than a source. <strong>Market</strong> is a competitor page or documentation opened 2026-08-11, which proves what vendors believe about these people, not what a person does.</p>
+
+    <div class="obs">
+      <div class="card">
+        <p class="h-id"><span>Entry trigger</span><span class="status hyp">hypothesis</span></p>
+        <p>The analyst arrives on somebody else's trigger, an inbound "why is this number different". The reader arrives from exposure: a deck, a meeting, a decision with their name on it.</p>
+        <p class="src">Brief. Frequency and surface both unknown.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>The roles are real</span><span class="status ok">confirmed</span></p>
+        <p>Secoda names Data Consumers, Business Operations and Product Managers. Sifflet names Data Users. Monte Carlo lists Data Engineers, Analysts, Governance and CDAOs.</p>
+        <p class="src">Market. What is confirmed is that these roles are addressed, not how they behave.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>What stops the reader</span><span class="status ok">confirmed</span></p>
+        <p>Not unwillingness, placement. Checking is a destination that has to be chosen, and choosing it requires already suspecting something.</p>
+        <p class="src">Market, shown for the five documented product surfaces, inferred for the other ten.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>A vocabulary exists and does not arrive</span><span class="status ok">confirmed</span></p>
+        <p>dbt runs four health states, Healthy, Caution, Degraded and Unknown, inside a catalog a non-analyst has no reason to open.</p>
+        <p class="src">Market, <code>docs.getdbt.com</code>.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>A name appears only as an exception</span><span class="status ok">confirmed</span></p>
+        <p>PowerMetrics shows who removed a certification and when. Not who stands behind the definition every day.</p>
+        <p class="src">Market, <code>support.powermetrics.app</code>.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>The free role sees least</span><span class="status ok">confirmed</span></p>
+        <p>In Looker, Viewer gets folders, boards, dashboards and Looks only. Secoda restricts the lineage graph to what a viewer may access.</p>
+        <p class="src">Market. It limits how much provenance an unpaid reader can be shown.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>Business readers do not dig</span><span class="status ok">confirmed, dated 2019</span></p>
+        <p>"most 'business users' like product managers have a lot on their plate already ... it's unlikely most of them will be able to dedicate the time necessary to deeply explore their data"</p>
+        <p class="src">Follow-up research, dbt Community Forum, thread dated 2019. First source outside our own brief for this.</p>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>What the analyst does instead</span><span class="status ok">confirmed, dated 2019</span></p>
+        <p>"If there is a question you are getting asked frequently ... it almost always is a good use of your time to set that up as a dashboard"</p>
+        <p class="src">Same thread. The field's default answer to the repeated question is a dashboard, which is what our registry is hired against.</p>
+      </div>
+    </div>
+
+    <p class="note">Coverage is uneven and it is worth knowing which way. The best supported slice is how these people choose, because it rests on market fact. The weakest is what they fear, which is almost entirely the brief.</p>
+  </section>
+
+  <!-- P1 ............................................................... -->
+  <section id="p1">
+    <div class="persona-head">
+      <span class="sec-num">P1</span>
+      <h2>The reader who is about to be quoted</h2>
+      <span class="tag primary">Primary</span>
+    </div>
+    <hr class="persona-rule">
+
+    <div class="block">
+      <h4>Context</h4>
+      <p>PM, marketer or finance, 25 to 45, non-technical. Arrives from exposure, not from curiosity: a deck due, a meeting within the hour, a decision with their name on it. <span class="status hyp">hypothesis</span>, from the brief. How often this happens and what surface they read in are both unknown.</p>
+      <p><em>What it answers:</em> the flow does not start at a home page or a search box, it starts at one number opened from a link. That answer is an inference drawn from a brief-only trigger, and it decides the first screen of the primary flow.</p>
+    </div>
+
+    <div class="block">
+      <h4>Jobs</h4>
+      <p>Canonical wording, identical to <code>jtbd.md</code>. No job exists in two editions.</p>
+      <ul>
+        <li><strong>Main.</strong> When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.</li>
+        <li><strong>R1.</strong> When a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person rather than guess who to ask.</li>
+        <li><strong>R4.</strong> When I come back to a number I saved earlier, I want to know whether anything about it changed since, so that an old figure does not travel as a current one. <span class="status hyp">hypothesis</span>, nothing shows that anyone reopens a saved link.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Pains</h4>
+      <p>The number arrives stripped of everything that would let them judge it. Provenance is a destination that has to be chosen, and choosing it requires already suspecting something. The state vocabulary exists in the market and sits where they have no reason to go. Where access is given, the free role sees least.</p>
+      <p class="src">Market, cited in full in <code>personas.md</code>.</p>
+    </div>
+
+    <div class="block">
+      <h4>Choice triggers</h4>
+      <p>Working assumption, not an observation: they do not choose the product, they choose whether to trust this number. A reader can also simply refuse the tool, and nothing rules that out.</p>
+      <p>What we expect to convince them, <strong>derived from how other products score in the benchmark rather than from anything a reader said</strong>: a name and a date on the claim, an age in relative time, a named state instead of a red dash. What we expect to repel: a bare figure, a trust score that cannot be interrogated, a login wall.</p>
+      <p class="src"><span class="status hyp">hypothesis</span> The whole list decides what the card carries, which makes it the most expensive unverified line in this file.</p>
+    </div>
+
+    <div class="block">
+      <h4>Demographic facts, each with its consequence</h4>
+      <ul>
+        <li>Non-technical, so depth on request must be legible without knowledge of the stack. The footed half is that a lineage graph requires a mental model of the stack; that this specific reader fails that bar is unverified.</li>
+        <li>Unpaid, so they cannot be asked to create an account. That is where the account-free card decision comes from.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Mood quote</h4>
+      <p><span class="status hyp">still missing</span> No verbatim reader voice exists in the research and none will be synthesised. The follow-up research found analysts talking <em>about</em> business readers, never a business reader talking. Stage 05 needs a voice, and the only route left to it is talking to one.</p>
+    </div>
+  </section>
+
+  <!-- P2 ............................................................... -->
+  <section id="p2">
+    <div class="persona-head">
+      <span class="sec-num">P2</span>
+      <h2>The data lead who is asked</h2>
+      <span class="tag">Secondary</span>
+    </div>
+    <hr class="persona-rule">
+
+    <div class="block">
+      <h4>Context</h4>
+      <p>28 to 40, data team of 1 to 5 inside a company of 50 to 300. Arrives on somebody else's trigger: an inbound "why is this number different", several times a week. <span class="status hyp">hypothesis</span>, from the brief.</p>
+      <p><em>What it answers:</em> their flow starts from an interruption, so the entry screen is search and jump to a metric, not a dashboard. Same standing as P1's entry, an inference from a brief-only trigger.</p>
+    </div>
+
+    <div class="block">
+      <h4>Jobs</h4>
+      <ul>
+        <li><strong>R2.</strong> When the same question about a number reaches me again, I want to answer it once and have the answer keep answering, so that I stop being the only route to it.</li>
+        <li><strong>R3.</strong> When I change what a number means, I want the people who already used it to find out, so that my correction reaches the decisions it affects.</li>
+        <li><strong>R5.</strong> When I bring a new metric under control, I want to state once what it means and who owns it, so that the definition stops living in somebody's head.</li>
+      </ul>
+      <p class="src">R2 is the analyst's job of main-job weight. <code>jtbd.md</code> records the test for why it is not a second main job.</p>
+    </div>
+
+    <div class="block">
+      <h4>Pains</h4>
+      <p>Manual digging per question. Being a human API to their own data. A reputation that depends on their availability. From the market: definition governance lives in producer tools, certification is a badge, and a name appears only when the badge is removed.</p>
+    </div>
+
+    <div class="block">
+      <h4>Choice triggers</h4>
+      <p>Whether the cost can be judged before a conversation: seven of the ten HARD and SOFT products publish no seat price. Whether the product demands access to rows, where metadata-only is our argument.</p>
+      <p class="src">Market. Corrected during the critique: no public price proves cost cannot be compared without sales, not that the product cannot be evaluated at all.</p>
+    </div>
+
+    <div class="block">
+      <h4>Demographic facts, each with its consequence</h4>
+      <ul>
+        <li>Team of 1 to 5, so we expect no rota and every question landing on the same person, which means the product has to answer in their absence. The team size is from the brief; the absence of a rota is inference.</li>
+        <li>Company of 50 to 300. <strong>Whether a data steward role exists at that size is unknown</strong>, and the earlier claim that it does not was invented and has been removed. Ownership as one name rather than a workflow is therefore a design decision, not a finding.</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h4>Mood quote</h4>
+      <div class="pull">
+        <span class="label">dbt Community Forum, thread dated 2019</span>
+        <p>"If there is a question you are getting asked frequently and you find yourself pulling the same data for multiple users, then it almost always is a good use of your time to set that up as a dashboard"</p>
+      </div>
+      <p>A real practitioner voice rather than a synthesis, and it carries a warning as well as a tone: the default answer to R2 in the field is to build a dashboard, not to write a definition. That is our real competitor for that job.</p>
+    </div>
+  </section>
+
+  <!-- Buyer ............................................................ -->
+  <section id="buyer">
+    <div class="sec-head"><span class="sec-num">&#9633;</span><h2>Not a persona: the buyer</h2></div>
+
+    <p>Head of data or COO. Deliberately given no product surface. They still impose constraints: a trust surface in the IA, SOC 2 Type II, SSO, and the metadata-only claim, plus the open question of whether an account-free card survives a security review.</p>
+
+    <p>Recorded as a <strong>constraint rather than a persona</strong>, and that is not a formality. A third persona would collect its own jobs, its own screens at the IA stage and its own share of MVP scope, and five stages later nobody would remember it was never meant to have any.</p>
+
+    <div class="pull">
+      <span class="label">What the primary mark does</span>
+      <p>A conflict of decisions is resolved in favour of the reader: they carry the higher risk and have fewer levers, since they cannot change the definition, cannot see the pipeline and often cannot log in. The analyst's registry has to be good; it does not get to decide the shape of the card. The price of the choice, stated plainly: the interface is built around the person who never pays.</p>
+    </div>
+  </section>
+
+  <!-- Gaps ............................................................. -->
+  <section id="gaps">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Gaps</h2></div>
+
+    <p>Everything we do not know about these people, with an addressee on every row. Stage 02+ reads this as its list of candidate holes, and a question with no addressee does not enter it.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Rows 1 to 5 are inherited from the open questions in the foundation research. Rows 6 to 12 were produced by the inventory, and rows 13 and 14 by the critique.</caption>
+        <thead><tr><th class="num">#</th><th>Hole</th><th>Addressee</th><th>What it decides</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Does the reader check before acting, or only after being contradicted?</td><td>Business consumers, three companies</td><td>The riskiest assumption itself</td></tr>
+          <tr><td class="num">2</td><td>Is the need single-number or portfolio-shaped?</td><td>Business consumers</td><td>The chosen UX pattern against its alternative</td></tr>
+          <tr><td class="num">3</td><td>How often does the need actually arrive?</td><td>Business consumers</td><td>The retention instrument</td></tr>
+          <tr><td class="num">4</td><td>Does an account-free card survive a US B2B security review?</td><td>Head of data or COO</td><td>Whether the no-account read stays in MVP</td></tr>
+          <tr><td class="num">5</td><td>Does a metric-count cap actually suppress registry filling?</td><td>Analysts</td><td>The pricing lever</td></tr>
+          <tr><td class="num">6</td><td><strong>What surface do they read numbers in today, and do they arrive by link or open a dashboard themselves?</strong></td><td>Both sides</td><td><strong>The first screen of the primary flow.</strong> Attempted at step 6 and not answered</td></tr>
+          <tr><td class="num">7</td><td>Who does the reader ask today, and do they ask at all?</td><td>Both sides</td><td>Whether R1 is a real job or a designed one</td></tr>
+          <tr><td class="num">8</td><td>Does the reader know a definition exists at all?</td><td>Business consumers</td><td>How much the card has to explain before it can be trusted</td></tr>
+          <tr><td class="num">9</td><td>What does a wrong number cost in practice? No failure story from a real company</td><td>Both sides</td><td>The entire motivation model</td></tr>
+          <tr><td class="num">10</td><td>Does the title "data lead" exist at 50 to 300, or is it a founder or an engineering manager?</td><td>Analysts</td><td>Whether P2 is drawn from the right person, and whether ownership is one name</td></tr>
+          <tr><td class="num">11</td><td>How often is the analyst actually interrupted?</td><td>Analysts</td><td>The size of the pain R2 removes</td></tr>
+          <tr><td class="num">12</td><td>Is the analyst the buyer or the influencer?</td><td>Head of data</td><td>Who the public surface has to convince</td></tr>
+          <tr><td class="num">13</td><td>Does a data lead expect an agent to read our numbers?</td><td>A data lead</td><td>Whether provenance needs a machine-readable surface</td></tr>
+          <tr><td class="num">14</td><td>What does a data lead consider safe to show a reader with no access to the source?</td><td>A data lead, plus the owner</td><td>How deep depth-on-request can go for an unpaid reader</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">The full critique, including what was corrected in these files and what stayed a hypothesis, is on the <a href="jtbd.html#critique">jobs page</a>. Three residual risks are dangerous enough to name here: what the reader arrives by, what convinces them, and whether anyone reopens a saved number.</p>
+  </section>
+
+  <footer class="page">
+    <p>Plumb, stage 02 of 13. Full detail in <code>research/docs/personas.md</code>. This file has one writer after this stage: the CJM step that mines real feedback. Every other stage reads it and returns contradictions as findings rather than editing it.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'observations', label:'Observations' },
+    { id:'p1',           label:'P1 The reader' },
+    { id:'p2',           label:'P2 The data lead' },
+    { id:'buyer',        label:'Not a persona' },
+    { id:'gaps',         label:'Gaps' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

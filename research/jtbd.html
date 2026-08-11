@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jobs to be Done - Plumb</title>
+<meta name="description" content="One main job, five related jobs, the matrix and the MVP core for Plumb, with the critique that corrected them.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="_page.css">
+<style>
+  /* page-local only: the job statement block, which research.html has no equivalent of */
+  .job{ border:1px solid var(--rule); background:#fff; padding:20px; margin:18px 0 22px; }
+  .job.main{ border-color:var(--accent); border-left-width:3px; }
+  .job.hyp{ border-color:var(--stale); background:#fbf9f4; }
+  .job-head{ display:flex; flex-wrap:wrap; gap:8px 12px; align-items:baseline;
+             font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+             color:var(--muted); margin-bottom:12px; }
+  .job-head .id{ color:var(--ink); font-weight:600; }
+  .job.main .job-head .id{ color:var(--accent); }
+  .job.hyp .job-head .id{ color:var(--stale); }
+  .job-head .who{ margin-left:auto; }
+  .job blockquote{ margin:0 0 12px; font-size:1.06rem; line-height:1.5; }
+  .job blockquote b{ font-weight:600; }
+  .job p{ margin:0 0 10px; font-size:.95rem; }
+  .job p:last-child{ margin:0; }
+  .status{ font-family:var(--sans); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; }
+  .status.ok{ color:var(--accent); }
+  .status.hyp{ color:var(--stale); }
+  .core{ border:1px solid var(--accent); background:var(--panel); padding:20px 22px; margin:24px 0; }
+  .core h3{ margin:0 0 12px; font-size:1.12rem; }
+  .core ol{ margin:0 0 12px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 02 &middot; User Research</p>
+    <h1>What these people are actually trying to get done</h1>
+    <p class="standfirst lede">One main job, five related, and the matrix that turns them into an MVP core of two. A job here names a person's progress, never a mechanism: the test applied to each one is whether a completely different product could be hired for it.</p>
+    <div class="dateline">
+      <span>Assembled 2026-08-11</span>
+      <span>Wording is canonical and mirrored verbatim in the personas</span>
+      <span>Source: <code>research/docs/jtbd.md</code></span>
+    </div>
+  </header>
+
+  <!-- Main ............................................................. -->
+  <section id="main-job">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The main job</h2></div>
+
+    <div class="job main">
+      <div class="job-head"><span class="id">Main</span><span>P1, the reader</span><span class="who status ok">gap evidenced by the market</span></div>
+      <blockquote><b>When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.</b></blockquote>
+      <p><strong>Support, stated precisely.</strong> The market evidences the gap, not the hiring. That a reader will actually do this is the riskiest assumption of the whole product, and the first test exists to settle it.</p>
+      <p><strong>Solution-agnostic check.</strong> No mechanism is named. A certification badge, a status board, a conversation with the analyst or a mail digest could each be hired for it. Our card is an answer to the job, not part of its statement.</p>
+    </div>
+
+    <h3>Why there is one main job and not two</h3>
+    <p>The analyst has a job of the same weight, R2, answer once and have the answer keep answering. Two main jobs usually mean two products, so the test was run rather than assumed away.</p>
+    <div class="pull">
+      <span class="label">The test: does serving one discharge the other?</span>
+      <p>It does. If a reader can judge a number without asking anyone, the analyst stops being the only route to the answer by construction. These are the same event seen from two sides, not two events. This is a decision rather than a fact, and if it is wrong the consequence lands early: the CJM takes the focus of one persona times one main job, and the IA builds navigation for it.</p>
+    </div>
+  </section>
+
+  <!-- Related .......................................................... -->
+  <section id="related">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Related jobs</h2></div>
+
+    <p>Adjacent work in the same context, not steps toward the main job. Steps of a journey already have an owner in this pipeline: the phases of the CJM, which runs next.</p>
+
+    <div class="job">
+      <div class="job-head"><span class="id">R1</span><span>P1, the reader</span><span class="who status ok">market</span></div>
+      <blockquote>When a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person rather than guess who to ask.</blockquote>
+      <p>Attribution scores 3 or below in all five benchmark products while several score 5 on freshness. PowerMetrics names a person only when certification is removed. The market's own model of doubt has a human owner: a Sifflet incident carries an assignee.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="id">R2</span><span>P2, the data lead</span><span class="who status ok">market plus a practitioner voice</span></div>
+      <blockquote>When the same question about a number reaches me again, I want to answer it once and have the answer keep answering, so that I stop being the only route to it.</blockquote>
+      <p>Definition governance lives in a producer tool and the last mile is delegated to a surface owned by somebody else, which is the structural reason the analyst keeps being asked. The follow-up research lifted this job off our brief: a practitioner names the repeated question in his own words, and the same sentence says the field's default answer is <strong>to build a dashboard</strong>. A dashboard, not a competitor product, is what this job is hired against today.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="id">R3</span><span>P2, the data lead</span><span class="who status hyp">brief for the behaviour</span></div>
+      <blockquote>When I change what a number means, I want the people who already used it to find out, so that my correction reaches the decisions it affects.</blockquote>
+      <p>Half of this job is unserved by design: the card will say the definition changed when somebody opens it, and there is nothing to push, because notification routing is deliberately out of MVP. It is the same root that made retention the weakest stage of the funnel.</p>
+    </div>
+
+    <div class="job hyp">
+      <div class="job-head"><span class="id">R4</span><span>P1, the reader</span><span class="who status hyp">hypothesis</span></div>
+      <blockquote>When I come back to a number I saved earlier, I want to know whether anything about it changed since, so that an old figure does not travel as a current one.</blockquote>
+      <p>There is no evidence that anyone ever reopens a saved link. <strong>Kept deliberately</strong>, despite being the closest of the five to the main job: the whole retention mechanic stands on it, and dropping it would leave that stage with no work underneath it at all.</p>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><span class="id">R5</span><span>P2, the data lead</span><span class="who status ok">market for the shape</span></div>
+      <blockquote>When I bring a new metric under control, I want to state once what it means and who owns it, so that the definition stops living in somebody's head.</blockquote>
+      <p>The metric as a first-class object is a real product shape and the whole category sells it. That vendors build it is evidence; that an analyst wants the definition out of their head is our inference. Activation depends on this job having been done and is not this job: activation is measured when a second person opens a card.</p>
+    </div>
+
+    <p class="note"><strong>The two pairs.</strong> Main and R2 are the same event from two sides, and so are R3 and R4: the analyst propagates a change, the reader meets it on re-reading. Both pairs are kept because the personas differ and the progress differs. Naming them here stops a later stage from treating one as a duplicate and deleting it.</p>
+  </section>
+
+  <!-- Emotional ........................................................ -->
+  <section id="emotional">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Emotional and social</h2></div>
+
+    <p>All four come from the brief and <strong>none of them is evidenced</strong>. They are here because stage 05 sets tone against them and stage 06 derives visual attributes from persona anxieties, not because anyone observed them.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Type</th><th>Persona</th><th>Job</th><th>Standing</th></tr></thead>
+        <tbody>
+          <tr><td>Emotional</td><td>P1</td><td>Stop feeling exposed when presenting a number I did not compute myself</td><td class="status hyp">brief</td></tr>
+          <tr><td>Emotional</td><td>P2</td><td>Stop being the bottleneck, and feel that the work outlives my presence</td><td class="status hyp">brief</td></tr>
+          <tr><td>Social</td><td>P1</td><td>Be seen as somebody who checks rather than somebody who forwards</td><td class="status hyp">hypothesis, nothing shows that checking is visible to anyone</td></tr>
+          <tr><td>Social</td><td>P2</td><td>Be the person whose numbers are trusted</td><td class="status hyp">brief, the one line stated verbatim in the brief</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Matrix ........................................................... -->
+  <section id="matrix">
+    <div class="sec-head"><span class="sec-num">04</span><h2>The matrix and the MVP core</h2></div>
+
+    <p>Importance does not exist as a ready number anywhere in the research, so <strong>every cell is inferred</strong> and names the signal it stands on. Two markers, and they mean different things: a dash means this is structurally not that persona's job, and a question mark means there is no signal to judge it by.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Jobs against personas, importance 1 to 3.</caption>
+        <thead><tr><th>Job</th><th class="num">P1 reader</th><th class="num">P2 analyst</th><th>The signal the score stands on</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Main</strong>, judge before standing behind it</td><td class="num s5">3</td><td class="num s1">?</td><td>P1: their arrival trigger is exposure, and the benchmark dimension plus the riskiest assumption sit here. P2: the research says nothing about an analyst judging somebody else's number</td></tr>
+          <tr><td><strong>R1</strong>, who is answerable</td><td class="num s5">3</td><td class="num s1">1 ?</td><td>P1: attribution at 3 or below across all five benchmark products. P2: scored low because we assume they are the answerable person, which has no signal behind it</td></tr>
+          <tr><td><strong>R2</strong>, answer once</td><td class="num s1">-</td><td class="num s5">3</td><td>Interruption frequency from the brief, plus the structural fact that the last mile is delegated</td></tr>
+          <tr><td><strong>R3</strong>, the correction travels</td><td class="num s3">2 ?</td><td class="num s4">3 ?</td><td>No signal about people exists. The earlier justification cited our own MVP scope, which is evidence about us, not about how much this matters to anyone</td></tr>
+          <tr><td><strong>R4</strong>, the old number does not travel as new</td><td class="num s5">3 ?</td><td class="num s1">1</td><td>The retention mechanic and the no-false-calm criterion. But the job itself is a hypothesis, so its importance is inferred from a mechanism we invented</td></tr>
+          <tr><td><strong>R5</strong>, the definition stops living in a head</td><td class="num s1">-</td><td class="num s5">3</td><td>The metric as a first-class object is a real product shape and the whole category is built on selling it</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>What closes each job, and whether the market closes it already.</caption>
+        <thead><tr><th>Job</th><th>Function, from the inventory</th><th>Competitors</th></tr></thead>
+        <tbody>
+          <tr><td>Main</td><td>The number card carrying provenance, freshness, state and a name on the claim</td><td><strong>Not closed.</strong> Provenance exists everywhere and is a destination in all of it</td></tr>
+          <tr><td>R1</td><td>Attribution on the claim: who declared it and when</td><td><strong>Not closed.</strong> A name appears only when certification is removed</td></tr>
+          <tr><td>R2</td><td>Registry with definition and owner, one permanent URL, readable with no account</td><td><strong>Partly.</strong> The write-once half is closed. The keeps-answering-to-a-reader half is not</td></tr>
+          <tr><td>R3</td><td>The state "definition changed after this was saved"</td><td><strong>Partly.</strong> Health states exist; the semantics of changed-since-you-saved-it does not</td></tr>
+          <tr><td>R4</td><td>One permanent URL plus that same state met on re-reading</td><td><strong>Not closed.</strong> Nothing attaches to a saved reading</td></tr>
+          <tr><td>R5</td><td>Registry with definition and owner</td><td><strong>Closed by the market.</strong> This is exactly what Atlan, dbt and PowerMetrics sell</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="core">
+      <h3>MVP core: two jobs, not three</h3>
+      <ol>
+        <li><strong>The main job.</strong> Importance 3 for the primary persona, not closed by the market. The cell that justifies it: provenance is a destination, so telling whether a number can be trusted where it is read is served by nobody in this set.</li>
+        <li><strong>R1, who is answerable.</strong> Importance 3 for the primary persona, not closed. The market proved the habit of showing age and did not prove the habit of showing who is accountable.</li>
+      </ol>
+      <p><strong>A third, conditional: R4.</strong> It qualifies on both columns, but its own importance is unverified because the job itself is a hypothesis. If the first cohort shows that saved numbers are not revisited, R4 leaves the core and the retention mechanic leaves with it.</p>
+      <p><strong>Padding to three was refused.</strong> R2 is discharged by the main job succeeding. R3 scores 2 for the primary and is the sending side of R4. <strong>R5 is outside the core for the opposite reason: the market already closes it.</strong> The product needs a registry, but the core is what we have to win on, not what we have to have.</p>
+      <p><strong>Orphan features.</strong> Not one in the mandated inventory, which says the scope set at stage 01 was assembled around work people do. Two exist just outside it, both from the funnel: a reader inviting another reader, and the public page rendering the real card. They serve business outcomes rather than anybody's job, and naming that is what will hold the priority when the IA starts handing out screens.</p>
+    </div>
+  </section>
+
+  <!-- Critique ......................................................... -->
+  <section id="critique">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Critique and risks</h2></div>
+
+    <p>Both files were criticised in two instruments. Codex ran first, blind and read-only, checking them against the foundation research; a parallel pass covered the classes that need the product rather than the text. <strong>Sixteen findings, all repaired.</strong> Codex found 9 that the first pass missed, the first pass found 3 he could not see, 4 were found by both.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Was, became. Five representative repairs out of sixteen.</caption>
+        <thead><tr><th>Type of fix</th><th>Found</th><th>Became</th><th>Who found</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Claim without a source</td>
+            <td>"Catalogs already exist in all fifteen competitor products", used as the evidence for the primary choice</td>
+            <td>The analyst-facing destination exists in one of three forms, shown for five and inferred for ten. Five of the fifteen are not catalogs at all</td>
+            <td class="who who-both">both</td>
+            <td class="status ok">confirmed and corrected</td>
+          </tr>
+          <tr>
+            <td>Claim without a source</td>
+            <td>"Company of 50 to 300, no data steward role exists", which decided that ownership is one name</td>
+            <td>Whether the role exists is unknown. Ownership as one name is now recorded as a design decision, not a finding</td>
+            <td class="who who-both">both</td>
+            <td class="status ok">invented line removed</td>
+          </tr>
+          <tr>
+            <td>Statement wider than its source</td>
+            <td>"No public seat price, so an analyst cannot self-serve an evaluation"</td>
+            <td>Cost cannot be compared without sales. Our own file records Sifflet offering a free start</td>
+            <td class="who who-codex">Codex</td>
+            <td class="status ok">narrowed to the source</td>
+          </tr>
+          <tr>
+            <td>Statement wider than its source</td>
+            <td>Main job labelled "support: market", which read as though the market proved a person hires it</td>
+            <td>The market evidences the gap, not the hiring. The hiring is the riskiest assumption</td>
+            <td class="who who-both">both</td>
+            <td class="status ok">relabelled</td>
+          </tr>
+          <tr>
+            <td>Job stated as current behaviour</td>
+            <td>R1 ended "instead of putting doubt into a channel", asserting what happens today</td>
+            <td>"rather than guess who to ask". The personas list three alternatives and mark which one happens as unknown</td>
+            <td class="who who-codex">Codex</td>
+            <td class="status ok">reformulated</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull">
+      <span class="label">What the second instrument bought</span>
+      <p>All five divergences were the same mistake in different places: <strong>market evidence for a gap was written up as market evidence for a person's behaviour.</strong> One class of correction ran deeper: importance scores in the matrix were justified by our own MVP scope, which is evidence about us and not about how much a job matters to anyone. Nothing was withdrawn at verification this time, but one finding was accepted with a correction to its reasoning rather than whole: the research does carry the footing Codex said was missing, just not for our specific reader.</p>
+    </div>
+
+    <h3>Residual risks after the follow-up research</h3>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Risk</th><th>Standing</th><th>What it decides</th></tr></thead>
+        <tbody>
+          <tr><td>Does the reader arrive by a link somebody sent, or by opening a dashboard themselves</td><td class="status hyp">still unknown, attempted at step 6</td><td>The first screen of the primary flow</td></tr>
+          <tr><td>What convinces the reader, the whole list the card carries</td><td class="status hyp">still unknown</td><td>What the card carries, which is the product</td></tr>
+          <tr><td>Does a data steward role exist at 50 to 300</td><td class="status hyp">still unknown</td><td>Ownership as one name against a workflow</td></tr>
+          <tr><td>Does anyone reopen a saved number</td><td class="status hyp">still unknown</td><td>Whether R4 stays in the MVP core, and the retention mechanic with it</td></tr>
+          <tr><td>Is the reader the right primary</td><td class="status ok">unchanged by the critique</td><td>The correction narrowed the evidence without reversing it: the destination, in whatever form, is still what the reader does not visit</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note"><strong>Age of the evidence, which qualifies everything the follow-up research supports.</strong> The two usable sources found are dated 2019 and 2021. They support the shape of the problem, not its current intensity, and this market has visibly moved since: fourteen of the fifteen pages opened in the foundation round lead with AI.</p>
+  </section>
+
+  <footer class="page">
+    <p>Plumb, stage 02 of 13. Full detail in <code>research/docs/jtbd.md</code>. The personas that these jobs belong to are on the <a href="personas.html">personas page</a>.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'main-job',  label:'The main job' },
+    { id:'related',   label:'Related jobs' },
+    { id:'emotional', label:'Emotional and social' },
+    { id:'matrix',    label:'Matrix and MVP core' },
+    { id:'critique',  label:'Critique and risks' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

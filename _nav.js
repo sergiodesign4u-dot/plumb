@@ -29,8 +29,8 @@
 window.NAV = [
   { label:'Foundation Research', page:'research/research.html', done:true },
   { label:'User Research', children:[
-      { label:'Personas',  page:'research/personas.html',  done:false },
-      { label:'JTBD',      page:'research/jtbd.html',      done:false },
+      { label:'Personas',  page:'research/personas.html',  done:true },
+      { label:'JTBD',      page:'research/jtbd.html',      done:true },
       { label:'CJM As-Is', page:'research/cjm-as-is.html', done:false },
       { label:'CJM To-Be', page:'research/cjm-to-be.html', done:false },
   ]},

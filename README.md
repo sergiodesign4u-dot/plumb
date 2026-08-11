@@ -1,6 +1,10 @@
 # Plumb
 
-**Live: https://sergiodesign4u-dot.github.io/plumb/** &nbsp; Stage 01: https://sergiodesign4u-dot.github.io/plumb/research/research.html
+**Live: https://sergiodesign4u-dot.github.io/plumb/**
+
+- Foundation Research: https://sergiodesign4u-dot.github.io/plumb/research/research.html
+- Personas: https://sergiodesign4u-dot.github.io/plumb/research/personas.html
+- JTBD: https://sergiodesign4u-dot.github.io/plumb/research/jtbd.html
 
 Metric trust tool for B2B teams. One place holds the canonical definition of every metric, and the provenance, freshness and breakage of a number are shown right where the number is read.
 
@@ -13,6 +17,7 @@ This repository holds the whole design pipeline for the product, not just the re
 - `AGENTS.md` - entry point for the external read-only auditor.
 - `_nav.js` - the single navigation registry of the project. Every page renders its sidebar from it.
 - `_nav.css` - the look of that sidebar, in one place.
+- `research/_page.css` - the shared look of the three research pages, extracted at stage 02 so that three pages do not carry three editions of the same stylesheet.
 - `research/` - everything we know about the market and the people. Shared by stages 01, 02 and CJM.
 - `.nojekyll` - required. GitHub Pages runs Jekyll by default and Jekyll skips paths starting with an underscore, which is where the whole navigation lives.
 
@@ -21,7 +26,7 @@ This repository holds the whole design pipeline for the product, not just the re
 | Stage | Status |
 | --- | --- |
 | Foundation Research | Done. Fifteen competitors, benchmark on trust at the point of reading, canvas, funnel, chosen pattern, critique in two instruments, page published |
-| User Research (Personas + JTBD) | Not started |
+| User Research (Personas + JTBD) | Done. Two behavioural personas with the reader as primary, one main job and five related, matrix, MVP core of two jobs, critique in two instruments, both pages published |
 | CJM (As-Is + To-Be) | Not started |
 | Information Architecture (Base + Detail) | Not started |
 | Wireframes | Not started |
