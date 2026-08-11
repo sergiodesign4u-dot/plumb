@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concept map - Plumb</title>
+<meta name="description" content="The base IA for Plumb: the entity inventory, thirteen screens grouped by intent, the navigation model, and a traceability matrix with the scope estimate.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: the diagram frame, matrix marks and the muted block */
+  .diagram{ border:1px solid var(--rule-strong); background:#fff; padding:14px 10px;
+            margin:18px 0 10px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .muted-block{ background:var(--panel); border:1px solid var(--rule); padding:14px 16px;
+                font-family:var(--sans); font-size:13.5px; line-height:1.55; color:#3c4148; margin:18px 0; }
+  .muted-block b{ color:var(--ink); }
+  .mk{ font-family:var(--sans); font-weight:700; color:var(--accent); }
+  .pre{ font-family:var(--sans); color:var(--muted); }
+  .cellnote{ font-family:var(--sans); font-size:11.5px; color:var(--muted); display:block; }
+  tr.orphan td{ background:#faf3f1; }
+  tr.scope td{ font-family:var(--sans); font-size:11.5px; letter-spacing:.04em; text-transform:uppercase; }
+  .mvp{ color:var(--accent); font-weight:700; }
+  .later{ color:var(--muted); }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:18px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .navmodel{ display:grid; gap:14px; margin:18px 0; }
+  @media (min-width:820px){ .navmodel{ grid-template-columns:1fr 1fr 1fr; } }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03a &middot; Information Architecture</p>
+    <h1>Thirteen screens, and every one of them answerable to a job</h1>
+    <p class="standfirst lede">The base layer: what objects the product is made of, which screens exist and why, how a person moves between them, and a matrix that proves the coverage rather than asserting it. Seven screens are MVP, and three of those carry the whole risk.</p>
+    <div class="dateline">
+      <span>Built 2026-08-11</span>
+      <span>No job orphans, two screen orphans, both deliberate</span>
+      <span>Source: <code>ia/docs/sitemap.md</code></span>
+    </div>
+  </header>
+
+  <!-- Entities .......................................................... -->
+  <section id="entities">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Entities</h2></div>
+
+    <p>Objects first, screens second. Screens only show objects, and objects grow out of jobs. This inventory is the foundation of everything below it.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Every object a person handles, and the job that produces it</caption>
+        <thead><tr><th>Entity</th><th>What it is made of</th><th>The job that produces it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Metric</strong></td><td>Name, a pointer to the current definition, a binding to a source, a permanent URL</td><td>The definition job produces it as an object; the main job reads it</td></tr>
+          <tr><td><strong>Definition version</strong></td><td>The text in words, who declared it, when, and a pointer to the previous one</td><td>Writing it once, the name and date on the claim, the correction travelling, and having something to compare against</td></tr>
+          <tr><td><strong>Source connection</strong></td><td>Warehouse type, reachability, last successful run, expected cadence</td><td>The main job <strong>as a precondition</strong>: with no source a number has no age and no state</td></tr>
+          <tr><td><strong>Owner of the claim</strong></td><td>Name, role, a route for reaching them <span class="pre">unknown</span></td><td>Who is answerable. <strong>The unknown is load-bearing:</strong> asking a specific person needs a route, the reader has no account, and whether we may show a contact at all is undecided</td></tr>
+          <tr><td><strong>Analyst account</strong></td><td>Name, email, SSO identity, workspace</td><td>Writing and owning definitions requires signing in</td></tr>
+          <tr><td><strong>Reading</strong></td><td><strong>Not an object.</strong> The moment of reading travels encoded in the link, and nothing about the reader is stored</td><td>The old figure not travelling as a current one</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>A fork the flows had to settle</b>
+      <p>The reading was left open here: either a stored object, or a moment encoded in the link. Flow 3 showed there is no third option. If the link does not carry the moment it was read, the state degrades to "the definition changed at some point", which asks the reader to remember when they took the number, and that is the very thing they came to us to avoid. <strong>It travels in the link.</strong></p>
+    </div>
+
+    <div class="muted-block">
+      <p><b>Under question, because no job sits under them.</b> The <b>workspace</b> lives in the funnel metrics and is needed for tenancy and billing, and it closes no job. <b>The link as an object</b> is either a property of the metric or an analytics event, not something a person handles.</p>
+      <p style="margin-top:10px"><b>Deliberately not entities.</b> <b>A state is not an entity, and this is the most important line in the inventory.</b> "As of", "source is down" and "definition changed after this was saved" are computed and store nothing. The moment a state gets its own entity it gets a list, a status and a queue, and we have built an incident tool, which the design principles forbid outright. <b>The registry is not an entity</b>, it is a view over metrics. <b>And the reader has no user object at all:</b> the primary persona has no account by decision, so nothing in the product represents them. That is why there is no "my profile", no "my saved" and no "my settings" for the person the interface is built around.</p>
+    </div>
+  </section>
+
+  <!-- Concept map ....................................................... -->
+  <section id="map">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Screens grouped by intent</h2></div>
+
+    <p>This is the concept, not the tree. Screens are grouped by what the person is trying to do, not by sections of a site. <strong>States live in the flows and page contents belong to the detail layer</strong>, so neither appears here.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+graph TD
+    subgraph A["A. Read a number and judge it, primary"]
+        A1["A1. The number card<br/>main, who is answerable, old figure"]
+        A2["A2. Where this number came from<br/>main"]
+    end
+    subgraph B["B. Hand the number on, primary"]
+        B1["B1. Send this number<br/>main as precondition, answer once"]
+    end
+    subgraph C["C. Bring a metric under control, secondary"]
+        C1["C1. Connect a source<br/>definition job, main as precondition"]
+        C2["C2. Define a metric<br/>definition job, correction travels, who is answerable"]
+        C3["C3. Metric registry<br/>answer once, definition job"]
+    end
+    subgraph D["D. Sign in and be accountable, secondary"]
+        D1["D1. Sign in through SSO<br/>precondition only"]
+        D2["D2. Workspace and people<br/>ORPHAN, tenancy"]
+        D3["D3. Plan and seats<br/>ORPHAN, business model"]
+    end
+    subgraph E["E. Public surface, none of the personas"]
+        E1["Product page, trust page,<br/>pricing, docs<br/>jobless by construction"]
+    end
+
+    A1 --> A2
+    A1 --> B1
+    C3 --> C2
+    C3 --> A1
+    C1 --> C2
+    D1 --> C3
+
+    classDef mvp fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef later fill:#f6f5f1,stroke:#c9c6bf,color:#6b7076;
+    class A1,A2,B1,C1,C2,C3,D1 mvp;
+    class D2,D3,E1 later;
+      </pre>
+    </div>
+
+    <div class="legend" style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0 0 18px">
+      Green fill marks the seven MVP screens. Grey marks the six that are ПОТІМ, including the whole public surface.
+    </div>
+
+    <p><strong>Search gets no screen of its own.</strong> It is a component on the registry and in the analyst's global navigation, not a place, so no screen was invented to fill a row in the matrix.</p>
+
+    <p><strong>There is no "what changed in the definition" screen, and that is not an omission.</strong> The To-Be considered a diff of two definitions and rejected it, because it answers a question the reader did not ask. The previous definition lives as a line inside the changed state on the card.</p>
+
+    <div class="flag warn">
+      <b>The one thing that can silently cancel our chosen UX pattern</b>
+      <p>The pattern is evidence on the claim: trust information lives on the object being read and travels with it. The map implements it. <strong>The registry is the exception to watch</strong>, because a list with search is the rejected "catalog and search" pattern in pure form. It stays as the analyst's instrument, and the guard is a single rule: <strong>it must never appear in the reader's navigation.</strong> The moment it becomes the reader's entry point, we have changed the pattern without saying so.</p>
+    </div>
+  </section>
+
+  <!-- Navigation ........................................................ -->
+  <section id="navigation">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Navigation model</h2></div>
+
+    <div class="flag">
+      <b>The finding that shapes this whole section</b>
+      <p><strong>The primary persona has no global navigation, and that is the design rather than a gap.</strong> The reader arrives by a link, holds no account, and the strongest measurement in this research says a destination they are expected to travel to is entered once or twice a year. Global navigation in this product belongs to the <strong>secondary</strong> persona. Written down because it is the kind of thing a later stage silently repairs by adding a header and a menu, which would turn the card into a page of a site the reader has no reason to be on.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Global navigation, which is the analyst's</caption>
+        <thead><tr><th>Item</th><th>Cluster it enters</th><th>The job behind it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Metrics</strong></td><td>The registry</td><td>Answer once; the definition stops living in a head</td></tr>
+          <tr><td><strong>Sources</strong></td><td>Connect a source</td><td>The main job as a precondition: no source, no age, no state</td></tr>
+          <tr class="orphan"><td>Account corner</td><td>Sign in, workspace, plan</td><td><strong>None.</strong> Tenancy and billing, marked jobless rather than dressed up</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Two items, not the three to five a guideline would suggest, and the range was not padded.</strong> There are two analyst intents in this product. A third item would have to be invented from other people's menus, which is exactly what this stage forbids. Search is global but is not an item: it is a persistent affordance over the registry.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Depth in taps, counted after levels were assigned deliberately</caption>
+        <thead><tr><th>Persona</th><th>Job</th><th class="num">Taps</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Reader, primary</strong></td><td><strong>Main job</strong>, how far the number can be trusted</td><td class="num s5">0</td></tr>
+          <tr><td>Reader, primary</td><td>Who is answerable</td><td class="num s5">0</td></tr>
+          <tr><td>Reader, primary</td><td>Depth, where the number came from</td><td class="num s3">1</td></tr>
+          <tr><td>Analyst, secondary</td><td>Define a metric and its owner</td><td class="num s3">2</td></tr>
+          <tr><td>Analyst, secondary</td><td>Answer once by sending the answer</td><td class="num s3">3</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Arrival is the answer.</strong> Everything is within three taps and the primary path is at zero, which is the entire point of the product.</p>
+
+    <div class="navmodel">
+      <div class="card">
+        <span class="h-id">Global</span>
+        <p>For the analyst: metrics, sources, search, the account corner. <strong>For the reader: nothing.</strong> The card carries its own affordances and nothing else.</p>
+      </div>
+      <div class="card">
+        <span class="h-id">Contextual</span>
+        <p>The source layer and the send action from the card, defining a metric from the registry or from a source, sign-in only when nobody is signed in.</p>
+      </div>
+      <div class="card">
+        <span class="h-id">Deep</span>
+        <p>Workspace and people, plan and seats, and the public surface, which is not in-app navigation at all.</p>
+      </div>
+    </div>
+
+    <div class="flag warn">
+      <b>What the flattening cost, named rather than defended</b>
+      <p><strong>The reader can only reach a metric somebody sent them a link to.</strong> No browsing, no second metric, no way back to a first one. Giving them the registry would fix it and would cancel the chosen pattern, so the cost is accepted deliberately. Its consequence is the single red node in the flows: a reader who lands on a card they may not see has nowhere to go.</p>
+    </div>
+  </section>
+
+  <!-- Matrix ............................................................ -->
+  <section id="matrix">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Traceability matrix</h2></div>
+
+    <p>Rows are the <strong>functional</strong> jobs. Emotional and social jobs are not here: they are not closed by a screen, and they have their own table below. <strong>Two marks, not one, and the second exists so that no tick is faked:</strong> <span class="mk">X</span> means the screen takes part in closing the job, <span class="pre">p</span> means it is a precondition without which the job cannot happen and which closes no part of it.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Six functional jobs against nine product screens. The public cluster stands outside by decision.</caption>
+        <thead><tr><th>Job</th><th>A1 card</th><th>A2 source</th><th>B1 send</th><th>C1 connect</th><th>C2 define</th><th>C3 registry</th><th>D1 sign in</th><th>D2 workspace</th><th>D3 plan</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Main.</strong> How far the number can be trusted</td><td><span class="mk">X</span><span class="cellnote">arrives with provenance, doubt answered in place</span></td><td><span class="mk">X</span><span class="cellnote">the route back</span></td><td><span class="pre">p</span></td><td><span class="pre">p</span></td><td><span class="pre">p</span></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>Who is answerable</strong></td><td><span class="mk">X</span><span class="cellnote">name and date on the claim</span></td><td></td><td></td><td></td><td><span class="mk">X</span><span class="cellnote">the owner is set here</span></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>Answer once</strong></td><td><span class="mk">X</span><span class="cellnote">the answer keeps answering</span></td><td></td><td><span class="mk">X</span><span class="cellnote">send the link instead of re-explaining</span></td><td></td><td></td><td><span class="mk">X</span><span class="cellnote">the standing answer lives here</span></td><td><span class="pre">p</span></td><td></td><td></td></tr>
+          <tr><td><strong>The correction travels</strong></td><td><span class="mk">X</span><span class="cellnote">the changed state carries it</span></td><td></td><td></td><td></td><td><span class="mk">X</span><span class="cellnote">the correction is made here</span></td><td></td><td><span class="pre">p</span></td><td></td><td></td></tr>
+          <tr><td><strong>The old figure does not travel as new</strong></td><td><span class="mk">X</span><span class="cellnote">state plus the moment carried in the link</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td><strong>The definition stops living in a head</strong></td><td></td><td></td><td></td><td><span class="mk">X</span><span class="cellnote">binding to a source</span></td><td><span class="mk">X</span></td><td><span class="mk">X</span></td><td><span class="pre">p</span></td><td></td><td></td></tr>
+          <tr class="scope"><td><strong>Scope</strong></td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="mvp">MVP</td><td class="later">ПОТІМ</td><td class="later">ПОТІМ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Estimate: 7 screens MVP, 6 ПОТІМ, 13 in total</strong> (the six include the four public pages). This is the gate on the size of the product: the detail layer writes up the nodes, the wireframes draw the screens and the visual stage colours them, and all three start from the MVP subset rather than the whole map.</p>
+
+    <div class="flag">
+      <b>A narrower subset still, and this is the build order</b>
+      <p>The first test of the riskiest assumption needs four capabilities, and they touch <strong>three screens: the card, its source layer, and sending it.</strong> The analyst's three MVP screens are what make those work with real data, not what the test needs.</p>
+    </div>
+
+    <h3>Defects, job orphans first because they cost more</h3>
+
+    <p><strong>Job orphans: none.</strong> Every functional job has at least one screen where it is closed. That matters more than the screen side: a job with no screen means a person has nowhere to do their work, while a screen with no job only means we built ballast.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Screen orphans: two, and both resolved rather than left hanging</caption>
+        <thead><tr><th>Orphan</th><th>Decision</th></tr></thead>
+        <tbody>
+          <tr class="orphan"><td><strong>D2. Workspace and people</strong></td><td><strong>Deliberately in the backlog, and the row stays empty.</strong> A workspace with more than one analyst has to be administrable, so it is not deleted; it serves tenancy rather than anybody's job, so it earns no MVP surface. An empty marked row is an honest state, and a tick added to tidy the table would be the defect this stage exists to catch</td></tr>
+          <tr class="orphan"><td><strong>D3. Plan and seats</strong></td><td><strong>Deliberately in the backlog.</strong> It hangs off the business model hypothesis, which is still open: this market has no reader-pricing norm to inherit, and we have not decided ours</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>One MVP screen carries no X at all, and it is named rather than quietly ticked</b>
+      <p><strong>Sign in.</strong> It is not an orphan, because it is a precondition of three jobs. It is also the screen most likely to grow: <strong>sign-in is a gate, not a place</strong>, and if it ever acquires product surface, this is the line to come back to.</p>
+    </div>
+
+    <h3>Emotional and social jobs, and what actually supports them</h3>
+
+    <p>These are not closed by a screen. Asking where a person does them is meaningless, and a tick invented to fill the row is worse than an honest gap. The column that matters is the <strong>mechanism</strong>: a state, a piece of microcopy, a proof of trust, a behaviour after an error, an order of blocks. The detail layer takes states and trust proofs from this table, and the Voice stage takes its input to tone from it.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Four jobs that no screen closes</caption>
+        <thead><tr><th>Job</th><th>Mechanism</th><th>Where it lives</th><th>What supports it</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Reader, emotional.</strong> Stop feeling exposed when presenting a number I did not compute myself</td>
+            <td>Two mechanisms working together. <strong>A name and a date beside the value</strong>, so the reader is not the only evidence for their own number. And <strong>trouble named in words rather than raised as an alarm</strong>, so a problem the reader did not cause reads as a property of the number rather than a failure of theirs</td>
+            <td>The card: the attribution line and the state line</td>
+            <td>Persona motivation, from the brief and unverified. Benchmark criteria on attribution and on no false calm</td>
+          </tr>
+          <tr>
+            <td><strong>Analyst, emotional.</strong> Stop being the bottleneck, and feel the work outlives my presence</td>
+            <td><strong>The definition answers in their absence</strong>, and the registry shows what already answers without them. The mechanism is the permanence of the link, not a notification</td>
+            <td>Define and registry to write it, the card when somebody else opens it</td>
+            <td>The dbt forum thread on the same question reaching the analyst repeatedly</td>
+          </tr>
+          <tr class="orphan">
+            <td><strong>Reader, social.</strong> Be seen as somebody who checks rather than somebody who forwards</td>
+            <td><strong>Thin, and named as thin.</strong> The only mechanism we have is that sending the card instead of the bare figure is itself a visible act of checking: the provenance travels with the number to whoever receives it. There is no profile, no history and no activity, by decision</td>
+            <td>Send, and the card as rendered for the recipient</td>
+            <td><strong>Unverified throughout.</strong> The job is a hypothesis, and nothing in the research says anybody wants to be seen this way. An open question rather than a defect</td>
+          </tr>
+          <tr>
+            <td><strong>Analyst, social.</strong> Be the person whose numbers are trusted</td>
+            <td><strong>Attribution on the claim</strong>, permanently and visibly</td>
+            <td>The card's attribution, the owner field when defining</td>
+            <td>Stated verbatim in the project rules. The benchmark, where no product of five scores above 3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>A risk in that last row, named here rather than discovered at the visual stage</b>
+      <p>The mechanism that builds an analyst's reputation is the same one that exposes it: their name sits on every number, including the ones that break. Nothing in the research says analysts want that. <strong>If they do not, the attribution that serves the reader is the thing that makes the analyst resist the product.</strong></p>
+    </div>
+  </section>
+
+  <footer class="note">
+    <p>Plumb, stage 03a of 13. Full detail in <code>ia/docs/sitemap.md</code>. The routes these screens have to hold are on the <a href="flows.html">flows page</a>.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        background: '#ffffff',
+        primaryColor: '#f6f5f1',
+        primaryTextColor: '#14161a',
+        primaryBorderColor: '#c9c6bf',
+        lineColor: '#6b7076',
+        secondaryColor: '#fcfcfa',
+        tertiaryColor: '#fcfcfa',
+        clusterBkg: '#fcfcfa',
+        clusterBorder: '#c9c6bf',
+        fontFamily: 'ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif',
+        fontSize: '13px'
+      },
+      flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis' }
+    });
+  }
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'entities',   label:'Entities' },
+    { id:'map',        label:'Screens by intent' },
+    { id:'navigation', label:'Navigation model' },
+    { id:'matrix',     label:'Traceability matrix' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

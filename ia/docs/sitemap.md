@@ -102,7 +102,7 @@ Every entity has at least one screen where it is seen or acted on. Metric on A1,
 
 **E6, the reading, is covered by the state on A1**, and that gives the first argument in the fork left open at step 1. If the snapshot is encoded in the link, no separate object and no separate screen are needed at all. If a reading is stored, an object about an accountless reader appears. **The map leans towards encoding it in the link**, and the flows at step 4 settle it.
 
-**Thirteen screens, eight of them MVP.** That is below the 15 to 30 boundary in `CLAUDE.md`, and there is nothing further to cut without losing work somebody does.
+**Thirteen screens, seven of them MVP.** (Corrected at step 5 while the estimate was being counted: the first pass said eight.) That is below the 15 to 30 boundary in `CLAUDE.md`, and there is nothing further to cut without losing work somebody does.
 
 ---
 
@@ -163,3 +163,63 @@ The instruction is to name the price, not to defend the depth.
 ### Where activation sits
 
 Activation is the first time a metric card is opened by somebody other than the author of its definition (`aarrr.md`). In navigation terms that is **A1 at level 1, reached by link, at zero taps from arrival**. It is named as a node in the main flow at step 4 rather than left implied.
+
+---
+
+## Traceability
+
+Rows are the **functional** jobs from `jtbd.md`. Emotional and social jobs are not here: they are not closed by a screen, and they get their own table below. Columns are every screen in the concept sitemap except the public cluster, which stands outside by the decision at step 2.
+
+**Two marks, not one, and the second exists so that no tick is faked.**
+
+- **X** means the screen takes part in closing the job.
+- **p** means the screen is a **precondition**: the job cannot happen without it, and it does not close any part of it. `jtbd.md` already treats the source connection this way, so the category is inherited rather than invented.
+
+| Job | A1 card | A2 source | B1 send | C1 connect | C2 define | C3 registry | D1 sign in | D2 workspace | D3 plan |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Main.** How far the number can be trusted | **X** T1, T2 | **X** T3 | p | p | p | | | | |
+| **R1.** Who is answerable | **X** T4 | | | | **X** owner is set here | | | | |
+| **R2.** Answer once | **X** the answer keeps answering | | **X** send the link instead of re-explaining | | | **X** the standing answer lives here | p | | |
+| **R3.** The correction travels | **X** the changed state carries it | | | | **X** the correction is made here | | p | | |
+| **R4.** The old figure does not travel as new | **X** T5, plus the moment carried in the link | | | | | | | | |
+| **R5.** The definition stops living in a head | | | | **X** binding to a source | **X** | **X** | p | | |
+
+### Defects, job orphans first because they cost more
+
+**Job orphans: none.** Every functional job has at least one screen where it is closed. That matters more than the screen side: a job with no screen means a person has nowhere to do their work, while a screen with no job only means we built ballast.
+
+**Screen orphans: two, D2 and D3.** Both were already marked `[ORPHAN]` at step 2 and neither gains a tick here.
+
+| Orphan | Decision |
+| --- | --- |
+| **D2. Workspace and people** | **Deliberately in the backlog, and the row stays empty.** A workspace with more than one analyst has to be administrable, so it is not deleted; it serves tenancy rather than anybody's job, so it earns no MVP surface. An empty row that is marked is an honest state, and putting a tick here to tidy the table would be the defect this stage exists to catch |
+| **D3. Plan and seats** | **Deliberately in the backlog.** It hangs off the business model hypothesis, which is still open in `research.md`: this market has no reader-pricing norm to inherit, and we have not decided ours |
+
+**One MVP screen carries no X at all, and it is named rather than quietly ticked: D1, sign in.** It is not an orphan, because it is a precondition of three jobs. It is also the screen most likely to grow: **sign-in is a gate, not a place**, and if it ever acquires product surface, that is the moment to come back to this line.
+
+### Scope row and the estimate
+
+| | A1 | A2 | B1 | C1 | C2 | C3 | D1 | D2 | D3 | Public cluster |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Scope** | MVP | MVP | MVP | MVP | MVP | MVP | MVP | ПОТІМ | ПОТІМ | ПОТІМ, four screens |
+
+**Estimate: 7 screens MVP, 6 ПОТІМ, 13 in total.** This is the gate on the size of the product: 03b writes up the nodes, 04 draws the screens and 07 colours them, and all three start from the MVP subset rather than the whole map.
+
+**A narrower subset still, carried from the CJM backlog.** The first test of the riskiest assumption needs four capabilities, which touch **three screens: A1, A2 and B1**. The analyst's three MVP screens are what make those work with real data, not what the test needs. Recorded because it is the only place where the order of building is visible.
+
+### Emotional and social jobs, and what actually supports them
+
+These are not closed by a screen. Asking where a person does them is meaningless, and a tick invented to fill the row is worse than an honest gap. The column that matters is the **mechanism**: a state, a piece of microcopy, a proof of trust, a behaviour after an error, an order of blocks. The detail layer of the IA takes states and trust proofs from this table, and stage 05 takes its input to tone from it.
+
+| Job | Mechanism | Where it lives | What supports it |
+| --- | --- | --- | --- |
+| **P1, emotional.** Stop feeling exposed when presenting a number I did not compute myself | Two mechanisms, and they work together. **A name and a date beside the value**, so the reader is not the only evidence for their own number. And **trouble named in words rather than raised as an alarm**, so a problem the reader did not cause reads as a property of the number rather than a failure of theirs | A1, the attribution line and the state line | `personas.md`, P1 motivation, from the brief and `[?]`. `benchmark.md` criteria 5 and 8 |
+| **P2, emotional.** Stop being the bottleneck, and feel the work outlives my presence | **The definition answers in their absence**, and the registry shows what already answers without them. The mechanism is the permanence of the link, not a notification | C2 and C3 to write it, A1 when somebody else opens it | `discourse.getdbt.com/t/712`, the same question reaching the analyst repeatedly. `jtbd.md` R2 |
+| **P1, social.** Be seen as somebody who checks rather than somebody who forwards | **Thin, and named as thin.** The only mechanism we have is that sending the card instead of the bare figure is itself a visible act of checking: the provenance travels with the number to whoever receives it. There is no profile, no history and no activity, by decision | B1, and A1 as rendered for the recipient | **`[?]` throughout.** The job is a hypothesis in `jtbd.md`, and nothing in the research says anybody wants to be seen this way. Open question rather than a defect |
+| **P2, social.** Be the person whose numbers are trusted | **Attribution on the claim**, permanently and visibly | A1 attribution, C2 owner field | `CLAUDE.md`, stated verbatim. `benchmark.md`, where no product of five scores above 3 |
+
+**One risk in that last row, worth naming here rather than discovering at stage 06.** The mechanism that builds an analyst's reputation is the same one that exposes it: their name sits on every number, including the ones that break. Nothing in the research says analysts want that. If they do not, the attribution that serves R1 for the reader is the thing that makes the analyst resist the product.
+
+### Reconciliation of the concept map with the flows
+
+**No screen appeared in the flows that was missing from the concept map**, so no cluster gained a node. One entity changed: the reading is not an object, and the moment travels in the link. One dead end became explicit and belongs to the reader.

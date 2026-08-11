@@ -37,7 +37,7 @@ window.NAV = [
   { label:'Information Architecture (IA)', children:[
       { subhead:'Base layer' },
       { label:'Flows',        page:'ia/flows.html',       done:true  },
-      { label:'Concept map',  page:'ia/concept-map.html', done:false },
+      { label:'Concept map',  page:'ia/concept-map.html', done:true  },
       { subhead:'Detail layer' },
       { label:'Sitemap',      page:'ia/sitemap.html',     done:false },
       { label:'Structure',    page:'ia/structure.html',   done:false },
