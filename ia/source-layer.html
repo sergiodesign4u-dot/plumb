@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.7 Where this number came from - Plumb</title>
+<meta name="description" content="Node 2.7: the depth half of design principle 4. One hop, in words, and the discipline of knowing where to stop.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:430px; }
+  .nm{ font-size:13px; font-weight:700; }
+  .val{ font-size:30px; font-weight:700; letter-spacing:-.025em; line-height:1.1; margin:5px 0 0; }
+  .stl{ border-top:1px solid #14161a; margin-top:8px; padding-top:7px; }
+  .stl b{ display:block; }
+  .stl span{ color:#6b7076; }
+  .trig{ border-top:1px solid var(--rule-strong); margin-top:10px; padding-top:9px;
+         display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; }
+  .panel{ border:1px solid #14161a; margin-top:10px; }
+  .panel h5{ margin:0; padding:9px 10px; border-bottom:1px solid #14161a;
+             font-family:var(--sans); font-size:12.5px; font-weight:700;
+             text-transform:none; letter-spacing:normal; color:#14161a; }
+  .rows{ padding:4px 10px 10px; }
+  .row{ display:grid; grid-template-columns:1fr; gap:1px; padding:7px 0;
+        border-bottom:1px dashed #cfcfcf; }
+  .bw.wide .row{ grid-template-columns:150px 1fr; gap:10px; }
+  .row:last-child{ border-bottom:0; }
+  .row .k{ color:#6b7076; font-size:11px; }
+  .row .v{ }
+  .panel .close{ padding:0 10px 10px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 2.7 &middot; pages</p>
+    <h1>One hop, in words, and the discipline is knowing where to stop</h1>
+    <p class="standfirst lede">The depth half of design principle 4. One line of provenance is on the card already; this is the rest, and almost everything a data catalog would put here is deliberately absent. A reader about to be quoted needs to know whether the number is defensible, not to audit a pipeline.</p>
+    <div class="dateline">
+      <span>Type: section</span>
+      <span>Scope: MVP</span>
+      <span>Opens from node 2.1</span>
+      <span>Source: <code>ia/docs/pages/source-layer.md</code></span>
+    </div>
+  </header>
+
+  <!-- Reach ............................................................. -->
+  <section id="reach">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Where it sits, and why it is not a modal</h2></div>
+
+    <p><strong>Not a page.</strong> A section of node 2.1, opened from block 6 of the card. <strong>Addressable:</strong> <code>/m/&lt;stable-id&gt;#source</code>, with any sent-link parameters preserved, so the back button works and the state can be linked to directly.</p>
+
+    <p><strong>Not a modal.</strong> Design principle 4 forbids a modal as the only route to the source, and the reason is practical rather than stylistic: a modal has no URL, so it cannot be sent, cannot be returned to, and disappears on a refresh.</p>
+
+    <div class="flag">
+      <b>A hole repaired upwards rather than patched here</b>
+      <p>Node 2.1 said the card carries one H1 and no H2. <strong>Opening this section adds exactly one H2</strong>, because it genuinely is a section. Node 2.1 has been amended to say so, in both its source and its page. Two documents disagreeing about heading structure is precisely what the two-layer rule exists to catch.</p>
+    </div>
+
+    <p><strong>One hop, and the definition of a hop is the whole node.</strong> A hop is from the number to the thing that produced it. It is <strong>not</strong> from the number to everything that produced that thing. Where the boundary sits is decided here rather than left to whoever draws the wireframe.</p>
+  </section>
+
+  <!-- Rows .............................................................. -->
+  <section id="rows">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Six rows, each earning its place</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Row</th><th>Example</th><th>Why it is here</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Source</strong></td><td>Snowflake, <code>ANALYTICS.PROD</code></td><td>Which system answered. A reader who cannot name the system cannot ask a specific question</td></tr>
+          <tr><td><strong>Table or view</strong></td><td><code>FACT_SESSIONS</code></td><td>The most specific thing a reader can quote back to an analyst. See the permission note below</td></tr>
+          <tr><td><strong>Last successful run</strong></td><td>14:05 today</td><td>The freshness of the data, as distinct from the freshness of our reading of it</td></tr>
+          <tr><td><strong>Expected cadence</strong></td><td>Hourly</td><td>Configured on the connection at node 3.2, not discovered. Without it, "as of 14:05" has nothing to be measured against</td></tr>
+          <tr><td><strong>The definition this ran against</strong></td><td>Text, version, who, when</td><td><strong>The row that makes state 2.5 meaningful.</strong> The card shows the current definition; this row shows the one this reading used</td></tr>
+          <tr><td><strong>Queried at</strong></td><td>When you opened this page</td><td><strong>We hold no copy.</strong> The one place the product's central constraint becomes visible to the reader</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>"Queried at" is not a technical detail.</strong> Every competitor in this research either caches, imports, or refreshes on a schedule. This row says the number in front of you was asked for a moment ago, and that is the difference between reading a number and reading a record of a number.</p>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, open beside the number</div>
+        <div class="bw wide">
+          <div class="nm">Weekly active accounts</div>
+          <div class="val">18,432</div>
+          <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          <div class="trig"><span>From Snowflake, last run 14:05</span><span class="btn">Where this came from</span></div>
+          <div class="panel">
+            <h5>Where this number came from</h5>
+            <div class="rows">
+              <div class="row"><span class="k">Source</span><span class="v">Snowflake, ANALYTICS.PROD</span></div>
+              <div class="row"><span class="k">Table or view</span><span class="v">FACT_SESSIONS</span></div>
+              <div class="row"><span class="k">Last successful run</span><span class="v">14:05 today</span></div>
+              <div class="row"><span class="k">Expected cadence</span><span class="v">Hourly</span></div>
+              <div class="row"><span class="k">Definition it ran against</span><span class="v">Distinct accounts with a session in the last 7 days. Declared by Dana Reyes, 3 August</span></div>
+              <div class="row"><span class="k">Queried at</span><span class="v">14:25, when you opened this page</span></div>
+            </div>
+            <div class="close"><span class="btn">Close</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, expands below, one column</div>
+        <div class="bw">
+          <div class="nm">Weekly active accounts</div>
+          <div class="val">18,432</div>
+          <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          <div class="trig"><span class="btn">Where this came from</span></div>
+          <div class="panel">
+            <h5>Where this number came from</h5>
+            <div class="rows">
+              <div class="row"><span class="k">Source</span><span class="v">Snowflake, ANALYTICS.PROD</span></div>
+              <div class="row"><span class="k">Table or view</span><span class="v">FACT_SESSIONS</span></div>
+              <div class="row"><span class="k">Last successful run</span><span class="v">14:05 today</span></div>
+              <div class="row"><span class="k">Expected cadence</span><span class="v">Hourly</span></div>
+              <div class="row"><span class="k">Definition it ran against</span><span class="v">Distinct accounts with a session in the last 7 days. Dana Reyes, 3 August</span></div>
+              <div class="row"><span class="k">Queried at</span><span class="v">14:25, when you opened this page</span></div>
+            </div>
+            <div class="close"><span class="btn">Close</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>At 360 the section opens below the card and does not overlay it</strong>, so the card scrolls up rather than the number being covered. On a wide canvas it may sit beside the card, and <strong>that is the whole argument for the side placement:</strong> the reader holds the number and its provenance at once, which is the closest this product comes to the one thing a dashboard does well.</p>
+  </section>
+
+  <!-- Refusals .......................................................... -->
+  <section id="refusals">
+    <div class="sec-head"><span class="sec-num">03</span><h2>What this node deliberately does not show</h2></div>
+
+    <p>Each refusal names who does it, because each one is something a competitor does well.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Not shown</th><th>Who does it</th><th>Why not</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Upstream models, and their upstream models</strong></td><td>Select Star has four lineage modes; Secoda has a graph with impact analysis</td><td><strong>That is the second hop and beyond.</strong> Past one hop the audience is the analyst, and the analyst has the warehouse</td></tr>
+          <tr><td><strong>A dependency graph</strong></td><td>All three catalogs</td><td>"Lineage graph" is one of the four UX patterns <strong>rejected with grounds at stage 01</strong>. Design principle 4 names it directly. And the full lineage tree was <strong>cut as an orphan at CJM</strong>, having a priority label and no parent</td></tr>
+          <tr><td><strong>Column-level lineage</strong></td><td>dbt, behind an Enterprise tier</td><td>Its price says what it costs to build and who it is for. Not our reader</td></tr>
+          <tr><td><strong>The SQL</strong></td><td>Cube, and every semantic layer</td><td>The definition in words is the object here. SQL beside it invites the reader to check the wrong artefact, and most of them cannot read it</td></tr>
+          <tr><td><strong>A history of past values</strong></td><td>PowerMetrics stores days of history</td><td>We store no copies. Without one we cannot show what a value was a month ago, which is already recorded as the honest cost of metadata only</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>The pattern in that table is worth naming</b>
+      <p>Everything refused here is something a data catalog does well, for a data person, in a place they went to on purpose. <strong>We are not building a smaller catalog.</strong> We are answering one question in the place the number is being read.</p>
+    </div>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">04</span><h2>States, and the one where this matters most</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>State</th><th>What is shown</th></tr></thead>
+        <tbody>
+          <tr><td>Open, ordinary</td><td>All six rows</td></tr>
+          <tr><td><strong>Open while the source is down</strong> (from 2.4)</td><td><strong>All six rows still, and this is where they matter most.</strong> The value is missing; the definition, the owner, the last successful run and what it ran against are all still true</td></tr>
+          <tr><td>Open on a bare URL</td><td>Five rows. "The definition it ran against" is the current one and says so, because there is no earlier reading to compare with</td></tr>
+          <tr><td>Open with restricted visibility</td><td>The table or view row is withheld <strong>with a stated reason, not silently dropped</strong>. Everything else stays</td></tr>
+          <tr><td>Loading</td><td><strong>Not a state.</strong> These six rows are metadata we already hold, so they render with the card. Only the value is ever queried at read time</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>The permission note, and it is the same open question as node 2.10</b>
+      <p>Secoda restricts what a viewer sees inside lineage by their access, recorded in <code>competitors.md</code> as a live constraint. <strong>Our default is to show the table or view name</strong>, because a reader who cannot name it cannot ask a specific question, and asking a specific person a specific question is job R1 in full. A workspace that restricts it gets the fourth state above. <strong>Whether that default survives contact with a real data lead is open research.</strong></p>
+    </div>
+
+    <p><strong>Emotional support: none.</strong> All four mechanisms in the emotional and social table sit on the card, the send action, the definition editor and the registry. Recorded so the check is visible.</p>
+
+    <h3>SEO</h3>
+    <p>Part of node 2.1 and therefore <code>noindex</code>. No canonical, no structured data, no SEO text. <strong>One thing this node does owe the URL layer:</strong> the open state is addressable, so it has to be a real URL change rather than a script-only state. A crawler will not index it, but <strong>a person will paste it</strong>, and a link to a provenance view that opens the card closed is a broken promise made by our own product.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#2.7">&larr; Structure (2.7)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '2.7 Where this number came from';
+  window.NAV_SECTIONS = [
+    { id:'reach',     label:'Where it sits' },
+    { id:'rows',      label:'Six rows and wireframes' },
+    { id:'refusals',  label:'What it does not show' },
+    { id:'states',    label:'States and SEO' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
