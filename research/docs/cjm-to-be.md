@@ -95,3 +95,53 @@ Written here because the To-Be map is the file most likely to be read later as t
 2. **That a name is wanted.** T4 traces to a job whose support is the shape of the market, not anything a reader said.
 3. **That a saved number is ever revisited.** T5's reader half stands on R4, which `jtbd.md` marks a hypothesis.
 4. **That being contradicted is expensive.** T6 serves a phase of the As-Is map that has no evidence in it whatsoever.
+
+---
+
+## Backlog
+
+Written at step 8 from the capability lines above. **This is not a second list.** The inventory it refines is the Solutions block in `lean-ux-canvas.md`, the MVP core in `jtbd.md` and the MVP block in `CLAUDE.md`, and the reconciliation with those three is the section after this one.
+
+**What the priority means here, stated because the word does the work.** MVP means the To-Be path of P1 breaks without it. ПОТІМ means the path runs and the item improves it. **ПОТІМ is a priority for work that has a parent, never a shelf for an orphan**, so anything without a parent is reported as such instead of being labelled.
+
+| # | Capability | Parent | Priority | Success signal |
+| --- | --- | --- | --- | --- |
+| 1 | The number card at one permanent URL per metric, readable with no account | T1, phase B barrier, Z2, main job | **MVP** | Activation as defined in `aarrr.md`: the share of new workspaces where a card is opened by a second person within 7 days |
+| 2 | The card is legible on a phone, and that is the layout it is designed in first | T6, main job outcome half, platform decision in `CLAUDE.md` | **MVP** | Share of card opens that come from a phone, and whether they end in a scroll to the provenance line or a bounce |
+| 3 | Named states beside the value: "as of", "source is down", "definition changed after this was saved" | T2, phase C barrier, Z1, main job | **MVP** | Cards opened while in a non-fresh state are opened at the same rate as fresh ones, rather than abandoned. If a named trouble drives readers away, the ambiguity-aversion mechanism taken from GitHub Status did not transfer |
+| 4 | Age in relative time with the expectation beside it: "as of 14:05, 20 minutes ago, expected hourly" | T2, `benchmark.md` mechanism 3, `lean-ux-canvas.md` item 6 | **MVP** | Readers can say out loud whether a number is late, in a five-person test, without asking what "expected hourly" means |
+| 5 | Depth on request: the definition in words and the source it was queried from, one hop | T3, the other half of the phase B barrier, design principle 4 | **MVP** | Share of card opens that open the second layer. Too low and T2 is doing the work alone; near total and the one-line claim is not carrying its weight |
+| 6 | Attribution on the claim: who declared the definition and when it last changed | T4, R1, `benchmark.md` criterion 5 | **MVP** | Whether readers who opened a card contact the named person, and whether that is fewer questions into channels rather than more |
+| 7 | A definition snapshot taken at read time, so the card can tell that the definition changed **after** this number was used | T5, phase G barrier, Z3, R3 and R4 | **MVP** | Retention in `aarrr.md`: 4-week reader return. This is the capability the retention mechanic stands on, and it falls with R4 |
+| 8 | Sharing a metric as a link, in one action, by whoever is handing the number on | T1, and it is the precondition of T1's chosen capability: if nobody sends the link, the path never starts | **MVP** | Share of activated workspaces where at least one card link is sent outside the workspace in the first 7 days |
+| 9 | One data source connection | Precondition of everything above: with no live source there is no age and no state | **MVP** | A workspace reaches its first card with real data without our help |
+| 10 | Metric registry: canonical definition and a named owner per metric | R5 and R2, and the precondition of items 1, 6 and 7 | **MVP** | Metrics defined per workspace in the first 30 days |
+| 11 | Search and jump to a metric by name | R2 and R5, on **P2's path**, which this map does not cover | **MVP by the stage 01 and 02 decision**, and see the note below | Analyst time to reach a known metric |
+| 12 | The full lineage tree | Analyst depth, `research.md` section 6 | **ПОТІМ** | Not measured in MVP |
+
+**The note item 11 needs, because the priority rule and the inherited decision disagree and hiding that would be the dishonest move.** By the rule stated at the top of this section, search is not MVP: P1's To-Be path does not break without it, because the reader arrives by link and never searches. By `CLAUDE.md` it is MVP, as the analyst's necessary half. Both are defensible and the conflict is not resolvable from this map, because **the map that would resolve it is P2's, and it has not been built.** It stays MVP, as the inherited decision, and the reason it cannot be checked here is recorded rather than argued away.
+
+---
+
+## Reconciliation with the MVP core that already existed
+
+One list on the repository, not two. Here is what the To-Be map did to the one that was already there.
+
+**Confirmed, unchanged.** The number card with provenance, the named states rather than one alarm, provenance in one action, attribution on the claim, one source connection, the registry with definition and owner. Six of the eight items in the `lean-ux-canvas.md` Solutions block came through the tracing intact.
+
+**Sharpened, and each sharpening is a real narrowing rather than a rewording.**
+
+- **"Provenance in one action" is narrowed to one hop, in words.** The reader's depth is the definition and the source, not a dependency tree. The tree moves to ПОТІМ as analyst work. Before this, "provenance in one action" could have been read as opening a lineage graph, which design principle 4 forbids as an opening state and which `research.md` records as requiring a mental model of the stack.
+- **The "definition changed" state is narrowed to require a snapshot at read time.** The old core named the state; it never named what the state has to compare against. Without a record of which definition was live when the number was taken, the state cannot be computed at all.
+- **Freshness is narrowed to age plus expectation.** Age alone is not interpretable, which is what `benchmark.md` mechanism 3 was taken for.
+
+**Gaps the To-Be closed, both of which were missing rather than vague.**
+
+- **Item 7, the definition snapshot at read time.** Named above.
+- **Item 8, sharing a metric as a link.** T1's chosen capability is that the number travels as a link, and nothing in the old core made that link get sent. The path started at a step nobody could reach.
+
+**Orphans.** None inside P1's path: every backlog row above names a parent. **Item 11, search by name, has no step in this map**, and it is reported rather than cut because its parent is real and lives in P2's unbuilt map. Repeating the stage 02 result: the inventory contains no invented features, which says the scope was assembled around work people do.
+
+**The two growth mechanics stay outside this table entirely.** A reader inviting another reader in one action, and the public page rendering the real card component. They have no job underneath them, `CLAUDE.md` says so on purpose, and **they are therefore not eligible for either MVP or ПОТІМ**: labelling them would launder a business mechanic into parented work. They serve readers per seat and an acquisition channel, and that is the whole of their claim.
+
+**What did not survive as core, and this is the one real change to the shape of the MVP.** R4, a reader returning to a number they saved, is a hypothesis in `jtbd.md`, and item 7 is the only capability standing on it. If R4 falls, item 7 keeps its analyst half, R3, and the retention metric in `aarrr.md` loses the mechanic underneath it. That is written into the backlog rather than left as a footnote, because item 7 is currently MVP on the strength of an unverified job.
