@@ -272,3 +272,25 @@ Added 2026-08-11 at stage 02 step 6. Targeted collection against the most danger
 **Age caveat, which qualifies everything above.** The two usable sources are from 2019 and 2021. They support the shape of the problem rather than its present intensity, and this market has visibly moved since: fourteen of the fifteen pages opened in this round lead with AI.
 
 ---
+
+## 9. Follow-up research after the CJM As-Is critique
+
+Added 2026-08-11 at stage 02+ step 6. Recorded here rather than only in `cjm-as-is.md` because it is new outside evidence about the primary persona, which every later stage reads from this file.
+
+**The question.** How does a business reader feel while waiting on an answer about a number? It was asked because the CJM critique withdrew the only plotted point on the As-Is emotional curve, a negative of intensity 3 at the phase where the reader tries to resolve a doubt, on the grounds that its sources report waiting and not how waiting feels.
+
+**Result on the question: nothing, and the point stayed withdrawn.** No public source was found in which a business reader reports their own feeling while waiting on an answer about a number. The As-Is map now carries no emotional intensity at any phase, and says so.
+
+**Result off the question, which is where the value landed.** Hacker News comment 28050270, dated 2021-08-03 (screen `research/screens/cjm-hn-28050270-cfo-spreadsheets.png`). The author identifies as "a CFO that has used spreadsheets my entire career (30+years)". **This is the only source in this research spoken in the first person by somebody holding our primary persona's role**, and three of its points bear directly on the product:
+
+- On waiting: "To get a SQL/Python (or other programming language) solution requires submitting a request to IT and then waiting two years to work up the priority queue. This is not a complaint against IT and the priority process." The wait is confirmed and the frustration we expected is explicitly declined.
+- On a stale figure hiding in plain sight: "you get the scenario the author describes of hard-coded values in cells that once contained formulas. These are almost impossible to find in worksheets with large numbers of tabs and thousands of formulas."
+- On version history: "people really do not track properly what each version contains and what are the true differences".
+
+**What it changes.** The second point gives the "number travels on" phase its first evidenced barrier, which promotes a growth zone the CJM had rejected for having no parent. It is also the first outside support for benchmark criterion 8, no false calm, coming from a person rather than from a product page.
+
+**What it does not change.** The object is a spreadsheet, not a metric surface, so it is the right population and the wrong artefact. It says nothing about whether a reader returns to a number they saved, which is R4 and still a hypothesis. And it does not answer hole 6: a CFO working in spreadsheets is one data point about where finance people work, not an answer about where our reader reads a number.
+
+**Method note worth keeping.** The step 02 round concluded that the Hacker News corpus was exhausted for this question. It was not. This source came up on roughly the thirteenth query phrasing, which is a fact about our queries rather than about the corpus, and the earlier wording has been corrected in `cjm-as-is.md`.
+
+---

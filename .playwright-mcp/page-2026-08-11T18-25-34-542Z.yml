@@ -1,0 +1,110 @@
+- table [ref=f8e3]:
+  - rowgroup [ref=f8e4]:
+    - row [ref=f8e5]:
+      - cell [ref=f8e6]:
+        - table [ref=f8e7]:
+          - rowgroup [ref=f8e8]:
+            - row [ref=f8e9]:
+              - cell [ref=f8e10]:
+                - link [ref=f8e11] [cursor=pointer]:
+                  - /url: https://news.ycombinator.com
+              - cell [ref=f8e13]:
+                - generic [ref=f8e14]:
+                  - link "Hacker News" [ref=f8e16] [cursor=pointer]:
+                    - /url: news
+                  - link "new" [ref=f8e17] [cursor=pointer]:
+                    - /url: newest
+                  - text: "|"
+                  - link "past" [ref=f8e18] [cursor=pointer]:
+                    - /url: front
+                  - text: "|"
+                  - link "comments" [ref=f8e19] [cursor=pointer]:
+                    - /url: newcomments
+                  - text: "|"
+                  - link "ask" [ref=f8e20] [cursor=pointer]:
+                    - /url: ask
+                  - text: "|"
+                  - link "show" [ref=f8e21] [cursor=pointer]:
+                    - /url: show
+                  - text: "|"
+                  - link "jobs" [ref=f8e22] [cursor=pointer]:
+                    - /url: jobs
+                  - text: "|"
+                  - link "submit" [ref=f8e23] [cursor=pointer]:
+                    - /url: submit
+              - cell [ref=f8e24]:
+                - link "login" [ref=f8e26] [cursor=pointer]:
+                  - /url: login?goto=item%3Fid%3D28050270
+    - row [ref=f8e27]
+    - row [ref=f8e28]:
+      - cell [ref=f8e29]:
+        - table [ref=f8e30]:
+          - rowgroup [ref=f8e31]:
+            - row [ref=f8e32]:
+              - cell [ref=f8e33]
+              - cell [ref=f8e34]:
+                - link "upvote" [ref=f8e36] [cursor=pointer]:
+                  - /url: vote?id=28050270&how=up&goto=item%3Fid%3D28050270
+              - cell [ref=f8e38]:
+                - generic [ref=f8e40]:
+                  - link "andrewlgood" [ref=f8e41] [cursor=pointer]:
+                    - /url: user?id=andrewlgood
+                  - generic "2021-08-03T15:23:37 1628004217" [ref=f8e42]:
+                    - link "on Aug 3, 2021" [ref=f8e43] [cursor=pointer]:
+                      - /url: item?id=28050270
+                  - generic [ref=f8e44]:
+                    - text: "|"
+                    - link "parent" [ref=f8e45] [cursor=pointer]:
+                      - /url: item?id=28049255
+                    - text: "|"
+                    - link "context" [ref=f8e46] [cursor=pointer]:
+                      - /url: item?id=28049255#28050270
+                    - text: "|"
+                    - link "favorite" [ref=f8e47] [cursor=pointer]:
+                      - /url: fave?id=28050270&auth=ac9ec547d2953241f8aa4b04ef31b35853797f52
+                    - generic [ref=f8e48]:
+                      - text: "| on:"
+                      - link "Use Spreadsheets Everywhere" [ref=f8e49] [cursor=pointer]:
+                        - /url: item?id=28049255
+                - generic [ref=f8e51]:
+                  - text: Article covers a great point, just does not provide a framework to make decisions regarding when to use spreadsheets.
+                  - paragraph [ref=f8e52]: I am a CFO that has used spreadsheets my entire career (30+years). They can definitely have a vital role in any company and can also cause incredible problems.
+                  - paragraph [ref=f8e53]: "A few thoughts that were not mentioned in the article:"
+                  - paragraph
+                  - code [ref=f8e55]: 1) in many companies the users of spreadsheets are not allowed to use anything more powerful than spreadsheets (or maybe MS Access which causes more problems). To get a SQL/Python (or other programming language) solution requires submitting a request to IT and then waiting two years to work up the priority queue. This is not a complaint against IT and the priority process. The reality is most spreadsheets do not start out as important enough to warrant high priority. 2) Spreadsheets are great containers. Not only can they hold a model, but also the raw data, and even emails regarding the model/inputs/etc. This makes them very handy for keeping everything in one file regarding an analysis. 3) IME, most significant spreadsheets get rewritten as they evolve, especially when they change hands. This is both good and bad. While the rewrite allows correction of built up badness, it is rarely done with the discipline one sees with refactoring in more traditional code. Moreover, when a hand off happens, the rewrite is generally done because the recipient does not fully understand how the existing model works. 4) Large spreadsheets cannot be effectively audited outside of locking/password protecting non-input cells. Very rarely is this actually done. As a result, you get the scenario the author describes of hard-coded values in cells that once contained formulas. These are almost impossible to find in worksheets with large numbers of tabs and thousands of formulas. 5) Spreadsheets generally do not use true version control. For most of my career, one simply used "File Save As" to create a new version. In the early days it was due to a fear Windows would crash and you would lose your work. Later, it became a way to step through changes and determine the impact of the change. While this method provides some ability to go back to a prior state, people really do not track properly what each version contains and what are the true differences (would love to find a way to use Git effectively on spreadsheets). 6) Most spreadsheets do not have test cases. They certainly do not increase the test case universe as modifications are made. As a result, cannot tell if things break when changes are made.
+                  - text: Given all of these things, I recommend using spreadsheets for ad hoc analyses and to pilot analytics that will become part of a routine process. The latter point is the point the author is making (and the point of his title). I would add that the analysts need a plan and methodology to determine when they need to convert from the anything-goes freedom of spreadsheets to a more disciplined, maintainable, controlled program.
+        - table
+    - row [ref=f8e56]:
+      - cell [ref=f8e57]:
+        - table [ref=f8e58]:
+          - rowgroup [ref=f8e59]:
+            - row [ref=f8e60]:
+              - cell [ref=f8e61]
+        - generic [ref=f8e62]:
+          - generic [ref=f8e63]:
+            - link "Guidelines" [ref=f8e64] [cursor=pointer]:
+              - /url: newsguidelines.html
+            - text: "|"
+            - link "FAQ" [ref=f8e65] [cursor=pointer]:
+              - /url: newsfaq.html
+            - text: "|"
+            - link "Lists" [ref=f8e66] [cursor=pointer]:
+              - /url: lists
+            - text: "|"
+            - link "API" [ref=f8e67] [cursor=pointer]:
+              - /url: https://github.com/HackerNews/API
+            - text: "|"
+            - link "Security" [ref=f8e68] [cursor=pointer]:
+              - /url: security.html
+            - text: "|"
+            - link "Legal" [ref=f8e69] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/legal/
+            - text: "|"
+            - link "Apply to YC" [ref=f8e70] [cursor=pointer]:
+              - /url: https://www.ycombinator.com/apply/
+            - text: "|"
+            - link "Contact" [ref=f8e71] [cursor=pointer]:
+              - /url: mailto:hn@ycombinator.com
+          - generic [ref=f8e72]:
+            - text: "Search:"
+            - textbox [ref=f8e73]
