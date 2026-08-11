@@ -50,7 +50,7 @@ A metric has one current definition version and a pointer to the previous one; n
 
 **How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the five nodes with no parent are named below.
 
-**Eight clusters, 40 nodes, 29 of them MVP.** Three were added at step 3 by the footer, which promised them. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 29 MVP nodes, and that is the honest count the two estimates in this stage depend on.
+**Eight clusters, 41 nodes, 30 of them MVP.** Four were added at step 3: three the footer promised, and the state vocabulary, which turned out to be a canonical list consumed by four surfaces rather than a paragraph inside the card. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 30 MVP nodes, and that is the honest count the two estimates in this stage depend on.
 
 ### Cluster 0. Global frame
 
@@ -59,6 +59,7 @@ A metric has one current definition version and a pointer to the previous one; n
 | 0.1 | Global navigation | section | global | Metrics, Sources, persistent search, account corner | 4.1, 3.1, 5.1 | P2. **The reader never sees this** | MVP |
 | 0.2 | Footer | section | global | Product identity, trust link, legal | 6.2, 6.4 | Both, minimally | MVP |
 | 0.3 | Toast and inline feedback | section | global | Sent, saved, failed, retry | Returns to the originating node | Both | MVP |
+| 0.4 | State vocabulary | section | global | The canonical wording and rules for as of, source is down, definition changed, empty | Consumed by 2.1, 4.1, 4.3, 4.7 | Both. **Discovered at step 3, label assigned here** | MVP |
 
 ### Cluster 1. Sign in
 
@@ -145,6 +146,7 @@ The scope label was assigned here, because there was nothing to inherit it from.
 - **0.3 Toast and inline feedback, MVP.** Sending a link, saving a definition and failing at either need somewhere to say what happened.
 - **7.1 404, MVP, and it matters more here than in most products.** The reader's only entrance is a link, so **a broken or expired link is their first contact with us**, not a rare edge. It must not be a wall.
 - **7.2 500, MVP**, for the same reason.
+- **0.4 State vocabulary, MVP.** Found while looking for what else is global. Three states are consumed by the card, the registry rows, the search results and the definition editor, and a vocabulary that is not canonical drifts: the registry would say "stale", the card "out of date" and the editor "changed".
 
 ### One discrepancy, not corrected silently
 

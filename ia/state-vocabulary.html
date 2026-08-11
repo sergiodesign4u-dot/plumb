@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0.4 State vocabulary - Plumb</title>
+<meta name="description" content="Node 0.4: the canonical state vocabulary for Plumb. Three states, no fourth, no severity, no score, and no state that needs a hover to exist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white state specimens */
+  .specs{ display:grid; gap:14px; margin:20px 0 8px; }
+  @media (min-width:760px){ .specs{ grid-template-columns:1fr 1fr; } }
+  .spec{ border:1px solid #14161a; background:#fff; padding:14px 13px;
+         font-family:var(--sans); font-size:12px; color:#14161a; }
+  .spec .num{ font-size:30px; font-weight:700; letter-spacing:-.02em; line-height:1.1; }
+  .spec .nm{ color:#6b7076; margin:4px 0 10px; }
+  .spec .st{ border-top:1px solid #14161a; padding-top:9px; }
+  .spec .st b{ display:block; margin-bottom:3px; }
+  .spec .st span{ color:#6b7076; }
+  .spec .noval{ font-size:15px; font-weight:600; letter-spacing:-.01em; padding:6px 0 4px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .refuse{ font-family:var(--sans); font-size:14px; line-height:1.6; }
+  .refuse li{ margin:7px 0; }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 0.4 &middot; global</p>
+    <h1>Three states, no fourth, and none of them needs a hover to exist</h1>
+    <p class="standfirst lede">A canonical list rather than a screen. The same three states are consumed by the card, by the rows of the registry and by the definition editor, and a product whose whole claim is that a number means one thing cannot afford to be ambiguous about its own states.</p>
+    <div class="dateline">
+      <span>Type: section</span>
+      <span>Scope: MVP</span>
+      <span>Source: <code>ia/docs/pages/state-vocabulary.md</code></span>
+    </div>
+  </header>
+
+  <!-- Why ............................................................... -->
+  <section id="why">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Why this is a node</h2></div>
+
+    <p>The three states are consumed by <strong>the card and its state nodes, the rows of the registry, and the definition editor</strong>. If the vocabulary is not canonical it drifts, and it drifts in the most damaging direction available here: the registry starts saying "stale", the card says "out of date" and the editor says "changed". One list, one wording, one set of rules for when each applies, and every screen references this node rather than restating it.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Grounding, so this is not invented from nothing</caption>
+        <thead><tr><th>Source</th><th>What it gives us</th><th>What we take and what we refuse</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>dbt catalog documentation, opened 2026-08-11: "These icons indicate whether a model is Healthy, Caution, Degraded, or Unknown", and "Hover over an icon to view detailed information"</td>
+            <td>A working four-state vocabulary already exists in this market</td>
+            <td><strong>Take:</strong> that named states beat a binary. <strong>Refuse:</strong> the icon-plus-hover delivery. A state that needs a hover cannot exist on a phone, and our reader is on one</td>
+          </tr>
+          <tr>
+            <td>GitHub Status, from the benchmark: five named component states and four named incident stages instead of a binary up or down</td>
+            <td>The mechanism underneath, ambiguity aversion: a named trouble stays usable, an unnamed one gets discounted entirely</td>
+            <td><strong>Take:</strong> the naming. <strong>Refuse:</strong> the incident stages, which are a workflow, and design principle 2 forbids one here</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>What we do differently, in one line:</strong> the same idea, moved from a catalog a non-analyst never opens onto the object the reader is already looking at, and written in words rather than an icon.</p>
+  </section>
+
+  <!-- Vocabulary ........................................................ -->
+  <section id="vocabulary">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The vocabulary</h2></div>
+
+    <div class="flag">
+      <b>There is no fourth state, and "Healthy" is not one of them</b>
+      <p>A number with nothing wrong carries its age, not a badge saying it is fine. Saying a number is healthy is a claim we would have to defend; showing when it was computed is a fact.</p>
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <div class="num">18,432</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="st"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+      </div>
+      <div class="spec">
+        <div class="nm">Weekly active accounts</div>
+        <div class="noval">No value can be shown</div>
+        <div class="st"><b>Source is down</b><span>Last successful run 14:05 yesterday. The definition and its owner are below</span></div>
+      </div>
+      <div class="spec">
+        <div class="num">18,432</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="st"><b>The definition changed after this link was made</b><span>On 3 August by Dana Reyes. The previous wording is below</span></div>
+      </div>
+      <div class="spec">
+        <div class="nm">Weekly active accounts</div>
+        <div class="noval">The query ran and returned nothing</div>
+        <div class="st"><b>Not a zero</b><span>Ran at 14:05. A zero would be a different fact, and we will not print one we did not get</span></div>
+      </div>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Four rows and three states, and the difference is deliberate</caption>
+        <thead><tr><th>State</th><th>When it applies</th><th>What is still shown</th><th>Node</th></tr></thead>
+        <tbody>
+          <tr><td><strong>As of</strong></td><td>The query ran and returned a value</td><td>Everything</td><td>2.3</td></tr>
+          <tr><td><strong>Source is down</strong></td><td>The source could not be reached at read time</td><td>Definition, owner, last successful run. <strong>No value at all</strong>, because we store no copy</td><td>2.4</td></tr>
+          <tr><td><strong>Definition changed</strong></td><td>The current definition differs from the one carried in the link</td><td>Current value, current definition, and the previous definition</td><td>2.5</td></tr>
+          <tr><td><strong>Empty</strong></td><td>The query succeeded with no rows</td><td>Definition, owner, the time it ran. <strong>Never a zero</strong></td><td>2.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>"As of" is the ordinary condition and is always present</strong>, including underneath the other three. The others are conditions that can be true on top of it, and more than one can be true at once.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Combination rules, because they will happen</caption>
+        <thead><tr><th>Combination</th><th>What wins</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td>Source down and definition changed</td><td><strong>Both are shown</strong>, source down first</td><td>Different facts. Hiding one would mean choosing which truth the reader gets</td></tr>
+          <tr><td>Empty and definition changed</td><td>Both, empty first</td><td>The absent value is the more immediate answer to "can I use this"</td></tr>
+          <tr><td>Source down and empty</td><td>Impossible</td><td>An unreachable source cannot return an empty result</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Refusals .......................................................... -->
+  <section id="refusals">
+    <div class="sec-head"><span class="sec-num">03</span><h2>What this vocabulary refuses</h2></div>
+
+    <ul class="refuse">
+      <li><strong>No severity.</strong> A state is not high, medium or low. Severity implies triage, triage implies a queue, and a queue is the incident tool we refused to build.</li>
+      <li><strong>No assignee and nothing to close.</strong> A state ends when the underlying fact ends.</li>
+      <li><strong>No aggregate.</strong> No health percentage, no trust score, no "99.4% reliable". A score cannot be interrogated, so it replaces one number nobody can defend with a second one.</li>
+      <li><strong>No colour-only encoding.</strong> Every state is legible in words with the colour removed, which is both an accessibility requirement and the reason these survive a black and white wireframe.</li>
+      <li><strong>No collapsing into a worst-case indicator.</strong> Two true things stay two true things.</li>
+    </ul>
+  </section>
+
+  <!-- Where ............................................................. -->
+  <section id="where">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Where each state appears</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Surface</th><th>How it appears</th></tr></thead>
+        <tbody>
+          <tr><td>The card (2.1)</td><td>In full, in words, beside the value. The primary place</td></tr>
+          <tr><td>Registry rows (4.1)</td><td>Compact: the state name and the age, no explanation. The row links to the card, where the full form lives</td></tr>
+          <tr><td>Definition editor (4.7)</td><td>As a consequence: "changing this will put the changed state on cards already sent"</td></tr>
+          <tr><td>Search results (4.3)</td><td>The same compact form as the registry</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The compact form is a shortening, never a different vocabulary.</strong> Same words, fewer of them.</p>
+
+    <h3>Accessibility</h3>
+    <ul>
+      <li><strong>Never colour alone:</strong> text carries the state, and colour, when the visual stage adds it, is redundant reinforcement.</li>
+      <li><strong>Live regions do not apply.</strong> A state is present on load rather than announced as an event, which is the same distinction the feedback node draws between a state and a toast.</li>
+      <li><strong>Screen readers get the state before the value</strong> in the reading order on the card, because a value read without its state is exactly the bare number this product exists to prevent.</li>
+    </ul>
+
+    <div class="flag warn">
+      <b>Two open questions this node hands forward</b>
+      <p><strong>What "expected hourly" says when no cadence is known.</strong> Not every source declares one, and "as of 14:05" with no expectation beside it is the failure the benchmark mechanism was taken to prevent.</p>
+      <p style="margin-top:8px"><strong>How old is old.</strong> Nothing here decides when "as of" should start looking uncomfortable, and the honest answer is that it depends on the metric's cadence rather than on a fixed threshold. It stays open rather than being invented.</p>
+    </div>
+  </section>
+
+  <p class="backlink"><a href="structure.html#0.4">&larr; Structure (0.4)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '0.4 State vocabulary';
+  window.NAV_SECTIONS = [
+    { id:'why',        label:'Why this is a node' },
+    { id:'vocabulary', label:'The vocabulary' },
+    { id:'refusals',   label:'What it refuses' },
+    { id:'where',      label:'Where it appears' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
