@@ -144,9 +144,9 @@ Status: all three groups collected, matrix and open questions written.
 
 ## Three common patterns
 
-1. **Trust is sold as a property of the answering system, not of the number.** Ten out of ten products opened here lead with AI in 2026: Looker sells a semantic layer "eliminating agent hallucinations", Omni turns data into "a source of truth for AI", Cube sells "AI answers your team can trust", Monte Carlo sells agent trust outright. The subject of the sentence is always the system that answers, never the figure being read.
+1. **Trust is sold as a property of the answering system, not of the number.** Fourteen of the fifteen pages opened put AI or agents in the headline or the subheading: Looker sells a semantic layer "eliminating agent hallucinations", Omni turns data into "a source of truth for AI", Cube sells "AI answers your team can trust", Monte Carlo sells agent trust outright, Hex is "The AI Analytics Platform". The subject of the sentence is always the system that answers, never the figure being read. The one exception is our Atlan page, and it is an artefact of which page we opened rather than a finding: `atlan.com/metrics-layer/` is a product sub-page about KPI definitions, not the homepage, so Atlan's top-level positioning is `[?]`.
 2. **Definition governance lives in a producer tool, and the last mile is delegated.** LookML, dbt, the semantic layer and the catalog all own the definition, then hand the number to a BI surface owned by somebody else. No product in this set treats the reading surface as its own product.
-3. **Pricing is mostly opaque.** Seven of the ten have no public numbers. Public figures exist only at PowerMetrics, Cube and dbt. In a market where the buyer is a data lead, contact-sales is the default rather than the exception.
+3. **Pricing is mostly opaque.** Seven of the ten HARD and SOFT products publish no seat or subscription price. Only PowerMetrics, Cube and dbt do. Looker is deliberately not counted as public pricing: it publishes consumption overage rates ($3 and $20 per 1M tokens from 2026-10-01) but every edition price is "Call sales". In a market where the buyer is a data lead, contact-sales is the default rather than the exception.
 
 ## Three differences
 

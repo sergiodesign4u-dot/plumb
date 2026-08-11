@@ -16,13 +16,13 @@ That much the category already says out loud, in its own words: dbt frames it as
 
 So the business problem is: **prove there is a business in owning the moment of reading, not the definition.** If there is not, Plumb is a feature of dbt.
 
-**Two facts that set the timing.** The category leader in observability moved up and out: `montecarlodata.com` now redirects to `montecarlo.ai` and leads with "Trust your agents in production", so trust in a number read by a *person* is less defended than it was a year ago. And ten of ten products opened lead with AI, always with the answering system as the subject of the sentence, never the figure being read (`competitors.md`, patterns 1 and 3).
+**Two facts that set the timing.** The category leader in observability moved up and out: `montecarlodata.com` now redirects to `montecarlo.ai` and leads with "Trust your agents in production", so trust in a number read by a *person* is less defended than it was a year ago. And fourteen of the fifteen pages opened put AI or agents in the headline or subheading, always with the answering system as the subject of the sentence, never the figure being read (`competitors.md`, patterns 1 and 3).
 
 ---
 
 ## 2. Business outcomes
 
-What has to become true for this to be a business, and how we would know. No baselines exist: we have no customer, no analytics and no category norm to borrow, because seven of the ten competitors publish no pricing numbers at all (`competitors.md`, pattern 3). Every current value below is `[?]` by construction, and every target is a hypothesis until a real cohort moves it.
+What has to become true for this to be a business, and how we would know. No baselines exist: we have no customer, no analytics and no category norm to borrow, because seven of the ten HARD and SOFT products publish no seat price (`competitors.md`, pattern 3). Every current value below is `[?]` by construction, and every target is a hypothesis until a real cohort moves it.
 
 | # | Outcome | How it is measured | Target | Status |
 | --- | --- | --- | --- | --- |

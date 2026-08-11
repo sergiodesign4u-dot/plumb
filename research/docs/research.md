@@ -20,7 +20,7 @@ Rules that hold throughout. Every fact about the market comes from a page opened
 
 **2. Attribution on the claim is unoccupied, and this was confirmed from two independent corpora.** In the category, certification is a badge and the name appears only in the exception case: PowerMetrics shows who removed a certification and when (`support.powermetrics.app`, article 37726220561559). Outside the category, across five best-in-class products chosen for exactly this dimension, not one scores above 3 on attribution while several score 5 on freshness (`benchmark.md`).
 
-**3. The category changed its subject in 2026 and vacated our ground while doing it.** Ten of ten products opened lead with AI, always with the answering system as the subject of the sentence, never the figure being read. `montecarlodata.com` now redirects to `montecarlo.ai` and the observability leader sells "Trust your agents in production". Trust in a number read by a person is less defended than it was a year ago.
+**3. The category changed its subject in 2026 and vacated our ground while doing it.** Fourteen of the fifteen pages opened put AI or agents in the headline or subheading, always with the answering system as the subject of the sentence, never the figure being read. `montecarlodata.com` now redirects to `montecarlo.ai` and the observability leader sells "Trust your agents in production". Trust in a number read by a person is less defended than it was a year ago.
 
 **4. Nobody serves the moment that matters, and the failure is measurable rather than aesthetic.** Every product opened assumes a desktop working session. In the benchmark, run at a verified 360 px viewport, the only product that overflowed was Yahoo Finance, `clientWidth` 360 against `scrollWidth` 364, which is also the product with the best freshness line in the set. Good trust design does not automatically survive the width where the check actually happens.
 
@@ -89,7 +89,7 @@ That definition is deliberate instrument design: the activation event and the ev
 | Revenue | Analyst | Activated workspaces buying a seat within 30 days | 20% | No metric limits and no reader seat; only analyst write access is billable |
 | Referral | Reader | Distinct readers per paid analyst seat, day 30 | 8 | A reader invites a reader in one action, bounded by email domain |
 
-Every baseline is `[?]`: no product, no cohort, and nothing to borrow from a category where seven of ten publish no numbers.
+Every baseline is `[?]`: no product, no cohort, and nothing to borrow from a category where seven of the ten HARD and SOFT products publish no seat price.
 
 **Two conclusions that cost us something.** Retention is the weakest stage and our own scope cut made it so: notification routing is out of MVP, so nothing reaches out and the stage rests entirely on a permanent URL plus a card that has something new to say when reopened. And referral grows readers, not logos: metrics are internal, cards travel inside a company, so the loop raises readers per seat and produces almost no new accounts. New accounts have to be earned in acquisition.
 
@@ -113,9 +113,9 @@ Fifteen products in three groups, all opened 2026-08-11, public and pre-login pa
 
 ### Three common patterns
 
-1. **Trust is sold as a property of the answering system, not of the number.** Ten of ten lead with AI. The subject of the sentence is always the system that answers.
+1. **Trust is sold as a property of the answering system, not of the number.** Fourteen of the fifteen pages opened put AI or agents in the headline or subheading. The subject of the sentence is always the system that answers. The one exception, Atlan, is an artefact of the page we opened, a product sub-page rather than the homepage, so its top-level positioning is `[?]`.
 2. **Definition governance lives in a producer tool and the last mile is delegated.** LookML, dbt, the semantic layer and the catalog own the definition, then hand the number to a surface owned by somebody else. No product here treats the reading surface as its own product.
-3. **Pricing is mostly opaque.** Seven of ten publish no numbers. Contact-sales is the default, not the exception.
+3. **Pricing is mostly opaque.** Seven of the ten HARD and SOFT products publish no seat price; only PowerMetrics, Cube and dbt do. Looker publishes consumption overage rates but no edition price. Contact-sales is the default, not the exception.
 
 ### Three differences
 
@@ -192,7 +192,7 @@ Five patterns were compared, taxonomy by **where trust information lives**: on t
 
 **A different fork, not to be confused with that one.** If the riskiest assumption fails outright and readers never arrive, the fallback is not the board, it is catalog and search with the analyst as the only user. That is a strategic downgrade onto Secoda's and Atlan's ground, and it should be accepted only after the kill condition has actually fired.
 
-**What does not fit: the conversational answer**, and this is the crowded position, not an empty one. Four grounds. It moves the problem up a level, since the reader now has to trust the answering system in order to check the number. It cannot obey design principle 1, because a chat reply is bare by construction. It is where ten of ten competitors already stand, so it is the one place where being right buys the least. And it fights our own metadata-only architecture by inviting questions about rows we deliberately do not hold. The distinction that must not be lost: rejecting the agent as our interface says nothing about the agent as a reader of our surface, which is a separate open question.
+**What does not fit: the conversational answer**, and this is the crowded position, not an empty one. Four grounds. It moves the problem up a level, since the reader now has to trust the answering system in order to check the number. It cannot obey design principle 1, because a chat reply is bare by construction. It is where almost every competitor already stands, so it is the one place where being right buys the least. And it fights our own metadata-only architecture by inviting questions about rows we deliberately do not hold. The distinction that must not be lost: rejecting the agent as our interface says nothing about the agent as a reader of our surface, which is a separate open question.
 
 **None of the four rejected patterns is discarded whole.** Catalog and search stays as the analyst's side, the registry list and jump-by-name. The lineage graph stays as depth on request, behind the one-line provenance. The dedicated doubt surface gives up its best asset, the named state vocabulary, which moves onto the card. That is the argument that the choice is about locus rather than taste.
 

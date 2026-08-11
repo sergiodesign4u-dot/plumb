@@ -84,7 +84,7 @@ One merge is declared rather than hidden. Pattern 4 covers two forms, the incide
 
 **How it works.** The reader asks in natural language whether the number is right, and a system answers. Provenance is something the answer mentions, if it mentions it.
 
-**Where it is used.** Everywhere in this market in 2026. Secoda sells "a 24/7 AI data analyst", Looker sells Conversational Analytics Agents on a semantic model that eliminates "agent hallucinations", Cube sells "AI answers your team and your customers can trust", Omni turns data into "a source of truth for AI", Hex frames trust as grounding in a context engine (`competitors.md`). Ten of ten products opened lead with AI.
+**Where it is used.** Everywhere in this market in 2026. Secoda sells "a 24/7 AI data analyst", Looker sells Conversational Analytics Agents on a semantic model that eliminates "agent hallucinations", Cube sells "AI answers your team and your customers can trust", Omni turns data into "a source of truth for AI", Hex frames trust as grounding in a context engine (`competitors.md`). Fourteen of the fifteen pages opened put AI or agents in the headline or subheading.
 
 **When it fits.** When the question space is open and unpredictable, and when the asker can evaluate the answer they get. Exploratory analysis by a competent analyst is the honest home of this pattern.
 
@@ -120,7 +120,7 @@ Not because it is bad, and not because it is hard. Because it is structurally wr
 
 1. **It moves the problem instead of solving it.** The reader asked whether they can trust a number and receives prose they have no way to check. The trust question is now about the answering system, one level up and harder to inspect than the number was.
 2. **It cannot obey design principle 1.** "A number is never shown bare, freshness and source state sit beside the value where it is read" (`CLAUDE.md`). A chat reply is bare by construction: the value arrives inside a sentence, and any attempt to attach state to it rebuilds the card inside the chat bubble, at which point the chat is packaging, not the pattern.
-3. **It is the most crowded spot in the category.** Ten of ten competitors lead with it, several of them with far more model budget than we will have. Standing there means being compared on answer quality, a dimension where we would be last, instead of on trust at the point of reading, where the field is empty.
+3. **It is the most crowded spot in the category.** Almost every competitor leads with it, several of them with far more model budget than we will have. Standing there means being compared on answer quality, a dimension where we would be last, instead of on trust at the point of reading, where the field is empty.
 4. **It fights our own architecture.** Plumb stores metadata and pulls values at read time; it never holds customer rows (`CLAUDE.md`). A conversational surface invites arbitrary questions about data we deliberately do not have.
 
 **One distinction that must not be lost.** Rejecting the agent as *our interface* says nothing about the agent as a *reader of our surface*. That is open question 3 in `competitors.md`, it is still open, and it is a question about machine-readable provenance, not about a chat box.

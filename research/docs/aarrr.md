@@ -4,7 +4,7 @@ The funnel: how a person arrives, activates, comes back, pays and brings somebod
 
 Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `research/docs/benchmark.md` and `research/docs/lean-ux-canvas.md`.
 
-**Every baseline below is `[?]`.** There is no product, no traffic and no cohort, and the category gives nothing to borrow: seven of the ten competitors publish no numbers at all (`competitors.md`, pattern 3). So every target here is a hypothesis and is labelled as one. Where a number from outside is used as an anchor, it is cited.
+**Every baseline below is `[?]`.** There is no product, no traffic and no cohort, and the category gives nothing to borrow: seven of the ten HARD and SOFT products publish no seat price (`competitors.md`, pattern 3). So every target here is a hypothesis and is labelled as one. Where a number from outside is used as an anchor, it is cited.
 
 **One structural note before the stages.** This funnel has two bodies and one wallet. The analyst pays and never spreads; the business reader spreads and never pays. They enter at different points, and any metric that averages them hides the exact thing we are trying to learn. That is why the stages below name whose funnel they are.
 
@@ -25,7 +25,7 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 **Hypotheses**
 
 1. The analyst searches for the symptom, not for the category, because they do not yet know they want a metric layer. They know they were asked the same question three times this week.
-2. A working card beats a feature list, because the product is one screen wide and its whole argument is visible in it. This is the reverse of the market habit: ten of ten competitors put the answering system in the subject of the sentence, never the figure being read (`competitors.md`, pattern 1).
+2. A working card beats a feature list, because the product is one screen wide and its whole argument is visible in it. This is the reverse of the market habit: fourteen of the fifteen pages opened put the answering system in the subject of the sentence, never the figure being read (`competitors.md`, pattern 1).
 3. The first contact is with the analyst, never with the buyer. The head of data appears at the seat purchase, not before (`CLAUDE.md`).
 
 **What is unknown**
@@ -124,7 +124,7 @@ Written on 2026-08-11 from `CLAUDE.md`, `research/docs/competitors.md`, `researc
 
 1. Charging per reader kills the mechanism the product grows by, so we do not. There is no norm to inherit here, only a choice: Secoda gives unlimited viewers on all three tiers, Cube charges $20 per viewer per month, Looker makes Viewer a separate license type (`competitors.md`, difference 1).
 2. Charging by metric count penalises exactly the behaviour that is activation. PowerMetrics caps at 50 and 200 metrics on its two public tiers (`powermetrics.app/pricing`). We take the opposite side of that trade deliberately.
-3. The price anchor in this market is wide and mostly hidden: dbt Starter is $100 per seat per month, PowerMetrics is $24 and $35 per month billed annually with extra users at $288 and $420 per year, and seven of ten publish nothing (`competitors.md`). Our own number is `[?]` and will be set against a customer conversation, not against this range.
+3. The price anchor in this market is wide and mostly hidden: dbt Starter is $100 per seat per month, PowerMetrics is $24 and $35 per month billed annually with extra users at $288 and $420 per year, and seven of the ten HARD and SOFT products publish no seat price (`competitors.md`). Our own number is `[?]` and will be set against a customer conversation, not against this range.
 
 **What is unknown**
 
