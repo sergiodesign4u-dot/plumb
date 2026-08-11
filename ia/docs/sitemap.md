@@ -59,7 +59,7 @@ Screens are grouped by the intent of the person, not by sections of a site. Dept
 
 | Screen | Job | Scope |
 | --- | --- | --- |
-| **B1. Send this number.** The permanent link in one action | Main, as the precondition of T1: without it the path never starts | **MVP** |
+| **B1. Send this number.** The permanent link in one action | **R2** for the analyst, who sends the answer instead of re-explaining it, and the **main job as a precondition**: without it the reader's path never starts. Corrected at the critique, where this tag and the matrix disagreed | **MVP** |
 
 ### C. Bring a metric under control &nbsp; secondary
 
@@ -129,6 +129,8 @@ Written down because it is the kind of thing a later stage silently repairs by a
 **The reader.** Level 1 is A1, reached from outside by a link. Level 2 is A2 and B1, both opened from A1. There is no level 3.
 
 **The analyst.** Sign-in (D1) is a gate before level 1, not a level. Level 1 is C3 and C1. Level 2 is C2, A1 opened from the registry, and B1. Level 3 is A2, D2 and D3.
+
+**First run and returning run land in different places, and the critique found that neither artefact said so.** On the first run for a workspace, sign-in leads to connecting a source, because a registry with no source behind it can hold nothing. On every run after that, sign-in lands on the registry. The concept map drew one order and the flow drew the other, and both were right about a case neither named.
 
 ### Depth in taps
 
@@ -223,3 +225,43 @@ These are not closed by a screen. Asking where a person does them is meaningless
 ### Reconciliation of the concept map with the flows
 
 **No screen appeared in the flows that was missing from the concept map**, so no cluster gained a node. One entity changed: the reading is not an object, and the moment travels in the link. One dead end became explicit and belongs to the reader.
+
+---
+
+## Critique 1: defects
+
+Step 6, in two instruments. Codex ran first and blind, read-only, over the same two files, without seeing our table. Our own pass ran in parallel on the same four classes. **Ten findings, all verified in the file before repair.** This is a working step: the result is repairs in the md and re-rendered pages, not another section on a page.
+
+### Divergence of verdicts, first, and not settled by voting
+
+**Codex declined to treat either red node as a defect**, on the grounds that both are recorded as deliberate consequences of decisions. We disagree on both, for different reasons, and the disagreement is put here rather than resolved by majority.
+
+1. **The reader's dead end.** Naming a price is not the same as paying the smallest one. A card the reader may not open can still show who owns it, which closes the "who is answerable" job in its reduced form and costs no screen. **Repaired:** the route now asks whether the owner may be shown, and only the "no" branch stays red. The question is open research rather than a design choice, and it is now visible as a decision instead of buried in prose.
+2. **The rejected alternative in flow 3.** The diagram kept a red node for a link carrying no reading moment, after step 4 had already decided the link always carries it. That asserts a dead end the product does not have. **A dead end drawn where none exists is as misleading as one hidden. Repaired:** the branch is gone from the route and the rejected option is stated in prose, which is where a decision belongs.
+
+### The findings
+
+| # | Class | Where | What | Found by |
+| --- | --- | --- | --- | --- |
+| 1 | Missing state | Flow 1 | No empty state for a query that ran and returned nothing. It is a different event from a source being down, and rendering it as a zero would be a bare figure of the worst kind. **This is on the primary screen** | Claude |
+| 2 | Missing state | Flow 2 | No state for a definition with no owner. The job simply does not close, and the reader is back in the As-Is condition we claim to fix | Claude |
+| 3 | Missing state | Flow 4 | Sign-in had no loading and no failure path, for a product that sells SSO into US B2B | both |
+| 4 | Missing state | Flow 4 | The registry only ever appeared empty, so a returning analyst had no route through the flow at all | Codex |
+| 5 | Missing state | Flow 4 | The definition check jumped from action to verdict with no loading between them | Codex |
+| 6 | Missing state | Flow 4 | Sending a link had no failure state | Codex |
+| 7 | Dead end | Flow 1 | The reader's dead end was named rather than narrowed. See the divergence above | Claude |
+| 8 | Dead end | Flow 3 | A rejected alternative was drawn as a live route. See the divergence above | Claude |
+| 9 | Orphan, traceability | Sitemap vs matrix | B1's job tag said "main as a precondition" in the concept sitemap and carried an X under R2 in the matrix. Two sections of one file disagreeing | Claude |
+| 10 | Consistency | Map vs flow 4 | Sign-in led to the registry in the concept map and to the source in the flow. **Both were right about a case neither named:** the first run for a workspace goes through connecting a source, every later run lands on the registry | Claude |
+
+**Deduplication.** One overlap, finding 3. The two rows were treated as one defect because they name the same screen, the same class and the same missing artefact, a path for authentication that fails. Everything else came from one instrument only, which makes it no weaker: it was simply in that instrument's radius.
+
+### Two classes came back clean, and that is a result rather than a gap
+
+**Excess depth: nothing.** The reader reaches the main job at zero taps and depth at one; the analyst is at two and three. Both instruments looked and neither found a job hidden below three taps.
+
+**Orphans: nothing new.** The two screen orphans and the one precondition-only MVP screen were already named at step 5, and Codex confirmed they read as deliberate rather than accidental, which is what naming them was for.
+
+### What the repairs changed
+
+Six states were added, two dead ends were corrected in opposite directions, and two inconsistencies between artefacts were resolved. **Flow 4 changed the most:** it now branches on whether this is the first run for a workspace, which is the difference between an analyst setting up and an analyst returning, and no artefact had drawn that difference before.
