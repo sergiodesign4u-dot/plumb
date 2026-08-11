@@ -83,3 +83,71 @@ The first five rows already have an addressee: they come from the open questions
 Slice 4, how they choose, is the best supported: it rests on market fact. Slice 3, what they fear, is the weakest: almost all of it is the brief. Slice 1 has confirmation that the roles **exist and are addressed**, none that they behave as described.
 
 The consequence for what follows: the personas in this file are **behavioural hypotheses with a named source**, not portraits. Any line without a source carries `[?]` rather than a plausible invention, and `[?]` can only be removed by new data.
+
+---
+
+## The personas
+
+**Two behavioural groups, and a third does not come out of the data.** The split is behavioural, not demographic: different entry trigger, different jobs, different pains. Nothing in the research separates a PM reader from a finance reader, so they stay one group; if the follow-up research or CJM finds a real split, it comes back into this file.
+
+Personas are named by behaviour rather than given invented human names. A name would add specificity we have not earned.
+
+### P1. The reader who is about to be quoted &nbsp;&nbsp; PRIMARY
+
+**Context.** PM, marketer or finance, 25 to 45, non-technical. Arrives **from exposure**, not from curiosity: a deck due, a meeting within the hour, a decision with their name on it (`CLAUDE.md`, `[?]`). How often this happens and what surface they read in are both unknown, holes 3 and 6. *Answers: the flow does not start at a home page or a search box, it starts at one number opened from a link.*
+
+**Jobs (draft; canonical wording is set at step 3 and mirrored here).** Judge whether a number still holds before putting their name next to it. Find out who to ask when it does not. Understand **what kind** of wrong it is when it is wrong.
+
+**Pains.** The number arrives stripped of everything that would let them judge it. Provenance is a destination that has to be chosen, and choosing it requires already suspecting something (`competitors.md`, shown for the five documented surfaces). The state vocabulary exists in the market and sits where they have no reason to go (`docs.getdbt.com/docs/explore/explore-projects`). Where access is given, the free role sees least: in Looker, Viewer gets folders, boards, dashboards and Looks only (`competitors.md`). *Answers: what the product removes, and how we will see that it did.*
+
+**Choice triggers.** They do not choose the product, they choose whether to trust this number. Convincing: a name and a date on the claim, an age in relative time, a named state instead of a red dash (`benchmark.md`, criteria 5 and 8, where no product scores above 3 on attribution). Repelling: a bare figure, a trust score that cannot be interrogated, a login wall. *Answers: what the card must carry as proof, and what it must never do.*
+
+**Demographic facts, each with its consequence.** Non-technical → a lineage graph is not readable to them, so depth on request must be legible without knowledge of the stack. Unpaid → they cannot be asked to create an account, which is where the activation product decision comes from (`aarrr.md`).
+
+**Mood quote.** `[?]`. No verbatim user quote exists anywhere in the research and none will be synthesised. Queued for the follow-up research at step 6, because stage 05 needs a real voice to set tone against.
+
+### P2. The data lead who is asked &nbsp;&nbsp; secondary
+
+**Context.** 28 to 40, data team of 1 to 5 inside a company of 50 to 300. Arrives **on somebody else's trigger**: an inbound "why is this number different", several times a week (`CLAUDE.md`, `[?]`, hole 11). *Answers: their flow starts from an interruption, so the entry screen is search and jump to a metric, not a dashboard.*
+
+**Jobs (draft).** Answer once and have the answer stay answered. Make a definition and its owner visible without being in the room. Make a change to a definition visible to everyone who already read the number.
+
+**Pains.** Manual digging per question. Being a human API to their own data. A reputation that depends on their availability (`CLAUDE.md`, `[?]`). From the market: definition governance lives in producer tools, certification is a badge, and a name appears only when the badge is **removed** (`support.powermetrics.app`, article 37726220561559).
+
+**Choice triggers.** Whether the product can be evaluated without talking to sales: seven of the ten HARD and SOFT products cannot, and only PowerMetrics, Cube and dbt publish a seat price (`competitors.md`). Whether it demands access to rows, where metadata-only is our argument (`CLAUDE.md`). *Answers: what the public surface and the first run must prove before anyone talks to us.*
+
+**Demographic facts, each with its consequence.** Team of 1 to 5 → there is no rota and every question lands on the same person → the product has to answer **in their absence**. Company of 50 to 300 → no data steward role exists → ownership is one name, not a workflow.
+
+**Mood quote.** `[?]`, same reason.
+
+### Not a persona: the buyer
+
+Head of data or COO. Deliberately given no product surface (`CLAUDE.md`). They still impose constraints: a trust surface in the IA, SOC 2 Type II, SSO, and the metadata-only claim, plus open question 6 about whether an account-free card survives a security review.
+
+Recorded as a **constraint rather than a persona**, and that is not a formality. A third persona would collect its own jobs at step 3, its own screens at 03a and its own share of MVP scope, and five stages later nobody would remember it was never meant to have any.
+
+### Primary: the reader, and what the mark does
+
+**Criterion of primacy used here:** primary is the one whose needs are **not** met by designing for the other. Criterion and evidence are two different things, so the evidence follows separately.
+
+**Evidence, and it is asymmetric.** Designing for the analyst produces a catalog. Catalogs already exist in all fifteen competitor products, and the reader does not go to them: provenance is a destination requiring prior suspicion (`competitors.md`). Designing for the reader produces a card, and the analyst is still served, because the registry, search and jump by name stay in MVP scope as the analyst's side of the same product (`ux-patterns.md`, what survives of the rejected catalog pattern). Three more things point the same way: the riskiest assumption is about the reader (`lean-ux-canvas.md` block 7), the activation node is defined on the reader, and four of the five funnel product decisions land on the reader's card (`aarrr.md`).
+
+**The price of this choice, stated plainly:** the interface is built around the person who never pays.
+
+**What the mark DOES, not what it means.** This paragraph is the operative one and later stages read it:
+
+- **A conflict of decisions is resolved in favour of the reader.** They carry the higher risk and have fewer levers: they cannot change the definition, cannot see the pipeline, and often cannot log in.
+- **Secondary scenarios must work, but the interface is not built around them.** The analyst's registry has to be good; it does not get to decide the shape of the card.
+- **03a step 2** marks which screens the reader needs and which only the analyst does. **04** draws states for the reader's role first. **07** must carry the card into the representative sample.
+- Without this line, a screen pulled in two directions gets resolved by taste rather than by data.
+
+**One caveat on the choice itself.** The research gives a clear leader on gap and on risk, and does not give one on revenue. The reader is primary as a design decision, not as a proven fact, so it goes first into the critique at step 5 and it is what the follow-up research at step 6 should try hardest to break.
+
+### Hypotheses in this file, in the form "we assume X, we will verify through Y"
+
+| Assumption | How it gets closed |
+| --- | --- |
+| The reader arrives from exposure rather than curiosity | The first test in `lean-ux-canvas.md` block 8: whether the link is opened **before** the number is used |
+| The analyst is interrupted several times a week | Self-report from three analysts before and after, with the weakness of self-report stated at the same time |
+| The reader and the analyst are two groups rather than one | Whether the same people both write definitions and read other people's. If they are the same people, there is one persona and this file is wrong at the top |
+| The reader is the right primary | Step 5 critique first, then follow-up research aimed at breaking it, not at confirming it |
