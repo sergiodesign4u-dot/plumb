@@ -108,7 +108,9 @@ A definition in words does not compute anything. Something has to make the metri
 
 **Editing a definition puts state 2.5 on cards that were already sent.** That has to be visible **before** saving, which is exactly the shape of the info banner taken from R8 in the bank: *"changing these details will require a reconnect"* becomes *"cards already sent will show that this definition changed"*.
 
-**We cannot say how many.** A reading is not a stored object, the moment travels encoded in the link, and we keep nothing about readers. So **the banner names the consequence and never a number**, and that is a direct and honest consequence of the architecture rather than a missing feature.
+**The banner names the consequence and never a number.**
+
+**Corrected at step 7, and the correction makes the rule stronger rather than weaker.** This node first said we *cannot* count, which was stated too broadly: nothing that identifies a reader is stored, but an anonymous server-side counter on the metric holds no identity and is what makes the activation metric in `aarrr.md` measurable at all. **The reason no number appears here is better than "we cannot": a count of links minted is not a count of people who will see the change**, and putting it in front of the analyst invites them to read it as people. Node 7.1's settlement of the cookie question owns this correction.
 
 **One previous version, and only one.** Version history deeper than the previous definition is out of scope by the brief. 4.7 shows the current text and the one before it, side by side at width and stacked at 360.
 

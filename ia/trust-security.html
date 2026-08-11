@@ -97,12 +97,12 @@
           <tr><td>Metric definitions, in words</td><td><strong>Any copy of a customer's data rows</strong></td></tr>
           <tr><td>Owners, and the date on each claim</td><td>Values as history. One last-run timestamp per metric, overwritten</td></tr>
           <tr><td>Connection settings, with secrets write-only</td><td>Any credential in readable form, including on our own screens</td></tr>
-          <tr><td>The link a card was sent as</td><td><strong>Anything about who opened it.</strong> No reader identity, no count, no log</td></tr>
+          <tr><td>The link a card was sent as</td><td><strong>Anything that identifies who opened it.</strong> No cookie, no device identifier, no per-reader log. <strong>One anonymous counter on the metric, naming nobody</strong>, and it is never shown in the product</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p><strong>The last row is worth reading twice</strong>, because it is also why node 4.7 cannot say how many cards were sent. <strong>The same architecture produces the compliance argument and the product limitation</strong>, and this is where the customer meets both.</p>
+    <p><strong>The last row is worth reading twice</strong>, because it is also why node 4.7 names no number when a definition changes. <strong>The same architecture produces the compliance argument and the product limitation</strong>, and this is where the customer meets both. The counter exists so the product can observe its own activation; <strong>it names nobody and it is never rendered.</strong></p>
 
     <p><strong>Block 4 carries the sentence most companies would not write.</strong> The page says what we do not have yet and when we expect it. A trust page that lists two certifications and stays silent about the third is answering by omission, and a reviewer who finds that out later has learned something worse than the absence.</p>
 
@@ -114,7 +114,7 @@
           <div class="sub">Your numbers are queried from your warehouse when somebody reads them. No copy is kept.</div>
           <div class="cols">
             <div><h5>We hold</h5><ul><li>Definitions, in words</li><li>Owners and dates</li><li>Connection settings</li></ul></div>
-            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Anything about readers</li></ul></div>
+            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Any reader identity</li></ul></div>
           </div>
           <div class="badges"><span>SSO, OIDC and SAML</span><span class="not">SOC 2 Type II, not yet</span></div>
           <div class="pol">Privacy policy &middot; Terms of service &middot; Subprocessors &middot; <a>Report a vulnerability</a></div>
@@ -129,7 +129,7 @@
           <div class="sub">Queried at read time. No copy kept.</div>
           <div class="cols" style="flex-direction:column; gap:9px">
             <div><h5>We hold</h5><ul><li>Definitions, in words</li><li>Owners and dates</li><li>Connection settings</li></ul></div>
-            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Anything about readers</li></ul></div>
+            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Any reader identity</li></ul></div>
           </div>
           <div class="badges"><span>SSO</span><span class="not">SOC 2, not yet</span></div>
           <div class="pol">Privacy &middot; Terms &middot; Subprocessors</div>

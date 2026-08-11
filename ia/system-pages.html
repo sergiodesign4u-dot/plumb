@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>7.1 to 7.4 System pages - Plumb</title>
+<meta name="description" content="Nodes 7.1 to 7.4: the 404 as the reader's first contact, a 500 that says what can still be believed, and the cookie discrepancy settled as a product decision.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:16px 12px; }
+  .bw.wide{ min-width:400px; }
+  .h{ font-size:15px; font-weight:700; margin-bottom:7px; line-height:1.35; }
+  .p{ color:#3a3f45; line-height:1.6; margin-bottom:9px; }
+  .two{ border-left:2px solid #14161a; padding-left:10px; margin:11px 0; line-height:1.6; }
+  .act{ border:1px solid #14161a; padding:8px 10px; font-weight:600; display:inline-block; margin-top:5px; }
+  .foot{ border-top:1px solid #e3e1dc; margin-top:16px; padding-top:9px; color:#6b7076; font-size:10.5px; }
+  .bar{ border-bottom:1px solid #14161a; padding-bottom:8px; margin-bottom:12px; display:flex; gap:12px; }
+  .bar span{ color:#6b7076; }
+  .bar span.on{ color:#14161a; font-weight:700; }
+  .bar .sp{ flex:1; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Step 7 &middot; Nodes 7.1 to 7.4</p>
+    <h1>The 404 is not an edge case here, it is the reader's first contact</h1>
+    <p class="standfirst lede">The reader's only entrance is a link, so a broken or expired one is where they meet us. This step also settles the one discrepancy the map has been carrying since the base layer, and the answer turns out to be a product decision rather than a legal one.</p>
+    <div class="dateline">
+      <span>Nodes: 7.1, 7.2 MVP</span>
+      <span>7.3, 7.4 ПОТІМ</span>
+      <span>Source: <code>ia/docs/pages/system-pages.md</code></span>
+    </div>
+  </header>
+
+  <section id="notfound">
+    <div class="sec-head"><span class="sec-num">01</span><h2>7.1, and it renders two ways from one node</h2></div>
+
+    <div class="flag warn">
+      <b>The negative reference, quoted in full because it is the whole argument</b>
+      <p><strong>dbt's documentation 404 says, in its entirety:</strong> "Page Not Found", "We could not find what you were looking for.", and <em>"Please contact the owner of the site that linked you to the original URL and let them know their link is broken."</em></p>
+      <p style="margin-top:8px"><strong>There is no route onward at all.</strong> The page tells the visitor to go and fix somebody else's website. <strong>Our reader is the person who was linked</strong>, so that sentence hands the problem to the one person who cannot solve it and has no account to solve it with.</p>
+    </div>
+
+    <div class="flag">
+      <b>The decision that stops the recovery block being a shrug, and it adds an object</b>
+      <p>"Ask whoever sent it" is only useful if we can say who that might be. For a link that never existed we know nothing. For a metric that existed and was removed, we could know, and until now we would have thrown it away.</p>
+      <p style="margin-top:8px"><strong>So a deleted metric leaves a tombstone: its name, its owner, and the date it was removed. Nothing else.</strong> No definition, no value, no history. Three fields, storing nothing about the reader and nothing about the data, and it is the difference between "this is gone" and "this was Weekly active accounts, Dana Reyes removed it on 3 August, and she is who to ask". <strong>Recorded as a new decision at step 7</strong> and added to the entity inventory in the map.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 7.1 for the reader, and it answers</div>
+        <div class="bw">
+          <div class="h">There is no number at this link</div>
+          <div class="p">A number card was expected here.</div>
+          <div class="two"><strong>Two things could have happened.</strong><br>The link may have expired, or the metric may have been removed. We cannot tell which from here.</div>
+          <div class="p"><strong>Weekly active accounts</strong> was removed by Dana Reyes on 3 August. She is the person to ask.</div>
+          <div class="foot">Plumb &middot; Trust and security &middot; Privacy &middot; Terms</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Desktop, 7.1 for the analyst, shell intact</div>
+        <div class="bw wide">
+          <div class="bar"><span class="on">Metrics</span><span>Sources</span><span class="sp"></span><span>DR</span></div>
+          <div class="h">There is no metric at this address</div>
+          <div class="p">The link may have expired, or the metric may have been removed. Your navigation is where it was.</div>
+          <span class="act">Back to the registry</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Refused</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>"Contact the owner of the site that linked you"</strong></td><td>Our reader <strong>is</strong> the person who was linked</td></tr>
+          <tr><td>A 404 with no onward route at all</td><td>The flow critique already ruled a dead end with no route out a defect. This one is live, in a HARD competitor</td></tr>
+          <tr><td>The full marketing header and the whole sitemap footer</td><td>Cube's 404 carries about twenty-five links. That is not a route, it is a shrug, and on a phone the answer sits below a full-height header nobody asked for</td></tr>
+          <tr><td><strong>"Page Not Found" as an H2 with no H1 on the page</strong></td><td>Cube's does this. Every page we write carries one H1, and <strong>SEO structure is this stage's job rather than production's</strong></td></tr>
+          <tr><td>"Go to Homepage"</td><td>The analyst's home is the registry. <strong>The reader has no home at all</strong>, by decision, so this destination is not available for the persona that meets this page most</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>One thing 7.1 must not become.</strong> 7.1 and node 2.9 must not be usable to tell whether a metric exists: one says a card is not here, the other says a card is here and is not yours to read. <strong>In MVP the question does not arise</strong>, because nothing is restricted and 2.9 depends on a workspace policy that is entirely ПОТІМ. It is written down so whoever builds restriction meets the question before shipping it.</p>
+  </section>
+
+  <section id="fivehundred">
+    <div class="sec-head"><span class="sec-num">02</span><h2>7.2 and 7.3, where the architecture becomes visible to the reader</h2></div>
+
+    <p><strong>The middle block of the 500 appears in none of the sources and follows from the product.</strong> An error page in a trust product has to say whether anything it showed can still be believed. Ours says the honest thing: <strong>nothing was shown, because we did not get the number.</strong> No stale value sits behind the error, because there is no stored copy for one to come from.</p>
+
+    <div class="flag warn">
+      <b>The separation that matters</b>
+      <p>A 500 is <strong>our</strong> failure. "Source is down" is a fact about the <strong>customer's</strong> warehouse and belongs on the card as node 2.4. <strong>These must never share wording</strong>, or a reader learns to read our outage as their data being broken.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 7.2, and the middle block is ours</div>
+        <div class="bw">
+          <div class="h">Something broke on our side</div>
+          <div class="p">This is Plumb failing, not your data.</div>
+          <div class="two"><strong>Nothing was shown to you.</strong><br>We did not reach your source, so there is no number on this page to doubt. Plumb keeps no copy, so there is no old value behind this either.</div>
+          <span class="act">Try this link again</span>
+          <div class="foot">Plumb &middot; Trust and security</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 7.3, ПОТІМ, and it says whose data</div>
+        <div class="bw">
+          <div class="h">Plumb is down for maintenance until 03:00 UTC</div>
+          <div class="p"><strong>Your data is not affected.</strong> Plumb holds definitions and owners, not your numbers. Your warehouse is untouched and is still answering everybody else.</div>
+          <span class="act">Try again</span>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>7.3's sentence is specific to this product rather than generic.</strong> In a metadata-only product a maintenance window means the definitions are unreachable and the customer's warehouse is fine. <strong>It is the one moment the architecture is visible to the reader</strong>, whose mental model is that we hold the numbers.</p>
+
+    <p><strong>Status codes are part of the specification:</strong> a real 404, a real 500, and 503 with <code>Retry-After</code> on 7.3. <strong>A soft 404 returning 200 is refused by name</strong>, because it is the version of this page that gets indexed and then competes with real pages.</p>
+  </section>
+
+  <section id="cookie">
+    <div class="sec-head"><span class="sec-num">03</span><h2>7.4, and the discrepancy the map has been carrying is settled</h2></div>
+
+    <p>The map records it openly: 7.4 is ПОТІМ because the market is US B2B and GDPR was deliberately deferred, <strong>but the public card with no account will almost certainly carry analytics</strong>, and at that point the question stops being legal and becomes a product question <strong>on the very screen where we promise to store nothing about the reader.</strong></p>
+
+    <div class="tw">
+      <table>
+        <caption>The evidence, all of it opened live</caption>
+        <thead><tr><th>Company</th><th>What a US visitor gets</th></tr></thead>
+        <tbody>
+          <tr><td><strong>dbt Labs</strong></td><td>A full consent platform: "Accept All Cookies", "Personalize My Choices", a vendor list with search and filters. After the merger their legal rail also carries a separate <strong>Cookie List</strong> document</td></tr>
+          <tr><td><strong>Secoda</strong></td><td>A plain "we use cookies" banner</td></tr>
+          <tr><td><strong>Cube</strong></td><td>Nothing at all</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>The decision, and it is a product decision rather than a legal one</b>
+      <p><strong>The number card sets nothing on the reader's device.</strong> No cookie, no local storage, no third-party analytics, no tag manager.</p>
+      <p style="margin-top:8px">A consent modal on the card would be <strong>a dialog about tracking sitting on top of a page whose whole claim is that we store nothing about the reader</strong>, and it would be the reader's first contact with us, arriving before the number they came for. <strong>So 7.4 never applies to the card.</strong> It stays ПОТІМ and applies only to cluster 6, where a cookie may legitimately exist and the visitor is not mid-task.</p>
+    </div>
+
+    <div class="flag warn">
+      <b>The correction this forces, and it is a correction rather than a refinement</b>
+      <p>Nodes 4.7 and 6.2 say we cannot count anything about readers. <strong>That was stated too broadly</strong>, and the precise version is better for both pages.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <tbody>
+          <tr><th>Nothing that identifies a reader is stored</th><td>No cookie, no device identifier, no per-reader log, no name, no address. Unchanged, and it is what the trust page sells</td></tr>
+          <tr><th>An anonymous counter on the metric is allowed</th><td>Server side, holding no identity. <strong>It is what makes the activation metric measurable at all:</strong> activation is defined as the first time a card is opened by somebody other than the author, and a product that counted nothing could not observe its own activation</td></tr>
+          <tr><th>No count is ever shown in the product</th><td>Node 4.7's banner still names no number, <strong>for a better reason than "we cannot":</strong> a count of links minted is not a count of people who will see the change, and putting it in front of the analyst invites them to read it as people</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Both nodes are repaired upwards</strong> rather than left disagreeing with this one.</p>
+
+    <div class="flag">
+      <b>One mechanism lands here, and this is the only system page where that is true</b>
+      <p><strong>P1, emotional.</strong> Stop feeling exposed when presenting a number I did not compute myself → <strong>trouble named in words rather than raised as an alarm</strong> → 7.1 block 2 and 7.2 block 2. A reader who followed a dead link did not break anything, and naming two possible causes without blaming them is the same discipline node 0.4 applies to a number's states.</p>
+    </div>
+
+    <p><strong>Search is closed here rather than left implied.</strong> It is an affordance and not a node: it lives in node 0.1 as a persistent control over the registry, node 4.3 holds its result state including no-match, and node 3.1 records why the same control is not on the sources list. <strong>No screen was invented to fill a row</strong>, and this line exists so the absence reads as a decision.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#7.1">&larr; Structure (7.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '7.1 System pages';
+  window.NAV_SECTIONS = [
+    { id:'notfound',    label:'7.1, the 404' },
+    { id:'fivehundred', label:'7.2 and 7.3' },
+    { id:'cookie',      label:'7.4, settled' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

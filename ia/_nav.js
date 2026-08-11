@@ -29,7 +29,8 @@ window.IA_NAV = [
   { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' },
   { label: 'Trust and security', file: 'trust-security.html', group: 'pages', node: '6.2', type: 'page' },
   { label: 'Pricing',            file: 'pricing.html', group: 'pages', node: '6.3', type: 'page' },
-  { label: 'Content and legal',  file: 'legal-and-content.html', group: 'pages', node: '6.4', type: 'page' }
+  { label: 'Content and legal',  file: 'legal-and-content.html', group: 'pages', node: '6.4', type: 'page' },
+  { label: 'System pages',       file: 'system-pages.html', group: 'pages', node: '7.1', type: 'page' }
 ];
 
 (function () {

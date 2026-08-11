@@ -64,9 +64,9 @@ Linear's security page leads with a claim and puts certifications underneath. Mu
 | Metric definitions, in words | **Any copy of a customer's data rows** |
 | Owners, and the date on each claim | Values as history. There is one last-run timestamp per metric, overwritten |
 | Connection settings, with secrets write-only | Any credential in readable form, including on our own screens |
-| The link a card was sent as | **Anything about who opened it.** No reader identity, no count, no log |
+| The link a card was sent as | **Anything that identifies who opened it.** No cookie, no device identifier, no per-reader log. **One anonymous counter on the metric, naming nobody**, and it is never shown in the product |
 
-**The last row is worth reading twice**, because it is also why node 4.7 cannot say how many cards were sent. The same architecture produces the compliance argument and the product limitation, and this page is where the customer meets both.
+**The last row is worth reading twice**, because it is also why node 4.7 names no number when a definition changes. The same architecture produces the compliance argument and the product limitation, and this page is where the customer meets both. **The counter exists so the product can observe its own activation, it names nobody, and it is never rendered.**
 
 ## Components and variants
 

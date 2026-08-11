@@ -20,6 +20,9 @@ Objects first, screens second. Screens only show objects, and objects grow out o
 | E4 | **Owner of the claim** | Name, role, a route for reaching them `[?]` | R1. **The `[?]` is load-bearing:** asking a specific person requires a route, the reader has no account, and whether we may show a contact at all is unknown |
 | E5 | **Analyst account** | Name, email, SSO identity, workspace | R5 and R2: writing and owning definitions requires signing in |
 | E6 | **Reading**, resolved at step 4 | Not an object. The moment of reading travels **encoded in the link**, and nothing about the reader is stored | R4 |
+| E7 | **Tombstone of a removed metric**, added at 03b step 7 | Three fields only: the name it had, its owner, and the date it was removed. No definition, no value, no history | The main job at its failure point. Node 7.1 is the reader's first contact when a link dies, and without this object it can only shrug |
+
+**E7 is small on purpose and is added rather than assumed.** Node 4.4's delete confirmation already promises the reader will be told that the metric may have been removed, and node 7.1 is where that promise is either kept or broken. **A tombstone is the difference between "this is gone" and "this was *Weekly active accounts*, Dana Reyes removed it on 3 August, and she is who to ask."** It stores nothing about the reader and nothing about the data, which is the only kind of object this product adds.
 
 **E6 deserved its own paragraph, because it was the first real fork in this IA, and step 4 settled it.** The backlog requires a definition snapshot at read time, without which the state "definition changed after this was saved" has nothing to compare against. But T1 gave us **one permanent URL per metric**, not per reading. So either the snapshot is encoded in the link itself and there is no entity, or a reading is a stored object, and then we are storing something about a reader who has no account.
 
