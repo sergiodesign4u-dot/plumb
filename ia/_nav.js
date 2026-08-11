@@ -25,7 +25,11 @@ window.IA_NAV = [
   { label: 'Connect a source',   file: 'connect-source.html', group: 'pages', node: '3.2', type: 'page' },
   { label: 'The metric registry', file: 'metric-registry.html', group: 'pages', node: '4.1', type: 'page' },
   { label: 'Define a metric',    file: 'define-metric.html', group: 'pages', node: '4.4', type: 'page' },
-  { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' }
+  { label: 'Workspace and people', file: 'workspace.html', group: 'pages', node: '5.1', type: 'page' },
+  { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' },
+  { label: 'Trust and security', file: 'trust-security.html', group: 'pages', node: '6.2', type: 'page' },
+  { label: 'Pricing',            file: 'pricing.html', group: 'pages', node: '6.3', type: 'page' },
+  { label: 'Content and legal',  file: 'legal-and-content.html', group: 'pages', node: '6.4', type: 'page' }
 ];
 
 (function () {

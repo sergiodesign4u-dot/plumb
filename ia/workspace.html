@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5.1 and 5.2 The workspace shell - Plumb</title>
+<meta name="description" content="Nodes 5.1 and 5.2 on one shell: two sections, no jobs, a role that does not exist, and a domain half replaced by a named barrier.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:430px; display:flex; gap:14px; }
+  .rail{ flex:none; width:110px; border-right:1px solid #e3e1dc; padding-right:12px; }
+  .rail div{ padding:5px 0; color:#6b7076; }
+  .rail div.on{ color:#14161a; font-weight:700; }
+  .panel{ flex:1; }
+  .h{ font-size:14px; font-weight:700; margin-bottom:11px; }
+  .inv{ display:flex; gap:7px; margin-bottom:11px; }
+  .inv .f{ border:1px solid #14161a; padding:7px 8px; flex:1; color:#6b7076; }
+  .inv .r{ border:1px solid #14161a; padding:7px 8px; flex:none; }
+  .inv .b{ border:1px solid #14161a; padding:7px 9px; font-weight:600; flex:none; }
+  .seats{ border:1px dashed #14161a; padding:8px 9px; margin-bottom:11px; line-height:1.5; }
+  .grid{ width:100%; border-collapse:collapse; }
+  .grid th{ text-align:left; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+            color:#6b7076; font-weight:600; border-bottom:1px solid #14161a; padding:0 8px 5px 0; }
+  .grid td{ border-bottom:1px solid #e3e1dc; padding:7px 8px 7px 0; }
+  .grid td.nm{ font-weight:600; }
+  .block{ border:1px solid #14161a; padding:8px 9px; margin-top:9px; line-height:1.45; }
+  .rows{ border-top:1px solid #14161a; }
+  .row{ border-bottom:1px solid #e3e1dc; padding:8px 0; }
+  .row .nm{ font-weight:600; }
+  .row .ln{ color:#6b7076; font-size:11px; margin-top:2px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Nodes 5.1 and 5.2 &middot; pages &middot; ПОТІМ</p>
+    <h1>Two nodes, one shell, and a role that does not exist</h1>
+    <p class="standfirst lede">Cluster 5 is two sections of one settings surface rather than two pages designed twice. Both nodes carry "no job" in the traceability matrix and both keep it: writing a node up is not how a screen earns a job.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: ПОТІМ</span>
+      <span>Jobs: none, in either section</span>
+      <span>Source: <code>ia/docs/pages/workspace.md</code></span>
+    </div>
+  </header>
+
+  <section id="shell">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The shell, and where the two sections are actually one</h2></div>
+
+    <div class="flag warn">
+      <b>The domain half is missing here, and it is named rather than filled</b>
+      <p><strong>No competitor exposes a settings screen without an account</strong>, and this stage does not log in. So the bank's comparison column for this type holds a <strong>barrier</strong> rather than a comparison, and the composition rests on craft references plus our own decisions. <strong>What that costs:</strong> nothing about density, defaults or behaviour in a real data-team workspace is known, and stage 04 should treat this as structure rather than evidence.</p>
+    </div>
+
+    <p><strong>Seats appear on both sections, and for us that is structural rather than convenient.</strong> Our model charges for analysts and not for readers, so the seat count has to be visible <strong>at the moment somebody is added</strong>, or the price is discovered on an invoice a month later.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 5.1, two items in the rail and nothing else</div>
+        <div class="bw wide">
+          <div class="rail"><div class="on">People</div><div>Plan and seats</div></div>
+          <div class="panel">
+            <div class="h">People</div>
+            <div class="inv"><span class="f">name@company.com</span><span class="r">Analyst v</span><span class="b">Invite</span></div>
+            <div class="seats">3 of 5 seats used. Readers are not seats and are never counted here.</div>
+            <table class="grid">
+              <thead><tr><th>Person</th><th>Role</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td class="nm">Dana Reyes</td><td>Admin</td><td>Active</td></tr>
+                <tr><td class="nm">Priya Raman</td><td>Analyst</td><td>Active</td></tr>
+                <tr><td class="nm">sam@northwind.com</td><td>Analyst</td><td>Invited</td></tr>
+              </tbody>
+            </table>
+            <div class="block"><strong>Dana Reyes cannot be removed.</strong> A workspace needs one admin, and this is the only one. Make somebody else an admin first.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 5.2, and the blank that is stated</div>
+        <div class="bw">
+          <div style="color:#6b7076; margin-bottom:9px">People &nbsp;&middot;&nbsp; <strong style="color:#14161a">Plan and seats</strong></div>
+          <div class="h">Plan and seats</div>
+          <div class="seats">3 of 5 seats used.</div>
+          <div class="rows">
+            <div class="row"><div class="nm">A seat</div><div class="ln">Price not decided yet. This node does not invent one</div></div>
+            <div class="row"><div class="nm">Readers</div><div class="ln">Never charged for, and never counted</div></div>
+            <div class="row"><div class="nm">Metrics</div><div class="ln">Not capped</div></div>
+          </div>
+          <div class="block">Invoices and billing contact</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="roles">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Roles, refusals, and one rule taken as a rule</h2></div>
+
+    <div class="flag">
+      <b>There is no reader role at all</b>
+      <p>Secoda's pricing page lists viewers, editors and admins, with viewers unlimited on every tier. <strong>Ours is narrower: a reader has no account, so they cannot be a member of anything.</strong> The roles in this workspace are the ones that write, and that is a direct consequence of the card being readable at a permanent URL with no account.</p>
+    </div>
+
+    <p><strong>One craft source shows an error toast: you cannot remove the last admin.</strong> We take the rule and refuse the toast. A workspace with no administrator is unrecoverable, so this is <strong>inline and blocking at the point of the action</strong>, per node 0.3: what belongs to the thing on screen stays on screen.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Refused</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Per-permission options inside the invite dialog</strong></td><td>Row level permissions are out of scope by the brief, and a permission matrix here would promise them</td></tr>
+          <tr><td><strong>A 2FA status column</strong></td><td><strong>We do not hold the identity.</strong> SSO means 2FA is the provider's business, and reporting a status we do not own is a claim we cannot stand behind</td></tr>
+          <tr><td>A third settings section</td><td>Two intents, two items. A third would be invented from other people's menus</td></tr>
+          <tr><td>Filters over the member list</td><td>A workspace of one to five analysts, per the persona, is a list nobody filters</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Nothing from the emotional and social table lands on either section</strong>, which is the fourth analyst-side surface in a row to say so. The pattern was already recorded at node 1.1 and is not repeated as three separate gaps.</p>
+
+    <p><strong>SEO:</strong> <code>noindex</code>, no schema, no SEO text. Private, and it names the customer's employees.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#5.1">&larr; Structure (5.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '5.1 Workspace and people';
+  window.NAV_SECTIONS = [
+    { id:'shell', label:'One shell, two sections' },
+    { id:'roles', label:'Roles and refusals' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

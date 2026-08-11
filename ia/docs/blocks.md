@@ -41,9 +41,9 @@ Nodes are grouped by page type, not one by one. States and dialogs inherit the t
 | **T3. Form and editor** | 3.2 to 3.4, 4.4 to 4.7 | 7 | 7 | Yes |
 | **T4. Gate (SSO)** | 1.1 to 1.3 | 3 | 3 | Yes |
 | **T8. System page** | 7.1 to 7.4 | 4 | 2 | Yes |
-| **T6. Public landing** | 6.1, 6.2, 6.3 | 3 | 0 | **Yes, for 6.1 only** |
-| T5. Account settings | 5.1, 5.2 | 2 | 0 | Deferred |
-| T7. Content, legal, support | 6.4 to 6.7 | 4 | 0 | Deferred |
+| **T6. Public landing** | 6.1, 6.2, 6.3 | 3 | 0 | **Yes, for 6.1 only.** 6.2 and 6.3 collected in the ПОТІМ round |
+| T5. Account settings | 5.1, 5.2 | 2 | 0 | Deferred, **collected in the ПОТІМ round** |
+| T7. Content, legal, support | 6.4 to 6.7 | 4 | 0 | Deferred, **collected in the ПОТІМ round** |
 | T0. Global frame | 0.1 to 0.4 | 4 | 4 | Done at steps 2 and 3 |
 | | | **41** | **30** | |
 
@@ -476,9 +476,117 @@ This is the layer this stage owns, so it was read off the live pages instead of 
 
 ---
 
+## T6 extended, for 6.2 and 6.3, collected in the ПОТІМ round
+
+The T6 sources above were opened for the landing. **6.2 and 6.3 are the same type and different pages**, so they got their own live pass rather than being written by analogy with a landing page.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D15 | Secoda pricing, `secoda.co/pricing`. Screen: `research/screens/ui-secoda-pricing.png` | **Domain, live, HARD competitor** | 2026-08-12, this session |
+| D16 | dbt pricing, `getdbt.com/pricing`. Screen: `research/screens/ui-dbt-pricing.png` | **Domain, live, HARD competitor** | 2026-08-12, this session |
+| D17 | dbt Labs Trust Center, `trust.getdbt.com`. Screen: `research/screens/ui-dbt-trust-center.png` | **Domain, live** | 2026-08-12, this session |
+| D18 | Secoda Trust Center, `trust.secoda.co`. Screen: `research/screens/ui-secoda-trust-gated.png` | **Domain, live** | 2026-08-12, this session |
+| R19 | OpenAI pricing, `refero.design/pages/48b87627-bbe6-415d-b314-632c38e40d95` | Craft, five cards plus comparison table plus FAQ | 2026-08-12 |
+| R20 | RevenueCat pricing, `refero.design/pages/0dd86030-0bac-4ee0-8823-9999de49a774` | Craft, four tiers with stated limits | 2026-08-12 |
+| R21 | Linear security, `refero.design/pages/7035f422-d579-42e5-8eec-9b853f53cf9a` | Craft, a claim-led security page | 2026-08-12 |
+| R22 | Mural trust, `refero.design/pages/0e08ea58-ec47-49f3-81e4-d8b08968399a` | Craft, compliance grid plus a policy links row | 2026-08-12 |
+
+### What the live pages actually show
+
+**Secoda pricing (D15): three tiers, and not one price anywhere on the page.** Core, Premium, Enterprise, each with "Learn more" rather than a number. Then a comparison matrix in six groups, an FAQ of eleven questions, one `ld+json` block whose type is `CreativeWork`. **Viewers are Unlimited on all three tiers**, which confirms the line already in `research.md`.
+
+**dbt pricing (D16): four tiers with prices in the open.** Free, $100 per user per month, Custom, Custom. The meta description carries the price. Twelve FAQ questions across two groups, "dbt FAQs" and "Billing and security FAQs", and **zero `ld+json` blocks on the page.**
+
+**The metering is the finding, not the prices.** dbt sells "3,000 successful models built per month", "5,000 queried metrics per month", "20,000 queried metrics per month". **A queried metric per month is a billable unit in this market**, and our business hypothesis is seats with no cap on metric count. This is the closest thing in the research to a competitor charging for the thing we intend to give away, and it belongs in front of question 2 in `research.md` rather than being discovered after pricing is set.
+
+**The two trust centres are opposites, and that is the whole of node 6.2.** dbt's (D17) is open: 9 documents, 15 FAQs, 7 badges, dated security announcements, three named subprocessors, a vulnerability report route, and *"Everything you need to complete your security review is here"*. **Secoda's (D18) is a lead form.** First name, last name, email, company, reason, "Request access". **No H1, and no public content at all.**
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Where we are better, and why |
+| --- | --- | --- | --- | --- | --- |
+| D15 | **A pricing page with no prices** | **DO NOT TAKE** | Acquisition | ПОТІМ | Three tiers and three "Learn more" links is a page that answers no question it was opened to answer. **For a product selling defensibility, a price you have to ask for is off-brand in a way that is hard to argue out of** |
+| D16 | **Prices stated, including in the meta description** | **TAKE** | Acquisition, SEO | ПОТІМ | The better of the two on this row and worth copying outright |
+| D16 | **Metered units: models built and metrics queried per month** | **DO NOT TAKE, and record it as a live risk** | The business hypothesis in `CLAUDE.md` | Out | Charging per read is charging for the growth mechanic. Recorded because a competitor already meters exactly the unit we intend to leave free, and if our hypothesis falls, this row is where it falls |
+| D15, D16 | **Comparison matrix by feature group** | TAKE, reduced | Acquisition | ПОТІМ | Secoda's runs six groups and dozens of rows for three tiers. Ours has two roles and one axis that matters: **what a reader can do without paying** |
+| D15, D16, R19 | **FAQ accordion at the bottom** | **TAKE, with `FAQPage` schema** | SEO structure | ПОТІМ | **Both competitors run an FAQ and neither ships `FAQPage`.** One has a generic `CreativeWork`, the other has nothing. Same cheap advantage as on the landing, on the page where billing questions are actually asked |
+| D16 | **"Does dbt store my data?" as a billing and security FAQ question** | **TAKE the question** | The main job, node 6.2 | ПОТІМ | It is the question our whole architecture answers, and a competitor's own page proves buyers ask it here. **Ours answers it in one sentence and links to 6.2** |
+| R19, R20 | **Plan limits stated on the card** | TAKE the shape, refuse the unit | Acquisition | ПОТІМ | A card should say what is bounded. Ours bounds seats, and says out loud that metrics and readers are not bounded |
+| R19 | **Logo wall on the pricing page** | DO NOT TAKE until true | Acquisition | ПОТІМ | Same rule as the landing. An invented logo on a trust product is the worst available lie |
+| D17 | **An open trust centre: badges, a summary, FAQs, subprocessors, a vulnerability route** | **TAKE the content set** | The buyer, SOC 2 | ПОТІМ | The buyer has no product surface, so this page is the whole of their experience of us |
+| D17 | **Documents behind "Get Access"** | TAKE, **narrowly** | Legal | ПОТІМ | A gate belongs only in front of documents that need an NDA. **Everything that can be said in public is said in public** |
+| D18 | **The entire trust surface behind a lead form** | **DO NOT TAKE, and this is the sharpest refusal in the type** | The buyer | Out | A page that asks a security reviewer for their name before telling them anything has converted a trust surface into a lead capture. **We are selling the claim that you can check a thing without asking permission**, and doing this would contradict the product on the product's own subject |
+| D17 | **Dated security announcements about our own systems** | TAKE, and note the distinction | The buyer | ПОТІМ | Design principle 2 forbids an incident workflow **around a number**. An advisory feed about our own infrastructure is a different object with a different reader, and refusing it would be applying a rule outside its scope |
+| D17 | **The trust centre on a third-party subdomain** | **DO DIFFERENTLY** | SEO structure | ПОТІМ | dbt's is `trust.getdbt.com`, powered by a vendor. Ours is a page on our own domain, because this stage owns the structural SEO layer and a subdomain we do not control cannot carry it |
+| R21 | **A security page led by a claim rather than by badges** | **TAKE** | The buyer, and the main job | ПОТІМ | **SOC 2 is a later goal, so we have no badge to lead with.** What we have is an architecture claim that is true today: no copy of customer rows. A claim beats a badge we do not hold |
+| R22 | **Compliance grid plus a row of policy links** | TAKE | Node 0.2, nodes 6.5 and 6.6 | ПОТІМ | It is the join between 6.2 and the legal pages, and it is what a reviewer opens next |
+
+---
+
+## T5. Account settings, collected in the ПОТІМ round
+
+**Nodes:** 5.1 workspace and people, 5.2 plan and seats. Two nodes, both ПОТІМ, **both marked "no job" in the traceability matrix.**
+
+**The domain half is behind a login and stays there.** Neither competitor exposes a settings screen without an account, and this stage does not log in. **So the comparison column holds a barrier**, and the craft half carries the type.
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| R23 | Butter team members, `refero.design/pages/383056d3-e4ee-4c33-9bc5-b71cf51357a5` | Craft, with the last-admin error | 2026-08-12 |
+| R24 | Fernand team, `refero.design/pages/1049cb47-7138-4273-8c1c-e08386e1c142` | Craft, members table with roles and 2FA | 2026-08-12 |
+| R25 | Supercut team, `refero.design/pages/f8bad021-2eca-4b02-a4d3-296cfd762b3a` | Craft, seats shown beside members | 2026-08-12 |
+| R26 | Fingerprint invite, `refero.design/pages/2d463e06-3b8c-4c82-a943-0a8fa4db58a0` | Craft, invite as a dialog | 2026-08-12 |
+| D19 | Secoda pricing (D15), the security and workspace management rows | Domain, for what a workspace has to hold | 2026-08-12, this session |
+
+| Source | Block | Decision | Traces to | Scope | Barrier or comparison |
+| --- | --- | --- | --- | --- | --- |
+| R23, R24, R25 | **Settings sidebar plus a main panel** | **TAKE as one shell for both nodes** | Tenancy | ПОТІМ | This is the reuse decision for cluster 5: one private multi-section shell, two sections, not two pages built twice |
+| R24, R25 | **Members table: person, role, status** | TAKE | Tenancy | ПОТІМ | Barrier rather than comparison: we cannot see a competitor's version without an account |
+| R25 | **Seats shown beside members** | **TAKE, and it is the join to 5.2** | The business hypothesis | ПОТІМ | Our model charges for analysts and not for readers, so **the seat count has to be visible where people are added**, or the price is discovered at the invoice |
+| R26, R24 | **Invite by email with a role chosen in the same row** | TAKE | Tenancy | ПОТІМ | Two fields, one action |
+| R26 | **Advanced per-permission options inside the invite dialog** | DO NOT TAKE | Nothing | Out | Row level permissions are out of scope by the brief, and a permission matrix here would promise them |
+| R23 | **The error "you cannot remove the last admin"** | **TAKE, as a rule rather than a toast** | Tenancy | ПОТІМ | A workspace with no administrator is unrecoverable. Node 0.3 already rules that what belongs to the thing on screen stays on screen, so this is inline and blocking, not a toast |
+| R24 | **A 2FA status column** | DO NOT TAKE | Nothing | Out | We do not hold the identity. **SSO means 2FA is the provider's business**, and reporting a status we do not own would be a claim we cannot stand behind |
+| D19 | **Roles: viewer, editor, admin, with viewers unlimited** | TAKE the shape | The business hypothesis | ПОТІМ | Our version is narrower: **there is no reader role at all**, because a reader has no account. The roles here are the ones that write |
+
+**Composition, one shell and two sections.** Sidebar with two items. **People:** invite row, members table, the last-admin rule. **Plan and seats:** seats used and available, what a seat costs, what is not charged for, invoice route.
+
+**Rule 3 check.** Every craft source shows an app whose settings live in a modal or a three-column shell with many sections. **Ours has two sections and no modal**, and the thing none of them has is a stated non-charge: the row saying readers are free is ours because our pricing hypothesis is ours.
+
+---
+
+## T7. Content, legal and support, collected in the ПОТІМ round
+
+**Nodes:** 6.4 documentation, 6.5 privacy policy, 6.6 terms of service, 6.7 support and contact. Four nodes, all ПОТІМ. **This type gets a template map rather than a composition**, which is the reuse decision the pipeline names for legal pages.
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D20 | dbt's privacy link, `getdbt.com/cloud/privacy-policy`, **which redirects to** `fivetran.com/legal/privacy`. Screen: `research/screens/ui-fivetran-legal-privacy.png` | **Domain, live** | 2026-08-12, this session |
+| D21 | dbt documentation, `docs.getdbt.com`, already used for T1 and T2 | Domain | 2026-08-12, this session |
+| R27 | Square general terms, `refero.design/pages/44b45474-5df8-4f6d-875f-843c37110225` | Craft, terms with a related-links rail | 2026-08-12 |
+| R28 | Dock legal, `refero.design/pages/b4957573-0fee-4037-ac9f-c46505ad0f78` | Craft, tabs across the legal documents | 2026-08-12 |
+| R29 | Bezi terms, `refero.design/pages/28c07018-8f6d-4391-bd21-e4bd0b7c1073` | Craft, title plus an update date | 2026-08-12 |
+
+| Source | Block | Decision | Traces to | Scope | Comparison |
+| --- | --- | --- | --- | --- | --- |
+| D20 | **A legal hub with a rail: terms grouped, privacy grouped, then each document** | **TAKE, and it is the template map** | Legal | ПОТІМ | Four pages, one shell, one rail. The alternative is four pages that do not know about each other |
+| D20, R29 | **"Last Updated" directly under the title** | **TAKE** | Legal, and design principle 5 | ПОТІМ | **Principle 5 says every claim carries a name and a time.** A legal page with no date is the same defect as a number with no timestamp, on a page whose entire content is claims |
+| D20 | **H2s written as questions** ("What personal data does Fivetran collect and why?") | TAKE | Legal, SEO | ПОТІМ | It is how the reader asks it and how a search does, and it costs nothing |
+| D20 | **The product's own privacy link leaving the product's own domain** | **DO NOT TAKE, and it is recorded as a finding rather than a criticism** | SEO structure, node 0.2 | Out | After the merger, dbt's footer privacy link lands on `fivetran.com`. **A legal surface that is not on your own domain is one you do not control the wording, the canonical or the date of**, and for us the privacy page is a selling argument rather than boilerplate |
+| D20 | **Cookie List as a separate document in the rail** | TAKE the slot, decide at step 7 | Node 7.4 | ПОТІМ | The cookie discrepancy is already recorded in the map and step 7 owns it. This is where the document would live |
+| D21 | **Documentation as a separate subdomain with its own navigation** | DO NOT TAKE in MVP or the first ПОТІМ round | Both personas | ПОТІМ | A documentation site is its own information architecture. **Ours is one page answering how a definition is written and how a card is read**, and it grows into a site when there is something to document |
+| R27, R28 | **Cross-navigation between legal documents, as a rail or as tabs** | TAKE, as a rail | Legal | ПОТІМ | Four documents, and a reviewer opens two of them in the same minute |
+| R28 | **A "Get started" call to action inside a legal page** | DO NOT TAKE | Nothing | Out | A legal document with a conversion button reads as an ad, on the one page where a person is looking for the absence of tricks |
+| R27 | **Two-column: text plus a related-links sidebar** | TAKE at width, stack at 360 | Legal | ПОТІМ | Same rule as everywhere else in this stage |
+
+**The template map, four pages on one shell:** title, last-updated date, the rail of sibling documents, one readable column of prose, footer. **6.7 is the exception:** it holds a route to a person rather than a document, and it carries no rail.
+
+---
+
 ## What this bank does not cover, said plainly
 
-**Two types were deferred and are not lost:** T5, account settings (5.1 and 5.2), and T7, content, legal and support (6.4 to 6.7). Six nodes between them, every one ПОТІМ, and neither blocks anything in the MVP round. When they are collected, T7 in particular will need its own domain pass, because legal pages have a template map rather than a composition.
+**Both deferred types were collected in the ПОТІМ round** and are recorded above: T5 (5.1, 5.2) with a barrier in place of its domain half, and T7 (6.4 to 6.7) with a template map rather than a composition.
 
 **The domain half was documentation rather than product for three types.** T1, T2 and T3 hold 21 of the 30 MVP nodes, and for all three the product surface is behind a login that we do not pass. Documentation describes an interface and shows selected screenshots of it, which is not the same as using it. **Everything in those three types about density, behaviour under a narrow viewport, and what a screen feels like in the hand remains unknown**, and stage 04 should treat the compositions above as structure rather than as evidence about experience.
 

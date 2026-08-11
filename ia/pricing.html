@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.3 Pricing - Plumb</title>
+<meta name="description" content="Node 6.3: the one page that argues with itself, since the business model is still a hypothesis. Prices in the open, a block naming what is never charged for, and two decisions left open.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:420px; }
+  .h{ font-size:15px; font-weight:700; margin-bottom:4px; }
+  .sub{ color:#6b7076; margin-bottom:13px; line-height:1.5; }
+  .cards{ display:flex; gap:9px; flex-wrap:wrap; }
+  .card{ border:1px solid #14161a; padding:10px; flex:1 1 130px; }
+  .card .nm{ font-weight:700; margin-bottom:3px; }
+  .card .pr{ font-size:17px; font-weight:700; margin:5px 0; }
+  .card .li{ color:#6b7076; font-size:11px; line-height:1.55; }
+  .free{ border:1px dashed #14161a; padding:10px; margin-top:12px; line-height:1.5; }
+  .free b{ display:block; margin-bottom:3px; }
+  .faq{ margin-top:12px; border-top:1px solid #14161a; }
+  .faq div{ border-bottom:1px solid #e3e1dc; padding:8px 0; display:flex; justify-content:space-between; gap:10px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 6.3 &middot; pages &middot; ПОТІМ</p>
+    <h1>The one page in this product that argues with itself</h1>
+    <p class="standfirst lede">The business model is still a hypothesis in the rules file and in the research, and this is the page that would have to state it as a fact. So the node specifies the structure and names the two things that are not decided, rather than inventing numbers to fill a card.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: ПОТІМ</span>
+      <span>Indexed: yes</span>
+      <span>Source: <code>ia/docs/pages/pricing.md</code></span>
+    </div>
+  </header>
+
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Seven blocks, and one of them exists because no source has it</h2></div>
+
+    <div class="flag">
+      <b>The comparison that decided block 2</b>
+      <p><strong>Secoda's pricing page has three tiers and not one price anywhere on it.</strong> Core, Premium, Enterprise, each with "Learn more". <strong>dbt's has four tiers with prices in the open</strong>, and the price is in the meta description.</p>
+      <p style="margin-top:8px"><strong>We take dbt's version outright.</strong> For a product selling defensibility, a price you have to ask for is off-brand in a way that is hard to argue out of: the whole claim is that a person should be able to check a thing without asking anybody's permission.</p>
+    </div>
+
+    <p><strong>Block 3 exists because no source has it.</strong> Every pricing page in the bank says what a plan includes. <strong>None says what it will never charge for.</strong> Ours does, and it is the business hypothesis stated as a promise: readers are free and the metric count is not capped, because charging per reader kills the growth mechanism and charging per metric penalises the exact behaviour activation is defined as.</p>
+
+    <p><strong>Block 4 is one axis instead of six groups.</strong> Secoda's comparison runs six feature groups and dozens of rows across three tiers. Ours has the one axis that matters: <strong>what a person can do without paying.</strong> Read a card, open its source layer, send it on. That is the whole free tier, and it is also the product's argument.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 6.3, prices on the cards</div>
+        <div class="bw wide">
+          <div class="h">What Plumb costs, and what it never charges for</div>
+          <div class="sub">Seats for the people who write definitions. Everyone who reads a number is free.</div>
+          <div class="cards">
+            <div class="card"><div class="nm">Team</div><div class="pr">$ per analyst / month</div><div class="li">Unlimited metrics<br>Unlimited readers<br>SSO<br>One workspace</div></div>
+            <div class="card"><div class="nm">Enterprise</div><div class="pr">Custom</div><div class="li">Everything in Team<br>SOC 2 report<br>Invoicing<br>Named support</div></div>
+          </div>
+          <div class="free"><b>Never charged for</b>Readers. The number of metrics. The number of times a card is opened.</div>
+          <div class="faq"><div><span>Does Plumb store my data?</span><span>+</span></div><div><span>What counts as a seat?</span><span>+</span></div><div><span>Can I pay by invoice?</span><span>+</span></div></div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, cards stacked, non-charge block intact</div>
+        <div class="bw">
+          <div class="h">What Plumb costs</div>
+          <div class="sub">Seats for the people who write definitions.</div>
+          <div class="cards" style="flex-direction:column">
+            <div class="card"><div class="nm">Team</div><div class="pr">$ per analyst / month</div><div class="li">Unlimited metrics, unlimited readers, SSO</div></div>
+            <div class="card"><div class="nm">Enterprise</div><div class="pr">Custom</div><div class="li">SOC 2 report, invoicing, named support</div></div>
+          </div>
+          <div class="free"><b>Never charged for</b>Readers. The number of metrics. The number of times a card is opened.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="open">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The two things this node does not decide</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Open</th><th>Why it stays open</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The number on the card</strong></td><td>Question 1 in the research. The market gives no reader-pricing norm to inherit: Secoda gives unlimited viewers on every tier, Cube charges $20 per viewer per month, Looker makes Viewer a separate licence, PowerMetrics caps metrics at 50 and 200</td></tr>
+          <tr><td><strong>Whether seats are the unit at all</strong></td><td><strong>A live risk, found on the live page.</strong> dbt meters "5,000 queried metrics per month" and "20,000 queried metrics per month". A queried metric per month is a billable unit in this market, and it is the unit we intend to leave free</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>Why neither is invented to make the page look finished</b>
+      <p>A pricing page written before the pricing decision <strong>becomes the place the decision was accidentally made.</strong> The structure is specified, the numbers are not, and question 2 in the research now has a competitor's metered unit standing in front of it.</p>
+    </div>
+  </section>
+
+  <section id="seo">
+    <div class="sec-head"><span class="sec-num">03</span><h2>SEO block, A to E</h2></div>
+
+    <div class="tw">
+      <table>
+        <tbody>
+          <tr><th>title (52)</th><td><code>Plumb pricing: analysts pay, readers never do</code></td></tr>
+          <tr><th>description (149)</th><td><code>Seats for the people who write metric definitions. Reading a number with its source, its age and its owner is free, and the metric count is not capped.</code></td></tr>
+          <tr><th>canonical</th><td>absolute form of <code>/pricing</code></td></tr>
+          <tr><th>hreflang</th><td>none, deliberately. One language</td></tr>
+          <tr><th>robots</th><td><code>index, follow</code></td></tr>
+          <tr><th>H1</th><td>What Plumb costs, and what it never charges for</td></tr>
+          <tr><th>H2</th><td>The plans &middot; What is never charged for &middot; What a reader can do without an account &middot; Questions about billing and about what we store</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Structured data: <code>FAQPage</code> on the FAQ block.</strong> Neither competitor ships it. Secoda's pricing page carries one <code>ld+json</code> of type <code>CreativeWork</code>, and dbt's carries none at all, both with FAQs on the page. <strong><code>Product</code> with <code>Offer</code> is deferred until the numbers exist</strong>, because marking up a price we have not decided would publish the decision by accident.</p>
+
+    <p><strong>Checklist.</strong> One H1. LCP is the first plan card and it is text, so nothing waits on an image or a warehouse. Crawlable links to 6.1, 6.2 and the legal pages. <strong>No text baked into images, including the price.</strong> No third-party script, and the FAQ opens without one.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#6.3">&larr; Structure (6.3)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '6.3 Pricing';
+  window.NAV_SECTIONS = [
+    { id:'blocks', label:'Seven blocks' },
+    { id:'open',   label:'What is not decided' },
+    { id:'seo',    label:'SEO block' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

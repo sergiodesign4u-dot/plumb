@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.2 Trust and security - Plumb</title>
+<meta name="description" content="Node 6.2: the buyer's entire experience of the product. Two competitor trust centres are opposites, one open and one a lead form, and the refusal here is not a preference.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:420px; }
+  .h{ font-size:15px; font-weight:700; margin-bottom:5px; line-height:1.35; }
+  .sub{ color:#6b7076; margin-bottom:13px; line-height:1.5; }
+  .cols{ display:flex; gap:12px; border-top:1px solid #14161a; padding-top:9px; }
+  .cols div{ flex:1; }
+  .cols h5{ font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:#6b7076;
+            margin:0 0 5px; font-weight:600; }
+  .cols ul{ margin:0; padding-left:15px; line-height:1.6; }
+  .badges{ display:flex; gap:8px; margin-top:13px; flex-wrap:wrap; }
+  .badges span{ border:1px solid #14161a; padding:5px 8px; }
+  .badges span.not{ border-style:dashed; color:#6b7076; }
+  .pol{ margin-top:12px; padding-top:9px; border-top:1px solid #e3e1dc; color:#6b7076; }
+  .pol a{ text-decoration:underline; }
+  .gate{ border:1px dashed #14161a; padding:9px 10px; margin-top:12px; line-height:1.5; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 6.2 &middot; pages &middot; ПОТІМ</p>
+    <h1>The buyer never opens a card, and never writes a definition. They open this</h1>
+    <p class="standfirst lede">The rules file records the head of data or COO as a deliberate non-persona with no product surface, who imposes SOC 2, SSO and a trust surface anyway. This page is the whole of their experience of us.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: ПОТІМ</span>
+      <span>Indexed: yes</span>
+      <span>Source: <code>ia/docs/pages/trust-security.md</code></span>
+    </div>
+  </header>
+
+  <section id="comparison">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The sharpest comparison in the bank</h2></div>
+
+    <p>Both HARD competitors have a trust centre. <strong>They are opposites.</strong></p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th></th><th>dbt Labs, <code>trust.getdbt.com</code></th><th>Secoda, <code>trust.secoda.co</code></th></tr></thead>
+        <tbody>
+          <tr><td>What is public</td><td>9 documents listed, 15 FAQs, 7 badges, dated security announcements, 3 named subprocessors, a vulnerability report route</td><td><strong>Nothing</strong></td></tr>
+          <tr><td>What it asks for first</td><td>Nothing. "Everything you need to complete your security review is here"</td><td>First name, last name, email, company, reason</td></tr>
+          <tr><td>H1</td><td>"dbt Labs | Trust Center"</td><td><strong>None. There is no H1 on the page</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>Ours is public, and the refusal is not a preference</b>
+      <p>A page that asks a security reviewer for their name before telling them anything has turned a trust surface into a lead capture. <strong>We are selling the claim that a person can check something without asking permission</strong>, and gating this page would contradict the product on the product's own subject.</p>
+      <p style="margin-top:8px">The gate survives in one place only: <strong>in front of documents that legally need an NDA</strong>, which is where dbt's own gate is.</p>
+    </div>
+
+    <div class="flag">
+      <b>A claim rather than a badge, and it is forced rather than chosen</b>
+      <p>Linear's security page leads with a claim and puts certifications underneath. Mural and Asana lead with badges and logos. <strong>We have no badge to lead with:</strong> SOC 2 Type II is a later goal and not a current fact.</p>
+      <p style="margin-top:8px">What we do have is an architecture claim that is true today: <strong>we store no copy of customer data rows.</strong> A claim we can defend beats a badge we do not hold, and this is the one page where the difference is the entire point.</p>
+    </div>
+  </section>
+
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Where the product and the compliance story are the same sentence</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>We hold</th><th>We do not hold</th></tr></thead>
+        <tbody>
+          <tr><td>Metric definitions, in words</td><td><strong>Any copy of a customer's data rows</strong></td></tr>
+          <tr><td>Owners, and the date on each claim</td><td>Values as history. One last-run timestamp per metric, overwritten</td></tr>
+          <tr><td>Connection settings, with secrets write-only</td><td>Any credential in readable form, including on our own screens</td></tr>
+          <tr><td>The link a card was sent as</td><td><strong>Anything about who opened it.</strong> No reader identity, no count, no log</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The last row is worth reading twice</strong>, because it is also why node 4.7 cannot say how many cards were sent. <strong>The same architecture produces the compliance argument and the product limitation</strong>, and this is where the customer meets both.</p>
+
+    <p><strong>Block 4 carries the sentence most companies would not write.</strong> The page says what we do not have yet and when we expect it. A trust page that lists two certifications and stays silent about the third is answering by omission, and a reviewer who finds that out later has learned something worse than the absence.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 6.2, claim first, badges honest</div>
+        <div class="bw wide">
+          <div class="h">What Plumb stores, and what it never touches</div>
+          <div class="sub">Your numbers are queried from your warehouse when somebody reads them. No copy is kept.</div>
+          <div class="cols">
+            <div><h5>We hold</h5><ul><li>Definitions, in words</li><li>Owners and dates</li><li>Connection settings</li></ul></div>
+            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Anything about readers</li></ul></div>
+          </div>
+          <div class="badges"><span>SSO, OIDC and SAML</span><span class="not">SOC 2 Type II, not yet</span></div>
+          <div class="pol">Privacy policy &middot; Terms of service &middot; Subprocessors &middot; <a>Report a vulnerability</a></div>
+          <div class="gate">Documents for your review. Two of these need an NDA and ask for your details. Everything above does not.</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, the same page with nothing withheld</div>
+        <div class="bw">
+          <div class="h">What Plumb stores, and what it never touches</div>
+          <div class="sub">Queried at read time. No copy kept.</div>
+          <div class="cols" style="flex-direction:column; gap:9px">
+            <div><h5>We hold</h5><ul><li>Definitions, in words</li><li>Owners and dates</li><li>Connection settings</li></ul></div>
+            <div><h5>We do not hold</h5><ul><li>Your data rows</li><li>Readable credentials</li><li>Anything about readers</li></ul></div>
+          </div>
+          <div class="badges"><span>SSO</span><span class="not">SOC 2, not yet</span></div>
+          <div class="pol">Privacy &middot; Terms &middot; Subprocessors</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>Refused for now: dated security announcements as a feed.</strong> Not on principle. Design principle 2 forbids an incident workflow <strong>around a number</strong>, and advisories about our own infrastructure are a different object with a different reader. They are refused because <strong>a stale advisory feed is worse than none</strong>, and this is a ПОТІМ page for a product with no infrastructure yet. The slot is named so it is not rediscovered.</p>
+
+    <p><strong>No primary call to action, and that matches node 2.1.</strong> The act on this page is reading. A "book a demo" here would be the same mistake as a "start free" on the card.</p>
+  </section>
+
+  <section id="seo">
+    <div class="sec-head"><span class="sec-num">03</span><h2>SEO block, A to E</h2></div>
+
+    <div class="tw">
+      <table>
+        <tbody>
+          <tr><th>title (57)</th><td><code>Trust and security at Plumb: we never copy your data rows</code></td></tr>
+          <tr><th>description (152)</th><td><code>Plumb stores metric definitions, owners and connection settings. Numbers are queried from your warehouse at read time and no copy of your rows is kept.</code></td></tr>
+          <tr><th>canonical</th><td>absolute form of <code>/trust</code></td></tr>
+          <tr><th>robots</th><td><code>index, follow</code></td></tr>
+          <tr><th>H1</th><td>What Plumb stores, and what it never touches</td></tr>
+          <tr><th>H2</th><td>No copy of your data rows &middot; What we hold and what we do not &middot; How people sign in &middot; Certifications, including the one we do not have yet &middot; Subprocessors &middot; Policies &middot; Reporting a vulnerability &middot; Documents for your review</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Structured data: <code>Organization</code></strong> at the page root, carrying the legal name and the security contact route. <strong>No certification markup until a certification exists</strong>, because marking up an intention is the machine-readable version of the omission this page refuses.</p>
+
+    <p><strong>Checklist.</strong> One H1, LCP is the claim block and it is text. Crawlable links to 6.5, 6.6 and 6.1. <strong>Badges carry text alternatives naming both the certification and whether it is held.</strong> No third-party trust-centre widget, which is also why this page is on our own domain rather than a vendor subdomain: dbt's is <code>trust.getdbt.com</code>, powered by a vendor, and a subdomain we do not control cannot carry the structural layer this stage owns.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#6.2">&larr; Structure (6.2)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '6.2 Trust and security';
+  window.NAV_SECTIONS = [
+    { id:'comparison', label:'Two opposite trust centres' },
+    { id:'blocks',     label:'What we hold' },
+    { id:'seo',        label:'SEO block' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

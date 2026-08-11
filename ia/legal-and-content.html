@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.4 to 6.7 Content and legal template map - Plumb</title>
+<meta name="description" content="Nodes 6.4 to 6.7 as a template map: four documents on one shell, a last-updated date that follows from design principle 5, and one page that is deliberately not on the shell.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:420px; display:flex; gap:14px; flex-direction:row-reverse; }
+  .rail{ flex:none; width:112px; border-left:1px solid #e3e1dc; padding-left:12px; }
+  .rail h5{ font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#6b7076; margin:0 0 6px; }
+  .rail div{ padding:4px 0; color:#6b7076; }
+  .rail div.on{ color:#14161a; font-weight:700; }
+  .doc{ flex:1; }
+  .h{ font-size:15px; font-weight:700; margin-bottom:3px; }
+  .dt{ color:#6b7076; font-size:11px; margin-bottom:12px; }
+  .q{ font-weight:700; margin:11px 0 4px; }
+  .p{ color:#3a3f45; line-height:1.6; }
+  .stack{ display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .stack span{ border:1px solid #c9c6bf; padding:4px 8px; color:#6b7076; }
+  .stack span.on{ border-color:#14161a; color:#14161a; font-weight:600; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Nodes 6.4 to 6.7 &middot; pages &middot; ПОТІМ</p>
+    <h1>Four documents on one shell, and one of them deliberately not on it</h1>
+    <p class="standfirst lede">A template map rather than four compositions, which is the reuse decision the pipeline names for pages of this kind. The finding this type produced is about a link rather than a layout.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: ПОТІМ</span>
+      <span>Indexed: all four</span>
+      <span>Source: <code>ia/docs/pages/legal-and-content.md</code></span>
+    </div>
+  </header>
+
+  <section id="shell">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The shell, and why the date is a principle</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Element</th><th>Rule</th></tr></thead>
+        <tbody>
+          <tr><td>Title</td><td>One H1, the document's name</td></tr>
+          <tr><td><strong>Last updated</strong></td><td><strong>Directly under the title.</strong> Not in a footer, not at the end</td></tr>
+          <tr><td>The rail</td><td>Siblings: privacy, terms, and the cookie document when it exists. Stacks above the text at 360</td></tr>
+          <tr><td>One column of prose</td><td>Capped for reading, left aligned</td></tr>
+          <tr><td>Footer</td><td>Node 0.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>The last-updated date is a design principle, not a convention</b>
+      <p>Principle 5: <strong>every claim carries a name and a time.</strong> A legal page is nothing but claims, so <strong>a legal page with no date has the same defect as a number with no timestamp</strong>, on the one surface where we are asking to be believed about how we handle somebody's data. Both the domain source and the craft source put it under the title, so taking it is agreement rather than borrowing.</p>
+    </div>
+
+    <p><strong>H2s written as questions.</strong> The live privacy notice writes its sections as "What personal data does Fivetran collect and why?", "Who does Fivetran share my personal data with?", "How does Fivetran keep my personal data secure?" Taken: it is how the reader asks it, it is how a search asks it, and it costs nothing.</p>
+
+    <div class="flag warn">
+      <b>The finding this type produced, and it is about a link</b>
+      <p><strong>dbt's own footer privacy link leaves dbt's own domain.</strong> <code>getdbt.com/cloud/privacy-policy</code> redirects to <code>fivetran.com/legal/privacy</code> after the merger. Recorded as a finding rather than a criticism, because it is a real structural risk for anybody: <strong>a legal surface on somebody else's domain is one whose wording, canonical and date you do not control.</strong> For us the privacy page is a selling argument rather than boilerplate, so it stays on our domain with the rest of the structural SEO layer.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 6.5, the shell with its rail</div>
+        <div class="bw wide">
+          <div class="rail"><h5>Legal</h5><div class="on">Privacy policy</div><div>Terms of service</div><div>Cookies</div></div>
+          <div class="doc">
+            <div class="h">Privacy policy</div>
+            <div class="dt">Last updated 12 August 2026</div>
+            <div class="q">What does Plumb store about your data?</div>
+            <div class="p">Definitions, owners and connection settings. No copy of your data rows. A number is queried from your source when somebody reads it and is not kept afterwards.</div>
+            <div class="q">What does Plumb store about the people who read a number?</div>
+            <div class="p">Nothing. A card is opened at a permanent link with no account, and no identity, count or log of readers is kept.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, rail stacks above the prose</div>
+        <div class="bw">
+          <div class="stack"><span class="on">Privacy</span><span>Terms</span><span>Cookies</span></div>
+          <div class="h">Privacy policy</div>
+          <div class="dt">Last updated 12 August 2026</div>
+          <div class="q">What does Plumb store about your data?</div>
+          <div class="p">Definitions, owners and connection settings. No copy of your data rows.</div>
+          <div class="q">And about the people who read a number?</div>
+          <div class="p">Nothing. No identity, no count, no log.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="four">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The four pages, and the one that is the exception</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Node</th><th>What it is</th></tr></thead>
+        <tbody>
+          <tr><td><strong>6.4 Documentation</strong></td><td><strong>One page, not a documentation site.</strong> dbt's documentation is a subdomain with its own information architecture, and that is its own IA project. Ours answers two questions: how a definition is written so somebody else can read it, and what the states on a card mean. <strong>It is the only page in cluster 6 that renders the state vocabulary from node 0.4</strong>, which makes 0.4 its source rather than prose written twice</td></tr>
+          <tr><td><strong>6.5 Privacy policy</strong></td><td><strong>The one legal page that is also an argument.</strong> Its content is the table from node 6.2. <strong>The row that matters is the absence:</strong> a privacy policy that can say we hold no copy of your rows and nothing about who read a number is making the product's case in the document a reviewer trusts least to be making one</td></tr>
+          <tr><td><strong>6.6 Terms of service</strong></td><td>Standard US B2B terms on the shell, with the date. One structural note: <strong>the prior-agreement clause already used at node 1.1</strong> exists because in this market the contract is usually signed before anybody logs in, and the two places have to agree</td></tr>
+          <tr><td><strong>6.7 Support and contact</strong></td><td><strong>The exception: no rail and no prose.</strong> A route to a person, what to expect, and the security-report route node 6.2 also names</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>6.7 is the route out that node 1.3 does not yet have</b>
+      <p>The sign-in failure "this domain is not set up with Plumb" currently carries an instruction and no link, because this page is ПОТІМ. <strong>When 6.7 exists, 1.3 links to it</strong>, and the dependency is recorded here so it is not forgotten in the direction that matters.</p>
+    </div>
+
+    <p><strong>Refused: a call to action inside a legal document.</strong> One craft source puts "Get started" on its terms page. A legal document with a conversion button reads as an ad <strong>on the one page where a person is looking for the absence of tricks.</strong></p>
+  </section>
+
+  <section id="seo">
+    <div class="sec-head"><span class="sec-num">03</span><h2>SEO block, shared by the map</h2></div>
+
+    <p><strong>A.</strong> Per page, and only the pattern is fixed: title is the document name plus the product name, description is one sentence saying what the document governs. <strong><code>index, follow</code> on all four</strong>, because a legal page that cannot be found before a call is a legal page that generates one.</p>
+
+    <p><strong>B.</strong> One H1 per page, the document's name. H2s as questions wherever the content allows.</p>
+
+    <p><strong>C.</strong> <strong>Only 6.4 gets prose at this stage</strong>, because the other three are legal text that counsel writes and this stage may not draft:</p>
+
+    <blockquote>A definition in Plumb is a sentence, not a formula. It says what the metric counts, on what, and over what period, in words somebody outside the data team can check. The query underneath it is what makes it executable, and the reader never sees it. When the definition changes, everybody holding a link to that number is told what it used to say.</blockquote>
+
+    <p><strong>6.5, 6.6 and the cookie document carry a marker instead of copy:</strong> their text is a legal deliverable, and inventing it here would produce something that reads like a policy and binds nobody.</p>
+
+    <p><strong>D.</strong> None on 6.5 and 6.6: there is no schema type for a policy that adds anything a crawler needs. <strong>6.4 may carry <code>FAQPage</code></strong> if its content settles into questions, and <strong>6.7 carries <code>ContactPoint</code></strong> inside the <code>Organization</code> already declared at node 6.2.</p>
+
+    <p><strong>E.</strong> One H1 per page, LCP is the title block and it is text. Crawlable rail links between the documents, which is also the internal linking this stage owes them. Canonical per page, no hreflang. <strong>The last-updated date is text, never an image.</strong> Prose with no scripts, which makes these the cheapest pages in the product to make fast.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#6.4">&larr; Structure (6.4)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '6.4 Content and legal';
+  window.NAV_SECTIONS = [
+    { id:'shell', label:'The shell' },
+    { id:'four',  label:'The four pages' },
+    { id:'seo',   label:'SEO block' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
