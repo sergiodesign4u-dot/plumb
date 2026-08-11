@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0.2 Footer - Plumb</title>
+<meta name="description" content="Node 0.2: the footer for Plumb in three variants, and the decision it forces: the number card is public and must never be indexed.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white mockup frames */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:2fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); min-width:330px; font-size:12px; color:#14161a; }
+  .strip{ border-bottom:1px solid #14161a; padding:12px; font-size:12px; }
+  .cols{ display:flex; gap:26px; padding:16px 12px; border-bottom:1px solid var(--rule); }
+  .col{ min-width:96px; }
+  .col b{ display:block; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase;
+          color:#6b7076; margin-bottom:7px; }
+  .col span{ display:block; padding:3px 0; }
+  .seoblk{ padding:14px 12px; border-bottom:1px solid var(--rule); color:#6b7076; }
+  .seoblk i{ font-style:normal; color:#14161a; }
+  .bottom{ padding:12px; color:#6b7076; display:flex; justify-content:space-between; gap:12px; }
+  .acc{ padding:12px; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; }
+  .mini{ padding:14px 12px; }
+  .mini .tl{ margin-bottom:9px; }
+  .mini .lk{ color:#6b7076; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 0.2 &middot; global</p>
+    <h1>The only global surface the reader ever sees</h1>
+    <p class="standfirst lede">Navigation is absent for a guest by decision, so everything a global frame normally does lands in the footer: identity, legal footing, and the second plane of internal linking. Three variants, and one decision that is much bigger than a footer.</p>
+    <div class="dateline">
+      <span>Type: section</span>
+      <span>Scope: MVP</span>
+      <span>Source: <code>ia/docs/pages/footer.md</code></span>
+    </div>
+  </header>
+
+  <!-- Decision .......................................................... -->
+  <section id="decision">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The decision this node forces</h2></div>
+
+    <div class="flag warn">
+      <b>The number card is publicly reachable and must never be indexed</b>
+      <p>A card carries a customer's business figure. Publishing it to a search engine would mean publishing our customers' numbers, which is the opposite of what a company buys this product for. <strong>Public</strong> means no account is required, because the reader will never have one. <strong>Not indexed</strong> means noindex, no sitemap entry, and a URL that cannot be guessed.</p>
+      <p style="margin-top:8px">The two are not in conflict, and the distinction has to be written down here, because "public page" reads as "indexed page" to every later stage. <strong>The consequence for this node:</strong> the SEO linking block appears only on the public marketing surface, never on a card.</p>
+    </div>
+  </section>
+
+  <!-- Variants .......................................................... -->
+  <section id="variants">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Three variants, not one</h2></div>
+
+    <div class="tw">
+      <table>
+        <caption>Who sees which, and what it carries</caption>
+        <thead><tr><th>Variant</th><th>Where</th><th>What it carries</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Minimal</strong></td><td>On the number card and its states, seen by the reader</td><td>Trust line, wordmark, privacy, terms, one route to what Plumb is. Nothing else</td></tr>
+          <tr><td><strong>Full</strong></td><td>On the public surface, seen by a buyer or an analyst evaluating us</td><td>Trust strip, link columns, the SEO block, the bottom line</td></tr>
+          <tr><td><strong>App</strong></td><td>Behind sign-in, seen by the analyst</td><td>The bottom line only. They have navigation and do not need a second one</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Why the minimal variant is not simply the full one hidden.</strong> The reader arrived to check a number, and a full footer under a single figure would be a marketing surface attached to somebody else's work. What they get is what they may actually need: who stands behind this, what happens to their data, and a way to find out what this is.</p>
+
+    <div class="flag">
+      <b>The trust strip, which is one sentence and also an architectural fact</b>
+      <p>Plumb stores definitions, lineage and owners. It never stores your data rows: the number is queried from your source at the moment it is read.</p>
+      <p style="margin-top:8px">It appears in the minimal variant too, because it is the only thing on a card that answers "what happens to what I am looking at".</p>
+    </div>
+  </section>
+
+  <!-- Mockups ........................................................... -->
+  <section id="mockups">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Mockups</h2></div>
+
+    <p>Black and white, wireframe level. On the phone the link columns and the SEO block collapse into accordions, <strong>collapsed rather than removed</strong>: the links stay in the DOM and stay crawlable, because a collapsed accordion is a display state and a missing link is a missing link.</p>
+
+    <h3>Full variant, the public surface</h3>
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 1280</div>
+        <div class="bw">
+          <div class="strip">Plumb stores definitions, lineage and owners. It never stores your data rows.</div>
+          <div class="cols">
+            <div class="col"><b>Product</b><span>What Plumb is</span><span>Pricing</span><span>Documentation</span></div>
+            <div class="col"><b>Trust</b><span>Trust and security</span><span>Privacy policy</span><span>Terms</span></div>
+            <div class="col"><b>Support</b><span>Support and contact</span></div>
+          </div>
+          <div class="seoblk">Crawlable links to the priority public pages. <i>Structure fixed here, exact list pending keyword research.</i></div>
+          <div class="bottom"><span>Plumb</span><span>Copyright</span></div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="frame-cap">Phone, 360</div>
+        <div class="bw">
+          <div class="strip">Plumb stores definitions, lineage and owners. It never stores your data rows.</div>
+          <div class="acc"><span>Product</span><span>+</span></div>
+          <div class="acc"><span>Trust</span><span>+</span></div>
+          <div class="acc"><span>Support</span><span>+</span></div>
+          <div class="acc"><span>Popular pages</span><span>+</span></div>
+          <div class="bottom"><span>Plumb</span><span>Copyright</span></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Minimal variant, under a number card</h3>
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Both widths, identical</div>
+        <div class="bw">
+          <div class="mini">
+            <div class="tl">Plumb stores definitions, lineage and owners. It never stores your data rows.</div>
+            <div class="lk">Plumb &middot; What this is &middot; Privacy &middot; Terms</div>
+          </div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="frame-cap">App variant, behind sign-in</div>
+        <div class="bw">
+          <div class="bottom"><span>Plumb</span><span>Copyright</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Anatomy ........................................................... -->
+  <section id="anatomy">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Anatomy, SEO and accessibility</h2></div>
+
+    <div class="tw">
+      <table>
+        <caption>Zone, elements, destination node</caption>
+        <thead><tr><th>Zone</th><th>Elements</th><th>Goes to</th></tr></thead>
+        <tbody>
+          <tr><td>Trust strip</td><td>Metadata-only sentence, SOC 2 position pending certification</td><td>6.2</td></tr>
+          <tr><td>Product column</td><td>What Plumb is, pricing, documentation</td><td>6.1, 6.3, 6.4</td></tr>
+          <tr><td>Trust and legal column</td><td>Trust and security, privacy policy, terms</td><td>6.2, 6.5, 6.6</td></tr>
+          <tr><td>Support column</td><td>Support and contact</td><td>6.7</td></tr>
+          <tr><td>SEO block</td><td>Crawlable links to priority public pages. Structure fixed here, exact list pending research</td><td>6.1 to 6.4</td></tr>
+          <tr><td>Bottom line</td><td>Wordmark, copyright, company</td><td>none</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>No social icons and no app badges.</strong> We have no app and no social presence to point at, and a row of empty affordances is worse than none.</p>
+
+    <ul>
+      <li><strong>No H1</strong>, and no schema: organisation schema belongs to the pages that carry it.</li>
+      <li><strong>The second plane of internal linking, and on this product the main one</strong>, because the analyst's navigation carries two links and the reader's carries none.</li>
+      <li><strong>Indexing by variant:</strong> full on indexed pages, minimal on noindex pages, app behind authentication.</li>
+      <li><strong>Semantics:</strong> a <code>contentinfo</code> landmark, real anchors inside the accordions, accordion headers as buttons with <code>aria-expanded</code>.</li>
+      <li><strong>Targets:</strong> 44 by 44 CSS pixels, the same figure as the navigation.</li>
+    </ul>
+  </section>
+
+  <!-- Promises .......................................................... -->
+  <section id="promises">
+    <div class="sec-head"><span class="sec-num">05</span><h2>What this footer promises, registered as nodes</h2></div>
+
+    <p>A promise in the footer with no node behind it is how a map and a product diverge. Three nodes were added to the map because this footer links to them, and all three take their scope label here, since they have no parent screen to inherit from.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Node</th><th>Why it exists</th><th>Scope</th></tr></thead>
+        <tbody>
+          <tr><td><strong>6.5 Privacy policy</strong></td><td>A footer that claims something about data has to lead somewhere. For a product whose whole claim is that it stores no rows, this page is an argument rather than a formality</td><td>ПОТІМ</td></tr>
+          <tr><td><strong>6.6 Terms of service</strong></td><td>Standard for US B2B, and the buyer's security review asks for it</td><td>ПОТІМ</td></tr>
+          <tr><td><strong>6.7 Support and contact</strong></td><td>The trust strip makes a claim, and somebody has to be reachable about it</td><td>ПОТІМ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>Open question this node hands forward</b>
+      <p><strong>Whether the minimal footer on a card should name the workspace that owns the metric.</strong> It would answer "whose number is this" before the reader even reads the attribution, and it would also disclose one customer's name to whoever the link reaches. That is the same open question the flows raised about showing the owner, seen from another angle.</p>
+    </div>
+  </section>
+
+  <p class="backlink"><a href="structure.html#0.2">&larr; Structure (0.2)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '0.2 Footer';
+  window.NAV_SECTIONS = [
+    { id:'decision', label:'The decision it forces' },
+    { id:'variants', label:'Three variants' },
+    { id:'mockups',  label:'Mockups' },
+    { id:'anatomy',  label:'Anatomy and SEO' },
+    { id:'promises', label:'Nodes it promises' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

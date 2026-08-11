@@ -13,7 +13,8 @@
    the map grows discover-as-you-go and the hub fills itself from here. */
 
 window.IA_NAV = [
-  { label: 'Global navigation', file: 'navigation.html', group: 'global', node: '0.1', type: 'section' }
+  { label: 'Global navigation', file: 'navigation.html', group: 'global', node: '0.1', type: 'section' },
+  { label: 'Footer',             file: 'footer.html',     group: 'global', node: '0.2', type: 'section' }
 ];
 
 (function () {

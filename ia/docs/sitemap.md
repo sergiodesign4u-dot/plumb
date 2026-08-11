@@ -50,7 +50,7 @@ A metric has one current definition version and a pointer to the previous one; n
 
 **How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the five nodes with no parent are named below.
 
-**Eight clusters, 37 nodes, 29 of them MVP.** The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 29 MVP nodes, and that is the honest count the two estimates in this stage depend on.
+**Eight clusters, 40 nodes, 29 of them MVP.** Three were added at step 3 by the footer, which promised them. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 29 MVP nodes, and that is the honest count the two estimates in this stage depend on.
 
 ### Cluster 0. Global frame
 
@@ -123,6 +123,9 @@ Jobless by construction, and that is recorded rather than repaired.
 | 6.2 | Trust and security | page | pages | SOC 2 position, SSO, metadata only | 6.1 | The buyer, who has no product surface | ПОТІМ |
 | 6.3 | Pricing | page | pages | Seats, free readers | 1.1 | Acquisition | ПОТІМ |
 | 6.4 | Documentation | page | pages | How a definition is written and read | 6.1 | Both | ПОТІМ |
+| 6.5 | Privacy policy | page | pages | What is stored and what is not | 6.2 | Legal, and an argument for a metadata-only product | ПОТІМ |
+| 6.6 | Terms of service | page | pages | Standard US B2B terms | 6.2 | Legal, asked for in the security review | ПОТІМ |
+| 6.7 | Support and contact | page | pages | A route to a person | 6.1 | Both | ПОТІМ |
 
 ### Cluster 7. System nodes
 
