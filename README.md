@@ -19,7 +19,7 @@ Live pages: published at stage 01 step 10, link goes here.
 
 | Stage | Status |
 | --- | --- |
-| Foundation Research | Not started |
+| Foundation Research | In progress |
 | User Research (Personas + JTBD) | Not started |
 | CJM (As-Is + To-Be) | Not started |
 | Information Architecture (Base + Detail) | Not started |

@@ -32,7 +32,7 @@ The difference from BI and analytics tools: Plumb is not built to visualise data
 
 ## MVP scope (initial, rough)
 
-Refined on the Lean UX Canvas (step 5), narrowed to three core jobs at stage 02.
+Refined on the Lean UX Canvas (`research/docs/lean-ux-canvas.md`, block 5), narrowed to three core jobs at stage 02.
 
 **In:** one data source connection; metric registry with definition and owner; number card with provenance; freshness and breakage states ("as of", "source is down", "definition changed after this was saved"); search and jump to a metric by name.
 
@@ -42,9 +42,11 @@ Cut logic: everything outside the line is either a separate large product (dashb
 
 ## Business model hypothesis
 
-Seat-based, paid analysts, free or near free readers. Verified on the Lean UX Canvas.
+Seat-based, paid analysts, free or near free readers, no cap on metric count.
 
 Reason: the value of Plumb grows the more people see a number with its provenance. Charging per reader kills the product's own growth mechanism, and charging per connected metric penalises filling the registry, which is exactly what activation is.
+
+Still a hypothesis, and the research says why it has to stay one: this market has no reader-pricing norm to inherit. Secoda gives unlimited viewers on every tier, Cube charges $20 per viewer per month, Looker makes Viewer a separate license type, PowerMetrics caps metrics at 50 and 200. So this is our decision to defend, and it stays open until questions 1 and 2 in `research/docs/research.md` are answered.
 
 ## Geo and compliance
 
@@ -59,12 +61,21 @@ Reason: the value of Plumb grows the more people see a number with its provenanc
 A principle is useful only when it forbids something. Each of these carries what it forbids.
 
 1. **A number is never shown bare.** Freshness and source state sit beside the value where it is read, not one click away. *Forbids:* a large figure with no timestamp, freshness pushed into a footer or a tooltip.
-2. **Doubt is a state, not an error.** "Source is down", "definition changed", "data is stale" get full informational treatment with their own look. *Forbids:* hiding a broken number, replacing it with a dash and no explanation, one red style for every kind of doubt.
+2. **Doubt is a state, not an error, and not an incident.** "Source is down", "definition changed", "data is stale" get full informational treatment with their own look. Ours is an annotation on a number: no assignee, no severity, nothing to close. *Forbids:* hiding a broken number, replacing it with a dash and no explanation, one red style for every kind of doubt, an incident workflow around a number, any aggregate trust score or health percentage.
 3. **The definition outweighs the visualisation.** The definition text is the main object on the screen, the chart illustrates it. *Forbids:* a screen that opens on a chart with the definition collapsed, any drift towards being another dashboard.
 4. **Explanation in place, depth on request.** One line of provenance is visible immediately, the full lineage opens on action. *Forbids:* a dependency tree as the opening state, a modal as the only route to the source.
 5. **Every claim carries a name and a time.** Who declared the definition and when it last changed is always visible. *Forbids:* anonymous changes, "updated recently" instead of a date.
 
 Principles 1 and 4 work as a pair and are what makes mobile-first survivable: the first demands the state be shown, the fourth stops it eating the screen.
+
+## What the research fixed
+
+Four decisions from stage 01 that later stages read rather than re-derive. Single source of truth for the research is `research/docs/research.md`, with the level files beside it.
+
+1. **Strategic dimension: trust without leaving the place of reading.** Can a person tell how far a number can be trusted, right where they read it, without going anywhere to find out. Grounds and scoring in `research/docs/benchmark.md`. Read by 04 step 4, 06 step 1, 07 step 6.
+2. **Riskiest assumption: a business consumer will read the number in Plumb, before using it, instead of the figure they already have.** Value risk, not feasibility. Everything downstream pays off only if the reader arrives at the moment of acting. Test and kill condition in `research/docs/lean-ux-canvas.md`, block 8. Read by 02, CJM step 9, 07 step 6.
+3. **Chosen UX pattern: evidence on the claim.** Trust information lives on the object being read and travels with it, one line immediately, depth on request. Rejected: catalog and search, lineage graph, dedicated doubt surface, conversational answer, each with grounds in `research/docs/ux-patterns.md`. Read by 03a step 2.
+4. **Activation is the first time a metric card is opened by somebody other than the author of its definition.** Connecting a source and writing a definition are setup, not activation. Funnel in `research/docs/aarrr.md`. Read by 03a step 4.
 
 ## Tech stack hypothesis
 
