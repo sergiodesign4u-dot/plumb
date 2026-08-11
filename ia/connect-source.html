@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.2 Connect a source - Plumb</title>
+<meta name="description" content="Node 3.2 with states 3.3 and 3.4: the one form whose failure has its fix on the other side of a wall we cannot see, and the three failures the map recorded as two.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:430px; }
+  .crumb{ color:#6b7076; font-size:11px; margin-bottom:8px; }
+  .ttl{ font-size:15px; font-weight:700; margin-bottom:12px; }
+  .pick{ display:flex; gap:7px; margin-bottom:12px; flex-wrap:wrap; }
+  .pick span{ border:1px solid #c9c6bf; padding:5px 9px; color:#6b7076; }
+  .pick span.on{ border-color:#14161a; border-width:2px; color:#14161a; font-weight:600; }
+  .panel{ border:1px dashed #14161a; padding:9px 10px; margin-bottom:13px; line-height:1.5; }
+  .panel b{ display:block; margin-bottom:4px; }
+  .panel code{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px; }
+  .fld{ margin-bottom:10px; }
+  .fld label{ display:block; font-size:11px; color:#6b7076; margin-bottom:3px; }
+  .fld label b{ color:#14161a; }
+  .inp{ border:1px solid #14161a; padding:7px 8px; min-height:15px; }
+  .inp.sel{ display:flex; justify-content:space-between; }
+  .inp.set{ color:#6b7076; display:flex; justify-content:space-between; }
+  .inp.err{ border-width:2px; }
+  .hint{ color:#6b7076; font-size:10.5px; margin-top:3px; }
+  .hint.bad{ color:#14161a; font-weight:600; }
+  .banner{ border:1px solid #14161a; padding:8px 9px; margin-bottom:12px; line-height:1.45; }
+  .banner.info{ border-style:dashed; }
+  .banner b{ display:block; margin-bottom:3px; }
+  .run{ border:1px dashed #14161a; padding:8px 9px; margin:11px 0; color:#6b7076; line-height:1.5; }
+  .run i{ font-style:normal; color:#14161a; font-weight:600; }
+  .acts{ display:flex; gap:8px; margin-top:13px; border-top:1px solid var(--rule-strong);
+         padding-top:11px; flex-wrap:wrap; align-items:center; }
+  .acts .sp{ flex:1; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; display:inline-block; flex:none; }
+  .btn.dim{ border-style:dashed; color:#6b7076; font-weight:400; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 3.2 with 3.3, 3.4 &middot; pages</p>
+    <h1>The one form whose fix is on the other side of a wall we cannot see</h1>
+    <p class="standfirst lede">Credentials, network policy and grants live with the customer's data team or their IT. A form that reports "connection failed" and stops has handed somebody a dead end whose route out is not on our screen, which is why this node spends most of its length on the failure.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>States: 3.3, 3.4</span>
+      <span>Source: <code>ia/docs/pages/connect-source.md</code></span>
+    </div>
+  </header>
+
+  <!-- Blocks ............................................................ -->
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Six blocks, and two of them are not what the bank drew</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Which warehouse</td><td>A short list, <strong>not a page</strong></td></tr>
+          <tr><td>2</td><td>What you will need, with the addresses to allowlist</td><td><strong>Above the fields at 360</strong>, beside them at width</td></tr>
+          <tr><td>3</td><td>The credential fields</td><td>Per warehouse type, in the order that warehouse's own documentation uses</td></tr>
+          <tr><td>4</td><td><strong>Expected cadence</strong></td><td>Ours rather than theirs, and the only field here the reader ever sees</td></tr>
+          <tr><td>5</td><td>Test the connection, then Save</td><td>The best block in this type</td></tr>
+          <tr><td>6</td><td>Delete, apart from both</td><td>Only when the connection exists</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Block 1 is a block and not a screen.</strong> PowerMetrics puts a "Where is your data?" page in front of the form, with tiles, a search field over the services and tags. With three warehouse types the search field is furniture and the page is a screen that exists to be passed through.</p>
+
+    <p><strong>Block 3 is not one block, it is one per warehouse.</strong> Snowflake, BigQuery and Postgres do not share a credential shape, so there is no generic connection form, and pretending otherwise produces a form that cannot connect. The pattern is fixed and the fields are not. <strong>The order comes from the warehouse's own documentation</strong>, because that is the order the person is copying from, and <strong>the display name is last in every variant</strong>: it is the only field here that is about us rather than about them.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 3.2, panel beside the fields</div>
+        <div class="bw wide">
+          <div class="crumb">Sources &gt; New connection</div>
+          <div class="ttl">Connect a source</div>
+          <div class="pick"><span class="on">Snowflake</span><span>BigQuery</span><span>Postgres</span></div>
+          <div class="panel"><b>What you will need</b>An account identifier, a user with read access, and a key or password. Your network may need to allow <code>52.9.0.0/24</code> before this can connect.</div>
+          <div class="fld"><label><b>User name</b></label><div class="inp">plumb_reader</div></div>
+          <div class="fld"><label><b>Private key</b></label><div class="inp set"><span>Set, not shown</span><span>Replace</span></div></div>
+          <div class="fld"><label><b>Account identifier</b></label><div class="inp">xy12345.us-east-1</div><div class="hint">Where do I find this?</div></div>
+          <div class="fld"><label><b>Database</b></label><div class="inp">ANALYTICS</div></div>
+          <div class="fld"><label><b>Expected cadence</b></label><div class="inp sel"><span>Hourly</span><span>v</span></div><div class="hint">This is what the reader sees beside the number. Set it to how often this source actually updates.</div></div>
+          <div class="acts"><span class="btn">Test the connection</span><span class="btn">Save</span><span class="sp"></span></div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 3.3, testing and naming which half</div>
+        <div class="bw">
+          <div class="crumb">Sources &gt; New connection</div>
+          <div class="pick"><span class="on">Snowflake</span><span>BigQuery</span><span>Postgres</span></div>
+          <div class="fld"><label><b>Account identifier</b></label><div class="inp">xy12345.us-east-1</div></div>
+          <div class="run"><i>Reaching xy12345.us-east-1.</i><br>Then signing in as plumb_reader, then looking for ANALYTICS.</div>
+          <div class="acts"><span class="btn">Test the connection</span><span class="btn">Save</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cadence ........................................................... -->
+  <section id="cadence">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The cadence field, and the hole underneath it</h2></div>
+
+    <p><strong>We hold no cache, so there is nothing to expire.</strong> PowerMetrics gets freshness from a webhook the customer calls or from a cache TTL they pick. What we need from the same place is the <strong>expected cadence</strong>, so that "as of 14:05" has something to be measured against. Node 0.4 handed this question forward and the domain answered it: <strong>cadence is configured, not discovered.</strong></p>
+
+    <p><strong>So the expected cadence is a claim, not a measurement</strong>, and it is the only value typed on this page that the reader ever sees. It appears in the state line on the card and as a row in node 2.7, which makes it the field on this form with the largest consequence per keystroke.</p>
+
+    <div class="flag warn">
+      <b>The open question this creates, named rather than hidden</b>
+      <p><strong>Nothing checks the declared cadence against what the source actually does.</strong> Verifying it needs a history of run times, and we keep one overwritten timestamp rather than a history, which is the same architectural choice that keeps deep version history out of scope. <strong>So a connection can declare hourly and answer daily, and the card will say "expected hourly" in good faith.</strong></p>
+      <p style="margin-top:8px">That is a real hole in the main job's promise. It is carried as an open question rather than repaired by inventing storage this stage has no authority to add.</p>
+    </div>
+
+    <h3>The constraint from the bank that turns out not to apply</h3>
+
+    <p>The bank took a constraint from PowerMetrics: <strong>first day of week and time zone must match the warehouse, or weekly figures are wrong.</strong> It was taken because a silent wrong number is exactly the failure this product sells against.</p>
+
+    <p><strong>Read against our own architecture, most of it does not apply.</strong> PowerMetrics needs those settings because it <strong>builds</strong> queries. We do not: the analyst pastes a query that already exists and we show the one value it returns. <strong>We never aggregate, so we have no week to start and no calendar to get wrong.</strong></p>
+
+    <p><strong>What survives lands somewhere else.</strong> A definition can still be wrong about its own week, and that is a sentence in the analyst's own words at node 4.4, not a setting on a connection. <strong>So this form gains no field</strong>, and the bank row is re-read rather than mechanically obeyed: a settings pair added here would be two more ways to produce a wrong number in a product whose whole claim is the opposite.</p>
+  </section>
+
+  <!-- Failure ........................................................... -->
+  <section id="failure">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The map said two halves, and testing finds three</h2></div>
+
+    <p>The node map describes 3.4 as "which half failed, credentials or reachability". <strong>Testing a warehouse produces three distinct failures, and they matter because the fix is in a different place each time.</strong></p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>What failed</th><th>What the form says</th><th>Where the fix is</th></tr></thead>
+        <tbody>
+          <tr><td><strong>We could not reach the host</strong></td><td>That we could not reach it, and from which addresses we tried</td><td><strong>Their network.</strong> The prerequisites panel is the fix, and the error points straight at it</td></tr>
+          <tr><td><strong>We reached it and were refused</strong></td><td>That the host answered and rejected the identity</td><td><strong>The credential fields</strong>, and the secret is the first thing named</td></tr>
+          <tr><td><strong>We were let in and the database is not visible</strong></td><td>That we authenticated as this user and could not see that object</td><td><strong>A grant.</strong> Nothing on this form is wrong, and saying so stops somebody retyping a correct key nine times</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>This is a refinement inside the node rather than a change to the map</strong>, and it earns its place because a single "connection failed" sends a person to the wrong wall two times out of three.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 3.4, refused, and the form still filled in</div>
+        <div class="bw">
+          <div class="crumb">Sources &gt; New connection</div>
+          <div class="banner"><b>Snowflake answered and refused the sign-in.</b>The host is reachable, so this is the identity rather than your network.</div>
+          <div class="fld"><label><b>User name</b></label><div class="inp err">plumb_reader</div></div>
+          <div class="fld"><label><b>Private key</b></label><div class="inp set err"><span>Set, not shown</span><span>Replace</span></div><div class="hint bad">Check this first. The key is never shown back, so replacing it is one action.</div></div>
+          <div class="fld"><label><b>Account identifier</b></label><div class="inp">xy12345.us-east-1</div></div>
+          <div class="acts"><span class="btn">Test the connection</span><span class="btn dim">Save</span></div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Desktop, 3.4, let in and the object is not visible</div>
+        <div class="bw wide">
+          <div class="crumb">Sources &gt; Snowflake, ANALYTICS.PROD</div>
+          <div class="banner"><b>Signed in as plumb_reader, and ANALYTICS is not visible to that user.</b>Nothing on this form is wrong. This user needs to be granted read access to the database, which is done in Snowflake rather than here.</div>
+          <div class="banner info"><b>8 metrics read from this connection.</b>They will stop answering until this connects again.</div>
+          <div class="fld"><label><b>Database</b></label><div class="inp err">ANALYTICS</div></div>
+          <div class="acts"><span class="btn">Test the connection</span><span class="btn dim">Save</span><span class="sp"></span><span class="btn dim">Delete connection</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flag">
+      <b>The secret field, and the conflict it creates with a rule we already set</b>
+      <p><strong>The form stays filled in after a failure</strong>, which is a rule taken from the bank and holds everywhere in this product. <strong>But a secret cannot be refilled, because we never send it back:</strong> a private key or a password is written to us and never read out, not even masked, which is the same argument the sources list makes about showing credentials.</p>
+      <p style="margin-top:8px"><strong>Resolution, stated rather than left to an implementer.</strong> The non-secret fields keep their values. The secret field shows that a value is <strong>set</strong> rather than showing characters, and a failure the analyst did not cause does not clear it. On an authentication failure it is named as the first thing to check, and replacing it is one action.</p>
+    </div>
+  </section>
+
+  <!-- Rest .............................................................. -->
+  <section id="rest">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Editing, saving, and where this page sends people</h2></div>
+
+    <p><strong>Changing credentials means every metric on this connection stops answering until the test passes again.</strong> R8's banner shape carries it: their "changing these details will require a reconnect" becomes ours, "8 metrics read from this connection and will stop answering until this connects again". <strong>The number is nameable here, exactly as at 3.1 and unlike 4.7</strong>, because metrics are our objects and readings are not.</p>
+
+    <p><strong>Delete follows the rule set at 3.1:</strong> a connection carrying metrics cannot be removed, and the confirmation says how many and what to do about them.</p>
+
+    <div class="tw">
+      <table>
+        <caption>States, and where each one goes</caption>
+        <thead><tr><th>Node</th><th>State</th><th>What happens</th></tr></thead>
+        <tbody>
+          <tr><td><strong>3.2</strong></td><td>New, or a connection that exists</td><td>The same form. Editing adds the consequence banner</td></tr>
+          <tr><td><strong>3.3</strong></td><td>Testing</td><td><strong>Progress in place, naming which half is being tried.</strong> Not a modal and not a success window: the success of a connection is worth saying once, in place</td></tr>
+          <tr><td><strong>3.4</strong></td><td>Failed</td><td>Banner at the top, inline message on the field that caused it, and the form still filled in</td></tr>
+          <tr><td></td><td>Saved</td><td><strong>The first connection in a workspace goes to 4.2</strong>, the empty registry. A returning one goes to 3.1</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Save is enabled only after a successful test.</strong> Test then save is the order, because save-then-discover is the version that produces a broken source sitting in a list. <strong>The whole form as a modal is refused:</strong> nine fields in a modal at 360 is a scroll inside a scroll, and the map already says this is a page.</p>
+
+    <div class="flag warn">
+      <b>Nothing from the emotional and social table lands on this page</b>
+      <p>Written rather than padded, for the same reason as node 3.1: this is infrastructure. <strong>One adjacent note, and it is not a mechanism.</strong> The prerequisites panel exists so the commonest failure here, a network policy the analyst does not control, is visible before the attempt rather than after it. That removes one handover to another team, but <strong>nothing in the research measures it</strong>, so it stays a design intention.</p>
+    </div>
+
+    <p><strong>Responsive.</strong> At 360: the warehouse choice, the prerequisites, the fields, the actions. <strong>The panel goes above the fields it explains</strong>, because information that unblocks a field is useless after it, and the action row is sticky since a nine-field form is longer than a phone. At width: a single capped column with the panel beside it, R7's three-part layout reduced to two because we have no environment list.</p>
+
+    <p><strong>SEO:</strong> <code>noindex</code>, no schema, no SEO text. Private and transactional, and it names the customer's infrastructure.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#3.2">&larr; Structure (3.2)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '3.2 Connect a source';
+  window.NAV_SECTIONS = [
+    { id:'blocks',  label:'Six blocks' },
+    { id:'cadence', label:'Cadence and its hole' },
+    { id:'failure', label:'Three failures' },
+    { id:'rest',    label:'Editing and saving' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

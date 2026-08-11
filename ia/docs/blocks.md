@@ -278,6 +278,14 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 
 **Checked against rule 3.** D5 opens on a table picker and never asks what the metric means. R7 has no meaning field at all because a database resource has no meaning. R8 is a modal. R9 is a multi-step KYC flow. **The definition in words as the first field appears in none of them**, and it is the whole point of ours.
 
+### One taken row re-read at node 3.2, and it produced no field
+
+**"First day of week and time zone must match the warehouse."** Taken above as a constraint because a silent wrong number is the failure this product sells against. **Read against our own architecture at 3.2, most of it does not apply:** PowerMetrics needs those settings because it **builds** queries, and we do not. The analyst pastes a query that already exists and we show the one value it returns, so **we never aggregate, and there is no week for us to start.**
+
+**What survives lands at 4.4 rather than 3.2.** A definition can still be wrong about its own week, and that is a sentence in the analyst's words, not a setting on a connection. **So the connection form gains no field**, and a settings pair added here would be two more ways to produce a wrong number.
+
+**A second thing 3.2 sends back to this bank.** The credential row above lists nine fields in one order. **It is one block per warehouse type, not one block:** Snowflake, BigQuery and Postgres do not share a credential shape, and the order in each comes from that warehouse's own documentation, because that is the order the person is copying from.
+
 ---
 
 ## T4. The gate

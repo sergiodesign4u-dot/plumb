@@ -179,6 +179,7 @@
     <div class="flag warn">
       <b>Two open questions this node hands forward</b>
       <p><strong>What "expected hourly" says when no cadence is known.</strong> Not every source declares one, and "as of 14:05" with no expectation beside it is the failure the benchmark mechanism was taken to prevent.</p>
+      <p style="margin-top:8px"><strong>Answered at step 4, then narrowed at node 3.2.</strong> Freshness is not something a warehouse announces, so <strong>cadence is configured rather than discovered</strong> and node 3.2 carries a required field for it. The narrowing: <strong>that field is a claim, not a measurement.</strong> Nothing checks a declared cadence against what the source actually does, because that needs a history of run times and we keep one overwritten timestamp. A card can therefore say "expected hourly" in good faith about a source that answers daily. <strong>The hole stays open and node 3.2 owns it.</strong></p>
       <p style="margin-top:8px"><strong>How old is old.</strong> Nothing here decides when "as of" should start looking uncomfortable, and the honest answer is that it depends on the metric's cadence rather than on a fixed threshold. It stays open rather than being invented.</p>
     </div>
   </section>

@@ -85,4 +85,6 @@ Three states, and **there is no fourth**. "Healthy" is not a state in this produ
 ## Open questions this node hands forward
 
 1. **What "expected hourly" says when no cadence is known.** Not every source declares one, and "as of 14:05" with no expectation is the failure benchmark criterion 3 was taken to prevent.
+
+   **Answered at step 4 and then narrowed at node 3.2.** Freshness is not something a warehouse announces: PowerMetrics gets it from a webhook the customer calls or a cache TTL they pick, so **cadence is configured, not discovered**, and node 3.2 carries a required field for it. **The narrowing is that the field is a claim rather than a measurement.** Nothing checks a declared cadence against what the source actually does, because that would need a history of run times and we keep one overwritten timestamp. So a card can say "expected hourly" in good faith about a source that answers daily. **That is a hole in this state's promise and it stays open**, owned by node 3.2.
 2. **How old is old.** Nothing here decides when "as of" should start looking uncomfortable, and the honest answer is that it depends on the metric's cadence rather than on a fixed threshold. It stays open rather than being invented.
