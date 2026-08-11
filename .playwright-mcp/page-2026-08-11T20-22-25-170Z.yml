@@ -1,0 +1,579 @@
+- generic [ref=f22e2]:
+  - group [ref=f22e3]:
+    - generic "Contents ▾" [ref=f22e4] [cursor=pointer]
+  - main [ref=f22e5]:
+    - generic [ref=f22e6]:
+      - paragraph [ref=f22e7]: Plumb · Stage 03a · Information Architecture
+      - heading "Thirteen screens, and every one of them answerable to a job" [level=1] [ref=f22e8]
+      - paragraph [ref=f22e9]: "The base layer: what objects the product is made of, which screens exist and why, how a person moves between them, and a matrix that proves the coverage rather than asserting it. Seven screens are MVP, and three of those carry the whole risk."
+      - generic [ref=f22e10]:
+        - generic [ref=f22e11]: Built 2026-08-11
+        - generic [ref=f22e12]: No job orphans, two screen orphans, both deliberate
+        - generic [ref=f22e13]:
+          - text: "Source:"
+          - code [ref=f22e14]: ia/docs/sitemap.md
+    - generic [ref=f22e15]:
+      - generic [ref=f22e16]:
+        - generic [ref=f22e17]: "01"
+        - heading "Entities" [level=2] [ref=f22e18]
+      - paragraph [ref=f22e19]: Objects first, screens second. Screens only show objects, and objects grow out of jobs. This inventory is the foundation of everything below it.
+      - table [ref=f22e21]:
+        - caption [ref=f22e22]: Every object a person handles, and the job that produces it
+        - rowgroup [ref=f22e23]:
+          - row [ref=f22e24]:
+            - columnheader "Entity" [ref=f22e25]
+            - columnheader "What it is made of" [ref=f22e26]
+            - columnheader "The job that produces it" [ref=f22e27]
+        - rowgroup [ref=f22e28]:
+          - row [ref=f22e29]:
+            - cell [ref=f22e30]:
+              - strong [ref=f22e31]: Metric
+            - cell "Name, a pointer to the current definition, a binding to a source, a permanent URL" [ref=f22e32]
+            - cell "The definition job produces it as an object; the main job reads it" [ref=f22e33]
+          - row [ref=f22e34]:
+            - cell [ref=f22e35]:
+              - strong [ref=f22e36]: Definition version
+            - cell "The text in words, who declared it, when, and a pointer to the previous one" [ref=f22e37]
+            - cell "Writing it once, the name and date on the claim, the correction travelling, and having something to compare against" [ref=f22e38]
+          - row [ref=f22e39]:
+            - cell [ref=f22e40]:
+              - strong [ref=f22e41]: Source connection
+            - cell "Warehouse type, reachability, last successful run, expected cadence" [ref=f22e42]
+            - cell [ref=f22e43]:
+              - text: The main job
+              - strong [ref=f22e44]: as a precondition
+              - text: ": with no source a number has no age and no state"
+          - row [ref=f22e45]:
+            - cell [ref=f22e46]:
+              - strong [ref=f22e47]: Owner of the claim
+            - cell "Name, role, a route for reaching them unknown" [ref=f22e48]
+            - cell [ref=f22e49]:
+              - text: Who is answerable.
+              - strong [ref=f22e50]: "The unknown is load-bearing:"
+              - text: asking a specific person needs a route, the reader has no account, and whether we may show a contact at all is undecided
+          - row [ref=f22e51]:
+            - cell [ref=f22e52]:
+              - strong [ref=f22e53]: Analyst account
+            - cell "Name, email, SSO identity, workspace" [ref=f22e54]
+            - cell "Writing and owning definitions requires signing in" [ref=f22e55]
+          - row [ref=f22e56]:
+            - cell [ref=f22e57]:
+              - strong [ref=f22e58]: Reading
+            - cell [ref=f22e59]:
+              - strong [ref=f22e60]: Not an object.
+              - text: The moment of reading travels encoded in the link, and nothing about the reader is stored
+            - cell "The old figure not travelling as a current one" [ref=f22e61]
+      - generic [ref=f22e62]:
+        - generic [ref=f22e63]: A fork the flows had to settle
+        - paragraph [ref=f22e64]:
+          - text: "The reading was left open here: either a stored object, or a moment encoded in the link. Flow 3 showed there is no third option. If the link does not carry the moment it was read, the state degrades to \"the definition changed at some point\", which asks the reader to remember when they took the number, and that is the very thing they came to us to avoid."
+          - strong [ref=f22e65]: It travels in the link.
+      - generic [ref=f22e66]:
+        - paragraph [ref=f22e67]: Under question, because no job sits under them. The workspace lives in the funnel metrics and is needed for tenancy and billing, and it closes no job. The link as an object is either a property of the metric or an analytics event, not something a person handles.
+        - paragraph [ref=f22e68]: "Deliberately not entities. A state is not an entity, and this is the most important line in the inventory. \"As of\", \"source is down\" and \"definition changed after this was saved\" are computed and store nothing. The moment a state gets its own entity it gets a list, a status and a queue, and we have built an incident tool, which the design principles forbid outright. The registry is not an entity, it is a view over metrics. And the reader has no user object at all: the primary persona has no account by decision, so nothing in the product represents them. That is why there is no \"my profile\", no \"my saved\" and no \"my settings\" for the person the interface is built around."
+    - generic [ref=f22e69]:
+      - generic [ref=f22e70]:
+        - generic [ref=f22e71]: "02"
+        - heading "Screens grouped by intent" [level=2] [ref=f22e72]
+      - paragraph [ref=f22e73]:
+        - text: This is the concept, not the tree. Screens are grouped by what the person is trying to do, not by sections of a site.
+        - strong [ref=f22e74]: States live in the flows and page contents belong to the detail layer
+        - text: ", so neither appears here."
+      - document [ref=f22e77]:
+        - generic [ref=f22e79]:
+          - generic [ref=f22e80]:
+            - generic [ref=f22e81]: D. Sign in and be accountable, secondary
+            - generic [ref=f22e86]: C. Bring a metric under control, secondary
+            - generic [ref=f22e91]: B. Hand the number on, primary
+            - generic [ref=f22e96]: A. Read a number and judge it, primary
+          - generic [ref=f22e107]:
+            - generic [ref=f22e108]:
+              - generic [ref=f22e109]: E. Public surface, none of the personas
+              - generic [ref=f22e115]: Product page, trust page,pricing, docs
+            - generic [ref=f22e122]: D1. Sign in through SSOprecondition only
+            - generic [ref=f22e128]: D2. Workspace and people
+            - generic [ref=f22e133]: D3. Plan and seats
+            - generic [ref=f22e138]: C1. Connect a sourcedefinition job, main as precondition
+            - generic [ref=f22e144]: C2. Define a metricdefinition job, correction travels, who is answerable
+            - generic [ref=f22e150]: C3. Metric registryanswer once, definition job
+            - generic [ref=f22e156]: B1. Send this numbermain as precondition, answer once
+            - generic [ref=f22e162]: A1. The number cardmain, who is answerable, old figure
+            - generic [ref=f22e168]: A2. Where this number came frommain
+      - generic [ref=f22e174]: "Green fill marks the seven MVP screens. Grey marks the six that are ПОТІМ, including the whole public surface. A node with no job tag under its name has no job: three of them, and the reasons are in the matrix."
+      - paragraph [ref=f22e175]:
+        - strong [ref=f22e176]: "Corrected at the second critique:"
+        - text: the canvas carried evaluation text, the words "orphan" and "jobless by construction", which is judgement rather than concept and belongs under the diagram.
+        - strong [ref=f22e177]: Absence of a job tag is now the whole signal
+        - text: ", and it is a quieter one that says the same thing."
+      - paragraph [ref=f22e178]:
+        - strong [ref=f22e179]: Search gets no screen of its own.
+        - text: It is a component on the registry and in the analyst's global navigation, not a place, so no screen was invented to fill a row in the matrix.
+      - paragraph [ref=f22e180]:
+        - strong [ref=f22e181]: There is no "what changed in the definition" screen, and that is not an omission.
+        - text: The To-Be considered a diff of two definitions and rejected it, because it answers a question the reader did not ask. The previous definition lives as a line inside the changed state on the card.
+      - generic [ref=f22e182]:
+        - generic [ref=f22e183]: The one thing that can silently cancel our chosen UX pattern
+        - paragraph [ref=f22e184]:
+          - text: "The pattern is evidence on the claim: trust information lives on the object being read and travels with it. The map implements it."
+          - strong [ref=f22e185]: The registry is the exception to watch
+          - text: ", because a list with search is the rejected \"catalog and search\" pattern in pure form. It stays as the analyst's instrument, and the guard is a single rule:"
+          - strong [ref=f22e186]: it must never appear in the reader's navigation.
+          - text: The moment it becomes the reader's entry point, we have changed the pattern without saying so.
+    - generic [ref=f22e187]:
+      - generic [ref=f22e188]:
+        - generic [ref=f22e189]: "03"
+        - heading "Navigation model" [level=2] [ref=f22e190]
+      - generic [ref=f22e191]:
+        - generic [ref=f22e192]: The finding that shapes this whole section
+        - paragraph [ref=f22e193]:
+          - strong [ref=f22e194]: The primary persona has no global navigation, and that is the design rather than a gap.
+          - text: The reader arrives by a link, holds no account, and the strongest measurement in this research says a destination they are expected to travel to is entered once or twice a year. Global navigation in this product belongs to the
+          - strong [ref=f22e195]: secondary
+          - text: persona. Written down because it is the kind of thing a later stage silently repairs by adding a header and a menu, which would turn the card into a page of a site the reader has no reason to be on.
+      - table [ref=f22e197]:
+        - caption [ref=f22e198]: Global navigation, which is the analyst's
+        - rowgroup [ref=f22e199]:
+          - row [ref=f22e200]:
+            - columnheader "Item" [ref=f22e201]
+            - columnheader "Cluster it enters" [ref=f22e202]
+            - columnheader "The job behind it" [ref=f22e203]
+        - rowgroup [ref=f22e204]:
+          - row [ref=f22e205]:
+            - cell [ref=f22e206]:
+              - strong [ref=f22e207]: Metrics
+            - cell "The registry" [ref=f22e208]
+            - cell "Answer once; the definition stops living in a head" [ref=f22e209]
+          - row [ref=f22e210]:
+            - cell [ref=f22e211]:
+              - strong [ref=f22e212]: Sources
+            - cell "Connect a source" [ref=f22e213]
+            - 'cell "The main job as a precondition: no source, no age, no state" [ref=f22e214]'
+          - row [ref=f22e215]:
+            - cell "Account corner" [ref=f22e216]
+            - cell "Sign in, workspace, plan" [ref=f22e217]
+            - cell [ref=f22e218]:
+              - strong [ref=f22e219]: None.
+              - text: Tenancy and billing, marked jobless rather than dressed up
+      - paragraph [ref=f22e220]:
+        - strong [ref=f22e221]: Two items, not the three to five a guideline would suggest, and the range was not padded.
+        - text: "There are two analyst intents in this product. A third item would have to be invented from other people's menus, which is exactly what this stage forbids. Search is global but is not an item: it is a persistent affordance over the registry."
+      - table [ref=f22e223]:
+        - caption [ref=f22e224]: Depth in taps, counted after levels were assigned deliberately
+        - rowgroup [ref=f22e225]:
+          - row [ref=f22e226]:
+            - columnheader "Persona" [ref=f22e227]
+            - columnheader "Job" [ref=f22e228]
+            - columnheader "Taps" [ref=f22e229]
+        - rowgroup [ref=f22e230]:
+          - row [ref=f22e231]:
+            - cell [ref=f22e232]:
+              - strong [ref=f22e233]: Reader, primary
+            - cell [ref=f22e234]:
+              - strong [ref=f22e235]: Main job
+              - text: ", how far the number can be trusted"
+            - cell "0" [ref=f22e236]
+          - row [ref=f22e237]:
+            - cell "Reader, primary" [ref=f22e238]
+            - cell "Who is answerable" [ref=f22e239]
+            - cell "0" [ref=f22e240]
+          - row [ref=f22e241]:
+            - cell "Reader, primary" [ref=f22e242]
+            - cell "Depth, where the number came from" [ref=f22e243]
+            - cell "1" [ref=f22e244]
+          - row [ref=f22e245]:
+            - cell "Analyst, secondary" [ref=f22e246]
+            - cell [ref=f22e247]:
+              - text: Define a metric and its owner,
+              - strong [ref=f22e248]: returning run
+            - cell "2" [ref=f22e249]
+          - row [ref=f22e250]:
+            - cell "Analyst, secondary" [ref=f22e251]
+            - cell [ref=f22e252]:
+              - text: Define a metric and its owner,
+              - strong [ref=f22e253]: first run for the workspace
+              - text: ", through connecting a source"
+            - cell "3" [ref=f22e254]
+          - row [ref=f22e255]:
+            - cell "Analyst, secondary" [ref=f22e256]
+            - cell "Answer once by sending the answer" [ref=f22e257]
+            - cell "3" [ref=f22e258]
+      - paragraph [ref=f22e259]:
+        - strong [ref=f22e260]: Arrival is the answer.
+        - text: Everything is within three taps and the primary path is at zero, which is the entire point of the product.
+      - paragraph [ref=f22e261]:
+        - strong [ref=f22e262]: First run and returning run land in different places, and the critique found that neither artefact said so.
+        - text: On the first run for a workspace, sign-in leads to connecting a source, because a registry with no source behind it can hold nothing. On every run after that, sign-in lands on the registry. The map drew one order and the flow drew the other, and both were right about a case neither named.
+      - generic [ref=f22e263]:
+        - generic [ref=f22e264]:
+          - generic [ref=f22e265]: Global
+          - paragraph [ref=f22e266]:
+            - text: "For the analyst: metrics, sources, search, the account corner."
+            - strong [ref=f22e267]: "For the reader: nothing."
+            - text: The card carries its own affordances and nothing else.
+        - generic [ref=f22e268]:
+          - generic [ref=f22e269]: Contextual
+          - paragraph [ref=f22e270]: The source layer and the send action from the card, defining a metric from the registry or from a source, sign-in only when nobody is signed in.
+        - generic [ref=f22e271]:
+          - generic [ref=f22e272]: Deep
+          - paragraph [ref=f22e273]: Workspace and people, plan and seats, and the public surface, which is not in-app navigation at all.
+      - generic [ref=f22e274]:
+        - generic [ref=f22e275]: What the flattening cost, named rather than defended
+        - paragraph [ref=f22e276]:
+          - strong [ref=f22e277]: The reader can only reach a metric somebody sent them a link to.
+          - text: "No browsing, no second metric, no way back to a first one. Giving them the registry would fix it and would cancel the chosen pattern, so the cost is accepted deliberately. Its consequence is the single red node in the flows: a reader who lands on a card they may not see has nowhere to go."
+    - generic [ref=f22e278]:
+      - generic [ref=f22e279]:
+        - generic [ref=f22e280]: "04"
+        - heading "Traceability matrix" [level=2] [ref=f22e281]
+      - paragraph [ref=f22e282]:
+        - text: Rows are the
+        - strong [ref=f22e283]: functional
+        - text: "jobs. Emotional and social jobs are not here: they are not closed by a screen, and they have their own table below."
+        - strong [ref=f22e284]: "Two marks, not one, and the second exists so that no tick is faked:"
+        - text: X means the screen takes part in closing the job, p means it is a precondition without which the job cannot happen and which closes no part of it.
+      - table [ref=f22e286]:
+        - caption [ref=f22e287]: Six functional jobs against nine product screens. The public cluster stands outside by decision.
+        - rowgroup [ref=f22e288]:
+          - row [ref=f22e289]:
+            - columnheader "Job" [ref=f22e290]
+            - columnheader "A1 card" [ref=f22e291]
+            - columnheader "A2 source" [ref=f22e292]
+            - columnheader "B1 send" [ref=f22e293]
+            - columnheader "C1 connect" [ref=f22e294]
+            - columnheader "C2 define" [ref=f22e295]
+            - columnheader "C3 registry" [ref=f22e296]
+            - columnheader "D1 sign in" [ref=f22e297]
+            - columnheader "D2 workspace" [ref=f22e298]
+            - columnheader "D3 plan" [ref=f22e299]
+        - rowgroup [ref=f22e300]:
+          - row [ref=f22e301]:
+            - cell [ref=f22e302]:
+              - strong [ref=f22e303]: Main.
+              - text: How far the number can be trusted
+            - cell "X arrives with provenance, doubt answered in place" [ref=f22e304]:
+              - text: X
+              - generic [ref=f22e305]: arrives with provenance, doubt answered in place
+            - cell "X the route back" [ref=f22e306]:
+              - text: X
+              - generic [ref=f22e307]: the route back
+            - cell "p without it the path never starts" [ref=f22e308]:
+              - text: p
+              - generic [ref=f22e309]: without it the path never starts
+            - cell "p" [ref=f22e310]
+            - cell "p" [ref=f22e311]
+            - cell [ref=f22e312]
+            - cell [ref=f22e313]
+            - cell [ref=f22e314]
+            - cell [ref=f22e315]
+          - row [ref=f22e316]:
+            - cell [ref=f22e317]:
+              - strong [ref=f22e318]: Who is answerable
+            - cell "X name and date on the claim" [ref=f22e319]:
+              - text: X
+              - generic [ref=f22e320]: name and date on the claim
+            - cell [ref=f22e321]
+            - cell [ref=f22e322]
+            - cell [ref=f22e323]
+            - cell "X the owner is set here" [ref=f22e324]:
+              - text: X
+              - generic [ref=f22e325]: the owner is set here
+            - cell [ref=f22e326]
+            - cell [ref=f22e327]
+            - cell [ref=f22e328]
+            - cell [ref=f22e329]
+          - row [ref=f22e330]:
+            - cell [ref=f22e331]:
+              - strong [ref=f22e332]: Answer once
+            - cell "X the answer keeps answering" [ref=f22e333]:
+              - text: X
+              - generic [ref=f22e334]: the answer keeps answering
+            - cell [ref=f22e335]
+            - cell "X send the link instead of re-explaining" [ref=f22e336]:
+              - text: X
+              - generic [ref=f22e337]: send the link instead of re-explaining
+            - cell [ref=f22e338]
+            - cell [ref=f22e339]
+            - cell "X the standing answer lives here" [ref=f22e340]:
+              - text: X
+              - generic [ref=f22e341]: the standing answer lives here
+            - cell "p" [ref=f22e342]
+            - cell [ref=f22e343]
+            - cell [ref=f22e344]
+          - row [ref=f22e345]:
+            - cell [ref=f22e346]:
+              - strong [ref=f22e347]: The correction travels
+            - cell "X the changed state carries it" [ref=f22e348]:
+              - text: X
+              - generic [ref=f22e349]: the changed state carries it
+            - cell [ref=f22e350]
+            - cell [ref=f22e351]
+            - cell [ref=f22e352]
+            - cell "X the correction is made here" [ref=f22e353]:
+              - text: X
+              - generic [ref=f22e354]: the correction is made here
+            - cell [ref=f22e355]
+            - cell "p" [ref=f22e356]
+            - cell [ref=f22e357]
+            - cell [ref=f22e358]
+          - row [ref=f22e359]:
+            - cell [ref=f22e360]:
+              - strong [ref=f22e361]: The old figure does not travel as new
+            - cell "X state plus the moment carried in the link" [ref=f22e362]:
+              - text: X
+              - generic [ref=f22e363]: state plus the moment carried in the link
+            - cell [ref=f22e364]
+            - cell [ref=f22e365]
+            - cell [ref=f22e366]
+            - cell [ref=f22e367]
+            - cell [ref=f22e368]
+            - cell [ref=f22e369]
+            - cell [ref=f22e370]
+            - cell [ref=f22e371]
+          - row [ref=f22e372]:
+            - cell [ref=f22e373]:
+              - strong [ref=f22e374]: The definition stops living in a head
+            - cell [ref=f22e375]
+            - cell [ref=f22e376]
+            - cell [ref=f22e377]
+            - cell "X binding to a source" [ref=f22e378]:
+              - text: X
+              - generic [ref=f22e379]: binding to a source
+            - cell "X" [ref=f22e380]
+            - cell "X" [ref=f22e381]
+            - cell "p" [ref=f22e382]
+            - cell [ref=f22e383]
+            - cell [ref=f22e384]
+          - row [ref=f22e385]:
+            - cell [ref=f22e386]:
+              - strong [ref=f22e387]: Scope
+            - cell "MVP" [ref=f22e388]
+            - cell "MVP" [ref=f22e389]
+            - cell "MVP" [ref=f22e390]
+            - cell "MVP" [ref=f22e391]
+            - cell "MVP" [ref=f22e392]
+            - cell "MVP" [ref=f22e393]
+            - cell "MVP" [ref=f22e394]
+            - cell "ПОТІМ" [ref=f22e395]
+            - cell "ПОТІМ" [ref=f22e396]
+      - paragraph [ref=f22e397]:
+        - strong [ref=f22e398]: "Estimate: 7 screens MVP, 6 ПОТІМ, 13 in total"
+        - text: "(the six include the four public pages). This is the gate on the size of the product: the detail layer writes up the nodes, the wireframes draw the screens and the visual stage colours them, and all three start from the MVP subset rather than the whole map."
+      - generic [ref=f22e399]:
+        - generic [ref=f22e400]: A narrower subset still, and this is the build order
+        - paragraph [ref=f22e401]:
+          - text: The first test of the riskiest assumption needs four capabilities, and they touch
+          - strong [ref=f22e402]: "three screens: the card, its source layer, and sending it."
+          - text: The analyst's three MVP screens are what make those work with real data, not what the test needs.
+      - heading "Defects, job orphans first because they cost more" [level=3] [ref=f22e403]
+      - paragraph [ref=f22e404]:
+        - strong [ref=f22e405]: "Job orphans: none."
+        - text: "Every functional job has at least one screen where it is closed. That matters more than the screen side: a job with no screen means a person has nowhere to do their work, while a screen with no job only means we built ballast."
+      - table [ref=f22e407]:
+        - caption [ref=f22e408]: "Screen orphans: two, and both resolved rather than left hanging"
+        - rowgroup [ref=f22e409]:
+          - row [ref=f22e410]:
+            - columnheader "Orphan" [ref=f22e411]
+            - columnheader "Decision" [ref=f22e412]
+        - rowgroup [ref=f22e413]:
+          - row [ref=f22e414]:
+            - cell [ref=f22e415]:
+              - strong [ref=f22e416]: D2. Workspace and people
+            - cell [ref=f22e417]:
+              - strong [ref=f22e418]: Deliberately in the backlog, and the row stays empty.
+              - text: A workspace with more than one analyst has to be administrable, so it is not deleted; it serves tenancy rather than anybody's job, so it earns no MVP surface. An empty marked row is an honest state, and a tick added to tidy the table would be the defect this stage exists to catch
+          - row [ref=f22e419]:
+            - cell [ref=f22e420]:
+              - strong [ref=f22e421]: D3. Plan and seats
+            - cell [ref=f22e422]:
+              - strong [ref=f22e423]: Deliberately in the backlog.
+              - text: "It hangs off the business model hypothesis, which is still open: this market has no reader-pricing norm to inherit, and we have not decided ours"
+      - generic [ref=f22e424]:
+        - generic [ref=f22e425]: One MVP screen carries no X at all, and it is named rather than quietly ticked
+        - paragraph [ref=f22e426]:
+          - strong [ref=f22e427]: Sign in.
+          - text: "It is not an orphan, because it is a precondition of three jobs. It is also the screen most likely to grow:"
+          - strong [ref=f22e428]: sign-in is a gate, not a place
+          - text: ", and if it ever acquires product surface, this is the line to come back to."
+      - heading "Emotional and social jobs, and what actually supports them" [level=3] [ref=f22e429]
+      - paragraph [ref=f22e430]:
+        - text: These are not closed by a screen. Asking where a person does them is meaningless, and a tick invented to fill the row is worse than an honest gap. The column that matters is the
+        - strong [ref=f22e431]: mechanism
+        - text: ": a state, a piece of microcopy, a proof of trust, a behaviour after an error, an order of blocks. The detail layer takes states and trust proofs from this table, and the Voice stage takes its input to tone from it."
+      - table [ref=f22e433]:
+        - caption [ref=f22e434]: Four jobs that no screen closes
+        - rowgroup [ref=f22e435]:
+          - row [ref=f22e436]:
+            - columnheader "Job" [ref=f22e437]
+            - columnheader "Mechanism" [ref=f22e438]
+            - columnheader "Where it lives" [ref=f22e439]
+            - columnheader "What supports it" [ref=f22e440]
+        - rowgroup [ref=f22e441]:
+          - row [ref=f22e442]:
+            - cell [ref=f22e443]:
+              - strong [ref=f22e444]: Reader, emotional.
+              - text: Stop feeling exposed when presenting a number I did not compute myself
+            - cell [ref=f22e445]:
+              - text: Two mechanisms working together.
+              - strong [ref=f22e446]: A name and a date beside the value
+              - text: ", so the reader is not the only evidence for their own number. And"
+              - strong [ref=f22e447]: trouble named in words rather than raised as an alarm
+              - text: ", so a problem the reader did not cause reads as a property of the number rather than a failure of theirs"
+            - 'cell "The card: the attribution line and the state line" [ref=f22e448]'
+            - cell "Persona motivation, from the brief and unverified. Benchmark criteria on attribution and on no false calm" [ref=f22e449]
+          - row [ref=f22e450]:
+            - cell [ref=f22e451]:
+              - strong [ref=f22e452]: Analyst, emotional.
+              - text: Stop being the bottleneck, and feel the work outlives my presence
+            - cell [ref=f22e453]:
+              - strong [ref=f22e454]: The definition answers in their absence
+              - text: ", and the registry shows what already answers without them. The mechanism is the permanence of the link, not a notification"
+            - cell "Define and registry to write it, the card when somebody else opens it" [ref=f22e455]
+            - cell "The dbt forum thread on the same question reaching the analyst repeatedly" [ref=f22e456]
+          - row [ref=f22e457]:
+            - cell [ref=f22e458]:
+              - strong [ref=f22e459]: Reader, social.
+              - text: Be seen as somebody who checks rather than somebody who forwards
+            - cell [ref=f22e460]:
+              - strong [ref=f22e461]: Thin, and named as thin.
+              - text: "The only mechanism we have is that sending the card instead of the bare figure is itself a visible act of checking: the provenance travels with the number to whoever receives it. There is no profile, no history and no activity, by decision"
+            - cell "Send, and the card as rendered for the recipient" [ref=f22e462]
+            - cell [ref=f22e463]:
+              - strong [ref=f22e464]: Unverified throughout.
+              - text: The job is a hypothesis, and nothing in the research says anybody wants to be seen this way. An open question rather than a defect
+          - row [ref=f22e465]:
+            - cell [ref=f22e466]:
+              - strong [ref=f22e467]: Analyst, social.
+              - text: Be the person whose numbers are trusted
+            - cell [ref=f22e468]:
+              - strong [ref=f22e469]: Attribution on the claim
+              - text: ", permanently and visibly"
+            - cell "The card's attribution, the owner field when defining" [ref=f22e470]
+            - cell "Stated verbatim in the project rules. The benchmark, where no product of five scores above 3" [ref=f22e471]
+      - generic [ref=f22e472]:
+        - generic [ref=f22e473]: A risk in that last row, named here rather than discovered at the visual stage
+        - paragraph [ref=f22e474]:
+          - text: "The mechanism that builds an analyst's reputation is the same one that exposes it: their name sits on every number, including the ones that break. Nothing in the research says analysts want that."
+          - strong [ref=f22e475]: If they do not, the attribution that serves the reader is the thing that makes the analyst resist the product.
+    - generic [ref=f22e476]:
+      - generic [ref=f22e477]:
+        - generic [ref=f22e478]: □
+        - heading "Was, became" [level=2] [ref=f22e479]
+      - paragraph [ref=f22e480]:
+        - text: Two critiques, both in two instruments. Codex went first and blind each time, read-only, without seeing our table; our own pass ran in parallel.
+        - strong [ref=f22e481]: Seventeen findings, none withdrawn at verification.
+        - text: The first pass hunted defects, the second checked that the repairs had not made new ones, which is the pass that found the most damage of our own making.
+      - table [ref=f22e483]:
+        - caption [ref=f22e484]: Both critiques by class of defect
+        - rowgroup [ref=f22e485]:
+          - row [ref=f22e486]:
+            - columnheader "Class" [ref=f22e487]
+            - columnheader "Found" [ref=f22e488]
+            - columnheader "Who found" [ref=f22e489]
+            - columnheader "Fixed" [ref=f22e490]
+            - columnheader "Withdrawn at verification" [ref=f22e491]
+            - columnheader "Deferred" [ref=f22e492]
+        - rowgroup [ref=f22e493]:
+          - row [ref=f22e494]:
+            - cell "Missing states" [ref=f22e495]
+            - cell "6" [ref=f22e496]
+            - cell "Codex 3, Claude 2, both 1" [ref=f22e497]
+            - cell "6" [ref=f22e498]
+            - cell "none" [ref=f22e499]
+            - cell "none" [ref=f22e500]
+          - row [ref=f22e501]:
+            - cell "Dead ends" [ref=f22e502]
+            - cell "2" [ref=f22e503]
+            - cell "Claude 2" [ref=f22e504]
+            - cell "2" [ref=f22e505]
+            - cell "none" [ref=f22e506]
+            - cell [ref=f22e507]:
+              - strong [ref=f22e508]: Codex disagreed on both.
+              - text: Recorded rather than voted on
+          - row [ref=f22e509]:
+            - cell "Consistency between artefacts" [ref=f22e510]
+            - cell "4" [ref=f22e511]
+            - cell "Codex 1, Claude 3" [ref=f22e512]
+            - cell "4" [ref=f22e513]
+            - cell "none" [ref=f22e514]
+            - cell "none" [ref=f22e515]
+          - row [ref=f22e516]:
+            - cell "Purity of the concept canvas" [ref=f22e517]
+            - cell "1" [ref=f22e518]
+            - cell "Codex 1" [ref=f22e519]
+            - cell "1" [ref=f22e520]
+            - cell "none" [ref=f22e521]
+            - cell "none" [ref=f22e522]
+          - row [ref=f22e523]:
+            - cell "Damage caused by the first round of repairs" [ref=f22e524]
+            - cell "4" [ref=f22e525]
+            - cell "Claude 4" [ref=f22e526]
+            - cell "4" [ref=f22e527]
+            - cell "none" [ref=f22e528]
+            - cell "none" [ref=f22e529]
+          - row [ref=f22e530]:
+            - cell "Excess depth" [ref=f22e531]
+            - cell "0" [ref=f22e532]
+            - cell "both looked" [ref=f22e533]
+            - cell "0" [ref=f22e534]
+            - cell [ref=f22e535]
+            - cell "A clean class is a result, not a gap" [ref=f22e536]
+          - row [ref=f22e537]:
+            - cell "Orphans" [ref=f22e538]
+            - cell "0" [ref=f22e539]
+            - cell "both looked" [ref=f22e540]
+            - cell "0" [ref=f22e541]
+            - cell [ref=f22e542]
+            - cell "The three already named at step 5 read as deliberate, which is what naming them was for" [ref=f22e543]
+      - heading "Five that changed the artefact rather than its wording" [level=3] [ref=f22e544]
+      - table [ref=f22e546]:
+        - caption [ref=f22e547]: Was, became
+        - rowgroup [ref=f22e548]:
+          - row [ref=f22e549]:
+            - columnheader "Was" [ref=f22e550]
+            - columnheader "Became" [ref=f22e551]
+            - columnheader "Who found" [ref=f22e552]
+        - rowgroup [ref=f22e553]:
+          - row [ref=f22e554]:
+            - cell "A reader who may not open a card hit a flat dead end, and the price was named rather than reduced" [ref=f22e555]
+            - cell [ref=f22e556]:
+              - text: The route asks first whether the owner may be shown. If yes, the reader gets somebody to ask and ends at a
+              - strong [ref=f22e557]: partial close
+              - text: ", not at the closed job: knowing who owns a card you cannot open is not knowing how far a number can be trusted"
+            - cell "Claude, against Codex's verdict" [ref=f22e558]
+          - row [ref=f22e559]:
+            - cell "A red dead end was drawn for a link carrying no reading moment, months after that option had been rejected" [ref=f22e560]
+            - cell [ref=f22e561]:
+              - text: Gone from the route, kept as a decision in prose.
+              - strong [ref=f22e562]: A dead end drawn where none exists misleads exactly as much as one hidden
+            - cell "Claude, against Codex's verdict" [ref=f22e563]
+          - row [ref=f22e564]:
+            - cell "Sign-in had no loading and no failure path, and the registry only ever appeared empty" [ref=f22e565]
+            - cell "Authentication can fail and recover, and the flow branches on whether this is the first run for the workspace. A returning analyst previously had no route through the flow at all" [ref=f22e566]
+            - cell "Codex" [ref=f22e567]
+          - row [ref=f22e568]:
+            - cell "The card had no state for a query that ran and returned nothing" [ref=f22e569]
+            - cell [ref=f22e570]:
+              - text: An empty result is its own state, distinct from a source being down, and
+              - strong [ref=f22e571]: it must never be rendered as a zero
+              - text: ", which would be a bare figure of the worst kind"
+            - cell "Claude" [ref=f22e572]
+          - row [ref=f22e573]:
+            - cell "The same screen carried three different names across four files, and the concept canvas carried the words \"orphan\" and \"jobless by construction\"" [ref=f22e574]
+            - cell [ref=f22e575]:
+              - text: One name everywhere, and the canvas carries concepts only.
+              - strong [ref=f22e576]: Absence of a job tag is now the whole signal
+              - text: ", which is quieter and says the same thing"
+            - cell "Codex" [ref=f22e577]
+      - generic [ref=f22e578]:
+        - generic [ref=f22e579]: What the second pass was really for
+        - paragraph [ref=f22e580]:
+          - text: "Four of its findings were damage caused by the first round of repairs, and all four were ours. The clearest: adding a route out of the reader's dead end quietly routed it into the"
+          - strong [ref=f22e581]: closed-job
+          - text: node, so the map briefly claimed the main job could close without the number ever being shown. A critique that only looks for original defects would have shipped that.
+    - paragraph [ref=f22e583]:
+      - text: Plumb, stage 03a of 13. Full detail in
+      - code [ref=f22e584]: ia/docs/sitemap.md
+      - text: . The routes these screens have to hold are on the
+      - link "flows page" [ref=f22e585] [cursor=pointer]:
+        - /url: flows.html
+      - text: .

@@ -14,21 +14,22 @@ Traces T1, T2 and T3 in `cjm-to-be.md`. The decision points come from the phase 
 
 ```mermaid
 flowchart TD
-    Start(["A link to a number arrives, in a deck or a chat"]) --> A1["A1. The number card opens, no account"]
+    Start(["A link to a number arrives, in a deck or a chat"]) --> A1["A1. The number card"]
     A1 --> Perm{"Readable without an account?"}
     Perm -->|no| Own{"May the owner be shown on a card this reader cannot open?"}
     Own -->|no| Dead1["Dead end: nothing to see, no home, no way in"]
-    Own -->|yes| Who["The name and date on the claim, on A1"]
+    Own -->|yes| NoNum["The owner is named, the number is not shown"]
+    NoNum --> Part(["Partly closed: somebody to ask, and no number to use"])
     Perm -->|yes| Load["Loading: value queried at read time"]
     Load --> Src{"Is the source reachable?"}
     Src -->|no| Down["State: source is down. Definition, owner and last run still shown"]
-    Down --> Who
+    Down --> Who["The name and date on the claim, on A1"]
     Src -->|yes| Ret{"Did the query return a value?"}
     Ret -->|no| Emptyv["Empty: the query ran and returned nothing. The reason, never a zero"]
-    Emptyv --> Who
+    Emptyv --> Enough{"Enough to stand behind it?"}
     Ret -->|yes| Fresh["The value, as of, age, expected cadence"]
     Fresh --> Chg{"Definition changed since the link?"}
-    Chg -->|no| Enough{"Enough to stand behind it?"}
+    Chg -->|no| Enough
     Chg -->|yes| Changed["State: definition changed since saved, with the previous one"]
     Changed --> Enough
     Enough -->|no| A2["A2. Where this number came from"]
@@ -41,8 +42,8 @@ flowchart TD
     classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
     class Start,Win success;
     class Dead1 dead;
-    class A1,Perm,Own,Load,Src,Down,Who,Ret,Emptyv,Fresh,Chg,Changed,Enough,A2 neutral;
-    linkStyle 0,1,5,6,9,12,13,14,19 stroke:#1f5c4e,stroke-width:2px;
+    class A1,Perm,Own,NoNum,Part,Load,Src,Down,Who,Ret,Emptyv,Fresh,Chg,Changed,Enough,A2 neutral;
+    linkStyle 0,1,6,7,10,13,14,15,20 stroke:#1f5c4e,stroke-width:2px;
 ```
 
 **Activation node: `A1`.** Activation is the first time a metric card is opened by somebody other than the author of its definition (`aarrr.md`). It is the **first node after the start and sits at zero taps from arrival**, which is what the research asked for: the product does not defer its first value behind anything.
@@ -51,7 +52,7 @@ flowchart TD
 
 **States.** Loading while the value is queried, because we store no rows and the number is pulled at read time. "Source is down", which still shows the definition, the owner and the last successful run. **"Empty", added at the critique: the query ran and returned nothing.** That is a different event from a source being down and it must never be rendered as a zero, which would be a bare figure of the worst kind. "Definition changed after this was saved", carrying the previous definition as a line.
 
-**The dead end was narrowed at the critique rather than merely named.** A reader who lands on a card they may not see still has nowhere to go, but naming a price is not the same as paying the smallest one. The route now asks a question first: **may the owner be shown on a card this reader cannot open?** If yes, the reader gets a name to ask and the job closes in its reduced form. If no, the dead end stands, red, and it is the direct price of flattening the reader's navigation to nothing. The question itself is open research, `research.md` OQ7, what a data lead considers safe to show.
+**The dead end was narrowed at the first critique and corrected again at the second.** A reader who lands on a card they may not see still has nowhere to go, but naming a price is not the same as paying the smallest one. The route now asks a question first: **may the owner be shown on a card this reader cannot open?** If yes, the reader gets a name to ask. **That end is deliberately not the green one:** knowing who owns a card you cannot open is not knowing how far a number can be trusted, and the first repair routed it into the closed-job node, which overclaimed. It now ends at a partial close, somebody to ask and no number to use. If no, the dead end stands, red, and it is the direct price of flattening the reader's navigation to nothing. The question itself is open research, `research.md` OQ7, what a data lead considers safe to show.
 
 **A consequence of metadata-only, visible here for the first time.** When the source is down there is no value at all, not even a stale one, because we keep no copy. The route does not die there: the definition, the owner and the age of the last successful run are enough to close the main job in its honest form, since the job is to know how far a number can be trusted, not to hold one. **This is the node where the main job and R1 join.**
 
@@ -63,7 +64,7 @@ Traces T4. The `[?]` on the owner's contact route from the entity inventory beco
 
 ```mermaid
 flowchart TD
-    S2(["The number does not match what I expected"]) --> C2a["A1. The card, name and date already visible"]
+    S2(["The number does not match what I expected"]) --> C2a["A1. The number card"]
     C2a --> Has{"Is an owner recorded on this definition?"}
     Has -->|no| NoOwn["Dead end for this job: an unowned number, the As-Is condition we claim to fix"]
     Has -->|yes| Route{"A route to reach them?"}
@@ -83,7 +84,7 @@ flowchart TD
 
 **Decisions.** Two after the critique. Whether an owner is recorded on this definition at all, and whether we may show a route to reach them. The second answer is unknown: `personas.md` records that the reader has no account and that what a data lead considers safe to show is an open question.
 
-**The unowned number is a real dead end and it is drawn red.** A definition with no owner leaves this job unclosed and puts the reader back in the As-Is condition we claim to fix. It is prevented structurally at C2, which cannot save a definition without an owner, and it stays in the diagram because **an owner who leaves the company is prevented by nothing**: we do not track employment, and MVP has no import path that could bring in ownerless definitions.
+**The unowned number is a real dead end and it is drawn red.** Note that flow 1 asks whether the owner may be *shown* and does not ask whether one exists; a second diamond there would double the depth of an already long diagram, and in practice a definition cannot be saved without an owner. The case the two flows really disagree about is an owner who has left the company, which nothing prevents. A definition with no owner leaves this job unclosed and puts the reader back in the As-Is condition we claim to fix. It is prevented structurally at C2, which cannot save a definition without an owner, and it stays in the diagram because **an owner who leaves the company is prevented by nothing**: we do not track employment, and MVP has no import path that could bring in ownerless definitions.
 
 **Why both branches close the job.** R1 is worded as finding out **who** is answerable, so knowing the name closes it and the asking happens outside our product. The branch without a route is not red, and it is not free either: it returns the reader to the As-Is behaviour of working out how to reach somebody, which is exactly the friction we claim to remove. It is the weakest branch in this IA.
 
@@ -167,6 +168,8 @@ flowchart TD
 **There is no red node in this flow, and that is not carelessness.** Every error recovers: failed sign-in returns to D1, a failed connection returns to C1, a definition that does not run returns to C2, and a link that does not come back returns to B1. The analyst has credentials, an account and a way back, which is exactly what the reader in flow 1 does not have.
 
 **Four states were added at the critique**, three of them found by the second instrument. Sign-in had no loading and no failure path, which for a product that sells SSO into US B2B is not a small omission. The registry only ever appeared empty, so the returning analyst had no route at all; the flow now branches on whether this is the first run for the workspace. The definition check jumped from action to verdict with no loading between them. And sending a link had no failure state.
+
+**This flow is the definition job on both branches.** A returning analyst inside it is defining another metric, not running a general session: somebody who only wants to send an existing number is in flow 1 and on the send screen. Added at the second critique, because the first-run branch made the diagram readable as a whole session.
 
 **The end of this flow is not activation, and the label says so.** Connecting a source and writing a definition are setup (`aarrr.md`). Activation happens in flow 1, when a second person opens the card. Naming it here stops a later stage from treating a completed analyst setup as the moment of value.
 

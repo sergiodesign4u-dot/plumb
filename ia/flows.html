@@ -72,21 +72,22 @@
     <div class="diagram">
       <pre class="mermaid">
 flowchart TD
-    Start(["A link to a number arrives, in a deck or a chat"]) --> A1["A1. The number card opens, no account"]
+    Start(["A link to a number arrives, in a deck or a chat"]) --> A1["A1. The number card"]
     A1 --> Perm{"Readable without an account?"}
     Perm -->|no| Own{"May the owner be shown on a card this reader cannot open?"}
     Own -->|no| Dead1["Dead end: nothing to see, no home, no way in"]
-    Own -->|yes| Who["The name and date on the claim, on A1"]
+    Own -->|yes| NoNum["The owner is named, the number is not shown"]
+    NoNum --> Part(["Partly closed: somebody to ask, and no number to use"])
     Perm -->|yes| Load["Loading: value queried at read time"]
     Load --> Src{"Is the source reachable?"}
     Src -->|no| Down["State: source is down. Definition, owner and last run still shown"]
-    Down --> Who
+    Down --> Who["The name and date on the claim, on A1"]
     Src -->|yes| Ret{"Did the query return a value?"}
     Ret -->|no| Emptyv["Empty: the query ran and returned nothing. The reason, never a zero"]
-    Emptyv --> Who
+    Emptyv --> Enough{"Enough to stand behind it?"}
     Ret -->|yes| Fresh["The value, as of, age, expected cadence"]
     Fresh --> Chg{"Definition changed since the link?"}
-    Chg -->|no| Enough{"Enough to stand behind it?"}
+    Chg -->|no| Enough
     Chg -->|yes| Changed["State: definition changed since saved, with the previous one"]
     Changed --> Enough
     Enough -->|no| A2["A2. Where this number came from"]
@@ -99,8 +100,8 @@ flowchart TD
     classDef neutral fill:#f6f5f1,stroke:#c9c6bf,color:#14161a;
     class Start,Win success;
     class Dead1 dead;
-    class A1,Perm,Own,Load,Src,Down,Who,Ret,Emptyv,Fresh,Chg,Changed,Enough,A2 neutral;
-    linkStyle 0,1,5,6,9,12,13,14,19 stroke:#1f5c4e,stroke-width:2px;
+    class A1,Perm,Own,NoNum,Part,Load,Src,Down,Who,Ret,Emptyv,Fresh,Chg,Changed,Enough,A2 neutral;
+    linkStyle 0,1,6,7,10,13,14,15,20 stroke:#1f5c4e,stroke-width:2px;
       </pre>
     </div>
 
@@ -117,8 +118,8 @@ flowchart TD
     </dl>
 
     <div class="flag warn">
-      <b>The dead end was narrowed at the critique, not merely named</b>
-      <p>A reader who lands on a card they may not see still has nowhere to go, but naming a price is not the same as paying the smallest one. The route now asks a question first: <strong>may the owner be shown on a card this reader cannot open?</strong> If yes, the reader gets a name to ask and the job closes in its reduced form. If no, the dead end stands, and it is the direct price of flattening the reader's navigation to nothing. The question itself is open research: what a data lead considers safe to show.</p>
+      <b>The dead end was narrowed at the first critique and corrected again at the second</b>
+      <p>A reader who lands on a card they may not see still has nowhere to go, but naming a price is not the same as paying the smallest one. The route now asks a question first: <strong>may the owner be shown on a card this reader cannot open?</strong> If yes, the reader gets a name to ask. <strong>That end is deliberately not the green one:</strong> knowing who owns a card you cannot open is not knowing how far a number can be trusted, and the first repair routed it into the closed-job node, which overclaimed. It now ends at a partial close. If no, the dead end stands, and it is the direct price of flattening the reader's navigation to nothing. The question itself is open research: what a data lead considers safe to show.</p>
     </div>
 
     <p><strong>A consequence of metadata-only, visible here for the first time.</strong> When the source is down there is no value at all, not even a stale one, because we keep no copy. The route does not die there: the definition, the owner and the age of the last successful run are enough to close the main job in its honest form, since the job is to know how far a number can be trusted, not to hold one. This is the node where the main job and the job "who is answerable" join.</p>
@@ -133,7 +134,7 @@ flowchart TD
     <div class="diagram">
       <pre class="mermaid">
 flowchart TD
-    S2(["The number does not match what I expected"]) --> C2a["A1. The card, name and date already visible"]
+    S2(["The number does not match what I expected"]) --> C2a["A1. The number card"]
     C2a --> Has{"Is an owner recorded on this definition?"}
     Has -->|no| NoOwn["Dead end for this job: an unowned number, the As-Is condition we claim to fix"]
     Has -->|yes| Route{"A route to reach them?"}
@@ -251,6 +252,8 @@ flowchart TD
       <dd>Every error recovers: failed sign-in returns to the sign-in screen, a failed connection returns to the source screen, a definition that does not run returns to the definition screen, and a link that does not come back returns to sending. The analyst has credentials, an account and a way back, which is exactly what the reader in the first flow does not have.</dd>
       <dt>Four states were added at the critique, three of them found by the second instrument</dt>
       <dd>Sign-in had no loading and no failure path, which for a product selling SSO into US B2B is not a small omission. The registry only ever appeared empty, so a returning analyst had no route at all; the flow now branches on whether this is the first run for the workspace. The definition check jumped from action to verdict with no loading between them. And sending a link had no failure state.</dd>
+      <dt>This flow is the definition job on both branches</dt>
+      <dd>A returning analyst inside it is defining another metric, not running a general session: somebody who only wants to send an existing number is in the first flow and on the send screen. Added at the second critique, because the first-run branch made the diagram readable as a whole session.</dd>
       <dt>The end of this flow is not activation, and the label says so</dt>
       <dd>Connecting a source and writing a definition are setup. Activation happens in the first flow, when a second person opens the card. Naming it here stops a later stage from treating a completed analyst setup as the moment of value.</dd>
       <dt>Decisions and states</dt>

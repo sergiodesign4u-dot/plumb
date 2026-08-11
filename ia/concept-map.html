@@ -105,11 +105,11 @@ graph TD
     end
     subgraph D["D. Sign in and be accountable, secondary"]
         D1["D1. Sign in through SSO<br/>precondition only"]
-        D2["D2. Workspace and people<br/>ORPHAN, tenancy"]
-        D3["D3. Plan and seats<br/>ORPHAN, business model"]
+        D2["D2. Workspace and people"]
+        D3["D3. Plan and seats"]
     end
     subgraph E["E. Public surface, none of the personas"]
-        E1["Product page, trust page,<br/>pricing, docs<br/>jobless by construction"]
+        E1["Product page, trust page,<br/>pricing, docs"]
     end
 
     A1 --> A2
@@ -127,8 +127,10 @@ graph TD
     </div>
 
     <div class="legend" style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0 0 18px">
-      Green fill marks the seven MVP screens. Grey marks the six that are ПОТІМ, including the whole public surface.
+      Green fill marks the seven MVP screens. Grey marks the six that are ПОТІМ, including the whole public surface. A node with no job tag under its name has no job: three of them, and the reasons are in the matrix.
     </div>
+
+    <p class="note"><strong>Corrected at the second critique:</strong> the canvas carried evaluation text, the words "orphan" and "jobless by construction", which is judgement rather than concept and belongs under the diagram. <strong>Absence of a job tag is now the whole signal</strong>, and it is a quieter one that says the same thing.</p>
 
     <p><strong>Search gets no screen of its own.</strong> It is a component on the registry and in the analyst's global navigation, not a place, so no screen was invented to fill a row in the matrix.</p>
 
@@ -171,7 +173,8 @@ graph TD
           <tr><td><strong>Reader, primary</strong></td><td><strong>Main job</strong>, how far the number can be trusted</td><td class="num s5">0</td></tr>
           <tr><td>Reader, primary</td><td>Who is answerable</td><td class="num s5">0</td></tr>
           <tr><td>Reader, primary</td><td>Depth, where the number came from</td><td class="num s3">1</td></tr>
-          <tr><td>Analyst, secondary</td><td>Define a metric and its owner</td><td class="num s3">2</td></tr>
+          <tr><td>Analyst, secondary</td><td>Define a metric and its owner, <strong>returning run</strong></td><td class="num s3">2</td></tr>
+          <tr><td>Analyst, secondary</td><td>Define a metric and its owner, <strong>first run for the workspace</strong>, through connecting a source</td><td class="num s3">3</td></tr>
           <tr><td>Analyst, secondary</td><td>Answer once by sending the answer</td><td class="num s3">3</td></tr>
         </tbody>
       </table>
@@ -294,6 +297,71 @@ graph TD
     </div>
   </section>
 
+
+  <!-- Was became ........................................................ -->
+  <section id="beforeafter">
+    <div class="sec-head"><span class="sec-num">&#9633;</span><h2>Was, became</h2></div>
+
+    <p>Two critiques, both in two instruments. Codex went first and blind each time, read-only, without seeing our table; our own pass ran in parallel. <strong>Seventeen findings, none withdrawn at verification.</strong> The first pass hunted defects, the second checked that the repairs had not made new ones, which is the pass that found the most damage of our own making.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Both critiques by class of defect</caption>
+        <thead><tr><th>Class</th><th class="num">Found</th><th>Who found</th><th class="num">Fixed</th><th>Withdrawn at verification</th><th>Deferred</th></tr></thead>
+        <tbody>
+          <tr><td>Missing states</td><td class="num">6</td><td>Codex 3, Claude 2, both 1</td><td class="num">6</td><td>none</td><td>none</td></tr>
+          <tr><td>Dead ends</td><td class="num">2</td><td>Claude 2</td><td class="num">2</td><td>none</td><td><strong>Codex disagreed on both.</strong> Recorded rather than voted on</td></tr>
+          <tr><td>Consistency between artefacts</td><td class="num">4</td><td>Codex 1, Claude 3</td><td class="num">4</td><td>none</td><td>none</td></tr>
+          <tr><td>Purity of the concept canvas</td><td class="num">1</td><td>Codex 1</td><td class="num">1</td><td>none</td><td>none</td></tr>
+          <tr><td>Damage caused by the first round of repairs</td><td class="num">4</td><td>Claude 4</td><td class="num">4</td><td>none</td><td>none</td></tr>
+          <tr><td>Excess depth</td><td class="num">0</td><td>both looked</td><td class="num">0</td><td></td><td>A clean class is a result, not a gap</td></tr>
+          <tr><td>Orphans</td><td class="num">0</td><td>both looked</td><td class="num">0</td><td></td><td>The three already named at step 5 read as deliberate, which is what naming them was for</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Five that changed the artefact rather than its wording</h3>
+
+    <div class="tw">
+      <table>
+        <caption>Was, became</caption>
+        <thead><tr><th>Was</th><th>Became</th><th>Who found</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>A reader who may not open a card hit a flat dead end, and the price was named rather than reduced</td>
+            <td>The route asks first whether the owner may be shown. If yes, the reader gets somebody to ask and ends at a <strong>partial close</strong>, not at the closed job: knowing who owns a card you cannot open is not knowing how far a number can be trusted</td>
+            <td>Claude, against Codex's verdict</td>
+          </tr>
+          <tr>
+            <td>A red dead end was drawn for a link carrying no reading moment, months after that option had been rejected</td>
+            <td>Gone from the route, kept as a decision in prose. <strong>A dead end drawn where none exists misleads exactly as much as one hidden</strong></td>
+            <td>Claude, against Codex's verdict</td>
+          </tr>
+          <tr>
+            <td>Sign-in had no loading and no failure path, and the registry only ever appeared empty</td>
+            <td>Authentication can fail and recover, and the flow branches on whether this is the first run for the workspace. A returning analyst previously had no route through the flow at all</td>
+            <td>Codex</td>
+          </tr>
+          <tr>
+            <td>The card had no state for a query that ran and returned nothing</td>
+            <td>An empty result is its own state, distinct from a source being down, and <strong>it must never be rendered as a zero</strong>, which would be a bare figure of the worst kind</td>
+            <td>Claude</td>
+          </tr>
+          <tr>
+            <td>The same screen carried three different names across four files, and the concept canvas carried the words "orphan" and "jobless by construction"</td>
+            <td>One name everywhere, and the canvas carries concepts only. <strong>Absence of a job tag is now the whole signal</strong>, which is quieter and says the same thing</td>
+            <td>Codex</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>What the second pass was really for</b>
+      <p>Four of its findings were damage caused by the first round of repairs, and all four were ours. The clearest: adding a route out of the reader's dead end quietly routed it into the <strong>closed-job</strong> node, so the map briefly claimed the main job could close without the number ever being shown. A critique that only looks for original defects would have shipped that.</p>
+    </div>
+  </section>
+
   <footer class="note">
     <p>Plumb, stage 03a of 13. Full detail in <code>ia/docs/sitemap.md</code>. The routes these screens have to hold are on the <a href="flows.html">flows page</a>.</p>
   </footer>
@@ -334,7 +402,8 @@ graph TD
     { id:'entities',   label:'Entities' },
     { id:'map',        label:'Screens by intent' },
     { id:'navigation', label:'Navigation model' },
-    { id:'matrix',     label:'Traceability matrix' }
+    { id:'matrix',     label:'Traceability matrix' },
+    { id:'beforeafter',label:'Was, became' }
   ];
 </script>
 <script src="../_nav.js"></script>

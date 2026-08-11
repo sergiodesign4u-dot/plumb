@@ -55,7 +55,7 @@ Screens are grouped by the intent of the person, not by sections of a site. Dept
 | **A1. The number card.** The value, the definition in words, the three named states, age with the expectation beside it, and the name and date on the claim. Permanent URL, no account | Main, R1, R4 | **MVP** |
 | **A2. Where this number came from.** The source, when its query last ran, what it ran against. Opens on one action from A1 | Main | **MVP** |
 
-### B. Hand the number on &nbsp; primary
+### B. Hand the number on &nbsp; primary, and the analyst uses it too
 
 | Screen | Job | Scope |
 | --- | --- | --- |
@@ -70,6 +70,8 @@ Screens are grouped by the intent of the person, not by sections of a site. Dept
 | **C3. Metric registry.** The list, with search and jump by name | R2, R5 | **MVP** |
 
 **Search gets no screen of its own.** It is a component on C3 and in the analyst's global navigation, not a place. Backlog item 11 therefore has a home, and no screen was invented to fill a row in the matrix.
+
+**A note on cluster B, added at the second critique.** B1 sits in a cluster labelled primary while its own strongest job, R2, belongs to the secondary persona. Both are true and the cluster keeps its label: the reader hands a number on, and the analyst answers once by sending the same link. It is the one screen in this map that two personas use for two different reasons, which is worth knowing before the detail layer writes it up.
 
 ### D. Sign in and be accountable &nbsp; secondary
 
@@ -139,7 +141,8 @@ Written down because it is the kind of thing a later stage silently repairs by a
 | **Reader, primary** | **Main job**, knowing how far the number can be trusted | **0.** Arrival is the answer: the definition, the states, the age and the attribution are all on A1 |
 | Reader, primary | R1, who is answerable | **0.** The name and date are on the claim, not behind an action |
 | Reader, primary | Depth, where the number came from | 1 |
-| Analyst, secondary | R5, define a metric and its owner | 2 after sign-in: Metrics, then new metric |
+| Analyst, secondary | R5, define a metric and its owner, **returning run** | 2 after sign-in: Metrics, then new metric |
+| Analyst, secondary | R5, **first run for the workspace**, through connecting a source | 3 after sign-in. Corrected at the second critique: the earlier table gave only the returning number, and the first-run branch had just been added to the flow |
 | Analyst, secondary | R2, answer once by sending the answer | 3 after sign-in: Metrics, open the card, send |
 
 Everything is within three, and the primary path is at zero, which is the entire point of the product.
@@ -265,3 +268,23 @@ Step 6, in two instruments. Codex ran first and blind, read-only, over the same 
 ### What the repairs changed
 
 Six states were added, two dead ends were corrected in opposite directions, and two inconsistencies between artefacts were resolved. **Flow 4 changed the most:** it now branches on whether this is the first run for a workspace, which is the difference between an analyst setting up and an analyst returning, and no artefact had drawn that difference before.
+
+---
+
+## Critique 2: consistency, purity, and what the first round of repairs broke
+
+Step 7, in two instruments again, and the division was natural: the first two axes are mechanical and went to Codex, while the third checks the consequences of repairs we made ourselves and stayed with us. **Seven findings, none withdrawn at verification, no verdict divergence this time.**
+
+| # | Axis | Where | What | Found by |
+| --- | --- | --- | --- | --- |
+| 1 | Consistency | Four files | **The same screen carried three different names**: "A1. The number card opens, no account", "A1. The card, name and date already visible", "A1. The number card". Now one name everywhere, with the situation described outside the node | Codex |
+| 2 | Purity | The concept canvas | The words "ORPHAN, tenancy", "ORPHAN, business model" and "jobless by construction" had leaked onto the diagram. That is judgement rather than concept. **Absence of a job tag is now the whole signal**, which is quieter and says the same thing | Codex |
+| 3 | Not broken | Flow 1 | **The worst of them, and it was ours.** Adding a route out of the reader's dead end routed it into the closed-job node, so the map briefly claimed the main job could close with no number ever shown. It now ends at a partial close: somebody to ask, and no number to use | Claude |
+| 4 | Not broken | Flow 1 | The empty-result state hopped through the attribution node on its way to the end, which made no sense: attribution is on the card either way. It now goes to the same decision every other path goes to | Claude |
+| 5 | Not broken | Flows 1 and 2 | The two flows disagreed about whether an ownerless definition is possible. A second diamond in flow 1 would double an already long diagram, so the resolution is a stated note: a definition cannot be saved without an owner, and **the case that nothing prevents is an owner who has left the company** | Claude |
+| 6 | Not broken | Flow 4 | Adding the first-run branch made the diagram readable as a general analyst session, which it is not. Stated: this flow is the definition job on both branches, and somebody who only wants to send an existing number is in flow 1 | Claude |
+| 7 | Not broken | Navigation | The tap table silently described only the returning run after the first-run branch was added. Both numbers are now given | Claude |
+
+**What the second pass was really for, stated plainly.** Four of its seven findings were damage caused by the first round of repairs, and all four were ours rather than Codex's, because they are consequences of edits only the editor can trace. A critique that looked only for original defects would have shipped a map claiming the main job closes without a number.
+
+**Two axes came back with a single finding each and nothing else.** Every screen node in the flows exists in the concept sitemap and the reverse; the four diagrams in the page match the four in the file line for line; every link resolves; both pages take their sidebar from the one registry; and the matrices in the file and on the page carry the same nine screens and six jobs.
