@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2.1 The number card - Plumb</title>
+<meta name="description" content="Node 2.1: the number card and its seven states. The whole product for the primary persona, answered at zero taps, and the page that decides what an unfurl may carry.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:420px; }
+  .nm{ font-size:13px; font-weight:700; }
+  .val{ font-size:34px; font-weight:700; letter-spacing:-.025em; line-height:1.08; margin:6px 0 0; }
+  .val.none{ font-size:15px; font-weight:600; letter-spacing:-.01em; padding:8px 0 2px; }
+  .stl{ border-top:1px solid #14161a; margin-top:9px; padding-top:8px; }
+  .stl b{ display:block; }
+  .stl span{ color:#6b7076; }
+  .def{ border-top:1px dashed #9a9a9a; margin-top:10px; padding-top:9px; line-height:1.45; }
+  .def em{ font-style:normal; color:#6b7076; font-size:11px; display:block; margin-bottom:3px; }
+  .att{ color:#6b7076; margin-top:9px; font-size:11.5px; }
+  .src{ border-top:1px solid var(--rule-strong); margin-top:10px; padding-top:9px;
+        display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .acts{ display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; }
+  .ftr{ border-top:1px solid #14161a; margin-top:14px; padding-top:8px; color:#6b7076; font-size:11px; }
+  .skel{ background:repeating-linear-gradient(90deg,#e6e6e6 0 8px,#f2f2f2 8px 16px);
+         height:34px; width:150px; margin:6px 0 0; }
+  .grid-st{ display:grid; gap:12px; margin:18px 0 4px; }
+  @media (min-width:700px){ .grid-st{ grid-template-columns:1fr 1fr; } }
+  @media (min-width:1050px){ .grid-st{ grid-template-columns:1fr 1fr 1fr; } }
+  .st-spec{ border:1px solid #14161a; background:#fff; padding:12px 11px; font-family:var(--sans); font-size:12px; }
+  .st-spec .tag{ font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; }
+  .unfurl{ border:1px solid #14161a; border-left-width:4px; background:#fff; padding:11px 12px;
+           font-family:var(--sans); font-size:12px; max-width:420px; margin:14px 0; }
+  .unfurl .t{ font-weight:700; }
+  .unfurl .d{ color:#6b7076; margin-top:4px; line-height:1.45; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 2.1 and its seven states &middot; pages</p>
+    <h1>The whole product for the person who never pays</h1>
+    <p class="standfirst lede">The reader has no header, no menu, no home and no account. Their navigation is this page and the two actions on it, and every other node in the map exists so that this one can be true. Answered at zero taps: arrival is the answer.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>States: 2.2 to 2.6, 2.9, 2.10</span>
+      <span>Source: <code>ia/docs/pages/number-card.md</code></span>
+    </div>
+  </header>
+
+  <!-- Jobs .............................................................. -->
+  <section id="jobs">
+    <div class="sec-head"><span class="sec-num">01</span><h2>What it closes, and where the URL comes from</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Job</th><th>How this page closes it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Main job.</strong> How far the number can be trusted</td><td>Blocks 2 to 5 together, on arrival</td></tr>
+          <tr><td><strong>R1.</strong> Who is answerable</td><td>The name and date on the claim</td></tr>
+          <tr><td><strong>R4.</strong> The old figure does not travel as new</td><td>State 2.5, compared against the definition carried in the link</td></tr>
+          <tr><td><strong>R3.</strong> The correction travels</td><td>State 2.5 is what a correction made in the editor looks like when it arrives here</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Permanent URL, one per metric:</strong> <code>/m/&lt;stable-id&gt;</code>. <strong>No slug taken from the metric name:</strong> a slug derived from a name that can change is either a broken promise of permanence or a redirect to maintain forever. The name is on the page, where it can change freely.</p>
+
+    <p><strong>A sent link carries the moment of reading:</strong> <code>/m/&lt;stable-id&gt;?v=&lt;definition-version&gt;&amp;t=&lt;sent-at&gt;</code>. The base layer settled this: the moment travels encoded in the link, and a reading is not a stored object, because the reader has no account and we store nothing about them.</p>
+
+    <div class="flag">
+      <b>One consequence, easy to discover late</b>
+      <p>The bare URL and the sent URL are <strong>the same page in two conditions</strong>. On a bare <code>/m/&lt;id&gt;</code> there is nothing to compare against, so <strong>state 2.5 cannot fire there at all.</strong> That is honest rather than a gap: with no moment of reading in the link, "the definition changed since you read this" has no since.</p>
+    </div>
+  </section>
+
+  <!-- Blocks ............................................................ -->
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Eight blocks, and one order that is ours</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Metric name, H1</td><td>What am I looking at</td></tr>
+          <tr><td>2</td><td><strong>The value</strong>, or the named absence of one</td><td>Design principle 1: never bare</td></tr>
+          <tr><td>3</td><td><strong>The state line</strong>: as of, relative age, expected cadence, or the trouble named in words</td><td>Vocabulary from node 0.4. <strong>Beside the value, not in a footer and not in a tooltip</strong></td></tr>
+          <tr><td>4</td><td><strong>The definition, in words</strong></td><td>Design principle 3. Visible, never collapsed</td></tr>
+          <tr><td>5</td><td><strong>Attribution</strong>: who declared this and when</td><td>Design principle 5</td></tr>
+          <tr><td>6</td><td>Where this number came from, one line, opening on one action</td><td>Node 2.7. Design principle 4</td></tr>
+          <tr><td>7</td><td>Send this number</td><td>Node 2.8</td></tr>
+          <tr><td>8</td><td>Footer, node 0.2</td><td>The only footer a reader ever sees</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Block 3 before block 4 is ours</strong>, and it follows from design principle 1 rather than from any source. Nothing in the block bank puts a state above a definition, because nothing in the bank has both.</p>
+
+    <p><strong>Refused, with reasons recorded in the bank:</strong> date range and filter controls, seven visualisations, an eleven-item overflow menu, a certification badge, an aggregate health signal, a ninety-day timeline, a subscribe action. <strong>No chart in MVP</strong> either: a chart is allowed only as an illustration under the definition, and it illustrates nothing the first test needs.</p>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, the ordinary condition</div>
+        <div class="bw wide">
+          <div class="nm">Weekly active accounts</div>
+          <div class="val">18,432</div>
+          <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          <div class="def"><em>Definition</em>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</div>
+          <div class="att">Declared by Dana Reyes, Analytics, on 3 August</div>
+          <div class="src"><span>From Snowflake, ANALYTICS.PROD, last run 14:05</span><span class="btn">Where this came from</span></div>
+          <div class="acts"><span class="btn">Send this number</span></div>
+          <div class="ftr">Footer, node 0.2</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, same order, no exceptions</div>
+        <div class="bw">
+          <div class="nm">Weekly active accounts</div>
+          <div class="val">18,432</div>
+          <div class="stl"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+          <div class="def"><em>Definition</em>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</div>
+          <div class="att">Declared by Dana Reyes, 3 August</div>
+          <div class="src"><span>From Snowflake, last run 14:05</span></div>
+          <div class="acts"><span class="btn">Where this came from</span><span class="btn">Send</span></div>
+          <div class="ftr">Footer, node 0.2</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>No primary call to action, and that is the design.</strong> The primary act here is reading, and it is complete on arrival. Two secondary actions sit below the answer. Worth stating because a page with no call to action looks unfinished to anybody used to marketing pages: <strong>the moment this card acquires a "start free", the reader's zero-tap answer has been sold to somebody.</strong></p>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Seven states, every one of them a node</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Node</th><th>State</th><th>The value</th><th>What else changes</th><th>Route out</th></tr></thead>
+        <tbody>
+          <tr><td>2.2</td><td><strong>Loading</strong></td><td>Not yet</td><td><strong>Blocks 1, 4, 5 and 6 are already there.</strong> Only the value is waiting, because only the value is queried at read time</td><td>2.3, 2.4, 2.6</td></tr>
+          <tr><td>2.3</td><td><strong>As of</strong>, the ordinary condition</td><td>Shown</td><td>Timestamp, relative age, expected cadence</td><td>Stays</td></tr>
+          <tr><td>2.4</td><td><strong>Source is down</strong></td><td><strong>None at all</strong></td><td>Definition, owner and last successful run stay. We hold no copy, so there is no stale value to fall back on</td><td>2.10</td></tr>
+          <tr><td>2.5</td><td><strong>Definition changed</strong></td><td>Current value shown</td><td>The change, the previous definition, who changed it and when</td><td>2.7</td></tr>
+          <tr><td>2.6</td><td><strong>Empty</strong></td><td><strong>Never a zero</strong></td><td>The time it ran, and the reason in words</td><td>2.7</td></tr>
+          <tr><td>2.9</td><td><strong>Not readable without an account</strong></td><td>None</td><td>What is missing and why. <strong>No login wall theatre</strong></td><td>2.10, or a dead end</td></tr>
+          <tr><td>2.10</td><td><strong>The owner is named, the number is not</strong></td><td>None</td><td>Name and date only</td><td>End, a partial close</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-st">
+      <div class="st-spec">
+        <div class="tag">2.2 Loading</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="skel"></div>
+        <div class="stl"><b>Asking the source now</b><span>Expected hourly</span></div>
+        <div class="def"><em>Definition</em>Distinct accounts with a session in the last 7 days</div>
+        <div class="att">Declared by Dana Reyes, 3 August</div>
+      </div>
+      <div class="st-spec">
+        <div class="tag">2.4 Source is down</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="val none">No value can be shown</div>
+        <div class="stl"><b>Source is down</b><span>Last successful run 14:05 yesterday</span></div>
+        <div class="def"><em>Definition</em>Distinct accounts with a session in the last 7 days</div>
+        <div class="att">Declared by Dana Reyes, 3 August</div>
+      </div>
+      <div class="st-spec">
+        <div class="tag">2.5 Definition changed</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="val">18,432</div>
+        <div class="stl"><b>The definition changed after this link was made</b><span>On 3 August by Dana Reyes</span></div>
+        <div class="def"><em>Previously</em>Distinct users with a session in the last 7 days</div>
+      </div>
+      <div class="st-spec">
+        <div class="tag">2.6 Empty</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="val none">The query ran and returned nothing</div>
+        <div class="stl"><b>Not a zero</b><span>Ran at 14:05. A zero would be a different fact</span></div>
+      </div>
+      <div class="st-spec">
+        <div class="tag">2.9 Not readable without an account</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="val none">This number is not shared outside the workspace</div>
+        <div class="stl"><b>What is missing</b><span>The workspace restricts who may see values</span></div>
+      </div>
+      <div class="st-spec">
+        <div class="tag">2.10 Owner named, number not shown</div>
+        <div class="nm">Weekly active accounts</div>
+        <div class="val none">No value shown</div>
+        <div class="att">Dana Reyes declared this metric on 3 August. She can tell you the number.</div>
+      </div>
+    </div>
+
+    <div class="flag">
+      <b>2.2 is the one people get wrong, so it is spelled out</b>
+      <p>A loading state that greys the whole card would hide the definition and the attribution, <strong>which are already known and cost nothing to render.</strong> Only the value waits. This is also what keeps the LCP of node 6.1 off the warehouse.</p>
+    </div>
+
+    <div class="flag warn">
+      <b>2.9 and 2.10 are the reader's dead end, narrowed rather than accepted</b>
+      <p>The base layer left a red node here: a reader who lands on a card they may not see has no home, no menu and no account. <strong>2.10 is the narrowing</strong>, because showing who owns the claim closes R1 in its reduced form and costs no screen. Whether we may show the owner to somebody with no access is <strong>open research</strong>, and the branch in flow 1 asks it rather than assuming it. dbt's soft access controls, collected for T2, are a live precedent on the yes side.</p>
+    </div>
+
+    <p><strong>Combination rules, from node 0.4.</strong> Source down and definition changed: both shown, source down first. Empty and definition changed: both, empty first. Source down and empty: impossible.</p>
+  </section>
+
+  <!-- Canon ............................................................. -->
+  <section id="canon">
+    <div class="sec-head"><span class="sec-num">04</span><h2>The canonical component, and where its copies live</h2></div>
+
+    <p><strong>This node defines the number card.</strong> Changing it changes three other places, and the list exists so that a change is never made in one of them only.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Copy</th><th>Variant</th></tr></thead>
+        <tbody>
+          <tr><td>Node 6.1, the product page hero</td><td>Full, live, with a real metric and no send action</td></tr>
+          <tr><td>Node 4.1, registry rows</td><td>Compact: the state name and the age, no explanation</td></tr>
+          <tr><td>Node 4.3, search results</td><td>Compact, the same form as the registry</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The compact form is a shortening, never a different vocabulary.</strong> Same words, fewer of them.</p>
+
+    <h3>Emotional support, and three of the four mechanisms land here</h3>
+    <ul>
+      <li><strong>P1, emotional.</strong> Stop feeling exposed presenting a number I did not compute → <strong>a name and a date beside the value</strong>, so the reader is not the only evidence for their own number → block 5. And <strong>trouble named in words rather than raised as an alarm</strong> → block 3.</li>
+      <li><strong>P2, emotional.</strong> Stop being the bottleneck → <strong>the definition answers in the analyst's absence</strong> → this page as rendered for somebody else. The mechanism is the permanence of the link, not a notification.</li>
+      <li><strong>P2, social.</strong> Be the person whose numbers are trusted → <strong>attribution on the claim</strong> → block 5.</li>
+      <li><strong>P1, social</strong> is thin and named as thin: its only mechanism is that provenance travels with the number, which is node 2.8 rather than this page.</li>
+    </ul>
+
+    <p><strong>One risk carried forward rather than rediscovered.</strong> The mechanism that builds an analyst's reputation is the same one that exposes it: their name sits on every number, including the ones that break. Nothing in the research says analysts want that.</p>
+  </section>
+
+  <!-- SEO ............................................................... -->
+  <section id="seo">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Noindex, and the unfurl decision</h2></div>
+
+    <p><strong>This page is <code>noindex</code>, and the reason is not technical.</strong> The card is public and opens with no account, but <strong>indexing it would publish customers' numbers.</strong> That was decided at node 0.2 and it is the most consequential SEO decision in this project.</p>
+
+    <ul>
+      <li><strong>A.</strong> <code>robots: noindex, follow</code>. Follow rather than nofollow, because the only links leaving this page go to our own public pages. <strong>No canonical:</strong> one metric, one URL, nothing to consolidate. No hreflang</li>
+      <li><strong>B.</strong> One H1, the metric name. <strong>No H2 in MVP:</strong> what follows is a definition list rather than sections, and inventing headings to look structured would be markup theatre</li>
+      <li><strong>C.</strong> No SEO text, deliberately. An unindexed page has none. The words here are interface copy, they belong to stage 05 and <code>voice/docs/microcopy.md</code>, and this node holds only the requirement for what information each place needs</li>
+      <li><strong>D.</strong> No structured data. Schema on a noindex page describes a page nobody will retrieve, and here it would describe a customer's metric</li>
+      <li><strong>E.</strong> One H1. <strong>LCP is the value and it must not wait on the warehouse:</strong> blocks 1, 4, 5 and 6 render first, the value fills in, its space reserved so nothing shifts. Crawlable <code>&lt;a&gt;</code> on both routes out. No text baked into images</li>
+    </ul>
+
+    <div class="flag warn">
+      <b>The sharpest decision on this page: what an unfurl may carry</b>
+      <p>The card is sent as a link into Slack and email, so it <strong>will</strong> be unfurled, and an unfurl is a preview generated once and then frozen in a chat log.</p>
+      <p style="margin-top:8px"><strong>The preview carries the metric name and the state. It does not carry the value.</strong></p>
+    </div>
+
+    <div class="unfurl">
+      <div class="t">Weekly active accounts &middot; Plumb</div>
+      <div class="d">Distinct accounts with at least one session in the last 7 days. Open to see the current value, when it was computed and who declared this definition.</div>
+    </div>
+
+    <p>Three reasons, each one a rule this project already holds.</p>
+    <ol>
+      <li><strong>Design principle 1 forbids it directly.</strong> An unfurl showing "18,432" with no state beside it is a bare number, and it is bare in the one place we cannot control.</li>
+      <li><strong>It would rebuild the As-Is problem inside our own growth mechanic.</strong> Phase G of the As-Is journey, from S9: a figure that was once computed stops being computed and keeps looking exactly as it did. A frozen unfurl in a Slack thread is that, forever, and forwarding it is one click.</li>
+      <li><strong>It contradicts the product.</strong> We store no copy of a value. Baking one into a meta tag or an image is storing a copy in the least revocable place available.</li>
+    </ol>
+
+    <p><strong>So:</strong> <code>og:title</code> is the metric name, <code>og:description</code> is the first line of the definition plus a line saying the current value and its provenance are one click away, and there is <strong>no <code>og:image</code> carrying a number</strong>. The unfurl's job is to make the link worth opening, not to answer instead of it.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#2.1">&larr; Structure (2.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '2.1 The number card';
+  window.NAV_SECTIONS = [
+    { id:'jobs',   label:'Jobs and the URL' },
+    { id:'blocks', label:'Blocks and wireframes' },
+    { id:'states', label:'Seven states' },
+    { id:'canon',  label:'Canon and emotional support' },
+    { id:'seo',    label:'Noindex and the unfurl' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
