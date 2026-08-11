@@ -187,3 +187,72 @@ Order reasoned from 360, top to bottom.
 **Checked against rule 3.** D3 leads with a lineage graph and three browse trees; D4 leads with popularity; R4 leads with three filters; R5 leads with an upgrade bar and a security toggle. **Nothing above matches any of them.** What is ours is the refusal of ranking and the narrowing to three columns, and both come from the product's own argument rather than from a page.
 
 **One competitor mechanism recorded as a live risk rather than a footnote.** Both domain sources rank or surface by popularity, and both count views made outside the tool. If our registry ever needs ordering beyond alphabetical, that is the moment to reread this row, because popularity is the ordering everyone reaches for and it is the one this product cannot use.
+
+---
+
+## T3. Form and editor
+
+**Nodes:** 3.2 connect a source, 3.3 testing the connection, 3.4 connection failed, 4.4 define a metric, 4.5 the definition runs, 4.6 the definition does not run, 4.7 editing a definition with the previous version retained. Seven nodes, all MVP, all the analyst's.
+
+**This is the type where the reader's product is actually made.** Everything the card shows was typed here by somebody else, which is why a form that loses a definition or hides an owner field costs more here than it looks.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D5 | PowerMetrics, creating Snowflake metrics, `support.powermetrics.app/hc/en-us/articles/37726229398679`. Screen: `research/screens/ui-powermetrics-connect-snowflake.png` | Domain, documentation substitute. **The closest thing in this bank to our own two forms** | 2026-08-12, this session |
+| D6 | Secoda search and Select Star lineage, already in `competitors.md` | Domain, for the constraint that permissions reach into what a viewer sees | Recorded 2026-08-11 |
+| R7 | Retool database resource, `refero.design/pages/6407c865-23f5-46d8-964b-42439b934e61` | Craft, outside the category | 2026-08-12 |
+| R8 | Fingerprint integration, `refero.design/pages/93ec6279-9290-43b2-b878-356a7193d778` | Craft, for nodes 3.3 and 3.4 | 2026-08-12 |
+| R9 | Mercury onboarding, `refero.design/pages/d8607eb8-6ac8-4208-ae94-92ad7aca2ebd` | Craft, for inline validation | 2026-08-12 |
+
+### The single most important finding in this type
+
+**In D5, nobody ever writes what the metric means.** The whole creation flow is: choose a table or view, apply filters, choose a measure column, choose dimensions. Step by step, and there is no field anywhere in it for a sentence in words. The definition in that product is a **configuration**, and the closest thing to prose is the description whose absence dbt separately counts as a health problem.
+
+**That is the gap this product exists in, evidenced at the level of a form rather than argued.** Our 4.4 makes the definition in words the first field and the owner a required one, and the binding to a source comes after both.
+
+### The open question this type closed
+
+Node 0.4 handed forward "what does expected hourly say when no cadence is known". **D5 answers it from the domain side:** freshness is not something a warehouse announces. PowerMetrics gets it either from a webhook the customer calls when their data updates, or from a cache expiry TTL the customer picks, and the documentation says *"Automatically clearing the cache with a webhook is strongly recommended"*. **So cadence is configured, not discovered**, and the expected-cadence field the base layer already put in node 3.2 is now a requirement rather than an assumption. The other half of the question, how old is old, stays open.
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Barrier it works on |
+| --- | --- | --- | --- | --- | --- |
+| D5 | **Service picker before the form: a "Where is your data?" page with tiles, a "Search by service" field and tags** | TAKE, reduced to a short list | R5, node 3.2 | MVP | With three warehouse types in the MVP, a search field over three tiles is furniture. The picker stays, the search waits until the list is long enough to need it |
+| D5 | **A mode choice: query directly, or import** | DO NOT TAKE | Nothing | Out | We have one mode. **Metadata only means the number is queried at read time**, so a choice here would offer something the product does not do |
+| D5 | **Credentials, in order: user name, private key file, passphrase, account identifier, database, schema, warehouse, role, display name** | TAKE, and keep the order | R5, main job as a precondition | MVP | Nine fields is what a warehouse connection costs, and pretending otherwise would produce a form that cannot connect. The display name last is right: it is the only field about us rather than about them |
+| D5 | **Prerequisites stated before the form: what to have ready, and the IP addresses to allowlist** | **TAKE** | R5 | MVP | A connection form that fails on a network policy the person has not set is a dead end with no route out, and the route is on their side of the wall. R7 puts the same content in a panel beside the form |
+| D5 | **First day of week and time zone must match the warehouse, or weekly figures are wrong** | TAKE as a constraint, not as a field | Main job, R4 | MVP | This is a silent-wrong-number generator, which is the exact failure this product sells against. It belongs in the connection as a stated assumption rather than as a setting somebody has to find |
+| D5 | **Webhook URL with a copy button, or a cache expiry TTL** | **DO DIFFERENTLY, and it becomes our cadence field** | Main job, node 0.4, node 2.3 | MVP | We hold no cache, so there is nothing to expire. What we need from the same place is the **expected cadence**, so that "as of 14:05" has something to be measured against |
+| D5 | **"Share account connection with editor users" toggle** | DO NOT TAKE in MVP | Nothing yet | ПОТІМ | Sharing a connection is a workspace question, and cluster 5 is entirely ПОТІМ |
+| D5 | **A "Connection successful" window** | TAKE, as a state rather than a window | R5, node 3.3 | MVP | The success of a connection is worth saying once, in place. A modal that must be dismissed adds a step to the one flow that already has nine fields |
+| D5 | **Metric creation: table or view, then source filters, then measure column, then dimensions** | DO DIFFERENTLY | R5, R3, node 4.4 | MVP | **This is the row the whole type turns on.** Their order is table first and meaning never. Ours is meaning first: the definition in words, the owner, then the binding to a source |
+| D5 | **Member filters and condition filters, up to ten conditions per dimension** | DO NOT TAKE | Would trace to nothing | Out | Filters build a query. We are not a query builder, and building one would put us back in the BI category the product is defined against |
+| D5 | **Per-dimension checkboxes for "as a filter" and "as a segment", plus Deselect all** | DO NOT TAKE | Nothing | Out | Segmentation is exploration. Design principle 3 |
+| D5 | **The stated constraint that measure and dimensions must come from one table or view** | TAKE, as a validated condition | R5, node 4.6 | MVP | A constraint the person cannot see until it fails is a bad error. If ours has an equivalent, it is checked when the definition runs and named in 4.6 |
+| D6 | **Permissions reaching into what a viewer may see** (Secoda restricts the lineage graph by access) | TAKE as a limit on what 4.4 can promise | R1, node 2.9 | MVP | Recorded at stage 01 and still binding: whatever the analyst writes here, the reader may be shown less. The definition form should not imply that everything typed into it travels |
+| R7 | **Three-part layout: environment list, the form, and an allowlisting panel beside it** | TAKE the pairing of form and side panel | R5 | MVP | The information the person needs from **their** side sits next to the field it unblocks. At 360 the panel stacks above the fields it explains, not below |
+| R7 | **"Test connection" as a secondary action beside "Save changes"** | **TAKE, and this is the best block in the type** | R5, nodes 3.3 and 3.4 | MVP | Testing before saving is how a person finds out that credentials are wrong **while they still have the form open**. Save-then-discover is the version that produces a broken source in a list |
+| R7 | **Key and value pairs for extra connection options with an "Add new" link** | DO NOT TAKE in MVP | Nothing yet | ПОТІМ | An open-ended options grid is for a product supporting many drivers. Three warehouse types do not need one yet |
+| R7 | **Delete, in red, at the bottom left, away from the primary actions** | TAKE | R5 | MVP | Destructive and primary actions at opposite ends is the cheapest safety this form can have |
+| R8 | **Validation errors as a full-width banner at the top of the form, not as a toast** | **TAKE** | R5, nodes 3.4 and 4.6 | MVP | Node 0.3 already ruled that what belongs to the thing on screen stays inline. A credential failure that vanishes on a timer leaves somebody looking at nine filled fields and no reason |
+| R8 | **An info banner stating a consequence** ("changing these details will require a reconnect") | TAKE | R3, node 4.7 | MVP | Node 4.7 needs exactly this shape: **editing a definition changes what cards already sent will say**, and that consequence has to be visible before saving, not after |
+| R8 | **Inline help links beside the labels** ("Where can I find this?", "How do I generate this?") | TAKE | R5 | MVP | Nine credential fields with no route to where each value lives is the version of this form that gets abandoned. Cheap, and it is content rather than structure |
+| R8 | **The whole thing as a modal over a dimmed page** | DO NOT TAKE | Nothing | Out | A nine-field form in a modal at 360 is a scroll inside a scroll. Ours is a page, which is what the node map already says |
+| R9 | **Inline error under the specific field, with the message naming the problem** ("Phone number is too short") | TAKE | R5, node 4.6 | MVP | The banner says the submission failed, the inline message says which field. Both, and they are not alternatives |
+| R9 | **Progress indicator across a multi-step flow** | DO NOT TAKE | Nothing | Out | Our forms are one step each. A progress bar over one step is decoration claiming to be information |
+| R9 | **Single centred column, wide gutters, every field full width** | TAKE | R5 | MVP | It is the layout that survives 360 without being redesigned, which is the stance this stage runs on |
+
+### Our composition
+
+**3.2, connect a source.** 1) Which warehouse, a short list. 2) What you will need, including the addresses to allowlist, beside the fields or above them at 360. 3) The credential fields in D5's order. 4) **Expected cadence**, ours rather than theirs. 5) Test connection, then save. 6) Delete, apart from both.
+
+**4.4, define a metric.** 1) Name. 2) **The definition in words**, the first and largest field. 3) The owner, required. 4) The binding to a source. 5) Run it, then save.
+
+**4.7, editing.** The same form, plus the previous version retained and visible, plus the consequence banner from R8 stating that cards already sent will change. Saving is what puts node 2.5 on those cards, and the person doing it should know that before they do it.
+
+**3.3 and 4.5, running:** progress in place, naming what is being tried, no modal. **3.4 and 4.6, failed:** the banner at the top saying the attempt failed, the inline message on the field that caused it, and **the form still filled in**.
+
+**Checked against rule 3.** D5 opens on a table picker and never asks what the metric means. R7 has no meaning field at all because a database resource has no meaning. R8 is a modal. R9 is a multi-step KYC flow. **The definition in words as the first field appears in none of them**, and it is the whole point of ours.

@@ -1,0 +1,1154 @@
+- generic [active] [ref=f69e1]:
+  - link "Skip to main content" [ref=f69e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f69e3]:
+    - link [ref=f69e5] [cursor=pointer]:
+      - /url: /hc/en-us
+      - img "PowerMetrics Help Center Help Center home page" [ref=f69e6]
+    - button "Toggle navigation menu" [ref=f69e8] [cursor=pointer]
+  - main [ref=f69e11]:
+    - generic [ref=f69e13]:
+      - generic [ref=f69e14]:
+        - navigation "Breadcrumb" [ref=f69e15]:
+          - list [ref=f69e16]:
+            - listitem [ref=f69e17]:
+              - link "PowerMetrics Help Center" [ref=f69e18] [cursor=pointer]:
+                - /url: /hc/en-us
+            - listitem [ref=f69e19]:
+              - text: ">"
+              - link "Metrics" [ref=f69e20] [cursor=pointer]:
+                - /url: /hc/en-us/categories/37637849609111-Metrics
+            - listitem [ref=f69e21]:
+              - text: ">"
+              - link "Creating Data Warehouse Metrics" [ref=f69e22] [cursor=pointer]:
+                - /url: /hc/en-us/sections/37640363106455-Creating-Data-Warehouse-Metrics
+        - search [ref=f69e24]:
+          - searchbox "Search the Help Centre" [ref=f69e25]
+      - generic [ref=f69e26]:
+        - complementary "Articles in this section" [ref=f69e27]:
+          - generic [ref=f69e28]:
+            - button "Articles in this section" [ref=f69e29]
+            - text: Articles in this section →
+        - article [ref=f69e32]:
+          - generic [ref=f69e33]:
+            - heading "How do I create Snowflake metrics?" [level=1] [ref=f69e34]
+            - generic [ref=f69e37]:
+              - generic [ref=f69e38]:
+                - time [ref=f69e39]: 1 month ago
+                - text: ·
+              - text: Updated
+          - generic [ref=f69e42]:
+            - paragraph [ref=f69e43]:
+              - emphasis [ref=f69e44]: When you sign up for a free PowerMetrics trial, you get access for 30 days to our data warehouse integration for Snowflake. To continue using this feature when your trial period ends, purchase a plan that includes the “data warehouse integration” or one that allows you to buy the “data warehouse integration add-on”. Want to see how PowerMetrics works before connecting it to your own data? Our
+              - link [ref=f69e45] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726136313751-learning-with-sample-metrics
+                - emphasis [ref=f69e46]: sample metrics
+              - emphasis [ref=f69e47]: are the perfect, risk-free way to do just that.
+            - paragraph [ref=f69e48]: Connect to data in your Snowflake warehouse and create metrics to add to your organization’s metric catalog. From there, business users can securely access metrics from the Snowflake warehouse that they need for visualization, discovery, and dashboarding.
+            - paragraph [ref=f69e49]: "This article includes:"
+            - list [ref=f69e50]:
+              - listitem [ref=f69e51]:
+                - link "Why PowerMetrics?" [ref=f69e52] [cursor=pointer]:
+                  - /url: "#why_powermetrics"
+              - listitem [ref=f69e53]:
+                - link "Before connecting to Snowflake" [ref=f69e54] [cursor=pointer]:
+                  - /url: "#before_connecting"
+              - listitem [ref=f69e55]:
+                - link "Creating Snowflake metrics" [ref=f69e56] [cursor=pointer]:
+                  - /url: "#create_metrics"
+                - list [ref=f69e57]:
+                  - listitem [ref=f69e58]:
+                    - link "Connecting PowerMetrics to Snowflake" [ref=f69e59] [cursor=pointer]:
+                      - /url: "#connect"
+                  - listitem [ref=f69e60]:
+                    - link "Configuring Snowflake metrics and adding them to the metric catalog" [ref=f69e61] [cursor=pointer]:
+                      - /url: "#configure_metrics"
+              - listitem [ref=f69e62]:
+                - link "Frequently asked questions" [ref=f69e63] [cursor=pointer]:
+                  - /url: "#faqs"
+                - list [ref=f69e64]:
+                  - listitem [ref=f69e65]:
+                    - link "How does PowerMetrics get updated when data in my Snowflake warehouse changes?" [ref=f69e66] [cursor=pointer]:
+                      - /url: "#update_data"
+                  - listitem [ref=f69e67]:
+                    - link "How do I edit the settings for an account connection?" [ref=f69e68] [cursor=pointer]:
+                      - /url: "#edit_connection"
+                  - listitem [ref=f69e69]:
+                    - link "How do I share an account connection?" [ref=f69e70] [cursor=pointer]:
+                      - /url: "#share_connection"
+                  - listitem [ref=f69e71]:
+                    - link "How do I switch to use a different account connection?" [ref=f69e72] [cursor=pointer]:
+                      - /url: "#switch_connection"
+                  - listitem [ref=f69e73]:
+                    - link "How do I delete an account connection?" [ref=f69e74] [cursor=pointer]:
+                      - /url: "#delete_connection"
+                  - listitem [ref=f69e75]:
+                    - link "How do I change a metric’s data source?" [ref=f69e76] [cursor=pointer]:
+                      - /url: "#change_source"
+                  - listitem [ref=f69e77]:
+                    - link "How do I access the SQL queries generated by PowerMetrics for a metric visualization?" [ref=f69e78] [cursor=pointer]:
+                      - /url: "#access_queries"
+                  - listitem [ref=f69e79]:
+                    - link "Why are users getting an error when applying weekly periodicity to Snowflake metric visualizations?" [ref=f69e80] [cursor=pointer]:
+                      - /url: "#first_day_of_week"
+            - heading "Why PowerMetrics?" [level=2] [ref=f69e81]
+            - paragraph [ref=f69e82]: "Here are a few key reasons why PowerMetrics adds value to your existing data stack:"
+            - list [ref=f69e83]:
+              - listitem [ref=f69e84]:
+                - strong [ref=f69e85]: "Self-serve analytics for business users:"
+                - text: Data consumers can independently access metrics, certified and approved by the data team, in a centralized catalog. The intuitive, approachable PowerMetrics design makes it easy for business users to explore, analyze, and visualize metric data in reports and dashboards, without assistance from the data team.
+              - listitem [ref=f69e86]:
+                - strong [ref=f69e87]: "Secure data storage:"
+                - text: Data is stored and managed in your Snowflake warehouse.
+              - listitem [ref=f69e88]:
+                - strong [ref=f69e89]: "Data governance:"
+                - text: Built-in users and roles, set for each individual at the account admin level, let you control data access.
+                - link "Learn more about PowerMetrics roles and permissions." [ref=f69e90] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726190491159-powermetrics-roles-and-permissions
+              - listitem [ref=f69e91]:
+                - strong [ref=f69e92]: "Single source of truth data:"
+                - text: Certified metrics in a metric catalog, managed by the data team and accessible to business users, ensures consistent data across reports, dashboards, and departments.
+              - listitem [ref=f69e93]:
+                - strong [ref=f69e94]: "Highly scalable:"
+                - text: The amount of data that can be handled by PowerMetrics is only limited by the capacity of the Snowflake warehouse.
+            - heading "Before connecting to Snowflake" [level=2] [ref=f69e95]
+            - paragraph [ref=f69e96]: "Before connecting PowerMetrics to your Snowflake warehouse, ensure you have the right setup:"
+            - list [ref=f69e97]:
+              - listitem [ref=f69e98]:
+                - strong [ref=f69e99]: Make sure data is configured in your Snowflake warehouse to work well with metrics.
+                - list [ref=f69e100]:
+                  - listitem [ref=f69e101]:
+                    - text: Individual measures (metrics) and their associated dimension(s) must be defined against a single table or view.
+                    - strong [ref=f69e102]: "Note:"
+                    - text: If your database uses a star schema, with facts (measures) and dimensions in separate tables, we recommend you create an additional view and group your facts and dimensions into a single table for each metric.
+                  - listitem [ref=f69e103]: Measures that share a common set of dimensions should be grouped into a single table or view.
+                  - listitem [ref=f69e104]: Measures that don’t have common dimension sets should not be grouped, as doing so can result in sparse tables and potentially lead to performance or data integrity issues.
+                  - listitem [ref=f69e105]: Tables must include at least one date column and one measure column. Multiple metrics can be grouped into a single view or table if they share a common date and other dimensions.
+                  - listitem [ref=f69e106]:
+                    - link "See this article for practical tips on improving query performance for data warehouse metrics." [ref=f69e107] [cursor=pointer]:
+                      - /url: https://support.powermetrics.app/hc/en-us/articles/37726204010391-data-warehouse-metrics-tips-for-improving-query-performance
+              - listitem [ref=f69e108]:
+                - strong [ref=f69e109]: You need at least one user with a role that provides access to the database you want to visualize as metrics.
+                - link "Learn more about Snowflake user roles." [ref=f69e110] [cursor=pointer]:
+                  - /url: https://docs.snowflake.com/en/user-guide/admin-user-management#user-roles
+              - listitem [ref=f69e111]:
+                - strong [ref=f69e112]: If you’re using Network Policies to restrict IP access,
+                - link "add our PowerMetrics IP addresses to your allow list" [ref=f69e113] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726212835351-powermetrics-which-ip-addresses-do-i-need-to-add-to-my-allow-list
+                - text: .
+              - listitem [ref=f69e114]:
+                - strong [ref=f69e115]: Ensure the “first day of week” setting in PowerMetrics matches the one used in your Snowflake warehouse.
+                - text: If they don’t match, weekly periodicity data and weekly time range (for example, “last week”) data will not display as expected in PowerMetrics.
+                - link "Learn more about Snowflake’s first day of week setting." [ref=f69e116] [cursor=pointer]:
+                  - /url: https://docs.snowflake.com/en/sql-reference/parameters#label-week-start
+                - link "Learn how to modify the first day of the week in PowerMetrics." [ref=f69e117] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726177661847-powermetrics-modifying-the-first-day-of-the-week
+              - listitem [ref=f69e118]:
+                - strong [ref=f69e119]: Ensure the account-wide time zone setting in PowerMetrics matches the time zone used by your Snowflake warehouse.
+                - link "Learn how to apply account-wide time zone settings in PowerMetrics." [ref=f69e120] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726177762839-powermetrics-setting-the-time-zone
+            - paragraph [ref=f69e121]:
+              - strong [ref=f69e122]: "Have the following information ready. You’ll enter it when connecting to PowerMetrics:"
+            - list [ref=f69e123]:
+              - listitem [ref=f69e124]:
+                - text: Your Snowflake
+                - strong [ref=f69e125]: user name
+                - text: ","
+                - strong [ref=f69e126]: private key file
+                - text: ", and"
+                - strong [ref=f69e127]: role
+                - text: (if applicable).
+              - listitem [ref=f69e128]:
+                - text: Your
+                - strong [ref=f69e129]: Account identifier
+                - text: "- Your account identifier includes the name of your account and its organization, usually formatted like this: ("
+                - code [ref=f69e130]: <org name>-<account name>
+                - text: ).
+                - strong [ref=f69e131]: "Note:"
+                - text: "Make sure your account identifier displays in PowerMetrics with a hyphen (-) not a period (.) between the org name and account name.You can find your account identifier in the URL for your account, for example:"
+                - code [ref=f69e132]: <account_identifier>.snowflakecomputing.com
+                - text: .
+                - link "Go here for more detailed information on account identifiers in Snowflake." [ref=f69e133] [cursor=pointer]:
+                  - /url: https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization
+              - listitem [ref=f69e134]:
+                - text: The name of the
+                - strong [ref=f69e135]: database
+                - text: and the
+                - strong [ref=f69e136]: schema
+                - text: where the data you want to retrieve is stored and the name of the
+                - strong [ref=f69e137]: warehouse
+                - text: you want to use.
+            - heading "Creating Snowflake metrics" [level=2] [ref=f69e138]
+            - paragraph [ref=f69e139]:
+              - strong [ref=f69e140]: "To create Snowflake metrics for your account you:"
+            - list [ref=f69e141]:
+              - listitem [ref=f69e142]:
+                - link "Connect PowerMetrics to Snowflake" [ref=f69e143] [cursor=pointer]:
+                  - /url: "#connecting"
+              - listitem [ref=f69e144]:
+                - link "Configure Snowflake metrics and add them to the metric catalog" [ref=f69e145] [cursor=pointer]:
+                  - /url: "#configuring"
+            - heading "Connecting PowerMetrics to Snowflake" [level=3] [ref=f69e146]
+            - paragraph [ref=f69e147]: Connect to data in Snowflake as the first step toward creating Snowflake metrics.
+            - paragraph [ref=f69e148]:
+              - strong [ref=f69e149]: "Note:"
+              - text: The following procedures describe connecting to Snowflake and creating Snowflake metrics from the left navigation sidebar. You can perform the same actions from the
+              - strong [ref=f69e150]: metric catalog
+              - text: (by clicking the
+              - strong [ref=f69e151]: +Add metrics
+              - text: button) or from an open dashboard (by clicking
+              - strong [ref=f69e152]: Edit
+              - text: ">"
+              - strong [ref=f69e153]: Insert
+              - text: ">"
+              - strong [ref=f69e154]: Metrics
+              - strong [ref=f69e155]: +Add metrics
+              - text: ).
+            - heading "To connect PowerMetrics to Snowflake:" [level=4] [ref=f69e156]
+            - list [ref=f69e157]:
+              - listitem [ref=f69e158]:
+                - text: In the left navigation sidebar click the
+                - strong [ref=f69e159]: +
+                - text: button beside
+                - strong [ref=f69e160]: Metrics
+                - text: and select
+                - strong [ref=f69e161]: See all services
+                - text: .
+                - img "see all services" [ref=f69e162]
+              - listitem [ref=f69e163]:
+                - text: On the
+                - strong [ref=f69e164]: Where is your data?
+                - text: page, click
+                - strong [ref=f69e165]: Snowflake
+                - text: .
+                - strong [ref=f69e166]: "Tip:"
+                - text: To quickly find the Snowflake connector, enter text into the “Search by service” field or select the
+                - img "data warehouse tag" [ref=f69e167]
+                - text: tag.
+                - img "Snowflake tile" [ref=f69e168]
+              - listitem [ref=f69e169]:
+                - text: Click
+                - strong [ref=f69e170]: Query Snowflake directly
+                - text: .
+              - listitem [ref=f69e171]:
+                - strong [ref=f69e172]: "If you’ve connected to Snowflake before:"
+                - list [ref=f69e173]:
+                  - listitem [ref=f69e174]:
+                    - text: We assume you want to use the same account and take you directly to the next step –
+                    - link "Creating a Snowflake metric" [ref=f69e175] [cursor=pointer]:
+                      - /url: "#configuring"
+                    - text: .
+                    - strong [ref=f69e176]: If you want to connect to a different account
+                    - text: ", you can do so in the metric creation window by"
+                    - strong [ref=f69e177]: clicking the account connection
+                    - text: (as shown below). You can either select an alternate, existing account or click “Add a new account”.
+                    - img "account connection" [ref=f69e178]
+                    - strong [ref=f69e179]: "Note:"
+                    - text: You can edit settings for an existing account by selecting it, clicking its
+                    - strong [ref=f69e180]: 3-dot menu
+                    - text: ", and choosing"
+                    - strong [ref=f69e181]: Edit
+                    - text: .
+              - listitem [ref=f69e182]:
+                - strong [ref=f69e183]: "If this is your first time connecting to Snowflake:"
+                - list [ref=f69e184]:
+                  - listitem [ref=f69e185]:
+                    - text: Click
+                    - strong [ref=f69e186]: Connect account
+                    - text: .
+                  - listitem [ref=f69e187]:
+                    - text: Click
+                    - strong [ref=f69e188]: Add a new account
+                    - text: .
+                  - listitem [ref=f69e189]:
+                    - text: Under
+                    - strong [ref=f69e190]: Account settings
+                    - text: ", fill in the following fields:"
+                    - list [ref=f69e191]:
+                      - listitem [ref=f69e192]:
+                        - strong [ref=f69e193]: "User name:"
+                        - text: Enter the Snowflake user name (one with a role that has access to the database).
+                      - listitem [ref=f69e194]:
+                        - strong [ref=f69e195]: "Private key:"
+                        - text: Add a private key file.
+                        - strong [ref=f69e196]: "Note:"
+                        - text: To replace a key file, remove the existing one first by clicking the
+                        - strong [ref=f69e197]: Remove key file
+                        - text: button (as shown below).
+                        - img "remove key file button" [ref=f69e198]
+                      - listitem [ref=f69e199]:
+                        - strong [ref=f69e200]: "Private key passphrase:"
+                        - text: Enter the private key passphrase if the key file is encrypted.
+                        - strong [ref=f69e201]: "Note:"
+                        - text: This information is only required when the key file is uploaded or changed.
+                      - listitem [ref=f69e202]:
+                        - strong [ref=f69e203]: "Account identifier:"
+                        - text: "Enter your account identifier (your org name and your account name, usually formatted like this:"
+                        - code [ref=f69e204]: <org name>-< account name>
+                        - text: ).
+                        - link "If needed, go here for more detailed information on account identifiers." [ref=f69e205] [cursor=pointer]:
+                          - /url: https://docs.snowflake.com/en/user-guide/admin-account-identifier
+                        - strong [ref=f69e206]: "Note:"
+                        - text: Make sure your account identifier displays in PowerMetrics with a hyphen (-) not a period (.) between the org name and account name.
+                      - listitem [ref=f69e207]:
+                        - strong [ref=f69e208]: "Database:"
+                        - text: Enter the name of the database where the data you want to retrieve is stored.
+                        - strong [ref=f69e209]: "Note:"
+                        - text: The database name is
+                        - strong [ref=f69e210]: case sensitive
+                        - text: . Ensure you enter it exactly as it displays in Snowflake.
+                      - listitem [ref=f69e211]:
+                        - strong [ref=f69e212]: "Schema:"
+                        - text: Enter the name of the schema within the database that you want to access.
+                        - strong [ref=f69e213]: "Note:"
+                        - text: The schema name is
+                        - strong [ref=f69e214]: case sensitive
+                        - text: . Ensure you enter it exactly as it displays in Snowflake.
+                      - listitem [ref=f69e215]:
+                        - strong [ref=f69e216]: "Warehouse:"
+                        - text: Enter the name of the warehouse you want to use.
+                      - listitem [ref=f69e217]:
+                        - strong [ref=f69e218]: "Role (optional):"
+                        - text: Enter the name of the role you want to use.
+                      - listitem [ref=f69e219]:
+                        - strong [ref=f69e220]: "Display name:"
+                        - text: Enter the desired display name. We recommend a user-friendly name that makes it easy to determine the source of the data or the identity of the user creating the account connection.
+                        - strong [ref=f69e221]: "Note:"
+                        - text: This name will only display in PowerMetrics, not in Snowflake.
+                  - listitem [ref=f69e222]:
+                    - text: To share the account connection with other editor users, toggle on
+                    - strong [ref=f69e223]: Share account connection with editor users
+                    - emphasis [ref=f69e224]: (optional)
+                    - text: .
+                  - listitem [ref=f69e225]:
+                    - text: Click
+                    - strong [ref=f69e226]: Save
+                    - text: .
+              - listitem [ref=f69e227]:
+                - text: The
+                - strong [ref=f69e228]: Connection successful
+                - text: window displays.
+              - listitem [ref=f69e229]:
+                - text: To
+                - strong [ref=f69e230]: automatically update PowerMetrics
+                - text: in alignment with data updates in your Snowflake warehouse, you need to call the
+                - strong [ref=f69e231]: webhook URL
+                - text: when the data in your warehouse updates. Click the
+                - strong [ref=f69e232]: Copy
+                - text: button to copy the webhook URL that displays under
+                - strong [ref=f69e233]: Webhook
+                - text: .
+                - strong [ref=f69e234]: "Note:"
+                - text: Automatically clearing the cache with a webhook is strongly recommended.
+              - listitem [ref=f69e235]:
+                - text: To
+                - strong [ref=f69e236]: use a cache expiration strategy
+                - text: ", under"
+                - strong [ref=f69e237]: Cache expiry
+                - text: ", use the drop-down to select the TTL value."
+                - strong [ref=f69e238]: "Note:"
+                - text: This method is only recommended if you’re not able to set up a webhook. (See below.)
+                - img "webhook_cache_settings" [ref=f69e239]
+                - text: "Learn more about these settings in this section:"
+                - link "“How does PowerMetrics get updated when my Snowflake data changes?”" [ref=f69e240] [cursor=pointer]:
+                  - /url: "#update_data"
+              - listitem [ref=f69e241]:
+                - text: Click
+                - strong [ref=f69e242]: Continue
+                - text: .
+                - link "You’re ready to create a Snowflake metric." [ref=f69e243] [cursor=pointer]:
+                  - /url: "#configuring"
+            - heading "Configuring Snowflake metrics and adding them to the metric catalog" [level=3] [ref=f69e244]
+            - paragraph [ref=f69e245]: Now that you’ve connected to data in Snowflake, you’re ready to create a metric.
+            - heading "To create a Snowflake metric:" [level=4] [ref=f69e246]
+            - list [ref=f69e247]:
+              - listitem [ref=f69e248]:
+                - text: Open the
+                - strong [ref=f69e249]: Data
+                - text: panel.
+                - img "data tab" [ref=f69e250]
+              - listitem [ref=f69e251]:
+                - text: Under
+                - strong [ref=f69e252]: Table/View
+                - text: ", click the drop-down to select the table/view that contains the data for your metric."
+                - img "table or view" [ref=f69e253]
+                - strong [ref=f69e254]: "Note:"
+                - text: The table/view must include at least one date column and one non-date column.
+                - strong [ref=f69e255]: "Tip:"
+                - text: If you don’t see the table/view you’re looking for, check that your account connection properties are correct. If you still don’t see the table/view, try clearing the cache.
+              - listitem [ref=f69e256]:
+                - text: Under
+                - strong [ref=f69e257]: Table/View
+                - text: ", click"
+                - strong [ref=f69e258]: Filter source data
+                - text: to include or exclude members in the selected table/view. Excluded members will not display or be available as dimensions in the saved metric visualization.
+                - img "table_view_filters" [ref=f69e259]
+                - strong [ref=f69e260]: "Note:"
+                - text: You can
+                - strong [ref=f69e261]: filter by member
+                - text: or
+                - strong [ref=f69e262]: by condition
+                - text: . By default, the first time you apply filters to a metric, you’ll see the UI for member filtering. To filter by condition, click the “Condition filters” link.
+                - strong [ref=f69e263]: "Note:"
+                - text: You can apply up to 10 filter conditions/dimension.
+              - listitem [ref=f69e264]:
+                - text: Under
+                - strong [ref=f69e265]: Measure
+                - text: ", select the column from the table that contains the values you want to track in your metric."
+                - img "measure" [ref=f69e266]
+              - listitem [ref=f69e267]:
+                - text: Under
+                - strong [ref=f69e268]: Dimensions
+                - text: ", all available dimensions for segmenting and/or filtering the metric value (measure) are automatically selected. If there are some dimensions you don’t want to include in the metric, deselect their checkboxes to remove them."
+                - list [ref=f69e269]:
+                  - listitem [ref=f69e270]:
+                    - text: By default,
+                    - strong [ref=f69e271]: selected dimensions will be available for filtering and segmentation
+                    - text: in the final metric visualization. To modify this setting for individual dimensions, click
+                    - strong [ref=f69e272]: All
+                    - text: beside the dimension name and deselect the checkbox for
+                    - strong [ref=f69e273]: as a filter
+                    - text: or
+                    - strong [ref=f69e274]: as a segment
+                    - text: . (See below.)
+                    - img "dimension_filtering" [ref=f69e275]
+                  - listitem [ref=f69e276]:
+                    - strong [ref=f69e277]: To create a metric with no ability to segment or filter
+                    - text: ", click"
+                    - strong [ref=f69e278]: Deselect all
+                    - text: .
+                  - listitem [ref=f69e279]:
+                    - strong [ref=f69e280]: "Note:"
+                    - text: Your measure and dimensions all need to come from the same table or view. If they’re not currently set up that way, you should create new views and group the measure and dimensions you need into a single view.
+                  - listitem [ref=f69e281]:
+                    - strong [ref=f69e282]: "Note:"
+                    - text: When choosing dimensions, you can only select columns that have a
+                    - strong [ref=f69e283]: text format
+                    - text: . If the Snowflake table you selected doesn’t include any text columns there will be no available categories by which to segment.
+                  - listitem [ref=f69e284]:
+                    - strong [ref=f69e285]: "Tip:"
+                    - text: You can
+                    - strong [ref=f69e286]: optionally change a dimension’s display name
+                    - text: by selecting the current name and typing a new one. This changes the display name only (not the name of the dimension in the data source). If you change the display name and want to see the one that’s being used in the data source, hover over the dimension’s name.
+                    - strong [ref=f69e287]: "Note:"
+                    - text: If you change a name for a dimension that’s also being used by other metric visualizations, associated filters and segmentations will be removed from those visualizations and need to be reapplied.
+              - listitem [ref=f69e288]:
+                - text: Under
+                - strong [ref=f69e289]: Date and Time
+                - text: ", select the column from the table/view that contains the date associated with each value."
+                - strong [ref=f69e290]: "Note:"
+                - text: Selecting the correct date dimension for your metric is important as it will be used to aggregate your metric for different time granularities, such as daily, monthly, quarterly time periods.
+                - img "date column" [ref=f69e291]
+              - listitem [ref=f69e292]:
+                - text: Open the
+                - strong [ref=f69e293]: Settings
+                - text: panel.
+                - img "settings tab" [ref=f69e294]
+              - listitem [ref=f69e295]:
+                - text: Under
+                - strong [ref=f69e296]: Date handling
+                - text: ", select"
+                - strong [ref=f69e297]: Use all values
+                - text: or
+                - strong [ref=f69e298]: Use most recent values only
+                - text: . Your choice determines the data points your metric will use when calculating the metric value for a time period.
+                - img "date handling" [ref=f69e299]
+                - text: If you chose
+                - strong [ref=f69e300]: Use most recent values only
+                - text: ", select the desired time period. (See below.)"
+                - img "use most recent values" [ref=f69e301]
+              - listitem [ref=f69e302]:
+                - text: Under
+                - strong [ref=f69e303]: Format
+                - text: ", select from Numeric, Currency, Percentage, or Duration."
+                - img "format" [ref=f69e304]
+                - text: If you selected
+                - strong [ref=f69e305]: Currency
+                - text: as the data format, the default currency symbol that will display is USD $. You can select an alternate
+                - strong [ref=f69e306]: Currency symbol
+                - text: from the drop-down list.
+                - strong [ref=f69e307]: "Note:"
+                - text: This is a display option only. Currency is not converted.If you selected
+                - strong [ref=f69e308]: Duration
+                - text: as the data format, optionally, adjust the
+                - strong [ref=f69e309]: Maximum
+                - text: and
+                - strong [ref=f69e310]: Minimum
+                - strong [ref=f69e311]: Granularity
+                - text: settings.
+              - listitem [ref=f69e312]:
+                - text: Under
+                - strong [ref=f69e313]: Decimal places
+                - text: ", select the number of decimals to display (from 0 - 9). The"
+                - strong [ref=f69e314]: Auto
+                - text: setting displays up to 4 decimal places and drops trailing zeros.
+                - strong [ref=f69e315]: "Note:"
+                - text: If you change the decimal place setting for a metric and want to see the source data values with their original decimal places, reselect
+                - strong [ref=f69e316]: Auto
+                - text: .
+              - listitem [ref=f69e317]:
+                - text: Under
+                - strong [ref=f69e318]: Aggregation
+                - text: ", you’ll see the aggregation type. It’s based on the measure you selected for the metric. For numeric columns, the initial aggregation type is “sum”. For text columns, it's “count”. The aggregation type will be used when the aggregation has not been overridden by the user in a metric visualization and wherever there are no configuration options available. For example, in the metric catalog, metrics will display using an aggregation type based on your selection here."
+                - img "default aggregation" [ref=f69e319]
+              - listitem [ref=f69e320]:
+                - text: Enable the
+                - strong [ref=f69e321]: Users can override aggregation
+                - text: option if you want to allow personalized changes to the aggregation type for the metric (for example, when users are analyzing metrics in Explorer).
+                - img "override aggregation" [ref=f69e322]
+                - strong [ref=f69e323]: "Note:"
+                - text: When metrics are created, they’re automatically visualized using the most appropriate aggregation type. As a result,
+                - strong [ref=f69e324]: we recommend disabling the ability to override the aggregation type
+                - text: .
+              - listitem [ref=f69e325]:
+                - text: Under
+                - strong [ref=f69e326]: Blank values
+                - text: ", decide how to treat empty values."
+                - strong [ref=f69e327]: "Tip:"
+                - text: For transactional metrics, we recommend you
+                - strong [ref=f69e328]: treat blank values as zeros
+                - text: .
+                - img "blank values" [ref=f69e329]
+              - listitem [ref=f69e330]:
+                - text: Under
+                - strong [ref=f69e331]: Favourable trend
+                - text: ", choose whether you want ascending or descending values to indicate a positive trend. For example, if your metric includes sales totals, a higher (ascending) number demonstrates a positive trend but, if your metric includes cost to acquire customers, a lower (descending) number indicates a positive trend. Favourable trends are indicated by a green arrow. Unfavourable changes in metric values are indicated by a red arrow."
+                - img "favourable trend" [ref=f69e332]
+              - listitem [ref=f69e333]:
+                - text: Open the
+                - strong [ref=f69e334]: About
+                - text: panel.
+                - img "about tab" [ref=f69e335]
+              - listitem [ref=f69e336]:
+                - text: Optionally, enter a new
+                - strong [ref=f69e337]: name
+                - text: and
+                - strong [ref=f69e338]: description
+                - text: for the metric.
+                - strong [ref=f69e339]: "Note:"
+                - text: The metric was automatically named based on the measure you chose.
+              - listitem [ref=f69e340]:
+                - text: Under
+                - strong [ref=f69e341]: Metric image
+                - text: ", optionally, click"
+                - strong [ref=f69e342]: Edit image
+                - text: to change the metric’s service icon.
+                - link "Learn more here." [ref=f69e343] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726259507479-changing-metric-icons
+              - listitem [ref=f69e344]:
+                - text: Under
+                - strong [ref=f69e345]: Certification
+                - text: ", optionally, enable the"
+                - strong [ref=f69e346]: Certify this metric
+                - text: toggle.
+                - link "Learn more here." [ref=f69e347] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726271747095-certifying-metrics
+              - listitem [ref=f69e348]:
+                - text: When you’re done configuring your metric, click
+                - strong [ref=f69e349]: Save metric
+                - text: .If you added the metric from the
+                - strong [ref=f69e350]: navigation sidebar
+                - text: or from the
+                - strong [ref=f69e351]: metric catalog
+                - text: ", it’s"
+                - strong [ref=f69e352]: added to the metric catalog
+                - text: . If you added the metric from
+                - strong [ref=f69e353]: an open dashboard
+                - text: ", it’s"
+                - strong [ref=f69e354]: added to that dashboard
+                - strong [ref=f69e355]: and
+                - text: to
+                - strong [ref=f69e356]: the metric catalog
+                - text: .If, after configuring your metric, you want to edit any of its settings,
+                - link "refer to this article" [ref=f69e357] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726244977047-editing-metrics
+                - text: .
+            - heading "Frequently asked questions" [level=2] [ref=f69e358]
+            - heading "How does PowerMetrics get updated when data in my Snowflake warehouse changes?" [level=3] [ref=f69e359]
+            - paragraph [ref=f69e360]: Data in your Snowflake warehouse naturally evolves over time as new data is added or old data is revised.
+            - paragraph [ref=f69e361]: Queries to Snowflake are cached in PowerMetrics for 24 hours, by default. Note that table metadata is also cached. If you add a new table to Snowflake, you’ll need to clear the cache to create a metric using the new data.
+            - paragraph [ref=f69e362]: "There are a few options for managing the cache:"
+            - list [ref=f69e363]:
+              - listitem [ref=f69e364]:
+                - link "Automatically with a webhook (recommended)" [ref=f69e365] [cursor=pointer]:
+                  - /url: "#webhook"
+              - listitem [ref=f69e366]:
+                - link "Using a cache expiration strategy" [ref=f69e367] [cursor=pointer]:
+                  - /url: "#TTL"
+              - listitem [ref=f69e368]:
+                - link "Manually at any time" [ref=f69e369] [cursor=pointer]:
+                  - /url: "#manually"
+            - heading "Automatically clearing the cache with a webhook (recommended)" [level=4] [ref=f69e370]
+            - paragraph [ref=f69e371]: To automatically align data in your warehouse with metric data in PowerMetrics, clear the cache using a webhook. The webhook notifies PowerMetrics when there are changes in the Snowflake data that’s associated with the connected account.
+            - paragraph [ref=f69e372]: When the webhook is called the cache is cleared, the UI is notified about the changes, and up-to-date data is automatically shown.
+            - paragraph [ref=f69e373]:
+              - strong [ref=f69e374]: "Calling the Clear Cache Webhook Endpoint:"
+            - list [ref=f69e375]:
+              - listitem [ref=f69e376]:
+                - strong [ref=f69e377]: "Method:"
+                - text: POST the webhook url displayed in the account connection dialog to clear the cache for that account connection.
+              - listitem [ref=f69e378]:
+                - strong [ref=f69e379]: "Description:"
+                - text: This endpoint enables you to clear the cache used for query responses and metadata. When triggered, this endpoint invalidates all cached data.
+              - listitem [ref=f69e380]:
+                - strong [ref=f69e381]: "Request Body:"
+                - text: No request body is required. The endpoint will respond with a success message upon receipt of a valid POST request.
+            - paragraph [ref=f69e382]:
+              - strong [ref=f69e383]: "Note:"
+              - text: This endpoint is useful for managing cache freshness and ensuring you always receive up-to-date query results, however, excessive use may have performance implications. To clear the cache only when necessary and to keep your data in PowerMetrics current, we recommend adding a step to the data ingestion pipeline for the webhook to be called immediately after data is updated.
+            - paragraph [ref=f69e384]: "Finding the Webhook URL within your Snowflake account connection:"
+            - list [ref=f69e385]:
+              - listitem [ref=f69e386]:
+                - text: In the left navigation sidebar, click the + button beside
+                - strong [ref=f69e387]: Metrics
+                - text: ">"
+                - strong [ref=f69e388]: See all services
+                - text: ", and select"
+                - strong [ref=f69e389]: Snowflake
+                - text: .
+              - listitem [ref=f69e390]:
+                - strong [ref=f69e391]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e392]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e393]
+              - listitem [ref=f69e394]:
+                - text: Click the
+                - strong [ref=f69e395]: 3-dot menu
+                - text: for the desired account connection and select
+                - strong [ref=f69e396]: Edit
+                - text: . (See below.)
+                - img "edit" [ref=f69e397]
+              - listitem [ref=f69e398]:
+                - text: The webhook displays near the bottom of the window. Click the
+                - strong [ref=f69e399]: Copy
+                - text: button and paste it into a text document. (See below.)
+                - img "copy webhook URL" [ref=f69e400]
+              - listitem [ref=f69e401]:
+                - text: Click
+                - strong [ref=f69e402]: X
+                - text: to close the window.
+            - heading "Using a cache expiration strategy" [level=4] [ref=f69e403]
+            - paragraph [ref=f69e404]: If you’re not able to set up a webhook, you can manage the cache by selecting a TTL value. Your selection determines the maximum time for individual queries to exist in the cache.
+            - paragraph [ref=f69e405]:
+              - strong [ref=f69e406]: "Note:"
+            - list [ref=f69e407]:
+              - listitem [ref=f69e408]: The PowerMetrics UI will not update automatically when queries expire from the cache. After an item is removed from the cache, the latest data will be obtained and cached only after a user interaction causes that item to be re-queried, for example, by refreshing the browser.
+              - listitem [ref=f69e409]: A shorter TTL can provide more up-to-date data but increases the number of queries sent to the data warehouse service and may reduce performance.
+            - paragraph [ref=f69e410]: You can select the TTL value when creating an account connection or when editing one (as described below).
+            - paragraph [ref=f69e411]: "To select the TTL value:"
+            - list [ref=f69e412]:
+              - listitem [ref=f69e413]:
+                - text: In the left navigation sidebar, click the
+                - strong [ref=f69e414]: +
+                - text: button beside
+                - strong [ref=f69e415]: Metrics
+                - text: ">"
+                - strong [ref=f69e416]: See all services
+                - text: ", and select"
+                - strong [ref=f69e417]: Snowflake
+                - text: .
+              - listitem [ref=f69e418]:
+                - strong [ref=f69e419]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e420]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e421]
+              - listitem [ref=f69e422]:
+                - text: Click the
+                - strong [ref=f69e423]: 3-dot menu
+                - text: for the desired account connection and select
+                - strong [ref=f69e424]: Edit
+                - text: . (See below.)
+                - img "edit" [ref=f69e425]
+              - listitem [ref=f69e426]:
+                - text: In the
+                - strong [ref=f69e427]: Cache management
+                - text: dialog, under
+                - strong [ref=f69e428]: Cache expiry
+                - text: ", use the drop-down to select the TTL value. (See below.)"
+                - img "edit cache settings" [ref=f69e429]
+                - strong [ref=f69e430]: "Note:"
+                - text: To see updated data after the cache has been cleared, refresh the page.
+              - listitem [ref=f69e431]:
+                - text: Click
+                - strong [ref=f69e432]: Save
+                - text: .
+            - heading "Manually clearing the cache" [level=4] [ref=f69e433]
+            - paragraph [ref=f69e434]:
+              - text: At any time, you can manually clear the cache for an account connection.
+              - strong [ref=f69e435]: "Note:"
+              - text: The more often you clear the cache, the more queries that will be sent to Snowflake.
+            - paragraph [ref=f69e436]: "To manually clear the cache:"
+            - list [ref=f69e437]:
+              - listitem [ref=f69e438]:
+                - text: In the left navigation sidebar, click the
+                - strong [ref=f69e439]: +
+                - text: button beside
+                - strong [ref=f69e440]: Metrics
+                - text: ">"
+                - strong [ref=f69e441]: See all services
+                - text: ", and select"
+                - strong [ref=f69e442]: Snowflake
+                - text: .
+              - listitem [ref=f69e443]:
+                - strong [ref=f69e444]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e445]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e446]
+              - listitem [ref=f69e447]:
+                - text: Click the
+                - strong [ref=f69e448]: 3-dot menu
+                - text: for the desired account connection and select
+                - strong [ref=f69e449]: Clear cache
+                - text: (as shown below).
+                - img "clear cache" [ref=f69e450]
+                - strong [ref=f69e451]: "Note:"
+                - text: To see updated data after the cache has been cleared, refresh the page.
+              - listitem [ref=f69e452]:
+                - text: Click
+                - strong [ref=f69e453]: X
+                - text: to close the window.
+                - strong [ref=f69e454]: "Note:"
+                - text: You can also manually clear the cache from an
+                - strong [ref=f69e455]: open metric
+                - text: ", in"
+                - strong [ref=f69e456]: edit mode
+                - text: ", by clicking the"
+                - strong [ref=f69e457]: 3-dot menu
+                - text: beside
+                - strong [ref=f69e458]: Data source
+                - text: and selecting
+                - strong [ref=f69e459]: Clear cache
+                - text: . This action clears the cache for all metrics associated with the account connection. (See below.)
+                - img "clear cache" [ref=f69e460]
+            - heading "How do I edit the settings for an account connection?" [level=3] [ref=f69e461]
+            - paragraph [ref=f69e462]: After creating an account connection, you can modify its settings, for example, the user name, password, and display name.
+            - heading "To edit the settings for an account connection:" [level=4] [ref=f69e463]
+            - list [ref=f69e464]:
+              - listitem [ref=f69e465]:
+                - text: In the left navigation sidebar, click the
+                - strong [ref=f69e466]: +
+                - text: button beside
+                - strong [ref=f69e467]: Metrics
+                - text: ">"
+                - strong [ref=f69e468]: See all services
+                - text: ", and select"
+                - strong [ref=f69e469]: Snowflake
+                - text: .
+              - listitem [ref=f69e470]:
+                - strong [ref=f69e471]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e472]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e473]
+              - listitem [ref=f69e474]:
+                - text: Click the
+                - strong [ref=f69e475]: 3-dot menu
+                - text: for the desired account connection and select
+                - strong [ref=f69e476]: Edit
+                - text: .
+              - listitem [ref=f69e477]:
+                - strong [ref=f69e478]: Modify account settings
+                - text: as desired and click
+                - strong [ref=f69e479]: Save
+                - text: .
+            - heading "How do I share an account connection?" [level=3] [ref=f69e480]
+            - paragraph [ref=f69e481]: Sharing an account connection enables other editor users to use the connection to query data in Snowflake and create metrics in PowerMetrics. It does not give sharing, editing, or deleting access to the account connection - only the creator of the account connection can perform these actions.
+            - paragraph [ref=f69e482]: Usually, you share an account connection while creating it (the first time you connect to Snowflake), however, you can also share it later, as described below.
+            - paragraph [ref=f69e483]:
+              - strong [ref=f69e484]: "Note:"
+              - text: To share a Snowflake metric with others and give them full editing access (including to the data settings), you must
+              - link "share the metric" [ref=f69e485] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726246265623-sharing-metrics
+              - strong [ref=f69e486]: and
+              - text: the account connection that was used to create the metric.
+            - heading "To share an account connection:" [level=4] [ref=f69e487]
+            - list [ref=f69e488]:
+              - listitem [ref=f69e489]:
+                - text: In the left navigation sidebar, click the
+                - strong [ref=f69e490]: +
+                - text: button beside
+                - strong [ref=f69e491]: Metrics
+                - text: ">"
+                - strong [ref=f69e492]: See all services
+                - text: ", and select"
+                - strong [ref=f69e493]: Snowflake
+                - text: .
+              - listitem [ref=f69e494]:
+                - strong [ref=f69e495]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e496]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e497]
+              - listitem [ref=f69e498]:
+                - text: Click the
+                - strong [ref=f69e499]: 3-dot menu
+                - text: for the account connection you want to share and select
+                - strong [ref=f69e500]: Edit
+                - text: .
+              - listitem [ref=f69e501]:
+                - text: Enable the
+                - strong [ref=f69e502]: Share account connection with editor users
+                - text: toggle. (See below.)
+                - img "share account connection" [ref=f69e503]
+              - listitem [ref=f69e504]:
+                - text: Click
+                - strong [ref=f69e505]: Save
+                - text: .
+            - heading "How do I switch to use a different account connection?" [level=3] [ref=f69e506]
+            - paragraph [ref=f69e507]: You can change the account a metric is associated with by switching it to use a different, existing connection or a new connection.
+            - heading "To switch the account connection for a metric:" [level=4] [ref=f69e508]
+            - list [ref=f69e509]:
+              - listitem [ref=f69e510]:
+                - text: In the left navigation sidebar, click
+                - strong [ref=f69e511]: Metrics
+                - text: to open the metric catalog.
+              - listitem [ref=f69e512]:
+                - text: Select the desired
+                - strong [ref=f69e513]: Snowflake metric
+                - text: . The metric’s overview page opens in view mode.
+              - listitem [ref=f69e514]:
+                - text: Click the
+                - strong [ref=f69e515]: Edit
+                - text: button at the top of the page, then click the
+                - strong [ref=f69e516]: Data tab
+                - text: .
+              - listitem [ref=f69e517]:
+                - text: At
+                - strong [ref=f69e518]: Data source
+                - text: ", click the"
+                - strong [ref=f69e519]: 3-dot menu
+                - text: and select
+                - strong [ref=f69e520]: Change account
+                - text: . (See below.)
+                - img "switch account connection" [ref=f69e521]
+              - listitem [ref=f69e522]:
+                - text: In the
+                - strong [ref=f69e523]: Select Snowflake account
+                - text: window, either
+                - strong [ref=f69e524]: select a different, existing account
+                - text: and click
+                - strong [ref=f69e525]: Connect
+                - text: ", or click"
+                - strong [ref=f69e526]: Add a new account
+                - text: ", fill in account settings, and click"
+                - strong [ref=f69e527]: Save
+                - text: .
+              - listitem [ref=f69e528]:
+                - text: Click
+                - strong [ref=f69e529]: Save metric
+                - text: .
+            - heading "How do I delete an account connection?" [level=3] [ref=f69e530]
+            - paragraph [ref=f69e531]: Deleting an account connection deletes it for you and for everyone in your account who has shared access to it. When you delete an account connection its associated metrics stop updating. If you want to resume updates, you can edit the metrics and apply the account connection of your choice.
+            - heading "To delete an account connection:" [level=4] [ref=f69e532]
+            - list [ref=f69e533]:
+              - listitem [ref=f69e534]:
+                - text: In the left navigation sidebar, click the
+                - strong [ref=f69e535]: +
+                - text: button beside
+                - strong [ref=f69e536]: Metrics
+                - text: ">"
+                - strong [ref=f69e537]: See all services
+                - text: ", and select"
+                - strong [ref=f69e538]: Snowflake
+                - text: .
+              - listitem [ref=f69e539]:
+                - strong [ref=f69e540]: Open the account connection dialog
+                - text: by clicking the field under
+                - strong [ref=f69e541]: Data source
+                - text: (as shown below).
+                - img "account connection" [ref=f69e542]
+              - listitem [ref=f69e543]:
+                - text: Click the
+                - strong [ref=f69e544]: 3-dot menu
+                - text: for the account connection you want to delete and click
+                - strong [ref=f69e545]: Delete
+                - text: .
+              - listitem [ref=f69e546]:
+                - text: Click
+                - strong [ref=f69e547]: Delete
+                - text: again to confirm.
+            - heading "How do I change a metric’s data source?" [level=3] [ref=f69e548]
+            - paragraph [ref=f69e549]: PowerMetrics makes transitioning metric data within your stack possible by enabling you to reconfigure metrics to use different data sources.
+            - paragraph [ref=f69e550]: After connecting to data in a Snowflake warehouse and configuring metrics in PowerMetrics, if your data management needs change, you can switch to a different data source for any or all of your metrics – all without affecting existing metric visualizations, dashboards, goals, or sharing rights.
+            - paragraph [ref=f69e551]:
+              - link "Learn more about changing metric data sources." [ref=f69e552] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726227313431-changing-a-metrics-data-source
+            - heading "To change a metric’s data source:" [level=4] [ref=f69e553]
+            - list [ref=f69e554]:
+              - listitem [ref=f69e555]:
+                - text: In the left navigation sidebar, click
+                - strong [ref=f69e556]: Metrics
+                - text: to open your metric catalog.
+              - listitem [ref=f69e557]:
+                - text: Select the desired
+                - strong [ref=f69e558]: Snowflake metric
+                - text: . The metric’s overview page opens in view mode.
+              - listitem [ref=f69e559]:
+                - text: Click the
+                - strong [ref=f69e560]: Edit
+                - text: button at the top of the page, then click the
+                - strong [ref=f69e561]: Data
+                - text: tab.
+              - listitem [ref=f69e562]:
+                - text: At
+                - strong [ref=f69e563]: Data source
+                - text: ", click the"
+                - strong [ref=f69e564]: 3-dot menu
+                - text: and select
+                - strong [ref=f69e565]: Change data source
+                - text: ">"
+                - strong [ref=f69e566]: See all services
+                - text: . (See below.)
+                - img "change data source" [ref=f69e567]
+                - strong [ref=f69e568]: "Note:"
+                - text: If you already have data feeds in your account, you’ll also see the option to “Select a data feed”. This is a quick way to open your list of data feeds (if you want to change to a data feed data source).
+              - listitem [ref=f69e569]:
+                - strong [ref=f69e570]: Connect to your data and configure the metric.
+                - text: "To access detailed connection and configuration instructions by service, see these sections in our Knowledge Base:"
+                - link "Creating data warehouse metrics" [ref=f69e571] [cursor=pointer]:
+                  - /url: https://support.klipfolio.com/hc/en-us/sections/24133886242199-Creating-Direct-to-Warehouse-Metrics
+                - text: ","
+                - link "Creating data feed metrics" [ref=f69e572] [cursor=pointer]:
+                  - /url: https://support.klipfolio.com/hc/en-us/sections/1500002970981-Creating-Data-Feed-Metrics
+                - text: ", and"
+                - link "Creating semantic layer metrics" [ref=f69e573] [cursor=pointer]:
+                  - /url: https://support.klipfolio.com/hc/en-us/sections/24134276059159-Creating-Semantic-Layer-Metrics
+                - text: .
+                - strong [ref=f69e574]: "Note:"
+                - text: When possible, PowerMetrics refers to the previously-used configuration settings to auto-fill the metric’s properties (measure, dimensions, etc.). Our ability to do so depends on the data source. Sometimes, you’ll need to reselect some or all of the metric’s configuration settings.
+                - strong [ref=f69e575]: "Note:"
+                - text: Under
+                - strong [ref=f69e576]: Dimensions
+                - text: ", if you see the following note, it means one or more dimensions from the pre-existing data source are not available in the new data source. This is often due to the dimensions being named differently. To see a list of the previously used dimensions, click the “See missing dimensions link.”"
+                - strong [ref=f69e577]: "Note:"
+                - text: If you click
+                - strong [ref=f69e578]: X
+                - text: to close this window or you save the metric, the list of missing dimensions will no longer be available.
+                - img "missing dimensions list" [ref=f69e579]
+                - strong [ref=f69e580]: "Note:"
+                - text: If a dimension's name has changed, in the list under "Dimensions", remap it to point to the previously used column by selecting the new name and typing over it with the column's original name.
+              - listitem [ref=f69e581]:
+                - text: When the metric settings have been selected, click
+                - strong [ref=f69e582]: Save metric
+                - text: .
+            - heading "How do I access the SQL queries generated by PowerMetrics for a metric visualization?" [level=3] [ref=f69e583]
+            - paragraph [ref=f69e584]: When debugging and troubleshooting it can be helpful to investigate the SQL queries for metric visualizations.
+            - paragraph [ref=f69e585]: You can view (and, optionally, copy) queries for a metric visualization in the metric’s overview page, on a dashboard, or in Explorer.
+            - paragraph [ref=f69e586]:
+              - strong [ref=f69e587]: "Note:"
+              - text: Only the owner of the associated Snowflake account connection can access these queries.
+            - heading "To view queries for metric visualizations in a metric overview page:" [level=4] [ref=f69e588]
+            - list [ref=f69e589]:
+              - listitem [ref=f69e590]:
+                - text: In the left navigation sidebar, click
+                - strong [ref=f69e591]: Metrics
+                - text: to open the metric catalog.
+              - listitem [ref=f69e592]: Click the metric you want to investigate.
+              - listitem [ref=f69e593]:
+                - text: Click the
+                - strong [ref=f69e594]: 3-dot menu
+                - text: for a metric visualization in the overview and select
+                - strong [ref=f69e595]: View queries
+                - text: . (See below.)
+                - img "view queries" [ref=f69e596]
+                - strong [ref=f69e597]: "Note:"
+                - text: The overview displays a set of visualizations for a single metric. As different views of the same metric, they all use the same queries. As a result, you can view queries by clicking the 3-dot menu for any of the data visualizations on this page.
+              - listitem [ref=f69e598]:
+                - text: Under
+                - strong [ref=f69e599]: Queries
+                - text: ", view the query and, optionally, click the"
+                - strong [ref=f69e600]: Copy
+                - text: button to assist with further investigation.
+                - strong [ref=f69e601]: "Note:"
+                - text: If an error occurs when the queries are being run, an error message will display here.
+              - listitem [ref=f69e602]:
+                - text: When you’re done, click
+                - strong [ref=f69e603]: Close
+                - text: .
+            - heading "To view queries for metric visualizations on a dashboard:" [level=4] [ref=f69e604]
+            - list [ref=f69e605]:
+              - listitem [ref=f69e606]:
+                - text: In the left navigation sidebar, click
+                - strong [ref=f69e607]: Dashboards
+                - text: to open the list of dashboards.
+              - listitem [ref=f69e608]: Select the dashboard that contains the metric(s) you want to investigate.
+              - listitem [ref=f69e609]:
+                - text: Click the
+                - strong [ref=f69e610]: 3-dot menu
+                - text: for the metric visualization on the dashboard and select
+                - strong [ref=f69e611]: View queries
+                - text: .
+              - listitem [ref=f69e612]:
+                - text: Under
+                - strong [ref=f69e613]: Queries
+                - text: ", view the query and, optionally, click the"
+                - strong [ref=f69e614]: Copy
+                - text: button to assist with further investigation.
+                - img "Snowflake query" [ref=f69e615]
+                - strong [ref=f69e616]: "Note:"
+                - text: If an error occurs when the queries are being run, an error message will display here.
+              - listitem [ref=f69e617]:
+                - text: When you’re done, click
+                - strong [ref=f69e618]: Close
+                - text: .
+            - heading "To view queries in Explorer:" [level=4] [ref=f69e619]
+            - list [ref=f69e620]:
+              - listitem [ref=f69e621]:
+                - text: In the left navigation sidebar, click
+                - strong [ref=f69e622]: Explorer
+                - text: .If you haven’t added any metrics yet to Explorer,
+                - link "go here to learn how" [ref=f69e623] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726226712599-analyzing-your-metrics-in-explorer
+                - text: .
+              - listitem [ref=f69e624]:
+                - text: Either click the
+                - strong [ref=f69e625]: View queries
+                - text: button or the
+                - strong [ref=f69e626]: 3-dot menu
+                - text: in the upper-right corner of the window and select
+                - strong [ref=f69e627]: View queries
+                - text: from the drop-down list. (See below.)
+                - img "view queries button" [ref=f69e628]
+              - listitem [ref=f69e629]:
+                - text: Under
+                - strong [ref=f69e630]: Queries
+                - text: ", view the query and, optionally, click the"
+                - strong [ref=f69e631]: Copy
+                - text: button to assist with further investigation.
+                - strong [ref=f69e632]: "Note:"
+                - text: If an error occurs when the queries are being run, an error message will display here.
+              - listitem [ref=f69e633]:
+                - text: When you’re done, click
+                - strong [ref=f69e634]: Close
+                - text: .
+            - heading "Why are users getting an error when applying weekly periodicity to Snowflake metric visualizations?" [level=3] [ref=f69e635]
+            - paragraph [ref=f69e636]: First day of week settings for Snowflake metrics are configured in the Snowflake warehouse. If this setting doesn’t match the one being used in PowerMetrics, and users apply a weekly periodicity or weekly time range (for example, “last week”) to their metric visualizations in the metric overview page, metric catalog, or dashboard, they’ll get an error.
+            - paragraph [ref=f69e637]:
+              - text: To fix this issue, modify the first day of week settings in PowerMetrics to match the one being used in your Snowflake warehouse.
+              - link "Learn how here." [ref=f69e638] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/en-us/articles/37726177661847-powermetrics-modifying-the-first-day-of-the-week
+            - heading "Related articles" [level=3] [ref=f69e639]
+            - list [ref=f69e640]:
+              - listitem [ref=f69e641]:
+                - link "Tips for improving query performance" [ref=f69e642] [cursor=pointer]:
+                  - /url: https://support.powermetrics.app/hc/en-us/articles/37726204010391-data-warehouse-metrics-tips-for-improving-query-performance
+          - generic [ref=f69e643]:
+            - generic [ref=f69e645]:
+              - text: Have more questions?
+              - link "Submit a request" [ref=f69e646] [cursor=pointer]:
+                - /url: /hc/en-us/requests/new
+            - link "Return to top" [ref=f69e648] [cursor=pointer]:
+              - /url: "#article-container"
+          - generic [ref=f69e651]:
+            - generic [ref=f69e652]:
+              - heading "Recently viewed articles" [level=2] [ref=f69e653]
+              - list [ref=f69e654]:
+                - listitem [ref=f69e655]:
+                  - link "How do I view and personalize metrics? The metric overview" [ref=f69e656] [cursor=pointer]:
+                    - /url: /hc/en-us/articles/37726220561559-How-do-I-view-and-personalize-metrics-The-metric-overview
+            - generic [ref=f69e657]:
+              - heading "Related articles" [level=2] [ref=f69e658]
+              - list [ref=f69e659]:
+                - listitem [ref=f69e660]:
+                  - link "How do I create Databricks metrics?" [ref=f69e661] [cursor=pointer]:
+                    - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBcxINJPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJeEgNJPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJJL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjIzMDg1ODQ3LUhvdy1kby1JLWNyZWF0ZS1EYXRhYnJpY2tzLW1ldHJpY3MGOwhUOglyYW5raQY%3D--b2c1d183dca66a8e1bd06456e1ce87375948a14a
+                - listitem [ref=f69e662]:
+                  - link "How do I create Snowflake data feed metrics?" [ref=f69e663] [cursor=pointer]:
+                    - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBcD%2B9BPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJeEgNJPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJSL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjAzODcyMDIzLUhvdy1kby1JLWNyZWF0ZS1Tbm93Zmxha2UtZGF0YS1mZWVkLW1ldHJpY3MGOwhUOglyYW5raQc%3D--92f8673d30d74ef2de31351736e5157f33b04bcc
+                - listitem [ref=f69e664]:
+                  - link "How do I add dbt Semantic Layer metrics to my PowerMetrics account?" [ref=f69e665] [cursor=pointer]:
+                    - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBcaftFPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJeEgNJPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJpL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjEyNDYzMTI3LUhvdy1kby1JLWFkZC1kYnQtU2VtYW50aWMtTGF5ZXItbWV0cmljcy10by1teS1Qb3dlck1ldHJpY3MtYWNjb3VudAY7CFQ6CXJhbmtpCA%3D%3D--3f89ab95c9cfc54a9cbe0f73ec5debc95265ec36
+                - listitem [ref=f69e666]:
+                  - link "How do I create Cube metrics?" [ref=f69e667] [cursor=pointer]:
+                    - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJcdXNNPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJeEgNJPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJDL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjQzNzkwMjMxLUhvdy1kby1JLWNyZWF0ZS1DdWJlLW1ldHJpY3MGOwhUOglyYW5raQk%3D--9066931efc1f3ef209c00c5b744812e69e74778c
+                - listitem [ref=f69e668]:
+                  - link "How do I create Shopify metrics?" [ref=f69e669] [cursor=pointer]:
+                    - /url: /hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJdIHtRPIjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCJeEgNJPIjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJGL2hjL2VuLXVzL2FydGljbGVzLzM3NzI2MjU2NTE1MjIzLUhvdy1kby1JLWNyZWF0ZS1TaG9waWZ5LW1ldHJpY3MGOwhUOglyYW5raQo%3D--a67db551aa78f566984d7f67c397c59bae6677df
+  - contentinfo [ref=f69e670]:
+    - generic "Help centre footer links" [ref=f69e672]:
+      - generic [ref=f69e673]:
+        - generic [ref=f69e674]:
+          - heading "Get help" [level=3] [ref=f69e675]
+          - list [ref=f69e676]:
+            - listitem [ref=f69e677]:
+              - link "Help Centre" [ref=f69e678] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/
+            - listitem [ref=f69e679]:
+              - link "Submit a ticket" [ref=f69e680] [cursor=pointer]:
+                - /url: https://support.powermetrics.app/hc/requests/new
+            - listitem [ref=f69e681]:
+              - link "Get help building" [ref=f69e682] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/services
+            - listitem [ref=f69e683]:
+              - link "Find a Partner" [ref=f69e684] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/partners
+            - listitem [ref=f69e685]:
+              - link "Book a demo" [ref=f69e686] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/demo
+            - listitem [ref=f69e687]:
+              - link "Klips Help Centre" [ref=f69e688] [cursor=pointer]:
+                - /url: https://support.klipfolio.com/hc/
+        - generic [ref=f69e689]:
+          - heading "Learn" [level=3] [ref=f69e690]
+          - list [ref=f69e691]:
+            - listitem [ref=f69e692]:
+              - link "Videos" [ref=f69e693] [cursor=pointer]:
+                - /url: https://www.youtube.com/playlist?list=PLA9s2rVJrUY19bAXw8NOwikflZ9Ll1-Mx
+            - listitem [ref=f69e694]:
+              - link "Case studies" [ref=f69e695] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/case-studies
+            - listitem [ref=f69e696]:
+              - link "Webinars" [ref=f69e697] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/webinars
+            - listitem [ref=f69e698]:
+              - link "Podcast" [ref=f69e699] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/podcast
+        - generic [ref=f69e700]:
+          - heading "Product" [level=3] [ref=f69e701]
+          - list [ref=f69e702]:
+            - listitem [ref=f69e703]:
+              - link "PowerMetrics features" [ref=f69e704] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/
+            - listitem [ref=f69e705]:
+              - link "Dashboard templates" [ref=f69e706] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/dashboard-templates
+            - listitem [ref=f69e707]:
+              - link "Integrations" [ref=f69e708] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/integrations
+            - listitem [ref=f69e709]:
+              - link "Semantic layer" [ref=f69e710] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/integrations/semantic-layer
+            - listitem [ref=f69e711]:
+              - link "What’s new" [ref=f69e712] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/whats-new
+            - listitem [ref=f69e713]:
+              - link "Pricing" [ref=f69e714] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/pricing
+        - generic [ref=f69e715]:
+          - heading "More" [level=3] [ref=f69e716]
+          - list [ref=f69e717]:
+            - listitem [ref=f69e718]:
+              - link "About" [ref=f69e719] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/about
+            - listitem [ref=f69e720]:
+              - link "News" [ref=f69e721] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/news
+            - listitem [ref=f69e722]:
+              - link "Blog" [ref=f69e723] [cursor=pointer]:
+                - /url: https://www.powermetrics.app/blog
+            - listitem [ref=f69e724]:
+              - link "MetricHQ" [ref=f69e725] [cursor=pointer]:
+                - /url: https://www.metrichq.org/
+      - generic [ref=f69e727]:
+        - generic [ref=f69e728]:
+          - link [ref=f69e729] [cursor=pointer]:
+            - /url: https://www.powermetrics.app
+            - img "Klipfolio PowerMetrics" [ref=f69e730]
+          - generic [ref=f69e731]:
+            - text: © 2026 Klipfolio Inc. All rights reserved.
+            - link "More legal stuff." [ref=f69e732] [cursor=pointer]:
+              - /url: https://www.powermetrics.app/legal
+        - generic [ref=f69e733]: Made in Canada
