@@ -102,6 +102,71 @@ These two are visible rather than hidden, and each names how it gets closed. A j
 
 ---
 
+## The matrix
+
+Importance does not exist as a ready number anywhere in the research, so **every cell below is inferred** and names the signal it stands on. Two markers are used and they mean different things: `-` means this is structurally not that persona's job, `[?]` means there is no signal to judge it by.
+
+| Job | P1 reader (primary) | P2 analyst | Signal the score stands on |
+| --- | --- | --- | --- |
+| **Main**, judge a number before standing behind it | **3** | `[?]` | P1: their arrival trigger is exposure, and the whole benchmark dimension plus the riskiest assumption sit on this job. P2: the research says nothing about how an analyst judges somebody else's number |
+| **R1**, who is answerable | **3** | 1 | P1: attribution scores 3 or below in all five benchmark products, and the market's own model of doubt carries an assignee. P2: they usually **are** the answerable person |
+| **R2**, answer once | `-` | **3** | P2: interruption frequency from the brief `[?]`, plus the structural fact that the last mile is delegated |
+| **R3**, the correction travels | 2 | **3** | P1 receives the change, P2 sends it. Signal: the state "definition changed after this was saved" is in MVP scope |
+| **R4**, the old number does not travel as new | **3** `[?]` | 1 | The retention mechanic and benchmark criterion 8, no false calm. But **the job itself is a hypothesis**, so its importance is inferred from a mechanism we invented |
+| **R5**, the definition stops living in a head | `-` | **3** | The metric as a first-class object is a real product shape in the market, and this is our activation |
+
+Emotional and social jobs are not scored here. Their importance would be a guess placed on top of a `[?]`, which is not an estimate.
+
+| Job | FUNCTION, from the inventory | COMPETITORS |
+| --- | --- | --- |
+| Main | The number card carrying provenance, freshness, state and a name on the claim | **Not closed.** Provenance exists everywhere and is a destination in all of it (`competitors.md`) |
+| R1 | Attribution on the claim: who declared it and when | **Not closed.** PowerMetrics names a person only when certification is removed |
+| R2 | Registry with definition and owner, one permanent URL, readable with no account | **Partly.** The write-once half is closed by dbt, Atlan and Secoda. The keeps-answering-to-a-reader half is not |
+| R3 | The state "definition changed after this was saved" | **Partly** `[?]`. dbt has health states, but nothing in the set carries the semantics of "changed since you saved it" |
+| R4 | One permanent URL plus that same state met on re-reading | **Not closed.** Nothing in the set attaches to a saved reading |
+| R5 | Registry with definition and owner | **Closed by the market.** This is exactly what Atlan, dbt and PowerMetrics sell |
+
+**One hole visible only from this table.** R3's function exists in the pull direction only: the card will say the definition changed when somebody opens it. There is nothing to push, because notification routing is deliberately out of MVP (`CLAUDE.md`). Half of that job is therefore unserved by design, and it is the same root that made retention the weakest stage in the funnel.
+
+---
+
+## Conclusion 1: the MVP core, derived from the matrix
+
+**Two jobs qualify honestly, not three, and the third is not padded with invented importance.**
+
+1. **The main job.** P1 importance 3, not closed by the market. The cell that justifies it: provenance is a destination in all fifteen products, so the need to tell whether a number can be trusted **where it is read** is served by nobody.
+2. **R1, who is answerable.** P1 importance 3, not closed by the market. The cell that justifies it: attribution scores 3 or below across all five benchmark products while several score 5 on freshness, so the market has proved the habit of showing age and has not proved the habit of showing who is accountable.
+
+**A third, conditional: R4.** It qualifies on both columns, but its own importance is `[?]` because the job itself is a hypothesis: there is no evidence that anyone reopens a saved link. It is recorded as conditional, and the condition is explicit. If follow-up research or the first cohort shows that saved numbers are not revisited, R4 leaves the core and the retention mechanic leaves with it.
+
+**Why the rest are outside the core.**
+
+- **R2** matters to the secondary persona and is **discharged by the main job succeeding**, so it does not need its own place in the core.
+- **R3** scores only 2 for the primary persona and is the sending side of the same event as R4.
+- **R5 is closed by the market.** The product needs it, since with no registry there is nothing to read, but the core is what we have to win on, not what we have to have. That distinction is kept explicit because 03a uses it to order screens.
+
+---
+
+## Conclusion 2: orphan features, a separate cross-check
+
+Different input from the matrix, as required: the inventory is the Solutions block in `lean-ux-canvas.md` plus the rough MVP scope in `CLAUDE.md`. No feature outside that inventory is invented here.
+
+| Feature in the inventory | Maps to |
+| --- | --- |
+| One data source connection | The main job, as a **precondition**: without a source there is no number with an age |
+| Metric registry with definition and owner | R5, R2 |
+| Number card with provenance | Main |
+| Freshness and breakage states | Main, R3, R4 |
+| Search and jump to a metric by name | R2, R5. This is the analyst's route; the reader arrives by link |
+| Named states instead of one alarm | Main |
+| Attribution on every definition | R1 |
+
+**There is not one orphan in the mandated inventory.** That is a clean result and it says something: the scope set at stage 01 was assembled around work people do rather than around ideas.
+
+**Two orphans do exist just outside it, and they are reported separately because this cross-check was not mandated.** `aarrr.md` carries two product decisions that map to no job at all: a reader inviting another reader in one action, and the public page rendering the real card component. Both serve a business outcome, readers per seat and an acquisition channel, rather than a person's progress. That is not a reason to cut them. It is a reason to name them for what they are, growth mechanics with no job underneath. If they start demanding screens at 03a on equal footing with jobs, this line is the only thing that will hold the priority.
+
+---
+
 ## What this file hands forward
 
 - **The main job** is read by CJM step 1, which takes the focus of one primary persona times one main job, and by 03a steps 1 to 5, where a screen without a job is an orphan.
