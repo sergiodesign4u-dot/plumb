@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plumb - design pipeline</title>
+<meta name="description" content="Plumb, a metric trust tool for B2B teams. Entry point to every stage of the design pipeline.">
+<link rel="stylesheet" href="_nav.css">
+<style>
+  :root{
+    --ground:#fcfcfa; --ink:#14161a; --accent:#1f5c4e; --muted:#6b7076;
+    --rule:#e3e1dc; --rule-strong:#c9c6bf;
+    --serif:"Iowan Old Style","Charter","Georgia","Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--ground); color:var(--ink);
+        font-family:var(--serif); font-size:17px; line-height:1.62; }
+  .shell{ display:flex; flex-direction:column; }
+  .nav-shell{ padding:14px 18px; border-bottom:1px solid var(--rule); }
+  .nav-shell > summary{ font-family:var(--sans); font-size:11px; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--muted); cursor:pointer; list-style:none;
+      display:flex; align-items:center; gap:8px; }
+  .nav-shell > summary::-webkit-details-marker{ display:none; }
+  .nav-shell > summary::after{ content:'\25be'; margin-left:auto; font-size:13px; }
+  .nav-shell[open] > summary::after{ content:'\25b4'; }
+  #sidebar{ padding-top:16px; }
+  .main{ min-width:0; padding:0 18px 96px; }
+  @media (min-width:900px){
+    .shell{ flex-direction:row; align-items:flex-start; }
+    .nav-shell{ position:sticky; top:0; max-height:100vh; overflow-y:auto;
+                flex:0 0 calc(var(--nav-w) + 40px); padding:32px 20px;
+                border-bottom:0; border-right:1px solid var(--rule); }
+    .nav-shell > summary{ display:none; }
+    #sidebar{ padding-top:0; }
+    .main{ padding:0 48px 120px; max-width:900px; }
+  }
+  .kicker{ font-family:var(--sans); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+           color:var(--muted); margin:40px 0 14px; }
+  h1{ font-size:2.1rem; line-height:1.15; margin:0 0 16px; font-weight:600; letter-spacing:-.01em; }
+  @media (min-width:900px){ h1{ font-size:2.75rem; } }
+  .standfirst{ max-width:64ch; margin:0 0 12px; }
+  .meta{ font-family:var(--sans); font-size:12.5px; color:var(--muted); max-width:64ch;
+         border-top:1px solid var(--rule); padding-top:14px; margin:24px 0 0; }
+  a{ color:var(--accent); text-underline-offset:2px; }
+  h2{ font-family:var(--sans); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--muted); font-weight:600; margin:56px 0 4px; }
+  ol.stages{ list-style:none; margin:0; padding:0; border-top:1px solid var(--rule-strong); }
+  ol.stages li{ display:flex; align-items:baseline; gap:14px; padding:13px 0;
+                border-bottom:1px solid var(--rule); }
+  ol.stages .n{ font-family:var(--sans); font-size:12px; color:var(--muted);
+                width:2ch; flex:0 0 2ch; font-variant-numeric:tabular-nums; }
+  ol.stages .name{ flex:1 1 auto; }
+  ol.stages .name span{ color:var(--muted); }
+  ol.stages .st{ font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase;
+                 flex:0 0 auto; color:var(--muted); }
+  ol.stages .st.done{ color:var(--accent); }
+  ol.stages .st.next{ color:#fff; background:var(--accent); padding:2px 8px; border-radius:999px; letter-spacing:.06em; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+    <p class="kicker">Plumb</p>
+    <h1>A number you can defend</h1>
+    <p class="standfirst">Plumb is a metric trust tool for B2B teams. It keeps the canonical definition of every metric in one place and shows, right next to the number, where that number came from, how fresh it is and what changed since it was last read.</p>
+    <p class="meta">This repository holds the whole design pipeline, thirteen stages. Every stage adds its documents and its own page. The list below is rendered from the same navigation registry the sidebar uses, so a stage appears here the moment it is marked done.</p>
+
+    <h2>Stages</h2>
+    <ol class="stages" id="stages"></ol>
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '';
+</script>
+<script src="_nav.js"></script>
+<script>
+  // Дозволений виняток: рендерер /_nav.js пише лише в #sidebar, тож тіло точки входу
+  // малює список саме з того самого реєстру. Другого списку статусів у проєкті немає.
+  (function(){
+    var host = document.getElementById('stages');
+    if (!host || !window.NAV) return;
+    var pagesOf = function(it){ return (it.children || [it]).filter(function(c){ return c.page; }); };
+    var next = window.NAV.filter(function(it){
+      var ps = pagesOf(it);
+      return ps.length === 0 || ps.some(function(p){ return !p.done; });
+    })[0];
+
+    window.NAV.forEach(function(item, i){
+      var ps = pagesOf(item);
+      var doneCount = ps.filter(function(p){ return p.done; }).length;
+      var fully = ps.length > 0 && doneCount === ps.length;
+      var target = ps.filter(function(p){ return p.done; })[0];
+
+      var li = document.createElement('li');
+
+      var n = document.createElement('span');
+      n.className = 'n'; n.textContent = (i + 1 < 10 ? '0' : '') + (i + 1);
+      li.appendChild(n);
+
+      var name = document.createElement('span');
+      name.className = 'name';
+      if (target) {
+        var a = document.createElement('a');
+        a.href = target.page; a.textContent = item.label;
+        name.appendChild(a);
+        if (ps.length > 1) {
+          var of = document.createElement('span');
+          of.textContent = '  ' + doneCount + ' of ' + ps.length + ' pages';
+          name.appendChild(of);
+        }
+      } else {
+        name.textContent = item.label;
+      }
+      li.appendChild(name);
+
+      var st = document.createElement('span');
+      st.className = 'st';
+      if (fully)            { st.className += ' done'; st.textContent = 'Done'; }
+      else if (doneCount)   { st.textContent = 'In progress'; }
+      else if (item === next){ st.className += ' next'; st.textContent = 'Next'; }
+      else                  { st.textContent = 'Not started'; }
+      li.appendChild(st);
+
+      host.appendChild(li);
+    });
+  })();
+</script>
+</body>
+</html>

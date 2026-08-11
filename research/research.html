@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foundation Research - Plumb</title>
+<meta name="description" content="Foundation research for Plumb: fifteen competitors, a benchmark on trust at the point of reading, strategy, funnel and the chosen UX pattern.">
+<link rel="stylesheet" href="../_nav.css">
+<style>
+  :root{
+    --ground:#fcfcfa;
+    --panel:#f6f5f1;
+    --ink:#14161a;
+    --accent:#1f5c4e;
+    --muted:#6b7076;
+    --rule:#e3e1dc;
+    --rule-strong:#c9c6bf;
+    --stale:#8a6d1f;
+    --down:#8c3b2e;
+    --changed:#2f568a;
+    --serif: "Iowan Old Style", "Charter", "Georgia", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --measure: 68ch;
+  }
+  *{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:var(--serif); font-size:17px; line-height:1.62;
+    font-kerning:normal; text-rendering:optimizeLegibility;
+  }
+
+  /* Shell: mobile first, sidebar above content; two columns from 900px */
+  .shell{ display:flex; flex-direction:column; gap:0; }
+  /* On a phone the roadmap is thirteen stages plus nine sections, which would push the
+     page itself below the fold. It collapses to one line there and is always open from 900px. */
+  .nav-shell{ padding:14px 18px; border-bottom:1px solid var(--rule); }
+  .nav-shell > summary{ font-family:var(--sans); font-size:11px; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--muted); cursor:pointer; list-style:none;
+      display:flex; align-items:center; gap:8px; }
+  .nav-shell > summary::-webkit-details-marker{ display:none; }
+  .nav-shell > summary::after{ content:'\25be'; margin-left:auto; font-size:13px; }
+  .nav-shell[open] > summary::after{ content:'\25b4'; }
+  #sidebar{ padding-top:16px; }
+  .main{ min-width:0; padding:0 18px 96px; }
+  @media (min-width:900px){
+    .shell{ flex-direction:row; align-items:flex-start; }
+    .nav-shell{ position:sticky; top:0; max-height:100vh; overflow-y:auto;
+                flex:0 0 calc(var(--nav-w) + 40px); padding:32px 20px;
+                border-bottom:0; border-right:1px solid var(--rule); }
+    .nav-shell > summary{ display:none; }
+    #sidebar{ padding-top:0; }
+    .main{ padding:0 48px 120px; }
+  }
+  @media (min-width:1280px){ .main{ padding:0 72px 140px; } }
+
+  /* Masthead */
+  .masthead{ padding:40px 0 28px; border-bottom:1px solid var(--rule-strong); margin-bottom:40px; }
+  .masthead .kicker{
+    font-family:var(--sans); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); margin:0 0 14px;
+  }
+  .masthead h1{ font-size:2.1rem; line-height:1.15; margin:0 0 14px; font-weight:600; letter-spacing:-.01em; }
+  @media (min-width:900px){ .masthead h1{ font-size:2.75rem; } }
+  .masthead .standfirst{ max-width:var(--measure); margin:0 0 20px; color:#33383e; }
+  .dateline{
+    font-family:var(--sans); font-size:12.5px; color:var(--muted);
+    display:flex; flex-wrap:wrap; gap:6px 14px; border-top:1px solid var(--rule); padding-top:14px;
+  }
+
+  /* Sections */
+  section{ scroll-margin-top:24px; padding-top:8px; }
+  .sec-head{ display:flex; align-items:baseline; gap:12px; margin:56px 0 18px;
+             padding-bottom:10px; border-bottom:1px solid var(--rule-strong); }
+  .sec-num{ font-family:var(--sans); font-size:12px; letter-spacing:.1em; color:var(--muted); }
+  .sec-head h2{ font-size:1.6rem; font-weight:600; margin:0; letter-spacing:-.01em; }
+  @media (min-width:900px){ .sec-head h2{ font-size:1.9rem; } }
+  h3{ font-size:1.12rem; font-weight:600; margin:34px 0 10px; }
+  h4{ font-family:var(--sans); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--muted); margin:28px 0 8px; font-weight:600; }
+  p{ max-width:var(--measure); margin:0 0 16px; }
+  ul,ol{ max-width:var(--measure); padding-left:20px; margin:0 0 16px; }
+  li{ margin-bottom:8px; }
+  a{ color:var(--accent); text-underline-offset:2px; text-decoration-thickness:1px; }
+  strong{ font-weight:600; }
+  code{ font-family:var(--mono); font-size:.86em; color:#3c4148; background:var(--panel);
+        padding:1px 5px; border-radius:3px; }
+  .src{ font-family:var(--sans); font-size:12.5px; color:var(--muted); }
+
+  /* Callouts */
+  .lede{ font-size:1.08rem; }
+  .pull{
+    max-width:var(--measure); margin:26px 0; padding:18px 20px;
+    background:var(--panel); border-left:3px solid var(--accent);
+  }
+  .pull p{ margin:0; }
+  .pull .label{ font-family:var(--sans); font-size:11px; letter-spacing:.12em;
+                text-transform:uppercase; color:var(--accent); display:block; margin-bottom:8px; }
+  .note{ max-width:var(--measure); font-size:.94rem; color:#3c4148;
+         border-top:1px solid var(--rule); padding-top:12px; margin-top:24px; }
+
+  /* Canvas block */
+  .canvas{ border:1px solid var(--rule-strong); background:#fff; padding:20px; margin:8px 0 12px; }
+  @media (min-width:900px){ .canvas{ padding:28px 30px; } }
+  .canvas-grid{ display:grid; gap:1px; background:var(--rule); border:1px solid var(--rule); margin-top:20px; }
+  @media (min-width:760px){ .canvas-grid{ grid-template-columns:1fr 1fr; } }
+  .cell{ background:#fff; padding:16px 18px; }
+  .cell.wide{ grid-column:1 / -1; }
+  .cell h5{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+            color:var(--muted); margin:0 0 8px; font-weight:600; }
+  .cell p, .cell ul{ font-size:.95rem; margin:0; max-width:none; }
+  .cell ul{ padding-left:18px; }
+  .cell.risk{ background:#fbf9f4; border-left:3px solid var(--stale); }
+  .cell.risk h5{ color:var(--stale); }
+
+  /* Tables */
+  .tw{ overflow-x:auto; margin:0 0 22px; -webkit-overflow-scrolling:touch; }
+  table{ border-collapse:collapse; width:100%; min-width:520px;
+         font-family:var(--sans); font-size:14px; line-height:1.45; }
+  caption{ text-align:left; font-family:var(--sans); font-size:12.5px; color:var(--muted);
+           padding-bottom:10px; }
+  th,td{ text-align:left; vertical-align:top; padding:10px 14px 10px 0; border-bottom:1px solid var(--rule); }
+  thead th{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted);
+            font-weight:600; border-bottom:1px solid var(--rule-strong); }
+  tbody tr:last-child td{ border-bottom:1px solid var(--rule-strong); }
+  td.num, th.num{ text-align:center; font-variant-numeric:tabular-nums; padding-right:0; width:64px; }
+  tr.total td{ font-weight:600; }
+  .s1,.s2{ color:#a2a6ab; }
+  .s3{ color:var(--ink); }
+  .s4{ color:#2f7a67; }
+  .s5{ color:var(--accent); font-weight:700; }
+
+  /* Hypothesis cards */
+  .cards{ display:grid; gap:14px; margin:20px 0 26px; }
+  @media (min-width:900px){ .cards{ grid-template-columns:1fr 1fr; } }
+  .card{ border:1px solid var(--rule); background:#fff; padding:18px 20px; }
+  .card.riskiest{ border-color:var(--stale); background:#fbf9f4; }
+  .card .h-id{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+               color:var(--muted); margin:0 0 12px; display:flex; justify-content:space-between; gap:10px; }
+  .card.riskiest .h-id{ color:var(--stale); }
+  .card dl{ margin:0; font-size:.95rem; }
+  .card dt{ font-family:var(--sans); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase;
+            color:var(--muted); margin-bottom:3px; }
+  .card dd{ margin:0 0 12px; }
+  .card dd:last-child{ margin-bottom:0; }
+  .card .because{ color:#3c4148; font-size:.9rem; }
+
+  /* Screens gallery */
+  .gallery{ display:flex; gap:14px; overflow-x:auto; padding:4px 0 16px; margin:0 0 8px;
+            -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity; }
+  .gallery figure{ margin:0; flex:0 0 232px; scroll-snap-align:start; }
+  @media (min-width:900px){ .gallery figure{ flex-basis:264px; } }
+  .gallery img{ width:100%; height:168px; object-fit:cover; object-position:top center;
+                border:1px solid var(--rule); background:#fff; display:block; }
+  .gallery figcaption{ font-family:var(--sans); font-size:12px; line-height:1.4;
+                       color:var(--muted); padding-top:8px; }
+  .gallery figcaption b{ color:var(--ink); font-weight:600; display:block; }
+  .gal-hint{ font-family:var(--sans); font-size:12px; color:var(--muted); margin:0 0 10px; }
+
+  /* State chips */
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 20px; padding:0; list-style:none; max-width:var(--measure); }
+  .chip{ font-family:var(--sans); font-size:12px; padding:4px 10px; border:1px solid var(--rule-strong);
+         border-radius:2px; color:var(--muted); }
+  .chip.stale{ color:var(--stale); border-color:color-mix(in srgb, var(--stale) 35%, var(--rule)); }
+  .chip.down{ color:var(--down); border-color:color-mix(in srgb, var(--down) 35%, var(--rule)); }
+  .chip.changed{ color:var(--changed); border-color:color-mix(in srgb, var(--changed) 35%, var(--rule)); }
+
+  .who{ font-family:var(--sans); font-size:11px; letter-spacing:.06em; text-transform:uppercase; }
+  .who-codex{ color:var(--changed); }
+  .who-claude{ color:var(--accent); }
+  .who-both{ color:var(--ink); font-weight:600; }
+  .withdrawn td{ color:var(--muted); }
+
+  footer.page{ margin-top:72px; padding-top:20px; border-top:1px solid var(--rule-strong);
+               font-family:var(--sans); font-size:12.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 01 &middot; Foundation Research</p>
+    <h1>What we know before anything is designed</h1>
+    <p class="standfirst lede">Fifteen competitors opened page by page, five best-in-class products from other categories scored on one dimension, a strategy sheet, a funnel and a deliberate choice of pattern. This page is the research as it stands, including the parts of it that are still assumptions.</p>
+    <div class="dateline">
+      <span>Assembled 2026-08-11</span>
+      <span>Sources cited inline, unknowns marked</span>
+      <span>Full detail in <code>research/docs/</code></span>
+    </div>
+  </header>
+
+  <!-- 1 ................................................................. -->
+  <section id="intro">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Introduction</h2></div>
+
+    <p><strong>Goal.</strong> Remove the daily friction of reconciliation, when two people arrive at a meeting with different numbers for the same thing and spend half an hour working out whose number is right. The expensive version is quieter: nobody argues, and a decision gets made on a number nobody owns.</p>
+
+    <p><strong>Problem.</strong> The definition is already owned by producer tools: dbt, Looker's LookML, Atlan's metrics layer. What nobody owns is the last mile. The number arrives in front of the person who will act on it stripped of everything that would let them judge it.</p>
+
+    <p><strong>Approach.</strong> Seven levels, from the concrete to the synthesis. Playwright first for every page, documentation used where the product sits behind a login, and no accounts created anywhere.</p>
+
+    <h3>Five findings</h3>
+
+    <ol>
+      <li><strong>Provenance exists in every product and lives nowhere near the reader.</strong> Lineage, catalog and incident are all destinations. To travel to one you must already suspect something, and the person we care about does not suspect anything yet. Strength stated exactly: shown for the five products whose documentation we opened, inferred for the other ten from positioning.</li>
+      <li><strong>Attribution on the claim is unoccupied, confirmed from two independent corpora.</strong> In the category, certification is a badge and the name appears only when it is removed. Outside the category, across five products chosen for this dimension, not one scores above 3 on attribution while several score 5 on freshness.</li>
+      <li><strong>The category changed its subject in 2026 and vacated our ground.</strong> Fourteen of the fifteen pages opened put AI or agents in the headline. <code>montecarlodata.com</code> now redirects to <code>montecarlo.ai</code> and the observability leader sells "Trust your agents in production".</li>
+      <li><strong>Nobody positions on the moment that matters.</strong> Not one of the fifteen pages mentions a phone, a meeting, or the minutes before one. How those interfaces behave at a narrow viewport stays unknown, since none can be reached without an account.</li>
+      <li><strong>There is no reader-pricing norm, only a choice.</strong> Unlimited viewers at Secoda, $20 per viewer per month at Cube, a separate Viewer license at Looker, metric caps of 50 and 200 at PowerMetrics.</li>
+    </ol>
+
+    <h3>What the research confirmed, narrowed and changed</h3>
+
+    <p><strong>Confirmed.</strong> The market names the problem in its own words. dbt writes that "inconsistent metrics, slow queries, and scattered tools can quickly erode trust". The positioning line in the brief, that Plumb is not built to visualise data but to make a number defensible, survives contact with fifteen products.</p>
+
+    <p><strong>Narrowed, and this is the most useful outcome of opening the documentation.</strong> Two of the four gaps we thought we had are partly occupied. Doubt as a vocabulary already exists: dbt runs four health states. Ownership on the claim already exists as an exception: PowerMetrics names who removed a certification. Our version of both is <strong>placement</strong>, not invention.</p>
+
+    <p><strong>Changed.</strong> Mobile-first stopped being a preference and became the measured gap. Permissions reach into provenance, which touches the free-reader model directly. Column-level lineage sits behind Enterprise at dbt, which says what depth costs. And two decisions the brief could not have anticipated: our doubt is not an incident, and we build no trust score.</p>
+  </section>
+
+  <!-- Canvas ........................................................... -->
+  <section id="canvas">
+    <div class="sec-head"><span class="sec-num">&#9632;</span><h2>Lean UX Canvas</h2></div>
+    <p class="src">Jeff Gothelf, Lean UX Canvas v2. Executive summary of the strategy below. Full sheet in <code>research/docs/lean-ux-canvas.md</code>.</p>
+
+    <div class="canvas">
+      <div class="canvas-grid">
+        <div class="cell wide">
+          <h5>1. Business problem</h5>
+          <p>Prove there is a business in owning the moment of reading, not the definition. The definition is already owned by dbt, LookML and Atlan. If there is no business in the last mile, Plumb is a feature of dbt.</p>
+        </div>
+        <div class="cell">
+          <h5>2. Business outcomes</h5>
+          <ul>
+            <li>Registry filled: 10 metrics with owner in 7 days</li>
+            <li>Readers arrive: 8 per paid seat by day 30</li>
+            <li>Habit: 35% four-week reader return</li>
+            <li>First 10 paying teams</li>
+          </ul>
+          <p class="src" style="margin-top:8px">Every target a hypothesis, every baseline unknown.</p>
+        </div>
+        <div class="cell">
+          <h5>3. Users</h5>
+          <ul>
+            <li><strong>Analyst or data lead.</strong> Primary user, and the payer</li>
+            <li><strong>Business consumer.</strong> Unpaid, underserved by the market</li>
+            <li><strong>Head of data or COO.</strong> Buyer, deliberately given no product surface</li>
+          </ul>
+        </div>
+        <div class="cell">
+          <h5>4. User outcomes and benefits</h5>
+          <p>Reader: when I am about to paste a number into a deck, I want to know in a few seconds whether it still holds, so I am not caught out in front of leadership.</p>
+          <p style="margin-top:10px">Analyst: when I am asked for the third time this week why two dashboards disagree, I want to answer once and have the answer stay answered.</p>
+        </div>
+        <div class="cell">
+          <h5>5. Solutions (MVP)</h5>
+          <ul>
+            <li>One source connection, metric registry with definition and owner</li>
+            <li>Number card carrying provenance, age and state</li>
+            <li>Named states instead of one alarm</li>
+            <li>Attribution on every definition</li>
+            <li>Not built: trust score, incident workflow</li>
+          </ul>
+        </div>
+        <div class="cell wide">
+          <h5>6. Hypotheses</h5>
+          <p>Six, in the "if / then / because" form, in section 07 below. One of them is the assumption the whole idea rests on.</p>
+        </div>
+        <div class="cell wide risk">
+          <h5>7. Riskiest assumption</h5>
+          <p><strong>A business consumer will read the number in Plumb, before they use it, instead of using the figure they already have in the dashboard, the Slack message or the deck.</strong></p>
+          <p style="margin-top:10px">A value risk, not a feasibility risk. Rendering a card next to a number is not hard. Getting a person under time pressure to check something they did not doubt is the whole bet.</p>
+        </div>
+        <div class="cell wide">
+          <h5>8. First test</h5>
+          <p>Three companies, five metrics each, static pages made by hand, no build. For two weeks the analyst answers every "why is this number different" with the link and nothing else. The signal that decides it is not the open rate: it is whether any reader stopped using a number because the card told them not to. If that never happens in two weeks, the assumption is not confirmed, whatever the open rate says.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 ................................................................. -->
+  <section id="strategy">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Strategy</h2></div>
+
+    <p>The one-sheet version is above. This is the same strategy with the reasoning attached.</p>
+
+    <h3>Audience</h3>
+    <p>Three parties, one deliberately without a product surface.</p>
+    <ul>
+      <li><strong>Analyst or data lead.</strong> Primary user and the payer. 28 to 40, company of 50 to 300, data team of 1 to 5. Interrupted several times a week by "why is this number different".</li>
+      <li><strong>Business consumer of the number.</strong> PM, marketer, finance. Unpaid, and the one the market underserves. Not our invention as a persona: Secoda names Data Consumers, Business Operations and Product Managers on its own site.</li>
+      <li><strong>Head of data or COO.</strong> Buyer, not user. Kept off the product surface so three personas do not compete for 15 to 30 screens.</li>
+    </ul>
+    <p class="note">All three descriptions come from the brief, not from observation. Ages, team sizes, interruption frequency and buyer behaviour are assumptions, and they stay unverified until stage 02 interviews people. They are here because the product was designed against them, not because they were checked.</p>
+
+    <h3>Business model</h3>
+    <p>Seat-based, analyst seats paid, readers free or near free, no cap on metric count. The reasoning is mechanical rather than generous: the value of Plumb grows with the number of people who see a number with its provenance, so charging per reader taxes our own growth mechanism, and charging per metric taxes activation.</p>
+
+    <div class="pull">
+      <span class="label">The riskiest assumption</span>
+      <p>A business consumer will read the number in Plumb, before they use it, instead of using the figure they already have in the dashboard, the Slack message or the deck.</p>
+    </div>
+
+    <p>The quiet argument that it really is the risky one: not a single product in the fifteen treats the reading surface as its own product. Either all of them missed it, or the last mile is hard to take.</p>
+  </section>
+
+  <!-- 3 ................................................................. -->
+  <section id="aarrr">
+    <div class="sec-head"><span class="sec-num">03</span><h2>AARRR</h2></div>
+
+    <p>Two structural facts shape everything in the table. <strong>The funnel has two bodies and one wallet:</strong> the analyst pays and never spreads, the reader spreads and never pays, and any metric that averages them looks healthiest exactly when the readers stop coming.</p>
+
+    <div class="pull">
+      <span class="label">The activation node</span>
+      <p><strong>The first time a metric card is opened by somebody other than the person who wrote its definition.</strong> Connecting a source, writing a definition and naming an owner are setup, not activation. The activation event and the event predicted by the riskiest assumption are the same event, so the funnel cannot read green while the strategy is wrong.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>One metric and one product decision per stage. Every target is a hypothesis, every baseline unknown.</caption>
+        <thead>
+          <tr><th>Stage</th><th>Whose funnel</th><th>The one metric</th><th class="num">Target</th><th>The one product decision</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Acquisition</td><td>Analyst</td><td>Qualified workspaces per week</td><td class="num">5/wk</td><td>The public page renders the real card component, not a picture of it</td></tr>
+          <tr><td><strong>Activation</strong></td><td><strong>Reader</strong></td><td><strong>Workspaces where a second person opens a card within 7 days</strong></td><td class="num s5">50%</td><td><strong>A card is readable through its link with no account</strong></td></tr>
+          <tr><td>Retention</td><td>Reader</td><td>Four-week reader return</td><td class="num">35%</td><td>One permanent URL per metric, and it is what copy gives you</td></tr>
+          <tr><td>Revenue</td><td>Analyst</td><td>Activated workspaces buying a seat within 30 days</td><td class="num">20%</td><td>No metric limits and no reader seat; only analyst write access is billable</td></tr>
+          <tr><td>Referral</td><td>Reader</td><td>Distinct readers per paid analyst seat, day 30</td><td class="num">8</td><td>A reader invites a reader in one action, bounded by email domain</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Four of those five targets come from nowhere and are placeholders to be replaced by the first cohort. Only the 30-day window has an external anchor, the PowerMetrics 30-day trial. A stated number can be shown wrong; an unstated one cannot, which is the whole reason they are written down.</p>
+
+    <h3>Two conclusions that cost us something</h3>
+    <p><strong>Retention is the weakest stage and our own scope cut made it so.</strong> Notification routing is out of MVP, so nothing reaches out, and the stage rests entirely on a permanent URL plus a card that has something new to say when reopened.</p>
+    <p><strong>Referral grows readers, not logos.</strong> Metrics are internal, cards travel inside a company, so the loop raises readers per seat and produces almost no new accounts. New accounts have to be earned in acquisition.</p>
+    <p><strong>One requirement this funnel puts on the IA.</strong> The retention metric can only tell "came back alone" from "was sent the link again" if the share event is recorded next to the open event. Stage 03a step 4 has to carry that into the flow of the main job, otherwise the metric silently measures the analyst instead of the reader.</p>
+  </section>
+
+  <!-- 4 ................................................................. -->
+  <section id="competitors">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Competitors</h2></div>
+
+    <p>Fifteen products in three groups, all opened 2026-08-11, public and pre-login pages only. HARD is the same product for the same audience, SOFT is a different product solving the same job, ASPIRATIONAL is a category benchmark for craft.</p>
+
+    <p class="gal-hint">Evidence, scroll sideways. Each screenshot proves a stated fact.</p>
+    <div class="gallery">
+      <figure><img src="screens/hard-powermetrics-home.png" alt="PowerMetrics homepage"><figcaption><b>PowerMetrics</b>Public pricing with numbers, metric caps at 50 and 200</figcaption></figure>
+      <figure><img src="screens/hard-secoda-home.png" alt="Secoda homepage"><figcaption><b>Secoda</b>Names Data Consumers, Business Ops and PMs. Viewers unlimited on all tiers</figcaption></figure>
+      <figure><img src="screens/hard-selectstar-home.png" alt="Select Star homepage"><figcaption><b>Select Star</b>Column-level lineage sold as the product</figcaption></figure>
+      <figure><img src="screens/hard-atlan-metrics-layer.png" alt="Atlan metrics layer page"><figcaption><b>Atlan</b>The one page of fifteen with no AI in the headline</figcaption></figure>
+      <figure><img src="screens/hard-dbt-semantic-layer.png" alt="dbt Semantic Layer page"><figcaption><b>dbt</b>"Inconsistent metrics ... can quickly erode trust"</figcaption></figure>
+      <figure><img src="screens/soft-looker-home.png" alt="Looker homepage"><figcaption><b>Looker</b>Viewer is a separate license type; token overage priced from 2026-10-01</figcaption></figure>
+      <figure><img src="screens/soft-omni-home.png" alt="Omni homepage"><figcaption><b>Omni</b>Pricing page returns 404, per-seat price unknown</figcaption></figure>
+      <figure><img src="screens/soft-cube-home.png" alt="Cube homepage"><figcaption><b>Cube</b>Viewer priced at $20 per user per month</figcaption></figure>
+      <figure><img src="screens/soft-montecarlo-home.png" alt="Monte Carlo homepage"><figcaption><b>Monte Carlo</b>Old domain redirects; the leader now sells agent trust</figcaption></figure>
+      <figure><img src="screens/soft-sifflet-home.png" alt="Sifflet homepage"><figcaption><b>Sifflet</b>Promises to show exactly why an issue happened</figcaption></figure>
+      <figure><img src="screens/asp-datadog-home.png" alt="Datadog homepage"><figcaption><b>Datadog</b>The bar for dense state in one view</figcaption></figure>
+      <figure><img src="screens/asp-grafana-home.png" alt="Grafana homepage"><figcaption><b>Grafana</b>The bar for state at any width</figcaption></figure>
+      <figure><img src="screens/asp-snowflake-horizon.png" alt="Snowflake Horizon Catalog page"><figcaption><b>Snowflake Horizon</b>Governance moving into the warehouse</figcaption></figure>
+      <figure><img src="screens/asp-databricks-unity-catalog.png" alt="Databricks Unity Catalog page"><figcaption><b>Unity Catalog</b>Automated column-level lineage as a platform feature</figcaption></figure>
+      <figure><img src="screens/asp-hex-home.png" alt="Hex homepage"><figcaption><b>Hex</b>Trust framed as grounding, not as showing the working</figcaption></figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>The matrix: the five most relevant products.</caption>
+        <thead>
+          <tr><th></th><th>PowerMetrics</th><th>Secoda</th><th>Atlan</th><th>dbt Semantic Layer</th><th>Sifflet</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Built on</th><td>The metric as a first-class object</td><td>The asset catalog</td><td>The enterprise metadata graph</td><td>The dbt model</td><td>The pipeline and its incidents</td></tr>
+          <tr><th scope="row">Key mechanism</th><td>Metric Catalog, defined and certified metrics</td><td>Search plus lineage plus governance in one UI</td><td>Metrics layer as the KPI definition standard</td><td>Definitions compiled once, served everywhere</td><td>Catch the issue before the business sees it</td></tr>
+          <tr><th scope="row">Where trust is shown</th><td>On the metric, as certification</td><td>In the catalog, next to the asset</td><td>In the governance layer</td><td>In the API contract</td><td>In the incident</td></tr>
+          <tr><th scope="row">Monetisation</th><td>$24 and $35 per month annually, capped at 50 and 200 metrics</td><td>No public numbers, viewers unlimited</td><td>Contact sales only</td><td>Free developer tier, $100 per seat per month</td><td>No public numbers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Three common patterns</h3>
+    <ol>
+      <li><strong>Trust is sold as a property of the answering system, not of the number.</strong> Fourteen of the fifteen pages put AI or agents in the headline. The subject of the sentence is always the system that answers.</li>
+      <li><strong>Definition governance lives in a producer tool and the last mile is delegated.</strong> No product in this set treats the reading surface as its own product.</li>
+      <li><strong>Pricing is mostly opaque.</strong> Seven of the ten HARD and SOFT products publish no seat price.</li>
+    </ol>
+
+    <h3>What the documentation changed</h3>
+    <p>The marketing sites hide the product behind a login. The documentation does not, and opening it narrowed two of our four gaps.</p>
+
+    <div class="gallery">
+      <figure><img src="screens/ui-powermetrics-metric-overview.png" alt="PowerMetrics metric overview documentation"><figcaption><b>PowerMetrics, metric overview</b>Certification shows who removed it and when. The exception case, not the always-on case</figcaption></figure>
+      <figure><img src="screens/ui-dbt-catalog-docs.png" alt="dbt Catalog documentation"><figcaption><b>dbt Catalog</b>Four health states already exist: Healthy, Caution, Degraded, Unknown</figcaption></figure>
+      <figure><img src="screens/ui-selectstar-lineage-docs.png" alt="Select Star lineage documentation"><figcaption><b>Select Star, lineage</b>Only columns that have lineage are shown; no depth control documented</figcaption></figure>
+      <figure><img src="screens/ui-secoda-lineage-docs.png" alt="Secoda lineage documentation"><figcaption><b>Secoda, lineage</b>Viewers only see lineage for resources they can access</figcaption></figure>
+      <figure><img src="screens/ui-sifflet-incidents-docs.png" alt="Sifflet incidents documentation"><figcaption><b>Sifflet, incidents</b>Status, severity, assignee, timeline. Ours has none of those</figcaption></figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Gaps, and what each rests on.</caption>
+        <thead><tr><th>Gap</th><th>What it rests on</th></tr></thead>
+        <tbody>
+          <tr><td>Provenance is a destination, so it reaches only readers who already suspect</td><td>Shown in the five documented product surfaces, inferred for the other ten from positioning</td></tr>
+          <tr><td>Doubt never reaches a business reader</td><td>Sifflet routes incidents to pipeline owners; dbt's four states live in a catalog</td></tr>
+          <tr><td>Attribution on the claim is absent, always-on</td><td>Nobody above 3 of 5 in the benchmark; PowerMetrics names the person only on removal</td></tr>
+          <tr><td>Narrow width is unserved, and good trust design does not survive it by default</td><td>Yahoo Finance overflows at a measured 360 while scoring 5 on freshness</td></tr>
+          <tr><td>Trust for a human reader is momentarily undefended</td><td>The observability leader moved to agent trust</td></tr>
+          <tr><td>No reader-pricing norm exists to inherit</td><td>Unlimited viewers, $20 per viewer, separate Viewer license and metric caps, all in one market</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">The honest limit of this round: none of the fifteen shows its product surface without an account. Documentation closed that gap for five and left it open for ten, and even for the five it describes an interface rather than letting anyone walk through it. Every claim about visual density and narrow-width behaviour in this set remains unverified. Refero was checked on 2026-08-11 and does not index this category, so that route is closed.</p>
+  </section>
+
+  <!-- 5 ................................................................. -->
+  <section id="benchmark">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Benchmark</h2></div>
+
+    <div class="pull">
+      <span class="label">The dimension</span>
+      <p><strong>Trust without leaving the place of reading.</strong> Can a person tell how far a number can be trusted, right where they read it, without going anywhere to find out.</p>
+    </div>
+
+    <p>Five products from other categories entirely, chosen because this dimension is the core of what each does. Not the aspirational competitors above: those are leaders of our own category, and a benchmark that stays inside the category can only find the category's own ceiling. Narrow-width results are measured, not estimated: the viewport was set so that <code>clientWidth</code> reads exactly 360, and overflow was read as <code>scrollWidth &gt; clientWidth</code>.</p>
+
+    <div class="gallery">
+      <figure><img src="screens/bench-github-status.png" alt="GitHub Status page"><figcaption><b>GitHub Status, 36</b>Five named component states, four named incident stages, each stamped</figcaption></figure>
+      <figure><img src="screens/bench-flightaware-live.png" alt="FlightAware live flight page"><figcaption><b>FlightAware, 32</b>"Landed 13 minutes ago", scheduled printed against actual</figcaption></figure>
+      <figure><img src="screens/bench-wikipedia-citations.png" alt="Wikipedia article with citations"><figcaption><b>Wikipedia, 30</b>Evidence on the sentence; missing evidence stated in place</figcaption></figure>
+      <figure><img src="screens/bench-nws-forecast.png" alt="National Weather Service point forecast"><figcaption><b>NWS forecast, 28</b>Uncertainty in the value's own terms: "A 40 percent chance of showers"</figcaption></figure>
+      <figure><img src="screens/bench-yahoo-finance-quote.png" alt="Yahoo Finance quote page"><figcaption><b>Yahoo Finance, 26</b>The canonical number carrying its own age, with the warning placed above it</figcaption></figure>
+      <figure><img src="screens/bench-yahoo-finance-360.png" alt="Yahoo Finance measured at 360 px"><figcaption><b>Yahoo at a measured 360</b>clientWidth 360, scrollWidth 364. The only overflow in the set</figcaption></figure>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Eight criteria, scale 1 to 5. All five opened 2026-08-11.</caption>
+        <thead>
+          <tr><th>Criterion</th><th class="num">Wikipedia</th><th class="num">Yahoo</th><th class="num">GitHub</th><th class="num">FlightAware</th><th class="num">NWS</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1 Freshness adjacency</td><td class="num s2">2</td><td class="num s5">5</td><td class="num s5">5</td><td class="num s5">5</td><td class="num s2">2</td></tr>
+          <tr><td>2 State vocabulary</td><td class="num s4">4</td><td class="num s3">3</td><td class="num s5">5</td><td class="num s4">4</td><td class="num s3">3</td></tr>
+          <tr><td>3 Provenance in one action</td><td class="num s5">5</td><td class="num s2">2</td><td class="num s4">4</td><td class="num s3">3</td><td class="num s3">3</td></tr>
+          <tr><td>4 Uncertainty explicit</td><td class="num s3">3</td><td class="num s3">3</td><td class="num s4">4</td><td class="num s4">4</td><td class="num s5">5</td></tr>
+          <tr><td>5 Attribution on the claim</td><td class="num s2">2</td><td class="num s3">3</td><td class="num s3">3</td><td class="num s2">2</td><td class="num s3">3</td></tr>
+          <tr><td>6 Layperson legibility</td><td class="num s4">4</td><td class="num s4">4</td><td class="num s5">5</td><td class="num s5">5</td><td class="num s4">4</td></tr>
+          <tr><td>7 Survives 360, measured</td><td class="num s5">5</td><td class="num s2">2</td><td class="num s5">5</td><td class="num s5">5</td><td class="num s5">5</td></tr>
+          <tr><td>8 No false calm</td><td class="num s5">5</td><td class="num s4">4</td><td class="num s5">5</td><td class="num s4">4</td><td class="num s3">3</td></tr>
+          <tr class="total"><td>Total</td><td class="num">30</td><td class="num">26</td><td class="num">36</td><td class="num">32</td><td class="num">28</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull">
+      <span class="label">The pattern across all five</span>
+      <p>Nobody scores above 3 on attribution. Every one of these products tells you how old a value is, several tell you how uncertain it is, and not one tells you who is answerable for it. That is the same hole the competitor set has, reached from a completely different direction.</p>
+    </div>
+
+    <h3>Top three mechanisms into the MVP</h3>
+    <ol>
+      <li><strong>A named state vocabulary instead of one alarm.</strong> From GitHub Status. A stale number, a broken source and a changed definition become three states with three treatments, never one red badge.</li>
+      <li><strong>Evidence on the claim, one action away.</strong> From Wikipedia. A provenance marker on the number and on the definition, opening inline rather than routing to a lineage screen.</li>
+      <li><strong>Expectation and reality side by side, with age in relative time.</strong> From FlightAware. On the freshness line: "as of 14:05, 20 minutes ago, expected hourly".</li>
+    </ol>
+
+    <ul class="chips">
+      <li class="chip stale">stale</li>
+      <li class="chip down">source is down</li>
+      <li class="chip changed">definition changed after this was saved</li>
+      <li class="chip">as of 14:05, 20 minutes ago</li>
+    </ul>
+
+    <h3>One mechanism that will not work for us</h3>
+    <p><strong>An aggregate uptime figure, as in "99.42% over the past 90 days".</strong> It works for GitHub because a service is either callable or not. A metric is not like that. The same shape would read as "this number is 99.4% correct", which nobody can defend, and it would let the reader skip the only question that matters at the moment of reading. We build no trust score.</p>
+
+    <p class="note">The three mechanism names, ambiguity aversion, cost of verification and comparison without arithmetic, are framing borrowed from general behavioural literature rather than sources opened in this session. What is observed is what the products do. The named mechanism is our explanation of why it works.</p>
+  </section>
+
+  <!-- 6 ................................................................. -->
+  <section id="patterns">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Patterns</h2></div>
+
+    <p><strong>The key task:</strong> decide, in seconds and in the place where the number is being read, whether this number can be put in front of somebody else.</p>
+
+    <p><strong>Entry-point behaviour: the number is read away from the system that produced it.</strong> This is an assumption taken from the brief and from the shape of the market, not an observation, and it is the weakest link in the chain below. It decides the location of the product before any other question is asked: if the reader is inside the producing tool, a catalog, a graph or a board are all legitimate answers; if the reader is outside, all three lose by default.</p>
+
+    <p>Five patterns were compared, the taxonomy by <strong>where trust information lives</strong>: on the object, in a directory, in the structure behind it, in a dedicated surface of its own, in an answer you ask for.</p>
+
+    <div class="pull">
+      <span class="label">Chosen</span>
+      <p><strong>Evidence on the claim.</strong> Trust information is attached to the object being read and travels with it, one line immediately, depth on request.</p>
+    </div>
+
+    <p><strong>Three reasons.</strong> It is the only locus that survives the entry-point behaviour, and it serves the reader's job verbatim. It is the open gap, confirmed from two independent corpora. And it is the only one of the five still legible at a measured 360 px, which four of the five funnel decisions already assume.</p>
+
+    <div class="tw">
+      <table>
+        <caption>The four rejected patterns, and what survives of each inside the chosen one.</caption>
+        <thead><tr><th>Pattern</th><th>Rejected because</th><th>Kept for</th></tr></thead>
+        <tbody>
+          <tr><td>Catalog and search</td><td>A destination, and the reader does not travel before they suspect. For an unpaid reader it is also the emptiest version of itself, since permissions cut the directory down</td><td>The analyst's own side: the registry list and jump-by-name</td></tr>
+          <tr><td>Lineage graph</td><td>Requires a mental model of the stack, degrades as it grows, and is not a proposition at 360 px</td><td>Depth on request, behind the one-line provenance</td></tr>
+          <tr><td>Dedicated doubt surface</td><td>A reader who is not on the channel cannot tell an incident that exists from one that does not</td><td>Its named state vocabulary, which moves onto the card</td></tr>
+          <tr><td>Conversational answer</td><td>Moves the trust question up a level, cannot obey the bare-number principle, is the most crowded position in the category, and fights our metadata-only architecture</td><td>Nothing in the interface. The agent as a reader of our surface is a separate open question</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The alternative, and the condition under which it wins.</strong> The status board form: named states in a grid, no search, no navigation. It wins if the reader's need turns out to be portfolio-shaped rather than single-number shaped. The signal to watch, named in advance so this stays a decision and not a mood: readers opening three or more distinct cards in one session, repeatedly, on a schedule.</p>
+
+    <p><strong>One live counter-reference, kept on purpose.</strong> Resend puts its freshness marker in a small update timestamp footer. That is the pattern our first design principle forbids, in a shipped product, which makes it more useful than an invented bad example. Reader named: stage 06, as an anti-reference when the visual language is searched.</p>
+  </section>
+
+  <!-- 7 ................................................................. -->
+  <section id="conclusions">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Conclusions</h2></div>
+
+    <h3>Six hypotheses</h3>
+
+    <div class="cards">
+      <div class="card riskiest">
+        <p class="h-id"><span>H1</span><span>the riskiest assumption</span></p>
+        <dl>
+          <dt>If</dt><dd>a business reader meets freshness, source state and definition on the same line as the value</dd>
+          <dt>Then</dt><dd>they will check before acting rather than after being contradicted</dd>
+          <dt>Because</dt><dd class="because">every existing route to provenance is a destination that requires prior suspicion, across all fifteen products</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>H2</span><span>states</span></p>
+        <dl>
+          <dt>If</dt><dd>the three states are named and treated distinctly: stale, source down, definition changed</dd>
+          <dt>Then</dt><dd>a number on a bad day stays usable instead of being discarded whole</dd>
+          <dt>Because</dt><dd class="because">the four-state vocabulary already works where it is deployed and simply never reaches a non-analyst</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>H3</span><span>attribution</span></p>
+        <dl>
+          <dt>If</dt><dd>every definition carries a name and a date, always visible</dd>
+          <dt>Then</dt><dd>trust transfers from the individual analyst to the product</dd>
+          <dt>Because</dt><dd class="because">not one of five best-in-class products scores above 3 on attribution while several score 5 on freshness, so the market proved the adjacency habit but not the accountability one</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>H4</span><span>reach</span></p>
+        <dl>
+          <dt>If</dt><dd>the card is readable with no account at one permanent URL</dd>
+          <dt>Then</dt><dd>readers per paid analyst seat rises to the level the pricing depends on</dd>
+          <dt>Because</dt><dd class="because">there is no reader-pricing norm to violate, and the one competitor whose viewer experience is documented cuts it down</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>H5</span><span>pricing</span></p>
+        <dl>
+          <dt>If</dt><dd>we never cap metric count</dd>
+          <dt>Then</dt><dd>registry filling is not penalised at the exact moment it is most fragile</dd>
+          <dt>Because</dt><dd class="because">the one competitor with public pricing caps at 50 and 200 metrics, placing the cap directly on the behaviour that is our activation</dd>
+        </dl>
+      </div>
+      <div class="card">
+        <p class="h-id"><span>H6</span><span>width</span></p>
+        <dl>
+          <dt>If</dt><dd>the trust signal survives a measured 360 px</dd>
+          <dt>Then</dt><dd>the check happens in the five minutes before a meeting rather than not at all</dd>
+          <dt>Because</dt><dd class="because">the one benchmark product that overflowed at 360 is one of the three scoring 5 on freshness, which shows the two qualities are independent and must be verified separately</dd>
+        </dl>
+      </div>
+    </div>
+
+    <h3>Open questions</h3>
+    <div class="tw">
+      <table>
+        <caption>Stage 02 reads this table as its list of candidate holes about people. A question with no addressee does not enter it.</caption>
+        <thead><tr><th class="num">#</th><th>Question</th><th>Addressee</th><th>What changes in the product</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Do readers pay?</td><td>Me as product owner</td><td>The business model, whether a shared read-only link is in MVP, whether the reading surface must work with no account</td></tr>
+          <tr><td class="num">2</td><td>Does charging by metric count actually punish filling the registry?</td><td>Analysts at three target companies</td><td>The pricing lever and the activation metric. If a cap does not hurt adoption, the seats-not-metrics argument loses its ground</td></tr>
+          <tr><td class="num">3</td><td>Is an AI agent a second reader of our number?</td><td>A data lead, plus me for the scope call</td><td>Whether provenance needs a machine-readable surface. If yes, the MVP grows an API and the IA grows a branch</td></tr>
+          <tr><td class="num">4</td><td>Does the reader check before acting, or only after being contradicted?</td><td>Business consumers at three target companies</td><td>Everything. This is H1, and the first test exists to answer it</td></tr>
+          <tr><td class="num">5</td><td>Is the reader's need single-number or portfolio-shaped?</td><td>Business consumers at three target companies</td><td>The chosen pattern. Portfolio-shaped means the status board becomes the product and the card its detail view</td></tr>
+          <tr><td class="num">6</td><td>Does an account-free card survive a US B2B security review?</td><td>Head of data or COO as buyer</td><td>Whether the no-account read stays in MVP, and how early SOC 2 Type II work has to start</td></tr>
+          <tr><td class="num">7</td><td>What can a free reader be shown when the source's own permissions restrict it?</td><td>Me for the scope call, plus a data lead for the reality</td><td>How deep depth-on-request can go for an unpaid reader</td></tr>
+          <tr><td class="num">8</td><td>How often does the reader's need actually arrive?</td><td>Business consumers at three target companies</td><td>The retention instrument. A monthly need makes a four-week return rate noise rather than signal</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Critique .......................................................... -->
+  <section id="critique">
+    <div class="sec-head"><span class="sec-num">&#9633;</span><h2>Before and after</h2></div>
+
+    <p>The research was criticised in two instruments. Codex ran first, blind and read-only, over the source files; a parallel pass covered the one class it cannot do, conclusions that do not follow from any fact above. Sixteen findings confirmed, one withdrawn on verification. The full log is in <code>docs/decisions.md</code>.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Five representative repairs out of sixteen, plus the one that was withdrawn.</caption>
+        <thead><tr><th>Type</th><th>Found</th><th>Became</th><th>Who found it</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Contradiction</td>
+            <td>The canvas handed the funnel "registry gets filled is activation", while the funnel defines activation on the reader and explicitly excludes registry filling</td>
+            <td>The mapping is stated as not one to one. Activation sits on the reader arriving</td>
+            <td class="who who-codex">Codex</td><td>Fixed</td>
+          </tr>
+          <tr>
+            <td>Fact without a source</td>
+            <td>"Every product assumes a desktop working session", against our own note that narrow-viewport behaviour is unknown</td>
+            <td>A claim about positioning, which the pages can prove, with behaviour at that width left unknown</td>
+            <td class="who who-both">both</td><td>Fixed</td>
+          </tr>
+          <tr>
+            <td>Contradiction</td>
+            <td>Retention target 40% in one file, 35% in another, two definitions under one name</td>
+            <td>One instrument: the four-week return at 35%, owned by the funnel file</td>
+            <td class="who who-codex">Codex</td><td>Fixed</td>
+          </tr>
+          <tr>
+            <td>Conclusion without grounds</td>
+            <td>"Provenance is a destination in all fifteen", where product-surface evidence exists for five</td>
+            <td>Shown for five, inferred for ten, said in both places it appears</td>
+            <td class="who who-claude">Claude</td><td>Fixed</td>
+          </tr>
+          <tr>
+            <td>Orphan</td>
+            <td>The requirement to record the share event next to the open event reached no later stage</td>
+            <td>Named as an event-model requirement for stage 03a, in the funnel section above</td>
+            <td class="who who-codex">Codex</td><td>Fixed</td>
+          </tr>
+          <tr class="withdrawn">
+            <td>Fact without a source</td>
+            <td>"The head of data appears at the seat purchase, not before" filed as an unsourced fact</td>
+            <td>Left as written</td>
+            <td class="who who-codex">Codex</td>
+            <td><strong>Withdrawn at verification:</strong> the line is item 3 under a Hypotheses heading, which Codex read without its heading</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull">
+      <span class="label">What the second instrument bought</span>
+      <p>Codex found eight things the first pass missed, six of them in the class that pass had already audited. The common cause in all six: the brief was being treated as a source. It is not a source, it is our own assumption, so every claim about people or the market resting on it walked through as fact. The reverse holds too: not one of the five conclusion-level findings appeared in his table, because each needs the chain from a decision back to the fact that holds it, and that chain is not visible in the text.</p>
+    </div>
+  </section>
+
+  <footer class="page">
+    <p>Plumb, stage 01 of 13. Sources for every claim are in <code>research/docs/research.md</code> and the five level files beside it. Unknowns are marked rather than filled in.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script>
+  // Collapsed on a phone, always open from 900px. Kept in sync with the width rather than
+  // decided once at load: the summary is hidden on desktop, so a page opened narrow and then
+  // widened would otherwise show no navigation at all and no way to get it back.
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'intro',       label:'Introduction' },
+    { id:'canvas',      label:'Lean UX Canvas' },
+    { id:'strategy',    label:'Strategy' },
+    { id:'aarrr',       label:'AARRR' },
+    { id:'competitors', label:'Competitors' },
+    { id:'benchmark',   label:'Benchmark' },
+    { id:'patterns',    label:'Patterns' },
+    { id:'conclusions', label:'Conclusions' },
+    { id:'critique',    label:'Before and after' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
