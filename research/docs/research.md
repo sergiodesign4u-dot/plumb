@@ -294,3 +294,17 @@ Added 2026-08-11 at stage 02+ step 6. Recorded here rather than only in `cjm-as-
 **Method note worth keeping.** The step 02 round concluded that the Hacker News corpus was exhausted for this question. It was not. This source came up on roughly the thirteenth query phrasing, which is a fact about our queries rather than about the corpus, and the earlier wording has been corrected in `cjm-as-is.md`.
 
 ---
+
+## 10. What the IA turned into a decision, and what it needs from research
+
+Added 2026-08-11 at stage 03a step 8. No new collection happened: this records where the base IA converted an open question into a branch somebody now has to answer, which changes what a first interview must ask. The rest of this file is untouched.
+
+**Open question 7 now has a location.** "What does a data lead consider safe to show a reader who has no access to the source" was an abstract scope question. It is now a **branch in the main flow**: when a reader opens a card they may not see, either the owner's name is shown, giving them somebody to ask, or the route is a dead end with no home, no menu and nothing to sign into. Both endings are drawn. The question decides which one real readers meet.
+
+**A second half of the same question, and it was not in this file before.** Whether we may show a **route** to reach the owner, not only their name. The job is worded as finding out who is answerable, so a name closes it and the asking happens elsewhere; but a name with no route returns the reader to working out how to reach somebody, which is the friction we claim to remove. It is the weakest branch in the IA.
+
+**One thing nothing in the research covers at all.** What happens to a metric whose owner has left the company. A definition cannot be saved without an owner, so the product prevents an unowned metric at creation and prevents nothing afterwards. We do not track employment and have no signal that would tell us. Recorded as a hole rather than designed around.
+
+**Method note.** These are not findings. They are three questions that acquired a precise place in a route, which is what an IA is supposed to do to a research gap: not close it, but make it expensive to keep ignoring.
+
+---

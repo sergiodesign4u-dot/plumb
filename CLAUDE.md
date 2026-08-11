@@ -20,7 +20,7 @@ The difference from BI and analytics tools: Plumb is not built to visualise data
 
 ## Platform
 
-**Responsive web, mobile-first.** Mobile priority, desktop is full and carries the analyst's dense work (metric registry, lineage tree, definition versions). Mobile is the read and verify path, and it leads in layout order.
+**Responsive web, mobile-first.** Mobile priority, desktop is full and carries the analyst's dense work (metric registry, definition text and owner). Mobile is the read and verify path, and it leads in layout order. The lineage tree is no longer named here: CJM cut it as an orphan, and this line still listed it.
 
 ## People
 
@@ -92,6 +92,22 @@ Four decisions from stage 01 that later stages read rather than re-derive. Singl
 4. **Activation is the first time a metric card is opened by somebody other than the author of its definition.** Connecting a source and writing a definition are setup, not activation. Funnel in `research/docs/aarrr.md`. Read by 03a step 4.
 5. **The strongest measurement in this research points against arrival, and it is operative.** In a comparative trial, a dashboard with no login, embedded in the tool the person already worked in and contextualised to them, was entered one to two times per year (`research/docs/cjm-as-is.md`, S1; clinicians, so an adjacent population and a different object). *Forbids:* designing trust information as a place the reader is expected to travel to. What we build has to arrive with the number. Read by 03a, 04 and 07.
 6. **Nobody knows what the reader feels, and no stage may assert it.** After two mining rounds the As-Is map carries barriers at four phases and **no measured emotion at any of them**; the one plotted point was withdrawn under critique. *Forbids:* an emotional claim about the reader anywhere downstream without an interview behind it, including in copy at 05 and in state design at 04. Designed target states are allowed and must say they are designed.
+
+## Information architecture
+
+Rules from stage 03a, not a retelling of the map. The map itself is `ia/docs/sitemap.md` and the routes are `ia/docs/flows.md`.
+
+**Top level: five clusters by intent, thirteen screens, seven of them MVP.** Read a number and judge it (card, source layer); hand it on (send); bring a metric under control (connect a source, define a metric, registry); sign in and be accountable (sign-in, workspace, plan); and a public surface of four pages that carry no job by construction.
+
+**Main flow.** A link arrives, the card opens with no account, the value is queried at read time, and the definition, the states, the age and the attribution are all present on arrival. Depth opens on one action.
+
+**Global navigation belongs to the analyst, and the reader has none.** Two items, Metrics and Sources, plus a jobless account corner. *Forbids:* giving the reader a header, a menu or a home. Their navigation is the card and the two actions on it.
+
+**The reader reaches the main job at zero taps: arrival is the answer.** Depth costs one; the analyst is at two on a returning run and three on the first. *Forbids:* moving the definition, the states, the age or the attribution off the first screen at any later stage.
+
+**The registry never appears in the reader's navigation.** A list with search is the rejected "catalog and search" pattern, and the moment it becomes the reader's entry point we have changed the chosen pattern without saying so.
+
+**A state gets no entity.** "As of", "source is down" and "definition changed" are computed and store nothing. *Forbids:* a state acquiring a list, a status, a queue or an assignee, which is exactly how this product would turn into an incident tool.
 
 ## Tech stack hypothesis
 
