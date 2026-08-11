@@ -1,5 +1,0 @@
-- generic [ref=f73e6]:
-  - generic [ref=f73e11]:
-    - generic [ref=f73e12]: The resource can't be found
-    - generic [ref=f73e13]: Secoda may be out of sync with the source or the resource may not exist in this workspace
-  - button "Go back" [ref=f73e15] [cursor=pointer]

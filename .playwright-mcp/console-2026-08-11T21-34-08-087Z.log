@@ -1,3 +1,0 @@
-[     794ms] [WARNING] Pathnames cannot have embedded double slashes - normalizing !https://docs.cube.dev/admin/sso -> !https:/docs.cube.dev/admin/sso @ https://cubecloud.dev/auth/assets/index-BVg6O91e.js:1
-[     898ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ https://cubecloud.dev/auth:0
-[     990ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://cubecloud.dev/auth/my-tenants:0
