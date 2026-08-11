@@ -101,3 +101,63 @@ Every entity has at least one screen where it is seen or acted on. Metric on A1,
 **E6, the reading, is covered by the state on A1**, and that gives the first argument in the fork left open at step 1. If the snapshot is encoded in the link, no separate object and no separate screen are needed at all. If a reading is stored, an object about an accountless reader appears. **The map leans towards encoding it in the link**, and the flows at step 4 settle it.
 
 **Thirteen screens, eight of them MVP.** That is below the 15 to 30 boundary in `CLAUDE.md`, and there is nothing further to cut without losing work somebody does.
+
+---
+
+## Navigation
+
+### The finding that shapes this whole section
+
+**The primary persona has no global navigation, and that is the design rather than a gap.** The reader arrives by a link, holds no account, and the strongest measurement in this research says a destination they are expected to travel to is entered once or twice a year (`CLAUDE.md`, rule 5). So the reader's navigation is the card itself and the two actions on it. Global navigation in this product belongs to the **secondary** persona.
+
+Written down because it is the kind of thing a later stage silently repairs by adding a header with a logo and a menu, which would turn the card into a page of a site the reader has no reason to be on.
+
+### Global navigation, for the analyst
+
+| Item | Cluster it enters | The job behind it |
+| --- | --- | --- |
+| **Metrics** | C3, the registry | R2, answer once; R5, the definition stops living in a head |
+| **Sources** | C1 | The main job as a precondition: with no source there is no age and no state |
+| Account corner | D1, D2, D3 | **None.** Tenancy and billing, and it is marked jobless rather than dressed up |
+
+**Two items, not the three to five the guideline suggests, and the range was not padded.** There are two analyst intents in this product, bringing metrics under control and keeping a source connected. A third item would have to be invented from other people's menus, which is exactly what this stage forbids. **Search is global but is not an item:** it is a persistent affordance over C3, present on every analyst screen.
+
+### Levels, assigned before any tap is counted
+
+**The reader.** Level 1 is A1, reached from outside by a link. Level 2 is A2 and B1, both opened from A1. There is no level 3.
+
+**The analyst.** Sign-in (D1) is a gate before level 1, not a level. Level 1 is C3 and C1. Level 2 is C2, A1 opened from the registry, and B1. Level 3 is A2, D2 and D3.
+
+### Depth in taps
+
+| Persona | Job | Taps |
+| --- | --- | --- |
+| **Reader, primary** | **Main job**, knowing how far the number can be trusted | **0.** Arrival is the answer: the definition, the states, the age and the attribution are all on A1 |
+| Reader, primary | R1, who is answerable | **0.** The name and date are on the claim, not behind an action |
+| Reader, primary | Depth, where the number came from | 1 |
+| Analyst, secondary | R5, define a metric and its owner | 2 after sign-in: Metrics, then new metric |
+| Analyst, secondary | R2, answer once by sending the answer | 3 after sign-in: Metrics, open the card, send |
+
+Everything is within three, and the primary path is at zero, which is the entire point of the product.
+
+### What was flattened, and what it cost
+
+The instruction is to name the price, not to defend the depth.
+
+- **The reader's path was flattened to nothing by making A1 the landing screen.** The price is real and it is paid by the reader: **they can only reach a metric somebody sent them a link to.** There is no browsing, no second metric, no way back to a first one. Giving them the registry would fix that and would cancel the chosen UX pattern, so the cost is accepted deliberately.
+- **C2 hangs off the registry rather than under a source.** The price is that a metric can be defined before its source binding is proven, so a failure that could have been prevented structurally becomes an error state inside C2 instead.
+
+### Global, contextual, deep
+
+- **Global, always visible:** for the analyst, Metrics, Sources, search and the account corner. **For the reader, nothing.** The card carries its own affordances and nothing else.
+- **Contextual, appears in the flow:** A2 and B1 from the card, C2 from the registry or from a source, D1 only when nobody is signed in.
+- **Deep, rare:** D2, D3, and the public surface, which is not in-app navigation at all.
+
+### Two rules this section hands forward
+
+1. **C3 never appears in the reader's navigation.** A registry with search is the rejected "catalog and search" pattern, and the moment it becomes the reader's entry point we have changed the chosen pattern without saying so.
+2. **A reader who lands on a card they cannot see has nowhere to go**, because they have no home, no menu and no account. That is a dead end created by the flattening above, and it is an input to the flows at step 4 rather than something to be discovered in wireframes.
+
+### Where activation sits
+
+Activation is the first time a metric card is opened by somebody other than the author of its definition (`aarrr.md`). In navigation terms that is **A1 at level 1, reached by link, at zero taps from arrival**. It is named as a node in the main flow at step 4 rather than left implied.
