@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.4 Define a metric - Plumb</title>
+<meta name="description" content="Node 4.4 with states 4.5, 4.6 and 4.7: where the reader's product is made, and the one form in this market whose first field asks what the metric means.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:400px; }
+  .crumb{ color:#6b7076; font-size:11px; margin-bottom:8px; }
+  .ttl{ font-size:15px; font-weight:700; margin-bottom:12px; }
+  .fld{ margin-bottom:11px; }
+  .fld label{ display:block; font-size:11px; color:#6b7076; margin-bottom:3px; }
+  .fld label b{ color:#14161a; }
+  .inp{ border:1px solid #14161a; padding:7px 8px; min-height:15px; }
+  .inp.big{ min-height:62px; }
+  .inp.code{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11px;
+             background:#f4f4f2; min-height:44px; word-break:break-all; line-height:1.5; }
+  .inp.sel{ display:flex; justify-content:space-between; }
+  .inp.err{ border-width:2px; }
+  .hint{ color:#6b7076; font-size:10.5px; margin-top:3px; }
+  .hint.bad{ color:#14161a; font-weight:600; }
+  .banner{ border:1px solid #14161a; padding:8px 9px; margin-bottom:12px; line-height:1.45; }
+  .banner.info{ border-style:dashed; }
+  .acts{ display:flex; gap:8px; margin-top:14px; border-top:1px solid var(--rule-strong);
+         padding-top:11px; flex-wrap:wrap; align-items:center; }
+  .acts .sp{ flex:1; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; }
+  .btn.ghost{ border-style:dashed; color:#6b7076; }
+  .run{ border:1px dashed #14161a; padding:8px 9px; margin-top:11px; color:#6b7076; }
+  .prev{ border:1px solid var(--rule-strong); padding:8px 9px; margin-top:6px; background:#f6f5f1; }
+  .prev em{ font-style:normal; font-size:10.5px; color:#6b7076; display:block; margin-bottom:3px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 4.4 with 4.5, 4.6, 4.7 &middot; pages</p>
+    <h1>The one form in this market whose first field asks what the metric means</h1>
+    <p class="standfirst lede">This is where the reader's product is made. Everything the card shows was typed here by somebody else, which is why a form that loses a definition or hides a consequence costs more than it looks: the cost lands on a person who is not in the room.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>States: 4.5, 4.6, 4.7</span>
+      <span>Source: <code>ia/docs/pages/define-metric.md</code></span>
+    </div>
+  </header>
+
+  <!-- Fields ............................................................ -->
+  <section id="fields">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Seven blocks, and the order is the argument</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Required</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Name</td><td>Yes</td><td>What the reader will see as the H1 of the card</td></tr>
+          <tr><td>2</td><td><strong>The definition, in words</strong></td><td>Yes</td><td><strong>The first and largest field</strong></td></tr>
+          <tr><td>3</td><td>Owner</td><td>Yes</td><td>Defaults to the person writing, and can be somebody else</td></tr>
+          <tr><td>4</td><td>Source</td><td>Yes</td><td>Which connection, from node 3.1</td></tr>
+          <tr><td>5</td><td>The query</td><td>Yes</td><td>One field. See below</td></tr>
+          <tr><td>6</td><td>Run it, then Save</td><td></td><td>Testing before saving, taken from Retool in the bank</td></tr>
+          <tr><td>7</td><td>Delete, apart from both</td><td>Edit only</td><td>Destructive and primary actions at opposite ends</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>Block 2 is the row this whole type turns on</b>
+      <p><strong>In PowerMetrics, documented step by step, nobody ever writes what the metric means.</strong> The flow is table, filters, measure, dimensions, and there is no field anywhere in it for a sentence. The nearest thing is a description, whose absence dbt separately counts as a health problem.</p>
+      <p style="margin-top:8px"><strong>Here the definition in words is first and required.</strong> Not a description, not a note, not an optional annotation. It is the object the reader is shown, and everything else on this page exists to attach a number to it.</p>
+    </div>
+
+    <h3>Block 5, and the line this product walks</h3>
+
+    <p>A definition in words computes nothing. Something has to make the metric executable, and there are three ways. Two are refused with reasons already on record.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Way</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Compose the query in the interface</strong>: table, filters, measure, dimensions</td><td><strong>Refused.</strong> That is a query builder, and it is the BI category this product is defined against. The block bank refuses the filter and dimension blocks individually</td></tr>
+          <tr><td><strong>A SQL editor</strong>: workbench, autocomplete, results pane, history</td><td><strong>Refused.</strong> A SQL editor is out of scope by the brief</td></tr>
+          <tr><td><strong>One field, into which the analyst pastes the query that already exists</strong></td><td><strong>Taken.</strong> It is not an editor and it is not a builder</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Why this is the honest answer rather than a compromise.</strong> The secondary persona is technical, the query usually already exists in their warehouse or their dbt project, and the problem this product solves is not that SQL is hard to write. It is that <strong>the meaning of the result lives in somebody's head</strong>. Block 2 is the product; block 5 is plumbing.</p>
+
+    <p><strong>The query must return exactly one value</strong>, which is what state 4.6 validates. Stating it here rather than discovering it in an error message is the difference between a rule and a surprise. <strong>The reader never sees the query</strong>, decided at node 2.7.</p>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, new metric, single column and capped</div>
+        <div class="bw wide">
+          <div class="crumb">Metrics &gt; New metric</div>
+          <div class="ttl">New metric</div>
+          <div class="fld"><label><b>Name</b></label><div class="inp">Weekly active accounts</div></div>
+          <div class="fld"><label><b>What this metric means</b></label><div class="inp big">Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</div><div class="hint">This is what the reader sees. Write it for somebody who did not build it.</div></div>
+          <div class="fld"><label><b>Owner</b></label><div class="inp sel"><span>Dana Reyes</span><span>v</span></div><div class="hint">Their name and the date appear on every card for this metric.</div></div>
+          <div class="fld"><label><b>Source</b></label><div class="inp sel"><span>Snowflake, ANALYTICS.PROD</span><span>v</span></div></div>
+          <div class="fld"><label><b>Query</b> <span>returns one value</span></label><div class="inp code">select count(distinct account_id) from fact_sessions where ts &gt; dateadd(day, -7, current_date)</div><div class="hint">Where can I find this?</div></div>
+          <div class="acts"><span class="btn">Run it</span><span class="btn">Save</span><span class="sp"></span></div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 4.6, failed and still filled in</div>
+        <div class="bw">
+          <div class="crumb">Metrics &gt; New metric</div>
+          <div class="banner"><b>The definition did not run.</b> The source answered with an error. Your definition is unchanged.</div>
+          <div class="fld"><label><b>Name</b></label><div class="inp">Weekly active accounts</div></div>
+          <div class="fld"><label><b>What this metric means</b></label><div class="inp big">Distinct accounts with at least one session in the last 7 days.</div></div>
+          <div class="fld"><label><b>Owner</b></label><div class="inp sel"><span>Dana Reyes</span><span>v</span></div></div>
+          <div class="fld"><label><b>Query</b></label><div class="inp code err">select count(distinct account_id) from fact_session</div><div class="hint bad">Table FACT_SESSION was not found in ANALYTICS.PROD.</div></div>
+          <div class="acts"><span class="btn">Run it</span><span class="btn">Save</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Three states, and the failure modes are named</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Node</th><th>State</th><th>What happens</th></tr></thead>
+        <tbody>
+          <tr><td><strong>4.5</strong></td><td>The definition runs against the source</td><td><strong>Progress in place, naming what is being tried.</strong> Not a modal, and not a progress bar over a one-step form. The form stays filled and visible</td></tr>
+          <tr><td><strong>4.6</strong></td><td>The definition does not run</td><td>A banner at the top saying the attempt failed, <strong>an inline message on the field that caused it</strong>, and <strong>the form still filled in</strong>. Both, and they are not alternatives</td></tr>
+          <tr><td><strong>4.7</strong></td><td>Editing, previous version retained</td><td>The same form, plus the previous version visible, plus the consequence banner</td></tr>
+          <tr><td></td><td>Saved</td><td>Returns to node 4.1 with a toast. The analyst's toast, not the reader's</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>4.6, named rather than left generic</caption>
+        <thead><tr><th>What happened</th><th>What the form says</th><th>Blocking</th></tr></thead>
+        <tbody>
+          <tr><td>The query did not run at all: syntax, permissions, a missing column</td><td>Which one, in the warehouse's own words, on the query field</td><td>Yes</td></tr>
+          <tr><td>The query ran and returned more than one row or column</td><td>That a metric is one value, and what came back instead</td><td>Yes</td></tr>
+          <tr><td><strong>The query ran and returned nothing</strong></td><td>That it returned nothing, as a warning</td><td><strong>No</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>That third row is a decision, not an oversight.</strong> A metric can legitimately be empty right now, and blocking would stop somebody defining one before the data exists. It is also the same distinction node 0.4 draws for the reader: <strong>empty is a state, not an error, and never a zero.</strong></p>
+  </section>
+
+  <!-- Edit .............................................................. -->
+  <section id="edit">
+    <div class="sec-head"><span class="sec-num">03</span><h2>4.7, the consequence we can state but cannot count</h2></div>
+
+    <p><strong>Editing a definition puts state 2.5 on cards that were already sent.</strong> That has to be visible <strong>before</strong> saving, which is the shape of the info banner taken from Fingerprint in the block bank: their "changing these details will require a reconnect" becomes ours, "cards already sent will show that this definition changed".</p>
+
+    <div class="flag warn">
+      <b>We cannot say how many, and that is architecture rather than a missing feature</b>
+      <p>A reading is not a stored object, the moment travels encoded in the link, and we keep nothing about readers. So <strong>the banner names the consequence and never a number.</strong> A product that could count would be a product that tracked the people it promises not to.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 4.7, editing with the previous version retained</div>
+        <div class="bw wide">
+          <div class="crumb">Metrics &gt; Weekly active accounts &gt; Edit</div>
+          <div class="banner info"><b>Cards already sent will show that this definition changed.</b> Anyone who opens a link made before today will see what it used to say, next to what it says now.</div>
+          <div class="fld"><label><b>What this metric means</b></label><div class="inp big">Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</div>
+            <div class="prev"><em>Previous, declared by Dana Reyes on 3 August</em>Distinct users with at least one session in the last 7 days.</div>
+          </div>
+          <div class="fld"><label><b>Owner</b></label><div class="inp sel"><span>Dana Reyes</span><span>v</span></div></div>
+          <div class="acts"><span class="btn">Run it</span><span class="btn">Save</span><span class="sp"></span><span class="btn ghost">Delete metric</span></div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 4.5, running in place</div>
+        <div class="bw">
+          <div class="crumb">Metrics &gt; New metric</div>
+          <div class="fld"><label><b>Query</b></label><div class="inp code">select count(distinct account_id) from fact_sessions where ts &gt; dateadd(day, -7, current_date)</div></div>
+          <div class="run">Asking Snowflake, ANALYTICS.PROD, now.</div>
+          <div class="acts"><span class="btn">Run it</span><span class="btn">Save</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>One previous version, and only one.</strong> Version history deeper than the previous definition is out of scope by the brief. 4.7 shows the current text and the one before it, side by side at width and stacked at 360.</p>
+
+    <div class="flag warn">
+      <b>The open question this node owns</b>
+      <p><strong>An owner who has left the company.</strong> The flows critique established that a definition cannot be saved without an owner, and that the case nothing prevents is an owner who is gone. This is where it would be handled, and nothing here handles it yet. Named rather than quietly solved, because the answer is a workspace policy question and cluster 5 is entirely ПОТІМ.</p>
+      <p style="margin-top:8px"><strong>What is decided:</strong> the owner may be somebody other than the person writing, because the person who knows the definition and the person who is answerable for it are not always the same.</p>
+    </div>
+
+    <p><strong>Delete, and what it does to a link.</strong> A deleted metric makes every link to it dead, and the reader who follows one gets node 7.1, which already names two causes without choosing between them: the link may have expired, or the metric may have been removed. <strong>So the confirmation here says what the reader will get, in those words.</strong> A destructive action whose consequence is described in the same vocabulary the consequence uses is the cheapest honesty available.</p>
+  </section>
+
+  <!-- Rest .............................................................. -->
+  <section id="rest">
+    <div class="sec-head"><span class="sec-num">04</span><h2>What is not here, and what this page carries emotionally</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Not here</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Expected cadence</strong></td><td>It lives on the connection at node 3.2, because that is where the domain source puts it and one warehouse answers at one rhythm in MVP. <strong>Per-metric cadence is a real second case, recorded as ПОТІМ</strong>, not forgotten</td></tr>
+          <tr><td>A chart preview</td><td>Design principle 3. A preview that opens on a chart makes the chart the object</td></tr>
+          <tr><td>Tags, folders, collections</td><td>No taxonomy. The base layer checked and found none, and inventing one to fill a field is what this stage forbids</td></tr>
+          <tr><td>Certification</td><td>Refused in the bank: a badge is a verdict with no author. The owner field is the same information with a person attached</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Emotional support, two mechanisms</h3>
+    <ul>
+      <li><strong>P2, emotional.</strong> Stop being the bottleneck, and feel the work outlives my presence → <strong>the definition answers in their absence</strong> → blocks 2 and 3 together. The mechanism is the permanence of what is written here, not a notification.</li>
+      <li><strong>P2, social.</strong> Be the person whose numbers are trusted → <strong>attribution on the claim</strong> → block 3, the owner field, which is where the name on every card comes from.</li>
+    </ul>
+
+    <div class="flag warn">
+      <b>The risk that comes with the second one, carried here rather than found at stage 06</b>
+      <p>The mechanism that builds an analyst's reputation is the same one that exposes it: their name sits on every number, including the ones that break. Nothing in the research says analysts want that, and <strong>this field is where they find out.</strong></p>
+    </div>
+
+    <p><strong>Responsive.</strong> At 360, one column, fields full width, in block order. The definition area is at least four lines tall so it does not read as an afterthought beside a single-line name, and the action row is sticky so Run and Save are reachable without scrolling back past a long query. <strong>At width the column stays single and capped:</strong> a two-column form would put the definition beside the query and make them look equivalent, which is exactly the equivalence this page exists to deny.</p>
+
+    <p><strong>SEO:</strong> <code>noindex</code>, no schema, no SEO text. Private and transactional, and the reason is recorded rather than assumed.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#4.4">&larr; Structure (4.4)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '4.4 Define a metric';
+  window.NAV_SECTIONS = [
+    { id:'fields', label:'Blocks and wireframes' },
+    { id:'states', label:'Three states' },
+    { id:'edit',   label:'Editing and its consequence' },
+    { id:'rest',   label:'What is not here' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
