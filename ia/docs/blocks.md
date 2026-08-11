@@ -195,6 +195,16 @@ Order reasoned from 360, top to bottom.
 | **The row shows the matching fragment of the definition when the match was in the definition text and not in the name** | R2, phase D (S8) | Search reaching into the definition is the mechanism that closes R2, and a match the analyst cannot see makes the result look wrong. D3's "resource contains the searched column" notice is refused because we expose no columns; **our own object is the definition text, and that we do expose** |
 | **In the no-match state the primary action carries the query** ("Define *pipeline coverage*") | R5, node 4.3 | The action is already on the page. Searching for a metric that does not exist is the strongest available signal that it should, so the no-match becomes the activation moment rather than an apology |
 
+### Corrected again at node 3.1, where the template was reused for the first time
+
+**The search field does not survive the reuse.** A US B2B company of 50 to 300 people has one to three warehouse connections, so search over 3.1 is dead weight, and a field that returns everything it is given teaches that search in this product is pointless. **This is agreement with node 0.1 rather than a deviation:** search was always a persistent affordance over the registry, and sources were never in its scope.
+
+**The three columns written above for 3.1 collapse into two.** "Reachability" and "last successful run" are the same fact in both directions once node 0.4 is applied: a connection with nothing wrong carries the time it last answered, not a badge, and a connection that is down reads "Source is down since 07:40", which already carries a time. The line above was written by analogy with 4.1 and is corrected here.
+
+| Block added | Traces to | Why it is taken |
+| --- | --- | --- |
+| **"Metrics on it": how many metrics stop answering if this connection does** | The inbound barrier, phase D. Main job at one remove | The freed third column at 3.1. When a source is down, the difference between answering one person and answering five before they ask is knowing which metrics are affected. **A count, not a score**, so design principle 2 is intact: no aggregate, nothing to interpret. It also carries the removal rule, since a connection with metrics on it cannot be removed |
+
 **Checked against rule 3.** D3 leads with a lineage graph and three browse trees; D4 leads with popularity; R4 leads with three filters; R5 leads with an upgrade bar and a security toggle. **Nothing above matches any of them.** What is ours is the refusal of ranking and the narrowing to three columns, and both come from the product's own argument rather than from a page.
 
 **One competitor mechanism recorded as a live risk rather than a footnote.** Both domain sources rank or surface by popularity, and both count views made outside the tool. If our registry ever needs ordering beyond alphabetical, that is the moment to reread this row, because popularity is the ordering everyone reaches for and it is the one this product cannot use.

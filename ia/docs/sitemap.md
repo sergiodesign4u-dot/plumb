@@ -94,6 +94,9 @@ The reader's whole product. Every node here is MVP because the card is the one t
 | 3.2 | Connect a source | page | pages | Warehouse type, credentials, expected cadence | 3.3 | P2, R5 and the main job as a precondition | MVP |
 | 3.3 | Loading: testing the connection | state | pages | Progress, what is being tried | 3.4 or 4.2 | P2 | MVP |
 | 3.4 | Error: connection failed | state | pages | Which half failed, credentials or reachability | 3.2 | P2 | MVP |
+| 3.5 | Empty: no sources connected | state | pages | What stopped working, and one route. **Not a first-run screen** | 3.2 | P2 | MVP |
+
+**3.5 was discovered at stage 03b step 6 and inherits its label from 3.1.** Cluster 4 had an empty state for its listing and cluster 3 did not, which was an omission rather than a decision: the same canonical component cannot have empty behaviour in one place and none in the other. **It is reachable only when the registry is also empty**, because a connection carrying metrics cannot be removed, which is why it is a recovery state and not an onboarding one. Specified inside `ia/docs/pages/sources.md`.
 
 ### Cluster 4. Registry and definition
 

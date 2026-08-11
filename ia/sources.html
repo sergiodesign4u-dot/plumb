@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3.1 Sources - Plumb</title>
+<meta name="description" content="Node 3.1 with state 3.5: the first reuse of the listing template, where four blocks survive, search is dropped, and the third column has to be re-earned.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:430px; }
+  .topline{ display:flex; align-items:baseline; gap:9px; margin-bottom:11px; }
+  .ttl{ font-size:15px; font-weight:700; }
+  .cnt{ color:#6b7076; }
+  .sp{ flex:1; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; display:inline-block; }
+  .btn.full{ display:block; text-align:center; margin-bottom:12px; }
+  .btn.ghost{ border-style:dashed; color:#6b7076; font-weight:400; }
+  .grid{ width:100%; border-collapse:collapse; }
+  .grid th{ text-align:left; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+            color:#6b7076; font-weight:600; border-bottom:1px solid #14161a; padding:0 8px 5px 0; }
+  .grid td{ border-bottom:1px solid #e3e1dc; padding:8px 8px 8px 0; vertical-align:top; }
+  .grid td.nm{ font-weight:600; }
+  .grid td.nm span{ display:block; font-weight:400; color:#6b7076; font-size:11px; margin-top:2px; }
+  .rows{ border-top:1px solid #14161a; }
+  .row{ border-bottom:1px solid #e3e1dc; padding:9px 0; }
+  .row .nm{ font-weight:600; }
+  .row .ln{ color:#6b7076; font-size:11px; margin-top:2px; }
+  .ghostrow{ border-bottom:1px dashed #c9c6bf; padding:9px 0; color:#6b7076; }
+  .ghostrow .nm{ font-weight:600; }
+  .tail{ color:#6b7076; font-size:11px; margin-top:9px; }
+  .dlg{ border:1px solid #14161a; padding:11px 10px; line-height:1.5; }
+  .dlg b{ display:block; margin-bottom:4px; }
+  .dlg .acts{ display:flex; gap:8px; margin-top:11px; flex-wrap:wrap; }
+  .dlg .acts .btn{ flex:none; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 3.1 with 3.5 &middot; pages</p>
+    <h1>The reuse works in four blocks out of five, and the interesting part is the fifth</h1>
+    <p class="standfirst lede">This node exists to be a copy of the listing template written at 4.1, so the result worth reporting is where the copy stops: search is dropped, and the third column had to be re-earned because the block bank's three collapse into two.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>State: 3.5, discovered here</span>
+      <span>Source: <code>ia/docs/pages/sources.md</code></span>
+    </div>
+  </header>
+
+  <!-- Template .......................................................... -->
+  <section id="template">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The template, and the two places it did not survive</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Block from node 4.1</th><th>Here</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>1. Title with a count</td><td>"Sources, 2"</td><td><strong>Unchanged</strong></td></tr>
+          <tr><td>2. <strong>Search field</strong></td><td><strong>Dropped</strong></td><td>See below</td></tr>
+          <tr><td>3. Primary action</td><td>Connect a source</td><td><strong>Unchanged</strong> in shape and position, third at 360</td></tr>
+          <tr><td>4. The list, three columns</td><td>Different columns, and one is not the bank's</td><td><strong>Re-earned</strong></td></tr>
+          <tr><td>5. Result count line</td><td>"2 of 2"</td><td><strong>Unchanged</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>Block 2 is dropped, and the global component agrees</b>
+      <p><strong>A US B2B company of 50 to 300 people has one to three warehouse connections.</strong> Search over a list of three is dead weight, and a field that returns everything it is given teaches the analyst that search here is pointless, which is a bad thing to teach in a product where search is the mechanism that closes R2.</p>
+      <p style="margin-top:8px"><strong>This is agreement with the global bar rather than a deviation from it.</strong> Node 0.1 already says search is a persistent affordance <strong>over the registry</strong>, not a global find-anything. Sources were never in its scope, and this is where that becomes visible.</p>
+    </div>
+
+    <h3>The third column, because the bank's three collapse into two</h3>
+
+    <p>The bank wrote 3.1's columns by analogy with 4.1: name, reachability, last successful run. <strong>Read against node 0.4, two of those are the same fact.</strong> 0.4 refuses "Healthy" by name, so a reachable connection is expressed as the time it last answered; and an unreachable one reads "Source is down since 07:40", which already carries a time. <strong>Reachability and last run are one column in both directions</strong>, and the third is free.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Column</th><th>What it holds</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Name</strong></td><td>Warehouse type and the database or account. Snowflake, <code>ANALYTICS.PROD</code></td></tr>
+          <tr><td><strong>State</strong></td><td>"Last answered 09:12, 3 h ago", or "Source is down since 07:40". <strong>The reader's exact words</strong>, from node 0.4, never "unhealthy", "degraded" or "error"</td></tr>
+          <tr><td><strong>Metrics on it</strong></td><td><strong>How many metrics stop answering if this connection does.</strong> A count from our own store, no warehouse query</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The third column is a block the bank did not have, so it is named out loud and entered into the bank with its tracing.</strong> It traces to the inbound barrier: the analyst is asked why a number is different, and when a source is down, the difference between answering one person and answering five before they ask is knowing which metrics are affected. <strong>It is a count and not a score</strong>, so design principle 2 is intact: no aggregate, no health percentage, nothing to interpret.</p>
+
+    <div class="flag">
+      <b>The vocabulary is the reader's, and that is what node 0.4 is for</b>
+      <p>The connection is the analyst's object and the card is the reader's, and <strong>they say the same words about the same failure.</strong> A product whose whole claim is that a number means one thing cannot have its infrastructure page describing a failure differently from the page the customer's customer reads.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 3.1, no search field and a count that matters</div>
+        <div class="bw wide">
+          <div class="topline"><span class="ttl">Sources</span><span class="cnt">2</span><span class="sp"></span><span class="btn">Connect a source</span></div>
+          <table class="grid">
+            <thead><tr><th>Name &darr;</th><th>State</th><th>Metrics on it</th></tr></thead>
+            <tbody>
+              <tr><td class="nm">Snowflake<span>ANALYTICS.PROD</span></td><td>Last answered 09:12, 3 h ago</td><td>8</td></tr>
+              <tr><td class="nm">BigQuery<span>finance-prod</span></td><td>Source is down since 07:40</td><td>4</td></tr>
+            </tbody>
+          </table>
+          <div class="tail">2 of 2</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, three lines per row, action third</div>
+        <div class="bw">
+          <div class="topline"><span class="ttl">Sources</span><span class="cnt">2</span></div>
+          <span class="btn full">Connect a source</span>
+          <div class="rows">
+            <div class="row"><div class="nm">Snowflake, ANALYTICS.PROD</div><div class="ln">Last answered 09:12, 3 h ago</div><div class="ln">8 metrics on it</div></div>
+            <div class="row"><div class="nm">BigQuery, finance-prod</div><div class="ln">Source is down since 07:40</div><div class="ln">4 metrics on it</div></div>
+          </div>
+          <div class="tail">2 of 2</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Row ............................................................... -->
+  <section id="row">
+    <div class="sec-head"><span class="sec-num">02</span><h2>What the row does, and what it never shows</h2></div>
+
+    <p><strong>The row opens the connection</strong>, which is node 3.2 with its fields filled in. That mirrors cluster 4 exactly: 4.4 is both "new" and "edit", and 3.2 is both "connect" and "the settings of a connection that exists". <strong>A row overflow menu was refused in the bank and stays refused here</strong>, so testing a connection lives on 3.2, where 3.3 and 3.4 already are.</p>
+
+    <div class="flag warn">
+      <b>No credential on this page, not even masked</b>
+      <p>The row carries the warehouse type and the database, never a user, a key or a role. <strong>A masked secret in a list is still a secret in a list</strong>, and this product's compliance argument is that the customer's material is not ours to hold more of than we must.</p>
+    </div>
+
+    <h3>Removing a connection, and the count we can name</h3>
+
+    <p><strong>A connection carrying metrics cannot be removed.</strong> The confirmation says how many and what to do: repoint them to another source or delete them first. <strong>Blocking is the decision</strong>, because the alternative is a class of orphaned metric whose connection no longer exists, and that would need a state of its own on the card, invented to cover a case we chose to allow.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, removal refused with the number named</div>
+        <div class="bw">
+          <div class="dlg">
+            <b>BigQuery, finance-prod cannot be removed yet.</b>
+            8 metrics read from this connection. Point them at another source, or delete them, and this connection can then be removed.
+            <div class="acts"><span class="btn">See the 8 metrics</span><span class="btn ghost">Cancel</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 3.5, a ghost row and a plain statement</div>
+        <div class="bw">
+          <div class="topline"><span class="ttl">Sources</span><span class="cnt">0</span></div>
+          <span class="btn full">Connect a source</span>
+          <div class="rows">
+            <div class="ghostrow"><div class="nm">Warehouse and database</div><div>State at last answer</div><div>Metrics on it</div></div>
+          </div>
+          <p style="color:#6b7076; margin:10px 0 0; line-height:1.5">Nothing is connected, so no metric can answer. Connecting a warehouse is the one thing this page does.</p>
+          <div class="tail">0 of 0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flag">
+      <b>Here the number can be named, and the contrast with node 4.7 is exactly whose object it is</b>
+      <p>Metrics are ours: definitions, owners and bindings live in our Postgres, so "8 metrics use this connection" is a fact we hold. <strong>Readings are not</strong>: nothing about who opened a card is stored, which is why 4.7 can name a consequence and never a count. The two pages behave differently because the architecture differs, not because one of them is less careful.</p>
+    </div>
+  </section>
+
+  <!-- Empty ............................................................. -->
+  <section id="empty">
+    <div class="sec-head"><span class="sec-num">03</span><h2>3.5 was missing from the map, and it is not what it looks like</h2></div>
+
+    <p><strong>Discovered here and registered in the map.</strong> Cluster 4 had an empty state for its listing and cluster 3 did not, which was an omission rather than a decision: the same canonical component cannot have empty behaviour in one place and none in the other. It inherits MVP from 3.1.</p>
+
+    <div class="flag">
+      <b>It is a recovery state, not an onboarding one, and that changes what it says</b>
+      <p>The map routes a new workspace from 3.3, testing the connection, straight into 4.2. <strong>So nobody arrives here on a first run:</strong> the only way to see an empty sources list is to remove the last connection. And it is narrower still, because a connection carrying metrics cannot be removed, so <strong>3.5 is reachable only when the registry is empty too.</strong></p>
+      <p style="margin-top:8px">Which is why the sentence it carries is not "connect your first source to get started" but a plain statement that nothing is connected and nothing can answer.</p>
+    </div>
+
+    <p><strong>The structure is retained</strong>, as at 4.2: the header row at width, a ghost row with the field labels at 360. Same canonical behaviour, which is the whole point of a canonical component.</p>
+  </section>
+
+  <!-- Rest .............................................................. -->
+  <section id="rest">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Filters, feeling and the responsive rule</h2></div>
+
+    <p><strong>Filters and facets: none</strong>, and the reason is stronger here than at 4.1: with one to three rows there is nothing to filter. Written rather than left blank, per the template. <strong>Sort by name</strong>, and there is no second sort.</p>
+
+    <div class="flag warn">
+      <b>Nothing from the emotional and social table lands on this page</b>
+      <p>Written rather than padded. Those mechanisms live on the card, on the owner field and on the registry count. <strong>This page is infrastructure</strong>, and inventing an emotional claim for it is exactly the move the base layer forbade.</p>
+      <p style="margin-top:8px"><strong>One adjacent note, and it is not a mechanism.</strong> The state column is the earliest place an analyst can learn that a source is down, before the inbound arrives. That is a real reduction of the ambush described in the As-Is map, but <strong>nothing in the research measures it</strong>, so it is named as a possibility and not as support for a job.</p>
+    </div>
+
+    <p><strong>Responsive.</strong> At 360: title with count, primary action, then rows of three lines. <strong>No horizontal scroll</strong>, the same rule as 4.1, because a sideways table hides the state column and the state column is why the row exists. At width: three columns, sort arrow on the first, primary action to the right of the title, column widths set by the state column.</p>
+
+    <p><strong>SEO:</strong> <code>noindex</code>, no schema, no SEO text. Behind sign-in, and it names the customer's warehouses.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#3.1">&larr; Structure (3.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '3.1 Sources';
+  window.NAV_SECTIONS = [
+    { id:'template', label:'The template' },
+    { id:'row',      label:'The row and removal' },
+    { id:'empty',    label:'3.5, discovered here' },
+    { id:'rest',     label:'Filters and responsive' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

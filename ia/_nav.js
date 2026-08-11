@@ -20,6 +20,7 @@ window.IA_NAV = [
   { label: 'The number card',    file: 'number-card.html', group: 'pages', node: '2.1', type: 'page' },
   { label: 'Where this number came from', file: 'source-layer.html', group: 'pages', node: '2.7', type: 'section' },
   { label: 'Send this number',   file: 'send.html', group: 'pages', node: '2.8', type: 'dialog' },
+  { label: 'Sources',            file: 'sources.html', group: 'pages', node: '3.1', type: 'page' },
   { label: 'The metric registry', file: 'metric-registry.html', group: 'pages', node: '4.1', type: 'page' },
   { label: 'Define a metric',    file: 'define-metric.html', group: 'pages', node: '4.4', type: 'page' },
   { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' }
