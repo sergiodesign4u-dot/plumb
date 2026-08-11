@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sitemap - Plumb</title>
+<meta name="description" content="The node map of Plumb as a tree: eight clusters, 37 nodes, 29 of them MVP, with states and dialogs counted as nodes rather than notes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: the diagram frame and the cluster pills */
+  .diagram{ border:1px solid var(--rule-strong); background:#fff; padding:14px 10px;
+            margin:18px 0 10px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .pills{ display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 6px; }
+  .pill{ font-family:var(--sans); font-size:12px; line-height:1; padding:7px 11px;
+         border:1px solid var(--rule-strong); background:#fff; color:var(--ink);
+         cursor:pointer; letter-spacing:.01em; }
+  .pill[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:#fff; }
+  .pill i{ font-style:normal; color:var(--muted); margin-left:6px; }
+  .pill[aria-pressed="true"] i{ color:#cfe3db; }
+  .cl{ margin:26px 0; }
+  .cl h3{ margin:0 0 6px; font-size:1.05rem; }
+  .cl .meta{ font-family:var(--sans); font-size:12px; color:var(--muted); margin:0 0 10px; }
+  .cl.dim{ display:none; }
+  .nodes{ font-family:var(--sans); font-size:13.5px; line-height:1.5; }
+  .nodes div{ padding:5px 0; border-bottom:1px solid var(--rule); }
+  .nodes div:last-child{ border-bottom:0; }
+  .n{ font-weight:700; color:var(--accent); display:inline-block; min-width:34px; }
+  .ty{ color:var(--muted); }
+  .sc{ font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; margin-left:6px; }
+  .sc.mvp{ color:var(--accent); }
+  .sc.later{ color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Information Architecture</p>
+    <h1>Thirty-seven nodes, because a state is a node and not a note</h1>
+    <p class="standfirst lede">The concept map said which screens exist. This is the tree they expand into: eight clusters, every node numbered, states and dialogs counted separately. Seven MVP screens became 29 MVP nodes, and that number is what the estimates in this stage rest on.</p>
+    <div class="dateline">
+      <span>Drawn 2026-08-11</span>
+      <span>37 nodes, 29 MVP</span>
+      <span>Source: <code>ia/docs/sitemap.md</code></span>
+    </div>
+  </header>
+
+  <!-- Tree .............................................................. -->
+  <section id="tree">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The tree</h2></div>
+
+    <p>Clusters and the transitions between them. <strong>This page is the overview only.</strong> What a node contains, what states it carries and what SEO it declares lives on the node's own page, reachable from the <a href="structure.html">structure hub</a>.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+graph TD
+    C0["0. Global frame<br/>navigation, footer, toasts"]
+    C1["1. Sign in<br/>SSO and its two states"]
+    C2["2. The number card<br/>the reader's whole product"]
+    C3["3. Sources"]
+    C4["4. Registry and definition"]
+    C5["5. Workspace"]
+    C6["6. Public surface"]
+    C7["7. System nodes"]
+
+    C6 --> C1
+    C1 --> C3
+    C1 --> C4
+    C3 --> C4
+    C4 --> C2
+    C2 --> C2
+    C4 --> C5
+    C0 -.-> C2
+    C0 -.-> C4
+    C7 -.-> C2
+
+    classDef mvp fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
+    classDef later fill:#f6f5f1,stroke:#c9c6bf,color:#6b7076;
+    classDef mixed fill:#fcfcfa,stroke:#c9c6bf,color:#14161a;
+    class C0,C1,C2,C3,C4 mvp;
+    class C5,C6 later;
+    class C7 mixed;
+      </pre>
+    </div>
+
+    <p class="note">Green clusters are entirely MVP. Grey are entirely ПОТІМ. The system cluster is mixed: 404 and 500 are MVP, maintenance and the cookie notice are not. Dotted arrows are global elements and system pages, which attach to everything rather than sitting in a sequence.</p>
+
+    <div class="pills" id="pills">
+      <button class="pill" data-c="all" aria-pressed="true">All<i>37</i></button>
+      <button class="pill" data-c="0" aria-pressed="false">0 Global frame<i>3</i></button>
+      <button class="pill" data-c="1" aria-pressed="false">1 Sign in<i>3</i></button>
+      <button class="pill" data-c="2" aria-pressed="false">2 Number card<i>10</i></button>
+      <button class="pill" data-c="3" aria-pressed="false">3 Sources<i>4</i></button>
+      <button class="pill" data-c="4" aria-pressed="false">4 Registry<i>7</i></button>
+      <button class="pill" data-c="5" aria-pressed="false">5 Workspace<i>2</i></button>
+      <button class="pill" data-c="6" aria-pressed="false">6 Public<i>4</i></button>
+      <button class="pill" data-c="7" aria-pressed="false">7 System<i>4</i></button>
+    </div>
+
+    <div class="cl" data-c="0">
+      <h3>0. Global frame</h3>
+      <p class="meta">3 nodes, 3 MVP. Group: global. These are page-level nodes with their own state matrices, not decoration.</p>
+      <div class="nodes">
+        <div><span class="n">0.1</span> Global navigation <span class="ty">section</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">0.2</span> Footer <span class="ty">section</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">0.3</span> Toast and inline feedback <span class="ty">section</span><span class="sc mvp">MVP</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="1">
+      <h3>1. Sign in</h3>
+      <p class="meta">3 nodes, 3 MVP. The analyst only: the reader has no account by decision.</p>
+      <div class="nodes">
+        <div><span class="n">1.1</span> Sign in through SSO <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">1.2</span> Loading: the identity provider answers <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">1.3</span> Error: authentication failed <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="2">
+      <h3>2. The number card</h3>
+      <p class="meta">10 nodes, 10 MVP. The reader's whole product, and the one thing we have to win on.</p>
+      <div class="nodes">
+        <div><span class="n">2.1</span> The number card <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.2</span> Loading: value queried at read time <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.3</span> State: as of, fresh <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.4</span> State: source is down <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.5</span> State: definition changed after this was saved <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.6</span> Empty: the query returned nothing <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.7</span> Where this number came from <span class="ty">section</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.8</span> Send this number <span class="ty">dialog</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.9</span> State: not readable without an account <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.10</span> State: the owner is named, the number is not shown <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="3">
+      <h3>3. Sources</h3>
+      <p class="meta">4 nodes, 4 MVP.</p>
+      <div class="nodes">
+        <div><span class="n">3.1</span> Sources <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">3.2</span> Connect a source <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">3.3</span> Loading: testing the connection <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">3.4</span> Error: connection failed <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="4">
+      <h3>4. Registry and definition</h3>
+      <p class="meta">7 nodes, 7 MVP.</p>
+      <div class="nodes">
+        <div><span class="n">4.1</span> Metric registry <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.2</span> Empty: no metrics yet <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.3</span> State: search results <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.4</span> Define a metric <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.5</span> Loading: the definition runs against the source <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.6</span> Error: the definition does not run <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">4.7</span> State: editing a definition, previous version retained <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="5">
+      <h3>5. Workspace</h3>
+      <p class="meta">2 nodes, 0 MVP. Both carry no job: tenancy and the business model.</p>
+      <div class="nodes">
+        <div><span class="n">5.1</span> Workspace and people <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">5.2</span> Plan and seats <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="6">
+      <h3>6. Public surface</h3>
+      <p class="meta">4 nodes, 0 MVP. Jobless by construction, and recorded rather than repaired.</p>
+      <div class="nodes">
+        <div><span class="n">6.1</span> Product page <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">6.2</span> Trust and security <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">6.3</span> Pricing <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">6.4</span> Documentation <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+      </div>
+    </div>
+
+    <div class="cl" data-c="7">
+      <h3>7. System nodes</h3>
+      <p class="meta">4 nodes, 2 MVP.</p>
+      <div class="nodes">
+        <div><span class="n">7.1</span> 404 <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">7.2</span> 500 <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">7.3</span> Maintenance <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">7.4</span> Cookie notice <span class="ty">section</span><span class="sc later">ПОТІМ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes ............................................................. -->
+  <section id="notes">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Five nodes with no parent, and one discrepancy</h2></div>
+
+    <p>Scope labels are carried over from the base layer, not re-derived. Five nodes had nothing to inherit from, so the label was assigned here and each is named out loud.</p>
+
+    <ul>
+      <li><strong>3.1 Sources, MVP.</strong> It came out of the navigation: the base layer put a "Sources" item in the analyst's menu, and a menu item with no list behind it is a promise with no node.</li>
+      <li><strong>0.2 Footer, MVP.</strong> The number card is a public page with no account, and it cannot ship with no anchor at all for whose product this is and under what terms.</li>
+      <li><strong>0.3 Toast and inline feedback, MVP.</strong> Sending a link, saving a definition and failing at either need somewhere to say what happened.</li>
+      <li><strong>7.1 404, MVP, and it matters more here than in most products.</strong> The reader's only entrance is a link, so a broken or expired link is their first contact with us rather than a rare edge.</li>
+      <li><strong>7.2 500, MVP</strong>, for the same reason.</li>
+    </ul>
+
+    <p><strong>One discrepancy, not corrected silently.</strong> The cookie notice is labelled ПОТІМ because the market is US B2B and GDPR was deliberately deferred. But the public card with no account will almost certainly carry analytics, and at that point the question stops being legal and becomes a product question <strong>on the very screen where we promise to store nothing about the reader</strong>. The label stays, the discrepancy is recorded, and the system-nodes step comes back to it.</p>
+  </section>
+
+  <footer class="note">
+    <p>Plumb, stage 03b of 13. The data behind this tree is <code>ia/docs/sitemap.md</code>. Each node gets its own specification and page, reachable from the <a href="structure.html">structure hub</a>.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        background: '#ffffff', primaryColor: '#f6f5f1', primaryTextColor: '#14161a',
+        primaryBorderColor: '#c9c6bf', lineColor: '#6b7076', secondaryColor: '#fcfcfa',
+        tertiaryColor: '#fcfcfa', clusterBkg: '#fcfcfa', clusterBorder: '#c9c6bf',
+        fontFamily: 'ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif', fontSize: '13px'
+      },
+      flowchart: { useMaxWidth: false, htmlLabels: true, curve: 'basis' }
+    });
+  }
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  (function(){
+    var pills = document.querySelectorAll('#pills .pill');
+    var cls = document.querySelectorAll('.cl');
+    pills.forEach(function(p){
+      p.addEventListener('click', function(){
+        var c = p.getAttribute('data-c');
+        pills.forEach(function(x){ x.setAttribute('aria-pressed', x === p ? 'true' : 'false'); });
+        cls.forEach(function(el){
+          el.classList.toggle('dim', c !== 'all' && el.getAttribute('data-c') !== c);
+        });
+      });
+    });
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'tree',  label:'The tree' },
+    { id:'notes', label:'Parentless nodes' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

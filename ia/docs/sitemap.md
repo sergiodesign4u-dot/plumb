@@ -42,69 +42,110 @@ A metric has one current definition version and a pointer to the previous one; n
 
 ---
 
-## Concept sitemap
+## Node map
 
-**Language fork, checked before the first node.** `CLAUDE.md` records one language, English, so no node multiplies by language and no fork is taken. Recorded here so that 03b does not ask again.
+**This section replaces the concept sitemap of the base layer.** One list, not two. The concept diagram on `ia/concept-map.html` stays as it is, because at its own level it is honest, and it now carries a line saying it has been expanded into this.
 
-Screens are grouped by the intent of the person, not by sections of a site. Depth is deliberately absent: levels are assigned at step 3, so that there is something to count taps on.
+**Language fork, checked before the first node.** `CLAUDE.md` records one language, English, so no node multiplies by language.
 
-### A. Read a number and work out whether I can stand behind it &nbsp; primary
+**How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the five nodes with no parent are named below.
 
-| Screen | Job | Scope |
-| --- | --- | --- |
-| **A1. The number card.** The value, the definition in words, the three named states, age with the expectation beside it, and the name and date on the claim. Permanent URL, no account | Main, R1, R4 | **MVP** |
-| **A2. Where this number came from.** The source, when its query last ran, what it ran against. Opens on one action from A1 | Main | **MVP** |
+**Eight clusters, 37 nodes, 29 of them MVP.** The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 29 MVP nodes, and that is the honest count the two estimates in this stage depend on.
 
-### B. Hand the number on &nbsp; primary, and the analyst uses it too
+### Cluster 0. Global frame
 
-| Screen | Job | Scope |
-| --- | --- | --- |
-| **B1. Send this number.** The permanent link in one action | **R2** for the analyst, who sends the answer instead of re-explaining it, and the **main job as a precondition**: without it the reader's path never starts. Corrected at the critique, where this tag and the matrix disagreed | **MVP** |
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.1 | Global navigation | section | global | Metrics, Sources, persistent search, account corner | 4.1, 3.1, 5.1 | P2. **The reader never sees this** | MVP |
+| 0.2 | Footer | section | global | Product identity, trust link, legal | 6.2, 6.4 | Both, minimally | MVP |
+| 0.3 | Toast and inline feedback | section | global | Sent, saved, failed, retry | Returns to the originating node | Both | MVP |
 
-### C. Bring a metric under control &nbsp; secondary
+### Cluster 1. Sign in
 
-| Screen | Job | Scope |
-| --- | --- | --- |
-| **C1. Connect a source** | Main as a precondition, R5 | **MVP** |
-| **C2. Define a metric.** Definition text, owner, binding to a source | R5, R3 | **MVP** |
-| **C3. Metric registry.** The list, with search and jump by name | R2, R5 | **MVP** |
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1.1 | Sign in through SSO | page | pages | Single SSO action, no password field | 1.2 | P2, precondition of R5 and R2 | MVP |
+| 1.2 | Loading: the identity provider answers | state | pages | Progress, no cancel that strands the user | 3.2 first run, 4.1 after | P2 | MVP |
+| 1.3 | Error: authentication failed | state | pages | Reason, retry, a route out | 1.1 | P2 | MVP |
 
-**Search gets no screen of its own.** It is a component on C3 and in the analyst's global navigation, not a place. Backlog item 11 therefore has a home, and no screen was invented to fill a row in the matrix.
+### Cluster 2. The number card
 
-**A note on cluster B, added at the second critique.** B1 sits in a cluster labelled primary while its own strongest job, R2, belongs to the secondary persona. Both are true and the cluster keeps its label: the reader hands a number on, and the analyst answers once by sending the same link. It is the one screen in this map that two personas use for two different reasons, which is worth knowing before the detail layer writes it up.
+The reader's whole product. Every node here is MVP because the card is the one thing this product has to win on.
 
-### D. Sign in and be accountable &nbsp; secondary
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2.1 | The number card | page | pages | Value, definition in words, named state, age with expected cadence, name and date on the claim | 2.7, 2.8 | P1, main job plus R1 and R4 | MVP |
+| 2.2 | Loading: value queried at read time | state | pages | The value only; definition and attribution are already there | 2.3, 2.4, 2.6 | P1 | MVP |
+| 2.3 | State: as of, fresh | state | pages | Timestamp, relative age, expected cadence | 2.1 | P1 | MVP |
+| 2.4 | State: source is down | state | pages | No value at all, definition, owner, last successful run | 2.10 | P1, and the node where the main job and R1 join | MVP |
+| 2.5 | State: definition changed after this was saved | state | pages | The change, the previous definition, who changed it and when | 2.7 | P1, R4, and R3 from the other side | MVP |
+| 2.6 | Empty: the query returned nothing | state | pages | The reason in words. **Never a zero** | 2.7 | P1 | MVP |
+| 2.7 | Where this number came from | section | pages | Source, last run, what it ran against. One hop, in words | 2.1 | P1 | MVP |
+| 2.8 | Send this number | dialog | pages | The permanent link, one action, the moment of reading carried in it | 0.3 | Both. Delivery, not recruitment | MVP |
+| 2.9 | State: not readable without an account | state | pages | What is missing and why, no login wall theatre | 2.10 or a dead end | P1 | MVP |
+| 2.10 | State: the owner is named, the number is not shown | state | pages | Name and date, no value | End, partial close | P1, R1 | MVP |
 
-| Screen | Job | Scope |
-| --- | --- | --- |
-| **D1. Sign in through SSO** | Precondition of R5 and R2 | **MVP** |
-| **D2. Workspace and people** | `[ORPHAN]`, tenancy rather than anybody's job | ПОТІМ |
-| **D3. Plan and seats** | `[ORPHAN]`, the business model rather than anybody's job | ПОТІМ |
+### Cluster 3. Sources
 
-### E. The public surface &nbsp; none of the personas
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 3.1 | Sources | page | pages | List of connections, reachability, last successful run | 3.2 | P2 | MVP |
+| 3.2 | Connect a source | page | pages | Warehouse type, credentials, expected cadence | 3.3 | P2, R5 and the main job as a precondition | MVP |
+| 3.3 | Loading: testing the connection | state | pages | Progress, what is being tried | 3.4 or 4.2 | P2 | MVP |
+| 3.4 | Error: connection failed | state | pages | Which half failed, credentials or reachability | 3.2 | P2 | MVP |
 
-Four screens, and **all four are jobless by construction**: the product page where the real card component renders, the trust page (SOC 2, SSO, metadata only), pricing, and documentation. All **ПОТІМ**.
+### Cluster 4. Registry and definition
 
-`CLAUDE.md` already says the two growth mechanics carry no job, and that the buyer is deliberately given no product surface while still imposing a trust surface on the IA. This cluster therefore **stands apart and does not enter the traceability matrix on equal footing** with the rest. Otherwise four marketing pages would read as work somebody is doing.
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 4.1 | Metric registry | page | pages | List, search, owner and freshness per row | 4.4, 2.1 | P2, R2 and R5 | MVP |
+| 4.2 | Empty: no metrics yet | state | pages | One route to defining the first | 4.4 | P2 | MVP |
+| 4.3 | State: search results | state | pages | Matches, and a no-match case that is not a dead end | 4.1, 4.4 | P2, R2 | MVP |
+| 4.4 | Define a metric | page | pages | Definition in words, owner, binding to a source | 4.5 | P2, R5 and R3 | MVP |
+| 4.5 | Loading: the definition runs against the source | state | pages | Progress | 4.6 or 4.1 | P2 | MVP |
+| 4.6 | Error: the definition does not run | state | pages | What failed, returns to the definition | 4.4 | P2 | MVP |
+| 4.7 | State: editing a definition, previous version retained | state | pages | The change, and what it will do to cards already sent | 2.5 | P2, R3 | MVP |
 
-### What was deliberately not added
+### Cluster 5. Workspace
 
-- **There is no "what changed in the definition" screen, and that is not an omission.** T5 considered a diff of the two definitions and **rejected it**, on the grounds that it answers a question the reader did not ask. The previous definition lives as a line inside the changed state on A1. Adding the screen here would have silently cancelled our own step 7 decision.
-- **There are no states in this map at all.** They arrive as nodes in the flows at step 4.
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 5.1 | Workspace and people | page | pages | Members, roles | 5.2 | **No job.** Tenancy | ПОТІМ |
+| 5.2 | Plan and seats | page | pages | Seats, billing | 5.1 | **No job.** Business model | ПОТІМ |
 
-### Check against the chosen UX pattern
+### Cluster 6. Public surface
 
-The pattern is **evidence on the claim**: trust information lives on the object being read and travels with it, one line immediately, depth on request. **The map implements it.** A1 carries the evidence, A2 is the depth, and there is no dedicated doubt surface, because that pattern was rejected at stage 01.
+Jobless by construction, and that is recorded rather than repaired.
 
-**Exactly one thing can work against the pattern, and it is named rather than left to be discovered: C3.** A registry with search is the rejected "catalog and search" pattern in its pure form. It stays, because it is the analyst's instrument, and the guard is a single rule: **C3 must never appear in the reader's navigation.** The moment the registry becomes the reader's entry point, we have changed the pattern without saying so. This is carried into the navigation model at step 3 as a rule.
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 6.1 | Product page | page | pages | The real card component rendered live | 6.3, 1.1 | Acquisition | ПОТІМ |
+| 6.2 | Trust and security | page | pages | SOC 2 position, SSO, metadata only | 6.1 | The buyer, who has no product surface | ПОТІМ |
+| 6.3 | Pricing | page | pages | Seats, free readers | 1.1 | Acquisition | ПОТІМ |
+| 6.4 | Documentation | page | pages | How a definition is written and read | 6.1 | Both | ПОТІМ |
 
-### Second slice, against the entity inventory
+### Cluster 7. System nodes
 
-Every entity has at least one screen where it is seen or acted on. Metric on A1, C2 and C3. Definition version visible on A1, written on C2. Source connection visible on A2, managed on C1. Owner visible on A1, set on C2. Analyst account on D1 and D2. Workspace on D2. The link on B1. **No entity is unused and no screen is missing.**
+| # | Name | Type | Group | Includes | Transitions | Serves | Scope |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 7.1 | 404 | page | pages | What was expected here, and a route that is not a wall | 6.1 or 4.1 by role | Both, and **the reader most of all** | MVP |
+| 7.2 | 500 | page | pages | What broke, what is safe to assume, a way back | Retry | Both | MVP |
+| 7.3 | Maintenance | page | pages | Duration if known | Retry | Both | ПОТІМ |
+| 7.4 | Cookie notice | section | global | Consent, only if anything is set | Dismiss | Legal | ПОТІМ |
 
-**E6, the reading, is covered by the state on A1**, and that gives the first argument in the fork left open at step 1. If the snapshot is encoded in the link, no separate object and no separate screen are needed at all. If a reading is stored, an object about an accountless reader appears. **The map leans towards encoding it in the link**, and the flows at step 4 settle it.
+### Five nodes with no parent, each named out loud
 
-**Thirteen screens, seven of them MVP.** (Corrected at step 5 while the estimate was being counted: the first pass said eight.) That is below the 15 to 30 boundary in `CLAUDE.md`, and there is nothing further to cut without losing work somebody does.
+The scope label was assigned here, because there was nothing to inherit it from.
+
+- **3.1 Sources, MVP.** It came out of the navigation: the base layer put a "Sources" item in the analyst's menu, and a menu item with no list behind it is a promise with no node.
+- **0.2 Footer, MVP.** The number card is a **public page with no account**, and it cannot ship with no anchor at all for whose product this is and under what terms.
+- **0.3 Toast and inline feedback, MVP.** Sending a link, saving a definition and failing at either need somewhere to say what happened.
+- **7.1 404, MVP, and it matters more here than in most products.** The reader's only entrance is a link, so **a broken or expired link is their first contact with us**, not a rare edge. It must not be a wall.
+- **7.2 500, MVP**, for the same reason.
+
+### One discrepancy, not corrected silently
+
+**7.4, the cookie notice, is labelled ПОТІМ** because the market is US B2B and GDPR was deliberately deferred. But the **public card with no account will almost certainly carry analytics**, and at that point the question stops being legal and becomes a product question on the very screen where we promise to store nothing about the reader. The label stays ПОТІМ, the discrepancy is named, and step 7 comes back to it.
 
 ---
 

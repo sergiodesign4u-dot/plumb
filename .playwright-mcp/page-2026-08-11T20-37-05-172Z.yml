@@ -1,0 +1,36 @@
+- generic [ref=f27e2]:
+  - group [ref=f27e3]:
+    - generic "Contents ▾" [ref=f27e4] [cursor=pointer]
+  - main [ref=f27e5]:
+    - generic [ref=f27e6]:
+      - paragraph [ref=f27e7]: Plumb · Stage 03b · Information Architecture
+      - heading "Every node, one chip at a time" [level=1] [ref=f27e8]
+      - paragraph [ref=f27e9]: The launcher for the detail layer. Each node gets a specification and its own page, and appears here as a chip the moment it is written. This hub fills up as the work proceeds rather than being drawn all at once.
+      - generic [ref=f27e10]:
+        - generic [ref=f27e11]: Opened 2026-08-11
+        - generic [ref=f27e12]: 37 nodes planned, 29 of them MVP
+        - generic [ref=f27e13]:
+          - text: "Registry:"
+          - code [ref=f27e14]: ia/_nav.js
+    - generic [ref=f27e15]:
+      - generic [ref=f27e16]:
+        - generic [ref=f27e17]: "01"
+        - heading "Nodes" [level=2] [ref=f27e18]
+      - paragraph [ref=f27e19]:
+        - text: "Two groups, exactly as the map declares them:"
+        - strong [ref=f27e20]: global elements
+        - text: ", which are page-level nodes with their own state matrices rather than decoration, and"
+        - strong [ref=f27e21]: pages
+        - text: . The tree they come from is on the
+        - link "sitemap page" [ref=f27e22] [cursor=pointer]:
+          - /url: sitemap.html
+        - text: .
+      - paragraph [ref=f27e24]: No nodes written yet. Chips appear here as each node is specified, one at a time.
+    - paragraph [ref=f27e26]:
+      - text: Plumb, stage 03b of 13. The node data is
+      - code [ref=f27e27]: ia/docs/sitemap.md
+      - text: ", the per-node sources are"
+      - code [ref=f27e28]: ia/docs/pages/
+      - text: ", and the chips above are rendered from"
+      - code [ref=f27e29]: ia/_nav.js
+      - text: .
