@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0.3 Toast and inline feedback - Plumb</title>
+<meta name="description" content="Node 0.3: feedback for Plumb. A toast reports what the person just did and never what is true about a number, which is the rule that keeps this product from becoming an incident tool.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white mockup frames */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); min-width:300px; font-size:12px; color:#14161a; position:relative;
+       min-height:170px; padding:14px 12px; }
+  .num{ font-size:30px; font-weight:700; letter-spacing:-.02em; }
+  .sub{ color:#6b7076; margin-top:5px; }
+  .toast{ position:absolute; left:12px; right:12px; bottom:12px; border:1px solid #14161a;
+          background:#fff; padding:10px 11px; display:flex; align-items:center; gap:10px; }
+  .toast.desk{ left:auto; width:250px; }
+  .toast .msg{ flex:1; }
+  .toast .act{ text-decoration:underline; }
+  .toast .x{ width:20px; height:20px; border:1px solid #14161a; display:flex;
+             align-items:center; justify-content:center; flex:none; }
+  .inline{ border:1px solid #14161a; padding:9px 10px; margin-top:10px; }
+  .inline b{ display:block; margin-bottom:3px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 0.3 &middot; global</p>
+    <h1>A toast reports what you did, never what is true about a number</h1>
+    <p class="standfirst lede">The last global element of the frame. It is small, and it is the place where this product is most likely to drift into being something else, which is why it gets a node rather than a paragraph in somebody's wireframe.</p>
+    <div class="dateline">
+      <span>Type: section</span>
+      <span>Scope: MVP</span>
+      <span>Source: <code>ia/docs/pages/toasts.md</code></span>
+    </div>
+  </header>
+
+  <!-- Rule .............................................................. -->
+  <section id="rule">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The rule this node enforces</h2></div>
+
+    <div class="flag warn">
+      <b>Why a small component gets a specification of its own</b>
+      <p>Design principle 2 says doubt is a state and not an incident, and forbids an incident workflow around a number. <strong>A toast saying "source is down" would break that rule in the quietest possible way:</strong> it turns a property of the number into an event with a timestamp, which is one short step from a feed of such events, which is the incident tool we refused to build.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Where each kind of thing goes, and why</caption>
+        <thead><tr><th>Kind of thing</th><th>Where it goes</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>The source is unreachable</td><td><strong>State on the card</strong> (2.4)</td><td>A fact about the number, not something that happened to the reader</td></tr>
+          <tr><td>The definition changed after this was saved</td><td><strong>State on the card</strong> (2.5)</td><td>Same</td></tr>
+          <tr><td>The query returned nothing</td><td><strong>State on the card</strong> (2.6)</td><td>Same</td></tr>
+          <tr><td>The link was copied</td><td><strong>Toast</strong></td><td>The person did it, it succeeded, and nothing on screen shows it otherwise</td></tr>
+          <tr><td>The definition was saved</td><td><strong>Toast</strong></td><td>Same</td></tr>
+          <tr><td>The definition does not run</td><td><strong>Inline, on the field</strong> (4.6)</td><td>It belongs to the thing being edited and has to stay visible while it is fixed</td></tr>
+          <tr><td>The connection failed</td><td><strong>Inline, on the form</strong> (3.4)</td><td>Same</td></tr>
+          <tr><td>Signed out</td><td><strong>Toast</strong>, then the sign-in page</td><td>Confirms a deliberate action</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The dividing line, in one sentence:</strong> if it belongs to a thing on the screen, it is inline and it stays; if it belongs to an action that is over, it is a toast and it goes.</p>
+  </section>
+
+  <!-- Mockups ........................................................... -->
+  <section id="mockups">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Mockups</h2></div>
+
+    <p>Black and white, wireframe level. <strong>Never over the number itself</strong>, at any width: covering the value with a notification about an action is the one placement this product cannot afford.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, the reader's only toast</div>
+        <div class="bw">
+          <div class="num">18,432</div>
+          <div class="sub">Weekly active accounts<br>As of 14:05, 20 minutes ago, expected hourly</div>
+          <div class="toast">
+            <span class="msg">Link copied</span>
+            <span class="x">x</span>
+          </div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="frame-cap">Desktop, with an action, so it does not auto-dismiss</div>
+        <div class="bw">
+          <div class="num">18,432</div>
+          <div class="sub">Definition saved by you a moment ago</div>
+          <div class="toast desk">
+            <span class="msg">Definition saved</span>
+            <span class="act">Undo</span>
+            <span class="x">x</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Inline, not a toast: it belongs to the field</div>
+        <div class="bw">
+          <div class="sub">Definition</div>
+          <div class="inline"><b>The definition did not run</b>Column revenue_net was not found in the source. The definition stays as you wrote it.</div>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="frame-cap">Not a toast at all: a state on the card</div>
+        <div class="bw">
+          <div class="sub">Weekly active accounts</div>
+          <div class="inline"><b>Source is down</b>No value can be shown. The definition, its owner and the last successful run stay visible.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timing ............................................................ -->
+  <section id="timing">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Timing, states and accessibility</h2></div>
+
+    <div class="flag">
+      <b>Auto-dismissal is a conformance question, not a preference</b>
+      <p>WCAG 2.2 SC 2.2.1 Timing Adjustable is <strong>Level A</strong>: for each time limit set by the content, the user must be able to turn it off, adjust it or extend it, unless a stated exception applies. An auto-dismissing toast is a time limit.</p>
+    </div>
+
+    <ul>
+      <li><strong>A toast that carries an action does not auto-dismiss.</strong> Removing an "Undo" on a timer removes the only route to it.</li>
+      <li><strong>A toast that only confirms may auto-dismiss</strong>, and the same information stays available: the link is in the clipboard, the saved definition is on the screen behind it.</li>
+      <li><strong>No toast is the only copy of anything.</strong> That is the criterion turned into a design constraint.</li>
+    </ul>
+
+    <div class="tw">
+      <table>
+        <caption>States and how they are announced</caption>
+        <thead><tr><th>State</th><th>What is shown</th><th>Live region</th></tr></thead>
+        <tbody>
+          <tr><td>Success</td><td>Confirmation, optional undo</td><td><code>role="status"</code>, polite</td></tr>
+          <tr><td>Failure of an action</td><td>What failed and one route to retry</td><td><code>role="alert"</code>, assertive</td></tr>
+          <tr><td>Offline or degraded</td><td>That the action could not reach us, and whether it was lost</td><td><code>role="alert"</code></td></tr>
+          <tr><td>Several at once</td><td>Stacked, newest nearest the edge, maximum three visible</td><td>Announced in order</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Assertive is reserved for failures.</strong> A confirmation announced assertively interrupts a screen reader user mid-sentence to say that something worked, which is the accessibility equivalent of a toast covering the number.</p>
+
+    <p>The live region container exists in the DOM from page load rather than being created when a message arrives, so announcements are reliable. Targets are 44 by 44 CSS pixels. Entry and exit are a fade and a short offset, and both respect <code>prefers-reduced-motion</code>.</p>
+  </section>
+
+  <!-- Who ............................................................... -->
+  <section id="who">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Who sees this</h2></div>
+
+    <p><strong>Both personas, and this is the only global element the reader shares with the analyst.</strong> The reader meets exactly one toast in the whole product: the link was copied. Everything else here belongs to the analyst.</p>
+
+    <p>That asymmetry sets a tone worth stating: <strong>for the reader, feedback in this product is one quiet confirmation</strong>, and every other thing they need to know is a state on the number rather than a message about it.</p>
+
+    <div class="flag">
+      <b>Open question this node hands forward</b>
+      <p>Whether a reader ever needs a failure toast at all. The only action they take is copying a link, and if that fails there is a fallback: the URL is on screen and can be selected. If the answer is no, the reader's half of this component is a single success message and the assertive path is analyst-only.</p>
+    </div>
+  </section>
+
+  <p class="backlink"><a href="structure.html#0.3">&larr; Structure (0.3)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '0.3 Toast and inline feedback';
+  window.NAV_SECTIONS = [
+    { id:'rule',    label:'The rule' },
+    { id:'mockups', label:'Mockups' },
+    { id:'timing',  label:'Timing and a11y' },
+    { id:'who',     label:'Who sees this' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
