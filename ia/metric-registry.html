@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>4.1 The metric registry - Plumb</title>
+<meta name="description" content="Node 4.1 with states 4.2 and 4.3: the listing template, the refusal of popularity ranking, and the decision that the registry never queries the warehouse.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:14px 12px; }
+  .bw.wide{ min-width:430px; }
+  .topline{ display:flex; align-items:baseline; gap:9px; margin-bottom:11px; }
+  .ttl{ font-size:15px; font-weight:700; }
+  .cnt{ color:#6b7076; }
+  .sp{ flex:1; }
+  .btn{ border:1px solid #14161a; padding:6px 10px; font-weight:600; display:inline-block; }
+  .btn.full{ display:block; text-align:center; margin-bottom:12px; }
+  .srch{ border:1px solid #14161a; padding:7px 8px; margin-bottom:12px; color:#6b7076; }
+  .srch b{ color:#14161a; font-weight:400; }
+  .grid{ width:100%; border-collapse:collapse; }
+  .grid th{ text-align:left; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+            color:#6b7076; font-weight:600; border-bottom:1px solid #14161a; padding:0 8px 5px 0; }
+  .grid td{ border-bottom:1px solid #e3e1dc; padding:8px 8px 8px 0; vertical-align:top; }
+  .grid td.nm{ font-weight:600; }
+  .frag{ display:block; font-weight:400; color:#6b7076; font-size:11px; margin-top:2px; }
+  .frag u{ text-decoration:none; border-bottom:2px solid #14161a; }
+  .rows{ border-top:1px solid #14161a; }
+  .row{ border-bottom:1px solid #e3e1dc; padding:9px 0; }
+  .row .nm{ font-weight:600; }
+  .row .ln{ color:#6b7076; font-size:11px; margin-top:2px; }
+  .ghost{ border-bottom:1px dashed #c9c6bf; padding:9px 0; color:#6b7076; }
+  .ghost .nm{ font-weight:600; }
+  .tail{ color:#6b7076; font-size:11px; margin-top:9px; }
+  .none{ border:1px dashed #14161a; padding:11px 10px; margin-top:11px; line-height:1.5; }
+  .none b{ display:block; margin-bottom:3px; }
+  .none .rst{ text-decoration:underline; display:inline-block; margin-top:7px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 4.1 with 4.2, 4.3 &middot; pages</p>
+    <h1>A registry that refuses to rank by how often a number is looked at</h1>
+    <p class="standfirst lede">The listing template is born here, and node 3.1 is the same page with three different columns. Two decisions carry it: the sharpest refusal in this type, and the rule that this page never queries the customer's warehouse.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>States: 4.2, 4.3</span>
+      <span>Source: <code>ia/docs/pages/metric-registry.md</code></span>
+    </div>
+  </header>
+
+  <!-- Blocks ............................................................ -->
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Five blocks, and one of them moved</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Title with a count</strong></td><td>"Metrics, 12". The block that carries R5</td></tr>
+          <tr><td>2</td><td>Search field</td><td>Placeholder names what is searched: names and definition text</td></tr>
+          <tr><td>3</td><td><strong>The primary action</strong>: define a metric</td><td><strong>Third at 360</strong>, and the bank is corrected rather than ignored</td></tr>
+          <tr><td>4</td><td>The list: name, state with age, owner</td><td>Three columns at width, three lines per row at 360</td></tr>
+          <tr><td>5</td><td>Result count line</td><td>The zero case is the one that needs saying out loud</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Why block 3 moved.</strong> The bank's composition for this type lists the primary action fifth. <strong>At 360 an action below a list of unbounded length is unreachable without scrolling to the end of the customer's registry</strong>, so it moves up. Nothing is hidden and nothing is added: the bank's order was written listing blocks, and this is the first place the order was reasoned from the phone. The correction is recorded in <code>ia/docs/blocks.md</code>.</p>
+
+    <h3>Three columns, and the fourth is refused by name</h3>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Refused column</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Popularity, views, most used</strong></td><td><strong>The sharpest refusal in this type.</strong> Both domain sources rank by it. Popularity is a proxy for authority, and this product exists because proxies for authority break. Ranking by how often a metric is looked at makes the most quoted metric the easiest to find and the least examined, which is phase G of the As-Is map: a figure that keeps being used long after it stopped being computed</td></tr>
+          <tr><td>Certification badge</td><td>A verdict with no author. The owner column is the same information with a person attached</td></tr>
+          <tr><td>Version label</td><td>It would promise a history we do not keep. One previous definition is the whole of it</td></tr>
+          <tr><td>Source</td><td>It belongs to node 2.7 and to node 3.1. Putting it here makes the row a summary of the card, and then the card is optional</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 4.1, three columns and the sort on the first</div>
+        <div class="bw wide">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">12</span><span class="sp"></span><span class="btn">Define a metric</span></div>
+          <div class="srch">Search names and definition text</div>
+          <table class="grid">
+            <thead><tr><th>Name &darr;</th><th>At last run</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td class="nm">Activation rate</td><td>As of 09:12, 3 h ago</td><td>Dana Reyes</td></tr>
+              <tr><td class="nm">Gross margin</td><td>Source is down since 07:40</td><td>Priya Raman</td></tr>
+              <tr><td class="nm">Net revenue retention</td><td>As of 06:00, 6 h ago</td><td>Dana Reyes</td></tr>
+              <tr><td class="nm">Weekly active accounts</td><td>Definition changed 3 Aug</td><td>Dana Reyes</td></tr>
+            </tbody>
+          </table>
+          <div class="tail">12 of 12</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, the row is three lines and never scrolls sideways</div>
+        <div class="bw">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">12</span></div>
+          <div class="srch">Search names and definition text</div>
+          <span class="btn full">Define a metric</span>
+          <div class="rows">
+            <div class="row"><div class="nm">Activation rate</div><div class="ln">As of 09:12, 3 h ago</div><div class="ln">Dana Reyes</div></div>
+            <div class="row"><div class="nm">Gross margin</div><div class="ln">Source is down since 07:40</div><div class="ln">Priya Raman</div></div>
+            <div class="row"><div class="nm">Net revenue retention</div><div class="ln">As of 06:00, 6 h ago</div><div class="ln">Dana Reyes</div></div>
+          </div>
+          <div class="tail">12 of 12</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warehouse ......................................................... -->
+  <section id="warehouse">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The state in the row does not come from the warehouse</h2></div>
+
+    <p>The card queries the source at read time. <strong>The registry does not, and must not.</strong></p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Why</th><th>Consequence</th></tr></thead>
+        <tbody>
+          <tr><td>A registry that queries every source on load fires one warehouse query per row, which makes the analyst's own page the slowest thing in the product</td><td>The list renders from our own store, so there is no per-row spinner and no loading state for the table</td></tr>
+          <tr><td>That cost grows with the number of metrics defined, which is exactly the behaviour activation depends on</td><td><strong>It would also fight the pricing hypothesis</strong>, which puts no cap on metric count. A page whose cost scales with the registry punishes filling the registry</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>So the row shows the state as it was at the last successful run, and the column heading says so.</strong> The compact form from node 0.4 is unchanged, the same words with fewer of them, and the heading is what stops it being read as a live reading.</p>
+
+    <div class="flag warn">
+      <b>The honest cost, stated rather than buried</b>
+      <p>The registry can be out of date about a source that went down five minutes ago. What mitigates it is the shape of the product rather than a patch: <strong>opening the card queries live, so the truth is always one tap away</strong>, and the time in the row says when it was last established.</p>
+    </div>
+
+    <div class="flag">
+      <b>One line so this does not look like it contradicts node 4.7</b>
+      <p>A last-run timestamp on the metric is not a reading log. There is no who, no count and no history: one field, overwritten. That is why the registry can show a time and node 4.7 still cannot say how many cards were sent.</p>
+    </div>
+  </section>
+
+  <!-- Search ............................................................ -->
+  <section id="search">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Search, and the row variant it forces</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Question</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>What does it reach</td><td><strong>Name and definition text.</strong> dbt searches column names, warehouse relations and code as well, and those are not ours to search: we hold metadata only</td></tr>
+          <tr><td>Where is it</td><td>Persistent affordance in the global bar, node 0.1, reachable by typing <code>/</code> from any analyst screen. <strong>It is not a navigation item and has no page of its own</strong></td></tr>
+          <tr><td>What does Enter do</td><td>Jumps to the card when there is exactly one match, otherwise renders 4.3</td></tr>
+          <tr><td>The pre-query state</td><td><strong>The list itself.</strong> Secoda opens search on popular resources and recent personal searches; a registry small enough to read beats a ranked selection of it</td></tr>
+          <tr><td>Offline</td><td>Search reports that it cannot reach the registry rather than returning an empty result. From node 0.1</td></tr>
+          <tr><td>Sort</td><td>By name, and that is the only sort in MVP. Freshness is a real second case and waits. Popularity is refused above</td></tr>
+          <tr><td>Filters and facets</td><td><strong>None.</strong> Facets by source, owner and freshness are ПОТІМ candidates. Adding them now means inventing filters for a registry whose size we do not know</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>The row variant this node adds, named out loud rather than slipped in</b>
+      <p><strong>When the match was in the definition text and not in the name, the row shows the matching fragment under the name.</strong> Otherwise it does not. Search reaching into the definition is the mechanism that closes R2, and a match the analyst cannot see makes the result look wrong. It is a variant of the row, not a new block, and it is recorded in the bank rather than added quietly here.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 4.3, two matches and one of them matched on the definition</div>
+        <div class="bw wide">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">12</span><span class="sp"></span><span class="btn">Define a metric</span></div>
+          <div class="srch"><b>seven days</b></div>
+          <table class="grid">
+            <thead><tr><th>Name &darr;</th><th>At last run</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td class="nm">Seven day retention</td><td>As of 08:00, 4 h ago</td><td>Priya Raman</td></tr>
+              <tr><td class="nm">Weekly active accounts<span class="frag">Distinct accounts with a session in the last <u>seven days</u>, counted on the account</span></td><td>Definition changed 3 Aug</td><td>Dana Reyes</td></tr>
+            </tbody>
+          </table>
+          <div class="tail">2 of 12</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 4.3 with no match, and the action carries the query</div>
+        <div class="bw">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">12</span></div>
+          <div class="srch"><b>pipeline coverage</b></div>
+          <div class="none">
+            <b>No metric matches "pipeline coverage".</b>
+            Search looks at names and at what each definition says. Try a shorter phrase, or define it.
+            <span class="rst">Clear the search</span>
+          </div>
+          <span class="btn full" style="margin-top:12px">Define "pipeline coverage"</span>
+          <div class="tail">0 of 12</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>The no-match case is where a dead end would be cheapest to leave.</strong> The structure comes from the bank: a line saying there is no match, a line of advice, and one reset action. <strong>And one thing more, which is a variant rather than a new block:</strong> the primary action is already on the page, so here it carries the query. Searching for a metric that does not exist is the strongest available signal that it should, and a no-match in the analyst's own registry becomes the activation moment instead of an apology.</p>
+  </section>
+
+  <!-- Empty ............................................................. -->
+  <section id="empty">
+    <div class="sec-head"><span class="sec-num">04</span><h2>4.2 is not an edge case, it is the first screen of every workspace</h2></div>
+
+    <p>The map routes 3.3, testing a connection, straight into 4.2. <strong>So the empty registry is what every analyst sees immediately after connecting their first source</strong>, which makes it the one screen in cluster 4 that has to teach something.</p>
+
+    <ul>
+      <li><strong>What it does:</strong> keeps the structure of the list visible so it shows what the list would hold, says in one sentence that nothing is defined yet, and offers exactly one route.</li>
+      <li><strong>What it refuses:</strong> a multi-step onboarding checklist. There is no second step to check off, cluster 5 is entirely ПОТІМ, and a checklist with one item is a progress bar over a single button.</li>
+    </ul>
+
+    <div class="flag">
+      <b>The best block in this type breaks at 360, so it is re-implemented rather than dropped</b>
+      <p>The bank's strongest row for listings is the empty state rendered inside the table with the header still visible, because an empty list that keeps its columns shows what the list would hold. <strong>At 360 there is no header row</strong>, since a three-line row has nothing to align. So 4.2 shows <strong>one ghost row with the field labels in place</strong>. Same mechanism, different mechanics.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 4.2, the header row survives the emptiness</div>
+        <div class="bw wide">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">0</span><span class="sp"></span><span class="btn">Define a metric</span></div>
+          <div class="srch">Search names and definition text</div>
+          <table class="grid">
+            <thead><tr><th>Name</th><th>At last run</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td colspan="3" style="color:#6b7076; padding:14px 0">Snowflake is connected and no metric is defined yet. The first one takes a name, a sentence saying what it means, and the query you already have.</td></tr>
+            </tbody>
+          </table>
+          <div class="tail">0 of 0</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 4.2, a ghost row instead of a header</div>
+        <div class="bw">
+          <div class="topline"><span class="ttl">Metrics</span><span class="cnt">0</span></div>
+          <div class="srch">Search names and definition text</div>
+          <span class="btn full">Define a metric</span>
+          <div class="rows">
+            <div class="ghost"><div class="nm">Metric name</div><div>State at last run</div><div>Owner</div></div>
+          </div>
+          <p style="color:#6b7076; margin:10px 0 0; line-height:1.5">Snowflake is connected and no metric is defined yet. The first one takes a name, a sentence saying what it means, and the query you already have.</p>
+          <div class="tail">0 of 0</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest .............................................................. -->
+  <section id="rest">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Reuse, access, and what the count is doing</h2></div>
+
+    <div class="flag">
+      <b>The canonical listing, defined once</b>
+      <p><strong>Node 3.1, sources, is this page with three different columns and a different primary action.</strong> The reuse was decided in the block bank rather than discovered now, and this is where the component is written down: title with count, search, primary action, list, count line. Changing it means walking both nodes.</p>
+    </div>
+
+    <p><strong>No access indicator in MVP, and the precedent it comes from lands elsewhere.</strong> dbt shows every matching resource and marks the ones you may not open, which the bank took as a live precedent on an open question. <strong>It applies to node 2.9, the reader with no account, not here:</strong> row level permissions are out of scope by the brief, so every metric in a workspace is visible to every analyst in it and there is nothing to indicate.</p>
+
+    <p><strong>The row does one thing: it opens the card.</strong> A row overflow menu was refused in the bank, and editing is reached from the card rather than from the list. <strong>That route was missing from node 2.1 and has been repaired there</strong>, not patched here: a signed-in analyst sees the same card the reader sees, plus one affordance.</p>
+
+    <h3>Emotional support, one mechanism, and it is a number in a title</h3>
+
+    <p><strong>P2, emotional.</strong> Stop being the bottleneck, and feel the work outlives my presence → <strong>the registry shows what already answers without them</strong> → block 1, the count beside the title. It is the only place in the product where the analyst sees the accumulated result of writing definitions down, and the closest thing they have to a sense of whether the work is done. <strong>Nothing from the reader's half of that table lands here</strong>, because the reader never sees this page.</p>
+
+    <p><strong>SEO:</strong> <code>noindex</code>, no schema, no SEO text. Behind sign-in, and the rows are the customer's metrics.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#4.1">&larr; Structure (4.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '4.1 The metric registry';
+  window.NAV_SECTIONS = [
+    { id:'blocks',    label:'Five blocks' },
+    { id:'warehouse', label:'No warehouse query' },
+    { id:'search',    label:'Search' },
+    { id:'empty',     label:'The empty registry' },
+    { id:'rest',      label:'Reuse and access' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

@@ -184,6 +184,17 @@ Order reasoned from 360, top to bottom.
 
 **4.3, no match:** the same page, the query still in the field, one sentence, and one reset action. Never a dead end.
 
+### Corrected at node 4.1, because the order above was listed rather than reasoned
+
+**The primary action moves to third at 360**, and the five items above are the desktop order. At 360 an action below a list of unbounded length is unreachable without scrolling to the end of the customer's registry. Nothing is hidden and nothing is added; this is the ordering rule of the detail layer applied to a list that was written down before it was placed on a phone.
+
+**Two row variants, decided at 4.1 and recorded here rather than added quietly at the node.**
+
+| Variant | Traces to | Why it is a variant and not a new block |
+| --- | --- | --- |
+| **The row shows the matching fragment of the definition when the match was in the definition text and not in the name** | R2, phase D (S8) | Search reaching into the definition is the mechanism that closes R2, and a match the analyst cannot see makes the result look wrong. D3's "resource contains the searched column" notice is refused because we expose no columns; **our own object is the definition text, and that we do expose** |
+| **In the no-match state the primary action carries the query** ("Define *pipeline coverage*") | R5, node 4.3 | The action is already on the page. Searching for a metric that does not exist is the strongest available signal that it should, so the no-match becomes the activation moment rather than an apology |
+
 **Checked against rule 3.** D3 leads with a lineage graph and three browse trees; D4 leads with popularity; R4 leads with three filters; R5 leads with an upgrade bar and a security toggle. **Nothing above matches any of them.** What is ours is the refusal of ranking and the narrowing to three columns, and both come from the product's own argument rather than from a page.
 
 **One competitor mechanism recorded as a live risk rather than a footnote.** Both domain sources rank or surface by popularity, and both count views made outside the tool. If our registry ever needs ordering beyond alphabetical, that is the moment to reread this row, because popularity is the ordering everyone reaches for and it is the one this product cannot use.

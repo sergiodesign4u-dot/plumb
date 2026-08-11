@@ -83,6 +83,14 @@ Seven, and every one of them is a node in the map.
 
 **Combination rules, from node 0.4.** Source down and definition changed: both shown, source down first. Empty and definition changed: both, empty first. Source down and empty: impossible.
 
+### The signed-in analyst, added when node 4.1 was written
+
+**A hole found downwards and repaired here.** The registry row does one thing, it opens the card, because a row overflow menu was refused in the block bank. That leaves no route from the list to editing a definition, and node 4.7 has to be reachable from somewhere.
+
+**So the card, opened by a signed-in analyst, is exactly the card the reader sees plus one affordance: Edit definition, beside the definition block.** Not a different layout, not an extra panel, not a value shown with more precision.
+
+**The reason is the product's own argument.** A separate analyst view of the same number is how two people end up with two different numbers again, which is the reconciliation this product exists to remove. The analyst checking their own metric has to see what they are about to be quoted on.
+
 ## Filters and facets
 
 None. This is a single object.
