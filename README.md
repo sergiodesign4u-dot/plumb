@@ -21,6 +21,16 @@ This repository holds the whole design pipeline for the product, not just the re
 - `research/` - everything we know about the market and the people. Shared by stages 01, 02 and CJM.
 - `.nojekyll` - required. GitHub Pages runs Jekyll by default and Jekyll skips paths starting with an underscore, which is where the whole navigation lives.
 
+## People
+
+Index only. The conclusions live in the files and on the pages, and a second edition of the same text would diverge from the first.
+
+- `research/docs/personas.md` - the Observations inventory of what the research says about people and what it does not, two behavioural personas with a source on every line, the primary mark and what it does, and fourteen holes each with an addressee.
+- `research/docs/jtbd.md` - one main job and five related in "when / I want / so that" form, emotional and social jobs, the matrix of jobs against personas and functions, the MVP core, the orphan cross-check, and the two-instrument critique with its residual risks.
+- Pages: [Personas](https://sergiodesign4u-dot.github.io/plumb/research/personas.html) and [JTBD](https://sergiodesign4u-dot.github.io/plumb/research/jtbd.html).
+
+`personas.md` has one writer after stage 02: the CJM step that mines real feedback. Every other stage reads it and returns a contradiction as a finding rather than editing it or re-describing the persona somewhere else.
+
 ## Status
 
 | Stage | Status |

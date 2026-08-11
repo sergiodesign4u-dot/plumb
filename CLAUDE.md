@@ -22,23 +22,33 @@ The difference from BI and analytics tools: Plumb is not built to visualise data
 
 **Responsive web, mobile-first.** Mobile priority, desktop is full and carries the analyst's dense work (metric registry, lineage tree, definition versions). Mobile is the read and verify path, and it leads in layout order.
 
-## Audience
+## People
 
-**Primary user: analyst or data lead.** 28 to 40, company of 50 to 300 people, data team of 1 to 5. Context: interrupted several times a week with "why is this number different", and every answer costs manual digging through dashboards and queries. Driver: stop being a human API to their own data, plus the reputation of being the person whose numbers are trusted.
+Two behavioural groups, and the data does not give a third. Full detail with sources and markers in `research/docs/personas.md` and `research/docs/jtbd.md`, both with pages under `research/`.
 
-**Second side: business consumer of the number.** PM, marketer, finance, 25 to 45. Takes a number from a dashboard into a decision or a deck with no way to check whether it still holds. Driver: not being caught out in front of leadership.
+**Primary: the reader who is about to be quoted.** PM, marketer or finance, 25 to 45, non-technical, unpaid. Arrives from exposure rather than curiosity: a deck, a meeting, a decision with their name on it. That trigger is a hypothesis taken from the brief, not an observation, and it stays one until somebody is interviewed.
 
-**Buyer, not user: head of data or COO.** Deliberately kept outside the product surface, otherwise three personas compete for 15 to 30 screens and none gets drawn properly.
+**What the primary mark does, and it is operative rather than descriptive.** A conflict of decisions is resolved in the reader's favour: they carry the higher risk and have fewer levers, since they cannot change the definition, cannot see the pipeline and often cannot log in. The analyst's registry has to be good; it does not get to decide the shape of the card. The price is named: the interface is built around the person who never pays.
 
-## MVP scope (initial, rough)
+**Secondary: the data lead who is asked.** 28 to 40, data team of 1 to 5 in a company of 50 to 300, arrives on an inbound "why is this number different". Their scenarios must work; the interface is not built around them.
 
-Refined on the Lean UX Canvas (`research/docs/lean-ux-canvas.md`, block 5), narrowed to three core jobs at stage 02.
+**Not a persona: the head of data or COO.** Buyer, deliberately without a product surface, otherwise three personas compete for 15 to 30 screens. Still imposes SOC 2, SSO and the trust surface in the IA.
 
-**In:** one data source connection; metric registry with definition and owner; number card with provenance; freshness and breakage states ("as of", "source is down", "definition changed after this was saved"); search and jump to a metric by name.
+**Main job.** When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up. The market evidences the **gap**, not the hiring: that a reader will actually do this is the riskiest assumption.
 
-**Out:** building dashboards; SQL editor; row-level permissions; notification routing; comments and discussion; version history deeper than the previous definition.
+**MVP core: two jobs, not three, and padding was refused.** (1) the main job above; (2) when a number does not match what I expected, I want to find out who is answerable for it, so that I can ask a specific person rather than guess who to ask. A conditional third, whether a saved number is ever revisited, is a hypothesis: if it falls, the retention mechanic falls with it.
 
-Cut logic: everything outside the line is either a separate large product (dashboards, SQL) or only makes sense once trust already works (discussion, permissions).
+## MVP scope
+
+Narrowed at stage 02 from the rough scope of stage 01 to the two core jobs above, using the matrix in `research/docs/jtbd.md`. One list, not two.
+
+**The core, what we have to win on:** the number card carrying provenance; three named states ("as of", "source is down", "definition changed after this was saved"); attribution on the claim, who declared the definition and when; the card readable with no account at one permanent URL per metric.
+
+**Necessary, but not the core:** one data source connection; metric registry with definition and owner; search and jump to a metric by name. These are here because the core cannot run without them, not because we win on them. The registry in particular is the one thing the market already closes.
+
+**Out:** building dashboards; SQL editor; row-level permissions; notification routing; comments and discussion; version history deeper than the previous definition. Cut logic: everything outside the line is either a separate large product (dashboards, SQL) or only makes sense once trust already works (discussion, permissions).
+
+**Two growth mechanics carry no job underneath them** and are named so they cannot claim screens on equal footing with work people do: a reader inviting another reader in one action, and the public page rendering the real card component.
 
 ## Business model hypothesis
 
