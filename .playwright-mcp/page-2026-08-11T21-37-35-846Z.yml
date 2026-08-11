@@ -1,0 +1,115 @@
+- generic [active] [ref=f79e1]:
+  - generic [ref=f79e2]:
+    - region "Skip to main content":
+      - link "Skip to main content" [ref=f79e3] [cursor=pointer]:
+        - /url: "#__docusaurus_skipToContent_fallback"
+    - banner [ref=f79e4]:
+      - link "Join us at dbt Summit, September 15–18 in Las Vegas. Come learn, swap ideas, and spend time with the dbt community as we shape the future of data and AI." [ref=f79e5] [cursor=pointer]:
+        - /url: https://www.getdbt.com/dbt-summit/?utm_medium=internal&utm_source=docs&utm_campaign=q3-2027_dbt-summit-2026_aw&utm_content=dbt-summit____&utm_term=all_all__
+      - button "Close" [ref=f79e7] [cursor=pointer]
+    - navigation "Main" [ref=f79e11]:
+      - generic [ref=f79e12]:
+        - generic [ref=f79e13]:
+          - button "Toggle navigation bar" [ref=f79e14] [cursor=pointer]
+          - link [ref=f79e17] [cursor=pointer]:
+            - /url: /
+            - img "dbt Logo" [ref=f79e19]
+          - 'button "dbt version: v2" [ref=f79e21] [cursor=pointer]':
+            - generic [ref=f79e25]: dbt version
+            - generic [ref=f79e26]: v2
+            - generic [ref=f79e27]: ▾
+        - button "Search (Command+K)" [ref=f79e29] [cursor=pointer]
+    - main [ref=f79e34]:
+      - generic [ref=f79e36]:
+        - heading "Page Not Found" [level=1] [ref=f79e37]
+        - paragraph [ref=f79e38]: We could not find what you were looking for.
+        - paragraph [ref=f79e39]: Please contact the owner of the site that linked you to the original URL and let them know their link is broken.
+    - contentinfo [ref=f79e40]:
+      - generic [ref=f79e44]:
+        - generic [ref=f79e46]:
+          - generic [ref=f79e47]:
+            - generic [ref=f79e48]: Get started
+            - heading "Start building with dbt." [level=2] [ref=f79e49]
+            - paragraph [ref=f79e50]: The free dbt VS Code extension is the best way to develop locally with the dbt Fusion Engine.
+          - generic [ref=f79e51]:
+            - link "Install free extension" [ref=f79e52] [cursor=pointer]:
+              - /url: https://marketplace.visualstudio.com/items?itemName=dbtLabsInc.dbt
+            - link "Request your demo" [ref=f79e53] [cursor=pointer]:
+              - /url: https://www.getdbt.com/contact
+        - generic [ref=f79e55]:
+          - link [ref=f79e57] [cursor=pointer]:
+            - /url: /
+            - img "dbt Labs" [ref=f79e58]
+          - generic [ref=f79e59]:
+            - generic [ref=f79e60]:
+              - heading "Resources" [level=5] [ref=f79e61]
+              - link "VS Code Extension" [ref=f79e62] [cursor=pointer]:
+                - /url: /docs/about-dbt-extension
+              - link "Resource Hub" [ref=f79e63] [cursor=pointer]:
+                - /url: https://www.getdbt.com/resources
+              - link "dbt Learn" [ref=f79e64] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-learn
+              - link "Certification" [ref=f79e65] [cursor=pointer]:
+                - /url: https://www.getdbt.com/dbt-certification
+              - link "Developer Blog" [ref=f79e66] [cursor=pointer]:
+                - /url: /blog
+            - generic [ref=f79e67]:
+              - heading "Community" [level=5] [ref=f79e68]
+              - link "Join the Community" [ref=f79e69] [cursor=pointer]:
+                - /url: /community/join
+              - link "Become a Contributor" [ref=f79e70] [cursor=pointer]:
+                - /url: /community/contribute
+              - link "Open Source dbt Packages" [ref=f79e71] [cursor=pointer]:
+                - /url: https://hub.getdbt.com/
+              - link "Community Forum" [ref=f79e72] [cursor=pointer]:
+                - /url: https://discourse.getdbt.com/
+            - generic [ref=f79e73]:
+              - heading "Support" [level=5] [ref=f79e74]
+              - link "Contact Support" [ref=f79e75] [cursor=pointer]:
+                - /url: /docs/dbt-support
+              - link "Professional Services" [ref=f79e76] [cursor=pointer]:
+                - /url: https://www.getdbt.com/services
+              - link "Find a Partner" [ref=f79e77] [cursor=pointer]:
+                - /url: https://www.getdbt.com/partner-directory
+              - link "System Status" [ref=f79e78] [cursor=pointer]:
+                - /url: https://status.getdbt.com/
+            - generic [ref=f79e79]:
+              - heading "Connect with Us" [level=5] [ref=f79e80]
+              - generic [ref=f79e81]:
+                - link "GitHub" [ref=f79e82] [cursor=pointer]:
+                  - /url: https://github.com/dbt-labs/docs.getdbt.com
+                - link "LinkedIn" [ref=f79e85] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/dbtlabs/mycompany/
+                - link "YouTube" [ref=f79e88] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCVpBwKK-ecMEV75y1dYLE5w
+                - link "Instagram" [ref=f79e91] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dbt_labs/
+                - link "X" [ref=f79e94] [cursor=pointer]:
+                  - /url: https://x.com/dbt_labs
+                - link "Bluesky" [ref=f79e97] [cursor=pointer]:
+                  - /url: https://bsky.app/profile/getdbt.com
+                - link "Community Slack" [ref=f79e100] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/community/join-the-community/
+          - generic [ref=f79e103]:
+            - generic [ref=f79e104]: © 2026 dbt Labs, LLC. All Rights Reserved.
+            - generic [ref=f79e105]:
+              - link "Terms of Service" [ref=f79e106] [cursor=pointer]:
+                - /url: https://www.getdbt.com/terms-of-use/
+              - link "Privacy Policy" [ref=f79e107] [cursor=pointer]:
+                - /url: https://www.getdbt.com/cloud/privacy-policy/
+              - link "Security" [ref=f79e108] [cursor=pointer]:
+                - /url: https://www.getdbt.com/security/
+              - button "Cookie Settings" [ref=f79e109] [cursor=pointer]
+  - dialog "Fivetran's Use of Cookies" [ref=f79e111]:
+    - generic [ref=f79e112]:
+      - generic [ref=f79e113]:
+        - generic:
+          - heading "Fivetran's Use of Cookies" [level=2] [ref=f79e114]
+          - generic [ref=f79e115]:
+            - text: By clicking "Accept All Cookies", you consent to the storage of cookies on your device for improved site navigation, analyzing site usage, and supporting our marketing efforts.
+            - link "More information about your privacy, opens in a new tab" [ref=f79e116] [cursor=pointer]:
+              - /url: https://www.fivetran.com/legal/privacy
+              - text: Refer to our Privacy Notice section on "Cookies and similar tracking technology" for more details.
+      - generic [ref=f79e118]:
+        - button "Accept All Cookies" [ref=f79e120] [cursor=pointer]
+        - button "Personalize My Choices, Opens the preference center dialog" [ref=f79e121] [cursor=pointer]: Personalize My Choices

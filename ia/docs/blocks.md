@@ -319,3 +319,64 @@ Node 0.4 handed forward "what does expected hourly say when no cadence is known"
 **1.3, failed:** the reason named, and **the case that matters named separately**, which is an address belonging to no configured workspace. One route back.
 
 **Checked against rule 3.** D7 has no SSO at all, D8 buries it fifth, R10 asks for a shortname, R12 offers five providers. **A single-route SSO gate with a work email and no password appears in none of the four**, and what makes it ours is a decision about who signs in rather than a preference about layout.
+
+---
+
+## T8. System pages
+
+**Nodes:** 7.1 the 404, 7.2 the 500, 7.3 maintenance, 7.4 the cookie notice. Four nodes, **two of them MVP**.
+
+**7.1 matters more here than in most products, and the reason is structural.** The reader's only entrance is a link. A broken or expired link is therefore **their first contact with us**, not a rare edge case, and a 404 that behaves like a wall means the product failed at the front door for the persona it is built around.
+
+### Sources
+
+| # | Source | Kind | Opened |
+| --- | --- | --- | --- |
+| D9 | dbt docs 404, `docs.getdbt.com/this-page-does-not-exist-plumb-check`, HTTP 404 | **Domain, live page, and a negative reference** | 2026-08-12, this session |
+| D10 | Cube 404, `cube.dev/this-page-does-not-exist-plumb-check`, HTTP 404. Screen: `research/screens/ui-cube-404.png` | Domain, live page | 2026-08-12, this session |
+| D11 | Secoda in-app not-found, `app.secoda.co/login` | Domain, live, found while collecting T4 | 2026-08-12, this session |
+| D12 | dbt Labs consent banner, `getdbt.com`, OneTrust. Screen: `research/screens/ui-dbt-cookie-consent.png` | Domain, live, for node 7.4 | 2026-08-12, this session |
+| R13 | Zapier 404, `refero.design/pages/c5fa8f08-6426-46c4-9f5d-3edc5426b61b` | Craft, outside the category | 2026-08-12 |
+| R14 | Jitter 404, `refero.design/pages/95546f77-bd73-4c15-b11b-2543a92dba6c` | Craft, the minimal version | 2026-08-12 |
+| R15 | TidyCal 404, `refero.design/pages/61185171-55c4-448c-a52c-ade498783a5d` | Craft, a 404 **inside** a signed-in shell | 2026-08-12 |
+
+### The negative reference, quoted in full because it is the whole argument
+
+**dbt's documentation 404 says, in its entirety:** "Page Not Found", "We could not find what you were looking for.", and then *"Please contact the owner of the site that linked you to the original URL and let them know their link is broken."*
+
+**There is no route onward at all.** The page tells the visitor to go and fix somebody else's website. For a product whose reader **arrives by a link somebody else sent them**, that exact sentence would be the product failing at its own front door: it hands the problem back to the one person who cannot solve it and has no account to solve it with.
+
+### Blocks
+
+| Source | Block | Decision | Traces to | Scope | Where we are better, and why |
+| --- | --- | --- | --- | --- | --- |
+| D9 | **"Contact the owner of the site that linked you"** | **DO NOT TAKE** | Would trace to nothing | MVP | Our reader **is** the person who was linked. Telling them to go back to the sender is telling them to do the thing this product exists to remove |
+| D9 | **A 404 with no onward route of any kind** | DO NOT TAKE | Nothing | MVP | The flow critique already ruled that a dead end with no route out is a defect. This is one, live, in a HARD competitor |
+| D10 | **The full marketing header and the whole sitemap footer on the error page** | DO NOT TAKE in this form | Nothing | MVP | Twenty-five links is not a route, it is a shrug. And on a phone the answer is below a full-height header the person did not ask for |
+| D10 | **"Page Not Found" marked up as an H2, with no H1 anywhere on the page** | **DO NOT TAKE, and name it** | SEO structure, decided at this stage | MVP | Every page we write carries one H1. A structural defect this cheap to avoid is worth recording, since SEO structure is this stage's job rather than production's |
+| D10 | **"Go to Homepage" as a single named action** | TAKE the pattern, **not the destination** | Both personas, node 7.1 | MVP | The analyst's home is the registry. **The reader has no home at all**, by decision, so "go to homepage" is not available to us for the persona that meets this page most |
+| D11 | **Not-found rendered as a state inside the app shell, not a separate page** ("The resource can't be found. Secoda may be out of sync with the source or the resource may not exist in this workspace") | **TAKE the shape for the signed-in half** | P2, node 7.1 | MVP | It names **two different causes** and does not pretend to know which. That is honest, and it is the same discipline node 0.4 applies to states on a number |
+| D11, R15 | **Keeping the shell and the navigation around the error for a signed-in person** | TAKE | P2 | MVP | An analyst who mistypes a URL should not lose their navigation. This splits 7.1 into two renderings of one node, which is a real finding rather than a preference |
+| D12 | **A consent banner with "Accept All Cookies" and "Personalize My Choices", plus a vendor list with search and filters** | **DO NOT TAKE the shape** | Legal, node 7.4 | ПОТІМ, and see the discrepancy below | This is what a consent platform looks like at scale. On the number card it would be **a modal about tracking sitting on top of a page that promises we store nothing about the reader**, which is the worst possible first contact |
+| D12 vs D10 | **The split itself: dbt runs a consent platform, Cube shows no banner at all to a US visitor** | Record, decide at step 7 | Legal | ПОТІМ | Two live US B2B data companies, two opposite answers. The label on 7.4 stays ПОТІМ and this is the evidence that it is a genuine choice rather than an oversight |
+| R13 | **Message, one line of explanation, one clearly named recovery action** | TAKE | Both, nodes 7.1 and 7.2 | MVP | Three blocks is the whole page. Everything beyond them is decoration on an error |
+| R13 | **"Back to Safety" as the button label** | DO NOT TAKE the wording | Node 7.1 | MVP | A friendly label that does not say where it goes. Ours names the destination, because a reader with no account needs to know what they are about to get |
+| R14 | **An emoji and a help chat in the corner** | DO NOT TAKE | Nothing | Out | Support chat is not in the MVP, and an emoji is the visual stage's decision, not this one |
+| R14 | **The whole page as one centred column with nothing else on it** | TAKE | Node 7.1 | MVP | This is the layout that works at 360 without being redesigned, which is the stance |
+| R15 | **A 404 inside the signed-in shell, with the sidebar intact and a home button** | TAKE for the analyst rendering | P2 | MVP | Confirms D11 from outside the category |
+
+### Our composition
+
+**7.1, the 404, and it renders two ways from one node.**
+
+*For the reader, signed out:* 1) what was expected at this address, in words. 2) **The two honest causes named**, that the link may have expired or the metric may have been removed, without claiming to know which. 3) The one thing they can actually do, which is ask the person who sent it, **with the difference from dbt being that we say who that is if we know**. 4) Footer.
+
+*For the analyst, signed in:* the same message inside the shell, navigation intact, and a route to the registry.
+
+**7.2, the 500:** what broke, **what is safe to assume about the number they were looking at** (nothing, because we did not get it), and a retry. The middle block is ours and appears in none of the sources, and it follows from the product: an error page in a trust product has to say whether anything it showed can still be believed.
+
+**7.3, maintenance:** ПОТІМ. Duration if known.
+
+**7.4, the cookie notice:** ПОТІМ, with the discrepancy carried openly into step 7.
+
+**Checked against rule 3.** D9 has no route at all, D10 has twenty-five, R13 has one that does not say where it goes, R14 has a chat widget. **Naming two possible causes without choosing between them appears in none of them**, and it is the same rule the state vocabulary already runs on.

@@ -1,0 +1,324 @@
+- generic [active] [ref=f98e1]:
+  - generic [ref=f98e2]:
+    - generic [ref=f98e3]:
+      - button [ref=f98e4] [cursor=pointer]
+      - generic [ref=f98e9]:
+        - paragraph [ref=f98e10]: dbt Summit, where data gets done
+        - paragraph [ref=f98e11]: Three days of keynotes, product announcements, and hands-on sessions with the community leveling up for the AI era. Join us September 15–18 in Las Vegas ($1695) or Online (Free).
+        - link "Register now" [ref=f98e12] [cursor=pointer]:
+          - /url: /dbt-summit/registration
+    - navigation [ref=f98e13]:
+      - generic [ref=f98e15]:
+        - generic:
+          - link [ref=f98e16] [cursor=pointer]:
+            - /url: /
+            - img "dbt" [ref=f98e17]
+          - button "Back" [ref=f98e18] [cursor=pointer]
+        - generic [ref=f98e22]:
+          - button "Search" [ref=f98e24] [cursor=pointer]
+          - button "Close menu Open menu" [ref=f98e28] [cursor=pointer]:
+            - generic [ref=f98e29]: Close menu
+            - generic [ref=f98e32]: Open menu
+      - generic:
+        - button "Product" [ref=f98e37] [cursor=pointer]
+        - button "Solutions" [ref=f98e42] [cursor=pointer]
+        - button "Customers" [ref=f98e47] [cursor=pointer]
+        - button "Resources" [ref=f98e52] [cursor=pointer]
+        - button "Community" [ref=f98e57] [cursor=pointer]
+        - link "Pricing" [ref=f98e62] [cursor=pointer]:
+          - /url: /pricing
+        - link "Log in or Create an Account" [ref=f98e64] [cursor=pointer]:
+          - /url: https://login.dbt.com/
+          - text: Login
+        - link "Log in or Create an Account" [ref=f98e67] [cursor=pointer]:
+          - /url: /signup
+          - text: Create a free account
+      - generic [ref=f98e69]:
+        - button "Get started" [ref=f98e70] [cursor=pointer]
+        - link "Book a demo" [ref=f98e71] [cursor=pointer]:
+          - /url: /contact
+    - main [ref=f98e72]:
+      - generic [ref=f98e85]:
+        - generic [ref=f98e87]:
+          - heading [level=1] [ref=f98e88]:
+            - generic [ref=f98e89]: The open standard for modern,
+            - text: AI-ready data transformation
+          - paragraph [ref=f98e90]:
+            - generic [ref=f98e91]: dbt combines SQL-based development with real-time validation and stateful
+            - text: intelligence, so you can build, test, and deploy AI-ready data pipelines quickly and confidently.
+          - button "Get started with dbt" [ref=f98e93] [cursor=pointer]
+        - link "Play video" [ref=f98e96] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f98e105]:
+        - img "phData" [ref=f98e108]
+        - img "Nasdaq" [ref=f98e111]
+        - img "Affirm" [ref=f98e114]
+        - img "Toyota" [ref=f98e117]
+        - img "Omni" [ref=f98e120]
+        - img "CHG Healthcare" [ref=f98e123]
+        - img "Siemens" [ref=f98e126]
+        - img "Infinite Lambda" [ref=f98e129]
+        - img "phData" [ref=f98e132]
+        - img "Nasdaq" [ref=f98e135]
+        - img "Affirm" [ref=f98e138]
+        - img "Toyota" [ref=f98e141]
+        - img "Omni" [ref=f98e144]
+        - img "CHG Healthcare" [ref=f98e147]
+        - img "Siemens" [ref=f98e150]
+        - img "Infinite Lambda" [ref=f98e153]
+        - img "phData" [ref=f98e156]
+        - img "Nasdaq" [ref=f98e159]
+        - img "Affirm" [ref=f98e162]
+        - img "Toyota" [ref=f98e165]
+        - img "Omni" [ref=f98e168]
+        - img "CHG Healthcare" [ref=f98e171]
+        - img "Siemens" [ref=f98e174]
+        - img "Infinite Lambda" [ref=f98e177]
+      - generic [ref=f98e182]:
+        - generic [ref=f98e183]:
+          - img "Fivetran + dbt merger logo lockup" [ref=f98e185]
+          - heading "Fivetran and dbt are one company. Here's what that means." [level=2] [ref=f98e186]
+        - link [ref=f98e188] [cursor=pointer]:
+          - /url: /blog/fivetran-and-dbt-are-one-company-now-here-s-what-that-means
+      - heading "Powered by the brand new Fusion engine, dbt makes data teams extraordinarily productive as they build data models—whether locally or in the cloud." [level=3] [ref=f98e197]
+      - generic [ref=f98e204]:
+        - generic [ref=f98e205]: Empower teams
+        - heading "Transform data with SQL" [level=2] [ref=f98e206]
+        - paragraph [ref=f98e207]: "Build data pipelines the way software engineers build apps: modular, tested, and version-controlled. Native SQL comprehension and local validation catch issues before they hit the warehouse, while multi-dialect compilation keeps logic portable as your data platform evolves."
+        - button "Start developing today" [ref=f98e209] [cursor=pointer]
+      - generic [ref=f98e219]:
+        - generic [ref=f98e220]: Build context
+        - heading "Interactive lineage across projects and columns" [level=2] [ref=f98e221]
+        - paragraph [ref=f98e222]: See exactly how your data flows and transforms across projects with a live and interactive DAG. Filter by model type, materialization, or dependency, and drill down to column-level lineage to trace where fields come from, how they’re transformed, or when they’re renamed.
+        - link "Read Fusion docs" [ref=f98e224] [cursor=pointer]:
+          - /url: https://docs.getdbt.com/docs/fusion
+      - generic [ref=f98e230]:
+        - generic [ref=f98e231]: Ship faster
+        - heading "Automatically refactor models and columns" [level=2] [ref=f98e232]
+        - paragraph [ref=f98e233]: Deep SQL awareness keeps your project consistent as it evolves. Rename a model or column once, and dbt automatically updates every downstream reference. Before committing, preview all proposed changes so you can refactor quickly and confidently.
+        - link "Read quickstart guide" [ref=f98e235] [cursor=pointer]:
+          - /url: https://docs.getdbt.com/guides/fusion?step=1
+      - generic [ref=f98e241]:
+        - generic [ref=f98e242]:
+          - generic [ref=f98e243]: Integrations
+          - heading "Interoperable by design" [level=2] [ref=f98e244]
+          - paragraph [ref=f98e245]: dbt never stores your data. Lean on our deep ecosystem integrations and commitment to open standards to securely, scalably, and flexibily get your data from where it lives to where it needs to go.
+          - button "Get started with dbt" [ref=f98e246] [cursor=pointer]
+        - generic [ref=f98e248]:
+          - generic [ref=f98e249]:
+            - img "Tableau" [ref=f98e251]
+            - paragraph [ref=f98e252]: Tableau
+          - generic [ref=f98e253]:
+            - img "Fivetran" [ref=f98e255]
+            - paragraph [ref=f98e256]: Fivetran
+          - generic [ref=f98e257]:
+            - img "OpenAI" [ref=f98e259]
+            - paragraph [ref=f98e260]: OpenAI
+          - generic [ref=f98e261]:
+            - img "Snowflake" [ref=f98e263]
+            - paragraph [ref=f98e264]: Snowflake
+          - generic [ref=f98e265]:
+            - img "Azure AI" [ref=f98e267]
+            - paragraph [ref=f98e268]: Azure AI
+          - generic [ref=f98e269]:
+            - img "Databricks" [ref=f98e271]
+            - paragraph [ref=f98e272]: Databricks
+      - generic [ref=f98e275]:
+        - generic [ref=f98e279]:
+          - generic [ref=f98e280]: Transform your outcome
+          - heading "Choose dbt for speed, trust, and delivering real results." [level=2] [ref=f98e281]
+          - paragraph [ref=f98e282]: Standardize on dbt to boost data quality, strengthen governance, and encourage collaboration so your teams can deliver trusted analytics and AI products faster than ever.
+        - generic [ref=f98e283]:
+          - generic [ref=f98e284]:
+            - heading [level=3] [ref=f98e288]:
+              - link "Improve data quality and trust" [ref=f98e289] [cursor=pointer]:
+                - /url: /product/dbt-catalog
+            - paragraph [ref=f98e290]: Rich metadata powers dbt Catalog and lineage, improving governance and trusted data for analytics and AI development.
+            - link [ref=f98e291] [cursor=pointer]:
+              - /url: /product/dbt-catalog
+          - generic [ref=f98e295]:
+            - heading [level=3] [ref=f98e299]:
+              - link "Drive efficiency & reduce cost" [ref=f98e300] [cursor=pointer]:
+                - /url: /product/cost-optimization
+            - paragraph [ref=f98e301]: dbt helps teams spot inefficiencies, automate routine work, and use compute smarter—cutting costs and speeding delivery.
+            - link [ref=f98e302] [cursor=pointer]:
+              - /url: /product/cost-optimization
+          - generic [ref=f98e306]:
+            - heading [level=3] [ref=f98e310]:
+              - link "Build better AI with higher-quality data" [ref=f98e311] [cursor=pointer]:
+                - /url: /product/ai
+            - paragraph [ref=f98e312]: dbt ensures your data is trusted, governed, and properly documented — so AI gets built on the best possible inputs
+            - link [ref=f98e313] [cursor=pointer]:
+              - /url: /product/ai
+      - generic [ref=f98e320]:
+        - generic [ref=f98e321]:
+          - generic [ref=f98e322]: Optimize costs
+          - heading "Smarter orchestration saves 30%+ on warehouse spend" [level=2] [ref=f98e323]
+          - paragraph [ref=f98e325]: Fusion brings stateful intelligence to your production pipelines. Automatically build only the models that need to be updated—no rewrites or complex setup required. Save on unnecessary compute, maintain your SLAs, and keep your projects running fast.
+          - link "Schedule a cost-saving consult" [ref=f98e327] [cursor=pointer]:
+            - /url: /contact
+        - img "Smart Orchestration with dbt" [ref=f98e330]
+      - button "Works with your IDEs Get a native, local development experience in your favorite IDE. Use the IDE extension with Cursor, Claude Code, Windsurf or VS Code. Cursor Claude Code dbt Studio VS Code" [ref=f98e335] [cursor=pointer]:
+        - generic [ref=f98e336]:
+          - generic [ref=f98e337]:
+            - heading "Works with your IDEs" [level=2] [ref=f98e338]
+            - paragraph [ref=f98e339]: Get a native, local development experience in your favorite IDE. Use the IDE extension with Cursor, Claude Code, Windsurf or VS Code.
+          - generic [ref=f98e340]:
+            - generic [ref=f98e341]: Cursor
+            - generic [ref=f98e344]: Claude Code
+            - generic [ref=f98e347]: dbt Studio
+            - generic [ref=f98e350]: VS Code
+      - generic [ref=f98e357]:
+        - generic [ref=f98e358]:
+          - generic [ref=f98e359]: Trust your data
+          - heading "Top companies use dbt to deliver real impact." [level=2] [ref=f98e360]
+          - paragraph [ref=f98e361]: Join the thousands of companies that rely on dbt to accelerate analytics, lower costs, and achieve extraordinary outcomes.
+          - link "Read more customer stories" [ref=f98e363] [cursor=pointer]:
+            - /url: /case-studies
+        - region [ref=f98e365]:
+          - generic [ref=f98e367]:
+            - tabpanel "1 of 2" [ref=f98e368]:
+              - generic [ref=f98e369]:
+                - img "Sweetgreen" [ref=f98e371]
+                - generic [ref=f98e372]:
+                  - paragraph [ref=f98e375]: By leveraging AI and the dbt Semantic Layer, self-service analysis has become a 30-minute job, compared to the old process of reaching out to the data team and waiting two weeks for the bandwidth to get an answer.
+                  - paragraph [ref=f98e376]: Sankalp Vatsh, Analytics Lead
+                - link "Read Sweetgreen's story" [ref=f98e377] [cursor=pointer]:
+                  - /url: /case-studies/sweetgreen
+            - tabpanel [ref=f98e380]:
+              - generic [ref=f98e381]:
+                - generic [ref=f98e384]:
+                  - paragraph [ref=f98e385]: 10x faster
+                  - paragraph [ref=f98e386]: implementation delivering cost savings in hours instead of months
+                - link [ref=f98e387] [cursor=pointer]:
+                  - /url: /case-studies/bilt-rewards-professional-services
+                  - text: Read Bilt Rewards 's story
+          - generic [ref=f98e390]:
+            - tablist "Select a slide to show":
+              - tab "Go to slide 1" [selected] [ref=f98e391]
+              - tab "Go to slide 2" [ref=f98e392]
+            - generic [ref=f98e393]:
+              - button "Previous slide" [disabled] [ref=f98e394] [cursor=pointer]
+              - button "Next slide" [ref=f98e397] [cursor=pointer]
+      - generic [ref=f98e402]:
+        - generic [ref=f98e406]:
+          - generic [ref=f98e407]: dbt in the field
+          - heading "Find dbt everywhere" [level=2] [ref=f98e408]
+          - paragraph [ref=f98e409]: We'll be at Snowflake Summit and Databricks Data+AI Summit in June, then hosting our own dbt Summit in September at The Cosmopolitan in Las Vegas.
+        - generic [ref=f98e410]:
+          - generic [ref=f98e411]:
+            - link "Visit us at Databricks Data+AI Summit" [ref=f98e414] [cursor=pointer]:
+              - /url: /events/databricks-summit-2026
+            - generic [ref=f98e415]: Databricks Data+AI Summit
+            - heading [level=3] [ref=f98e417]:
+              - link "Visit us at Databricks Data+AI Summit" [ref=f98e418] [cursor=pointer]:
+                - /url: /events/databricks-summit-2026
+            - paragraph [ref=f98e419]: "Your AI needs what your data already knows. Stop by booth #430 for live demos, product features, and guest speakers."
+          - generic [ref=f98e420]:
+            - link "Biggest dbt event of the year" [ref=f98e423] [cursor=pointer]:
+              - /url: /dbt-summit
+            - generic [ref=f98e424]: dbt Summit
+            - heading [level=3] [ref=f98e426]:
+              - link "Biggest dbt event of the year" [ref=f98e427] [cursor=pointer]:
+                - /url: /dbt-summit
+            - paragraph [ref=f98e428]: Join the world’s largest gathering of dbt users, where data leaders and practitioners come together to shape the future of data analytics and AI.
+      - generic [ref=f98e432]:
+        - generic [ref=f98e433]:
+          - generic [ref=f98e434]: The dbt Community
+          - heading "Join the largest community shaping the future of data & AI" [level=2] [ref=f98e437]
+          - paragraph [ref=f98e439]: The dbt Community is your gateway to best practices, innovation, and direct collaboration with thousands of data leaders and AI practitioners worldwide. Ask questions, share insights, and grow alongside a welcoming network of builders.
+          - generic [ref=f98e440]:
+            - link "Join the Community" [ref=f98e442] [cursor=pointer]:
+              - /url: /community/join-the-community
+            - link "Explore the Community" [ref=f98e444] [cursor=pointer]:
+              - /url: /community
+        - generic [ref=f98e446]:
+          - generic [ref=f98e447]:
+            - generic [ref=f98e448]: 100,000 +
+            - generic [ref=f98e450]: Active members
+          - generic [ref=f98e452]:
+            - generic [ref=f98e453]: 80k +
+            - generic [ref=f98e455]: Teams using dbt weekly
+          - generic [ref=f98e457]:
+            - generic [ref=f98e458]: 50 +
+            - generic [ref=f98e460]: Global meetups annually
+    - contentinfo [ref=f98e462]:
+      - generic [ref=f98e463]:
+        - heading "Footer" [level=2] [ref=f98e464]
+        - link [ref=f98e465] [cursor=pointer]:
+          - /url: /
+          - img "dbt Labs" [ref=f98e466]
+        - generic [ref=f98e467]:
+          - generic [ref=f98e468]:
+            - button "Product" [ref=f98e470]
+            - button "For Developers" [ref=f98e475]
+            - button "Company" [ref=f98e480]
+            - button "Resources" [ref=f98e485]
+            - button "Community" [ref=f98e490]
+            - button "Support" [ref=f98e495]
+          - generic [ref=f98e499]:
+            - generic [ref=f98e500]:
+              - heading "Read the Roundup" [level=5] [ref=f98e501]
+              - paragraph [ref=f98e502]: The internet's most useful articles on analytics engineering and its adjacent ecosystem.
+              - link "Read Now" [ref=f98e504] [cursor=pointer]:
+                - /url: https://roundup.getdbt.com/
+            - generic [ref=f98e505]:
+              - heading "Change Region" [level=5] [ref=f98e506]
+              - combobox "Select region" [ref=f98e507]:
+                - generic [ref=f98e508]:
+                  - generic [ref=f98e509]: 🇺🇸
+                  - text: Global
+            - generic [ref=f98e512]:
+              - heading "Connect with Us" [level=5] [ref=f98e513]
+              - generic [ref=f98e514]:
+                - link "GitHub" [ref=f98e515] [cursor=pointer]:
+                  - /url: https://github.com/dbt-labs/dbt-core
+                - link "LinkedIn" [ref=f98e519] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/dbtlabs/mycompany/
+                - link "YouTube" [ref=f98e524] [cursor=pointer]:
+                  - /url: https://www.youtube.com/channel/UCVpBwKK-ecMEV75y1dYLE5w
+                - link "Instagram" [ref=f98e528] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dbt_labs/
+                - link "X" [ref=f98e532] [cursor=pointer]:
+                  - /url: https://x.com/dbt_labs
+                - link "Bluesky" [ref=f98e536] [cursor=pointer]:
+                  - /url: https://bsky.app/profile/getdbt.com
+                - link "RSS" [ref=f98e540] [cursor=pointer]:
+                  - /url: https://www.getdbt.com/blog/feed.xml
+        - generic [ref=f98e545]:
+          - generic [ref=f98e546]: © 2026 dbt Labs, LLC. All Rights Reserved.
+          - list [ref=f98e547]:
+            - listitem [ref=f98e548]:
+              - link "Privacy Policy" [ref=f98e549] [cursor=pointer]:
+                - /url: /cloud/privacy-policy
+            - listitem [ref=f98e550]:
+              - link "Modern Slavery Statement" [ref=f98e551] [cursor=pointer]:
+                - /url: https://www.getdbt.com/modern-slavery-statement
+            - listitem [ref=f98e552]:
+              - link "Report a Problem" [ref=f98e553] [cursor=pointer]:
+                - /url: /report-a-problem
+            - listitem [ref=f98e554]:
+              - link "Security" [ref=f98e555] [cursor=pointer]:
+                - /url: /security
+            - listitem [ref=f98e556]:
+              - link "Terms of Use" [ref=f98e557] [cursor=pointer]:
+                - /url: /terms-of-use
+            - listitem [ref=f98e558]:
+              - link "AI development principles" [ref=f98e559] [cursor=pointer]:
+                - /url: /legal/ai-principles
+            - listitem [ref=f98e560]:
+              - button "Personalize My Choices" [ref=f98e561] [cursor=pointer]
+  - alert [ref=f98e562]
+  - dialog "Fivetran's Use of Cookies" [ref=f98e564]:
+    - generic [ref=f98e565]:
+      - generic [ref=f98e566]:
+        - generic:
+          - heading "Fivetran's Use of Cookies" [level=2] [ref=f98e567]
+          - generic [ref=f98e568]:
+            - text: By clicking "Accept All Cookies", you consent to the storage of cookies on your device for improved site navigation, analyzing site usage, and supporting our marketing efforts.
+            - link "More information about your privacy, opens in a new tab" [ref=f98e569] [cursor=pointer]:
+              - /url: https://www.fivetran.com/legal/privacy
+              - text: Refer to our Privacy Notice section on "Cookies and similar tracking technology" for more details.
+      - generic [ref=f98e571]:
+        - button "Accept All Cookies" [ref=f98e573] [cursor=pointer]
+        - button "Personalize My Choices, Opens the preference center dialog" [ref=f98e574] [cursor=pointer]: Personalize My Choices

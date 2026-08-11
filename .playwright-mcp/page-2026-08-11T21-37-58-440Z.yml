@@ -1,0 +1,98 @@
+- generic [active] [ref=f88e1]:
+  - generic [ref=f88e2]:
+    - generic [ref=f88e4]:
+      - link [ref=f88e5] [cursor=pointer]:
+        - /url: /
+      - button "mobile menu" [ref=f88e15] [cursor=pointer]
+    - generic [ref=f88e17]:
+      - generic [ref=f88e18]:
+        - heading "Page Not Found" [level=2] [ref=f88e19]
+        - generic [ref=f88e20]: The page you are looking for could not be found. It looks like you’re trying to access a page that was has been deleted or never existed.
+      - link "Go to Homepage" [ref=f88e22] [cursor=pointer]:
+        - /url: /
+    - contentinfo [ref=f88e23]:
+      - generic [ref=f88e24]:
+        - generic [ref=f88e25]:
+          - img "Cube Dev logo" [ref=f88e26]
+          - generic [ref=f88e34]: © 2026 Cube Dev, Inc.
+        - generic [ref=f88e35]:
+          - generic [ref=f88e36]: Resources
+          - list [ref=f88e37]:
+            - listitem [ref=f88e38]:
+              - link "Docs" [ref=f88e39] [cursor=pointer]:
+                - /url: https://docs.cube.dev/docs/introduction
+            - listitem [ref=f88e40]:
+              - link "Blog" [ref=f88e41] [cursor=pointer]:
+                - /url: https://cube.dev/blog
+            - listitem [ref=f88e42]:
+              - link "Articles" [ref=f88e43] [cursor=pointer]:
+                - /url: /articles
+            - listitem [ref=f88e44]:
+              - link "Events" [ref=f88e45] [cursor=pointer]:
+                - /url: /events
+            - listitem [ref=f88e46]:
+              - link "Customer Stories" [ref=f88e47] [cursor=pointer]:
+                - /url: /case-studies
+            - listitem [ref=f88e48]:
+              - link "Consulting Partners" [ref=f88e49] [cursor=pointer]:
+                - /url: /consulting/consulting-partners
+        - generic [ref=f88e50]:
+          - generic [ref=f88e51]: Product
+          - list [ref=f88e52]:
+            - listitem [ref=f88e53]:
+              - link "Agentic AI" [ref=f88e54] [cursor=pointer]:
+                - /url: /agentic-ai
+            - listitem [ref=f88e55]:
+              - link "Business Intelligence" [ref=f88e56] [cursor=pointer]:
+                - /url: /business-intelligence
+            - listitem [ref=f88e57]:
+              - link "Embedded Analytics" [ref=f88e58] [cursor=pointer]:
+                - /url: /embedded-analytics
+            - listitem [ref=f88e59]:
+              - link "AI Context Layer" [ref=f88e60] [cursor=pointer]:
+                - /url: /product/ai-context-layer
+            - listitem [ref=f88e61]:
+              - link "Data Modeling" [ref=f88e62] [cursor=pointer]:
+                - /url: /product/data-modeling
+            - listitem [ref=f88e63]:
+              - link "Self-serve Analytics" [ref=f88e64] [cursor=pointer]:
+                - /url: /product/self-serve-analytics
+            - listitem [ref=f88e65]:
+              - link "Caching and Query Performance" [ref=f88e66] [cursor=pointer]:
+                - /url: /product/caching-and-data-performance
+        - generic [ref=f88e67]:
+          - generic [ref=f88e68]: Company
+          - list [ref=f88e69]:
+            - listitem [ref=f88e70]:
+              - link "About" [ref=f88e71] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=f88e72]:
+              - link "Careers" [ref=f88e73] [cursor=pointer]:
+                - /url: https://cube-dev.careers-page.com/
+            - listitem [ref=f88e74]:
+              - link "Legal & Trust" [ref=f88e75] [cursor=pointer]:
+                - /url: /legal
+        - generic [ref=f88e76]:
+          - generic [ref=f88e77]: Channels
+          - list [ref=f88e78]:
+            - listitem [ref=f88e79]:
+              - link "GitHub Repositories" [ref=f88e80] [cursor=pointer]:
+                - /url: https://github.com/cube-js/cube.js
+            - listitem [ref=f88e83]:
+              - link "Slack community" [ref=f88e84] [cursor=pointer]:
+                - /url: https://slack.cube.dev/
+            - listitem [ref=f88e90]:
+              - link "Twitter account" [ref=f88e91] [cursor=pointer]:
+                - /url: https://twitter.com/the_cube_dev
+            - listitem [ref=f88e94]:
+              - link "Youtube channel" [ref=f88e95] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UC5jQrtiI85SUs9zj6FhdkfQ
+            - listitem [ref=f88e98]:
+              - link "StackOverflow questions" [ref=f88e99] [cursor=pointer]:
+                - /url: https://stackoverflow.com/questions/tagged/cube.js
+            - listitem [ref=f88e103]:
+              - link "LinkedIn Profile" [ref=f88e104] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/cube-dev/
+        - link "Cube Cloud Status" [ref=f88e107] [cursor=pointer]:
+          - /url: https://status.cubecloud.dev/
+  - alert [ref=f88e109]
