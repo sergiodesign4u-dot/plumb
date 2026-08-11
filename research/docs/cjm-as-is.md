@@ -56,3 +56,72 @@ Items 1, 4 and 8 are the dangerous three: without them the As-Is curve is drawn 
 **Where Deep can actually reach, since two obvious routes are already known to be closed.** Reddit returns HTTP 403 without an account and the Metabase forum carries support threads, both established at stage 02 and not to be spent again. Open to us: public review pages on G2, Capterra and TrustRadius for the products in `competitors.md`; Hacker News through the Algolia index, which is fully public and dated; the dbt Community Forum, which has already produced usable material; YouTube comments under competitor demos; and comment threads under analytics writing.
 
 **What Deep does not promise.** It buys the attempt, not the finding. Where a route returns nothing the phase keeps its `[?]` and the failed route is recorded so it is not paid for twice, exactly as at stage 02. Deep changes how hard we look, never what we are willing to write down.
+
+---
+
+## The path today: phases, goals, actions, touchpoints
+
+Built at step 3. **Phases are derived from the arc of the job, not from a funnel.** There is no Awareness phase and no Retention phase in this map, because the reader chooses nothing and onboards nowhere: they are handed a number by circumstance. Emotions and barriers are deliberately absent here and arrive at step 4, so that structure is not drawn by eye together with feeling.
+
+Each phase carries its source. Where the path is not covered by data the row says `[?]` rather than inventing a plausible step.
+
+### A. The audience approaches
+
+- **Goal of the phase.** Prepare what will be shown; the number is needed as part of an argument. This is the situation half of the main job.
+- **Actions.** Receives a request or schedules the meeting themselves, gathers material, reaches the point where a figure is required.
+- **Touchpoints.** Calendar, deck, document, a thread in chat.
+- **Source.** `personas.md` slice 1, the trigger is exposure rather than curiosity. Brief only, `[?]`.
+
+### B. The number is taken
+
+- **Goal of the phase.** Have the figure inside the artefact. Main job.
+- **Actions.** Opens wherever the number lives, copies it, pastes it into a slide or a document. Possibly takes it from last week's deck rather than from the origin.
+- **Touchpoints.** A dashboard in a BI tool, a spreadsheet, a message in chat, a previous deck. **Which one is hole 6, the most expensive unknown in this map.**
+- **Source.** `ux-patterns.md` B1, the number is read away from the system that produced it. The specific surface is `[?]`.
+
+### C. The private moment of doubt
+
+**This phase is contested, and that is the finding of the skeleton rather than a caveat on it.**
+
+- **Goal of the phase.** Work out how far this can be trusted. This is the heart of the main job.
+- **Actions.** Looks at the figure, checks it against expectation and against what they remember, looks for when it was last updated. Or does none of that.
+- **Touchpoints.** The same surface the number was taken from.
+- **Source.** `[?]`, and this is hole 1 and open question 4 in `research.md`. The market supplies only the shape: checking is a destination that has to be chosen, and choosing it requires already suspecting something (`competitors.md`).
+
+**What is at stake in whether this phase exists.** Hole 1 asks exactly whether a check happens before acting or only after being contradicted. If C does not happen, the centre of gravity of this map moves to F, and the product moves with it: we would not be building "look before you take it" but "sort it out after you were caught". That is a fork, not a detail, and the mining at step 4 should aim hardest here.
+
+### D. Trying to resolve the doubt
+
+- **Goal of the phase.** Find out who is answerable and what is going on with the number. R1.
+- **Actions.** One of the three alternatives named in `personas.md`: ask the analyst in a channel, open the dashboard again, or use the number as it stands. Plus waiting, because the answer runs on somebody else's clock.
+- **Touchpoints.** Slack or another chat, the BI tool, a catalog they have no reason to open (dbt Explore and its four health states).
+- **Source.** `personas.md` slice 5 for the three alternatives, and which one fires is `[?]`. `docs.getdbt.com/docs/explore/explore-projects` for the catalog. The dbt Community Forum thread 712 for the repeated question that lands on the analyst.
+
+**This phase is the seam between the two maps.** What is waiting for the reader is R2 for the data lead. It is named here so that P2's map, when it is built, joins this one at a known point instead of being drawn independently.
+
+### E. The number is presented
+
+- **Goal of the phase.** Not to be defending something that cannot be backed up. This is the outcome half of the main job.
+- **Actions.** Says the figure out loud or shows the slide.
+- **Touchpoints.** The meeting, the deck, the document.
+- **Source.** `CLAUDE.md`, `[?]`.
+
+### F. The number is challenged, or it is not
+
+- **Goal of the phase.** Hold the position and work out whose figure is right. R1 fires hardest here.
+- **Actions.** **Unknown.** Who fixes it, how long it takes, what it costs, whether it happens at all: holes 4 and 9, and we have no failure story from a real company.
+- **Touchpoints.** `[?]`.
+- **Source.** None. The entire motivation model of the product rests on this phase being expensive, and the evidence that it is amounts to nothing.
+
+### G. The number travels on
+
+- **Goal of the phase.** Stop an old figure travelling as a current one. R4.
+- **Actions.** The deck is forwarded, the slide is reused, the link is saved.
+- **Touchpoints.** The deck, a saved link.
+- **Source.** R4 is marked a hypothesis in `jtbd.md`. Nothing shows that a saved link is ever opened a second time.
+
+### Cross-check against the jobs
+
+A, B, C and E are covered by the main job; D and F by R1; G by R4. **No phase is without a job, and all three of P1's jobs have a phase.** R2 and R3 have no phase here and should not: they belong to P2, whose map is separate, and D is where the two touch.
+
+**Two phases were deliberately not added**, and both would have looked natural. "Chooses a tool", because the reader is not the buyer and chooses nothing. "Onboarding", because there is no product yet. An invented phase survives into the IA as a real one, which is why the omission is recorded rather than left silent.
