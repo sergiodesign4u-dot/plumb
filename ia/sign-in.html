@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1.1 Sign in - Plumb</title>
+<meta name="description" content="Node 1.1 with states 1.2 and 1.3: the one MVP screen that closes no job, an SSO-only gate with no password, and the three ways it fails.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:900px){ .mocks{ grid-template-columns:1fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:16px 12px; }
+  .bw.wide{ min-width:400px; padding:22px 16px; }
+  .brand{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6b7076; margin-bottom:16px; }
+  .head{ font-size:16px; font-weight:700; margin-bottom:14px; }
+  .fld{ margin-bottom:11px; }
+  .fld label{ display:block; font-size:11px; color:#6b7076; margin-bottom:3px; }
+  .fld label b{ color:#14161a; }
+  .inp{ border:1px solid #14161a; padding:8px; min-height:15px; }
+  .inp.err{ border-width:2px; }
+  .go{ border:1px solid #14161a; padding:9px 10px; font-weight:600; text-align:center; }
+  .legal{ color:#6b7076; font-size:10.5px; margin-top:13px; line-height:1.5; }
+  .note{ border:1px dashed #14161a; padding:8px 9px; margin-bottom:13px; line-height:1.45; }
+  .banner{ border:1px solid #14161a; padding:9px 10px; margin-bottom:13px; line-height:1.45; }
+  .banner b{ display:block; margin-bottom:3px; }
+  .banner a{ text-decoration:underline; }
+  .run{ border:1px dashed #14161a; padding:9px 10px; margin-top:13px; color:#6b7076; line-height:1.5; }
+  .run i{ font-style:normal; color:#14161a; font-weight:600; }
+  .foot{ border-top:1px solid #e3e1dc; margin-top:18px; padding-top:9px; color:#6b7076; font-size:10.5px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 1.1 with 1.2, 1.3 &middot; pages</p>
+    <h1>The one MVP screen that closes no job, and the only one where the buyer is visible</h1>
+    <p class="standfirst lede">The traceability matrix already said it in four words: sign in is a gate, not a place. This node is where that has to hold against the pressure every sign-in page is under to become something else.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: MVP</span>
+      <span>States: 1.2, 1.3</span>
+      <span>Source: <code>ia/docs/pages/sign-in.md</code></span>
+    </div>
+  </header>
+
+  <!-- Why ............................................................... -->
+  <section id="why">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Why a screen that closes no job is in MVP</h2></div>
+
+    <p>The obvious reason is that the analyst's three screens are unreachable without it.</p>
+
+    <div class="flag">
+      <b>The second reason, and it is the one worth writing down</b>
+      <p><strong>This is the only place in the MVP where the buyer is visible.</strong> <code>CLAUDE.md</code> records the head of data or COO as a deliberate non-persona with no product surface, who nonetheless imposes SOC 2, SSO and a trust surface. <strong>SSO is the one of those three that has to exist as a screen</strong>, and this is the screen: a gate for the analyst and a piece of evidence for the person who signs the contract. It is the only MVP node doing double duty like that.</p>
+    </div>
+
+    <h3>Seven blocks, and what is not on the page is most of what is usually on it</h3>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>Not here</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Password field</strong></td><td>The tech hypothesis commits to OIDC and SAML through a provider. A password field we do not use is an attack surface, a support queue and a reset flow</td></tr>
+          <tr><td>Reset password</td><td>Falls with the field. <strong>The clearest saving in the type:</strong> no password means no reset, no expiry, no rotation, and three fewer nodes than a conventional gate</td></tr>
+          <tr><td>GitHub and Google buttons</td><td>A personal account signing into a company workspace is the thing SSO exists to prevent</td></tr>
+          <tr><td>Create an account</td><td>Self-serve sign-up is acquisition, and cluster 6 is entirely ПОТІМ. Recorded rather than dropped: when it arrives, it arrives here</td></tr>
+          <tr><td>Language selector</td><td>One language. The project boundary settles it</td></tr>
+          <tr><td>A disabled primary action</td><td>A disabled button with no stated reason is a dead end that looks like a bug. Ours stays enabled and answers on submit, <strong>which is what makes 1.3 reachable</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag">
+      <b>The comparison here is real, because both domain pages were opened live</b>
+      <p>Both dbt Cloud and Cube Cloud sell into US B2B, where the research records that SSO is asked about on the first call. <strong>In Cube Cloud the SSO route is fifth on the page</strong>, behind email, password, GitHub and Google. <strong>In dbt Cloud there is no SSO control on the sign-in page at all.</strong></p>
+      <p style="margin-top:8px">Both treat the enterprise route as the exception. <strong>For a product whose buyer imposes SSO before the security review, the exception route is the main one</strong>, and ours is the only one.</p>
+    </div>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, 1.1, one field and one route</div>
+        <div class="bw wide">
+          <div class="brand">Plumb</div>
+          <div class="head">Sign in to your workspace</div>
+          <div class="fld"><label><b>Work email</b></label><div class="inp">dana@northwind.com</div></div>
+          <div class="go">Continue with SSO</div>
+          <div class="legal">By signing in you agree to the Terms of Service, unless a prior agreement is in effect.</div>
+          <div class="foot">Plumb &middot; Trust and security &middot; Privacy &middot; Terms</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 1.2, no cancel, and it says whose answer</div>
+        <div class="bw">
+          <div class="brand">Plumb</div>
+          <div class="head">Sign in to your workspace</div>
+          <div class="fld"><label><b>Work email</b></label><div class="inp">dana@northwind.com</div></div>
+          <div class="go">Continue with SSO</div>
+          <div class="run"><i>Waiting for Okta at northwind.com.</i><br>This can take a few seconds. If nothing happens in thirty, come back here and try again.</div>
+          <div class="foot">Plumb &middot; Trust and security &middot; Privacy &middot; Terms</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Two states, and 1.3 fails in the same shape as node 3.2</h2></div>
+
+    <div class="flag">
+      <b>1.2 has no cancel, and that is a decision rather than an omission</b>
+      <p><strong>An OIDC round trip takes the browser to somebody else's system and brings it back.</strong> A cancel control during that window returns a person to a half-state: not signed in, not signed out, holding a page that may be about to be replaced by a redirect they did not expect.</p>
+      <p style="margin-top:8px">So there is no cancel. Instead the progress <strong>names whose answer is being waited for</strong>, and there is a stated timeout with a route back to the gate, which is what a cancel was for without the state it would have left behind.</p>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>1.3, three failures, and the fix is in a different place each time</caption>
+        <thead><tr><th>What happened</th><th>What the page says</th><th>Where the fix is</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The address belongs to no configured workspace</strong></td><td>That this domain is not set up with Plumb yet, in those words</td><td><strong>Their own admin.</strong> The person who set Plumb up at their company has to add the domain</td></tr>
+          <tr><td><strong>The provider answered and refused</strong></td><td>That the identity provider declined, and that nothing about the address was wrong</td><td><strong>Them or their admin</strong>, and retrying is reasonable</td></tr>
+          <tr><td><strong>The provider did not answer</strong></td><td>That we could not reach the provider, and that this is not about them</td><td><strong>Neither side.</strong> Waiting is the only honest advice</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>The first row is the real failure of an SSO gate</strong>, and naming it is what stops 1.3 being a generic "something went wrong". A wrong password is not available to fail on here; an address that belongs to nobody is.</p>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, 1.3, the failure that actually happens</div>
+        <div class="bw">
+          <div class="brand">Plumb</div>
+          <div class="banner"><b>northwind.com is not set up with Plumb yet.</b>Whoever set Plumb up at your company can add this domain. Until then this address cannot sign in.</div>
+          <div class="fld"><label><b>Work email</b></label><div class="inp err">dana@northwind.com</div></div>
+          <div class="go">Continue with SSO</div>
+          <div class="legal">By signing in you agree to the Terms of Service, unless a prior agreement is in effect.</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Desktop, 1.1 with the notice slot in use</div>
+        <div class="bw wide">
+          <div class="brand">Plumb</div>
+          <div class="head">Sign in to your workspace</div>
+          <div class="note">You were sent a number card. <strong>Reading it does not need an account</strong>, and signing in here is only for people who write definitions.</div>
+          <div class="fld"><label><b>Work email</b></label><div class="inp">dana@northwind.com</div></div>
+          <div class="go">Continue with SSO</div>
+          <div class="legal">By signing in you agree to the Terms of Service, unless a prior agreement is in effect.</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>The route out of 1.3 is back to the gate, and the gap is named.</strong> In MVP there is nowhere else to send somebody: support and contact is node 6.7 and it is ПОТІМ. So the message carries the instruction rather than a link, and <strong>it says who at their company can fix it rather than offering us as the fix.</strong></p>
+  </section>
+
+  <!-- Reader ............................................................ -->
+  <section id="reader">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The reader never arrives here, and node 2.9 does not send them</h2></div>
+
+    <p><strong>Cluster 1 is entirely the analyst's.</strong> Node 2.9, "not readable without an account", refuses login wall theatre, and this node gives that refusal a mechanical reason rather than a stylistic one.</p>
+
+    <div class="flag warn">
+      <b>The reasoning, in one line</b>
+      <p><strong>A person who reaches 2.9 has no workspace to be signed into. If they had one, the card would have opened.</strong> Offering them a sign-in they would fail at 1.3 turns a partial answer into a dead end with a form in it.</p>
+    </div>
+
+    <p><strong>The notice slot is where the opposite case is handled.</strong> Somebody who followed a card link and then wandered to the gate is told, before they act, that reading needs no account. A gate has exactly one moment to explain an unexpected situation and it is before the action rather than after it fails, which is the slot dbt uses for its extension notice and the reason the slot is kept even though it is usually empty.</p>
+
+    <div class="flag warn">
+      <b>Nothing from the emotional and social table lands here, and that is now a pattern</b>
+      <p><strong>This is the third analyst screen in a row to say it</strong>, which is a finding rather than three gaps. The mechanisms in that table live on the card, on the owner field and on the registry count. The analyst's infrastructure screens carry none of them, and a stage that added one to each would be inventing feeling to fill a section.</p>
+    </div>
+
+    <p><strong>Responsive.</strong> At 360: a single centred column, field and action full width, targets at 44 by 44, the footer the only thing below. At width: the same column, capped and centred. <strong>Nothing is added at width</strong>, because there is nothing this page is holding back.</p>
+
+    <p><strong>SEO:</strong> <code>noindex, follow</code>, no schema, no SEO text. Publicly reachable and transactional. <code>follow</code> rather than <code>none</code> because the footer's links are real. <strong>The reason to keep it out of the index is competitive with ourselves:</strong> node 6.1 is the page that should answer a brand query, and a sign-in page ranking for it costs a visitor the explanation.</p>
+  </section>
+
+  <p class="backlink"><a href="structure.html#1.1">&larr; Structure (1.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '1.1 Sign in';
+  window.NAV_SECTIONS = [
+    { id:'why',    label:'Why it is in MVP' },
+    { id:'states', label:'Two states' },
+    { id:'reader', label:'The reader never arrives' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>
