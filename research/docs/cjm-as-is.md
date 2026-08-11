@@ -224,3 +224,61 @@ A dashboard with no login, embedded in the tool the person already works in, con
 **P1 still has no mood quote.** Deep did not find a business reader speaking. S2 is a reader speaking about trust, but a technical one, and passing it off as P1's voice would be exactly the kind of quiet substitution this stage exists to prevent.
 
 **One consequence reaches past this step and is therefore only named here.** S1 lands on the riskiest assumption in `lean-ux-canvas.md`, and step 4 has no right to edit that file. It is carried into the step 6 critique as an input.
+
+---
+
+## The emotional curve
+
+Built at step 5 as the input for the chart on `cjm-as-is.html`. Every point stands on an emotion from step 4 with its source. Points resting on `[?]` are marked undefined rather than interpolated, and a point on a single source is marked weaker than one carried by a pattern, so that the chart shows the difference instead of flattening it.
+
+| Phase | Sign | Intensity | Strength | Standing |
+| --- | --- | --- | --- | --- |
+| A. The audience approaches | `[?]` | `[?]` | none | Undefined |
+| B. The number is taken | `[?]` | `[?]` | barrier evidenced, feeling not | Undefined |
+| C. The private moment of doubt | `[?]` | `[?]` | behaviour evidenced, feeling not | Undefined |
+| D. Trying to resolve the doubt | Negative | **3** | Signal, reinforced by a second venue | **The only plotted point** |
+| E. The number is presented | `[?]` | `[?]` | none | Undefined |
+| F. The number is challenged | `[?]` | `[?]` | none | Undefined |
+| G. The number travels on | `[?]` | `[?]` | none | Undefined |
+
+**The floor is D, and it is the floor by default rather than by measurement.** There is no peak, because nothing in this path produced a positive emotion with a source, and inventing one to give the line a shape is exactly the failure this stage exists to prevent.
+
+**What this means for the chart, stated plainly rather than styled around.** One plotted point and six undefined bands is not a curve, and it should not be drawn as one. `cjm-as-is.html` renders the undefined phases as an explicit band rather than a dotted line between known points, because a dotted line still reads as a trajectory. The single point is drawn small and thin, matching its strength.
+
+**What would turn this into a curve.** Interviews with business readers, which is the same answer the personas critique reached and the follow-up research failed to substitute for. No amount of further public mining will produce it: the corpus holds practitioners describing readers, and readers do not write about this.
+
+---
+
+## Growth zones
+
+Where today's experience hurts most and where the competition is winnable. Each zone names the specific barrier from step 4 that it sits on, and the market gap from `research.md`, `benchmark.md` or `competitors.md` where there is one. **No solutions are written here.** They belong in `cjm-to-be.md` at step 7, and a remedy written into this file would stop it being a mirror.
+
+Ordered by strength of evidence, not by how appealing the zone is to build for.
+
+### Z1. The number arrives with no route back to what made it
+
+- **Barrier it sits on.** Phase B: the number arrives with no route back to its source (S5), and the definition is often unknown even to the people who built the surface it came from (S6).
+- **Market gap.** Provenance is a destination that has to be chosen, and choosing it requires already suspecting something (`competitors.md`). Attribution scores 3 or below across all five benchmark products (`benchmark.md`).
+- **Strength.** The strongest zone here: a patterned complaint inside one thread, sitting on top of a gap documented across the whole competitor set.
+
+### Z2. The answer runs on somebody else's clock
+
+- **Barrier it sits on.** Phase D: the answer arrives when the analyst gets to it, and the reader's question is one of many landing on the same person (S7, S8).
+- **Market gap.** The category's answer to the repeated question is a catalog the reader has no reason to open (`docs.getdbt.com/docs/explore/explore-projects`), and the field's own default answer is to build a dashboard (`discourse.getdbt.com/t/712`), which is what this job is actually hired against.
+- **Strength.** The only zone standing on a reported feeling with an intensity, and that feeling is scoped: S7 describes waiting for a requested dashboard rather than waiting for a doubt to be resolved.
+
+### Z3. There is nobody named to ask
+
+- **Barrier it sits on.** Phase D again, from its other side: the route out of doubt runs through a person, and no surface says which person.
+- **Market gap.** The strongest market evidence in this file. No product of the five scores above 3 on attribution (`benchmark.md`), and PowerMetrics names a person only when a certification is **removed** (`support.powermetrics.app`, article 37726220561559).
+- **Strength.** Strong on the market side, weak on the people side: that our reader wants a name is R1, and R1 rests on the shape of the market rather than on anyone saying so.
+
+### Z4. The reader does not travel to the trust information
+
+- **Barrier it sits on.** Phase C: checking is a destination that has to be chosen, and S1 adds that even a destination chosen for the reader and placed in their path is not visited.
+- **Market gap.** No vendor surface in `competitors.md` addresses arrival at all. Every one of them assumes the reader comes.
+- **Strength.** A measured trial, which is the strongest instrument in this research, on an adjacent population, which is what stops it being decisive. **This is the only zone where the evidence points against us**, and it is kept in the list at full weight for exactly that reason: it decides whether the other three matter.
+
+### A candidate that did not qualify, recorded rather than quietly dropped
+
+**Staleness that looks like freshness.** Benchmark criterion 8 records the strongest failure in the category as a stale value that looks exactly like a fresh one (`benchmark.md`), and the product already carries an "as of" state against it. It is not listed as a growth zone because **phase G produced no barrier at all**, so it would be a zone resting on a market artefact with nothing from a person underneath it. It is written here so that step 7 can see it was considered and why it did not clear the bar, rather than rediscovering it as a new idea with no parent.
