@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>6.1 Product page - Plumb</title>
+<meta name="description" content="Node 6.1: the reference page of stage 03b. The only indexed page in the map, and the one whose hero renders the running card instead of a picture of it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only: black and white wireframes */
+  .mocks{ display:grid; gap:18px; margin:20px 0 8px; }
+  @media (min-width:960px){ .mocks{ grid-template-columns:1.45fr 1fr; align-items:start; } }
+  .frame{ border:1px solid #14161a; background:#fff; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .frame-cap{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+              color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--rule); }
+  .bw{ font-family:var(--sans); font-size:12px; color:#14161a; padding:12px; }
+  .bw.wide{ min-width:520px; }
+  .bw.phone{ min-width:0; max-width:336px; }
+  .bar{ display:flex; align-items:center; gap:8px; border-bottom:1px solid #14161a;
+        padding-bottom:8px; margin-bottom:12px; font-size:11px; }
+  .bar .sp{ flex:1; }
+  .hero{ display:grid; gap:12px; }
+  .bw.wide .hero{ grid-template-columns:1fr 232px; align-items:start; }
+  .claim{ font-size:20px; font-weight:700; line-height:1.2; letter-spacing:-.01em; }
+  .bw.phone .claim{ font-size:17px; }
+  .card{ border:1px solid #14161a; padding:11px 10px; }
+  .card .nm{ font-size:11px; color:#6b7076; }
+  .card .val{ font-size:26px; font-weight:700; letter-spacing:-.02em; line-height:1.15; margin:2px 0 6px; }
+  .card .st{ border-top:1px solid #14161a; padding-top:7px; }
+  .card .st b{ display:block; }
+  .card .st span{ color:#6b7076; }
+  .card .def{ border-top:1px dashed #9a9a9a; margin-top:7px; padding-top:7px; }
+  .card .att{ color:#6b7076; margin-top:6px; font-size:11px; }
+  .strip{ border:1px dashed #14161a; padding:8px 9px; margin:12px 0; display:flex;
+          align-items:center; gap:8px; flex-wrap:wrap; }
+  .btn{ border:1px solid #14161a; padding:5px 10px; font-weight:600; }
+  .sect{ border-top:1px solid var(--rule-strong); padding-top:9px; margin-top:12px; }
+  .sect h4{ margin:0 0 4px; font-size:12.5px; font-weight:700; color:#14161a;
+            text-transform:none; letter-spacing:normal; font-family:var(--sans); }
+  .sect p{ margin:0; color:#6b7076; font-size:11.5px; line-height:1.45; }
+  .grid4{ display:grid; gap:6px; margin-top:6px; }
+  .bw.wide .grid4{ grid-template-columns:1fr 1fr; }
+  .grid4 div{ border:1px solid var(--rule-strong); padding:6px 7px; font-size:11px; }
+  .foot{ border-top:1px solid #14161a; margin-top:12px; padding-top:8px; color:#6b7076; font-size:11px; }
+  .flag{ border-left:2px solid var(--accent); padding-left:14px; margin:20px 0; }
+  .flag.warn{ border-left-color:var(--down); }
+  .flag b{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+           color:var(--accent); display:block; margin-bottom:5px; }
+  .flag.warn b{ color:var(--down); }
+  .seo{ font-family:var(--mono, ui-monospace, SFMono-Regular, Menlo, monospace); font-size:12.5px;
+        background:var(--panel); border:1px solid var(--rule); padding:12px 13px; overflow-x:auto; }
+  .backlink{ font-family:var(--sans); font-size:13px; border-top:1px solid var(--rule-strong);
+             padding-top:14px; margin-top:34px; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 03b &middot; Node 6.1 &middot; pages</p>
+    <h1>The one page we are allowed to index, and its hero runs the product</h1>
+    <p class="standfirst lede">The reference node of this stage. It is not a Home, because this product deliberately has none, and it is the only indexed page in a map of forty-one nodes. Both facts make it the only place the SEO layer can attach.</p>
+    <div class="dateline">
+      <span>Type: page</span>
+      <span>Scope: ПОТІМ</span>
+      <span>Source: <code>ia/docs/pages/product-page.md</code></span>
+    </div>
+  </header>
+
+  <!-- Why ............................................................... -->
+  <section id="why">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Why the reference node is 6.1 and not a Home</h2></div>
+
+    <p>The template for this stage normally starts from the Home page. <strong>This product has no Home,</strong> and that is a decision the IA already took and defended: the reader arrives by a link, holds no account, and has no header, no menu and no home by design. Global navigation belongs to the analyst. Inventing a node 0.0 to satisfy a template would contradict a decision made two steps ago.</p>
+
+    <p><strong>The second reason is arithmetic.</strong> Of forty-one nodes, the number card is public but <code>noindex</code>, because indexing it would publish customers' numbers, and everything else is private or transactional. So the structural SEO layer, which belongs to this stage rather than to production, has exactly one subject.</p>
+
+    <div class="flag">
+      <b>What this page serves, said without dressing it up</b>
+      <p><strong>No job.</strong> Cluster 6 is jobless by construction and the traceability matrix leaves it out of the job table on purpose. This page serves acquisition, which is a business outcome rather than somebody's work. It also carries one growth mechanic: the public page renders the real card component.</p>
+    </div>
+  </section>
+
+  <!-- Blocks ............................................................ -->
+  <section id="blocks">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Blocks, and the one that decides the page</h2></div>
+
+    <p>Composition taken from the block bank, type T6, with the order reasoned from 360.</p>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>#</th><th>Block</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>The claim</strong>, one sentence, as H1</td><td>Not a tagline plus a subtitle. One sentence</td></tr>
+          <tr><td>2</td><td><strong>The live card</strong>, the real component from node 2.1</td><td><strong>Every source puts a screenshot here.</strong> Ours runs, with a real metric in it</td></tr>
+          <tr><td>3</td><td><strong>State-dependent strip</strong>, one next step, different by who is looking</td><td>Guest, analyst, analyst with no workspace yet</td></tr>
+          <tr><td>4</td><td><strong>The problem</strong>: two people, two numbers, half an hour</td><td>The only place here where the reader's situation is described rather than shown</td></tr>
+          <tr><td>5</td><td><strong>What the product is</strong>: definition, states, attribution, link</td><td>Four things, one sentence each, matching the four capabilities the first test needs</td></tr>
+          <tr><td>6</td><td><strong>Trust</strong>: metadata only, no copy of customer rows</td><td>Load-bearing for the buyer, who has no product surface anywhere else</td></tr>
+          <tr><td>7</td><td><strong>FAQ</strong></td><td>The one block on this page with a structural SEO payload</td></tr>
+          <tr><td>8</td><td>One call to action</td><td>Open a live example card, not "start free"</td></tr>
+          <tr><td>9</td><td>Footer, node 0.2</td><td>Already specified. The landing gets no footer of its own</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>Refused, with the reasons in the bank:</strong> a corporate news banner above the hero, borrowed authority such as "as seen on TV", a testimonial carousel that hides its content from a phone and a crawler, a pricing panel inside this page rather than at its own rankable URL, and a customer logo wall until there are customers to name.</p>
+
+    <h3>Wireframes</h3>
+
+    <div class="mocks">
+      <div class="frame">
+        <div class="frame-cap">Desktop, hero and the running card</div>
+        <div class="bw wide">
+          <div class="bar"><b>Plumb</b><span class="sp"></span><span>Product</span><span>Pricing</span><span>Docs</span><span>Sign in</span></div>
+          <div class="hero">
+            <div>
+              <div class="claim">Every number carries its source, its age and the person who defined it</div>
+              <div class="strip"><span>Guest</span><span class="btn">Open a live example card</span></div>
+            </div>
+            <div class="card">
+              <div class="nm">Weekly active accounts</div>
+              <div class="val">18,432</div>
+              <div class="st"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+              <div class="def">Distinct accounts with at least one session in the last 7 days</div>
+              <div class="att">Declared by Dana Reyes, 3 August</div>
+            </div>
+          </div>
+          <div class="sect"><h4>Two people, two numbers, half an hour</h4><p>The number in the deck came from somewhere, and the person presenting it usually did not compute it.</p></div>
+          <div class="sect"><h4>What Plumb puts next to a number</h4>
+            <div class="grid4">
+              <div>The definition, in plain words</div>
+              <div>The state, said in words not colour</div>
+              <div>A name and a date on the claim</div>
+              <div>One permanent link per metric</div>
+            </div>
+          </div>
+          <div class="sect"><h4>We store definitions, not your data</h4><p>Values are queried from your warehouse when somebody reads the card. Route to the trust page.</p></div>
+          <div class="sect"><h4>Questions</h4><p>Four, as an accordion. This block carries FAQPage.</p></div>
+          <div class="foot">Footer, node 0.2</div>
+        </div>
+      </div>
+
+      <div class="frame">
+        <div class="frame-cap">Phone, 360, same order, one column</div>
+        <div class="bw phone">
+          <div class="bar"><b>Plumb</b><span class="sp"></span><span>Menu</span></div>
+          <div class="claim">Every number carries its source, its age and the person who defined it</div>
+          <div class="card" style="margin-top:12px">
+            <div class="nm">Weekly active accounts</div>
+            <div class="val">18,432</div>
+            <div class="st"><b>As of 14:05, 20 minutes ago</b><span>Expected hourly</span></div>
+            <div class="def">Distinct accounts with at least one session in the last 7 days</div>
+            <div class="att">Declared by Dana Reyes, 3 August</div>
+          </div>
+          <div class="strip"><span class="btn">Open a live example card</span></div>
+          <div class="sect"><h4>Two people, two numbers, half an hour</h4><p>The number came from somewhere.</p></div>
+          <div class="sect"><h4>What Plumb puts next to a number</h4>
+            <div class="grid4">
+              <div>The definition, in plain words</div>
+              <div>The state, in words</div>
+              <div>A name and a date</div>
+              <div>One permanent link</div>
+            </div>
+          </div>
+          <div class="sect"><h4>We store definitions, not your data</h4><p>Queried at read time.</p></div>
+          <div class="sect"><h4>Questions</h4><p>Accordion.</p></div>
+          <div class="foot">Footer, node 0.2</div>
+        </div>
+      </div>
+    </div>
+
+    <p><strong>The card keeps its own maximum width as the canvas grows.</strong> It does not stretch into a dashboard, because a card that behaves differently in the hero than it does in the product would be a lie told in the first block.</p>
+  </section>
+
+  <!-- States ............................................................ -->
+  <section id="states">
+    <div class="sec-head"><span class="sec-num">03</span><h2>States, and one of them is an argument</h2></div>
+
+    <div class="tw">
+      <table>
+        <thead><tr><th>State</th><th>What is different</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Guest</strong>, the default</td><td>One step: open a live example card at its own URL. <strong>Not "sign up"</strong>, because the thing to understand comes before the thing to buy</td></tr>
+          <tr><td>Signed in, analyst</td><td>The strip becomes "go to your metrics", pointing at node 4.1. Somebody who already has a workspace should not be sold to</td></tr>
+          <tr><td>Signed in, no workspace yet</td><td>Points at node 3.2, connect a source, which is where the first run actually starts</td></tr>
+          <tr><td><strong>The live card cannot load</strong></td><td><strong>It renders its own "source is down" state, in public.</strong> See below</td></tr>
+          <tr><td>Reduced motion, no script</td><td>The card is server-rendered, so it is text either way. Nothing here needs script to be readable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="flag warn">
+      <b>The fourth row is a decision, not a fallback</b>
+      <p>The alternatives are a placeholder or a hidden block, and both would mean that <strong>the one page claiming we never hide a broken number does exactly that.</strong> A marketing page demonstrating honesty about a number it could not fetch is the product working, not the page failing.</p>
+    </div>
+
+    <p><strong>Emotional support: none.</strong> The four mechanisms in the emotional and social table sit on the card, the send action, the definition editor and the registry. None lands here, and this line records that the check was made rather than leaving a gap.</p>
+  </section>
+
+  <!-- SEO ............................................................... -->
+  <section id="seo">
+    <div class="sec-head"><span class="sec-num">04</span><h2>SEO block A to E</h2></div>
+
+    <h3>A. Meta tags, with finished copy</h3>
+    <div class="seo">title (48): Plumb: every number with its source and owner<br>
+    description (147): Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.<br>
+    canonical: absolute form of / on the production domain<br>
+    hreflang: none, deliberately. One language, English<br>
+    robots: index, follow<br>
+    og: title, description, type=website, url=canonical, image = a rendering of the card<br>
+    twitter: summary_large_image</div>
+
+    <p><strong>The canonical is specified by rule, not by string</strong>, because the production domain is not decided: runtime hosting is explicitly still open. <strong>A hreflang cluster of one is noise</strong>, so there is none. And the og:image is a decision rather than a default: a logo card would repeat exactly the missed opportunity the hero avoids.</p>
+
+    <h3>B. Heading structure</h3>
+    <p><strong>One H1:</strong> "Every number carries its source, its age and the person who defined it".</p>
+    <p><strong>H2 in block order:</strong> "Two people, two numbers, half an hour" &middot; "What Plumb puts next to a number" &middot; "We store definitions, not your data" &middot; "Questions". The card carries the metric name as an H3 inside the component, so the component's own heading level is fixed here rather than left to whichever page embeds it.</p>
+
+    <h3>C. Finished SEO text</h3>
+    <p>Written out in full in <code>ia/docs/pages/product-page.md</code>, section C. <strong>That block stays the property of this node to the end of the pipeline:</strong> stage 05 aligns it to voice and syncs the final version back here. Interface strings do not move in. After stage 05 those live in <code>voice/docs/microcopy.md</code>, and this node holds the requirement for what information belongs in each place.</p>
+
+    <h3>D. Structured data</h3>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Type</th><th>Where</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td><code>SoftwareApplication</code></td><td>Page level</td><td>With applicationCategory BusinessApplication and operatingSystem Web. <strong>Neither competitor ships this:</strong> dbt Labs has zero ld+json blocks, Secoda has one generic CreativeWork</td></tr>
+          <tr><td><code>Organization</code></td><td>Page level</td><td>Name, url, logo, and sameAs once there are profiles to point at</td></tr>
+          <tr><td><code>FAQPage</code></td><td>Block 7</td><td>Each question a Question with an acceptedAnswer, sourced from section C</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>No Product and no Offer here.</strong> Pricing lives at node 6.3 and takes its own markup, which is also the version that can rank for a pricing query.</p>
+
+    <h3>E. Optimisation checklist</h3>
+    <ul>
+      <li><strong>One H1</strong>, the one above</li>
+      <li><strong>LCP element: the live card.</strong> Server-rendered text rather than an image, which is the cheap half of the win. The honest risk is that it queries a real value at read time, so <strong>the card renders its definition, attribution and state immediately and fills the value in when it arrives</strong>, exactly as node 2.2 specifies. LCP must not wait on a warehouse</li>
+      <li><strong>Crawlable <code>&lt;a&gt;</code></strong> on every route out, including the example card and the trust page. No route that exists only as a script handler</li>
+      <li>Canonical present, no hreflang by the decision in A</li>
+      <li>No text baked into images. The card is a component, and the og:image is a rendering of it rather than the only place its content exists</li>
+      <li><strong>No layout shift when the value arrives</strong>, which means its space is reserved before it is known</li>
+    </ul>
+  </section>
+
+  <p class="backlink"><a href="structure.html#6.1">&larr; Structure (6.1)</a></p>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_ACTIVE = 'ia/structure.html';
+  window.NAV_ACTIVE_LABEL = '6.1 Product page';
+  window.NAV_SECTIONS = [
+    { id:'why',    label:'Why 6.1 is the reference' },
+    { id:'blocks', label:'Blocks and wireframes' },
+    { id:'states', label:'States' },
+    { id:'seo',    label:'SEO block A to E' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

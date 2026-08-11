@@ -16,7 +16,8 @@ window.IA_NAV = [
   { label: 'Global navigation', file: 'navigation.html', group: 'global', node: '0.1', type: 'section' },
   { label: 'Footer',             file: 'footer.html',     group: 'global', node: '0.2', type: 'section' },
   { label: 'Toast and inline feedback', file: 'toasts.html', group: 'global', node: '0.3', type: 'section' },
-  { label: 'State vocabulary',   file: 'state-vocabulary.html', group: 'global', node: '0.4', type: 'section' }
+  { label: 'State vocabulary',   file: 'state-vocabulary.html', group: 'global', node: '0.4', type: 'section' },
+  { label: 'Product page',       file: 'product-page.html', group: 'pages', node: '6.1', type: 'page' }
 ];
 
 (function () {
