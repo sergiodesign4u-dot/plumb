@@ -1,0 +1,317 @@
+- generic [ref=f12e2]:
+  - group [ref=f12e3]:
+    - generic "Contents ▾" [ref=f12e4] [cursor=pointer]
+  - main [ref=f12e5]:
+    - generic [ref=f12e6]:
+      - paragraph [ref=f12e7]: Plumb · Stage 02+ · User Research
+      - heading "How the reader gets a number today, and what we can actually prove about it" [level=1] [ref=f12e8]
+      - paragraph [ref=f12e9]:
+        - text: "One focus: the reader who is about to be quoted, times the main job. This map is research, not design, so every barrier stands on a named source and everything else says so. After two rounds of mining, four of seven phases have an evidenced barrier and"
+        - strong [ref=f12e10]: not one phase has a measured emotion
+        - text: .
+      - generic [ref=f12e11]:
+        - generic [ref=f12e12]: Built 2026-08-11
+        - generic [ref=f12e13]: "Mining mode: Deep"
+        - generic [ref=f12e14]:
+          - text: "Source:"
+          - code [ref=f12e15]: research/docs/cjm-as-is.md
+    - generic [ref=f12e16]:
+      - generic [ref=f12e17]:
+        - generic [ref=f12e18]: "01"
+        - heading "Focus and rules" [level=2] [ref=f12e19]
+      - generic [ref=f12e20]:
+        - generic [ref=f12e21]: The job this map follows
+        - paragraph [ref=f12e22]: When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.
+      - paragraph [ref=f12e23]:
+        - strong [ref=f12e24]: This map is research, not design.
+        - text: Every emotion and every barrier stands on a source, and where there is none it says so rather than showing a drawn face. Remedies belong in the To-Be map; a recommendation written into this one would stop it being a mirror.
+      - paragraph [ref=f12e25]:
+        - strong [ref=f12e26]: The focus is not the only one, and it is worth saying now rather than at the IA stage.
+        - text: "The path of the data lead diverges fundamentally rather than in detail: different actions, a different entry channel, different barriers. That earns a separate map, not a footnote on this one."
+      - 'heading "Mining mode: Deep, and why" [level=3] [ref=f12e27]'
+      - paragraph [ref=f12e28]: "The material this map is made of did not exist in the repository. All 26 screens from stage 01 are vendor pages: what a product says about itself, never what a person said about using it. A Lite pass would have re-projected vendor marketing plus our own brief onto a time axis, and the three load-bearing unknowns would each have come back undefined."
+      - paragraph [ref=f12e29]:
+        - strong [ref=f12e30]: What Deep does not promise.
+        - text: It buys the attempt, not the finding. Where a route returned nothing, the phase kept its gap and the route was recorded so it is not paid for twice.
+    - generic [ref=f12e31]:
+      - generic [ref=f12e32]:
+        - generic [ref=f12e33]: "02"
+        - heading "The seven phases" [level=2] [ref=f12e34]
+      - paragraph [ref=f12e35]: "Phases are derived from the arc of the job, not from a funnel. There is no Awareness phase and no Retention phase here, because the reader chooses nothing and onboards nowhere: they are handed a number by circumstance."
+      - generic [ref=f12e36]:
+        - generic [ref=f12e37]:
+          - text: A
+          - heading "The audience approaches" [level=5] [ref=f12e38]
+          - generic [ref=f12e40]: No barrier evidenced
+        - generic [ref=f12e41]:
+          - text: B
+          - heading "The number is taken" [level=5] [ref=f12e42]
+          - generic [ref=f12e45]: BarrierPattern, two venues
+        - generic [ref=f12e46]:
+          - text: C
+          - heading "The private moment of doubt" [level=5] [ref=f12e47]
+          - generic [ref=f12e50]: BarrierMeasured trial, adjacent population
+        - generic [ref=f12e51]:
+          - text: D
+          - heading "Trying to resolve it" [level=5] [ref=f12e52]
+          - generic [ref=f12e55]: BarrierNarrowed at step 6
+        - generic [ref=f12e56]:
+          - text: E
+          - heading "The number is presented" [level=5] [ref=f12e57]
+          - generic [ref=f12e59]: No barrier evidenced
+        - generic [ref=f12e60]:
+          - text: F
+          - heading "The number is challenged" [level=5] [ref=f12e61]
+          - generic [ref=f12e63]: No barrier evidenced
+        - generic [ref=f12e64]:
+          - text: G
+          - heading "The number travels on" [level=5] [ref=f12e65]
+          - generic [ref=f12e68]: BarrierSingle source
+      - generic [ref=f12e69]:
+        - generic [ref=f12e70]: Barrier on a pattern
+        - generic [ref=f12e72]: Barrier on a single signal
+        - generic [ref=f12e74]: Nothing evidenced, left undefined
+      - paragraph [ref=f12e76]:
+        - strong [ref=f12e77]: There is no emotional curve on this page, and that is the finding rather than an omission.
+        - text: The one plotted point this map ever had, a negative of intensity 3 at phase D, was withdrawn at the critique when its sources turned out to report waiting rather than how waiting feels. Nothing was drawn in its place. A smooth line through undefined points would be the single most convincing lie this research could tell.
+      - generic [ref=f12e78]:
+        - heading "A. The audience approaches" [level=3] [ref=f12e79]
+        - paragraph [ref=f12e80]: A deck is due, a meeting is booked, a decision acquires somebody's name.
+        - generic [ref=f12e81]:
+          - term [ref=f12e82]: Goal
+          - definition [ref=f12e83]: The situation half of the main job.
+          - term [ref=f12e84]: Touchpoints
+          - definition [ref=f12e85]: Calendar, deck, document, a thread in chat.
+          - term [ref=f12e86]: Emotion and barrier
+          - definition [ref=f12e87]: Undefined. Not a single source describes this moment, so no sign and no intensity are written.
+      - generic [ref=f12e88]:
+        - heading "B. The number is taken" [level=3] [ref=f12e89]
+        - paragraph [ref=f12e90]: Wherever the number lives is opened, the figure is copied, and it goes into a slide or a document. Possibly from last week's deck rather than from the origin.
+        - generic [ref=f12e91]:
+          - term [ref=f12e92]: Barrier, evidenced
+          - definition [ref=f12e93]: The number arrives with no route back to its source, and the definition is often unknown even to the people who built the surface it came from.
+          - term [ref=f12e94]: Strength
+          - definition [ref=f12e95]: Two authors, two different venues, three years apart. A pattern by the rule of this stage, and the weakest kind of one, being two points.
+          - term [ref=f12e96]: Quote
+          - definition [ref=f12e97]: "\"The main problem is that it's not easy to drill down into a metric in most BI tools because the connection between the dashboard and the source data is usually missing\""
+          - term [ref=f12e98]: Emotion
+          - definition [ref=f12e99]: Undefined. What surface the number is taken from is itself unknown, so whether anything there creates friction cannot be said.
+      - generic [ref=f12e100]:
+        - heading "C. The private moment of doubt" [level=3] [ref=f12e101]
+        - paragraph [ref=f12e102]: The figure is looked at, checked against expectation and against memory, and the last update is looked for. Or none of that happens.
+        - generic [ref=f12e103]:
+          - term [ref=f12e104]: Barrier, evidenced
+          - definition [ref=f12e105]:
+            - text: "Checking is a destination that has to be chosen, and choosing it requires already suspecting something. The measured half is harder: a destination chosen"
+            - emphasis [ref=f12e106]: for
+            - text: the reader and placed in their path was still entered only once or twice a year.
+          - term [ref=f12e107]: Strength
+          - definition [ref=f12e108]: A measured trial, the strongest instrument in this research, on an adjacent population and a different object.
+          - term [ref=f12e109]: Quote
+          - definition [ref=f12e110]: "\"I have trouble trusting any dashboard if it doesn't have the equivalent of a \"view source\" button that lets me see what data sources were used for it and how they were manipulated. Sadly dashboard systems that encourage this are extremely rare\""
+          - term [ref=f12e111]: Population note
+          - definition [ref=f12e112]: The author of that line is technical and is therefore not our reader. It is kept for its shape, not as our reader's voice.
+      - generic [ref=f12e113]:
+        - heading "D. Trying to resolve the doubt" [level=3] [ref=f12e114]
+        - paragraph [ref=f12e115]: "One of three alternatives: ask the analyst in a channel, open the dashboard again, or use the number as it stands. Which one fires is unknown."
+        - generic [ref=f12e116]:
+          - term [ref=f12e117]: Barrier, narrowed at the critique
+          - definition [ref=f12e118]: The answer is produced by somebody else and therefore arrives on their schedule, and the same question is known to reach the analyst repeatedly. The earlier wording added simultaneity and a single addressee; neither is in any source.
+          - term [ref=f12e119]: Emotion
+          - definition [ref=f12e120]: Withdrawn at step 6. Two sources describe waiting and neither reports our reader's feeling while waiting for an answer about a number.
+          - term [ref=f12e121]: Quote
+          - definition [ref=f12e122]: "\"To get a SQL/Python (or other programming language) solution requires submitting a request to IT and then waiting two years to work up the priority queue. This is not a complaint against IT and the priority process.\""
+          - term [ref=f12e123]: Why that quote matters twice
+          - definition [ref=f12e124]:
+            - text: It is the only first-person voice in this research from somebody in our persona's role, a CFO of thirty years, and it
+            - strong [ref=f12e125]: declines to express the frustration we expected to find
+            - text: .
+      - generic [ref=f12e126]:
+        - heading "E. The number is presented" [level=3] [ref=f12e127]
+        - paragraph [ref=f12e128]: The figure is said out loud or shown on a slide.
+        - generic [ref=f12e129]:
+          - term [ref=f12e130]: Everything
+          - definition [ref=f12e131]: Undefined throughout.
+      - generic [ref=f12e132]:
+        - heading "F. The number is challenged, or it is not" [level=3] [ref=f12e133]
+        - generic [ref=f12e134]:
+          - term [ref=f12e135]: What was tried
+          - definition [ref=f12e136]: Roughly a dozen phrasings across the Hacker News comment corpus, aimed at finding an account of somebody being contradicted on a number in front of others.
+          - term [ref=f12e137]: What came back
+          - definition [ref=f12e138]: Nothing usable. Thoughts, emotion, barrier and quote are all undefined.
+          - term [ref=f12e139]: What that means
+          - definition [ref=f12e140]:
+            - strong [ref=f12e141]: The phase on which the entire motivation model of this product rests has no evidence at all.
+            - text: The cost of the error is still our assumption.
+      - generic [ref=f12e142]:
+        - heading "G. The number travels on" [level=3] [ref=f12e143]
+        - paragraph [ref=f12e144]: The deck is forwarded, the slide is reused, the link is saved.
+        - generic [ref=f12e145]:
+          - term [ref=f12e146]: Barrier, found by the step 6 follow-up
+          - definition [ref=f12e147]: A figure that stopped being computed keeps looking exactly as it did, in the surface a finance reader actually works in, and it cannot practically be found again.
+          - term [ref=f12e148]: Quote
+          - definition [ref=f12e149]: "\"you get the scenario the author describes of hard-coded values in cells that once contained formulas. These are almost impossible to find in worksheets with large numbers of tabs and thousands of formulas.\""
+          - term [ref=f12e150]: Strength
+          - definition [ref=f12e151]: "A single source, so a signal. The strongest source in this file on population and the weakest on object: a CFO in the first person, about spreadsheets rather than about a metric surface."
+          - term [ref=f12e152]: What it does not do
+          - definition [ref=f12e153]: Nobody in that source returns to anything, so it does not evidence a reader revisiting a number they saved.
+    - generic [ref=f12e154]:
+      - generic [ref=f12e155]:
+        - generic [ref=f12e156]: "03"
+        - heading "Where the evidence came from" [level=2] [ref=f12e157]
+      - paragraph [ref=f12e158]: Nine sources. Five sit in one Hacker News thread, "Notes on the Perfidy of Dashboards" (2021-08-27), where practitioners describe readers of numbers rather than analysts. The other four come from three different places, and the difference matters wherever strength is claimed.
+      - table [ref=f12e160]:
+        - caption [ref=f12e161]: Every source opened in this pass, with the population it actually describes
+        - rowgroup [ref=f12e162]:
+          - row [ref=f12e163]:
+            - columnheader "Tag" [ref=f12e164]
+            - columnheader "Source" [ref=f12e165]
+            - columnheader "What it carries" [ref=f12e166]
+            - columnheader "Population" [ref=f12e167]
+        - rowgroup [ref=f12e168]:
+          - row [ref=f12e169]:
+            - cell "S1" [ref=f12e170]
+            - cell "HN 28330744, 2021-08-27" [ref=f12e171]
+            - 'cell "A comparative trial: push beat pull, and a no-login, in-context, linked dashboard was entered one to two times per year" [ref=f12e172]'
+            - cell "Clinicians" [ref=f12e173]
+          - row [ref=f12e174]:
+            - cell "S2" [ref=f12e175]
+            - cell "HN 28331383, 2021-08-27" [ref=f12e176]
+            - cell "Trust stated as conditional on being able to see the source" [ref=f12e177]
+            - cell "Technical, not our reader" [ref=f12e178]
+          - row [ref=f12e179]:
+            - cell "S3" [ref=f12e180]
+            - cell "HN 28331531, 2021-08-27" [ref=f12e181]
+            - cell "What \"more data\" means is lineage and provenance, plus attribution matching one's own definition" [ref=f12e182]
+            - cell "Clinicians" [ref=f12e183]
+          - row [ref=f12e184]:
+            - cell "S4" [ref=f12e185]
+            - cell "HN 28330651, 2021-08-27" [ref=f12e186]
+            - cell "Nobody but an analyst will slice and dice their data. Exploratory analysis, not provenance checking" [ref=f12e187]
+            - cell "Clinicians" [ref=f12e188]
+          - row [ref=f12e189]:
+            - cell "S5" [ref=f12e190]
+            - cell "HN 28329709, 2021-08-27" [ref=f12e191]
+            - cell "The connection between a dashboard and its source data is usually missing" [ref=f12e192]
+            - cell "Practitioner" [ref=f12e193]
+          - row [ref=f12e194]:
+            - cell "S6" [ref=f12e195]
+            - cell "HN 41926383, 2024-10-23" [ref=f12e196]
+            - cell "The people building the dashboard often do not know what the data means" [ref=f12e197]
+            - cell "Practitioner" [ref=f12e198]
+          - row [ref=f12e199]:
+            - cell "S7" [ref=f12e200]
+            - cell "HN 41918670, 2024-10-22" [ref=f12e201]
+            - cell "A consumer may lose interest while a requested dashboard is being built" [ref=f12e202]
+            - cell "Analyst, about consumers" [ref=f12e203]
+          - row [ref=f12e204]:
+            - cell "S8" [ref=f12e205]
+            - cell "dbt Forum 712, 2019-11" [ref=f12e206]
+            - cell "The same question reaches the analyst repeatedly; business readers lack time to dig" [ref=f12e207]
+            - cell "Analyst, about readers" [ref=f12e208]
+          - row [ref=f12e209]:
+            - cell "S9" [ref=f12e210]
+            - cell "HN 28050270, 2021-08-03" [ref=f12e211]
+            - cell "An IT queue of two years, hard-coded values that once were formulas, versions nobody tracks" [ref=f12e212]
+            - cell [ref=f12e213]:
+              - strong [ref=f12e214]: A CFO, first person
+      - generic [ref=f12e215]:
+        - generic [ref=f12e216]: The hardest source in this research, quoted in full because paraphrase would soften it
+        - paragraph [ref=f12e217]: "\"We pretty quickly found that sending data (\"push\") was way more effective at engagement than just having a tableau report they could go to (\"pull\"), even when that dashboard was linked directly within the EHR, didn't require a login, and was contextualized for the provider (basically as low friction as you could get-- they would actually venture into it 1-2 times per year).\""
+      - paragraph [ref=f12e218]:
+        - strong [ref=f12e219]: What matches our design and what does not.
+        - text: "What matches is the delivery conditions: no login, placed inside the tool the person already works in, contextualised to them. What does not match is the object: theirs is a dashboard to be explored, ours is a single number with its provenance. So it measures how often a placed, frictionless destination is entered, which is the assumption underneath our design rather than the design itself."
+      - paragraph [ref=f12e220]:
+        - strong [ref=f12e221]: Routes that returned nothing, recorded so they are not paid for twice.
+        - text: "G2 returns 403 on review pages. TrustRadius reads without an account, and what was actually read is the reviews that rendered without scrolling, all of it product feedback from people who build reports. The dbt forum was searched on three trust phrasings and returned technical threads. Locally Optimistic answers 301 without resolving. Hacker News gave nothing on the contradiction in a meeting after roughly a dozen phrasings, which is a result about our queries rather than proof the corpus is empty: the follow-up found a new source on the thirteenth."
+    - generic [ref=f12e222]:
+      - generic [ref=f12e223]:
+        - generic [ref=f12e224]: "04"
+        - heading "Growth zones" [level=2] [ref=f12e225]
+      - paragraph [ref=f12e226]:
+        - text: Where today's experience hurts most and where the competition is winnable. Each zone names the barrier it sits on and the market gap where there is one.
+        - strong [ref=f12e227]: No solutions here.
+        - text: Ordered by strength of evidence, not by how appealing the zone is to build for.
+      - generic [ref=f12e228]:
+        - generic [ref=f12e229]:
+          - generic [ref=f12e230]: Z1
+          - generic [ref=f12e231]:
+            - term [ref=f12e232]: The reader rarely travels to the trust information
+            - definition [ref=f12e233]: Sits on the phase C barrier. A destination chosen for the reader and placed in their path was still entered once or twice a year.
+            - term [ref=f12e234]: Market gap
+            - definition [ref=f12e235]: Not one of the fifteen products positions itself on the moment of reading, and none sells the minutes before a meeting. What their interfaces do about arrival is unknown for ten of the fifteen and is not claimed.
+          - paragraph [ref=f12e236]:
+            - strong [ref=f12e237]: The only zone where the evidence points against us
+            - text: ", and first in the list for exactly that reason: it decides whether the other three matter."
+        - generic [ref=f12e238]:
+          - generic [ref=f12e239]: Z2
+          - generic [ref=f12e240]:
+            - term [ref=f12e241]: The number arrives with no route back to what made it
+            - definition [ref=f12e242]: "Sits on the phase B barrier: no route back to the source, and the definition unknown even to the builders."
+            - term [ref=f12e243]: Market gap
+            - definition [ref=f12e244]: Provenance is a destination that has to be chosen. Attribution scores 3 or below across all five benchmark products.
+          - paragraph [ref=f12e245]: A pattern across two venues, on top of a gap documented across the competitor set.
+        - generic [ref=f12e246]:
+          - generic [ref=f12e247]: Z3
+          - generic [ref=f12e248]:
+            - term [ref=f12e249]: A stale figure is indistinguishable from a live one
+            - definition [ref=f12e250]: Sits on the phase G barrier, which did not exist until the step 6 follow-up found it.
+            - term [ref=f12e251]: Market gap
+            - definition [ref=f12e252]: Benchmark criterion 8 records the category's strongest failure as a stale value that looks exactly like a fresh one.
+          - paragraph [ref=f12e253]: Rejected at step 5 for having no parent barrier, and qualified at step 6 when the follow-up gave it one.
+        - generic [ref=f12e254]:
+          - generic [ref=f12e255]: Z4
+          - generic [ref=f12e256]:
+            - term [ref=f12e257]: The answer is produced by somebody else
+            - definition [ref=f12e258]: "Sits on the phase D barrier: the answer arrives on the schedule of whoever produces it, and the same question recurs."
+            - term [ref=f12e259]: Market gap
+            - definition [ref=f12e260]: The category's answer is a catalog the reader has no reason to open, and the field's own default answer is to build a dashboard.
+          - paragraph [ref=f12e261]: Barrier evidenced, feeling not. This zone stood on an emotion until the critique withdrew it.
+      - paragraph [ref=f12e262]:
+        - strong [ref=f12e263]: A candidate that did not qualify, recorded rather than quietly dropped.
+        - text: "\"There is nobody named to ask\" has strong market evidence, and no barrier in the mined layer says a reader looks for a name and fails to find one. It is a job, R1, whose support is the shape of the market. It was listed as a zone at step 5 and demoted at step 6 for exactly the defect this file polices in others."
+    - generic [ref=f12e264]:
+      - generic [ref=f12e265]:
+        - generic [ref=f12e266]: □
+        - heading "Before and after" [level=2] [ref=f12e267]
+      - paragraph [ref=f12e268]:
+        - text: The critique ran in two instruments. Codex went first and blind, read-only, without seeing our table; our own pass ran in parallel.
+        - strong [ref=f12e269]: Twenty-one findings, and none was withdrawn at verification.
+      - table [ref=f12e271]:
+        - caption [ref=f12e272]: The five that changed the map rather than its wording
+        - rowgroup [ref=f12e273]:
+          - row [ref=f12e274]:
+            - columnheader "Was" [ref=f12e275]
+            - columnheader "Is" [ref=f12e276]
+            - columnheader "Found by" [ref=f12e277]
+        - rowgroup [ref=f12e278]:
+          - row [ref=f12e279]:
+            - cell "Phase D carried a negative emotion of intensity 3" [ref=f12e280]
+            - cell "Withdrawn. Its sources report waiting, not how waiting feels, and none supplies a scale" [ref=f12e281]
+            - cell "Both" [ref=f12e282]
+          - row [ref=f12e283]:
+            - cell "\"The floor is D\"" [ref=f12e284]
+            - cell "Removed. Naming a floor compares against six undefined phases, which is interpolation under another word" [ref=f12e285]
+            - cell "Codex" [ref=f12e286]
+          - row [ref=f12e287]:
+            - cell "\"Even a destination placed in their path is not visited\"" [ref=f12e288]
+            - cell "\"Was still entered only once or twice a year.\" Rare is not never, and the product's bet lives in that gap" [ref=f12e289]
+            - cell "Codex" [ref=f12e290]
+          - row [ref=f12e291]:
+            - 'cell "Phase B: \"three different authors, all inside one thread\"" [ref=f12e292]'
+            - cell "Two authors, two venues, three years apart. Wrong in both directions" [ref=f12e293]
+            - cell "Both" [ref=f12e294]
+          - row [ref=f12e295]:
+            - cell "A growth zone whose parent barrier did not exist" [ref=f12e296]
+            - cell "Demoted to a recorded candidate" [ref=f12e297]
+            - cell "Both" [ref=f12e298]
+      - generic [ref=f12e299]:
+        - generic [ref=f12e300]: The systemic cause, which is worse than any single row
+        - paragraph [ref=f12e301]: "Once a source had been accepted as being about our problem, its specifics stopped constraining what was written from it. That is how \"1-2 times per year\" became \"is not visited\", and how two different statements became mutual confirmation. The stage 01 blind spot was treating the brief as a source. This one is finer: here the sources are real and it is the reading of them that drifts."
+      - paragraph [ref=f12e302]:
+        - strong [ref=f12e303]: What the follow-up research bought.
+        - text: It aimed at the intensity at phase D and found nothing, so the point stayed withdrawn. It landed instead on the CFO source, which gave phase G its first barrier and promoted a growth zone that had been rejected for having no parent.
+    - paragraph [ref=f12e305]:
+      - text: Plumb, stage 02+ of 13. Full detail in
+      - code [ref=f12e306]: research/docs/cjm-as-is.md
+      - text: . The To-Be map, where remedies are allowed and tracing replaces sourcing, is the next page.

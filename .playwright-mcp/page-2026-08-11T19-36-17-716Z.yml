@@ -1,0 +1,309 @@
+- generic [ref=f11e2]:
+  - group [ref=f11e3]:
+    - generic "Contents ▾" [ref=f11e4] [cursor=pointer]
+  - main [ref=f11e5]:
+    - generic [ref=f11e6]:
+      - paragraph [ref=f11e7]: Plumb · Stage 02+ · User Research
+      - heading "The path we intend to build, and what each step of it is paying for" [level=1] [ref=f11e8]
+      - paragraph [ref=f11e9]: "Same reader, same job, now inside a product that does not exist yet. Here the rule inverts: the future has to be invented rather than found, so honesty is enforced by tracing. Every step names the barrier or the job it closes, and a step with no parent is cut rather than shelved."
+      - generic [ref=f11e10]:
+        - generic [ref=f11e11]: Designed 2026-08-11
+        - generic [ref=f11e12]: Six steps, eleven backlog items, one orphan cut
+        - generic [ref=f11e13]:
+          - text: "Source:"
+          - code [ref=f11e14]: research/docs/cjm-to-be.md
+    - generic [ref=f11e15]:
+      - generic [ref=f11e16]:
+        - generic [ref=f11e17]: "01"
+        - heading "The rule of this half" [level=2] [ref=f11e18]
+      - paragraph [ref=f11e19]:
+        - strong [ref=f11e20]: This map is design, not research.
+        - text: "\"Do not invent\" cannot apply here, because the future has to be invented. What replaces it is tracing: every step and every feature names the As-Is barrier or the job it closes, with a direct reference."
+        - strong [ref=f11e21]: A feature with no parent is cut, not deferred
+        - text: ", because \"later\" is a priority for work that has a parent, never a shelter for an orphan."
+      - generic [ref=f11e22]:
+        - generic [ref=f11e23]: Everything marked as a target on this page is designed, not measured
+        - text: "The As-Is map carries no emotional intensity at any phase: its single plotted point was withdrawn at the critique when its sources turned out to report waiting rather than how waiting feels. So the target emotions here"
+        - strong [ref=f11e24]: have no measured baseline to be an improvement over
+        - text: . They are design intent, and they cannot be validated as a change until somebody talks to a reader.
+      - heading "What this map does not touch" [level=3] [ref=f11e25]
+      - paragraph [ref=f11e26]:
+        - strong [ref=f11e27]: Phase A of the As-Is map gets no step.
+        - text: "The trigger happens outside any product of ours: a deck is due, a meeting is booked, a decision acquires somebody's name. Inventing a step there would be the first orphan in a file whose whole discipline is refusing them."
+      - paragraph [ref=f11e28]:
+        - strong [ref=f11e29]: The analyst's side is not here either.
+        - text: Connecting a source, writing a definition, filling the registry and searching it by name are real work with a real owner, whose journey diverges fundamentally and earns its own map. They appear in the backlog as preconditions, not as steps on the reader's path.
+    - generic [ref=f11e30]:
+      - generic [ref=f11e31]:
+        - generic [ref=f11e32]: "02"
+        - heading "The six steps" [level=2] [ref=f11e33]
+      - paragraph [ref=f11e34]:
+        - text: Where a barrier admits more than one answer, the candidates are put up and one is chosen with the rejection stated. Where the answer is obvious, no candidates are invented to fill the shape.
+        - strong [ref=f11e35]: Two steps are drawn weaker than the rest
+        - text: ", because their parent is a job rather than an evidenced barrier, and they should be the first things a reader test tries to kill."
+      - generic [ref=f11e36]:
+        - text: T1
+        - heading "The number arrives already carrying where it came from" [level=3] [ref=f11e37]
+        - generic [ref=f11e38]:
+          - term [ref=f11e39]: In the product
+          - definition [ref=f11e40]: "At the moment the reader takes a figure it is not a bare value: it comes as a card carrying the number, its definition, its source, its age and the name behind it."
+          - term [ref=f11e41]: Closes
+          - definition [ref=f11e42]: "The phase B barrier: no route back to the source, and the definition unknown even to the builders. Growth zone Z2."
+          - term [ref=f11e43]: Chosen capability, with what was rejected
+          - definition [ref=f11e44]:
+            - list [ref=f11e45]:
+              - listitem [ref=f11e46]: "Chosen: one permanent URL per metric, rendering a card anybody can open without an account, so the number travels as a link."
+              - listitem [ref=f11e47]: "Rejected, a browser extension annotating numbers in place: it asks the person who never pays to install something, and it cannot reach a slide or a chat message, which is where the number actually travels."
+              - listitem [ref=f11e48]: "Rejected, embeds into each BI tool: needs the cooperation of whoever owns each surface, multiplies work per surface, and still only serves people already inside it. That is the destination pattern wearing an integration badge."
+          - term [ref=f11e49]: Target
+          - definition [ref=f11e50]: Nothing to feel. The provenance is simply present, at no cost in attention.
+      - generic [ref=f11e51]:
+        - text: T2
+        - heading "The doubt is answered where the number is read" [level=3] [ref=f11e52]
+        - generic [ref=f11e53]:
+          - term [ref=f11e54]: In the product
+          - definition [ref=f11e55]:
+            - text: "Beside the value, with no action:"
+            - strong [ref=f11e56]: the definition in words
+            - text: ", how old the number is, whether its source is reachable, and whether the definition changed after this number was saved. Named states, in words."
+          - term [ref=f11e57]: Closes
+          - definition [ref=f11e58]: "The phase C barrier: checking is a destination that has to be chosen, and even one placed in the reader's path was entered once or twice a year. Growth zone Z1, the zone where the evidence points against us."
+          - term [ref=f11e59]: Chosen capability, with what was rejected
+          - definition [ref=f11e60]:
+            - list [ref=f11e61]:
+              - listitem [ref=f11e62]: "Chosen: a named state plus a date plus the source name, sitting beside the value."
+              - listitem [ref=f11e63]: "Rejected, a certification badge, which is the category's existing answer: it says somebody approved this once and never says when or who."
+              - listitem [ref=f11e64]: "Rejected, a computed trust score: forbidden by design principle 2, and for a reason worth keeping. A score cannot be interrogated, so it replaces one number nobody can defend with a second one."
+          - term [ref=f11e65]: Corrected at the critique
+          - definition [ref=f11e66]: "The first version put the definition text behind an action, which design principle 3 forbids outright and which contradicted the canvas hypothesis promising the definition on the same line as the value. The split now sits where the rules put it: the definition is visible, the lineage is what opens on request."
+          - term [ref=f11e67]: Target
+          - definition [ref=f11e68]: The doubt resolves without the reader going anywhere.
+      - generic [ref=f11e69]:
+        - text: T3
+        - heading "The route back to the source opens on request" [level=3] [ref=f11e70]
+        - generic [ref=f11e71]:
+          - term [ref=f11e72]: In the product
+          - definition [ref=f11e73]: "One action opens where the number came from: the source it was queried from, when that query last ran, and what it ran against."
+          - term [ref=f11e74]: Closes
+          - definition [ref=f11e75]: The other half of the phase B barrier. Design principle 4, which forbids a dependency tree as the opening state.
+          - term [ref=f11e76]: Not the reader's depth
+          - definition [ref=f11e77]: The full lineage tree is dense analyst work on a desktop, and a lineage graph presumes a mental model of the stack. What the reader gets is one hop, in words.
+          - term [ref=f11e78]: Target
+          - definition [ref=f11e79]: The question has a bottom, and reaching it does not require knowing the stack.
+      - generic [ref=f11e80]:
+        - text: T4 · weaker
+        - heading "The claim carries a name and a date" [level=3] [ref=f11e81]
+        - generic [ref=f11e82]:
+          - term [ref=f11e83]: In the product
+          - definition [ref=f11e84]: Who declared this definition and when it last changed, visible on the card rather than in a history page.
+          - term [ref=f11e85]: Closes
+          - definition [ref=f11e86]:
+            - strong [ref=f11e87]: A job, not a barrier, and the difference is stated rather than blurred.
+            - text: Nothing in the mined layer shows a reader looking for a name and failing to find one; the candidate zone built on that was demoted at the As-Is critique for precisely that missing parent.
+          - term [ref=f11e88]: What does stand behind it
+          - definition [ref=f11e89]: "The job \"who is answerable\", plus market evidence: no product of five scores above 3 on attribution, and PowerMetrics names a person only when a certification is removed."
+          - term [ref=f11e90]: Standing
+          - definition [ref=f11e91]: Legitimate by the tracing rule and weaker than T1 to T3. It should be the first thing a reader test tries to kill.
+      - generic [ref=f11e92]:
+        - text: T5
+        - heading "A change after the fact catches up with the number" [level=3] [ref=f11e93]
+        - generic [ref=f11e94]:
+          - term [ref=f11e95]: In the product
+          - definition [ref=f11e96]: When the definition changes after a number was taken, the card that number came from says so, in its own state, wherever it is opened.
+          - term [ref=f11e97]: Closes
+          - definition [ref=f11e98]: "The phase G barrier, which the follow-up research produced: a value that stopped being computed keeps looking identical and cannot practically be found again. Growth zone Z3."
+          - term [ref=f11e99]: Chosen capability, with what was rejected
+          - definition [ref=f11e100]:
+            - list [ref=f11e101]:
+              - listitem [ref=f11e102]: "Chosen: a state on the card itself, \"definition changed after this was saved\"."
+              - listitem [ref=f11e103]: "Rejected, an email or message to everyone who opened it: that is notification routing, which is out of scope, and it assumes we know who used the number, which for a reader with no account we do not."
+              - listitem [ref=f11e104]: "Rejected, a diff view of the two definitions: version history deeper than the previous definition, also out of scope, and it answers a question the reader did not ask."
+          - term [ref=f11e105]: Standing
+          - definition [ref=f11e106]: "Its reader half stands on a job marked a hypothesis: nothing shows that anybody reopens a saved link. If that falls, the step keeps its analyst half and loses its reader half."
+      - generic [ref=f11e107]:
+        - text: T6 · weaker
+        - heading "The number is defended in the room" [level=3] [ref=f11e108]
+        - generic [ref=f11e109]:
+          - term [ref=f11e110]: In the product
+          - definition [ref=f11e111]: In the meeting, on a phone, the card opens at its permanent URL with no login and shows the same provenance the reader saw when they took it.
+          - term [ref=f11e112]: Closes
+          - definition [ref=f11e113]:
+            - strong [ref=f11e114]: A job, and an As-Is phase that is empty.
+            - text: What it costs to be contradicted in front of others was searched for deliberately and never found. This step is designed for a moment we have no observation of, and that is stated here rather than discovered at stage 07.
+          - term [ref=f11e115]: Target
+          - definition [ref=f11e116]: The reader is not the only evidence for their own number.
+    - generic [ref=f11e117]:
+      - generic [ref=f11e118]:
+        - generic [ref=f11e119]: "03"
+        - heading "Backlog" [level=2] [ref=f11e120]
+      - paragraph [ref=f11e121]:
+        - strong [ref=f11e122]: This is not a second list.
+        - text: "It refines the MVP core that already existed across the canvas, the jobs file and the project rules. What the labels mean, rewritten at the critique because the first version applied one rule and then broke it on four rows:"
+      - list [ref=f11e123]:
+        - listitem [ref=f11e124]: MVP-path the To-Be path breaks without it.
+        - listitem [ref=f11e125]: MVP-core inherited from the MVP core and surviving here, while the path would still run without it.
+        - listitem [ref=f11e126]:
+          - strong [ref=f11e127]: Precondition
+          - text: "is a declared third category, not a loophole: it closes nothing by itself, and without it a parented capability cannot exist."
+        - listitem [ref=f11e128]:
+          - strong [ref=f11e129]: Later
+          - text: is a priority for work that has a parent. Anything without one is reported as an orphan and cut.
+      - table [ref=f11e131]:
+        - caption [ref=f11e132]: Eleven capabilities, each with a parent, a ground for its label and a success signal
+        - rowgroup [ref=f11e133]:
+          - row [ref=f11e134]:
+            - columnheader "#" [ref=f11e135]
+            - columnheader "Capability" [ref=f11e136]
+            - columnheader "Parent" [ref=f11e137]
+            - columnheader "Label" [ref=f11e138]
+            - columnheader "Success signal" [ref=f11e139]
+        - rowgroup [ref=f11e140]:
+          - row [ref=f11e141]:
+            - cell "1" [ref=f11e142]
+            - cell "The number card at one permanent URL, readable with no account" [ref=f11e143]
+            - cell "T1, phase B barrier, Z2, main job" [ref=f11e144]
+            - cell "path" [ref=f11e145]
+            - 'cell "Activation: share of new workspaces where a card is opened by a second person within 7 days" [ref=f11e146]'
+          - row [ref=f11e147]:
+            - cell "2" [ref=f11e148]
+            - cell "The card is legible on a phone, and that is the layout it is designed in first" [ref=f11e149]
+            - cell "T6, main job outcome half" [ref=f11e150]
+            - cell "core" [ref=f11e151]
+            - cell "Of readers who open on a phone, the share reaching the provenance line rather than leaving at the value" [ref=f11e152]
+          - row [ref=f11e153]:
+            - cell "3" [ref=f11e154]
+            - 'cell "Named states beside the value: as of, source is down, definition changed" [ref=f11e155]'
+            - cell "T2, phase C barrier, Z1, main job" [ref=f11e156]
+            - cell "path" [ref=f11e157]
+            - cell "Cards in a non-fresh state are opened at the same rate as fresh ones, rather than abandoned" [ref=f11e158]
+          - row [ref=f11e159]:
+            - cell "4" [ref=f11e160]
+            - cell "Age in relative time with the expectation beside it" [ref=f11e161]
+            - cell "T2, main job. The mechanism comes from the benchmark, which is its source and not its parent" [ref=f11e162]
+            - cell "core" [ref=f11e163]
+            - cell "Readers can say whether a number is late without asking what \"expected hourly\" means" [ref=f11e164]
+          - row [ref=f11e165]:
+            - cell "5" [ref=f11e166]
+            - cell "The definition visible on the card, the source opening on one action" [ref=f11e167]
+            - cell "T2 and T3, both halves of the phase B barrier" [ref=f11e168]
+            - cell "path" [ref=f11e169]
+            - cell "Share of card opens that open the source layer. Too low and the visible line works alone; near total and it is not carrying its weight" [ref=f11e170]
+          - row [ref=f11e171]:
+            - cell "6" [ref=f11e172]
+            - 'cell "Attribution on the claim: who declared the definition and when" [ref=f11e173]'
+            - cell "T4, the job \"who is answerable\"" [ref=f11e174]
+            - cell "core" [ref=f11e175]
+            - cell [ref=f11e176]:
+              - strong [ref=f11e177]: Not measurable in product.
+              - text: It happens outside our surface, to a reader with no account. A test proxy stands in, and the real signal is on the analyst's map
+          - row [ref=f11e178]:
+            - cell "7" [ref=f11e179]
+            - cell "A definition snapshot at read time, so the card can tell the definition changed after this number was used" [ref=f11e180]
+            - cell "T5, phase G barrier, Z3, a conditional job" [ref=f11e181]
+            - cell "core" [ref=f11e182]
+            - cell "4-week reader return. This is what the retention mechanic stands on, and it falls with the job" [ref=f11e183]
+          - row [ref=f11e184]:
+            - cell "8" [ref=f11e185]
+            - cell "Sending a metric as a link, in one action" [ref=f11e186]
+            - 'cell "Precondition of item 1: without a way to send it, the path never starts" [ref=f11e187]'
+            - cell "path" [ref=f11e188]
+            - cell "Share of activated workspaces where a card link is sent outside the workspace in 7 days" [ref=f11e189]
+          - row [ref=f11e190]:
+            - cell "9" [ref=f11e191]
+            - cell "One data source connection" [ref=f11e192]
+            - 'cell "Precondition of everything: with no live source there is no age and no state" [ref=f11e193]'
+            - cell "path" [ref=f11e194]
+            - cell "A workspace reaches its first card with real data without our help" [ref=f11e195]
+          - row [ref=f11e196]:
+            - cell "10" [ref=f11e197]
+            - 'cell "Metric registry: canonical definition and a named owner" [ref=f11e198]'
+            - cell "Two analyst jobs, and a precondition of items 1, 5, 6 and 7" [ref=f11e199]
+            - cell "path" [ref=f11e200]
+            - cell "Metrics defined per workspace in the first 30 days" [ref=f11e201]
+          - row [ref=f11e202]:
+            - cell "11" [ref=f11e203]
+            - cell "Search and jump to a metric by name" [ref=f11e204]
+            - cell "Two analyst jobs, on the other persona's path" [ref=f11e205]
+            - cell "core" [ref=f11e206]
+            - cell "Analyst time to reach a known metric" [ref=f11e207]
+      - paragraph [ref=f11e209]:
+        - strong [ref=f11e210]: "Cut at the critique: the full lineage tree."
+        - text: It stood under a "later" label with its parent given as "analyst depth", which is neither a barrier nor a job. That is exactly the shelter the rule forbids, and an orphan carrying a priority label travels into the IA stage where the label reads as a decision. If it has a parent, that parent is on the other persona's map.
+      - paragraph [ref=f11e211]:
+        - strong [ref=f11e212]: Item 8 is not the growth mechanic, and the first version let the two be read as one.
+        - text: "Item 8 is delivery: the number reaches the person who has to use it, and without it the first step cannot happen. The growth mechanic is recruitment: a reader pulling another reader into the product. They share a gesture and answer to different things, which is why one has a parent and a label and the other has neither."
+      - paragraph [ref=f11e213]:
+        - strong [ref=f11e214]: Item 11 needs its note.
+        - text: "By the rule above, search is not path-breaking: the reader arrives by link and never searches. By the project rules it is MVP, as the analyst's necessary half. The map that would settle it is the other persona's, and it has not been built. It stays in, and the reason it cannot be checked here is recorded rather than argued away."
+      - generic [ref=f11e215]:
+        - generic [ref=f11e216]: What the first test actually needs, which is much less than MVP
+        - paragraph [ref=f11e217]:
+          - text: The first test of the riskiest assumption is three companies times five metrics on hand-made static pages.
+          - strong [ref=f11e218]: It needs items 1, 3, 5 and 8 only.
+          - text: "No source connection, no registry, no search, no attribution, no snapshot: hand-made pages have no live source and no second definition to compare against. Four capabilities carry the entire risk, and the rest is the product that follows if the risk clears."
+    - generic [ref=f11e219]:
+      - generic [ref=f11e220]:
+        - generic [ref=f11e221]: □
+        - heading "Before and after" [level=2] [ref=f11e222]
+      - paragraph [ref=f11e223]: "Two instruments again. Codex first and blind, read-only, checking one thing above all: whether every feature has a parent. Twelve findings, none withdrawn at verification."
+      - generic [ref=f11e224]:
+        - generic [ref=f11e225]: Divergence between the instruments, recorded rather than voted on
+        - paragraph [ref=f11e226]: Codex returned no orphans and we found one. The orphan class was first in its brief and came back empty. One instrument's silence is not evidence, so the row was verified in the file before it was cut.
+      - table [ref=f11e228]:
+        - caption [ref=f11e229]: What changed, and who caught it
+        - rowgroup [ref=f11e230]:
+          - row [ref=f11e231]:
+            - columnheader "Was" [ref=f11e232]
+            - columnheader "Is" [ref=f11e233]
+            - columnheader "Found by" [ref=f11e234]
+        - rowgroup [ref=f11e235]:
+          - row [ref=f11e236]:
+            - cell "The card opened with the definition collapsed behind an action" [ref=f11e237]
+            - cell "Definition visible, source opening on request. The first version broke the project's own principle that the definition is the main object" [ref=f11e238]
+            - cell "Claude, growing out of a Codex finding" [ref=f11e239]
+          - row [ref=f11e240]:
+            - cell "The canvas hypothesis promises the definition on the same line as the value; the To-Be put it one action away" [ref=f11e241]
+            - cell "Repaired in the To-Be, which was the file that was wrong" [ref=f11e242]
+            - cell "Codex" [ref=f11e243]
+          - row [ref=f11e244]:
+            - cell "The full lineage tree sat under a \"later\" label" [ref=f11e245]
+            - cell "Cut as an orphan, with its possible parent placed on the other map" [ref=f11e246]
+            - cell "Claude" [ref=f11e247]
+          - row [ref=f11e248]:
+            - cell "Four MVP rows did not break the path, while MVP was defined as exactly that" [ref=f11e249]
+            - cell "The label split into path and core, rather than rows being moved quietly" [ref=f11e250]
+            - cell "Claude" [ref=f11e251]
+          - row [ref=f11e252]:
+            - cell "MVP as labelled looked like the smallest testable thing" [ref=f11e253]
+            - 'cell "Named: the first test needs four of the eleven items, and that is a build-order fact for the IA stage" [ref=f11e254]'
+            - cell "Claude" [ref=f11e255]
+          - row [ref=f11e256]:
+            - cell "\"Sharing a link\" and \"a reader inviting a reader\" were indistinguishable" [ref=f11e257]
+            - cell "Delivery separated from recruitment in writing" [ref=f11e258]
+            - cell "Codex" [ref=f11e259]
+          - row [ref=f11e260]:
+            - cell "An item's parent was given as a benchmark mechanism" [ref=f11e261]
+            - cell "The job is named; the mechanism is labelled as the source of the solution, not its parent" [ref=f11e262]
+            - cell "Claude" [ref=f11e263]
+          - row [ref=f11e264]:
+            - cell "Attribution carried a success signal that cannot be measured" [ref=f11e265]
+            - cell "Admitted, with a test proxy and the analyst-side signal that would really settle it" [ref=f11e266]
+            - cell "Claude" [ref=f11e267]
+      - paragraph [ref=f11e268]:
+        - strong [ref=f11e269]: Two findings were deferred rather than repaired here
+        - text: ", and the reason is that repairing them in this file would create the second version of the core that the next step exists to prevent: the canvas says \"three core jobs\" where the jobs file and the project rules say two plus a conditional third, and the two files list different MVP compositions right now."
+      - heading "The three most dangerous questions, by danger" [level=3] [ref=f11e270]
+      - list [ref=f11e271]:
+        - listitem [ref=f11e272]:
+          - strong [ref=f11e273]: Item 7 is MVP on a hypothesis.
+          - text: If nobody reopens a saved link, who is left for the state "definition changed after this was saved"? Its analyst half was not taken into the core.
+        - listitem [ref=f11e274]:
+          - strong [ref=f11e275]: Is MVP the smallest thing that tests the riskiest assumption?
+          - text: By the canvas's own first test, no, and the page now says so instead of implying otherwise.
+        - listitem [ref=f11e276]:
+          - strong [ref=f11e277]: Attribution is the second-largest object on the card
+          - text: and stands on a job supported by the shape of the market rather than by anything a reader said. What evidence would kill it before it is built?
+    - paragraph [ref=f11e279]:
+      - text: Plumb, stage 02+ of 13. Full detail in
+      - code [ref=f11e280]: research/docs/cjm-to-be.md
+      - text: . The evidence this path is answerable to is on the As-Is page.

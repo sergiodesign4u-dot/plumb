@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CJM As-Is - Plumb</title>
+<meta name="description" content="The As-Is journey of the reader who is about to be quoted: seven phases, four evidenced barriers, and an emotional dimension that was never measured.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="_page.css">
+<style>
+  /* page-local only: the phase strip, which no earlier page has an equivalent of */
+  .strip{ display:grid; gap:10px; margin:22px 0 8px; }
+  @media (min-width:760px){ .strip{ grid-template-columns:repeat(7,1fr); gap:6px; } }
+  .ph{ border:1px solid var(--rule); background:#fff; padding:12px 12px 14px; }
+  .ph.has{ border-color:var(--rule-strong); }
+  .ph .id{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; color:var(--muted); }
+  .ph h5{ font-family:var(--sans); font-size:13px; line-height:1.3; margin:4px 0 10px; font-weight:600; }
+  .meter{ height:6px; background:var(--panel); border:1px solid var(--rule); margin-bottom:8px; }
+  .meter i{ display:block; height:100%; background:var(--accent); }
+  .meter.none{ background:repeating-linear-gradient(45deg,transparent,transparent 3px,var(--rule) 3px,var(--rule) 4px); }
+  .ph .lab{ font-family:var(--sans); font-size:11px; line-height:1.35; color:var(--muted); display:block; }
+  .ph .lab b{ color:var(--ink); font-weight:600; }
+  .legend{ font-family:var(--sans); font-size:12px; color:var(--muted); display:flex;
+           flex-wrap:wrap; gap:6px 18px; margin:6px 0 26px; }
+  .legend span{ display:inline-flex; align-items:center; gap:7px; }
+  .key{ width:22px; height:6px; border:1px solid var(--rule); flex:none; }
+  .key.full{ background:var(--accent); border-color:var(--accent); }
+  .key.half{ background:linear-gradient(to right,var(--accent) 50%,var(--panel) 50%); }
+  .key.none{ background:repeating-linear-gradient(45deg,transparent,transparent 3px,var(--rule) 3px,var(--rule) 4px); }
+  .phase{ margin:30px 0; padding-left:16px; border-left:2px solid var(--rule); }
+  .phase.evid{ border-left-color:var(--accent); }
+  .phase h3{ margin:0 0 4px; font-size:1.14rem; }
+  .phase dl{ margin:10px 0 0; font-family:var(--sans); font-size:14px; line-height:1.5; }
+  .phase dt{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-top:12px; }
+  .phase dd{ margin:3px 0 0; }
+  .q{ font-family:var(--serif); font-style:italic; color:#3c4148; }
+  .unk{ font-family:var(--sans); font-size:12px; color:var(--stale); letter-spacing:.02em; }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 02+ &middot; User Research</p>
+    <h1>How the reader gets a number today, and what we can actually prove about it</h1>
+    <p class="standfirst lede">One focus: the reader who is about to be quoted, times the main job. This map is research, not design, so every barrier stands on a named source and everything else says so. After two rounds of mining, four of seven phases have an evidenced barrier and <strong>not one phase has a measured emotion</strong>.</p>
+    <div class="dateline">
+      <span>Built 2026-08-11</span>
+      <span>Mining mode: Deep</span>
+      <span>Source: <code>research/docs/cjm-as-is.md</code></span>
+    </div>
+  </header>
+
+  <!-- Focus ............................................................. -->
+  <section id="focus">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Focus and rules</h2></div>
+
+    <div class="pull">
+      <span class="label">The job this map follows</span>
+      <p>When I have to put a number in front of other people, I want to know how far it can be trusted, so that I am not defending something I cannot back up.</p>
+    </div>
+
+    <p><strong>This map is research, not design.</strong> Every emotion and every barrier stands on a source, and where there is none it says so rather than showing a drawn face. Remedies belong in the To-Be map; a recommendation written into this one would stop it being a mirror.</p>
+
+    <p><strong>The focus is not the only one, and it is worth saying now rather than at the IA stage.</strong> The path of the data lead diverges fundamentally rather than in detail: different actions, a different entry channel, different barriers. That earns a separate map, not a footnote on this one.</p>
+
+    <h3>Mining mode: Deep, and why</h3>
+    <p>The material this map is made of did not exist in the repository. All 26 screens from stage 01 are vendor pages: what a product says about itself, never what a person said about using it. A Lite pass would have re-projected vendor marketing plus our own brief onto a time axis, and the three load-bearing unknowns would each have come back undefined.</p>
+    <p class="note"><strong>What Deep does not promise.</strong> It buys the attempt, not the finding. Where a route returned nothing, the phase kept its gap and the route was recorded so it is not paid for twice.</p>
+  </section>
+
+  <!-- Phases ............................................................ -->
+  <section id="phases">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The seven phases</h2></div>
+
+    <p>Phases are derived from the arc of the job, not from a funnel. There is no Awareness phase and no Retention phase here, because the reader chooses nothing and onboards nowhere: they are handed a number by circumstance.</p>
+
+    <div class="strip">
+      <div class="ph"><span class="id">A</span><h5>The audience approaches</h5><div class="meter none"></div><span class="lab">No barrier evidenced</span></div>
+      <div class="ph has"><span class="id">B</span><h5>The number is taken</h5><div class="meter"><i style="width:70%"></i></div><span class="lab"><b>Barrier</b><br>Pattern, two venues</span></div>
+      <div class="ph has"><span class="id">C</span><h5>The private moment of doubt</h5><div class="meter"><i style="width:70%"></i></div><span class="lab"><b>Barrier</b><br>Measured trial, adjacent population</span></div>
+      <div class="ph has"><span class="id">D</span><h5>Trying to resolve it</h5><div class="meter"><i style="width:45%"></i></div><span class="lab"><b>Barrier</b><br>Narrowed at step 6</span></div>
+      <div class="ph"><span class="id">E</span><h5>The number is presented</h5><div class="meter none"></div><span class="lab">No barrier evidenced</span></div>
+      <div class="ph"><span class="id">F</span><h5>The number is challenged</h5><div class="meter none"></div><span class="lab">No barrier evidenced</span></div>
+      <div class="ph has"><span class="id">G</span><h5>The number travels on</h5><div class="meter"><i style="width:45%"></i></div><span class="lab"><b>Barrier</b><br>Single source</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="key full"></i> Barrier on a pattern</span>
+      <span><i class="key half"></i> Barrier on a single signal</span>
+      <span><i class="key none"></i> Nothing evidenced, left undefined</span>
+    </div>
+
+    <p class="note"><strong>There is no emotional curve on this page, and that is the finding rather than an omission.</strong> The one plotted point this map ever had, a negative of intensity 3 at phase D, was withdrawn at the critique when its sources turned out to report waiting rather than how waiting feels. Nothing was drawn in its place. A smooth line through undefined points would be the single most convincing lie this research could tell.</p>
+
+    <div class="phase" id="pa">
+      <h3>A. The audience approaches</h3>
+      <p>A deck is due, a meeting is booked, a decision acquires somebody's name.</p>
+      <dl>
+        <dt>Goal</dt><dd>The situation half of the main job.</dd>
+        <dt>Touchpoints</dt><dd>Calendar, deck, document, a thread in chat.</dd>
+        <dt>Emotion and barrier</dt><dd class="unk">Undefined. Not a single source describes this moment, so no sign and no intensity are written.</dd>
+      </dl>
+    </div>
+
+    <div class="phase evid" id="pb">
+      <h3>B. The number is taken</h3>
+      <p>Wherever the number lives is opened, the figure is copied, and it goes into a slide or a document. Possibly from last week's deck rather than from the origin.</p>
+      <dl>
+        <dt>Barrier, evidenced</dt><dd>The number arrives with no route back to its source, and the definition is often unknown even to the people who built the surface it came from.</dd>
+        <dt>Strength</dt><dd>Two authors, two different venues, three years apart. A pattern by the rule of this stage, and the weakest kind of one, being two points.</dd>
+        <dt>Quote</dt><dd class="q">"The main problem is that it's not easy to drill down into a metric in most BI tools because the connection between the dashboard and the source data is usually missing"</dd>
+        <dt>Emotion</dt><dd class="unk">Undefined. What surface the number is taken from is itself unknown, so whether anything there creates friction cannot be said.</dd>
+      </dl>
+    </div>
+
+    <div class="phase evid" id="pc">
+      <h3>C. The private moment of doubt</h3>
+      <p>The figure is looked at, checked against expectation and against memory, and the last update is looked for. Or none of that happens.</p>
+      <dl>
+        <dt>Barrier, evidenced</dt><dd>Checking is a destination that has to be chosen, and choosing it requires already suspecting something. The measured half is harder: a destination chosen <em>for</em> the reader and placed in their path was still entered only once or twice a year.</dd>
+        <dt>Strength</dt><dd>A measured trial, the strongest instrument in this research, on an adjacent population and a different object.</dd>
+        <dt>Quote</dt><dd class="q">"I have trouble trusting any dashboard if it doesn't have the equivalent of a "view source" button that lets me see what data sources were used for it and how they were manipulated. Sadly dashboard systems that encourage this are extremely rare"</dd>
+        <dt>Population note</dt><dd>The author of that line is technical and is therefore not our reader. It is kept for its shape, not as our reader's voice.</dd>
+      </dl>
+    </div>
+
+    <div class="phase evid" id="pd">
+      <h3>D. Trying to resolve the doubt</h3>
+      <p>One of three alternatives: ask the analyst in a channel, open the dashboard again, or use the number as it stands. Which one fires is unknown.</p>
+      <dl>
+        <dt>Barrier, narrowed at the critique</dt><dd>The answer is produced by somebody else and therefore arrives on their schedule, and the same question is known to reach the analyst repeatedly. The earlier wording added simultaneity and a single addressee; neither is in any source.</dd>
+        <dt>Emotion</dt><dd class="unk">Withdrawn at step 6. Two sources describe waiting and neither reports our reader's feeling while waiting for an answer about a number.</dd>
+        <dt>Quote</dt><dd class="q">"To get a SQL/Python (or other programming language) solution requires submitting a request to IT and then waiting two years to work up the priority queue. This is not a complaint against IT and the priority process."</dd>
+        <dt>Why that quote matters twice</dt><dd>It is the only first-person voice in this research from somebody in our persona's role, a CFO of thirty years, and it <strong>declines to express the frustration we expected to find</strong>.</dd>
+      </dl>
+    </div>
+
+    <div class="phase" id="pe">
+      <h3>E. The number is presented</h3>
+      <p>The figure is said out loud or shown on a slide.</p>
+      <dl>
+        <dt>Everything</dt><dd class="unk">Undefined throughout.</dd>
+      </dl>
+    </div>
+
+    <div class="phase" id="pf">
+      <h3>F. The number is challenged, or it is not</h3>
+      <dl>
+        <dt>What was tried</dt><dd>Roughly a dozen phrasings across the Hacker News comment corpus, aimed at finding an account of somebody being contradicted on a number in front of others.</dd>
+        <dt>What came back</dt><dd class="unk">Nothing usable. Thoughts, emotion, barrier and quote are all undefined.</dd>
+        <dt>What that means</dt><dd><strong>The phase on which the entire motivation model of this product rests has no evidence at all.</strong> The cost of the error is still our assumption.</dd>
+      </dl>
+    </div>
+
+    <div class="phase evid" id="pg">
+      <h3>G. The number travels on</h3>
+      <p>The deck is forwarded, the slide is reused, the link is saved.</p>
+      <dl>
+        <dt>Barrier, found by the step 6 follow-up</dt><dd>A figure that stopped being computed keeps looking exactly as it did, in the surface a finance reader actually works in, and it cannot practically be found again.</dd>
+        <dt>Quote</dt><dd class="q">"you get the scenario the author describes of hard-coded values in cells that once contained formulas. These are almost impossible to find in worksheets with large numbers of tabs and thousands of formulas."</dd>
+        <dt>Strength</dt><dd>A single source, so a signal. The strongest source in this file on population and the weakest on object: a CFO in the first person, about spreadsheets rather than about a metric surface.</dd>
+        <dt>What it does not do</dt><dd>Nobody in that source returns to anything, so it does not evidence a reader revisiting a number they saved.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Sources ........................................................... -->
+  <section id="sources">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Where the evidence came from</h2></div>
+
+    <p>Nine sources. Five sit in one Hacker News thread, "Notes on the Perfidy of Dashboards" (2021-08-27), where practitioners describe readers of numbers rather than analysts. The other four come from three different places, and the difference matters wherever strength is claimed.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Every source opened in this pass, with the population it actually describes</caption>
+        <thead><tr><th>Tag</th><th>Source</th><th>What it carries</th><th>Population</th></tr></thead>
+        <tbody>
+          <tr><td>S1</td><td>HN 28330744, 2021-08-27</td><td>A comparative trial: push beat pull, and a no-login, in-context, linked dashboard was entered one to two times per year</td><td>Clinicians</td></tr>
+          <tr><td>S2</td><td>HN 28331383, 2021-08-27</td><td>Trust stated as conditional on being able to see the source</td><td>Technical, not our reader</td></tr>
+          <tr><td>S3</td><td>HN 28331531, 2021-08-27</td><td>What "more data" means is lineage and provenance, plus attribution matching one's own definition</td><td>Clinicians</td></tr>
+          <tr><td>S4</td><td>HN 28330651, 2021-08-27</td><td>Nobody but an analyst will slice and dice their data. Exploratory analysis, not provenance checking</td><td>Clinicians</td></tr>
+          <tr><td>S5</td><td>HN 28329709, 2021-08-27</td><td>The connection between a dashboard and its source data is usually missing</td><td>Practitioner</td></tr>
+          <tr><td>S6</td><td>HN 41926383, 2024-10-23</td><td>The people building the dashboard often do not know what the data means</td><td>Practitioner</td></tr>
+          <tr><td>S7</td><td>HN 41918670, 2024-10-22</td><td>A consumer may lose interest while a requested dashboard is being built</td><td>Analyst, about consumers</td></tr>
+          <tr><td>S8</td><td>dbt Forum 712, 2019-11</td><td>The same question reaches the analyst repeatedly; business readers lack time to dig</td><td>Analyst, about readers</td></tr>
+          <tr><td>S9</td><td>HN 28050270, 2021-08-03</td><td>An IT queue of two years, hard-coded values that once were formulas, versions nobody tracks</td><td><strong>A CFO, first person</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull">
+      <span class="label">The hardest source in this research, quoted in full because paraphrase would soften it</span>
+      <p>"We pretty quickly found that sending data ("push") was way more effective at engagement than just having a tableau report they could go to ("pull"), even when that dashboard was linked directly within the EHR, didn't require a login, and was contextualized for the provider (basically as low friction as you could get-- they would actually venture into it 1-2 times per year)."</p>
+    </div>
+
+    <p><strong>What matches our design and what does not.</strong> What matches is the delivery conditions: no login, placed inside the tool the person already works in, contextualised to them. What does not match is the object: theirs is a dashboard to be explored, ours is a single number with its provenance. So it measures how often a placed, frictionless destination is entered, which is the assumption underneath our design rather than the design itself.</p>
+
+    <p class="note"><strong>Routes that returned nothing, recorded so they are not paid for twice.</strong> G2 returns 403 on review pages. TrustRadius reads without an account, and what was actually read is the reviews that rendered without scrolling, all of it product feedback from people who build reports. The dbt forum was searched on three trust phrasings and returned technical threads. Locally Optimistic answers 301 without resolving. Hacker News gave nothing on the contradiction in a meeting after roughly a dozen phrasings, which is a result about our queries rather than proof the corpus is empty: the follow-up found a new source on the thirteenth.</p>
+  </section>
+
+  <!-- Zones ............................................................. -->
+  <section id="zones">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Growth zones</h2></div>
+
+    <p>Where today's experience hurts most and where the competition is winnable. Each zone names the barrier it sits on and the market gap where there is one. <strong>No solutions here.</strong> Ordered by strength of evidence, not by how appealing the zone is to build for.</p>
+
+    <div class="cards">
+      <div class="card riskiest">
+        <span class="h-id">Z1</span>
+        <dl>
+          <dt>The reader rarely travels to the trust information</dt>
+          <dd>Sits on the phase C barrier. A destination chosen for the reader and placed in their path was still entered once or twice a year.</dd>
+          <dt>Market gap</dt>
+          <dd>Not one of the fifteen products positions itself on the moment of reading, and none sells the minutes before a meeting. What their interfaces do about arrival is unknown for ten of the fifteen and is not claimed.</dd>
+        </dl>
+        <p class="because"><strong>The only zone where the evidence points against us</strong>, and first in the list for exactly that reason: it decides whether the other three matter.</p>
+      </div>
+      <div class="card">
+        <span class="h-id">Z2</span>
+        <dl>
+          <dt>The number arrives with no route back to what made it</dt>
+          <dd>Sits on the phase B barrier: no route back to the source, and the definition unknown even to the builders.</dd>
+          <dt>Market gap</dt>
+          <dd>Provenance is a destination that has to be chosen. Attribution scores 3 or below across all five benchmark products.</dd>
+        </dl>
+        <p class="because">A pattern across two venues, on top of a gap documented across the competitor set.</p>
+      </div>
+      <div class="card">
+        <span class="h-id">Z3</span>
+        <dl>
+          <dt>A stale figure is indistinguishable from a live one</dt>
+          <dd>Sits on the phase G barrier, which did not exist until the step 6 follow-up found it.</dd>
+          <dt>Market gap</dt>
+          <dd>Benchmark criterion 8 records the category's strongest failure as a stale value that looks exactly like a fresh one.</dd>
+        </dl>
+        <p class="because">Rejected at step 5 for having no parent barrier, and qualified at step 6 when the follow-up gave it one.</p>
+      </div>
+      <div class="card">
+        <span class="h-id">Z4</span>
+        <dl>
+          <dt>The answer is produced by somebody else</dt>
+          <dd>Sits on the phase D barrier: the answer arrives on the schedule of whoever produces it, and the same question recurs.</dd>
+          <dt>Market gap</dt>
+          <dd>The category's answer is a catalog the reader has no reason to open, and the field's own default answer is to build a dashboard.</dd>
+        </dl>
+        <p class="because">Barrier evidenced, feeling not. This zone stood on an emotion until the critique withdrew it.</p>
+      </div>
+    </div>
+
+    <p class="note"><strong>A candidate that did not qualify, recorded rather than quietly dropped.</strong> "There is nobody named to ask" has strong market evidence, and no barrier in the mined layer says a reader looks for a name and fails to find one. It is a job, R1, whose support is the shape of the market. It was listed as a zone at step 5 and demoted at step 6 for exactly the defect this file polices in others.</p>
+  </section>
+
+  <!-- Critique .......................................................... -->
+  <section id="critique">
+    <div class="sec-head"><span class="sec-num">&#9633;</span><h2>Before and after</h2></div>
+
+    <p>The critique ran in two instruments. Codex went first and blind, read-only, without seeing our table; our own pass ran in parallel. <strong>Twenty-one findings, and none was withdrawn at verification.</strong></p>
+
+    <div class="tw">
+      <table>
+        <caption>The five that changed the map rather than its wording</caption>
+        <thead><tr><th>Was</th><th>Is</th><th>Found by</th></tr></thead>
+        <tbody>
+          <tr><td>Phase D carried a negative emotion of intensity 3</td><td>Withdrawn. Its sources report waiting, not how waiting feels, and none supplies a scale</td><td>Both</td></tr>
+          <tr><td>"The floor is D"</td><td>Removed. Naming a floor compares against six undefined phases, which is interpolation under another word</td><td>Codex</td></tr>
+          <tr><td>"Even a destination placed in their path is not visited"</td><td>"Was still entered only once or twice a year." Rare is not never, and the product's bet lives in that gap</td><td>Codex</td></tr>
+          <tr><td>Phase B: "three different authors, all inside one thread"</td><td>Two authors, two venues, three years apart. Wrong in both directions</td><td>Both</td></tr>
+          <tr><td>A growth zone whose parent barrier did not exist</td><td>Demoted to a recorded candidate</td><td>Both</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pull">
+      <span class="label">The systemic cause, which is worse than any single row</span>
+      <p>Once a source had been accepted as being about our problem, its specifics stopped constraining what was written from it. That is how "1-2 times per year" became "is not visited", and how two different statements became mutual confirmation. The stage 01 blind spot was treating the brief as a source. This one is finer: here the sources are real and it is the reading of them that drifts.</p>
+    </div>
+
+    <p><strong>What the follow-up research bought.</strong> It aimed at the intensity at phase D and found nothing, so the point stayed withdrawn. It landed instead on the CFO source, which gave phase G its first barrier and promoted a growth zone that had been rejected for having no parent.</p>
+  </section>
+
+  <footer class="note">
+    <p>Plumb, stage 02+ of 13. Full detail in <code>research/docs/cjm-as-is.md</code>. The To-Be map, where remedies are allowed and tracing replaces sourcing, is the next page.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'focus',    label:'Focus and rules' },
+    { id:'phases',   label:'The seven phases' },
+    { id:'sources',  label:'Where the evidence came from' },
+    { id:'zones',    label:'Growth zones' },
+    { id:'critique', label:'Before and after' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+</body>
+</html>

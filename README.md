@@ -5,6 +5,8 @@
 - Foundation Research: https://sergiodesign4u-dot.github.io/plumb/research/research.html
 - Personas: https://sergiodesign4u-dot.github.io/plumb/research/personas.html
 - JTBD: https://sergiodesign4u-dot.github.io/plumb/research/jtbd.html
+- CJM As-Is: https://sergiodesign4u-dot.github.io/plumb/research/cjm-as-is.html
+- CJM To-Be: https://sergiodesign4u-dot.github.io/plumb/research/cjm-to-be.html
 
 Metric trust tool for B2B teams. One place holds the canonical definition of every metric, and the provenance, freshness and breakage of a number are shown right where the number is read.
 
@@ -37,7 +39,7 @@ Index only. The conclusions live in the files and on the pages, and a second edi
 | --- | --- |
 | Foundation Research | Done. Fifteen competitors, benchmark on trust at the point of reading, canvas, funnel, chosen pattern, critique in two instruments, page published |
 | User Research (Personas + JTBD) | Done. Two behavioural personas with the reader as primary, one main job and five related, matrix, MVP core of two jobs, critique in two instruments, both pages published |
-| CJM (As-Is + To-Be) | Not started |
+| CJM (As-Is + To-Be) | Done. Seven As-Is phases with four evidenced barriers and no measured emotion, nine mined sources, four growth zones, six traced To-Be steps, eleven backlog items with one orphan cut, two critiques in two instruments, both pages published |
 | Information Architecture (Base + Detail) | Not started |
 | Wireframes | Not started |
 | Voice | Not started |
