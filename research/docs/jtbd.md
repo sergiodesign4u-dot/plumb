@@ -143,6 +143,17 @@ Emotional and social jobs are not scored here. Their importance would be a guess
 
 **A third, conditional: R4.** It qualifies on both columns, but its own importance is `[?]` because the job itself is a hypothesis: there is no evidence that anyone reopens a saved link. It is recorded as conditional, and the condition is explicit. If follow-up research or the first cohort shows that saved numbers are not revisited, R4 leaves the core and the retention mechanic leaves with it.
 
+### Refined at the CJM stage, and this is the current version of the core
+
+**The two jobs did not change. What changed is the capability list underneath them**, and the CJM backlog in `cjm-to-be.md` is where the full table with parents and success signals lives. Four changes came back here, because this file is where later stages read the core from.
+
+1. **One item was cut as an orphan: the full lineage tree.** It sat under a "later" label with its parent given as "analyst depth", which is neither a barrier nor a job.
+2. **Two capabilities were missing rather than vague, and were added.** A **definition snapshot taken at read time**, without which the state "definition changed after this was saved" has nothing to compare against and cannot be computed at all. And **sending a metric as a link in one action**, without which the card at a permanent URL never reaches anybody and the whole path starts at a step nobody can reach.
+3. **The provenance split was corrected against design principle 3.** The definition is **visible on the card**; what opens on request is the source and its last run. The first CJM draft had the definition behind an action, which the principle names as forbidden.
+4. **The MVP label was split, because one rule was being applied and then broken.** **MVP-path** means the reader's To-Be path breaks without it. **MVP-core** means it is inherited here and survives, while the path would still run without it. Attribution, relative age with expectation, the definition snapshot, mobile legibility and search are core rather than path.
+
+**A build-order fact, not a scope change.** The first test in `lean-ux-canvas.md` block 8 needs only four of the eleven capabilities: the card at a permanent URL, the named states, the visible definition with the source on request, and sending it as a link. Hand-made static pages have no live source and no second definition. **Four capabilities carry the entire risk**, and 03a should know that before it orders screens.
+
 **Why the rest are outside the core.**
 
 - **R2** matters to the secondary persona and is **discharged by the main job succeeding**, so it does not need its own place in the core.

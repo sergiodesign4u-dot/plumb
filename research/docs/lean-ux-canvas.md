@@ -83,7 +83,11 @@ The last one is the outcome no competitor in the set positions itself on: not on
 
 ## 5. Solutions (MVP scope)
 
-The scope from `CLAUDE.md`, with the mechanisms the benchmark earned. This is the rough MVP, narrowed to three core jobs at stage 02.
+The scope from `CLAUDE.md`, with the mechanisms the benchmark earned. This is the rough MVP.
+
+**Corrected at CJM step 11.** This line previously said the scope was "narrowed to three core jobs at stage 02", which contradicted `jtbd.md` and `CLAUDE.md`: the core is **two jobs plus a conditional third**, and `jtbd.md` refused the padding to three explicitly. Found by the second instrument during the To-Be critique.
+
+**This block is the rough scope and is deliberately not the current MVP list.** The current one lives in the backlog in `cjm-to-be.md`, refined by the CJM stage and summarised in `jtbd.md`. Three things happened to the eight items below that this block does not show, and they are recorded here rather than duplicated: the definition is **visible on the card** rather than behind the action in item 5, since design principle 3 makes it the main object; two capabilities were added that were missing here entirely, a definition snapshot at read time and sending a metric as a link; and the reader's depth stops at the source, with the lineage tree cut as an orphan.
 
 **In**
 
@@ -111,6 +115,8 @@ Dashboard building, SQL editor, row-level permissions, notification routing, com
 Format: we believe [business outcome] will be achieved if [user] attains [benefit] with [feature].
 
 **H1.** We believe **readers arriving (outcome 2)** will be achieved if the **business consumer** attains **the ability to settle "does this still hold" without asking a human** with **a number card carrying freshness, source state and definition on the same line as the value**.
+
+*Confirmed rather than corrected at CJM step 11.* The To-Be map briefly put the definition one action away from the value, and the second instrument caught the contradiction with this line. This hypothesis was right and the To-Be was wrong: the definition is visible, and the source is what opens on request.
 
 **H2.** We believe **the registry getting filled (outcome 1)** will be achieved if the **analyst** attains **a permanent answer to a repeated question** with **a registry where a definition is written once, owned by name, and linkable**.
 
