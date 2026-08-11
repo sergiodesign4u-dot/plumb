@@ -49,4 +49,10 @@ Items 1, 4 and 8 are the dangerous three: without them the As-Is curve is drawn 
 
 ### Mining mode
 
-To be recorded here at step 2, before any collection happens.
+**Mining mode: Deep.** Chosen at step 2, before any collection. Step 4 reads it from this line rather than from the conversation.
+
+**Why Deep rather than Lite.** The material this map is made of does not exist in the repository yet. Of the 26 screens in `research/screens/`, every one is a vendor page: what a product says about itself, never what a person said about using it. `research.md` carries exactly two lines of practitioner voice, both found at stage 02 and both dated 2019 and 2021. Lite re-projects what we already hold onto a time axis, and what we hold is vendor marketing plus our own brief, so the three dangerous unknowns above (what surface the number is read in, what a public contradiction costs, and what the moment feels like) would each come back as `[?]`. A curve made of `[?]` at its three load-bearing points is not a measurement, and step 5 would then be asked to draw it.
+
+**Where Deep can actually reach, since two obvious routes are already known to be closed.** Reddit returns HTTP 403 without an account and the Metabase forum carries support threads, both established at stage 02 and not to be spent again. Open to us: public review pages on G2, Capterra and TrustRadius for the products in `competitors.md`; Hacker News through the Algolia index, which is fully public and dated; the dbt Community Forum, which has already produced usable material; YouTube comments under competitor demos; and comment threads under analytics writing.
+
+**What Deep does not promise.** It buys the attempt, not the finding. Where a route returns nothing the phase keeps its `[?]` and the failed route is recorded so it is not paid for twice, exactly as at stage 02. Deep changes how hard we look, never what we are willing to write down.
