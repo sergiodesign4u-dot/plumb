@@ -125,3 +125,102 @@ Each phase carries its source. Where the path is not covered by data the row say
 A, B, C and E are covered by the main job; D and F by R1; G by R4. **No phase is without a job, and all three of P1's jobs have a phase.** R2 and R3 have no phase here and should not: they belong to P2, whose map is separate, and D is where the two touch.
 
 **Two phases were deliberately not added**, and both would have looked natural. "Chooses a tool", because the reader is not the buyer and chooses nothing. "Onboarding", because there is no product yet. An invented phase survives into the IA as a real one, which is why the omission is recorded rather than left silent.
+
+---
+
+## The emotional and barrier layer
+
+Collected at step 4 in Deep mode. **The rule this section is held to: every emotion and every barrier stands on a source, and where there is none it says `[?]` rather than a drawn face.** Intensity is written only where a reported feeling exists to derive it from. Strength of evidence is marked on every line: one mention is a signal, repetition across venues is a pattern, and a repetition inside a single thread is named as such rather than counted as a pattern.
+
+### Sources found in this pass
+
+The productive seam was not the vendor category. It was one Hacker News thread, "Notes on the Perfidy of Dashboards" (2021-08-27), where practitioners describe **non-technical readers of numbers** rather than analysts.
+
+| Tag | Source | What it carries |
+| --- | --- | --- |
+| S1 | `news.ycombinator.com/item?id=28330744`, 2021-08-27, screen `cjm-hn-28330744-push-vs-pull.png` | A comparative trial in healthcare: push beat pull, and a no-login, in-context, linked dashboard was visited one to two times per year |
+| S2 | `news.ycombinator.com/item?id=28331383`, 2021-08-27, screen `cjm-hn-28331383-view-source.png` | A first-person statement that trust depends on being able to see the source. **Author is technical, so this is not our reader** |
+| S3 | `news.ycombinator.com/item?id=28331531`, 2021-08-27, screen `cjm-hn-28331531-provenance-attribution.png` | What non-technical readers mean when they ask for "more data" is lineage and provenance, plus attribution matching their own definition |
+| S4 | `news.ycombinator.com/item?id=28330651`, 2021-08-27 | No one but an analyst will slice and dice their own data |
+| S5 | `news.ycombinator.com/item?id=28329709`, 2021-08-27, already cited in `research.md` | The connection between a dashboard and its source data is usually missing |
+| S6 | `news.ycombinator.com/item?id=41926383`, 2024-10-23 | The people building the dashboard often do not know what the data means or how it is measured |
+| S7 | `news.ycombinator.com/item?id=41918670`, 2024-10-22 | While a data request is being worked on, the consumer may lose interest or become frustrated and move on |
+| S8 | `discourse.getdbt.com/t/712`, thread dated 2019-11, already cited in `research.md` | The same question reaches the analyst repeatedly, and business readers do not have the time to dig |
+
+**S1 in full, because it is the hardest source this research has produced and paraphrase would soften it:**
+
+> "We pretty quickly found that sending data ("push") was way more effective at engagement than just having a tableau report they could go to ("pull"), even when that dashboard was linked directly within the EHR, didn't require a login, and was contextualized for the provider (basically as low friction as you could get-- they would actually venture into it 1-2 times per year)."
+
+A dashboard with no login, embedded in the tool the person already works in, contextualised to them: that is the shape of what we are designing, and it was opened once or twice a year. This is a measured trial rather than an opinion, and the population is clinicians rather than B2B business readers, which is the one thing that keeps it from being decisive.
+
+### Phase A. The audience approaches
+
+- **Thoughts and questions.** `[?]`
+- **Emotion.** `[?]`. Not a single source describes this moment, so no sign and no intensity are written.
+- **Barrier.** `[?]`
+- **Quote.** None found. None will be synthesised.
+
+### Phase B. The number is taken
+
+- **Thoughts and questions.** `[?]` for the reader's own words.
+- **Emotion.** `[?]`. What exists here is structure rather than a reported feeling: nothing at the moment of taking creates friction, because there is nothing at the moment of taking. Writing "calm" or "unaware" here would be an inference dressed as an observation.
+- **Barrier, and this one is evidenced.** The number arrives with no route back to its source (S5), and the definition is often unknown even to the people who built the surface it came from (S6).
+- **Strength.** Three different authors say the same thing, but **all inside one thread**, so this is a patterned complaint in a single place rather than a pattern across venues.
+- **Quote.** "The main problem is that it's not easy to drill down into a metric in most BI tools because the connection between the dashboard and the source data is usually missing" (S5).
+
+### Phase C. The private moment of doubt
+
+- **Thoughts and questions.** The nearest thing found is a trust condition stated in the first person: trust depends on being able to see what the number was made from (S2). **The author is technically sophisticated and is therefore not P1**, and the line is kept for its shape rather than as our reader's voice.
+- **Emotion.** `[?]` for our population. What this pass produced is behaviour, not feeling, and the behaviour points against the phase happening at all: a low-friction destination was visited one to two times per year (S1), and the people who dig are analysts (S4).
+- **Barrier.** Checking is a destination that has to be chosen (`competitors.md`), and S1 adds the harder half: even a destination chosen **for** the reader and placed in their path is not visited.
+- **Strength.** S1 is a measured trial, which is stronger than any single comment, and it is on an adjacent population, which is what stops it settling the question outright. S2 is a signal from the wrong population.
+- **Quote.** "I have trouble trusting any dashboard if it doesn't have the equivalent of a "view source" button that lets me see what data sources were used for it and how they were manipulated. Sadly dashboard systems that encourage this are extremely rare" (S2).
+
+### Phase D. Trying to resolve the doubt
+
+**The only phase in this map that carries a number.**
+
+- **Thoughts and questions.** How long this will take, and whether it is worth the ask at all.
+- **Emotion.** Negative, **intensity 3**.
+- **Strength.** A signal reinforced by a second venue, and not yet a pattern: S7 on losing interest during the wait, S8 on the same question reaching the analyst again and on business readers not having time to dig.
+- **Barrier.** The answer runs on somebody else's clock, and the reader's question is one of many arriving at the same person.
+- **Quote.** "the consumer may have lost interest or become frustrated and moved on" (S7). **Scope, stated rather than glossed over:** that sentence is about waiting for a requested dashboard, not about waiting for a doubt to be resolved. It is the closest reported feeling we have to this phase, and it is not the same event.
+
+### Phase E. The number is presented
+
+- **Thoughts, emotion, barrier, quote.** `[?]` throughout.
+
+### Phase F. The number is challenged, or it is not
+
+- **Thoughts, emotion, barrier, quote.** `[?]` throughout, after a deliberate search.
+- **What was tried.** Six different phrasings across the Hacker News comment corpus, aimed at finding an account of somebody being contradicted on a number in front of others. Nothing usable came back.
+- **What that means.** The phase on which the entire motivation model of this product rests has no evidence at all. The cost of the error is still our assumption.
+
+### Phase G. The number travels on
+
+- **Thoughts, emotion, barrier, quote.** `[?]` throughout. Consistent with R4 already being marked a hypothesis in `jtbd.md`.
+
+### What this pass means for the curve at step 5
+
+**After a full Deep pass, exactly one phase carries a number and six do not.** That is not a reason to fill the rest in. The curve at step 5 shows the points that exist, marks the gaps as undefined, and does not interpolate through them. A smooth line here would be the single most convincing lie this research could tell.
+
+### Routes that returned nothing, recorded so they are not paid for twice
+
+- **G2** returns HTTP 403 on product review pages.
+- **TrustRadius** renders and reads without an account, and the first rendered page of 137 Looker reviews contains product feedback from people who build reports, with no line about trusting where a number came from.
+- **The dbt Community Forum** was searched on three trust phrasings and returned technical threads, with thread 712 remaining the only usable one.
+- **Locally Optimistic** answers 301 without resolving.
+- **Hacker News** was searched on exact phrases for a contradiction in a meeting, for stale reports and for conflicting figures. The corpus is saturated for this question: what it holds is practitioners describing readers, never readers describing themselves.
+
+### Sync back into the persona
+
+**Nothing in `personas.md` was disproved.** Two lines gain outside evidence, and one of the two **raises the risk instead of relieving it**. Applied at step 4 together with the source.
+
+| Line in `personas.md` | Source | How it now reads |
+| --- | --- | --- |
+| P1 context, "the flow starts at one number opened from a link", marked `[?]` | S1 | Still `[?]`, now standing beside the first outside evidence bearing **against** the link being opened at all, tied to hole 1 |
+| P1 pains, provenance as what is actually being asked for | S3 | Lifted off the brief and given a source outside vendor marketing |
+
+**P1 still has no mood quote.** Deep did not find a business reader speaking. S2 is a reader speaking about trust, but a technical one, and passing it off as P1's voice would be exactly the kind of quiet substitution this stage exists to prevent.
+
+**One consequence reaches past this step and is therefore only named here.** S1 lands on the riskiest assumption in `lean-ux-canvas.md`, and step 4 has no right to edit that file. It is carried into the step 6 critique as an input.

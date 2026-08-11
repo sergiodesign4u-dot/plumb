@@ -1,0 +1,251 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link [ref=e4] [cursor=pointer]:
+      - /url: /
+      - 'img "TrustRadius: an HG Insights company" [ref=e6]'
+    - search [ref=e9]:
+      - generic [ref=e10]: Search
+      - combobox "Search" [ref=e11]
+      - button "Search" [ref=e12] [cursor=pointer]
+    - navigation "Main" [ref=e17]:
+      - list [ref=e19]:
+        - listitem [ref=e20]:
+          - button "Categories" [ref=e21]
+        - listitem [ref=e24]:
+          - button "Vendor solutions" [ref=e25]
+        - listitem [ref=e28]:
+          - link "Write a review" [ref=e29] [cursor=pointer]:
+            - /url: /reviews/new?product=looker
+        - listitem [ref=e33]:
+          - link "Research Boards" [ref=e34] [cursor=pointer]:
+            - /url: /researchboards
+        - listitem [ref=e38]:
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "Log in" [ref=e41] [cursor=pointer]:
+                - /url: /api/auth/login?nexturl=%2Fproducts%2Flooker%2Freviews
+            - listitem [ref=e42]:
+              - link "Sign up" [ref=e43] [cursor=pointer]:
+                - /url: /api/auth/signup?nexturl=%2Fproducts%2Flooker%2Freviews
+  - main [ref=e44]:
+    - generic [ref=e45]:
+      - navigation "Breadcrumb" [ref=e47]:
+        - list [ref=e48]:
+          - listitem [ref=e49]:
+            - link "Home" [ref=e50] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e51]:
+            - link "Business Intelligence (BI)" [ref=e54] [cursor=pointer]:
+              - /url: /categories/business-intelligence-bi
+          - listitem [ref=e55]:
+            - link "Looker" [ref=e58] [cursor=pointer]:
+              - /url: /products/looker
+          - listitem [ref=e59]:
+            - generic [ref=e62]: Reviews
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e67]:
+            - img "Looker logo" [ref=e69]
+            - generic [ref=e70]:
+              - heading "Looker Reviews & Insights" [level=1] [ref=e71]:
+                - text: Looker
+                - generic [ref=e72]: Reviews & Insights
+              - generic [ref=e73]:
+                - img "4.1 out of 5 stars" [ref=e74]
+                - generic [ref=e80]:
+                  - generic [ref=e83]: Score
+                  - generic [ref=e84]: 8.2 out of 10
+              - paragraph [ref=e85]: 465 Reviews and Ratings
+          - link "Get a Demo" [ref=e87] [cursor=pointer]:
+            - /url: https://cloud.google.com/looker?utm_campaign=TrustRadius%20Review&utm_source=trustradius.com&utm_medium=click
+        - generic [ref=e94]:
+          - navigation "Product pages" [ref=e95]:
+            - link "Overview" [ref=e96] [cursor=pointer]:
+              - /url: /products/looker
+            - link "Reviews" [ref=e97] [cursor=pointer]:
+              - /url: /products/looker/reviews
+            - link "Pricing" [ref=e98] [cursor=pointer]:
+              - /url: /products/looker/pricing
+            - link "Features" [ref=e99] [cursor=pointer]:
+              - /url: /products/looker/features
+            - link "Details" [ref=e100] [cursor=pointer]:
+              - /url: /products/looker/details
+            - link "Alternatives" [ref=e101] [cursor=pointer]:
+              - /url: /products/looker/competitors
+          - button "On this page" [ref=e105] [cursor=pointer]
+      - generic:
+        - generic:
+          - generic: Looker
+          - generic:
+            - button:
+              - generic: Reviews
+          - generic:
+            - generic:
+              - generic:
+                - button
+            - generic:
+              - link:
+                - /url: https://cloud.google.com/looker?utm_campaign=TrustRadius%20Review&utm_source=trustradius.com&utm_medium=click
+                - generic: Get a Demo
+      - generic [ref=e112]:
+        - generic [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - heading "Who Buys & Uses Looker" [level=2] [ref=e117]
+              - paragraph [ref=e118]: Based on 51,063 HG Insights installations.
+            - generic [ref=e120]:
+              - generic [ref=e121]: Powered by
+              - img "HG Insights" [ref=e122]
+          - navigation "Insight dimensions" [ref=e158]:
+            - list [ref=e159]:
+              - listitem [ref=e160]:
+                - generic [ref=e161]: Industry
+              - listitem [ref=e162]:
+                - link "Company Size" [ref=e163] [cursor=pointer]:
+                  - /url: /products/looker/reviews?dimension=company-size
+              - listitem [ref=e164]:
+                - link "Geography" [ref=e165] [cursor=pointer]:
+                  - /url: /products/looker/reviews?dimension=country
+              - listitem [ref=e166]:
+                - link "Department" [ref=e167] [cursor=pointer]:
+                  - /url: /products/looker/reviews?dimension=department
+          - navigation "Filter community insights by industry" [ref=e168]:
+            - generic [ref=e169]: Industries
+            - link "Overall" [ref=e170] [cursor=pointer]:
+              - /url: /products/looker/reviews
+            - link "Professional, Scientific, and Technical Services" [ref=e171] [cursor=pointer]:
+              - /url: /products/looker/reviews/industry/professional-services
+          - article [ref=e173]:
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - heading "Insights from Looker Reviewers" [level=2] [ref=e176]
+                - generic [ref=e177]:
+                  - paragraph [ref=e178]: Based on 17 verified reviews published in the last 18 months
+                  - button "About these insights" [ref=e181] [cursor=pointer]
+              - separator [ref=e184]
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - paragraph [ref=e187]: Overview
+                  - paragraph [ref=e188]: Synthesised from 17 reviews | Last Published May 27, 2026
+                - separator [ref=e189]
+                - generic [ref=e190]:
+                  - paragraph [ref=e191]: Looker serves as a comprehensive business intelligence tool for reporting and creating dashboards, enabling data-driven decision-making across various organizational functions. Organizations primarily leverage it to monitor sales, customer activity, project progress, and overall business health. In TrustRadius reviews, a significant strength is its ability to unify disparate data sources into a single, centralized platform, establishing a single source of truth for key metrics. Its robust data visualization and dashboard creation capabilities are widely appreciated, with 11 reviewers specifically highlighting this.
+                  - paragraph [ref=e192]: The product positively impacts business objectives by improving the time required to achieve insights and enhancing data visibility across teams. However, reviewers frequently identify a steep learning curve for report setup, particularly for new users, and occasional performance issues with large datasets. Some also desire more robust customization for styling and additional third-party connectors. Despite these challenges, Looker is reported to drive significant business value by making data more accessible and actionable.
+              - separator [ref=e193]
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - paragraph [ref=e196]: Pros
+                  - list [ref=e197]:
+                    - listitem [ref=e198]:
+                      - generic [ref=e199]: Robust data visualization and interactive dashboard creation
+                    - listitem [ref=e204]:
+                      - generic [ref=e205]: Effective data integration for unifying disparate sources
+                    - listitem [ref=e210]:
+                      - generic [ref=e211]: High degree of customization and flexibility for tailored metrics
+                    - listitem [ref=e216]:
+                      - generic [ref=e217]: Seamless integration within the Google product ecosystem
+                    - listitem [ref=e222]:
+                      - generic [ref=e223]: Improved time to actionable insights and results
+                - generic [ref=e229]:
+                  - paragraph [ref=e230]: Cons
+                  - list [ref=e231]:
+                    - listitem [ref=e232]:
+                      - generic [ref=e233]: Steep learning curve requiring technical skills for report setup
+                    - listitem [ref=e237]:
+                      - generic [ref=e238]: Performance issues, particularly slow loading times with large datasets
+                    - listitem [ref=e242]:
+                      - generic [ref=e243]: Limited customization and formatting options for tables and branding
+                    - listitem [ref=e247]:
+                      - generic [ref=e248]: Need for more third-party connectors beyond Google ecosystem
+                    - listitem [ref=e252]:
+                      - generic [ref=e253]: Challenging data modeling and blending, especially for new users
+          - link "Read Full Review Insights" [ref=e258] [cursor=pointer]:
+            - /url: /products/looker/reviews/review-insights
+          - link "View All Reviews" [ref=e260] [cursor=pointer]:
+            - /url: "#reviews-list"
+        - generic [ref=e266]: Loading Reviews List....
+  - contentinfo [ref=e268]:
+    - generic [ref=e269]:
+      - link [ref=e270] [cursor=pointer]:
+        - /url: /
+        - 'img "TrustRadius: an HG Insights Company" [ref=e271]'
+      - navigation [ref=e272]:
+        - generic [ref=e273]:
+          - paragraph [ref=e274]: TrustRadius
+          - list "TrustRadius" [ref=e275]:
+            - listitem [ref=e276]:
+              - link "About Us" [ref=e277] [cursor=pointer]:
+                - /url: https://about.trustradius.com/
+            - listitem [ref=e278]:
+              - link "Team" [ref=e279] [cursor=pointer]:
+                - /url: https://about.trustradius.com/team
+            - listitem [ref=e280]:
+              - link "Careers" [ref=e281] [cursor=pointer]:
+                - /url: https://about.trustradius.com/careers
+            - listitem [ref=e282]:
+              - link "News" [ref=e283] [cursor=pointer]:
+                - /url: https://solutions.trustradius.com/resources-overview/?category=news%2C&parent-category=topic
+            - listitem [ref=e284]:
+              - link "Contact Us" [ref=e285] [cursor=pointer]:
+                - /url: https://about.trustradius.com/contact-us
+        - generic [ref=e286]:
+          - paragraph [ref=e287]: For Buyers
+          - list "For Buyers" [ref=e288]:
+            - listitem [ref=e289]:
+              - link "Categories" [ref=e290] [cursor=pointer]:
+                - /url: /categories
+            - listitem [ref=e291]:
+              - link "Buyer Blog" [ref=e292] [cursor=pointer]:
+                - /url: https://solutions.trustradius.com/buyer-blog/
+        - generic [ref=e293]:
+          - paragraph [ref=e294]: For Vendors
+          - list "For Vendors" [ref=e295]:
+            - listitem [ref=e296]:
+              - link "Vendor Solutions" [ref=e297] [cursor=pointer]:
+                - /url: https://solutions.trustradius.com/
+            - listitem [ref=e298]:
+              - link "Claim Your Profile" [ref=e299] [cursor=pointer]:
+                - /url: https://solutions.trustradius.com/claim-your-profile/
+            - listitem [ref=e300]:
+              - link "Vendor Blog and Resources" [ref=e301] [cursor=pointer]:
+                - /url: https://solutions.trustradius.com/resources-overview/
+    - generic [ref=e302]:
+      - generic [ref=e303]:
+        - list [ref=e304]:
+          - listitem [ref=e305]:
+            - link "YouTube" [ref=e306] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCNH6ZvATJ901dJ95kOQzVTw
+          - listitem [ref=e308]:
+            - link "Facebook" [ref=e309] [cursor=pointer]:
+              - /url: https://www.facebook.com/TrustRadius/
+          - listitem [ref=e311]:
+            - link "Twitter" [ref=e312] [cursor=pointer]:
+              - /url: https://twitter.com/trustradius
+          - listitem [ref=e314]:
+            - link "LinkedIn" [ref=e315] [cursor=pointer]:
+              - /url: https://linkedin.com/company/trustradius
+        - list [ref=e317]:
+          - listitem [ref=e318]:
+            - link "Terms of Use" [ref=e319] [cursor=pointer]:
+              - /url: /static/terms-of-use
+            - text: /
+          - listitem [ref=e320]:
+            - link "Security" [ref=e321] [cursor=pointer]:
+              - /url: /static/security
+            - text: /
+          - listitem [ref=e322]:
+            - link "Privacy Policy" [ref=e323] [cursor=pointer]:
+              - /url: /static/privacy-policy
+            - text: /
+          - listitem [ref=e324]:
+            - link "Cal. Notice at Collection" [ref=e325] [cursor=pointer]:
+              - /url: /static/california-notice
+            - text: /
+          - listitem [ref=e326]:
+            - link "Your Privacy Choices" [ref=e327] [cursor=pointer]:
+              - /url: https://privacyportal.onetrust.com/webform/13e72c91-9e4f-44ae-86e4-b6bd77ebefbc/552da02c-cbbc-4aef-8e65-38efc63142d7
+            - text: /
+          - listitem [ref=e328]:
+            - button "Cookie Settings" [ref=e329]
+      - generic [ref=e330]: © Copyright 2013–2026 TrustRadius
+  - alert [ref=e331]
