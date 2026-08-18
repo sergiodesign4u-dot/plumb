@@ -28,6 +28,11 @@
       </nav>
       <h1>New metric</h1>
 
+          <p class="wf-run" role="status" aria-live="polite">
+            <b>Asking Snowflake, ANALYTICS.PROD, now.</b>
+            <span>Checking that the query comes back with one value.</span>
+          </p>
+
       <!-- 4.5. The form stays filled and visible. Nothing is disabled that does not have
            to be, nothing is covered, and there is no modal over a one step form -->
       <form class="wf-form">
@@ -59,10 +64,6 @@
           <label for="f-query"><b>Query</b> <span>returns one value</span></label>
           <textarea class="wf-field wf-field--code" id="f-query" name="query" rows="3" spellcheck="false">select count(distinct account_id) from fact_sessions where ts &gt; dateadd(day, -7, current_date)</textarea>
           <!-- Progress in place, on the field being tried, naming what is being tried -->
-          <p class="wf-run" role="status" aria-live="polite">
-            <b>Asking Snowflake, ANALYTICS.PROD, now.</b>
-            <span>Checking that the query comes back with one value.</span>
-          </p>
         </div>
 
         <p class="wf-hint">Run the definition once before saving it.</p>

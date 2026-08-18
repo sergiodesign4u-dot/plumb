@@ -28,6 +28,19 @@
       <p class="wf-crumbs"><a href="sources.html">Sources</a> &gt; New connection</p>
       <h1>Connect a source</h1>
 
+
+        <!-- Progress in place, naming which half is being tried. Not a modal, and not
+             a success window: the success of a connection is worth saying once, here -->
+        <div class="wf-banner wf-banner--info" role="status" aria-live="polite">
+          <b>Testing this connection</b>
+          <ol class="wf-steps">
+            <li class="is-now">Reaching xy12345.us-east-1</li>
+            <li>Signing in as plumb_reader</li>
+            <li>Looking for ANALYTICS</li>
+          </ol>
+          <p class="wf-muted">Each step is named so that a failure points at the place its fix is.</p>
+        </div>
+
       <form class="wf-form" action="connect-source-testing.html" method="get">
         <div class="wf-form-grid">
         <div class="wf-form-grid__top">
@@ -104,18 +117,6 @@
           </div>
         </div>
 
-        </div>
-
-        <!-- Progress in place, naming which half is being tried. Not a modal, and not
-             a success window: the success of a connection is worth saying once, here -->
-        <div class="wf-banner wf-banner--info" role="status" aria-live="polite">
-          <b>Testing this connection</b>
-          <ol class="wf-steps">
-            <li class="is-now">Reaching xy12345.us-east-1</li>
-            <li>Signing in as plumb_reader</li>
-            <li>Looking for ANALYTICS</li>
-          </ol>
-          <p class="wf-muted">Each step is named so that a failure points at the place its fix is.</p>
         </div>
 
       <!-- 5. Test the connection, then Save. Test then save is the order, because

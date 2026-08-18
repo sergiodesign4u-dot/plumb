@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>There is no number at this link - Plumb</title>
-<!-- SEO layer 2, validation only. Node 7.1: noindex because an error page that gets
+<!-- SEO layer 2, validation only. Node 7.1, the signed-in rendering. Node 7.1: noindex because an error page that gets
      indexed competes with real pages, follow so that a crawler landing here walks out
      through the footer instead of stopping. No canonical, no schema, no SEO text.
      Production serves this at whatever address failed, with a real HTTP 404. A soft 404
@@ -58,10 +58,14 @@
         <!-- The second rendering of the same node. Signed in, the analyst keeps their
              navigation and gets the registry; signed out there is no button at all,
              because the honest act is to ask whoever sent the link -->
+      <!-- The signed-in rendering of node 7.1. Same message, and the route the analyst
+           actually has: their navigation is where it was. -->
+      <p class="wf-actions"><a class="wf-btn wf-btn--quiet" href="metric-registry.html">Back to the registry</a></p>
       </section>
 
       <!-- Footer, node 0.2, minimal variant, rendered by the global component. It is the
            signed-out reader's route out, and it renders only targets that exist -->
+      <div id="wf-header"></div>
       <div id="wf-footer"></div>
     </main>
 

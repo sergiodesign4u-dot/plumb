@@ -36,6 +36,15 @@
           <b>As of 14:05, 20 minutes ago</b>
           <span>Expected hourly</span>
         </p>
+        <!-- 4. The definition, in words -->
+        <div class="wf-def">
+          <p class="wf-caps">Definition</p>
+          <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+        </div>
+        <!-- 5. Attribution -->
+        <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
+        <!-- 6. Where this number came from, one line -->
+        <p class="wf-src"><span>From Snowflake, ANALYTICS.PROD, last run 14:05</span></p>
         </div>
         <!-- Node 2.8, and it defines the dialog for the whole product: focus trapped,
              Escape closes, focus returns to the trigger, targets 44 by 44.
@@ -55,9 +64,9 @@
                never needs a failure toast -->
           <p class="wf-muted">Select the link above to copy it.</p>
           <p class="wf-actions">
-            <a class="wf-btn wf-btn--full" href="send-clipboard-unavailable.html">Copy</a>
+            <button class="wf-btn wf-btn--full" type="button" disabled>Copy</button>
             <!-- The native share sheet belongs to the operating system, not to our screen -->
-            <span class="wf-btn wf-btn--quiet wf-pending">Share</span>
+            <a class="wf-btn wf-btn--quiet" href="send-copied.html">Share</a>
             <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
           </p>
         </section>

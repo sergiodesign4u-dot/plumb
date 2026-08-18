@@ -3,30 +3,59 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cookie notice - Plumb</title>
-<!-- SEO layer 2, validation only. Node 7.4 has no URL of its own: it is a section on the
-     cluster 6 pages and is not indexed as a page. This wireframe exists so the component
-     can be reviewed, so it carries noindex itself. No schema, no SEO text. -->
-<meta name="robots" content="noindex">
+<!-- SEO block A, node 6.1, finished copy. This is THE ONLY INDEXED PAGE in the product:
+     every other node is noindex, so the whole structural SEO layer of this stage attaches
+     here. Title 48 characters, description 147, both verbatim from the node.
+     Canonical: the absolute form of "/" on the production domain. The domain is NOT
+     decided (runtime hosting is still open in CLAUDE.md), so the canonical is recorded
+     here by rule rather than written as a string that would be invented.
+     hreflang: none, deliberately. One language, English, so a cluster of one is noise.
+     og:url is the same canonical and is held back for the same reason; og:image is a
+     rendering of the card component, not a logo, which is why the hero runs the card. -->
+<title>Cookie notice on Plumb: every number with its source and owner</title>
+<meta name="description" content="Node 7.4, the cookie notice, rendered where it lives: pinned to a page of the public surface.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Plumb: every number with its source and owner">
+<meta property="og:description" content="Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="_wf.css">
-      <!-- What remains here is genuinely single use on this screen. Everything
-           that appeared on two or more screens was folded into _wf.css at the
-           step 8 reconcile, unedited. -->
-      <style>
-        /* The host. 7.4 is a section rather than a page, so the page it sits on is drawn as an
-   empty marked area: the content of the product page belongs to node 6.1 and is not
-   invented here. */
-.sys__host{ border:1px dashed var(--wf-rule-strong); padding:var(--wf-space-4);
-            margin:var(--wf-space-3) 0; color:var(--wf-muted); }
-        /* The consent banner itself: one line and two controls, and nothing more. Sticky rather
-   than fixed so that it pins to the foot of the screen without covering the wireframe
-   note underneath; in production it is fixed to the viewport of a cluster 6 page. */
-.sys__banner{ position:sticky; bottom:0; z-index:2; background:var(--wf-surface);
-              border:1px solid var(--wf-ink); padding:var(--wf-space-3);
-              display:flex; gap:var(--wf-space-3); flex-wrap:wrap; align-items:center; }
-        .sys__banner p{ margin:0; flex:1; min-width:200px; }
-      </style>
-</head>
+<!-- SEO block D. Structured data has no visible place on a screen, so it is rendered as
+     markup here rather than left as a claim. Three types, exactly as the node fixes them:
+     SoftwareApplication and Organization at page level, FAQPage on block 7, its copy
+     taken from block C so the two cannot drift. No Product and no Offer: pricing is node
+     6.3 and takes its own markup. url, logo and sameAs wait on the domain decision. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Plumb",
+      "description": "Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web"
+    },
+    {
+      "@type": "Organization",
+      "name": "Plumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do readers need an account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A metric card opens at its permanent link with no account at all." } },
+        { "@type": "Question", "name": "Is this a BI tool?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Plumb does not build dashboards and does not visualise data. It makes a single number defensible." } },
+        { "@type": "Question", "name": "Where does the number come from?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your warehouse, queried when the card is opened. Snowflake, BigQuery and Postgres in the first release." } },
+        { "@type": "Question", "name": "What happens when the source is down?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The card says so, in words, and still shows the definition, the owner and the time of the last successful run. It does not show a stale number and it does not show a dash." } }
+      ]
+    }
+  ]
+}
+</script></head>
 <body>
 <div class="wf-shell">
 
@@ -36,28 +65,130 @@
   </details>
 
   <div class="wf-main">
-    <main class="wf-screen">
+    <main class="wf-screen pp-page">
+      <!-- Public bar. The node's call to action section names sign in as a secondary route
+           in the header, so it is here and it is quiet. The node mockup also draws Product,
+           Pricing and Docs: nodes 6.3 and 6.4 are out of MVP scope, so they are not rendered
+           rather than shipped as links that 404. The bar is built to take them unchanged. -->
+      <header class="pp-bar">
+        <a class="pp-bar__mark" href="product-page.html">Plumb</a>
+        <a class="wf-btn wf-btn--quiet" href="sign-in.html">Sign in</a>
+      </header>
 
-      <section class="sys">
-        <h1>Cookie notice</h1>
-        <p class="sys__lead">This notice belongs to the public pages of cluster 6, where a cookie may legitimately exist and the visitor is not mid-task.</p>
+      <section class="pp-hero">
 
-        <!-- The host page, drawn as an empty area on purpose: the banner is the screen
-             here, and the page under it is node 6.1 -->
-        <div class="sys__host">
-          <p class="wf-caps">A cluster 6 page, for example the product page</p>
-          <p><a href="product-page.html">Open the product page</a></p>
+        <div class="pp-hero__claim">
+          <!-- Block 1. The claim, one sentence, as the one H1 on the page -->
+          <h1>Every number carries its source, its age and the person who defined it</h1>
+          <p class="pp-lede">Two people arrive at a meeting with different numbers for the same thing, and the next half hour goes on working out whose number is right.</p>
         </div>
 
-        <!-- Where it never appears, and this is the decision the node settles rather
-             than a caveat about it -->
-        <section>
-          <h2>It never appears on a number card</h2>
-          <p>The card sets nothing on the reader's device: no cookie, no local storage, no third-party analytics, no tag manager. A consent dialog would be a question about tracking sitting on top of the one page that promises we store nothing about the reader, and it would arrive before the number they came for.</p>
-          <p><a href="number-card.html">Open a number card and check</a></p>
-        </section>
+        <div class="pp-hero__card">
+        <!-- Block 2. THE LIVE CARD: the real component of node 2.1, rendering the real
+             metric, block for block and word for word as number-card.html. This page is one
+             of the three copies node 2.1 records, so changing the canon changes this hero.
+             Variant: public, read only. The send action is dropped by the node's component
+             table; the source line stays, because depth on request is principle 4 and it is
+             part of what the page is arguing. The metric name is an H3, fixed by block B of
+             this node, because the H1 on this page is the claim. -->
+        <article class="wf-card">
+          <!-- 1. Metric name -->
+          <h3 class="wf-card__name">Weekly active accounts</h3>
+          <!-- 2. The value -->
+          <p class="wf-value">18,432</p>
+          <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+          <p class="wf-state">
+            <b>As of 14:05, 20 minutes ago</b>
+            <span>Expected hourly</span>
+          </p>
+          <!-- 4. The definition, in words. The main object, never collapsed -->
+          <div class="wf-def">
+            <p class="wf-caps">Definition</p>
+            <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+          </div>
+          <!-- 5. Attribution: who declared this and when -->
+          <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
+          <!-- 6. Where this number came from: one line here, the grid opens on one action -->
+          <p class="wf-src">
+            <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
+            <a class="wf-btn wf-btn--quiet" href="source-layer.html">Where this came from</a>
+          </p>
+        </article>
+        </div>
 
-        <!-- The component: one line, two controls -->
+        <!-- Block 3. The state dependent strip: ONE next step, and which one depends on
+             who is looking. This is the single primary action on the page, and there is one
+             instance of it, which is what the node's component table fixes. -->
+        <div class="pp-strip">
+          <p>Open a real card at its own permanent link. No account, and the value is queried from the source when the page is opened.</p>
+          <p class="wf-actions"><a class="wf-btn" href="number-card.html">Open a live example card</a></p>
+        </div>
+
+      </section>
+
+      <!-- Block 4. The problem, and the only place on this page where the reader's
+           situation is described rather than shown -->
+      <section class="pp-sect">
+        <h2>Two people, two numbers, half an hour</h2>
+        <p>The number in the deck came from somewhere. The person presenting it usually did not compute it, often cannot see the pipeline behind it, and has no way to check it in the moment they are asked. So the meeting stops being about the decision and becomes about the figure.</p>
+      </section>
+
+      <!-- Block 5. What the product is: four things, one sentence each. Four because they
+           are the four capabilities the first test of the riskiest assumption needs -->
+      <section class="pp-sect">
+        <h2>What Plumb puts next to a number</h2>
+        <div class="pp-four">
+          <p>The definition in plain words, so the number means one thing.</p>
+          <p>Its state, said in words rather than in a colour: when it was computed, whether the source could be reached, whether the definition changed since this number was sent.</p>
+          <p>The name and the date on the claim, so there is a specific person to ask.</p>
+          <p>And one permanent link per metric, so the answer travels instead of being re-explained.</p>
+        </div>
+      </section>
+
+      <!-- Block 6. Trust. Load bearing for the buyer, who has no product surface -->
+      <section class="pp-sect">
+        <h2>We store definitions, not your data</h2>
+        <p>Plumb holds definitions, lineage and ownership. It does not hold copies of your rows. The value is queried from your own warehouse at the moment somebody reads it, which keeps your data on your infrastructure and keeps our compliance surface on ours.</p>
+        <!-- The route out of this block. Block E of this node requires a crawlable anchor
+             on every route out, naming the trust page explicitly, and node 6.2 is drawn in
+             this same round, so it is a link and not text. Scope tension recorded in the
+             report: 6.2 is labelled ПОТІМ in the registry while 6.1 is MVP. -->
+        <p><a href="trust-security.html">Trust and security</a></p>
+      </section>
+
+      <!-- Block 7. FAQ, the one block here with a structural SEO payload. The answers are
+           the copy the FAQPage markup in the head is built from -->
+      <section class="pp-sect">
+        <h2>Questions</h2>
+        <div class="pp-faq">
+          <details>
+            <summary>Do readers need an account?</summary>
+            <p>No. A metric card opens at its permanent link with no account at all.</p>
+          </details>
+          <details>
+            <summary>Is this a BI tool?</summary>
+            <p>No. Plumb does not build dashboards and does not visualise data. It makes a single number defensible.</p>
+          </details>
+          <details>
+            <summary>Where does the number come from?</summary>
+            <p>Your warehouse, queried when the card is opened. Snowflake, BigQuery and Postgres in the first release.</p>
+          </details>
+          <details>
+            <summary>What happens when the source is down?</summary>
+            <p>The card says so, in words, and still shows the definition, the owner and the time of the last successful run. It does not show a stale number and it does not show a dash.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Block 8. One call to action, and it is the same one action as the strip: the same
+           target, the same words. It is a plain link rather than a second primary button,
+           because the node allows one instance of the primary and the strip holds it. -->
+      <section class="pp-sect">
+        <p>The card above is the component, not a picture of it. <a href="number-card.html">Open a live example card</a>.</p>
+      </section>
+
+      <!-- Block 9. Footer, node 0.2, rendered by the global component -->
+
         <section class="sys__banner" aria-label="Cookie notice">
           <p>Plumb uses cookies on this page to measure how the site is used.</p>
           <span class="wf-actions">
@@ -65,19 +196,12 @@
             <button class="wf-btn wf-btn--quiet" type="button">Decline</button>
           </span>
         </section>
-      </section>
-
-      <!-- Footer, node 0.2, minimal variant, rendered by the global component -->
-      <div id="wf-footer"></div>
+      <div id="wf-footer" data-variant="full"></div>
     </main>
 
-    <p class="wf-note">Node 7.4, ПОТІМ, and the node settles the discrepancy the map carried from stage 03a rather than drawing a consent platform. <strong>What is rendered is what the node specifies and nothing else: one line and two controls.</strong> No vendor list, no per-category toggles, no "personalize my choices", because a preference centre is a screen nobody specified and dbt's full platform is the reference this node does not follow. <strong>Two decisions are the whole content of this page.</strong> The banner exists only on cluster 6, and it never exists on cluster 2: the number card sets nothing on the reader's device, so there is nothing to consent to there. The precise position the node corrected upwards into nodes 4.7 and 6.2 also holds: nothing that identifies a reader is stored, an anonymous server-side counter on the metric is allowed because activation could not otherwise be observed, and no count is ever shown in the product. <strong>Two things the node leaves open</strong> and are drawn as draft: which two controls, rendered here as accept and decline because any "manage" label implies a third screen, and the wording of the one line. Stage 05 owns both.</p>
+    <p class="wf-note">Node 7.4, the cookie notice, and it is a <strong>section rather than a page</strong>, so it is drawn on the page it actually sits on: the product page, node 6.1, unchanged underneath it. The first version of this file was a page <em>about</em> the banner, with an empty dashed box standing in for the host and an essay explaining where the banner never appears, which the critique caught as a schema rather than a screen. <strong>The card never carries this banner:</strong> it sets nothing on the reader's device, and a consent dialog on the one page that promises we store nothing about them would be the product contradicting itself. The wording and the two controls are draft, stage 05 owns them.</p>
 
-    <div class="wf-routes">
-      <span class="wf-caps">Where the banner does and does not appear</span>
-      <a href="product-page.html">6.1 the product page, cluster 6</a>
-      <a href="number-card.html">2.1 the card, cluster 2, never</a>
-    </div>
+    <div class="wf-routes"><span class="wf-caps">The same page, a different visitor</span><a href="product-page-analyst.html">Signed in, analyst</a><a href="product-page-no-workspace.html">Signed in, no workspace yet</a><a href="product-page-card-down.html">The live card cannot load</a></div>
   </div>
 </div>
 

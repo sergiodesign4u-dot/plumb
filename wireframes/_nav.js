@@ -93,7 +93,9 @@ window.WF_NAV = [
     { label:'Message sent', node:'0.3', file:'support-sent.html' }
   ] },
 
-  { cluster:'7. System nodes', label:'404', node:'7.1', scope:'MVP', file:'error-404.html', spec:'system-pages.html', status:'built', states:[] },
+  { cluster:'7. System nodes', label:'404', node:'7.1', scope:'MVP', file:'error-404.html', spec:'system-pages.html', status:'built', states:[
+    { label:'Signed in, the analyst rendering', node:'7.1', file:'error-404-signed-in.html' }
+  ] },
   { cluster:'7. System nodes', label:'500', node:'7.2', scope:'MVP', file:'error-500.html', spec:'system-pages.html', status:'built', states:[] },
   { cluster:'7. System nodes', label:'Maintenance', node:'7.3', scope:'ПОТІМ', file:'maintenance.html', spec:'system-pages.html', status:'built', states:[] },
   { cluster:'7. System nodes', label:'Cookie notice', node:'7.4', scope:'ПОТІМ', file:'cookie-notice.html', spec:'system-pages.html', status:'built', states:[] }
@@ -131,7 +133,15 @@ window.WF_GLOBALS = {
     function target(node, label, cls) {
       var s = (window.WF_NAV || []).filter(function (x) { return x.node === node; })[0];
       var e;
-      if (s && s.file) { e = document.createElement('a'); e.href = s.file; }
+      if (s && s.file) {
+        e = document.createElement('a');
+        e.href = s.file;
+        /* Node 0.1 asks the active destination to say so. The panel already does this
+           test; the header did not, so every screen looked like every other one. */
+        var here = location.pathname.split('/').pop();
+        var mine = [s.file].concat((s.states || []).map(function (x) { return x.file; }));
+        if (mine.indexOf(here) !== -1) e.setAttribute('aria-current', 'page');
+      }
       else { e = document.createElement('span'); e.className = 'wf-pending'; }
       if (cls) e.className = (e.className ? e.className + ' ' : '') + cls;
       e.textContent = label;
@@ -145,15 +155,38 @@ window.WF_GLOBALS = {
     nav.appendChild(target('4.1', 'Metrics'));
     nav.appendChild(target('3.1', 'Sources'));
     h.appendChild(nav);
-    var search = document.createElement('input');
-    search.className = 'wf-field wf-header__search';
-    search.type = 'search';
-    search.placeholder = 'Search metrics';
-    search.setAttribute('aria-label', 'Search metrics');
-    h.appendChild(search);
-    var account = document.createElement('span');
+    /* PROVISIONAL, and the reason is written here so nobody reads it as a decision.
+       Node 0.1 puts search in the bar as a persistent affordance; node 4.1 lists a search
+       field as block 2 of the registry. Rendering both put two fields on one screen, and
+       on the search results state one of them held the live query while the other sat
+       empty above it. The page keeps its field, because state 4.3 requires the query to
+       be visible in it, so the bar suppresses its own on the registry screens until the
+       IA says which node owns the field. */
+    var onRegistry = ['metric-registry.html', 'metric-registry-empty.html',
+                      'metric-registry-search.html'].indexOf(location.pathname.split('/').pop()) !== -1;
+    if (!onRegistry) {
+      var search = document.createElement('input');
+      search.className = 'wf-field wf-header__search';
+      search.type = 'search';
+      search.placeholder = 'Search metrics';
+      search.setAttribute('aria-label', 'Search metrics');
+      h.appendChild(search);
+    }
+    /* The corner is a real control with the one item MVP allows. It carried a name and
+       nothing else until the critique pointed out that the analyst had no way to sign
+       out anywhere in the prototype. Node 0.1 specifies both the control and the item. */
+    var account = document.createElement('details');
     account.className = 'wf-header__account';
-    account.textContent = 'Dana R.';
+    var who = document.createElement('summary');
+    who.textContent = 'Dana R.';
+    account.appendChild(who);
+    var menu = document.createElement('div');
+    menu.className = 'wf-header__menu';
+    var out = document.createElement('a');
+    out.href = 'sign-in.html';
+    out.textContent = 'Sign out';
+    menu.appendChild(out);
+    account.appendChild(menu);
     h.appendChild(account);
     mount.appendChild(h);
   },
@@ -190,11 +223,17 @@ window.WF_GLOBALS = {
       e.textContent = text;
       return e;
     }
+    /* Node 0.2: the link columns collapse into accordions on a phone, collapsed rather
+       than removed, so the links stay in the document and stay crawlable. */
     function column(title, targets) {
-      var c = document.createElement('div');
+      var c = document.createElement('details');
       c.className = 'wf-footer__col';
-      c.appendChild(line(title, 'wf-caps'));
-      targets.forEach(function (t) { c.appendChild(target(t[0], t[1])); });
+      if (window.matchMedia('(min-width:700px)').matches) c.open = true;
+      var t = document.createElement('summary');
+      t.className = 'wf-caps';
+      t.textContent = title;
+      c.appendChild(t);
+      targets.forEach(function (x) { c.appendChild(target(x[0], x[1])); });
       return c;
     }
 
@@ -208,8 +247,13 @@ window.WF_GLOBALS = {
       return;
     }
 
+    /* The minimal variant said "this number was queried from your source when you opened
+       the page" on sign in, on the 404, on the 500 and on the cookie notice, where there
+       is no number, and on the 500 it contradicted the screen's own words. The sentence
+       is chosen by what the page actually holds rather than by the variant name. */
+    var hasNumber = !!document.querySelector('.wf-card, .wf-value');
     f.appendChild(line('Plumb stores definitions, owners and lineage. Never your data rows: ' +
-                       (variant === 'full'
+                       (variant !== 'minimal' || !hasNumber
                         ? 'a number is queried from your source at the moment it is read.'
                         : 'this number was queried from your source when you opened the page.')));
 

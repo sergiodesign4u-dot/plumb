@@ -11,8 +11,7 @@
      reproducible when somebody reports it. -->
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="_wf.css"><style>
-/* INLINE: metric-registry :: to fold into _wf.css
-   PROTOTYPE ONLY, do not fold with the rest. Node 4.3 has two renderings, the matched
+/* PROTOTYPE ONLY, and deliberately NOT folded into _wf.css. Node 4.3 has two renderings, the matched
    result set and the no-match case, and one file can only be one page. The second copy
    of the title is therefore a paragraph rather than a second h1 on the page. */
 .wf-listhead__title{ font-size:var(--wf-size-h1); font-weight:700;
@@ -32,7 +31,7 @@
   </details>
 
   <div class="wf-main">
-    <main class="wf-screen">
+    <main class="wf-screen wf-screen--wide">
 
       <!-- 0. The analyst's header, node 0.1, rendered by the global component -->
       <div id="wf-header"></div>
@@ -42,7 +41,7 @@
            the page can switch to it without script. -->
       <section id="wf-nomatch">
         <div class="wf-listhead">
-          <p class="wf-listhead__title">Metrics <span class="wf-listhead__count">12</span></p>
+          <h1 class="wf-listhead__title">Metrics <span class="wf-listhead__count">12</span></h1>
           <!-- 2. The query is still in the field -->
           <form class="wf-listhead__search" role="search" action="metric-registry-search.html" method="get">
             <input class="wf-field" type="search" name="q" value="pipeline coverage"
