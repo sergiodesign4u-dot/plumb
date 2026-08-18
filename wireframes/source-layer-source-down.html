@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly active accounts - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 2.1 block A: noindex because indexing
+     a card would publish a customer's numbers, follow because every link leaving this
+     page goes to one of our own public pages. No canonical, no schema. -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Weekly active accounts">
+<meta property="og:description" content="Distinct accounts with at least one session in the last 7 days. The current value and where it came from are one click away.">
+<link rel="stylesheet" href="_wf.css">
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <article class="wf-card">
+        <!-- 1. Metric name, the only H1 on the page -->
+        <h1 class="wf-card__name">Weekly active accounts</h1>
+        <!-- 2. The named absence of a value. Never a bare dash, never a zero -->
+        <p class="wf-value wf-value--absent">No value can be shown</p>
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>Source is down</b>
+          <span>Last successful run 14:05 yesterday</span>
+        </p>
+        <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
+        <div class="wf-def">
+          <p class="wf-caps">Definition</p>
+          <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+        </div>
+        <!-- 5. Attribution: who declared this and when -->
+        <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
+        <!-- 1. The trigger line, block 6 of the card. It stays visible while the
+             section is open, because it is the part that satisfies explanation in place -->
+        <p class="wf-src">
+          <span>From Snowflake, ANALYTICS.PROD, last successful run 14:05 yesterday</span>
+          <a class="wf-btn wf-btn--quiet" href="number-card-source-down.html">Close</a>
+        </p>
+        <!-- 2.7 opens in place, below the card, at #source on the card's own address.
+             Not a modal: a modal has no URL, cannot be sent and dies on a refresh -->
+        <section class="wf-layer" id="source">
+          <h2>Where this number came from</h2>
+        <!-- 3. Label and value rows, the form taken from the block bank. Two columns
+             at width, one column at 360, and this node is where that component is defined -->
+        <dl class="wf-rows">
+          <div class="wf-row"><dt>Source</dt><dd>Snowflake, ANALYTICS.PROD</dd></div>
+          <div class="wf-row"><dt>Table or view</dt><dd>FACT_SESSIONS</dd></div>
+          <div class="wf-row"><dt>Last successful run</dt><dd>14:05 yesterday</dd></div>
+          <div class="wf-row"><dt>Expected cadence</dt><dd>Hourly</dd></div>
+          <div class="wf-row"><dt>The definition it ran against</dt><dd>Distinct accounts with at least one session in the last 7 days. Declared by Dana Reyes, 3 August</dd></div>
+          <div class="wf-row"><dt>Queried at</dt><dd>14:25, when you opened this page. The source did not answer</dd></div>
+        </dl>
+          <p class="wf-actions"><a class="wf-btn wf-btn--quiet" href="number-card-source-down.html">Close</a></p>
+        </section>
+        <!-- 7. Send this number -->
+        <p class="wf-actions">
+          <a class="wf-btn" href="send-source-down.html">Send this number</a>
+        </p>
+
+      </article>
+
+      <!-- 8. Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">The same six rows while the source is down, and <strong>this is the state where they matter most</strong>. The value is missing; the source, the table, the last successful run, the cadence and the definition it ran against are all still true. That is what makes the main job closable in its honest form: knowing how far a number can be trusted rather than holding one.</p>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

@@ -33,21 +33,35 @@
           <b>As of 14:05, 20 minutes ago</b>
           <span>Expected hourly</span>
         </p>
-        <!-- 4. The definition, plus the analyst's one affordance. Not a different layout -->
+        <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
         <div class="wf-def">
           <p class="wf-caps">Definition</p>
           <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
-          <!-- Node 4.7, the definition editor, arrives with the analyst round at step 8, so the
-               affordance is shown and does not pretend to lead anywhere yet -->
-          <p class="wf-actions"><span class="wf-btn wf-btn--quiet wf-pending">Edit definition</span></p>
         </div>
         <!-- 5. Attribution: who declared this and when -->
         <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
-        <!-- 6. Where this number came from: one line here, the grid opens on one action -->
+        <!-- 1. The trigger line, block 6 of the card. It stays visible while the
+             section is open, because it is the part that satisfies explanation in place -->
         <p class="wf-src">
           <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
-          <a class="wf-btn wf-btn--quiet" href="source-layer.html">Where this came from</a>
+          <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
         </p>
+        <!-- 2.7 opens in place, below the card, at #source on the card's own address.
+             Not a modal: a modal has no URL, cannot be sent and dies on a refresh -->
+        <section class="wf-layer" id="source">
+          <h2>Where this number came from</h2>
+        <!-- 3. Label and value rows, the form taken from the block bank. Two columns
+             at width, one column at 360, and this node is where that component is defined -->
+        <dl class="wf-rows">
+          <div class="wf-row"><dt>Source</dt><dd>Snowflake, ANALYTICS.PROD</dd></div>
+          <div class="wf-row"><dt>Table or view</dt><dd>FACT_SESSIONS</dd></div>
+          <div class="wf-row"><dt>Last successful run</dt><dd>14:05 today</dd></div>
+          <div class="wf-row"><dt>Expected cadence</dt><dd>Hourly</dd></div>
+          <div class="wf-row"><dt>The definition it ran against</dt><dd>The current definition. This address carries no earlier reading to compare with</dd></div>
+          <div class="wf-row"><dt>Queried at</dt><dd>14:25, when you opened this page</dd></div>
+        </dl>
+          <p class="wf-actions"><a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a></p>
+        </section>
         <!-- 7. Send this number -->
         <p class="wf-actions">
           <a class="wf-btn" href="send.html">Send this number</a>
@@ -59,7 +73,7 @@
       <div id="wf-footer"></div>
     </main>
 
-    <p class="wf-note">Node 2.1 as a signed in analyst sees it: <strong>exactly the reader's card plus one affordance</strong>, edit definition, beside the definition block. Not a different layout, not an extra panel, not a value with more precision. A separate analyst view of the same number is how two people end up with two different numbers, which is the reconciliation this product exists to remove. The route to the editor, node 4.7, arrives with the analyst round at step 8.</p>
+    <p class="wf-note">The same section opened on a bare address, one that carries no sent-link parameters. <strong>The definition row says it is the current one</strong>, because there is nothing earlier to compare against, and for the same reason the state at 2.5 cannot fire on this address at all. That is honest rather than a gap: with no moment of reading in the link, "the definition changed since you read this" has no since. <strong>One correction was made upwards in the IA to draw this:</strong> node 2.7 said five rows and then described six, dropping none. No row can be defended as absent here, so the node now says six rows with the definition row worded as the current one.</p>
 
   </div>
 </div>

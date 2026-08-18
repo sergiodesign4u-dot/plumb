@@ -80,7 +80,7 @@ Each refusal has a source, because each one is something a competitor does.
 | --- | --- |
 | **Open, ordinary** | All six rows |
 | **Open while the source is down** (from 2.4) | **All six rows still, and this is the state where they matter most.** The value is missing; the definition, the owner, the last successful run and what it ran against are all still true |
-| **Open on a bare URL** (no sent-link parameters) | Five rows. "The definition this ran against" is the current one, and says so, because there is no earlier reading to compare with |
+| **Open on a bare URL** (no sent-link parameters) | **Six rows, the same six.** "The definition this ran against" is the current one and says so, because there is no earlier reading to compare with. **Corrected at stage 04 step 6:** this row said five rows and then described six, dropping none, and no row can be defended as absent on a bare address. The count was the error, not the description |
 | **Open with restricted visibility** | The table or view row is withheld with a stated reason, not silently dropped. Everything else stays |
 | Loading | Not a state. The six rows are metadata we already hold, so they render with the card. **Only the value is ever queried at read time** |
 

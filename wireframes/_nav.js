@@ -41,9 +41,9 @@ window.WF_NAV = [
     { label:'Empty and changed', node:'2.6 + 2.5', file:'number-card-empty-and-changed.html' },
     { label:'Not readable without an account', node:'2.9', file:null, deferred:true }
   ]},
-  { cluster:'2. The number card', label:'Where this number came from', node:'2.7', scope:'MVP', file:null, spec:'source-layer.html', status:'spec', flow:1, states:[
-    { label:'Open while the source is down', node:'2.7', file:null },
-    { label:'Open on a bare URL', node:'2.7', file:null },
+  { cluster:'2. The number card', label:'Where this number came from', node:'2.7', scope:'MVP', file:'source-layer.html', spec:'source-layer.html', status:'built', flow:1, states:[
+    { label:'Open while the source is down', node:'2.7', file:'source-layer-source-down.html' },
+    { label:'Open on a bare URL', node:'2.7', file:'source-layer-bare-url.html' },
     { label:'Open with restricted visibility', node:'2.7', file:null, deferred:true }
   ]},
   { cluster:'2. The number card', label:'Send this number', node:'2.8', scope:'MVP', file:null, spec:'send.html', status:'spec', flow:1, states:[

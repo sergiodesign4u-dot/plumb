@@ -150,6 +150,12 @@ a{ color:inherit; }
          padding-top:var(--wf-space-2); display:flex; gap:var(--wf-space-2);
          align-items:center; flex-wrap:wrap; }
 
+/* The provenance section, node 2.7. It opens in place below the card rather than as a
+   modal, so it is part of the same document flow and keeps the card above it visible. */
+.wf-layer{ border-top:1px solid var(--wf-ink); margin-top:var(--wf-space-3);
+           padding-top:var(--wf-space-3); }
+.wf-layer h2{ margin-bottom:var(--wf-space-2); }
+
 /* Key and value rows, node 2.7. One column on a phone, two from 700px. */
 .wf-rows{ border-top:1px solid var(--wf-rule); }
 .wf-row{ display:grid; gap:2px; padding:var(--wf-space-2) 0;

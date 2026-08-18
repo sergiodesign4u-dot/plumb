@@ -101,6 +101,12 @@ Base file is the ordinary condition; every other state is its own page so the pr
 
 ---
 
+## Repairs made upwards, because a wireframe may not invent
+
+| Found at | What was wrong | The repair |
+| --- | --- | --- |
+| Step 6, drawing node 2.7 | The bare URL state said **five rows** and then described six, dropping none. No row can be defended as absent on a bare address: the source, the table, the last run, the cadence and the query time all still exist, and the definition row is reworded rather than removed | `ia/docs/pages/source-layer.md` and its render now say six rows, with the definition row worded as the current one. **The count was the error, not the description** |
+
 ## The two choices, as they were taken
 
 ### Reference screen, the candidates
