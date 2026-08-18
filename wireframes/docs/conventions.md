@@ -36,11 +36,11 @@ Taken from the IA mockups, not invented. Every screen in the product uses this o
 | Declared by | Dana Reyes, Analytics, on 3 August |
 | Source | Snowflake, ANALYTICS.PROD |
 | Table or view | FACT_SESSIONS |
-| Last successful run | 14:05 today, and 07:40 when the source is down |
+| Last successful run | 14:05 today. When the source is down, **last successful run 14:05 yesterday** |
 | Permanent link | plumb.app/m/8f2c41?v=7&t=2026-08-12T14:25 |
-| Previous definition | Distinct accounts with a session in the last 30 days, declared by Dana Reyes on 12 July |
+| Previous definition | Distinct **users** with at least one session in the last 7 days |
 
-**The previous definition is the only value here that the IA does not spell out.** It is required by state 2.5, which shows what the definition used to say, and it is written down here rather than left to each screen, which is exactly what this section is for.
+**Two values in this table were corrected at step 5, and the correction is the point of having the table.** The first draft of it took "last run 07:40" for the source down case, which is the wording of the **compact** form on the registry row, not the card's; the card says "last successful run 14:05 yesterday". And it invented a previous definition of 30 days, where the IA render already had one: **the change is accounts against users**, which is exactly what the current definition's last clause is about. A screen built on either of those would have quietly disagreed with the node it renders.
 
 ---
 
@@ -83,6 +83,10 @@ At step 8 the screens are built by parallel agents, and they cannot all write in
 Every inline block opens with a marker comment reading `INLINE: <screen name> :: to fold into _wf.css`, so the reconcile pass finds them all by grep rather than by reading twenty files.
 
 **Why this is not pedantry.** Stage 07 extracts the component classes of the kit from these screens. If the structure of twenty screens lives in twenty inline blocks, the extraction honestly collects the differences: three versions of the card, two grids, four spacings where there should be one. The audit at stage 08 then shows the forks, three stages after they were created.
+
+## Prototype routes, and they are not part of the product
+
+Some states name a route the screen itself cannot offer: a loading state resolves into three different outcomes, and no button does that. **Those routes live under the screen, in the note area, in a dashed row**, never inside the screen. They exist so the prototype can be walked, they are marked as prototype furniture, and stage 06 does not copy them. The rule they protect is the one this stage is easiest to break: a transition invented as a control is a control nobody specified.
 
 ## Nothing is invented here
 

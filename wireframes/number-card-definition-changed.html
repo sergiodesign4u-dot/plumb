@@ -33,10 +33,20 @@
           <b>As of 14:05, 20 minutes ago</b>
           <span>Expected hourly</span>
         </p>
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>The definition changed after this link was made</b>
+          <span>On 3 August by Dana Reyes</span>
+        </p>
         <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
         <div class="wf-def">
           <p class="wf-caps">Definition</p>
           <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+        </div>
+        <!-- The previous definition, required by state 2.5 so the change is legible -->
+        <div class="wf-def">
+          <p class="wf-caps">Previously</p>
+          <p>Distinct users with at least one session in the last 7 days.</p>
         </div>
         <!-- 5. Attribution: who declared this and when -->
         <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
@@ -56,7 +66,8 @@
       <div id="wf-footer"></div>
     </main>
 
-    <p class="wf-note">Node 2.1, the ordinary condition, state 2.3. Flow 1, the first node after arrival, <strong>at zero taps</strong>: the definition, the state, the age and the attribution are all here without an action. Blocks in the order the node fixes, one column at 360 with no exceptions, and the card keeps a maximum width on a wide canvas rather than spreading, because a value that fills a desktop is a dashboard tile and this is not one. Two decisions are taken here and are not visible on the screen: the page is noindex, and its unfurl carries the metric name and the state but never the value. The three footer targets are MVP pages this round does not draw, so the footer renders them as text: it asks the registry and links only what exists. Interface wording is draft, stage 05 owns it.</p>
+    <p class="wf-note">Node 2.5, the definition changed after this was saved. It can only fire on a link that carries the moment it was read; on a bare address there is no since to compare against, and that is honest rather than a gap. The previous definition is shown in full, because the whole job here is that an old figure does not travel as a current one.</p>
+    <div class="wf-routes"><span class="wf-caps">In the flow this leads to</span><a href="source-layer.html">2.7 where this came from</a></div>
 
   </div>
 </div>

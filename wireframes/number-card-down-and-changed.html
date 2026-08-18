@@ -26,28 +26,38 @@
       <article class="wf-card">
         <!-- 1. Metric name, the only H1 on the page -->
         <h1 class="wf-card__name">Weekly active accounts</h1>
-        <!-- 2. The value -->
-        <p class="wf-value">18,432</p>
+        <!-- 2. The named absence of a value. Never a bare dash, never a zero -->
+        <p class="wf-value wf-value--absent">No value can be shown</p>
         <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
         <p class="wf-state">
-          <b>As of 14:05, 20 minutes ago</b>
-          <span>Expected hourly</span>
+          <b>Source is down</b>
+          <span>Last successful run 14:05 yesterday</span>
+        </p>
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>The definition changed after this link was made</b>
+          <span>On 3 August by Dana Reyes</span>
         </p>
         <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
         <div class="wf-def">
           <p class="wf-caps">Definition</p>
           <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
         </div>
+        <!-- The previous definition, required by state 2.5 so the change is legible -->
+        <div class="wf-def">
+          <p class="wf-caps">Previously</p>
+          <p>Distinct users with at least one session in the last 7 days.</p>
+        </div>
         <!-- 5. Attribution: who declared this and when -->
         <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
         <!-- 6. Where this number came from: one line here, the grid opens on one action -->
         <p class="wf-src">
-          <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
-          <a class="wf-btn wf-btn--quiet" href="source-layer.html">Where this came from</a>
+          <span>From Snowflake, ANALYTICS.PROD, last successful run 14:05 yesterday</span>
+          <a class="wf-btn wf-btn--quiet" href="source-layer-source-down.html">Where this came from</a>
         </p>
         <!-- 7. Send this number -->
         <p class="wf-actions">
-          <a class="wf-btn" href="send.html">Send this number</a>
+          <a class="wf-btn" href="send-source-down.html">Send this number</a>
         </p>
 
       </article>
@@ -56,7 +66,8 @@
       <div id="wf-footer"></div>
     </main>
 
-    <p class="wf-note">Node 2.1, the ordinary condition, state 2.3. Flow 1, the first node after arrival, <strong>at zero taps</strong>: the definition, the state, the age and the attribution are all here without an action. Blocks in the order the node fixes, one column at 360 with no exceptions, and the card keeps a maximum width on a wide canvas rather than spreading, because a value that fills a desktop is a dashboard tile and this is not one. Two decisions are taken here and are not visible on the screen: the page is noindex, and its unfurl carries the metric name and the state but never the value. The three footer targets are MVP pages this round does not draw, so the footer renders them as text: it asks the registry and links only what exists. Interface wording is draft, stage 05 owns it.</p>
+    <p class="wf-note">Nodes 2.4 and 2.5 at once, and the combination rule at node 0.4 decides the order: <strong>both are shown, the source first.</strong> They are different facts, and hiding one would mean choosing which truth the reader gets. No state is ever collapsed into a single worst case indicator, and nothing here is scored.</p>
+    <div class="wf-routes"><span class="wf-caps">The IA routes this to</span><a href="number-card-owner-only.html">2.10 the owner is named</a></div>
 
   </div>
 </div>

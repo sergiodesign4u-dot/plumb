@@ -180,6 +180,19 @@ a{ color:inherit; }
             padding-top:var(--wf-space-2); color:var(--wf-muted);
             font-size:var(--wf-size-small); display:flex; gap:var(--wf-space-3);
             flex-wrap:wrap; }
+.wf-footer__links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap; }
+/* A target that exists in the product but not yet in the prototype is text, not a link
+   that goes nowhere. The footer component decides which from the registry. */
+.wf-pending{ border-bottom:1px dashed var(--wf-rule-strong); color:var(--wf-muted); }
+
+/* Prototype routes. NOT part of the product: they sit under the screen, in the note
+   area, and carry the transitions the IA names but the screen itself cannot offer, such
+   as what a loading state resolves into. Stage 06 does not copy them. */
+.wf-routes{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap; align-items:center;
+            margin-top:var(--wf-space-3); }
+.wf-routes a{ font-size:var(--wf-size-small); border:1px dashed var(--wf-rule-strong);
+              padding:var(--wf-space-1) var(--wf-space-2); text-decoration:none;
+              color:var(--wf-muted); }
 
 /* Notes on a wireframe are for the person reviewing it, never part of the screen. They
    sit under the screen, outside .wf-screen, and stage 06 does not copy them. */

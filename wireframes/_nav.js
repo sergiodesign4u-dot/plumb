@@ -30,15 +30,15 @@ window.WF_NAV = [
     { label:'Error: authentication failed', node:'1.3', file:null }
   ]},
 
-  { cluster:'2. The number card', label:'The number card', node:'2.1', scope:'MVP', file:'number-card.html', spec:'number-card.html', status:'spec', flow:1, states:[
-    { label:'Loading: the value is queried', node:'2.2', file:null },
-    { label:'Source is down', node:'2.4', file:null },
-    { label:'Definition changed', node:'2.5', file:null },
-    { label:'Empty: nothing returned', node:'2.6', file:null },
-    { label:'Owner named, no value', node:'2.10', file:null },
-    { label:'Signed in analyst', node:'2.1', file:null },
-    { label:'Source down and changed', node:'2.4 + 2.5', file:null },
-    { label:'Empty and changed', node:'2.6 + 2.5', file:null },
+  { cluster:'2. The number card', label:'The number card', node:'2.1', scope:'MVP', file:'number-card.html', spec:'number-card.html', status:'built', flow:1, states:[
+    { label:'Loading: the value is queried', node:'2.2', file:'number-card-loading.html' },
+    { label:'Source is down', node:'2.4', file:'number-card-source-down.html' },
+    { label:'Definition changed', node:'2.5', file:'number-card-definition-changed.html' },
+    { label:'Empty: nothing returned', node:'2.6', file:'number-card-empty.html' },
+    { label:'Owner named, no value', node:'2.10', file:'number-card-owner-only.html' },
+    { label:'Signed in analyst', node:'2.1', file:'number-card-analyst.html' },
+    { label:'Source down and changed', node:'2.4 + 2.5', file:'number-card-down-and-changed.html' },
+    { label:'Empty and changed', node:'2.6 + 2.5', file:'number-card-empty-and-changed.html' },
     { label:'Not readable without an account', node:'2.9', file:null, deferred:true }
   ]},
   { cluster:'2. The number card', label:'Where this number came from', node:'2.7', scope:'MVP', file:null, spec:'source-layer.html', status:'spec', flow:1, states:[
@@ -104,8 +104,48 @@ window.WF_FLOWS = [
     nodes:['1.1','3.2','3.1','4.1','4.4','2.8'] }
 ];
 
+/* Global components, node 0.2 and the ones that follow it. A screen carries a
+   placeholder and this file fills it, so that twenty screens do not carry twenty
+   editions of the same footer. The header of the analyst's screens (node 0.1) becomes a
+   component here when the first analyst screen exists, and not before: a renderer with
+   no caller is a thing invented ahead of its need. */
+window.WF_GLOBALS = {
+  /* The minimal footer variant: the only global surface a reader ever sees. It renders a
+     target as a LINK when that screen exists in the registry and as TEXT when it does
+     not, which is the IA rule about navigational elements applied automatically instead
+     of remembered by hand. */
+  footer: function (mount) {
+    var trust = 'Plumb stores definitions, owners and lineage. Never your data rows: ' +
+                'this number was queried from your source when you opened the page.';
+    var targets = [
+      { node:'6.1', label:'What Plumb is' },
+      { node:'6.5', label:'Privacy' },
+      { node:'6.6', label:'Terms' }
+    ];
+    var f = document.createElement('footer');
+    f.className = 'wf-footer';
+    var t = document.createElement('span');
+    t.textContent = trust;
+    f.appendChild(t);
+    var links = document.createElement('span');
+    links.className = 'wf-footer__links';
+    targets.forEach(function (t2) {
+      var s2 = (window.WF_NAV || []).filter(function (x) { return x.node === t2.node; })[0];
+      var e;
+      if (s2 && s2.file) { e = document.createElement('a'); e.href = s2.file; }
+      else { e = document.createElement('span'); e.className = 'wf-pending'; }
+      e.textContent = t2.label;
+      links.appendChild(e);
+    });
+    f.appendChild(links);
+    mount.appendChild(f);
+  }
+};
+
 (function () {
   var NAV = window.WF_NAV || [];
+  var footerMount = document.getElementById('wf-footer');
+  if (footerMount) window.WF_GLOBALS.footer(footerMount);
   var here = (location.pathname.split('/').pop() || '');
 
   function byCluster(){

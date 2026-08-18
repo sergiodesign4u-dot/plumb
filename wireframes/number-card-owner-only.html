@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly active accounts - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 2.1 block A: noindex because indexing
+     a card would publish a customer's numbers, follow because every link leaving this
+     page goes to one of our own public pages. No canonical, no schema. -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Weekly active accounts">
+<meta property="og:description" content="Weekly active accounts. Dana Reyes declared this metric and can tell you the number.">
+<link rel="stylesheet" href="_wf.css">
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <article class="wf-card">
+        <!-- 1. Metric name, the only H1 on the page -->
+        <h1 class="wf-card__name">Weekly active accounts</h1>
+        <!-- 2. The named absence of a value. Never a bare dash, never a zero -->
+        <p class="wf-value wf-value--absent">No value shown</p>
+        <!-- The reduced close of R1: a name and a date, which is somebody to ask -->
+        <p class="wf-att">Dana Reyes declared this metric on 3 August. She can tell you the number.</p>
+
+      </article>
+
+      <!-- 8. Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Node 2.10, the owner is named and the number is not shown. <strong>This is a partial close, not a dead end and not a win:</strong> knowing who owns a card you cannot read is somebody to ask, and it is not knowing how far a number can be trusted. It is the narrowing of the reader's dead end that the IA argued for rather than accepted. There is deliberately no login wall and no invitation: the reader has no account and we are not asking for one.</p>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

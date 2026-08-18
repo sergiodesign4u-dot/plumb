@@ -26,17 +26,27 @@
       <article class="wf-card">
         <!-- 1. Metric name, the only H1 on the page -->
         <h1 class="wf-card__name">Weekly active accounts</h1>
-        <!-- 2. The value -->
-        <p class="wf-value">18,432</p>
+        <!-- 2. The named absence of a value. Never a bare dash, never a zero -->
+        <p class="wf-value wf-value--absent">The query ran and returned nothing</p>
         <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
         <p class="wf-state">
-          <b>As of 14:05, 20 minutes ago</b>
-          <span>Expected hourly</span>
+          <b>Not a zero</b>
+          <span>Ran at 14:05. A zero would be a different fact</span>
+        </p>
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>The definition changed after this link was made</b>
+          <span>On 3 August by Dana Reyes</span>
         </p>
         <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
         <div class="wf-def">
           <p class="wf-caps">Definition</p>
           <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+        </div>
+        <!-- The previous definition, required by state 2.5 so the change is legible -->
+        <div class="wf-def">
+          <p class="wf-caps">Previously</p>
+          <p>Distinct users with at least one session in the last 7 days.</p>
         </div>
         <!-- 5. Attribution: who declared this and when -->
         <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
@@ -56,7 +66,8 @@
       <div id="wf-footer"></div>
     </main>
 
-    <p class="wf-note">Node 2.1, the ordinary condition, state 2.3. Flow 1, the first node after arrival, <strong>at zero taps</strong>: the definition, the state, the age and the attribution are all here without an action. Blocks in the order the node fixes, one column at 360 with no exceptions, and the card keeps a maximum width on a wide canvas rather than spreading, because a value that fills a desktop is a dashboard tile and this is not one. Two decisions are taken here and are not visible on the screen: the page is noindex, and its unfurl carries the metric name and the state but never the value. The three footer targets are MVP pages this round does not draw, so the footer renders them as text: it asks the registry and links only what exists. Interface wording is draft, stage 05 owns it.</p>
+    <p class="wf-note">Nodes 2.6 and 2.5 at once. The rule at node 0.4 puts the empty result first, because the absent value is the more immediate answer to whether this can be used. The third combination, a source that is down and a query that returned nothing, is impossible: an unreachable source cannot return an empty result.</p>
+    <div class="wf-routes"><span class="wf-caps">In the flow this leads to</span><a href="source-layer.html">2.7 where this came from</a></div>
 
   </div>
 </div>
