@@ -1,0 +1,183 @@
+/* _wf.css : the single home of appearance for every wireframe.
+   Stage 04 step 2. The greys are inherited byte for byte from the black and white
+   mockups on the IA node pages (ia/*.html), so the wireframes continue those drawings
+   rather than starting a second visual language.
+
+   This file stays grey to the end of the pipeline. Colour, brand and type arrive at
+   stages 06 to 08 and they arrive on COPIES of these screens in design/, never here.
+
+   Inline CSS on a screen is transport, not a home. Two rules decide where a
+   declaration lives, and they are written out in docs/conventions.md:
+     1. a token value never lives inline, not even once. It is a variable here and
+        the screen writes var(--wf-...)
+     2. a rule that appears on two or more screens moves into this file
+   Every inline block opens with a marker comment reading
+   INLINE: <screen name> :: to fold into _wf.css
+   so that the reconcile pass at step 8 finds them all mechanically, by grep, rather
+   than by reading twenty files. */
+
+:root{
+  /* Greys, from the IA mockups. There is no accent and no semantic colour in a
+     wireframe: a state is told apart by its words and its position, never by hue. */
+  --wf-ground:#fcfcfa;
+  --wf-surface:#ffffff;
+  --wf-panel:#f6f5f1;
+  --wf-ink:#14161a;
+  --wf-muted:#6b7076;
+  --wf-rule:#e3e1dc;
+  --wf-rule-strong:#c9c6bf;
+  --wf-rule-dashed:#9a9a9a;
+  --wf-skeleton-a:#e6e6e6;
+  --wf-skeleton-b:#f2f2f2;
+
+  /* Type. One sans for the whole prototype: a wireframe that carries two families is
+     already making a visual decision, and that decision belongs to stage 06. */
+  --wf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --wf-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --wf-size-value:34px;
+  --wf-size-h1:20px;
+  --wf-size-h2:15px;
+  --wf-size-body:14px;
+  --wf-size-small:12px;
+  --wf-size-caps:11px;
+  --wf-line:1.5;
+  --wf-line-tight:1.15;
+
+  /* Space, a four step scale. Anything outside it is a decision somebody has to defend. */
+  --wf-space-1:4px;
+  --wf-space-2:8px;
+  --wf-space-3:14px;
+  --wf-space-4:22px;
+  --wf-space-5:34px;
+
+  --wf-measure:64ch;
+  --wf-screen-max:640px;      /* the reader's card is one column of content, not a canvas */
+  --wf-panel-w:236px;
+}
+
+*{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--wf-ground); color:var(--wf-ink);
+  font-family:var(--wf-font); font-size:var(--wf-size-body); line-height:var(--wf-line);
+}
+
+/* Shell: mobile first. The wireframe only panel sits above the screen on a phone and
+   beside it from 900px, which is the same behaviour the IA pages use for the roadmap. */
+.wf-shell{ display:flex; flex-direction:column; }
+.wf-main{ min-width:0; padding:var(--wf-space-4) var(--wf-space-3) 96px; }
+.wf-screen{ max-width:var(--wf-screen-max); margin:0 auto; }
+@media (min-width:900px){
+  .wf-shell{ flex-direction:row; align-items:flex-start; }
+  .wf-main{ padding:var(--wf-space-5) var(--wf-space-5) 120px; }
+}
+
+/* Wireframe only side panel. Roadmap navigation does not appear on a screen: only the
+   cluster tree, the states of the current screen and the two links out. */
+.wf-nav{ border-bottom:1px solid var(--wf-rule); background:var(--wf-panel);
+         padding:var(--wf-space-3); }
+.wf-nav > summary{ font-size:var(--wf-size-caps); letter-spacing:.12em; text-transform:uppercase;
+                   color:var(--wf-muted); cursor:pointer; list-style:none; display:flex;
+                   align-items:center; gap:var(--wf-space-2); }
+.wf-nav > summary::-webkit-details-marker{ display:none; }
+.wf-nav > summary::after{ content:'\25be'; margin-left:auto; }
+.wf-nav[open] > summary::after{ content:'\25b4'; }
+.wf-nav-badge{ font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+               border:1px solid var(--wf-rule-strong); padding:2px 6px; color:var(--wf-muted); }
+.wf-nav-back{ display:block; font-size:var(--wf-size-small); margin-bottom:var(--wf-space-3); }
+.wf-nav-cluster{ font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+                 color:var(--wf-muted); margin:var(--wf-space-3) 0 var(--wf-space-1); }
+.wf-nav-screen{ display:block; font-size:var(--wf-size-small); padding:3px 0; }
+.wf-nav-state{ display:block; font-size:var(--wf-size-small); padding:2px 0 2px var(--wf-space-3);
+               color:var(--wf-muted); }
+.wf-nav a.is-current{ font-weight:700; color:var(--wf-ink); }
+.wf-nav-spec{ display:block; font-size:var(--wf-size-small); margin-top:var(--wf-space-4);
+              padding-top:var(--wf-space-3); border-top:1px solid var(--wf-rule-strong); }
+@media (min-width:900px){
+  .wf-nav{ position:sticky; top:0; max-height:100vh; overflow-y:auto; border-bottom:0;
+           border-right:1px solid var(--wf-rule); flex:0 0 var(--wf-panel-w);
+           padding:var(--wf-space-4) var(--wf-space-3); }
+  .wf-nav > summary{ display:none; }
+}
+
+/* Text */
+h1,h2,h3,h4,h5{ margin:0; font-weight:700; }
+h1{ font-size:var(--wf-size-h1); line-height:var(--wf-line-tight); }
+h2{ font-size:var(--wf-size-h2); }
+p{ margin:0 0 var(--wf-space-2); max-width:var(--wf-measure); }
+a{ color:inherit; }
+.wf-muted{ color:var(--wf-muted); }
+.wf-caps{ font-size:var(--wf-size-caps); letter-spacing:.09em; text-transform:uppercase;
+          color:var(--wf-muted); }
+
+/* Controls. Real elements, drawn as outlines: a wireframe button is a box with a word
+   in it, and which of them is primary is told by position and by there being one. */
+.wf-btn{ font:inherit; font-weight:600; background:var(--wf-surface); color:var(--wf-ink);
+         border:1px solid var(--wf-ink); padding:var(--wf-space-2) var(--wf-space-3);
+         cursor:pointer; text-decoration:none; display:inline-block; }
+.wf-btn--quiet{ border-color:var(--wf-rule-strong); color:var(--wf-muted); font-weight:400; }
+.wf-btn--full{ display:block; width:100%; text-align:center; }
+.wf-field{ font:inherit; width:100%; padding:var(--wf-space-2) var(--wf-space-3);
+           border:1px solid var(--wf-rule-strong); background:var(--wf-surface); }
+.wf-actions{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap; margin-top:var(--wf-space-3); }
+
+/* The card surface, node 2.1. The canonical component of the product: its compact form
+   is the registry row and the search result row, and node 2.1 records that list. */
+.wf-card{ background:var(--wf-surface); border:1px solid var(--wf-ink);
+          padding:var(--wf-space-4) var(--wf-space-3); }
+.wf-card__name{ font-size:var(--wf-size-h1); font-weight:700; line-height:var(--wf-line-tight); }
+.wf-value{ font-size:var(--wf-size-value); font-weight:700; letter-spacing:-.025em;
+           line-height:1.08; margin-top:var(--wf-space-2); }
+.wf-value--absent{ font-size:var(--wf-size-h2); font-weight:600; letter-spacing:0;
+                   padding:var(--wf-space-2) 0; }
+.wf-skeleton{ height:38px; width:160px; margin-top:var(--wf-space-2);
+              background:repeating-linear-gradient(90deg, var(--wf-skeleton-a) 0 8px,
+                                                          var(--wf-skeleton-b) 8px 16px); }
+.wf-state{ border-top:1px solid var(--wf-ink); margin-top:var(--wf-space-2);
+           padding-top:var(--wf-space-2); }
+.wf-state b{ display:block; }
+.wf-state span{ color:var(--wf-muted); }
+.wf-state + .wf-state{ border-top-style:dashed; border-top-color:var(--wf-rule-dashed); }
+.wf-def{ border-top:1px dashed var(--wf-rule-dashed); margin-top:var(--wf-space-3);
+         padding-top:var(--wf-space-2); }
+.wf-att{ color:var(--wf-muted); font-size:var(--wf-size-small); margin-top:var(--wf-space-2); }
+.wf-src{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-3);
+         padding-top:var(--wf-space-2); display:flex; gap:var(--wf-space-2);
+         align-items:center; flex-wrap:wrap; }
+
+/* Key and value rows, node 2.7. One column on a phone, two from 700px. */
+.wf-rows{ border-top:1px solid var(--wf-rule); }
+.wf-row{ display:grid; gap:2px; padding:var(--wf-space-2) 0;
+         border-bottom:1px solid var(--wf-rule); }
+.wf-row dt{ font-size:var(--wf-size-small); color:var(--wf-muted); }
+.wf-row dd{ margin:0; }
+@media (min-width:700px){
+  .wf-row{ grid-template-columns:180px 1fr; gap:var(--wf-space-3); align-items:baseline; }
+}
+
+/* Dialog, node 2.8. A sheet from the bottom on a phone, a panel over the card on a wide
+   canvas, and the card stays legible behind it in both. */
+.wf-dialog{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+            padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.wf-dialog__link{ font-family:var(--wf-mono); font-size:var(--wf-size-small);
+                  border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+                  padding:var(--wf-space-2); word-break:break-all; }
+.wf-behind{ opacity:.5; }
+
+/* Feedback, node 0.3. A message, never an overlay on the number. */
+.wf-toast{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+           padding:var(--wf-space-2) var(--wf-space-3); margin-top:var(--wf-space-3);
+           display:flex; gap:var(--wf-space-3); align-items:center; }
+
+/* Footer, node 0.2, minimal variant. The only global surface a reader ever sees, and it
+   renders only the targets that exist in the current scope. */
+.wf-footer{ border-top:1px solid var(--wf-ink); margin-top:var(--wf-space-5);
+            padding-top:var(--wf-space-2); color:var(--wf-muted);
+            font-size:var(--wf-size-small); display:flex; gap:var(--wf-space-3);
+            flex-wrap:wrap; }
+
+/* Notes on a wireframe are for the person reviewing it, never part of the screen. They
+   sit under the screen, outside .wf-screen, and stage 06 does not copy them. */
+.wf-note{ max-width:var(--wf-measure); margin-top:var(--wf-space-5);
+          padding-top:var(--wf-space-3); border-top:1px solid var(--wf-rule-strong);
+          font-size:var(--wf-size-small); color:var(--wf-muted); }
