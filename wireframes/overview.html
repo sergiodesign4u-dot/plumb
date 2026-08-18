@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All screens - Plumb wireframes</title>
+<meta name="description" content="The hub of the Plumb wireframes: entries by flow, the coverage map of 21 screens and four global components, the state matrix and the grey contract every screen is held to.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="../_nav.css">
+<link rel="stylesheet" href="../research/_page.css">
+<style>
+  /* page-local only. _wf.css is not linked here on purpose: it is the appearance of the
+     SCREENS, and this is an artefact page of the project, on the same shell as research
+     and IA. What is local here is only the look of the hub's own three renderings. */
+  .wf-flow{ border:1px solid var(--rule-strong); background:#fff; padding:14px 14px 12px; margin:16px 0; }
+  .wf-flow h3{ margin:0 0 4px; font-size:1.02rem; }
+  .wf-flow p{ margin:0 0 10px; font-family:var(--sans); font-size:12.5px; }
+  .wf-flow-screens{ display:grid; gap:10px; }
+  @media (min-width:760px){ .wf-flow-screens{ grid-template-columns:repeat(3,1fr); } }
+  .wf-flow-screen{ border-top:1px solid var(--rule); padding-top:9px; }
+  .wf-flow-name{ font-family:var(--sans); font-size:13px; font-weight:700; display:block; }
+  .wf-flow-name.is-spec{ color:var(--muted); font-weight:400; }
+  .wf-chips{ display:flex; flex-wrap:wrap; gap:5px; margin-top:7px; }
+  .wf-chip{ font-family:var(--sans); font-size:11px; border:1px solid var(--rule-strong);
+            padding:3px 7px; text-decoration:none; color:var(--ink); background:#fff; }
+  .wf-chip.is-spec{ color:var(--muted); border-style:dashed; }
+  .wf-cov-group{ margin:18px 0; }
+  .wf-cov-group h3{ margin:0 0 8px; }
+  .wf-cov-grid{ display:grid; gap:8px; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); }
+  .wf-cov{ border:1px solid var(--ink); background:#fff; padding:9px 10px; font-family:var(--sans); }
+  .wf-cov.is-spec{ border:1px dashed var(--rule-strong); background:var(--panel); }
+  .wf-cov-head{ display:flex; align-items:center; gap:8px; font-size:10.5px;
+                letter-spacing:.07em; text-transform:uppercase; color:var(--muted); }
+  .wf-cov-node{ font-weight:700; color:var(--ink); letter-spacing:0; }
+  .wf-cov-scope{ margin-left:auto; }
+  .wf-cov-name{ display:block; font-size:13px; font-weight:600; margin-top:4px; }
+  .wf-cov-meta{ font-size:11.5px; color:var(--muted); margin-top:3px; }
+  .wf-caps{ font-family:var(--sans); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+  .wf-muted{ color:var(--muted); }
+  .legend{ display:flex; flex-wrap:wrap; gap:14px; font-family:var(--sans); font-size:12px;
+           color:var(--muted); margin:10px 0 0; align-items:center; }
+  .legend i{ display:inline-block; width:22px; height:12px; margin-right:6px; vertical-align:-1px; }
+  .legend .l-built{ border:1px solid var(--ink); background:#fff; }
+  .legend .l-spec{ border:1px dashed var(--rule-strong); background:var(--panel); }
+  .swatches{ display:grid; gap:8px; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); margin:14px 0 6px; }
+  .sw{ border:1px solid var(--rule); font-family:var(--sans); font-size:11px; }
+  .sw i{ display:block; height:38px; border-bottom:1px solid var(--rule); }
+  .sw span{ display:block; padding:6px 8px; color:var(--muted); }
+  .sw b{ color:var(--ink); display:block; }
+  table td.why{ font-size:12.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="shell">
+  <details class="nav-shell" id="navshell" open>
+    <summary>Contents</summary>
+    <aside id="sidebar"></aside>
+  </details>
+  <main class="main">
+
+  <header class="masthead">
+    <p class="kicker">Plumb &middot; Stage 04 &middot; Wireframes</p>
+    <h1>All screens, and how much of the map they cover</h1>
+    <p class="standfirst lede">The hub of the grey prototype. The registry behind it was filled in before the first screen was drawn, so this page answers two different questions at once: what is built, and what has to exist at all. Screens are clickable the moment they exist; everything else stands here as specification with a dashed border.</p>
+    <div class="dateline">
+      <span>Opened 2026-08-18</span>
+      <span id="wf-count">counting</span>
+      <span>Registry: <code>wireframes/_nav.js</code></span>
+    </div>
+  </header>
+
+  <!-- Flows ............................................................. -->
+  <section id="flows">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Entries by flow</h2></div>
+    <p>The four flows are <code>ia/docs/flows.md</code> and nothing here reorders them. <strong>Flow 1 is assembled first</strong> because it is the flow the reference screen lives in and the one that closes the job this product exists for. A screen with no link under it is specified and not yet drawn.</p>
+    <div id="wf-flows"></div>
+    <p class="note">Flows 2 and 3 walk the same card as flow 1 and add no screen of their own. That is not an omission in the drawing: both jobs close on the card, one on the attribution line and one on the state that compares the definition against the moment the link carries.</p>
+  </section>
+
+  <!-- Coverage .......................................................... -->
+  <section id="coverage">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Coverage map</h2></div>
+    <p>Every screen of the product, grouped by the IA cluster it belongs to. <strong>A solid border means the screen exists and clicks</strong>, with the number of pages it carries, states included. A dashed border means it exists only as an IA specification.</p>
+    <div class="legend">
+      <span><i class="l-built"></i>built, with its state pages</span>
+      <span><i class="l-spec"></i>specification only</span>
+      <span>Scope labels are carried over from <code>ia/docs/sitemap.md</code>, never re-derived here</span>
+    </div>
+    <div id="wf-coverage"></div>
+    <p class="note">The four entries in cluster 0 are global components rather than screens. They have no pages of their own: the footer and the feedback message are rendered inside the screens that use them, and the state vocabulary is a list of words the states quote. They are in the map so that nobody has to remember they exist.</p>
+  </section>
+
+  <!-- Matrix ............................................................ -->
+  <section id="matrix">
+    <div class="sec-head"><span class="sec-num">03</span><h2>State matrix</h2></div>
+    <p>The coverage map answers what is built. <strong>This answers what has to exist at all</strong>, and it is the table stage 05 step 4 reads for the tone of each state and stage 07 step 2 reads as the complete list of states in the product. The four system states are the floor, not the set: the real set comes from the States section of each IA node.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Flow 1, the round in progress. Rows are screens, columns are state classes</caption>
+        <thead><tr><th>Screen</th><th>Scope</th><th>Loading</th><th>Ordinary</th><th>Empty</th><th>Error</th><th>Reader</th><th>Analyst</th><th>Domain</th><th>Transitional</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>2.1 The number card</strong></td><td>MVP</td>
+            <td>&check; 2.2</td><td>&check; 2.3</td><td>&check; 2.6</td><td>- <sup>1</sup></td>
+            <td>&check;</td><td>&check;</td>
+            <td>&check; 2.4, 2.5, 2.10, and two combinations</td><td>- <sup>2</sup></td>
+          </tr>
+          <tr>
+            <td><strong>2.7 Where this number came from</strong></td><td>MVP</td>
+            <td>- <sup>3</sup></td><td>&check; open</td><td>- <sup>4</sup></td><td>- <sup>1</sup></td>
+            <td>&check;</td><td>&check; <sup>5</sup></td>
+            <td>&check; source down, bare URL, restricted</td><td>&check; opens and closes</td>
+          </tr>
+          <tr>
+            <td><strong>2.8 Send this number</strong></td><td>MVP</td>
+            <td>- <sup>6</sup></td><td>&check; copied</td><td>- <sup>7</sup></td><td>- <sup>8</sup></td>
+            <td>&check;</td><td>&check; <sup>5</sup></td>
+            <td>&check; sending a card that is down</td><td>&check; opens and closes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Why each dash is a dash. A dash with no reason cannot be told apart from an omission</caption>
+        <thead><tr><th>#</th><th>Reason</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="why"><strong>There is no error state on either node, and it is a decision rather than a gap.</strong> Design principle 2: doubt is a state, not an error and not an incident. Everything that would be an error page elsewhere is a named domain state here, in the wording fixed at node 0.4.</td></tr>
+          <tr><td>2</td><td class="why">The card has no transitional state of its own. Opening the source layer and opening the send dialog are transitions into the other two screens, and they are counted there.</td></tr>
+          <tr><td>3</td><td class="why">Node 2.7 states it directly: loading is not a state here. The six rows are metadata we already hold. <strong>Only the value is ever queried at read time.</strong></td></tr>
+          <tr><td>4</td><td class="why">The six rows are always present when the section can open at all.</td></tr>
+          <tr><td>5</td><td class="why">The analyst sees the same screen. A separate analyst view of the same number is how two people end up with two different numbers, which is the reconciliation this product exists to remove. The one difference, edit definition, sits on the card.</td></tr>
+          <tr><td>6</td><td class="why">The link exists before the dialog opens, so there is nothing to wait for.</td></tr>
+          <tr><td>7</td><td class="why">There is always a link to show.</td></tr>
+          <tr><td>8</td><td class="why"><strong>Settled at node 2.8 and recorded at node 0.3:</strong> the reader never needs a failure toast. Their only action is copying, and the link is on screen and selectable, so the fallback is already visible.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note"><strong>Two pages are deferred rather than forgotten:</strong> 2.9, not readable without an account, which the IA audit moved to ПОТІМ because restriction is a workspace policy and cluster 5 is deferred; and the restricted variant of 2.7, which has the same trigger and no scope label of its own. The second is a discrepancy to repair in the IA, and it is named here rather than fixed quietly. Full inventory in <code>wireframes/docs/screens.md</code>.</p>
+  </section>
+
+  <!-- Conventions ....................................................... -->
+  <section id="conventions">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Conventions</h2></div>
+    <p>The contract every screen and every subagent works to, from <code>wireframes/docs/conventions.md</code>. It is here rather than only in the file because the critique at step 9 checks the screens against it, and at that moment it should be in front of the eye.</p>
+
+    <p class="wf-caps">The greys, inherited from the IA mockups</p>
+    <div class="swatches">
+      <div class="sw"><i style="background:#fcfcfa"></i><span><b>ground</b>#fcfcfa</span></div>
+      <div class="sw"><i style="background:#ffffff"></i><span><b>surface</b>#ffffff</span></div>
+      <div class="sw"><i style="background:#f6f5f1"></i><span><b>panel</b>#f6f5f1</span></div>
+      <div class="sw"><i style="background:#e3e1dc"></i><span><b>rule</b>#e3e1dc</span></div>
+      <div class="sw"><i style="background:#c9c6bf"></i><span><b>rule strong</b>#c9c6bf</span></div>
+      <div class="sw"><i style="background:#6b7076"></i><span><b>muted</b>#6b7076</span></div>
+      <div class="sw"><i style="background:#14161a"></i><span><b>ink</b>#14161a</span></div>
+    </div>
+    <p class="note">Seven greys and nothing else. <strong>There is no accent and no semantic colour in a wireframe:</strong> a state is told apart by its words and its position, never by hue. If a state can only be recognised once it is coloured, it is not designed yet.</p>
+
+    <div class="tw">
+      <table>
+        <caption>The rules that decide arguments</caption>
+        <thead><tr><th>Rule</th><th>What it forbids</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A live screen, not a schema</strong></td><td>Two frames labelled desktop and mobile on one page, annotations on zones, skeleton placeholders standing in for a screen. The phone view is checked by narrowing the browser</td></tr>
+          <tr><td><strong>Nothing is invented here</strong></td><td>A block, page or state appearing for the first time in a wireframe. Repair the IA upwards, then render. Button and field wording is the one exception: draft here, owned by stage 05</td></tr>
+          <tr><td><strong>Every state is its own page, with a way out</strong></td><td>A state drawn as a variant inside another page, and a state with no exit. One recorded exception: 2.10 is a partial close, and the reader's dead end when the owner may not be shown is a price the IA named</td></tr>
+          <tr><td><strong>At most one primary action, and the card has none</strong></td><td>Inventing a call to action for the card. The primary act there is reading and it is complete on arrival. The rule is a ceiling, not a quota</td></tr>
+          <tr><td><strong>Inline CSS is transport, not a home</strong></td><td>A token value written inline, and a rule repeated on two screens staying inline. Every inline block carries a marker so the reconcile pass finds it by grep</td></tr>
+          <tr><td><strong>One canonical data set</strong></td><td>A screen inventing its own numbers. Weekly active accounts, 18,432, as of 14:05, declared by Dana Reyes on 3 August, from Snowflake ANALYTICS.PROD</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="note">
+    <p>Plumb, stage 04 of 13. Screens and states are registered in <code>wireframes/_nav.js</code>, the matrix source is <code>wireframes/docs/screens.md</code> and the contract is <code>wireframes/docs/conventions.md</code>. Each screen carries its own wireframe only panel and links back to the IA node it renders.</p>
+  </footer>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+  window.NAV_BASE = '../';
+  window.NAV_SECTIONS = [
+    { id:'flows',       label:'Entries by flow' },
+    { id:'coverage',    label:'Coverage map' },
+    { id:'matrix',      label:'State matrix' },
+    { id:'conventions', label:'Conventions' }
+  ];
+</script>
+<script src="../_nav.js"></script>
+<script src="_nav.js"></script>
+</body>
+</html>

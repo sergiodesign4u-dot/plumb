@@ -31,6 +31,9 @@ a.nav-top:hover{ background:color-mix(in srgb, var(--nav-active) 8%, transparent
             padding:2px 6px; border-radius:999px; }
 .nav-badge-next{ color:#fff; background:var(--nav-badge); }
 .nav-badge-soon{ color:var(--nav-muted); border:1px solid var(--nav-rule); }
+/* WIP: сторінка вже клікається, етап ще не закритий. Контур, а не заливка: заливку
+   несе Next, і два залитих бейджі поруч читались би як два наступні етапи. */
+.nav-badge-wip{ color:var(--nav-badge); border:1px solid var(--nav-badge); }
 
 .nav-sub{ margin:2px 0 6px; padding-left:10px; border-left:1px solid var(--nav-rule); }
 .nav-subhead{ padding:8px 10px 4px; font-size:11px; letter-spacing:.06em;

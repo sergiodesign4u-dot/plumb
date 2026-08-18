@@ -42,7 +42,10 @@ window.NAV = [
       { label:'Sitemap',      page:'ia/sitemap.html',     done:true  },
       { label:'Structure',    page:'ia/structure.html',   done:true  },
   ]},
-  { label:'Wireframes',  page:'wireframes/overview.html', done:false },
+  // wip:true = сторінка вже існує (done), але етап ще не закритий: роадмеп тримає на ньому
+  // Next і бейдж WIP, замість оголосити його зробленим на третьому кроці з девʼяти. Знімається
+  // на Кроці 9 разом зі статусом Done у README.
+  { label:'Wireframes',  page:'wireframes/overview.html', done:true, wip:true },
   { label:'Voice',       page:'voice/voice.html',      done:false },
   { label:'Concept', children:[
       { label:'Directions', page:'design/concept/directions.html', done:false },
@@ -80,7 +83,7 @@ window.NAV = [
   // сторінки бейдж зникає з роадмепу назавжди.
   var nextItem = NAV.filter(function(it){
     var ps = pagesOf(it);
-    return ps.length === 0 || ps.some(function(p){ return !p.done; });
+    return it.wip || ps.length === 0 || ps.some(function(p){ return !p.done; });
   })[0] || null;
   var nextPage = nextItem ? (pagesOf(nextItem).filter(function(p){ return !p.done; })[0] || null) : null;
 
@@ -114,7 +117,7 @@ window.NAV = [
   NAV.forEach(function(item){
     var pages = pagesOf(item);
     var doneCount = pages.filter(function(p){ return p.done; }).length;
-    var fullyDone = pages.length > 0 && doneCount === pages.length;
+    var fullyDone = pages.length > 0 && doneCount === pages.length && !item.wip;
     var isActive  = contains(item, activePage);
     // топ-лінк веде на першу ГОТОВУ сторінку етапу, тому ніколи не вказує на ще неіснуючий файл;
     // якщо готових нема, але ми всередині етапу, веде на поточну (вона існує, ми на ній)
@@ -128,7 +131,8 @@ window.NAV = [
     else { top = document.createElement('span'); }               // ще не роблений етап: не лінк
     top.className = 'nav-top'; top.textContent = item.label;
     if (!isActive) {                                             // на власній сторінці бейджа не буває
-      if (item === nextItem) top.appendChild(badge('Next'));
+      if (item.wip) top.appendChild(badge('WIP'));            // сторінка жива, етап ще йде
+      else if (item === nextItem) top.appendChild(badge('Next'));
       else if (!doneCount) top.appendChild(badge('SOON'));        // Next уже позначає наступний; SOON лише на решті
     }
     li.appendChild(top);
