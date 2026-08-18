@@ -155,26 +155,13 @@ window.WF_GLOBALS = {
     nav.appendChild(target('4.1', 'Metrics'));
     nav.appendChild(target('3.1', 'Sources'));
     h.appendChild(nav);
-    /* PROVISIONAL, and the reason is written here so nobody reads it as a decision.
-       Node 0.1 puts search in the bar as a persistent affordance; node 4.1 lists a search
-       field as block 2 of the registry. Rendering both put two fields on one screen, and
-       on the search results state one of them held the live query while the other sat
-       empty above it. The page keeps its field, because state 4.3 requires the query to
-       be visible in it, so the bar suppresses its own on the registry screens until the
-       IA says which node owns the field. */
-    var onRegistry = ['metric-registry.html', 'metric-registry-empty.html',
-                      'metric-registry-search.html'].indexOf(location.pathname.split('/').pop()) !== -1;
-    if (!onRegistry) {
-      var search = document.createElement('input');
-      search.className = 'wf-field wf-header__search';
-      search.type = 'search';
-      search.placeholder = 'Search metrics';
-      search.setAttribute('aria-label', 'Search metrics');
-      h.appendChild(search);
-    }
-    /* The corner is a real control with the one item MVP allows. It carried a name and
-       nothing else until the critique pointed out that the analyst had no way to sign
-       out anywhere in the prototype. Node 0.1 specifies both the control and the item. */
+    /* Settled in the IA at stage 04, and this is the render of that decision. Node 0.1
+       carries a ROUTE to the registry's search; the field itself belongs to node 4.1,
+       because state 4.3 needs the query visible in the field it searches with and a
+       global component that takes no arguments cannot hold one. One tap from any analyst
+       screen, which is what this node meant by a persistent affordance. */
+    h.appendChild(target('4.1', 'Search', 'wf-header__search-route'));
+
     var account = document.createElement('details');
     account.className = 'wf-header__account';
     var who = document.createElement('summary');

@@ -25,6 +25,10 @@ The two are not in conflict and the distinction has to be written down here, bec
 | **Full** | On the public surface (6.1 to 6.4), seen by a buyer or an analyst evaluating us | Trust strip, link columns, the SEO block, the bottom line |
 | **App** | Behind sign-in, seen by the analyst | The bottom line only. The analyst has navigation; they do not need a second one |
 
+**The trust line is worded by what the page holds, not by the variant it carries.** Added at stage 04, where the minimal variant asserted "this number was queried from your source when you opened the page" on sign in, on the 404, on the 500 and on the cookie notice, and on the 500 it contradicted the screen's own words. **On a page with a number the sentence is about that number; anywhere else it is the general claim**, that a number is queried from the source at the moment it is read. One variant, two wordings, chosen by the page rather than remembered by a person.
+
+**The gate takes the minimal variant**, and that is the answer to the question stage 04 raised: sign in is public, carries no number and is not the card, so it takes the minimal shape with the general wording. It does not earn a fourth variant.
+
 **Why the minimal variant is not simply the full one hidden.** The reader arrived to check a number, and a full footer under a single figure would be a marketing surface attached to somebody's work. What they get is what they may need: who stands behind this, what happens to their data, and a way to find out what this is.
 
 ---

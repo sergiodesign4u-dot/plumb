@@ -35,7 +35,7 @@
 | # | Block | Note |
 | --- | --- | --- |
 | 1 | **Invite row**: email plus role, one action | Two fields, one action |
-| 2 | **Members table**: person, role, status | |
+| 2 | **Members table**: person, role, status, and **the role is changeable in the row** | The control was missing until stage 04. See below |
 | 3 | **Seats used and available** | **The join to 5.2.** See below |
 
 ### 5.2, plan and seats
@@ -46,6 +46,20 @@
 | 2 | **What a seat costs** | Blank until the pricing decision, and that is stated |
 | 3 | **What is not charged for** | Readers, and the metric count |
 | 4 | **Invoice route** | |
+| 5 | **The number of seats, and it is changeable here** | The control was missing until stage 04. See below |
+
+### Two controls were promised by a refusal and existed nowhere, found at stage 04
+
+**A blocking message has to name an action that exists.** The wireframes rendered both refusals and both pointed at nothing.
+
+| The refusal | What it told the person to do | What existed |
+| --- | --- | --- |
+| **The last administrator** cannot be removed | Make somebody else an administrator first | **No screen in the product could change a role.** The members table showed roles as text |
+| **No seats left** | Change the number of seats on plan and seats | **Node 5.2 had no seat control.** It showed a count and a price that is not decided |
+
+**Both are repaired here rather than in the wireframe**, which is why a wireframe may not invent: the missing control was a hole in this node, and drawing one in a screen would have hidden it. The role becomes a control in the member row, and the seat count becomes a control on 5.2 beside the counter it already carries. Neither is new surface: both sit inside blocks that already exist.
+
+**The rule this leaves behind is worth more than the two controls:** an inline refusal is only honest when the remedy it names is reachable from the screen the person is on, or from one named route away. A refusal pointing at nothing is worse than no refusal, because it moves the failure from the product to the person.
 
 ### Block 3 of 5.1 is where the two sections are actually one
 

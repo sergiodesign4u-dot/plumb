@@ -151,3 +151,28 @@ Codex was given the touched files again. **The first two attempts did not finish
 | **The 360 class had never been checked on a live screen before this stage** | **Not done until now, and that is the finding.** The stance was declared at 03b and carried through four stages on trust. The first real check produced four defects, one of which meant a state rendered nothing at all |
 
 **Not everything is green, and the row above is why the checklist is worth running.** The one honest "not done" is that a rule the project had been asserting since the detail layer of the IA had never been tested until the stage whose job it is.
+
+
+---
+
+## The three IA holes, repaired upwards after the stage closed
+
+A wireframe may not repair an IA hole, so these waited. They were settled in the nodes first, then rendered, which is the order this project committed to at the third pass of stage 03b.
+
+### 1. Search was specified twice, and the screen made it visible
+
+**Node 0.1 carried a persistent search field in the bar and node 4.1 carried a search field as block 2.** Both nodes were closed and both had passed an audit; the contradiction only existed once a screen was rendered, and on the search results state one field held the live query while the other sat empty above it.
+
+**Settled: the field belongs to node 4.1, the bar carries a route to it.** Three reasons and none is preference. State 4.3 requires the query to be visible in the field it searches with, and a global component that takes no arguments cannot hold one. Node 0.1's own mobile column already said the bar carries an icon rather than a field at 360, so a permanent box there contradicted its own spec. And a route keeps what that node was actually protecting: search is one tap from every analyst screen.
+
+### 2. Two refusals pointed at controls that did not exist
+
+**"Make somebody else an admin first" when no screen could change a role, and "change the number of seats on plan and seats" when node 5.2 had no seat control.** Both were rendered honestly by the fan-out and both were dead ends made of words.
+
+**Repaired in node 5.1 and 5.2:** the role becomes a control in the member row, the seat count becomes a control on 5.2 beside the counter it already carries. Neither is new surface. **The rule left behind is worth more than the two controls:** an inline refusal is honest only when the remedy it names is reachable from the screen the person is on, or one named route away. A refusal pointing at nothing moves the failure from the product to the person.
+
+### 3. The footer had three variants and none fitted a gate
+
+**Settled in node 0.2 without a fourth variant:** the trust line is worded by what the page holds rather than by the variant it carries. On a page with a number the sentence is about that number; anywhere else it is the general claim. The gate takes the minimal shape with the general wording, and so do the system pages.
+
+**Measured after all three: 53 pages, no horizontal overflow, no control under 44px, and exactly one visible search field on every registry screen.**

@@ -121,7 +121,10 @@ body{
 .wf-header__nav{ display:flex; gap:var(--wf-space-3); }
 .wf-header__nav a, .wf-header__nav span{ display:inline-block; min-height:var(--wf-target);
             line-height:var(--wf-target); text-decoration:none; }
-.wf-header__search{ flex:1; min-width:140px; }
+/* The route to the registry's search, which replaced the second field. It is a target
+   like the two destinations beside it, so it is sized like them. */
+.wf-header__search-route{ display:inline-flex; align-items:center;
+            min-height:var(--wf-target); margin-left:auto; }
 .wf-header__account{ position:relative; }
 .wf-header__account > summary{ list-style:none; cursor:pointer; display:inline-flex;
             align-items:center; min-height:var(--wf-target);
@@ -168,7 +171,11 @@ a{ color:inherit; }
 .wf-field{ font:inherit; width:100%; padding:var(--wf-space-2) var(--wf-space-3);
            border:1px solid var(--wf-rule-strong); background:var(--wf-surface);
            min-height:var(--wf-target); }
-.wf-actions{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap; margin-top:var(--wf-space-3); }
+.wf-actions{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap; margin-top:var(--wf-space-3);
+             align-items:center; }
+/* The seat control on node 5.2, added when the IA repaired the refusal that pointed
+   at it. A number is a narrow field and does not take the width of a text one. */
+.wf-field--seats{ max-width:8rem; }
 
 /* The card surface, node 2.1. The canonical component of the product: its compact form
    is the registry row and the search result row, and node 2.1 records that list. */

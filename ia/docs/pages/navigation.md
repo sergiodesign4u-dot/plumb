@@ -61,10 +61,18 @@ Rows are the zones of the component. Columns are who is looking and on what.
 | Wordmark | Link, not a home button. There is no home in this product | 4.1 Metric registry |
 | Metrics | Primary destination, `aria-current="page"` when active | 4.1 |
 | Sources | Second destination | 3.1 Sources |
-| Search | Persistent affordance over the registry, not a destination. Enter jumps to the single match, otherwise to 4.3 | 4.3 State: search results |
+| Search | **A route to the registry's search, not a second field.** One tap from any analyst screen, and the field itself belongs to node 4.1 | 4.1, and 4.3 once a query exists |
 | Account corner | Menu, not a page | 5.1, 5.2, sign out |
 
 **Search is in the navigation and is not a nav item**, which is the one subtlety in this component. It has no page of its own: the base layer recorded that decision so that no screen was invented to fill a row in the traceability matrix.
+
+### Corrected at stage 04, and it was invisible until a screen was rendered
+
+**This node and node 4.1 both specified a search field**, one in the bar and one as block 2 of the registry, and both nodes were closed and audited. On the built screen the analyst saw two search boxes, and on the search results state one held the live query while the other sat empty above it.
+
+**The field belongs to node 4.1 and the bar carries a route to it.** Three reasons, and none of them is preference. State 4.3 requires the query to be visible in the field it is searching with, and a global component that takes no arguments cannot hold that query. This node's own mobile column already said the bar carries an icon rather than a field at 360, so a permanent box in the bar contradicted it there anyway. And a route keeps what this node was actually protecting: search is reachable in one tap from every analyst screen, which is what "persistent affordance" meant.
+
+**What this node still owns:** that search exists on every analyst screen, that it is not a destination with a page of its own, and that the reader never sees it.
 
 ---
 

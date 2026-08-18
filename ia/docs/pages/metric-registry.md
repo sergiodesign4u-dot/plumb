@@ -35,7 +35,7 @@
 | # | Block | Note |
 | --- | --- | --- |
 | 1 | **Title with a count** | "Metrics, 12". The count is the block that carries R5 |
-| 2 | **Search field** | Placeholder names what is searched: names and definition text |
+| 2 | **Search field.** This node OWNS it, settled at stage 04 | Placeholder names what is searched: names and definition text. Node 0.1 carries a route to this field, never a second one |
 | 3 | **The primary action**: define a metric | **Third at 360.** See the note below |
 | 4 | **The list**: name, state with age, owner | Three columns at width, three lines per row at 360 |
 | 5 | **Result count line** | "12 of 12" and, in 4.3, the honest zero |

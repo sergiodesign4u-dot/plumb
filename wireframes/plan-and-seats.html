@@ -49,7 +49,15 @@
               <p class="wf-muted">Readers are not seats and are never counted here.</p>
               <p><a href="workspace.html">People</a></p>
             </div>
-          </section>
+                    <!-- The control the refusal at 5.1 points at. It was missing until stage 04,
+               and a blocking message that names an action nobody can take is worse than
+               no message at all. Repaired in the node first, then rendered here. -->
+          <p class="wf-actions">
+            <label class="wf-caps" for="seats">Seats on this plan</label>
+            <input class="wf-field wf-field--seats" id="seats" type="number" value="5" min="1">
+            <button class="wf-btn wf-btn--quiet" type="button">Update seats</button>
+          </p>
+</section>
 
           <!-- Block 2. What a seat costs. Blank until the pricing decision, and the blank
                is stated rather than filled with a number nobody has agreed to -->
