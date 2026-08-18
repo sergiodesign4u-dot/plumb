@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly active accounts - Plumb</title>
+<!-- SEO layer 2, validation only. The decision is node 2.1 block A: noindex because
+     indexing a card would publish a customer's numbers, follow because the only links
+     leaving this page go to our own public pages. No canonical, no schema. -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Weekly active accounts">
+<meta property="og:description" content="Distinct accounts with at least one session in the last 7 days. The current value and where it came from are one click away.">
+<link rel="stylesheet" href="_wf.css">
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <article class="wf-card">
+        <!-- 1. Metric name, the only H1 on the page -->
+        <h1 class="wf-card__name">Weekly active accounts</h1>
+
+        <!-- 2. The value. LCP, and its space is reserved so nothing shifts when it lands -->
+        <p class="wf-value">18,432</p>
+
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>As of 14:05, 20 minutes ago</b>
+          <span>Expected hourly</span>
+        </p>
+
+        <!-- 4. The definition, in words. The main object of the screen, never collapsed -->
+        <div class="wf-def">
+          <p class="wf-caps">Definition</p>
+          <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+        </div>
+
+        <!-- 5. Attribution: who declared this and when -->
+        <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
+
+        <!-- 6. Where this number came from: one line present, the full grid opens on action -->
+        <p class="wf-src">
+          <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
+          <a class="wf-btn wf-btn--quiet" href="source-layer.html">Where this came from</a>
+        </p>
+
+        <!-- 7. Send this number -->
+        <p class="wf-actions">
+          <a class="wf-btn" href="send.html">Send this number</a>
+        </p>
+      </article>
+
+      <!-- 8. Footer, node 0.2, minimal variant: the only footer a reader ever sees.
+           It renders only the targets that exist in the current scope. -->
+      <footer class="wf-footer">
+        <span>Plumb stores definitions, owners and lineage. Never your data rows: this number was queried from your source when you opened the page.</span>
+        <span class="wf-footer__links">
+          <!-- All three targets are MVP nodes (6.1, 6.5, 6.6) and none is drawn yet, so
+               they render as text rather than as links that go nowhere. The footer becomes
+               a component at step 5 and decides link or text from the registry itself. -->
+          <span class="wf-pending">What Plumb is</span>
+          <span class="wf-pending">Privacy</span>
+          <span class="wf-pending">Terms</span>
+        </span>
+      </footer>
+
+      <!-- INLINE: number-card :: to fold into _wf.css -->
+      <style>
+        /* Single use on this screen so far. If a second screen needs either rule, both
+           move into _wf.css by the two occurrence test in docs/conventions.md. */
+        .wf-footer__links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap; }
+        .wf-card__name{ max-width:var(--wf-measure); }
+        .wf-pending{ border-bottom:1px dashed var(--wf-rule-strong); color:var(--wf-muted); }
+      </style>
+    </main>
+
+    <p class="wf-note">
+      Node 2.1, the ordinary condition (state 2.3). Flow 1, the first node after arrival, at zero taps: the definition, the state, the age and the attribution are all here without an action. Blocks in the order the node fixes, one column at 360 with no exceptions, and the card keeps a maximum width on a wide canvas rather than spreading, because a value that fills a desktop is a dashboard tile.
+      Two things are decided here and are not visible on the screen: this page is noindex, and its unfurl carries the metric name and the state but never the value.
+      The three footer targets are MVP pages that this round does not draw, so they are text rather than links: a menu whose links go nowhere is the defect the IA audit opened with.
+      Interface wording is draft. Stage 05 owns it.
+    </p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

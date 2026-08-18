@@ -30,7 +30,7 @@ window.WF_NAV = [
     { label:'Error: authentication failed', node:'1.3', file:null }
   ]},
 
-  { cluster:'2. The number card', label:'The number card', node:'2.1', scope:'MVP', file:null, spec:'number-card.html', status:'spec', flow:1, states:[
+  { cluster:'2. The number card', label:'The number card', node:'2.1', scope:'MVP', file:'number-card.html', spec:'number-card.html', status:'spec', flow:1, states:[
     { label:'Loading: the value is queried', node:'2.2', file:null },
     { label:'Source is down', node:'2.4', file:null },
     { label:'Definition changed', node:'2.5', file:null },
@@ -145,7 +145,7 @@ window.WF_FLOWS = [
      that answers "where am I and which version of this screen is this", a three level
      tree, states open only under the current screen, and the way out to the IA at the
      bottom as a separate quiet block rather than as an item of the prototype. */
-  var panel = document.getElementById('wf-panel');
+  var panel = document.getElementById('wf-sidebar');
   if (panel) {
     var cur = currentScreen();
 
@@ -169,8 +169,9 @@ window.WF_FLOWS = [
         if (!isCur) return;                       // accordion: states only under the current screen
         panel.appendChild(link(s.file, 'wf-nav-state' + (s.file === here ? ' is-current' : ''), 'Ordinary'));
         (s.states || []).forEach(function(st){
-          if (!st.file) return;
-          panel.appendChild(link(st.file, 'wf-nav-state' + (st.file === here ? ' is-current' : ''), st.label));
+          var cls = 'wf-nav-state' + (st.file === here ? ' is-current' : '') + (st.file ? '' : ' is-planned');
+          var label = st.label + (st.file ? '' : (st.deferred ? ', deferred' : ', planned'));
+          panel.appendChild(link(st.file, cls, label));
         });
       });
     });
@@ -197,6 +198,7 @@ window.WF_FLOWS = [
         if (s.file) chips.appendChild(link(s.file, 'wf-chip', 'Ordinary'));
         (s.states || []).forEach(function(st){
           if (st.file) chips.appendChild(link(st.file, 'wf-chip', st.label));
+          else chips.appendChild(el('span', 'wf-chip is-spec', st.label + (st.deferred ? ', deferred' : '')));
         });
         if (!chips.children.length) chips.appendChild(el('span', 'wf-chip is-spec', 'specified, not drawn'));
         chip.appendChild(chips);
@@ -231,6 +233,9 @@ window.WF_FLOWS = [
       covMount.appendChild(sec);
     });
     var count = document.getElementById('wf-count');
-    if (count) count.textContent = built + ' screens built, ' + pages + ' pages, ' + spec + ' still specification only';
+    if (count) count.textContent =
+      built + (built === 1 ? ' screen' : ' screens') + ' built, ' +
+      pages + (pages === 1 ? ' page' : ' pages') + ', ' +
+      spec + ' still specification only';
   }
 })();
