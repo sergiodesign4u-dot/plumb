@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in, waiting for the provider - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 1.1: noindex because an indexed
+     sign-in page competes with node 6.1 for the brand query, follow because the
+     footer's links are real and there is no reason to strand a crawler that lands
+     here. No canonical, no schema, no SEO text: this page is transactional. -->
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: sign-in :: to fold into _wf.css */
+
+/* The gate column. Node 1.1 responsive: one centred column at 360 with the field and
+   the action full width, and the same column capped and centred on a wide canvas.
+   Nothing is added at width, so there is no second layout here, only a cap. */
+.wf-gate{ max-width:380px; margin:0 auto; }
+@media (min-width:900px){
+  .wf-gate{ min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
+}
+.wf-gate__brand{ margin-bottom:var(--wf-space-4); }
+.wf-gate h1{ margin-bottom:var(--wf-space-4); }
+
+/* Field label. A real label, above its field, ink rather than muted: it is the name of
+   the only thing being asked for. */
+.wf-label{ display:block; font-weight:600; margin-bottom:var(--wf-space-1); }
+
+/* Targets at 44 by 44, required by node 1.1 responsive. The control classes in _wf.css
+   are sized for dense analyst rows, so the gate raises them rather than redefining them. */
+.wf-gate .wf-field{ min-height:44px; }
+.wf-gate .wf-btn--full{ min-height:44px; margin-top:var(--wf-space-3); }
+
+/* The legal line, block 6, with the prior agreement clause. */
+.wf-legal{ color:var(--wf-muted); font-size:var(--wf-size-small);
+           margin-top:var(--wf-space-4); }
+
+/* Progress in place, state 1.2. It sits under the action rather than over a dimmed
+   page, because the gate underneath it is the route back that a cancel would have
+   been. Dashed, so it reads as a report about the page rather than a part of it. */
+.wf-progress{ border:1px dashed var(--wf-rule-dashed); margin-top:var(--wf-space-3);
+              padding:var(--wf-space-2) var(--wf-space-3); color:var(--wf-muted); }
+.wf-progress b{ display:block; color:var(--wf-ink); }
+.wf-progress p{ margin:0; }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <div class="wf-gate">
+        <!-- 1. Product name, small. A gate is not a landing page -->
+        <p class="wf-caps wf-gate__brand">Plumb</p>
+        <!-- 2. Heading, one line, and the only H1 on the page -->
+        <h1>Sign in to your workspace</h1>
+
+        <!-- 5. The notice slot stays empty here: the thing there is to say is the
+             progress below, and saying it twice would be two voices on one wait. -->
+
+        <form class="wf-gate__form" action="sign-in-loading.html" method="get">
+          <!-- 3. Work email, the only field, holding what was submitted -->
+          <label class="wf-label" for="wf-email">Work email</label>
+          <input class="wf-field" id="wf-email" name="email" type="email"
+                 autocomplete="email" value="dana@northwind.com">
+          <!-- 4. Continue with SSO, still enabled: it is the way back into the round
+               trip if the wait runs out, and there is no cancel by decision -->
+          <button class="wf-btn wf-btn--full" type="submit">Continue with SSO</button>
+        </form>
+
+        <!-- 1.2. Progress in place, naming whose answer is being waited for, with the
+             timeout stated in words and the route back being this same gate -->
+        <div class="wf-progress" role="status">
+          <b>Waiting for Okta at northwind.com.</b>
+          <p>This can take a few seconds. If nothing happens in thirty, come back here and try again.</p>
+        </div>
+
+        <!-- 6. The legal line, with the prior agreement clause -->
+        <p class="wf-legal">By signing in you agree to the Terms of Service, unless a prior agreement is in effect.</p>
+      </div>
+
+      <!-- 7. Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Node 1.2, the identity provider is answering, and flow 4 between D1 and the authentication branch. <strong>There is no cancel, and that is a decision rather than an omission.</strong> An OIDC round trip hands the browser to somebody else's system and brings it back, so a cancel would leave a person neither signed in nor signed out, holding a page a redirect may be about to replace. What stands in its place is on the screen: the progress <strong>names which provider is being waited for</strong>, the timeout is stated in words, and the gate itself is still here, so trying again is the route back. That is what a cancel was for, without the half-state it would have left behind. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes"><span class="wf-caps">This state resolves into</span><a href="sign-in-error.html">1.3 authentication failed</a><a href="connect-source.html">signed in, first run of the workspace, 3.2</a><a href="metric-registry.html">signed in, returning, 4.1</a></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A of node 6.2, verbatim. This is one of the four indexed pages in the
+     whole map, so unlike the card the structural layer is fully rendered here. -->
+<title>Trust and security at Plumb: we never copy your data rows</title>
+<meta name="description" content="Plumb stores metric definitions, owners and connection settings. Numbers are queried from your warehouse at read time and no copy of your rows is kept.">
+<meta name="robots" content="index, follow">
+<!-- The state is the same page with the gate open, so the canonical stays /trust and
+     no second URL is offered to an index. -->
+<link rel="canonical" href="https://plumb.app/trust">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trust and security at Plumb: we never copy your data rows">
+<meta property="og:description" content="Plumb stores metric definitions, owners and connection settings. Numbers are queried from your warehouse at read time and no copy of your rows is kept.">
+<!-- Block D. Organization at the page root, carrying the legal name and the contact
+     route for security reports. NO certification markup until a certification exists:
+     marking up an intention is the machine readable version of the omission this page
+     refuses. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plumb",
+  "url": "https://plumb.app/",
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "security",
+    "email": "security@plumb.app"
+  }]
+}
+</script>
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: trust-and-pricing :: to fold into _wf.css */
+/* Nodes 6.2 and 6.3, the public surface. Every value goes through a token in _wf.css.
+   Names are prefixed tp- so the reconcile pass can grep both pages at once. */
+
+/* Section rhythm on a long public page. Both pages, so it folds. */
+.tp-sec{ margin-top:var(--wf-space-5); }
+.tp-sec > h2{ margin-bottom:var(--wf-space-2); padding-bottom:var(--wf-space-1);
+              border-bottom:1px solid var(--wf-rule-strong); }
+.tp-lede{ font-size:var(--wf-size-h2); }
+.tp-ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.tp-ul li{ margin-bottom:var(--wf-space-1); }
+
+/* Two column comparison, one axis. What we hold against what we do not at 6.2, and
+   what a reader can do without paying at 6.3. Stacked pairs at 360 with the column
+   name travelling inside the cell, a real table from 700. Both pages, so it folds. */
+.tp-table{ width:100%; border-collapse:collapse; text-align:left; }
+.tp-table thead{ display:none; }
+.tp-table tr{ display:block; border-bottom:1px solid var(--wf-rule);
+              padding:var(--wf-space-2) 0; }
+.tp-table td{ display:block; padding:0 0 var(--wf-space-1); }
+.tp-lab{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted); }
+@media (min-width:700px){
+  .tp-table thead{ display:table-header-group; }
+  .tp-table tr{ display:table-row; padding:0; border-bottom:0; }
+  .tp-table td, .tp-table th{ display:table-cell; width:50%; vertical-align:top;
+              padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
+              border-bottom:1px solid var(--wf-rule); }
+  .tp-table thead th{ border-bottom:1px solid var(--wf-ink);
+              font-size:var(--wf-size-small); color:var(--wf-muted); font-weight:600; }
+  .tp-lab{ display:none; }
+}
+
+/* A badge here is text in a bordered box, never an image and never a logo. Held and
+   not held are told apart by the words first and by the border second. */
+.tp-badges{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap;
+            margin:var(--wf-space-2) 0 var(--wf-space-3); }
+.tp-badge{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+           padding:var(--wf-space-1) var(--wf-space-2); font-size:var(--wf-size-small); }
+.tp-badge--not{ border-style:dashed; border-color:var(--wf-rule-dashed);
+                color:var(--wf-muted); }
+
+/* Row of policy links, and the boxed aside. Both pages, so both fold. */
+.tp-links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap;
+           margin-bottom:var(--wf-space-2); }
+.tp-box{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+         padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.tp-box--gate{ border:1px dashed var(--wf-ink); background:var(--wf-surface); }
+.tp-box > :last-child{ margin-bottom:0; }
+
+/* The gate form, node 6.2 state "a document is requested". A label carries its own
+   field, so the hit area is the whole row and nothing depends on an id matching. */
+.tp-form h3{ font-size:var(--wf-size-h2); margin-bottom:var(--wf-space-2); }
+.tp-field{ display:block; margin-bottom:var(--wf-space-3); }
+.tp-field > span{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted);
+                  margin-bottom:var(--wf-space-1); }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <!-- No analyst header: this is a public page and the reader of it is the buyer,
+           who has no account and no navigation. No primary call to action either, by
+           the node's decision: the act on this page is reading. -->
+
+      <!-- 1. The claim, not the badges. LCP, and it is text. -->
+      <header>
+        <h1>What Plumb stores, and what it never touches</h1>
+        <p class="tp-lede">Your numbers are queried from your warehouse when somebody reads them. No copy is kept.</p>
+      </header>
+
+      <section class="tp-sec" id="claim">
+        <h2>No copy of your data rows</h2>
+        <p>Plumb keeps the definition of a metric, the name of the person who declared it, the date they did, and the settings needed to reach your warehouse. It does not keep your data. When somebody opens a number card, the value is queried from your source at that moment and shown with the time it was read. There is no cached copy to leak and no export to secure.</p>
+        <p class="wf-muted"><a href="product-page.html">What Plumb is</a>, if you are reading this before you have seen the product.</p>
+      </section>
+
+      <!-- 2. What we store and what we do not. The architecture, in a table. -->
+      <section class="tp-sec" id="hold">
+        <h2>What we hold and what we do not</h2>
+        <table class="tp-table">
+          <thead><tr><th scope="col">We hold</th><th scope="col">We do not hold</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tp-lab">We hold</span>Metric definitions, in words</td>
+              <td><span class="tp-lab">We do not hold</span><strong>Any copy of a customer's data rows</strong></td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">We hold</span>Owners, and the date on each claim</td>
+              <td><span class="tp-lab">We do not hold</span>Values as history. There is one last-run timestamp per metric, overwritten</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">We hold</span>Connection settings, with secrets write-only</td>
+              <td><span class="tp-lab">We do not hold</span>Any credential in readable form, including on our own screens</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">We hold</span>The link a card was sent as</td>
+              <td><span class="tp-lab">We do not hold</span><strong>Anything that identifies who opened it.</strong> No cookie, no device identifier, no per-reader log. One anonymous counter on the metric, naming nobody, and it is never shown in the product</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 3. Access and identity. -->
+      <section class="tp-sec" id="identity">
+        <h2>How people sign in</h2>
+        <p>Sign-in is through your identity provider over OIDC or SAML. Plumb holds no passwords, so there is nothing here for a password to be stolen from. Warehouse credentials are written to us and never read back, including by us on our own screens.</p>
+      </section>
+
+      <!-- 4. Certifications, stated honestly, including the one we do not have yet.
+           A badge is text in a box: it names the certification AND whether it is held. -->
+      <section class="tp-sec" id="certifications">
+        <h2>Certifications, including the one we do not have yet</h2>
+        <div class="tp-badges">
+          <span class="tp-badge">SSO over OIDC and SAML: in the product today</span>
+          <span class="tp-badge tp-badge--not">SOC 2 Type II: not held yet</span>
+        </div>
+        <p>SOC 2 Type II is a goal and not yet a fact, and that is stated here rather than left to be discovered during a review. What is true today is the architecture above, and it is the reason the review is shorter than it would otherwise be.</p>
+        <p class="wf-muted">There is no third certification quietly left off this list. When one is held, it is named here with the date it was issued.</p>
+      </section>
+
+      <!-- 5. Subprocessors, named. -->
+      <section class="tp-sec" id="subprocessors">
+        <h2>Subprocessors</h2>
+        <table class="tp-table">
+          <thead><tr><th scope="col">What it does</th><th scope="col">Who, and what it can reach</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tp-lab">What it does</span>Identity, sign-in for analysts</td>
+              <td><span class="tp-lab">Who</span>An SSO provider, WorkOS or Auth0, not yet chosen. Sees an email address and a workspace, never a definition and never a number</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">What it does</span>Application hosting</td>
+              <td><span class="tp-lab">Who</span>Not yet chosen. Holds definitions, owners and connection settings, and no data rows, because there are none to hold</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">What it does</span>Your warehouse</td>
+              <td><span class="tp-lab">Who</span>Yours, not ours. Snowflake, BigQuery or Postgres, reached at read time with the credentials you gave us</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="wf-muted">This list is named in full and dated on the page. Where a supplier is not chosen yet, it says so rather than being left out.</p>
+      </section>
+
+      <!-- 6. Policy links row, to 6.5 and 6.6. -->
+      <section class="tp-sec" id="policies">
+        <h2>Policies</h2>
+        <p class="tp-links">
+          <a href="privacy.html">Privacy policy</a>
+          <a href="terms.html">Terms of service</a>
+          <a href="#subprocessors">Subprocessors</a>
+        </p>
+      </section>
+
+      <!-- 7. Report a vulnerability. One route, always open. -->
+      <section class="tp-sec" id="vulnerability">
+        <h2>Reporting a vulnerability</h2>
+        <p>Write to <strong>security@plumb.app</strong>. One route, always open, and no form stands in front of it. Every report is answered by a person.</p>
+      </section>
+
+      <!-- 8. Documents, and the only gate on the page. Everything above is public
+           because a page that asks a reviewer for their name before telling them
+           anything has turned a trust surface into a lead capture. -->
+      <section class="tp-sec" id="documents">
+        <h2>Documents for your review</h2>
+        <p>Everything needed to complete a security review is on this page. The two open documents are linked below and ask nothing. The questionnaire needs an NDA, so this is where we ask who you are, and it is the only form on the page.</p>
+        <ul class="tp-ul">
+          <li><strong>How Plumb reaches your warehouse.</strong> Open, nothing asked.</li>
+          <li><strong>The subprocessor list above, as a document.</strong> Open, nothing asked.</li>
+        </ul>
+        <!-- The gate, and the only form on this page. It stands in front of the
+             documents that legally need an NDA and in front of nothing else. -->
+        <form class="tp-box tp-box--gate tp-form" method="post" action="#documents" aria-labelledby="gate-title">
+          <h3 id="gate-title">Request a document under NDA</h3>
+          <p class="wf-muted">Asked because the document is covered by an NDA, not to reach you later.</p>
+          <label class="tp-field">
+            <span>Document</span>
+            <select class="wf-field" name="document">
+              <option>Our completed security questionnaire</option>
+              <option>Our data processing agreement</option>
+            </select>
+          </label>
+          <label class="tp-field">
+            <span>Name</span>
+            <input class="wf-field" type="text" name="name" autocomplete="name">
+          </label>
+          <label class="tp-field">
+            <span>Work email</span>
+            <input class="wf-field" type="email" name="email" autocomplete="email">
+          </label>
+          <label class="tp-field">
+            <span>Company</span>
+            <input class="wf-field" type="text" name="company" autocomplete="organization">
+          </label>
+          <p class="wf-actions">
+            <button class="wf-btn" type="submit">Request the document</button>
+            <a class="wf-btn wf-btn--quiet" href="trust-security.html">Cancel</a>
+          </p>
+        </form>
+        <p class="wf-muted">There is no SOC 2 Type II report to request. The certification is not held yet, and that is said above rather than left for a review to discover.</p>
+      </section>
+
+      <!-- 9. Footer, node 0.2. The IA gives the public surface the FULL variant; the
+           shared component in _nav.js renders the minimal one. The placeholder is used
+           as it stands and the difference is reported to the reconcile pass. -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.2, the state <strong>a document is requested</strong>. The page does not change: the claim still leads, the table, the identity block, the honest certification row, the subprocessors, the policies and the vulnerability route are all still readable without giving a name. <strong>Only the last block changes</strong>, and the form that appears there is the only form on the page. That is the whole argument of this node in one screen: the gate exists where an NDA legally requires it and nowhere else, so a reviewer who does not want to identify themselves still completes most of the review. The two documents that need no NDA stay listed above the form rather than being pulled behind it. The way out is Cancel, back to the default state. The field list is not in the IA and was decided here, and it is reported. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes">
+      <span class="wf-caps">Where this goes</span>
+      <a href="trust-security.html">6.2 back to the default state</a>
+      <a href="pricing.html">6.3 Pricing</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

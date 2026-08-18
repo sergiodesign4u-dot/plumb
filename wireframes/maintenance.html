@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plumb is down for maintenance - Plumb</title>
+<!-- SEO layer 2, validation only. Node 7.3: noindex, no schema, no SEO text. Served at
+     /maintenance, and every address redirects to it while the window is open. HTTP 503
+     with Retry-After when the duration is known, which is what stops a crawler treating
+     a planned window as a dead site. -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: system-pages :: to fold into _wf.css */
+/* The error page component defined at node 7.1, reused unchanged: one centred column,
+   capped, barely changing at width. */
+.sys{ max-width:var(--wf-measure); }
+.sys__lead{ font-size:var(--wf-size-h2); }
+/* The block that says whose data is unaffected. Same treatment as blocks 2 of 7.1 and
+   7.2: named in words, not raised as an alarm. */
+.sys__said{ border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-3);
+            margin:var(--wf-space-3) 0 var(--wf-space-4); }
+.sys__said p:last-child{ margin-bottom:0; }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <section class="sys">
+        <!-- 1 and 2. What is happening, and until when. The time is in the heading
+             because it is the thing a person came to this page to learn -->
+        <h1>Plumb is down for maintenance until 03:00 UTC</h1>
+        <p class="sys__lead">Definitions, owners and links are unreachable while this window is open.</p>
+
+        <!-- 3. Whose data is unaffected, and this sentence is specific to this product
+             rather than generic: it is the one moment the metadata-only architecture is
+             visible to a reader whose mental model is that we hold the numbers -->
+        <div class="sys__said">
+          <p><strong>Your data is not affected.</strong></p>
+          <p>Plumb holds definitions and owners, not your numbers. Your warehouse is untouched and is still answering everybody else.</p>
+        </div>
+
+        <!-- 4. Retry. One control, and it reloads the address the person was on. It does
+             not go home, because this page catches the reader as often as the analyst
+             and the reader has no home -->
+        <p class="wf-actions">
+          <a class="wf-btn" href="number-card.html">Try again</a>
+        </p>
+      </section>
+
+    </main>
+
+    <p class="wf-note">Node 7.3, ПОТІМ. Four blocks in the node's order: what is happening, until when, whose data is unaffected, retry. <strong>The footer is absent on purpose</strong> and not by oversight: the node's block list for 7.3 does not carry one, and while the window is open every address redirects here, so a footer link would return the same 503 it came from. The route out is the retry, which is why one control is enough. <strong>The retry reloads the address the person was on</strong> and never sends them home. If the window is still open the same page comes back with the time updated, which is a state rather than a failure to act on. Not visible on screen: noindex, and HTTP 503 with Retry-After when the duration is known. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes">
+      <span class="wf-caps">Try again resolves into</span>
+      <a href="number-card.html">2.1 the card, once the window has closed</a>
+      <a href="maintenance.html">7.3 the same page, with the time updated</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

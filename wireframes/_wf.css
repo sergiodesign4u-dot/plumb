@@ -207,6 +207,10 @@ a{ color:inherit; }
             font-size:var(--wf-size-small); display:flex; gap:var(--wf-space-3);
             flex-wrap:wrap; }
 .wf-footer__links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap; }
+.wf-footer--app{ color:var(--wf-muted); }
+.wf-footer--full{ flex-direction:column; gap:var(--wf-space-3); }
+.wf-footer__cols{ display:grid; gap:var(--wf-space-3); grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); width:100%; }
+.wf-footer__col{ display:flex; flex-direction:column; gap:var(--wf-space-1); }
 /* A target that exists in the product but not yet in the prototype is text, not a link
    that goes nowhere. The footer component decides which from the registry. */
 .wf-pending{ border-bottom:1px dashed var(--wf-rule-strong); color:var(--wf-muted); }

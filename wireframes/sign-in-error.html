@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in, authentication failed - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 1.1: noindex because an indexed
+     sign-in page competes with node 6.1 for the brand query, follow because the
+     footer's links are real and there is no reason to strand a crawler that lands
+     here. No canonical, no schema, no SEO text: this page is transactional. -->
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: sign-in :: to fold into _wf.css */
+
+/* The gate column. Node 1.1 responsive: one centred column at 360 with the field and
+   the action full width, and the same column capped and centred on a wide canvas.
+   Nothing is added at width, so there is no second layout here, only a cap. */
+.wf-gate{ max-width:380px; margin:0 auto; }
+@media (min-width:900px){
+  .wf-gate{ min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
+}
+.wf-gate__brand{ margin-bottom:var(--wf-space-4); }
+.wf-gate h1{ margin-bottom:var(--wf-space-4); }
+
+/* Field label. A real label, above its field, ink rather than muted: it is the name of
+   the only thing being asked for. */
+.wf-label{ display:block; font-weight:600; margin-bottom:var(--wf-space-1); }
+
+/* Targets at 44 by 44, required by node 1.1 responsive. The control classes in _wf.css
+   are sized for dense analyst rows, so the gate raises them rather than redefining them. */
+.wf-gate .wf-field{ min-height:44px; }
+.wf-gate .wf-btn--full{ min-height:44px; margin-top:var(--wf-space-3); }
+
+/* The legal line, block 6, with the prior agreement clause. */
+.wf-legal{ color:var(--wf-muted); font-size:var(--wf-size-small);
+           margin-top:var(--wf-space-4); }
+
+/* Error banner, state 1.3, node 0.3. It belongs to the thing on the screen and has to
+   stay while the person acts on it, so it is inline above the field and not a toast.
+   Solid rule against the dashed progress of 1.2: the two are told apart by position and
+   by their border, never by hue. */
+.wf-banner{ border:1px solid var(--wf-ink); margin-bottom:var(--wf-space-3);
+            padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-banner b{ display:block; margin-bottom:var(--wf-space-1); }
+.wf-banner p{ margin:0; }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <div class="wf-gate">
+        <!-- 1. Product name, small. A gate is not a landing page -->
+        <p class="wf-caps wf-gate__brand">Plumb</p>
+        <!-- 2. Heading, one line, and the only H1 on the page -->
+        <h1>Sign in to your workspace</h1>
+
+        <!-- 1.3. The banner takes the notice slot, above the field. The failure shown
+             here is the provider answering and refusing: the reason is named, and the
+             address is cleared of blame in the same breath -->
+        <div class="wf-banner" role="alert">
+          <b>Okta declined this sign-in.</b>
+          <p>Nothing about the address was wrong. Try again, and if it keeps being declined, whoever set Plumb up at your company can check the connection to Okta.</p>
+        </div>
+
+        <form class="wf-gate__form" action="sign-in-loading.html" method="get">
+          <!-- 3. Work email, the only field, holding what was submitted. It is NOT
+               marked as the fault: this failure came from the provider, not the address -->
+          <label class="wf-label" for="wf-email">Work email</label>
+          <input class="wf-field" id="wf-email" name="email" type="email"
+                 autocomplete="email" value="dana@northwind.com">
+          <!-- 4. Continue with SSO. Retrying is reasonable for this failure, and the
+               gate is the route out: in MVP there is nowhere else to send anybody -->
+          <button class="wf-btn wf-btn--full" type="submit">Continue with SSO</button>
+        </form>
+
+        <!-- 6. The legal line, with the prior agreement clause -->
+        <p class="wf-legal">By signing in you agree to the Terms of Service, unless a prior agreement is in effect.</p>
+      </div>
+
+      <!-- 7. Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Node 1.3, authentication failed, and flow 4 branch Er0, which returns to D1. <strong>The node names three failures whose fix is in a different place each time, and this page renders one of them live: the provider answered and refused.</strong> The other two are the same page with different words in the banner. <strong>The address belongs to no configured workspace:</strong> the banner says that this domain is not set up with Plumb yet, and the fix is their own admin, the person who set Plumb up at their company, who has to add the domain. That row is the real failure of an SSO gate, and naming it is what stops 1.3 being a generic "something went wrong": a wrong password is not available to fail on here, an address that belongs to nobody is. <strong>The provider did not answer:</strong> the banner says we could not reach the provider and that this is not about them, and the fix is with neither side, so waiting is the only honest advice. <strong>The route out is the gate itself, and the gap is named:</strong> support and contact is node 6.7 and it is not in MVP, so the message carries the instruction rather than a link, and it says who at their company can fix it rather than offering us as the fix. The field is not marked as the fault on this page, because on this failure the address was not. Interface wording is draft, stage 05 owns it.</p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

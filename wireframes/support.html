@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A, node 6.7, taken verbatim from the template map in
+     ia/docs/pages/legal-and-content.md. index, follow. -->
+<title>Support and contact at Plumb</title>
+<meta name="description" content="How to reach a person at Plumb, what to expect, and where to report a security issue.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://plumb.app/support">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Support and contact at Plumb">
+<meta property="og:description" content="How to reach a person at Plumb, what to expect, and where to report a security issue.">
+<!-- SEO block D: 6.7 carries ContactPoint inside the Organization already declared at
+     node 6.2. The markup is not emitted in a wireframe, where the structural layer is
+     validated rather than shipped. -->
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: legal-and-content :: to fold into _wf.css
+   The document shell of node 6.4, canonical for 6.4, 6.5 and 6.6, and reused by 6.7 with
+   the rail and the prose column removed, which is the exception the node names. Identical
+   in all five files of this round. Every value goes through a variable except the two
+   recorded in the step 8 report: the 44px target and the rail width. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted); margin-bottom:var(--wf-space-2); }
+.wf-doc{ display:block; }
+.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
+               margin-bottom:var(--wf-space-4); }
+.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
+               margin:var(--wf-space-2) 0 0; }
+.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
+          margin-bottom:var(--wf-space-4); }
+.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+                font-size:var(--wf-size-small); text-decoration:none; }
+.wf-rail__item.is-current{ font-weight:700; }
+.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
+               color:var(--wf-muted); }
+.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
+.wf-prose > h2:first-child{ margin-top:0; }
+.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
+.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
+          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+.wf-mark > :last-child{ margin-bottom:0; }
+.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
+             padding-top:var(--wf-space-3); }
+.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
+.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
+     The rail stays first in the DOM so that it stacks above the prose at 360. */
+  .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
+           gap:var(--wf-space-4); align-items:start; }
+  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
+  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
+            border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
+  .wf-hold{ grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <!-- The exception of this map: 6.7 carries no rail and no prose. It holds a route
+           to a person. The shell around it is the same one -->
+      <div class="wf-doc">
+        <div class="wf-doc__body">
+          <header class="wf-doc__head">
+            <h1>Support and contact</h1>
+          </header>
+
+          <section class="wf-prose">
+            <h2>How do you reach a person?</h2>
+            <p>Write to <b>support@plumb.app</b>, or use the form below. Both arrive in the same place.</p>
+
+            <h2>What happens after you write?</h2>
+            <p>A person answers on working days, and the reply carries their name and the date it was written. There is no queue number and nothing to track.</p>
+
+            <!-- The one form on a page of this type, and the one call to action on all
+                 four pages of the map: it is to reach a person -->
+            <form class="wf-contact" method="post" action="support-sent.html">
+              <h2>Send a message</h2>
+              <p class="wf-formrow">
+                <label for="email">Your email</label>
+                <input class="wf-field" id="email" name="email" type="email" autocomplete="email">
+              </p>
+              <p class="wf-formrow">
+                <label for="message">What you need</label>
+                <textarea class="wf-field" id="message" name="message" rows="5"></textarea>
+              </p>
+              <p class="wf-actions">
+                <button class="wf-btn" type="submit">Send message</button>
+              </p>
+            </form>
+
+            <h2>Where do you report a security issue?</h2>
+            <p>Write to <b>security@plumb.app</b>. That route is always open and does not go through the form above.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.7, default. <strong>The exception of this map, and it is the node's own word:</strong> the one page of the four that is not a document, so it carries no rail and no prose column, and the shell around it is unchanged. Three blocks, in the order the node fixes: an address, what to expect, and the security route that node 6.2 also names. The form is the only form of this page type and the only call to action of the four pages, which is why the other three carry none. <strong>Two decisions taken here and reported upwards:</strong> the last-updated date is not rendered, because the date belongs to the document shell and this page is not a document; and the two addresses are illustrative, in the same sense as the metric on the card. <strong>The dependency the IA records in the direction that matters:</strong> when this page exists, node 1.3, the sign-in failure that today carries an instruction and no link, links here. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes"><span class="wf-caps">When the message is sent</span><a href="support-sent.html">6.7 message sent, confirmation in place</a></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

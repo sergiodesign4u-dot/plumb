@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A, node 6.6, taken verbatim from the template map in
+     ia/docs/pages/legal-and-content.md. index, follow: the buyer's security review asks
+     for this page before anybody logs in. -->
+<title>Terms of service for Plumb</title>
+<meta name="description" content="The terms that govern use of Plumb, including the clause that a prior agreement signed with us takes precedence over these.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://plumb.app/legal/terms">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terms of service for Plumb">
+<meta property="og:description" content="The terms that govern use of Plumb, including the clause that a prior agreement signed with us takes precedence over these.">
+<!-- SEO block D: no structured data on 6.6, for the same reason as 6.5. -->
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: legal-and-content :: to fold into _wf.css
+   The document shell of node 6.4, canonical for 6.4, 6.5 and 6.6, and reused by 6.7 with
+   the rail and the prose column removed, which is the exception the node names. Identical
+   in all five files of this round. Every value goes through a variable except the two
+   recorded in the step 8 report: the 44px target and the rail width. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted); margin-bottom:var(--wf-space-2); }
+.wf-doc{ display:block; }
+.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
+               margin-bottom:var(--wf-space-4); }
+.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
+               margin:var(--wf-space-2) 0 0; }
+.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
+          margin-bottom:var(--wf-space-4); }
+.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+                font-size:var(--wf-size-small); text-decoration:none; }
+.wf-rail__item.is-current{ font-weight:700; }
+.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
+               color:var(--wf-muted); }
+.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
+.wf-prose > h2:first-child{ margin-top:0; }
+.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
+.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
+          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+.wf-mark > :last-child{ margin-bottom:0; }
+.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
+             padding-top:var(--wf-space-3); }
+.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
+.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
+     The rail stays first in the DOM so that it stacks above the prose at 360. */
+  .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
+           gap:var(--wf-space-4); align-items:start; }
+  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
+  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
+            border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
+  .wf-hold{ grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <div class="wf-doc">
+        <!-- The rail. Not navigation: a set of documents. It renders only the targets that
+             exist, so the cookie document, node 7.4, is text and not a link -->
+        <nav class="wf-rail" aria-label="Documents">
+          <p class="wf-caps">Legal and content</p>
+          <a class="wf-rail__item" href="documentation.html">Documentation</a>
+          <a class="wf-rail__item" href="privacy.html">Privacy policy</a>
+          <a class="wf-rail__item is-current" href="terms.html" aria-current="page">Terms of service</a>
+          <a class="wf-rail__item" href="support.html">Support and contact</a>
+          <span class="wf-rail__item wf-pending">Cookie notice</span>
+          <a class="wf-rail__item wf-rail__out" href="product-page.html">What Plumb is</a>
+        </nav>
+
+        <div class="wf-doc__body">
+          <header class="wf-doc__head">
+            <!-- Breadcrumbs from the URL table: Legal is the shared parent of two
+                 documents and has no page of its own, so it is text -->
+            <p class="wf-crumb"><span class="wf-pending">Legal</span> &rsaquo; Terms of service</p>
+            <h1>Terms of service</h1>
+            <p class="wf-doc__date">Last updated 12 August 2026</p>
+          </header>
+
+          <!-- Standard US B2B terms on the shell, with the date. The one structural note
+               the IA fixes is the prior-agreement clause, because node 1.1 already
+               carries it and the two places have to agree -->
+          <section class="wf-prose">
+            <h2>Which agreement takes precedence?</h2>
+            <p>If a prior agreement is in effect between your company and Plumb, that agreement takes precedence over these terms. In this market the contract is usually signed before anybody logs in, and the sign-in screen carries the same clause in the same words.</p>
+
+            <!-- SEO block C: 6.6 carries a marker instead of copy. The legal body is
+                 counsel's deliverable and this stage may not draft it -->
+            <div class="wf-mark">
+              <p class="wf-caps">Placeholder, not copy</p>
+              <p>The body of these terms is counsel's deliverable and is not drafted at this stage. What is fixed here is the shell it arrives on: one H1 with the document's name, the last-updated date directly under it, the rail to the other documents, and one column of prose capped for reading.</p>
+              <p>The section headings of the finished document are written as questions wherever the content allows it, which is the rule this map applies to all four pages.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.6, default, the only state, MVP. <strong>The same shell as 6.4 and 6.5, and the only page of the three where nearly everything on the screen is a placeholder by instruction:</strong> the legal text is counsel's deliverable, and inventing it here would produce something that reads like a document and binds nobody. What this stage does own is on the screen: the shell, the date under the title, the question-shaped headings and the crawlable rail. <strong>One structural note is rendered rather than deferred,</strong> the prior-agreement clause, because node 1.1 states it at sign-in and two surfaces saying different things about which contract wins is the failure this note prevents. No call to action, by the node's refusal. Interface wording is draft, stage 05 owns it.</p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

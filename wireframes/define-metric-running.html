@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New metric, running - Plumb</title>
+<!-- SEO layer 2, validation only. Node 4.4: noindex, no schema and no SEO text, because
+     this page is private and transactional and nothing on it is ours to publish.
+     nofollow because every link leaving it goes to another screen behind sign-in.
+     No og tags: a private form has no unfurl. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: define-metric :: to fold into _wf.css */
+/* Node 4.4 with 4.5, 4.6 and 4.7. Form furniture no earlier screen needed: the reader's
+   card carries no fields at all. Every value goes through a token, and every rule here
+   appears on all four pages of this node, so the reconcile pass moves the whole block. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted);
+           margin-bottom:var(--wf-space-2); }
+.wf-form{ margin-top:var(--wf-space-4); }
+.wf-fld{ margin-bottom:var(--wf-space-3); }
+.wf-fld > label{ display:block; font-size:var(--wf-size-caps); color:var(--wf-muted);
+                 margin-bottom:var(--wf-space-1); }
+.wf-fld > label b{ font-size:var(--wf-size-body); color:var(--wf-ink); }
+.wf-hint{ font-size:var(--wf-size-small); color:var(--wf-muted);
+          margin:var(--wf-space-1) 0 0; max-width:var(--wf-measure); }
+/* A failure message is told apart by its words and its place, never by hue: it sits on
+   the field that caused it and it is the one hint on the page in full ink. */
+.wf-hint--bad{ color:var(--wf-ink); font-weight:600; }
+/* The definition area is the largest field on the page, and that size is a statement
+   about which field matters. Its height comes from rows in the markup, not from here. */
+.wf-field--big{ resize:vertical; line-height:var(--wf-line); }
+.wf-field--code{ font-family:var(--wf-mono); font-size:var(--wf-size-small);
+                 background:var(--wf-panel); resize:vertical; }
+.wf-field--bad{ border-color:var(--wf-ink); border-width:2px; }
+/* Banner, node 4.4 components: error at the top of the form, info stating a
+   consequence. Never a toast, by node 0.3: what belongs to the thing on screen stays
+   on screen. Solid is the failed attempt, dashed is the consequence of saving. */
+.wf-banner{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+            padding:var(--wf-space-2) var(--wf-space-3);
+            margin:var(--wf-space-4) 0; max-width:var(--wf-measure); }
+.wf-banner--info{ border-style:dashed; }
+.wf-banner p{ margin:0; }
+/* 4.5: progress in place, on the field being tried, not a modal and not a progress bar. */
+.wf-run{ border:1px dashed var(--wf-ink); background:var(--wf-surface);
+         padding:var(--wf-space-2) var(--wf-space-3); margin-top:var(--wf-space-2);
+         color:var(--wf-muted); }
+.wf-run b{ display:block; color:var(--wf-ink); }
+/* 4.7: one previous version and only one. Stacked at 360, beside the current text from
+   700px. This is the one place the form goes to two columns, and it puts the definition
+   next to the definition, never next to the query. */
+.wf-versions{ display:grid; gap:var(--wf-space-2); align-items:start; }
+@media (min-width:700px){ .wf-versions{ grid-template-columns:1fr 1fr; } }
+.wf-prev{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+          padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-prev p{ margin:0; }
+.wf-prev .wf-caps{ margin-bottom:var(--wf-space-1); }
+/* Run then Save, sticky so both stay reachable over a long query. Delete sits at the
+   far end of the same row, which is the whole point of the spacer. */
+.wf-formacts{ position:sticky; bottom:0; z-index:1; background:var(--wf-ground);
+              border-top:1px solid var(--wf-rule-strong);
+              padding:var(--wf-space-3) 0; margin-top:var(--wf-space-4);
+              display:flex; gap:var(--wf-space-2); flex-wrap:wrap; align-items:center; }
+.wf-formacts__gap{ flex:1; }
+.wf-btn--danger{ border-style:dashed; }
+.wf-btn[disabled]{ color:var(--wf-muted); border-color:var(--wf-rule-strong);
+                   cursor:not-allowed; }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+      <!-- Node 0.1, the analyst's header. Rendered by the global component -->
+      <div id="wf-header"></div>
+
+      <nav class="wf-crumb" aria-label="Breadcrumb">
+        <a href="metric-registry.html">Metrics</a> &gt; New metric
+      </nav>
+      <h1>New metric</h1>
+
+      <!-- 4.5. The form stays filled and visible. Nothing is disabled that does not have
+           to be, nothing is covered, and there is no modal over a one step form -->
+      <form class="wf-form">
+        <div class="wf-fld">
+          <label for="f-name"><b>Name</b></label>
+          <input class="wf-field" id="f-name" name="name" type="text" value="Weekly active accounts">
+        </div>
+
+        <div class="wf-fld">
+          <label for="f-def"><b>What this metric means</b></label>
+          <textarea class="wf-field wf-field--big" id="f-def" name="definition" rows="4" required>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</textarea>
+          <p class="wf-hint">This is what the reader sees. Write it for somebody who did not build it.</p>
+        </div>
+
+        <div class="wf-fld">
+          <label for="f-owner"><b>Owner</b></label>
+          <input class="wf-field" id="f-owner" name="owner" type="text" value="Dana Reyes">
+          <p class="wf-hint">Their name and the date appear on every card for this metric. It can be somebody other than you.</p>
+        </div>
+
+        <div class="wf-fld">
+          <label for="f-source"><b>Source</b></label>
+          <select class="wf-field" id="f-source" name="source">
+            <option selected>Snowflake, ANALYTICS.PROD</option>
+          </select>
+        </div>
+
+        <div class="wf-fld">
+          <label for="f-query"><b>Query</b> <span>returns one value</span></label>
+          <textarea class="wf-field wf-field--code" id="f-query" name="query" rows="3" spellcheck="false">select count(distinct account_id) from fact_sessions where ts &gt; dateadd(day, -7, current_date)</textarea>
+          <!-- Progress in place, on the field being tried, naming what is being tried -->
+          <p class="wf-run" role="status" aria-live="polite">
+            <b>Asking Snowflake, ANALYTICS.PROD, now.</b>
+            <span>Checking that the query comes back with one value.</span>
+          </p>
+        </div>
+
+        <p class="wf-hint">Run the definition once before saving it.</p>
+        <div class="wf-formacts">
+          <button class="wf-btn" type="button" disabled>Running</button>
+          <button class="wf-btn" type="submit" disabled>Save</button>
+          <span class="wf-formacts__gap"></span>
+        </div>
+      </form>
+
+      <div id="wf-footer" data-variant="app"></div>
+    </main>
+
+    <p class="wf-note">Node 4.5, the definition runs against the source. <strong>Progress in place, and it names what is being tried</strong>: which source is being asked and what is being checked. Not a modal, and not a progress bar over a one step form, because a bar measures a thing with parts and this has one part. The form stays filled and visible: nothing is greyed out, nothing is covered, and an analyst who sees a typo while the query is running can still read the whole form. The message sits on the query field rather than at the top, so the place that reports progress is the same place that will report a failure at 4.6. Only the two buttons are held, because pressing Run twice against a warehouse is the one thing the screen has to prevent. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes"><span class="wf-caps">Prototype only, this state resolves into</span><a href="define-metric-error.html">4.6 the definition does not run</a><a href="metric-registry.html">it ran, save returns to the registry with the analyst's toast</a></div>
+    <div class="wf-routes"><span class="wf-caps">Back to</span><a href="define-metric.html">4.4 the form</a></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

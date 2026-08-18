@@ -20,15 +20,15 @@
      status  'built' when the screen and all its listed states exist, else 'spec' */
 
 window.WF_NAV = [
-  { cluster:'0. Global frame', kind:'component', label:'Global navigation', node:'0.1', scope:'MVP', file:null, spec:'navigation.html', states:[], status:'spec' },
-  { cluster:'0. Global frame', kind:'component', label:'Footer', node:'0.2', scope:'MVP', file:null, spec:'footer.html', states:[], status:'spec' },
-  { cluster:'0. Global frame', kind:'component', label:'Toast and inline feedback', node:'0.3', scope:'MVP', file:null, spec:'toasts.html', states:[], status:'spec' },
-  { cluster:'0. Global frame', kind:'component', label:'State vocabulary', node:'0.4', scope:'MVP', file:null, spec:'state-vocabulary.html', states:[], status:'spec' },
+  { cluster:'0. Global frame', kind:'component', label:'Global navigation', node:'0.1', scope:'MVP', file:null, spec:'navigation.html', status:'spec', states:[] },
+  { cluster:'0. Global frame', kind:'component', label:'Footer', node:'0.2', scope:'MVP', file:null, spec:'footer.html', status:'spec', states:[] },
+  { cluster:'0. Global frame', kind:'component', label:'Toast and inline feedback', node:'0.3', scope:'MVP', file:null, spec:'toasts.html', status:'spec', states:[] },
+  { cluster:'0. Global frame', kind:'component', label:'State vocabulary', node:'0.4', scope:'MVP', file:null, spec:'state-vocabulary.html', status:'spec', states:[] },
 
-  { cluster:'1. Sign in', label:'Sign in through SSO', node:'1.1', scope:'MVP', file:null, spec:'sign-in.html', status:'spec', states:[
-    { label:'Loading: the provider answers', node:'1.2', file:null },
-    { label:'Error: authentication failed', node:'1.3', file:null }
-  ]},
+  { cluster:'1. Sign in', label:'Sign in through SSO', node:'1.1', scope:'MVP', file:'sign-in.html', spec:'sign-in.html', status:'built', states:[
+    { label:'Loading: the provider answers', node:'1.2', file:'sign-in-loading.html' },
+    { label:'Error: authentication failed', node:'1.3', file:'sign-in-error.html' }
+  ] },
 
   { cluster:'2. The number card', label:'The number card', node:'2.1', scope:'MVP', file:'number-card.html', spec:'number-card.html', status:'built', flow:1, states:[
     { label:'Loading: the value is queried', node:'2.2', file:'number-card-loading.html' },
@@ -40,51 +40,63 @@ window.WF_NAV = [
     { label:'Source down and changed', node:'2.4 + 2.5', file:'number-card-down-and-changed.html' },
     { label:'Empty and changed', node:'2.6 + 2.5', file:'number-card-empty-and-changed.html' },
     { label:'Not readable without an account', node:'2.9', file:null, deferred:true }
-  ]},
+  ] },
   { cluster:'2. The number card', label:'Where this number came from', node:'2.7', scope:'MVP', file:'source-layer.html', spec:'source-layer.html', status:'built', flow:1, states:[
     { label:'Open while the source is down', node:'2.7', file:'source-layer-source-down.html' },
     { label:'Open on a bare URL', node:'2.7', file:'source-layer-bare-url.html' },
     { label:'Open with restricted visibility', node:'2.7', file:null, deferred:true }
-  ]},
+  ] },
   { cluster:'2. The number card', label:'Send this number', node:'2.8', scope:'MVP', file:'send.html', spec:'send.html', status:'built', flow:1, states:[
     { label:'Copied', node:'0.3', file:'send-copied.html' },
     { label:'Clipboard unavailable', node:'2.8', file:'send-clipboard-unavailable.html' },
     { label:'Sending a card that is down', node:'2.4', file:'send-source-down.html' }
-  ]},
+  ] },
 
-  { cluster:'3. Sources', label:'Sources', node:'3.1', scope:'MVP', file:null, spec:'sources.html', status:'spec', states:[
-    { label:'Empty: no sources connected', node:'3.5', file:null }
-  ]},
-  { cluster:'3. Sources', label:'Connect a source', node:'3.2', scope:'MVP', file:null, spec:'connect-source.html', status:'spec', states:[
-    { label:'Loading: testing the connection', node:'3.3', file:null },
-    { label:'Error: connection failed', node:'3.4', file:null }
-  ]},
+  { cluster:'3. Sources', label:'Sources', node:'3.1', scope:'MVP', file:'sources.html', spec:'sources.html', status:'built', states:[
+    { label:'Empty: no sources connected', node:'3.5', file:'sources-empty.html' }
+  ] },
+  { cluster:'3. Sources', label:'Connect a source', node:'3.2', scope:'MVP', file:'connect-source.html', spec:'connect-source.html', status:'built', states:[
+    { label:'Loading: testing the connection', node:'3.3', file:'connect-source-testing.html' },
+    { label:'Error: connection failed', node:'3.4', file:'connect-source-error.html' }
+  ] },
 
-  { cluster:'4. Registry and definition', label:'Metric registry', node:'4.1', scope:'MVP', file:null, spec:'metric-registry.html', status:'spec', states:[
-    { label:'Empty: no metrics yet', node:'4.2', file:null },
-    { label:'Search results', node:'4.3', file:null }
-  ]},
-  { cluster:'4. Registry and definition', label:'Define a metric', node:'4.4', scope:'MVP', file:null, spec:'define-metric.html', status:'spec', states:[
-    { label:'Loading: the definition runs', node:'4.5', file:null },
-    { label:'Error: the definition does not run', node:'4.6', file:null },
-    { label:'Editing, previous version retained', node:'4.7', file:null }
-  ]},
+  { cluster:'4. Registry and definition', label:'Metric registry', node:'4.1', scope:'MVP', file:'metric-registry.html', spec:'metric-registry.html', status:'built', states:[
+    { label:'Empty: no metrics yet', node:'4.2', file:'metric-registry-empty.html' },
+    { label:'Search results', node:'4.3', file:'metric-registry-search.html' }
+  ] },
+  { cluster:'4. Registry and definition', label:'Define a metric', node:'4.4', scope:'MVP', file:'define-metric.html', spec:'define-metric.html', status:'built', states:[
+    { label:'Loading: the definition runs', node:'4.5', file:'define-metric-running.html' },
+    { label:'Error: the definition does not run', node:'4.6', file:'define-metric-error.html' },
+    { label:'Editing, previous version retained', node:'4.7', file:'define-metric-editing.html' }
+  ] },
 
-  { cluster:'5. Workspace', label:'Workspace and people', node:'5.1', scope:'ПОТІМ', file:null, spec:'workspace.html', states:[], status:'spec' },
-  { cluster:'5. Workspace', label:'Plan and seats', node:'5.2', scope:'ПОТІМ', file:null, spec:'workspace.html', states:[], status:'spec' },
+  { cluster:'5. Workspace', label:'Workspace and people', node:'5.1', scope:'ПОТІМ', file:'workspace.html', spec:'workspace.html', status:'built', states:[
+    { label:'The last administrator', node:'5.1', file:'workspace-last-admin.html' },
+    { label:'Invitation pending', node:'5.1', file:'workspace-invitation-pending.html' },
+    { label:'No seats left', node:'5.1', file:'workspace-no-seats.html' }
+  ] },
+  { cluster:'5. Workspace', label:'Plan and seats', node:'5.2', scope:'ПОТІМ', file:'plan-and-seats.html', spec:'workspace.html', status:'built', states:[] },
 
-  { cluster:'6. Public surface', label:'Product page', node:'6.1', scope:'MVP', file:null, spec:'product-page.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Privacy policy', node:'6.5', scope:'MVP', file:null, spec:'legal-and-content.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Terms of service', node:'6.6', scope:'MVP', file:null, spec:'legal-and-content.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Trust and security', node:'6.2', scope:'ПОТІМ', file:null, spec:'trust-security.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Pricing', node:'6.3', scope:'ПОТІМ', file:null, spec:'pricing.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Documentation', node:'6.4', scope:'ПОТІМ', file:null, spec:'legal-and-content.html', states:[], status:'spec' },
-  { cluster:'6. Public surface', label:'Support and contact', node:'6.7', scope:'ПОТІМ', file:null, spec:'legal-and-content.html', states:[], status:'spec' },
+  { cluster:'6. Public surface', label:'Product page', node:'6.1', scope:'MVP', file:'product-page.html', spec:'product-page.html', status:'built', states:[
+    { label:'Signed in, analyst', node:'6.1', file:'product-page-analyst.html' },
+    { label:'Signed in, no workspace', node:'6.1', file:'product-page-no-workspace.html' },
+    { label:'The live card cannot load', node:'2.4', file:'product-page-card-down.html' }
+  ] },
+  { cluster:'6. Public surface', label:'Privacy policy', node:'6.5', scope:'MVP', file:'privacy.html', spec:'legal-and-content.html', status:'built', states:[] },
+  { cluster:'6. Public surface', label:'Terms of service', node:'6.6', scope:'MVP', file:'terms.html', spec:'legal-and-content.html', status:'built', states:[] },
+  { cluster:'6. Public surface', label:'Trust and security', node:'6.2', scope:'ПОТІМ', file:'trust-security.html', spec:'trust-security.html', status:'built', states:[
+    { label:'A document is requested', node:'6.2', file:'trust-security-document.html' }
+  ] },
+  { cluster:'6. Public surface', label:'Pricing', node:'6.3', scope:'ПОТІМ', file:'pricing.html', spec:'pricing.html', status:'built', states:[] },
+  { cluster:'6. Public surface', label:'Documentation', node:'6.4', scope:'ПОТІМ', file:'documentation.html', spec:'legal-and-content.html', status:'built', states:[] },
+  { cluster:'6. Public surface', label:'Support and contact', node:'6.7', scope:'ПОТІМ', file:'support.html', spec:'legal-and-content.html', status:'built', states:[
+    { label:'Message sent', node:'0.3', file:'support-sent.html' }
+  ] },
 
-  { cluster:'7. System nodes', label:'404', node:'7.1', scope:'MVP', file:null, spec:'system-pages.html', states:[], status:'spec' },
-  { cluster:'7. System nodes', label:'500', node:'7.2', scope:'MVP', file:null, spec:'system-pages.html', states:[], status:'spec' },
-  { cluster:'7. System nodes', label:'Maintenance', node:'7.3', scope:'ПОТІМ', file:null, spec:'system-pages.html', states:[], status:'spec' },
-  { cluster:'7. System nodes', label:'Cookie notice', node:'7.4', scope:'ПОТІМ', file:null, spec:'system-pages.html', states:[], status:'spec' }
+  { cluster:'7. System nodes', label:'404', node:'7.1', scope:'MVP', file:'error-404.html', spec:'system-pages.html', status:'built', states:[] },
+  { cluster:'7. System nodes', label:'500', node:'7.2', scope:'MVP', file:'error-500.html', spec:'system-pages.html', status:'built', states:[] },
+  { cluster:'7. System nodes', label:'Maintenance', node:'7.3', scope:'ПОТІМ', file:'maintenance.html', spec:'system-pages.html', status:'built', states:[] },
+  { cluster:'7. System nodes', label:'Cookie notice', node:'7.4', scope:'ПОТІМ', file:'cookie-notice.html', spec:'system-pages.html', status:'built', states:[] }
 ];
 
 /* The flows of the product, from ia/docs/flows.md. Screens are named by node so that a
@@ -146,34 +158,77 @@ window.WF_GLOBALS = {
     mount.appendChild(h);
   },
 
-  /* The minimal footer variant: the only global surface a reader ever sees. It renders a
-     target as a LINK when that screen exists in the registry and as TEXT when it does
-     not, which is the IA rule about navigational elements applied automatically instead
-     of remembered by hand. */
-  footer: function (mount) {
-    var trust = 'Plumb stores definitions, owners and lineage. Never your data rows: ' +
-                'this number was queried from your source when you opened the page.';
-    var targets = [
-      { node:'6.1', label:'What Plumb is' },
-      { node:'6.5', label:'Privacy' },
-      { node:'6.6', label:'Terms' }
-    ];
-    var f = document.createElement('footer');
-    f.className = 'wf-footer';
-    var t = document.createElement('span');
-    t.textContent = trust;
-    f.appendChild(t);
-    var links = document.createElement('span');
-    links.className = 'wf-footer__links';
-    targets.forEach(function (t2) {
-      var s2 = (window.WF_NAV || []).filter(function (x) { return x.node === t2.node; })[0];
+  /* Node 0.2 defines THREE footer variants and the mount says which one it wants through
+     data-variant. The fan-out found this the hard way: six screens in a row either shipped
+     the reader's trust line under an analyst's settings form or refused to render a footer
+     at all. A component that knows one variant is a component that lies on two thirds of
+     the product.
+
+       minimal  the reader's card and its states. Trust line, and the three routes a
+                stranger may need. The only footer a reader ever sees
+       app      behind sign-in. The bottom line only: the analyst has navigation and does
+                not need a second one
+       full     the public surface. Trust strip, link columns, the bottom line
+
+     Every target is a LINK when that screen exists in the registry and TEXT when it does
+     not, which is the IA rule about navigational elements applied automatically rather
+     than remembered by hand. */
+  footer: function (mount, variant) {
+    variant = variant || mount.getAttribute('data-variant') || 'minimal';
+
+    function target(node, label) {
+      var s2 = (window.WF_NAV || []).filter(function (x) { return x.node === node; })[0];
       var e;
       if (s2 && s2.file) { e = document.createElement('a'); e.href = s2.file; }
       else { e = document.createElement('span'); e.className = 'wf-pending'; }
-      e.textContent = t2.label;
-      links.appendChild(e);
-    });
-    f.appendChild(links);
+      e.textContent = label;
+      return e;
+    }
+    function line(text, cls) {
+      var e = document.createElement('span');
+      if (cls) e.className = cls;
+      e.textContent = text;
+      return e;
+    }
+    function column(title, targets) {
+      var c = document.createElement('div');
+      c.className = 'wf-footer__col';
+      c.appendChild(line(title, 'wf-caps'));
+      targets.forEach(function (t) { c.appendChild(target(t[0], t[1])); });
+      return c;
+    }
+
+    var f = document.createElement('footer');
+    f.className = 'wf-footer wf-footer--' + variant;
+
+    if (variant === 'app') {
+      f.appendChild(line('Plumb'));
+      f.appendChild(line('2026'));
+      mount.appendChild(f);
+      return;
+    }
+
+    f.appendChild(line('Plumb stores definitions, owners and lineage. Never your data rows: ' +
+                       (variant === 'full'
+                        ? 'a number is queried from your source at the moment it is read.'
+                        : 'this number was queried from your source when you opened the page.')));
+
+    if (variant === 'full') {
+      var cols = document.createElement('div');
+      cols.className = 'wf-footer__cols';
+      cols.appendChild(column('Product', [['6.1', 'What Plumb is'], ['6.3', 'Pricing'], ['6.4', 'Documentation']]));
+      cols.appendChild(column('Trust and legal', [['6.2', 'Trust and security'], ['6.5', 'Privacy'], ['6.6', 'Terms']]));
+      cols.appendChild(column('Support', [['6.7', 'Support and contact']]));
+      f.appendChild(cols);
+      f.appendChild(line('Plumb, 2026'));
+    } else {
+      var links = document.createElement('span');
+      links.className = 'wf-footer__links';
+      [['6.1', 'What Plumb is'], ['6.5', 'Privacy'], ['6.6', 'Terms']].forEach(function (t) {
+        links.appendChild(target(t[0], t[1]));
+      });
+      f.appendChild(links);
+    }
     mount.appendChild(f);
   }
 };

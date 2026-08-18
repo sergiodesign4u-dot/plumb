@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>People - Plumb</title>
+<!-- SEO layer 2, validation only. From the SEO block of the node: noindex, no schema,
+     no SEO text. This is a PRIVATE zone behind sign-in and it names the customer's
+     employees, so nofollow goes with it and the page carries no unfurl tags at all:
+     an unfurl of a settings page would put those names into a chat window. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: workspace :: to fold into _wf.css
+   Nodes 5.1 and 5.2, one settings shell, five pages. Every value goes through a token.
+   Two literals survive and both are reported: 44px, the touch target already written as
+   a literal in .wf-header__nav of _wf.css, and the comma that joins role to status when
+   a member row becomes two lines on a phone. */
+
+/* Breadcrumb of the private zone. Settings > People and Settings > Plan, per the node. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted);
+           margin-bottom:var(--wf-space-3); }
+.wf-crumb b{ color:var(--wf-ink); font-weight:600; }
+
+/* The settings shell, node 5.1. Canonical: the only private multi-section zone in the
+   product, and 5.1 and 5.2 are two sections of it rather than two pages designed twice.
+   Exactly two items. At 360 they sit above the panel, from 700 beside it. */
+.wf-settings__rail{ display:flex; gap:var(--wf-space-3);
+                    border-bottom:1px solid var(--wf-rule);
+                    margin-bottom:var(--wf-space-4); }
+.wf-settings__item{ display:inline-block; min-height:44px; line-height:44px;
+                    text-decoration:none; color:var(--wf-muted); }
+.wf-settings__item[aria-current="page"]{ color:var(--wf-ink); font-weight:700; }
+.wf-settings__panel{ min-width:0; }
+.wf-settings__panel > h1{ margin-bottom:var(--wf-space-4); }
+.wf-set-block{ margin-bottom:var(--wf-space-5); }
+.wf-set-block > h2{ margin-bottom:var(--wf-space-2); }
+@media (min-width:700px){
+  .wf-settings{ display:grid; grid-template-columns:max-content 1fr;
+                gap:var(--wf-space-4); align-items:start; }
+  .wf-settings__rail{ display:block; border-bottom:0; margin:0;
+                      border-right:1px solid var(--wf-rule);
+                      padding-right:var(--wf-space-3); }
+  .wf-settings__item{ display:block; min-height:0; line-height:var(--wf-line);
+                      padding:var(--wf-space-2) 0; }
+}
+
+/* Invite row, node 5.1 block 1. Inline and never a dialog, and it carries no
+   per-permission options: row level permissions are out of scope and a matrix here
+   would promise them. */
+.wf-invite{ display:grid; gap:var(--wf-space-2); }
+.wf-invite label{ display:block; }
+.wf-invite .wf-caps{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  .wf-invite{ grid-template-columns:1fr max-content max-content; align-items:end; }
+}
+
+/* A refusal that is inline and blocking, per node 0.3: what belongs to the thing on
+   screen stays on screen. It sits at the row or at the invite row, before the action,
+   and it is never a toast fired after one. */
+.wf-blocked{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+             padding:var(--wf-space-2) var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-blocked p{ margin:0; max-width:var(--wf-measure); }
+.wf-blocked p + p{ margin-top:var(--wf-space-1); }
+
+/* A control that is refused stays visible and stays legible. It goes dashed rather than
+   disappearing, because a control that disappears takes its reason with it. */
+.wf-btn[disabled]{ border-style:dashed; color:var(--wf-muted); cursor:not-allowed; }
+
+/* Seat counter, node 5.1 block 3 and node 5.2 block 1. One component in both sections:
+   we charge for analysts and not for readers, so the count has to be visible where
+   somebody is added, or the price is discovered on an invoice a month later. */
+.wf-seats{ border:1px dashed var(--wf-ink);
+           padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-seats p{ margin:0; max-width:var(--wf-measure); }
+.wf-seats p + p{ margin-top:var(--wf-space-1); }
+.wf-seats__count{ font-weight:700; }
+.wf-seats .wf-caps{ margin-bottom:var(--wf-space-1); }
+
+/* Members table, node 5.1 block 2. Not the listing of node 4.1: that one carries state
+   and age, this one carries people. At 360 a row is two lines, from 700 it is a table.
+   There is no reader row here by construction: a reader has no account, so they cannot
+   be a member of anything, and there is no 2FA column because we do not hold identity. */
+.wf-members{ width:100%; border-collapse:collapse; }
+.wf-members thead{ display:none; }
+.wf-members tbody{ display:block; }
+.wf-members tr{ display:block; border-bottom:1px solid var(--wf-rule);
+                padding:var(--wf-space-2) 0; }
+.wf-members td{ display:inline; padding:0; border:0; }
+.wf-members__person{ display:block; font-weight:600; }
+.wf-members__role, .wf-members__status{ color:var(--wf-muted); }
+.wf-members__role::after{ content:","; }
+.wf-members__act{ margin-left:var(--wf-space-2); }
+.wf-members__reason{ display:block; }
+@media (min-width:700px){
+  .wf-members thead{ display:table-header-group; }
+  .wf-members tbody{ display:table-row-group; }
+  .wf-members th{ text-align:left; padding:0 var(--wf-space-3) var(--wf-space-1) 0;
+                  border-bottom:1px solid var(--wf-ink); }
+  .wf-members tr{ display:table-row; padding:0; border:0; }
+  .wf-members td{ display:table-cell; vertical-align:baseline;
+                  padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
+                  border-bottom:1px solid var(--wf-rule); }
+  .wf-members__role, .wf-members__status{ color:var(--wf-ink); }
+  .wf-members__role::after{ content:none; }
+  .wf-members__act{ margin-left:0; }
+  .wf-members__reason{ display:table-cell; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <!-- Node 0.1, the analyst's header, rendered by the global component. Note what it
+           does NOT carry: in the MVP the account corner offers sign out only, so this
+           screen has no route pointing at it. That is the IA rule about a navigational
+           element rendering only the targets that exist in the current scope, and it is
+           correct rather than a gap to be patched here. -->
+      <div id="wf-header"></div>
+
+      <nav class="wf-crumb" aria-label="Breadcrumb">Settings <span aria-hidden="true">&rsaquo;</span> <b>People</b></nav>
+
+      <div class="wf-settings">
+        <!-- The settings shell, defined once at node 5.1 and identical on 5.2. Exactly
+             two items: a third would be invented from other people's menus. -->
+        <nav class="wf-settings__rail" aria-label="Settings sections">
+          <a class="wf-settings__item" aria-current="page" href="workspace.html">People</a>
+          <a class="wf-settings__item" href="plan-and-seats.html">Plan and seats</a>
+        </nav>
+
+        <section class="wf-settings__panel">
+          <h1>People</h1>
+
+          <!-- Block 1. Invite row: email plus role, one action. Inline, not a dialog -->
+          <section class="wf-set-block">
+            <h2 class="wf-caps">Invite someone</h2>
+            <form class="wf-invite" action="#" method="post">
+              <label>
+                <span class="wf-caps">Email address</span>
+                <input class="wf-field" type="email" name="email" placeholder="name@company.com" autocomplete="off">
+              </label>
+              <label>
+                <span class="wf-caps">Role</span>
+                <select class="wf-field" name="role">
+                  <option>Analyst</option>
+                  <option>Admin</option>
+                </select>
+              </label>
+              <button class="wf-btn" type="submit">Invite</button>
+            </form>
+          </section>
+
+          <!-- Block 2. Members table: person, role, status. One table and one table only:
+               an invitation is a row with a status, never a second list underneath. -->
+          <section class="wf-set-block">
+            <h2 class="wf-caps">Members</h2>
+            <table class="wf-members">
+              <thead>
+                <tr>
+                  <th class="wf-caps" scope="col">Person</th>
+                  <th class="wf-caps" scope="col">Role</th>
+                  <th class="wf-caps" scope="col">Status</th>
+                  <th class="wf-caps" scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="wf-members__person">Dana Reyes</td>
+                <td class="wf-members__role">Admin</td>
+                <td class="wf-members__status">Active</td>
+                <td class="wf-members__act"><button class="wf-btn wf-btn--quiet" type="button">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="wf-members__person">Priya Raman</td>
+                <td class="wf-members__role">Analyst</td>
+                <td class="wf-members__status">Active</td>
+                <td class="wf-members__act"><button class="wf-btn wf-btn--quiet" type="button">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="wf-members__person">Marcus Hale</td>
+                <td class="wf-members__role">Analyst</td>
+                <td class="wf-members__status">Active</td>
+                <td class="wf-members__act"><button class="wf-btn wf-btn--quiet" type="button">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="wf-members__person">sam@northwind.com</td>
+                <td class="wf-members__role">Analyst</td>
+                <td class="wf-members__status">Invited 12 August</td>
+                <td class="wf-members__act"><button class="wf-btn wf-btn--quiet" type="button">Cancel invitation</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <!-- Block 3. Seats used and available. The join to 5.2, and the same component -->
+          <section class="wf-set-block">
+            <h2 class="wf-caps">Seats</h2>
+            <div class="wf-seats">
+              <p class="wf-seats__count">4 of 5 seats used</p>
+              <p class="wf-muted">Readers are not seats and are never counted here.</p>
+              <p class="wf-muted">An invitation holds a seat until it is accepted.</p>
+              <p><a href="plan-and-seats.html">Plan and seats</a></p>
+            </div>
+          </section>
+        </section>
+      </div>
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="app"></div>
+    </main>
+
+    <p class="wf-note">Node 5.1, invitation pending. <strong>The row exists with its status, in the same table, and it is not a second list.</strong> A pending invitation shown in its own box below the members is how a workspace ends up with two places to look for one person, and the node forbids it in one line. The person cell carries the email address because that is all we have until the invitation is accepted, and the seat count moves with it: an invitation holds a seat, which is why the count reads four while three people have signed in. <strong>That arithmetic is read off the IA mockup</strong>, which shows three of five against two active members and one invited, rather than decided here. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes"><span class="wf-caps">States of node 5.1</span><a href="workspace.html">Members listed</a><a href="workspace-last-admin.html">The last administrator</a><a href="workspace-invitation-pending.html">Invitation pending</a><a href="workspace-no-seats.html">No seats left</a><span class="wf-caps">Back into the product</span><a href="metric-registry.html">Metrics, node 4.1</a><a href="sources.html">Sources, node 3.1</a></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

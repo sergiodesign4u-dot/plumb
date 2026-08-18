@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>There is no number at this link - Plumb</title>
+<!-- SEO layer 2, validation only. Node 7.1: noindex because an error page that gets
+     indexed competes with real pages, follow so that a crawler landing here walks out
+     through the footer instead of stopping. No canonical, no schema, no SEO text.
+     Production serves this at whatever address failed, with a real HTTP 404. A soft 404
+     returning 200 is refused by name at the node. -->
+<meta name="robots" content="noindex, follow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: system-pages :: to fold into _wf.css */
+/* The error page, node 7.1. Canonical here and shared by 7.2 and 7.3: one centred
+   column, capped, and it barely changes at width. .wf-screen already centres and caps,
+   so this only narrows the text to a readable measure. */
+.sys{ max-width:var(--wf-measure); }
+.sys__lead{ font-size:var(--wf-size-h2); }
+/* Block 2 of 7.1 and 7.2: trouble named in words rather than raised as an alarm. Marked
+   by a left rule, the only 2px rule in the prototype, because at 1px it reads as one
+   more paragraph edge instead of the block carrying the honest statement. */
+.sys__said{ border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-3);
+            margin:var(--wf-space-3) 0 var(--wf-space-4); }
+.sys__said p:last-child{ margin-bottom:0; }
+/* The tombstone. Three fields and nothing else, bordered because it is an object rather
+   than a sentence about the page. */
+.sys__tomb{ border:1px solid var(--wf-rule-strong); padding:var(--wf-space-3);
+            margin:var(--wf-space-3) 0; }
+.sys__tomb p:last-child{ margin-bottom:0; }
+/* The role split, node 7.1, which renders two ways from one node. There is no analyst
+   header on this page: the difference between the two renderings is the ROUTE, so the
+   signed-in route is rendered with the condition that shows it. */
+.sys__role{ border-top:1px dashed var(--wf-rule-dashed); margin-top:var(--wf-space-4);
+            padding-top:var(--wf-space-2); }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <section class="sys">
+        <!-- 1. What was expected at this address, in words. The only H1 on the page:
+             the node refuses "Page Not Found" as an H2 with no H1 above it -->
+        <h1>There is no number at this link</h1>
+        <p class="sys__lead">A number card was expected at this address.</p>
+
+        <!-- 2. The two honest causes, named without choosing between them and without
+             blaming the person who followed the link -->
+        <div class="sys__said">
+          <p><strong>Two things could have happened.</strong></p>
+          <p>The link may have expired, or the metric may have been removed. We cannot tell which from here.</p>
+        </div>
+
+        <!-- 3. The one thing that can actually be done, and the tombstone is what stops
+             it being a shrug: the name it had, its owner, the date it was removed -->
+        <div class="sys__tomb">
+          <p class="wf-caps">The metric that was here</p>
+          <p><strong>Weekly active accounts</strong></p>
+          <p>Removed by Dana Reyes on 3 August.</p>
+          <p class="wf-muted">She declared this metric, so she is the person to ask.</p>
+        </div>
+
+        <!-- The second rendering of the same node. Signed in, the analyst keeps their
+             navigation and gets the registry; signed out there is no button at all,
+             because the honest act is to ask whoever sent the link -->
+        <div class="sys__role">
+          <p class="wf-caps">If you are signed in</p>
+          <p>Your navigation is where it was.</p>
+          <p class="wf-actions">
+            <a class="wf-btn" href="metric-registry.html">Back to the registry</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer, node 0.2, minimal variant, rendered by the global component. It is the
+           signed-out reader's route out, and it renders only targets that exist -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Node 7.1, MVP, and it is not an edge case: the reader's only entrance is a link, so a broken or expired one is where they meet us. Four blocks in the node's order, one centred column at 360 and at width. <strong>There is deliberately no call to action in the signed-out rendering</strong>, because the honest act is to ask whoever sent the link, and a button that goes nowhere useful is the wall this node refuses. The tombstone carries three fields only, the name it had, its owner and the date it was removed: no definition, no value, no history. Refused by name at the node and absent here: "contact the owner of the site that linked you", which hands the problem to the one person who cannot solve it; "Go to Homepage", because the reader has no home; and a sitemap footer of twenty-five links, which is a shrug rather than a route. Two decisions are not visible on screen: noindex with follow, and a real HTTP 404, since a soft 404 returning 200 is the version of this page that gets indexed. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes">
+      <span class="wf-caps">Signed out, the footer's route out</span>
+      <a href="product-page.html">6.1 what Plumb is</a>
+      <span class="wf-caps">Signed in</span>
+      <a href="metric-registry.html">4.1 the registry</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

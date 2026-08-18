@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A, node 6.1, finished copy. This is THE ONLY INDEXED PAGE in the product:
+     every other node is noindex, so the whole structural SEO layer of this stage attaches
+     here. Title 48 characters, description 147, both verbatim from the node.
+     Canonical: the absolute form of "/" on the production domain. The domain is NOT
+     decided (runtime hosting is still open in CLAUDE.md), so the canonical is recorded
+     here by rule rather than written as a string that would be invented.
+     hreflang: none, deliberately. One language, English, so a cluster of one is noise.
+     og:url is the same canonical and is held back for the same reason; og:image is a
+     rendering of the card component, not a logo, which is why the hero runs the card. -->
+<title>Plumb: every number with its source and owner</title>
+<meta name="description" content="Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Plumb: every number with its source and owner">
+<meta property="og:description" content="Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="_wf.css">
+<!-- SEO block D. Structured data has no visible place on a screen, so it is rendered as
+     markup here rather than left as a claim. Three types, exactly as the node fixes them:
+     SoftwareApplication and Organization at page level, FAQPage on block 7, its copy
+     taken from block C so the two cannot drift. No Product and no Offer: pricing is node
+     6.3 and takes its own markup. url, logo and sameAs wait on the domain decision. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Plumb",
+      "description": "Plumb keeps the definition of every metric in one place and shows, right beside the number, where it came from, how fresh it is and who declared it.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web"
+    },
+    {
+      "@type": "Organization",
+      "name": "Plumb"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Do readers need an account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. A metric card opens at its permanent link with no account at all." } },
+        { "@type": "Question", "name": "Is this a BI tool?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Plumb does not build dashboards and does not visualise data. It makes a single number defensible." } },
+        { "@type": "Question", "name": "Where does the number come from?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your warehouse, queried when the card is opened. Snowflake, BigQuery and Postgres in the first release." } },
+        { "@type": "Question", "name": "What happens when the source is down?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The card says so, in words, and still shows the definition, the owner and the time of the last successful run. It does not show a stale number and it does not show a dash." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* INLINE: product-page :: to fold into _wf.css */
+
+/* The one landing on the map, and the only screen whose hero is two columns. Everywhere
+   else the reader's column is 640: a card is one column of content, not a canvas. Here
+   the node asks for the claim and the card side by side on a wide canvas, which 640
+   cannot hold, so this screen widens its own shell and nothing else does. */
+.pp-page{ max-width:960px; }
+
+/* Public bar. NOT the analyst header of node 0.1: the reader never gets one, and this
+   page is read by people who have no workspace. It carries the mark and the one
+   secondary route the node names, sign in, and it renders only targets in scope. */
+.pp-bar{ display:flex; align-items:center; gap:var(--wf-space-3);
+         border-bottom:1px solid var(--wf-rule-strong); padding-bottom:var(--wf-space-2);
+         margin-bottom:var(--wf-space-4); flex-wrap:wrap; }
+.pp-bar__mark{ font-weight:700; text-decoration:none; margin-right:auto; }
+.pp-bar__who{ border:1px solid var(--wf-rule-strong); font-size:var(--wf-size-small);
+              color:var(--wf-muted); padding:var(--wf-space-1) var(--wf-space-2); }
+
+.pp-lede{ margin-top:var(--wf-space-3); }
+.pp-hero__card{ margin-top:var(--wf-space-4); }
+
+/* Block 3, the state dependent strip: one next step, different by who is looking. It is
+   a box rather than a banner so that it reads as a step and not as an announcement. */
+.pp-strip{ border:1px solid var(--wf-ink); padding:var(--wf-space-3);
+           margin-top:var(--wf-space-4); }
+.pp-strip p{ margin-bottom:0; }
+.pp-strip .wf-actions{ margin-top:var(--wf-space-2); }
+
+.pp-sect{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-5);
+          padding-top:var(--wf-space-3); }
+.pp-sect h2{ margin-bottom:var(--wf-space-2); }
+
+/* Block 5. Four things, one sentence each, and four is the point: they are the four
+   capabilities the first test of the riskiest assumption needs. Not a feature grid. */
+.pp-four{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.pp-four p{ margin:0; border-left:1px solid var(--wf-rule-strong);
+            padding-left:var(--wf-space-3); }
+
+/* Block 7. The accordion is a details element, so the FAQ answers are in the document
+   for a crawler whether or not they are open, and the block needs no script. */
+.pp-faq{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-3); }
+.pp-faq details{ border-bottom:1px solid var(--wf-rule); padding:var(--wf-space-2) 0; }
+.pp-faq summary{ cursor:pointer; font-weight:600; }
+.pp-faq p{ margin:var(--wf-space-2) 0 0; }
+
+@media (min-width:600px){
+  .pp-four{ grid-template-columns:1fr 1fr; }
+}
+@media (min-width:900px){
+  /* The claim and the card become two columns, the card on the right, with the strip
+     under the claim. The DOM order stays the 360 order, claim then card then strip, and
+     the grid places them: a wide canvas never reorders what a phone reads.
+     The card takes a column rather than a width of its own, so it cannot grow into a
+     dashboard tile as the canvas widens. */
+  .pp-hero{ display:grid; grid-template-columns:1.15fr 1fr;
+            grid-template-rows:min-content 1fr; gap:var(--wf-space-4) var(--wf-space-5);
+            align-items:start; }
+  .pp-hero__claim{ grid-column:1; grid-row:1; }
+  .pp-strip{ grid-column:1; grid-row:2; }
+  .pp-hero__card{ grid-column:2; grid-row:1 / span 2; margin-top:0; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen pp-page">
+      <!-- Public bar, signed in. Sign in is gone, because it would be false, and the
+           account corner takes its place. The one next step is the strip, not the bar. -->
+      <header class="pp-bar">
+        <a class="pp-bar__mark" href="product-page.html">Plumb</a>
+        <span class="pp-bar__who">Dana R.</span>
+      </header>
+
+      <section class="pp-hero">
+
+        <div class="pp-hero__claim">
+          <!-- Block 1. The claim, one sentence, as the one H1 on the page -->
+          <h1>Every number carries its source, its age and the person who defined it</h1>
+          <p class="pp-lede">Two people arrive at a meeting with different numbers for the same thing, and the next half hour goes on working out whose number is right. Plumb removes that by keeping one definition of every metric and showing it beside the value, together with where the value came from, when it was last computed and who declared what it means.</p>
+        </div>
+
+        <div class="pp-hero__card">
+        <!-- Block 2. THE LIVE CARD: the real component of node 2.1, rendering the real
+             metric, block for block and word for word as number-card.html. This page is one
+             of the three copies node 2.1 records, so changing the canon changes this hero.
+             Variant: public, read only. The send action is dropped by the node's component
+             table; the source line stays, because depth on request is principle 4 and it is
+             part of what the page is arguing. The metric name is an H3, fixed by block B of
+             this node, because the H1 on this page is the claim. -->
+        <article class="wf-card">
+          <!-- 1. Metric name -->
+          <h3 class="wf-card__name">Weekly active accounts</h3>
+          <!-- 2. The value -->
+          <p class="wf-value">18,432</p>
+          <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+          <p class="wf-state">
+            <b>As of 14:05, 20 minutes ago</b>
+            <span>Expected hourly</span>
+          </p>
+          <!-- 4. The definition, in words. The main object, never collapsed -->
+          <div class="wf-def">
+            <p class="wf-caps">Definition</p>
+            <p>Distinct accounts with at least one session in the last 7 days, counted on the account, not the user.</p>
+          </div>
+          <!-- 5. Attribution: who declared this and when -->
+          <p class="wf-att">Declared by Dana Reyes, Analytics, on 3 August</p>
+          <!-- 6. Where this number came from: one line here, the grid opens on one action -->
+          <p class="wf-src">
+            <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
+            <a class="wf-btn wf-btn--quiet" href="source-layer.html">Where this came from</a>
+          </p>
+        </article>
+        </div>
+
+        <!-- Block 3. The state dependent strip: ONE next step, and which one depends on
+             who is looking. This is the single primary action on the page, and there is one
+             instance of it, which is what the node's component table fixes. -->
+        <div class="pp-strip">
+          <p class="wf-caps">Signed in, analyst</p>
+          <p>Your workspace is already set up, so this page has nothing to sell you.</p>
+          <p class="wf-actions"><a class="wf-btn" href="metric-registry.html">Go to your metrics</a></p>
+        </div>
+
+      </section>
+
+      <!-- Block 4. The problem, and the only place on this page where the reader's
+           situation is described rather than shown -->
+      <section class="pp-sect">
+        <h2>Two people, two numbers, half an hour</h2>
+        <p>The number in the deck came from somewhere. The person presenting it usually did not compute it, often cannot see the pipeline behind it, and has no way to check it in the moment they are asked. So the meeting stops being about the decision and becomes about the figure.</p>
+      </section>
+
+      <!-- Block 5. What the product is: four things, one sentence each. Four because they
+           are the four capabilities the first test of the riskiest assumption needs -->
+      <section class="pp-sect">
+        <h2>What Plumb puts next to a number</h2>
+        <div class="pp-four">
+          <p>The definition in plain words, so the number means one thing.</p>
+          <p>Its state, said in words rather than in a colour: when it was computed, whether the source could be reached, whether the definition changed since this number was sent.</p>
+          <p>The name and the date on the claim, so there is a specific person to ask.</p>
+          <p>And one permanent link per metric, so the answer travels instead of being re-explained.</p>
+        </div>
+      </section>
+
+      <!-- Block 6. Trust. Load bearing for the buyer, who has no product surface -->
+      <section class="pp-sect">
+        <h2>We store definitions, not your data</h2>
+        <p>Plumb holds definitions, lineage and ownership. It does not hold copies of your rows. The value is queried from your own warehouse at the moment somebody reads it, which keeps your data on your infrastructure and keeps our compliance surface on ours.</p>
+        <!-- The route out of this block. Block E of this node requires a crawlable anchor
+             on every route out, naming the trust page explicitly, and node 6.2 is drawn in
+             this same round, so it is a link and not text. Scope tension recorded in the
+             report: 6.2 is labelled ПОТІМ in the registry while 6.1 is MVP. -->
+        <p><a href="trust-security.html">Trust and security</a></p>
+      </section>
+
+      <!-- Block 7. FAQ, the one block here with a structural SEO payload. The answers are
+           the copy the FAQPage markup in the head is built from -->
+      <section class="pp-sect">
+        <h2>Questions</h2>
+        <div class="pp-faq">
+          <details>
+            <summary>Do readers need an account?</summary>
+            <p>No. A metric card opens at its permanent link with no account at all.</p>
+          </details>
+          <details>
+            <summary>Is this a BI tool?</summary>
+            <p>No. Plumb does not build dashboards and does not visualise data. It makes a single number defensible.</p>
+          </details>
+          <details>
+            <summary>Where does the number come from?</summary>
+            <p>Your warehouse, queried when the card is opened. Snowflake, BigQuery and Postgres in the first release.</p>
+          </details>
+          <details>
+            <summary>What happens when the source is down?</summary>
+            <p>The card says so, in words, and still shows the definition, the owner and the time of the last successful run. It does not show a stale number and it does not show a dash.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Block 8. One call to action, and it is the same one action as the strip: the same
+           target, the same words. It is a plain link rather than a second primary button,
+           because the node allows one instance of the primary and the strip holds it. -->
+      <section class="pp-sect">
+        <p>Your metrics are where you left them. <a href="metric-registry.html">Go to your metrics</a>.</p>
+      </section>
+
+      <!-- Block 9. Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.1, signed in as an analyst. <strong>Only the strip changes</strong>, and it changes target rather than shape: somebody who already has a workspace should not be sold to, so the one next step points at the registry, node 4.1. Sign in leaves the bar, because offering it to a signed in person would be false, and the account corner takes the place it had. Everything else on the page is identical, including the live card: this is still the page that argues, and the argument does not depend on who is reading it.</p>
+
+    <div class="wf-routes"><span class="wf-caps">The same page, a different visitor</span><a href="product-page.html">Guest, the default</a><a href="product-page-no-workspace.html">Signed in, no workspace yet</a><a href="product-page-card-down.html">The live card cannot load</a></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

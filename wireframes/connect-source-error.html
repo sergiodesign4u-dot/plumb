@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect a source - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 3.2: noindex, and nofollow with it,
+     because this page is private, transactional, and names the customer's
+     infrastructure. No canonical, no schema, no SEO text. -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: sources-and-connect :: to fold into _wf.css */
+
+/* The analyst's screens are wider than the reader's. --wf-screen-max is 640 because a
+   card is one column of content; a table of three columns and a form with a panel
+   beside it are not. Same shell, one class. */
+.wf-screen--wide{ max-width:880px; }
+
+/* LISTING, the canonical component of node 4.1 seen for the second time at node 3.1.
+   Kept deliberately plain, a header row plus rows and one column at 360, because 4.1 is
+   drawn in parallel and the two class sets have to reconcile into one. */
+.wf-listing__bar{ display:flex; flex-direction:column; gap:var(--wf-space-3);
+                  margin-bottom:var(--wf-space-4); }
+.wf-listing__count{ font-weight:400; color:var(--wf-muted); }
+.wf-list{ width:100%; border-collapse:collapse; text-align:left; }
+.wf-list th, .wf-list td{ padding:var(--wf-space-2) 0; vertical-align:top; }
+.wf-list__head th{ font-size:var(--wf-size-small); font-weight:400; color:var(--wf-muted);
+                   border-bottom:1px solid var(--wf-ink); }
+.wf-list tbody tr{ border-bottom:1px solid var(--wf-rule); }
+.wf-list__name a{ font-weight:600; }
+.wf-list__count{ color:var(--wf-muted); }
+.wf-list__total{ margin-top:var(--wf-space-3); }
+/* At 360 the row is three lines, never a sideways table: horizontal scroll hides the
+   state column, and the state column is the reason the row exists. */
+@media (max-width:699px){
+  .wf-list, .wf-list thead, .wf-list tbody, .wf-list tr,
+  .wf-list th, .wf-list td{ display:block; }
+  .wf-list__head{ display:none; }
+  .wf-list tbody tr{ padding:var(--wf-space-2) 0; }
+  .wf-list th, .wf-list td{ padding:0 0 var(--wf-space-1); }
+}
+@media (min-width:700px){
+  .wf-listing__bar{ flex-direction:row; align-items:baseline; justify-content:space-between; }
+  .wf-narrow-only{ display:none; }
+}
+/* The ghost row of node 3.5. The field labels survive with no rows under them, so an
+   empty list keeps the shape of a full one instead of becoming a different screen. */
+.wf-list--ghost .wf-list__head{ display:block;
+                                border-bottom:1px dashed var(--wf-rule-dashed);
+                                padding-bottom:var(--wf-space-2); }
+.wf-list--ghost .wf-list__head th{ border-bottom:0; }
+@media (min-width:700px){
+  .wf-list--ghost .wf-list__head{ display:table-header-group; border-bottom:0;
+                                  padding-bottom:0; }
+  .wf-list--ghost .wf-list__head th{ border-bottom:1px solid var(--wf-ink); }
+}
+.wf-empty{ border-bottom:1px solid var(--wf-rule); padding:var(--wf-space-4) 0; }
+
+/* THE FORM, node 3.2. One column, every field full width, and the prerequisites panel
+   above the fields at 360 because information that unblocks a field is useless after it. */
+.wf-crumbs{ font-size:var(--wf-size-small); color:var(--wf-muted);
+            margin-bottom:var(--wf-space-2); }
+.wf-crumbs + h1{ margin-bottom:var(--wf-space-4); }
+.wf-form-grid{ display:grid; gap:var(--wf-space-4); }
+.wf-choice{ border:0; padding:0; margin:0; min-width:0; }
+.wf-choice legend{ padding:0; margin-bottom:var(--wf-space-2); }
+.wf-choice__list{ display:flex; flex-wrap:wrap; gap:var(--wf-space-2); }
+.wf-choice__item{ display:flex; align-items:center; gap:var(--wf-space-2);
+                  border:1px solid var(--wf-rule-strong); background:var(--wf-surface);
+                  padding:0 var(--wf-space-3); min-height:44px; flex:1 1 9rem;
+                  cursor:pointer; }
+.wf-aside{ background:var(--wf-panel); border:1px solid var(--wf-rule);
+           padding:var(--wf-space-3); font-size:var(--wf-size-small); }
+.wf-aside h2{ margin-bottom:var(--wf-space-2); }
+.wf-aside code{ font-family:var(--wf-mono); }
+.wf-field-row{ margin-bottom:var(--wf-space-3); }
+.wf-label{ display:block; margin-bottom:var(--wf-space-1); }
+.wf-help{ font-size:var(--wf-size-small); color:var(--wf-muted);
+          margin:var(--wf-space-1) 0 0; }
+/* The field that caused the failure is told apart by an ink border and by the sentence
+   under it, never by hue: a wireframe has none and this product's states never use one. */
+.wf-field--flagged{ border-color:var(--wf-ink); }
+.wf-inline{ font-size:var(--wf-size-small); margin-top:var(--wf-space-1);
+            border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-2); }
+/* The secret is written to us and never read back, so after a test it shows that a
+   value is set and offers one action to replace it. */
+.wf-secret{ display:flex; align-items:center; gap:var(--wf-space-3); flex-wrap:wrap;
+            border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+            padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-secret > span{ color:var(--wf-muted); }
+/* Banner, node 0.3: a message in the flow of the form at the top of it, never a toast. */
+.wf-banner{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+            padding:var(--wf-space-3); margin-bottom:var(--wf-space-4); }
+.wf-banner--info{ border-color:var(--wf-rule-strong); background:var(--wf-panel); }
+.wf-banner b{ display:block; margin-bottom:var(--wf-space-1); }
+.wf-banner p:last-child{ margin-bottom:0; }
+/* The action row is sticky at 360, because a nine field form is longer than a phone. */
+.wf-form__actions{ position:sticky; bottom:0; background:var(--wf-ground);
+                   border-top:1px solid var(--wf-rule-strong);
+                   padding:var(--wf-space-3) 0; margin-top:var(--wf-space-4); }
+.wf-btn[disabled]{ color:var(--wf-muted); border-color:var(--wf-rule-strong);
+                   cursor:not-allowed; }
+/* Progress in place, node 3.3, naming which half is being tried. Not a modal, and the
+   success of a connection is worth saying once, here, rather than in a window. */
+.wf-steps{ list-style:none; margin:0 0 var(--wf-space-2); padding:0; }
+.wf-steps li{ color:var(--wf-muted); padding:var(--wf-space-1) 0;
+              border-bottom:1px solid var(--wf-rule); }
+.wf-steps .is-now{ color:var(--wf-ink); font-weight:600; }
+@media (min-width:900px){
+  .wf-form-grid{ grid-template-columns:minmax(0,1fr) 260px; align-items:start; }
+  .wf-form-grid__top{ grid-column:1; grid-row:1; }
+  .wf-form-grid > .wf-aside{ grid-column:2; grid-row:1 / span 2; }
+  .wf-form-grid__body{ grid-column:1; grid-row:2; }
+  .wf-form__actions{ position:static; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen wf-screen--wide">
+
+      <!-- The analyst's header, node 0.1, rendered by the global component -->
+      <div id="wf-header"></div>
+
+      <!-- Root of the form. The whole thing as a modal is refused: nine fields in a
+           modal at 360 is a scroll inside a scroll, and the map says this is a page -->
+      <p class="wf-crumbs"><a href="sources.html">Sources</a> &gt; New connection</p>
+      <h1>Connect a source</h1>
+
+      <!-- Banner at the top of the form, node 0.3. Never a toast: a message that
+           disappears is not a message about a thing somebody has to fix -->
+      <div class="wf-banner" role="alert">
+        <b>Snowflake answered and refused the sign-in.</b>
+        <p>The host is reachable, so this is the identity rather than your network.</p>
+      </div>
+
+      <form class="wf-form" action="connect-source-testing.html" method="get">
+        <div class="wf-form-grid">
+        <div class="wf-form-grid__top">
+          <!-- 1. Which warehouse. A block, not a page: with three types a tile screen
+               exists only to be passed through. The choice decides which fields follow -->
+          <fieldset class="wf-choice">
+            <legend class="wf-caps">Which warehouse</legend>
+            <div class="wf-choice__list">
+              <label class="wf-choice__item"><input type="radio" name="warehouse" value="snowflake" checked> Snowflake</label>
+              <label class="wf-choice__item"><input type="radio" name="warehouse" value="bigquery"> BigQuery</label>
+              <label class="wf-choice__item"><input type="radio" name="warehouse" value="postgres"> Postgres</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- 2. What you will need. Above the fields it explains at 360, beside them at
+             width: information that unblocks a field is useless after it -->
+        <aside class="wf-aside">
+          <h2>What you will need</h2>
+          <p>An account identifier, a user with read access, and a key or password.</p>
+          <p>Your network may need to allow <code>52.9.0.0/24</code> before this can connect.</p>
+        </aside>
+
+        <div class="wf-form-grid__body">
+          <!-- 3. The credential fields. One block per warehouse type, in the order that
+               warehouse's own documentation uses, because that is the order the person
+               is copying from. The display name is last in every variant -->
+          <div class="wf-field-row">
+            <label class="wf-label" for="user">User name</label>
+            <input class="wf-field" id="user" name="user" type="text" value="plumb_reader">
+          </div>
+
+          <div class="wf-field-row">
+            <span class="wf-label">Private key</span>
+            <!-- The form stays filled in after a failure, but a secret cannot be
+                 refilled: it is written to us and never read out, not even masked. So
+                 it shows that a value is set, and replacing it is one action -->
+            <div class="wf-secret wf-field--flagged" aria-describedby="key-msg">
+              <span>Set, not shown</span>
+              <button class="wf-btn wf-btn--quiet" type="button">Replace</button>
+            </div>
+            <p class="wf-inline" id="key-msg">Check this first. The key is never shown back, so replacing it is one action.</p>
+          </div>
+
+          <div class="wf-field-row">
+            <label class="wf-label" for="account">Account identifier</label>
+            <input class="wf-field" id="account" name="account" type="text" value="xy12345.us-east-1">
+            <!-- The route out is node 6.4, documentation, which is not in the MVP scope, so
+                 the link renders as text rather than as a link that 404s -->
+            <p class="wf-help"><span class="wf-pending">Where do I find this?</span></p>
+          </div>
+
+          <div class="wf-field-row">
+            <label class="wf-label" for="database">Database</label>
+            <input class="wf-field" id="database" name="database" type="text" value="ANALYTICS">
+          </div>
+
+          <div class="wf-field-row">
+            <label class="wf-label" for="name">Display name</label>
+            <input class="wf-field" id="name" name="name" type="text" value="">
+            <p class="wf-help">Ours rather than theirs. The only field here that is about us.</p>
+          </div>
+
+          <!-- 4. Expected cadence. A claim, not a measurement, and the only value typed
+               on this page that the reader ever sees -->
+          <div class="wf-field-row">
+            <label class="wf-label" for="cadence">Expected cadence</label>
+            <select class="wf-field" id="cadence" name="cadence">
+              <option selected>Hourly</option>
+              <option>Every 15 minutes</option>
+              <option>Daily</option>
+              <option>Weekly</option>
+            </select>
+            <p class="wf-help">This is what the reader sees beside the number. Set it to how often this source actually updates.</p>
+          </div>
+        </div>
+
+        </div>
+
+      <!-- 5. Test the connection, then Save. Test then save is the order, because
+           save then discover is the version that leaves a broken source in a list.
+           Save is enabled only after the connection has tested successfully once.
+           6. Delete is absent: it appears only on a connection that exists -->
+      <p class="wf-actions wf-form__actions">
+        <a class="wf-btn wf-btn--quiet" href="connect-source-testing.html">Test the connection</a>
+        <button class="wf-btn" type="submit" disabled>Save</button>
+      </p>
+      </form>
+
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="app"></div>
+    </main>
+
+    <p class="wf-note">Node 3.4, the connection failed. <strong>Three things at once, and they are not alternatives:</strong> a banner at the top saying what happened, an inline message on the field that caused it, and the form still filled in. The one drawn live is the middle failure, the host answered and rejected the identity, because it is the only one whose fix is on this form and the only one that forces the rule the node had to resolve: the form stays filled, but a secret cannot be refilled, so it shows that a value is set and replacing it is one action. <strong>The other two failures are the same screen with different words.</strong> We could not reach the host at all, where the fix is their network and the message points at the prerequisites panel; and we were let in and the database is not visible, where nothing on this form is wrong and saying so stops somebody retyping a correct key nine times. A single connection failed would send a person to the wrong wall two times out of three. Save is still disabled: the order is test, then save. Interface wording is draft, stage 05 owns it.</p>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

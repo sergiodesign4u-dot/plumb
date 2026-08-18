@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A, node 6.4, taken verbatim from the template map in
+     ia/docs/pages/legal-and-content.md. index, follow on all four pages, because a
+     document that cannot be found before a call is a document that generates one. -->
+<title>How Plumb definitions are written and read</title>
+<meta name="description" content="A definition in Plumb is a sentence, not a formula. This is how one is written, and what the states beside a number mean when you read it.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://plumb.app/docs">
+<meta property="og:type" content="website">
+<meta property="og:title" content="How Plumb definitions are written and read">
+<meta property="og:description" content="A definition in Plumb is a sentence, not a formula. This is how one is written, and what the states beside a number mean when you read it.">
+<!-- SEO block D: 6.4 may carry FAQPage once the content settles into questions, which it
+     has. The markup itself is not emitted in a wireframe: block E asks for prose with no
+     scripts, and the structural layer is validated here rather than shipped. -->
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: legal-and-content :: to fold into _wf.css
+   The document shell of node 6.4, canonical for 6.4, 6.5 and 6.6, and reused by 6.7 with
+   the rail and the prose column removed, which is the exception the node names. Identical
+   in all five files of this round. Every value goes through a variable except the two
+   recorded in the step 8 report: the 44px target and the rail width. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted); margin-bottom:var(--wf-space-2); }
+.wf-doc{ display:block; }
+.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
+               margin-bottom:var(--wf-space-4); }
+.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
+               margin:var(--wf-space-2) 0 0; }
+.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
+          margin-bottom:var(--wf-space-4); }
+.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+                font-size:var(--wf-size-small); text-decoration:none; }
+.wf-rail__item.is-current{ font-weight:700; }
+.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
+               color:var(--wf-muted); }
+.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
+.wf-prose > h2:first-child{ margin-top:0; }
+.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
+.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
+          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+.wf-mark > :last-child{ margin-bottom:0; }
+.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
+             padding-top:var(--wf-space-3); }
+.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
+.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
+     The rail stays first in the DOM so that it stacks above the prose at 360. */
+  .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
+           gap:var(--wf-space-4); align-items:start; }
+  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
+  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
+            border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
+  .wf-hold{ grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <div class="wf-doc">
+        <!-- The rail. Not navigation: a set of documents. It renders only the targets that
+             exist, so the cookie document, node 7.4, is text and not a link -->
+        <nav class="wf-rail" aria-label="Documents">
+          <p class="wf-caps">Legal and content</p>
+          <a class="wf-rail__item is-current" href="documentation.html" aria-current="page">Documentation</a>
+          <a class="wf-rail__item" href="privacy.html">Privacy policy</a>
+          <a class="wf-rail__item" href="terms.html">Terms of service</a>
+          <a class="wf-rail__item" href="support.html">Support and contact</a>
+          <span class="wf-rail__item wf-pending">Cookie notice</span>
+          <a class="wf-rail__item wf-rail__out" href="product-page.html">What Plumb is</a>
+        </nav>
+
+        <div class="wf-doc__body">
+          <!-- Title block. Block E: this is the LCP and it is text. No breadcrumbs on
+               6.4, by the URL table -->
+          <header class="wf-doc__head">
+            <h1>Documentation</h1>
+            <p class="wf-doc__date">Last updated 12 August 2026</p>
+          </header>
+
+          <!-- One page, not a documentation site. It answers two questions and it grows
+               into a site when there is something to document -->
+          <section class="wf-prose">
+            <h2>How is a definition written?</h2>
+            <p>A definition in Plumb is a sentence, not a formula. It says what the metric counts, on what, and over what period, in words somebody outside the data team can check.</p>
+            <p>The query underneath it is what makes it executable, and the reader never sees it. When the definition changes, everybody holding a link to that number is told what it used to say.</p>
+            <p class="wf-muted">Weekly active accounts, as it stands today: distinct accounts with at least one session in the last 7 days, counted on the account, not the user. Declared by Dana Reyes, Analytics, on 3 August.</p>
+
+            <h2>What do the states beside a number mean?</h2>
+            <p>Three states, and there is no fourth. A number with nothing wrong carries its age, not a badge saying it is fine.</p>
+            <!-- The only page in cluster 6 that renders the state vocabulary, and node 0.4
+                 is its single source rather than prose written twice -->
+            <dl class="wf-rows">
+              <div class="wf-row">
+                <dt>As of</dt>
+                <dd>The query ran and returned a value. The card says how old it is and what cadence is expected: as of 14:05, 20 minutes ago, expected hourly.</dd>
+              </div>
+              <div class="wf-row">
+                <dt>Source is down</dt>
+                <dd>The source could not be reached when you opened the card. You still get the definition, the owner and the last successful run. No value at all, because we keep no copy of it.</dd>
+              </div>
+              <div class="wf-row">
+                <dt>Definition changed</dt>
+                <dd>The current definition differs from the one your link carried. You get the current value, the current definition and what it used to say.</dd>
+              </div>
+              <div class="wf-row">
+                <dt>The query returned nothing</dt>
+                <dd>The query ran and no rows came back. You get the definition, the owner and the time it ran, and never a zero.</dd>
+              </div>
+            </dl>
+            <p>More than one can be true at once, and both are shown. A source that is down and a definition that changed appear together, the source first. An empty result and a changed definition appear together, the empty result first. A source that cannot be reached cannot return an empty result, so that pair never happens.</p>
+            <p>No state carries a severity, an owner to chase or anything to close, and no score is computed from them. A state ends when the fact underneath it ends.</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.4, default, the only state. <strong>The document shell is defined here and the other three pages of the map reuse it byte for byte:</strong> title, last updated directly under it, the rail, one column of prose capped for reading. The date is not a convention, it is design principle 5 applied to a page that is nothing but claims. H2s are questions because that is how the reader asks and how a search asks. The two answers are not written twice: the definition prose is SEO block C, the states are node 0.4 rendered, and this is the only page in cluster 6 allowed to render them. The rail carries the cookie notice as text because node 7.4 does not exist yet, and it carries no target that would 404. <strong>Two things the IA gives this surface are not visible here:</strong> the full footer variant, since the shared component renders the minimal one, and the FAQPage markup, which block E's no-scripts rule keeps out of a wireframe. Interface wording is draft, stage 05 owns it.</p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

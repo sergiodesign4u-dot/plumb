@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A, node 6.5, taken verbatim from the template map in
+     ia/docs/pages/legal-and-content.md. index, follow, and the page stays on our own
+     domain: a legal surface on somebody else's domain is one whose wording, canonical
+     and date you do not control. -->
+<title>Privacy policy: what Plumb stores and what it never does</title>
+<meta name="description" content="Plumb keeps metric definitions, owners and connection settings. It keeps no copy of your data rows and nothing that identifies the people who read a number.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://plumb.app/legal/privacy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Privacy policy: what Plumb stores and what it never does">
+<meta property="og:description" content="Plumb keeps metric definitions, owners and connection settings. It keeps no copy of your data rows and nothing that identifies the people who read a number.">
+<!-- SEO block D: no structured data on 6.5. There is no schema type for a policy that
+     adds anything a crawler needs. -->
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: legal-and-content :: to fold into _wf.css
+   The document shell of node 6.4, canonical for 6.4, 6.5 and 6.6, and reused by 6.7 with
+   the rail and the prose column removed, which is the exception the node names. Identical
+   in all five files of this round. Every value goes through a variable except the two
+   recorded in the step 8 report: the 44px target and the rail width. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted); margin-bottom:var(--wf-space-2); }
+.wf-doc{ display:block; }
+.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
+               margin-bottom:var(--wf-space-4); }
+.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
+               margin:var(--wf-space-2) 0 0; }
+.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
+          margin-bottom:var(--wf-space-4); }
+.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+                font-size:var(--wf-size-small); text-decoration:none; }
+.wf-rail__item.is-current{ font-weight:700; }
+.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
+               color:var(--wf-muted); }
+.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
+.wf-prose > h2:first-child{ margin-top:0; }
+.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
+.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
+          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+.wf-mark > :last-child{ margin-bottom:0; }
+.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
+             padding-top:var(--wf-space-3); }
+.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
+.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
+     The rail stays first in the DOM so that it stacks above the prose at 360. */
+  .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
+           gap:var(--wf-space-4); align-items:start; }
+  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
+  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
+            border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
+  .wf-hold{ grid-template-columns:1fr 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <div class="wf-doc">
+        <!-- The rail. Not navigation: a set of documents. It renders only the targets that
+             exist, so the cookie document, node 7.4, is text and not a link -->
+        <nav class="wf-rail" aria-label="Documents">
+          <p class="wf-caps">Legal and content</p>
+          <a class="wf-rail__item" href="documentation.html">Documentation</a>
+          <a class="wf-rail__item is-current" href="privacy.html" aria-current="page">Privacy policy</a>
+          <a class="wf-rail__item" href="terms.html">Terms of service</a>
+          <a class="wf-rail__item" href="support.html">Support and contact</a>
+          <span class="wf-rail__item wf-pending">Cookie notice</span>
+          <a class="wf-rail__item wf-rail__out" href="product-page.html">What Plumb is</a>
+        </nav>
+
+        <div class="wf-doc__body">
+          <header class="wf-doc__head">
+            <!-- Breadcrumbs from the URL table: Legal is the shared parent of two
+                 documents and has no page of its own, so it is text -->
+            <p class="wf-crumb"><span class="wf-pending">Legal</span> &rsaquo; Privacy policy</p>
+            <h1>Privacy policy</h1>
+            <p class="wf-doc__date">Last updated 12 August 2026</p>
+          </header>
+
+          <!-- The one legal page that is also an argument. Its content is the table from
+               node 6.2, and the row that matters is the absence -->
+          <section class="wf-prose">
+            <h2>What does Plumb store about your data?</h2>
+            <p>Definitions, owners and connection settings. No copy of your data rows. A number is queried from your source when somebody reads it and is not kept afterwards.</p>
+
+            <h2>What does Plumb store about the people who read a number?</h2>
+            <p>Nothing that identifies you. A card is opened at a permanent link with no account. We count how often a metric is opened, and that count names nobody.</p>
+
+            <h2>What does Plumb hold, and what does it never hold?</h2>
+            <div class="wf-hold">
+              <div>
+                <p class="wf-caps">We hold</p>
+                <ul>
+                  <li>Metric definitions, in words</li>
+                  <li>Owners, and the date on each claim</li>
+                  <li>Connection settings, with secrets write-only</li>
+                  <li>The link a card was sent as</li>
+                </ul>
+              </div>
+              <div>
+                <p class="wf-caps">We do not hold</p>
+                <ul>
+                  <li>Any copy of your data rows</li>
+                  <li>Values as history. There is one last-run timestamp per metric, and it is overwritten</li>
+                  <li>Any credential in readable form, including on our own screens</li>
+                  <li>Anything that identifies who opened a card. No cookie, no device identifier, no per-reader log</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SEO block C: 6.5 carries a marker instead of copy. The legal body is
+                 counsel's deliverable and this stage may not draft it -->
+            <div class="wf-mark">
+              <p class="wf-caps">Placeholder, not copy</p>
+              <p>The legal body of this policy is counsel's deliverable. It is not drafted at this stage, because text written here would read like a policy and bind nobody. The three answers above are the product's own claims about its architecture, and they are what the finished document has to carry.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer, node 0.2, rendered by the global component -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.5, default, the only state, MVP. <strong>The document shell of node 6.4, reused without a single structural difference:</strong> only the content changes. For this product the page is an argument rather than boilerplate, so the three question-shaped H2s are the architecture claim made in the document a reviewer trusts least to be making one, and the second column of the table is the point: the row that matters is the absence. Everything below them is a marked placeholder, because the legal body belongs to counsel. <strong>Refused, and it is the node's refusal:</strong> no call to action inside a legal document, on the one page where a person is looking for the absence of tricks. The footer renders privacy and terms as text rather than links until the registry in <code>_nav.js</code> carries their files, which the reconcile pass of this step does. Interface wording is draft, stage 05 owns it.</p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

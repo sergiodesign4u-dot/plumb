@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- SEO block A of node 6.3, verbatim. One of the four indexed pages in the whole map. -->
+<title>Plumb pricing: analysts pay, readers never do</title>
+<meta name="description" content="Seats for the people who write metric definitions. Reading a number with its source, its age and its owner is free, and the metric count is not capped.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://plumb.app/pricing">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Plumb pricing: analysts pay, readers never do">
+<meta property="og:description" content="Seats for the people who write metric definitions. Reading a number with its source, its age and its owner is free, and the metric count is not capped.">
+<!-- Block D. FAQPage on the FAQ block, and it is canonical with node 6.1's FAQ: the
+     same three questions may be shown there, and only one page marks them up.
+     Product with Offer is DELIBERATELY DEFERRED until the numbers exist, because
+     marking up a price we have not decided would publish the decision by accident. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Plumb store my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Plumb keeps definitions, owners and connection settings. The value is queried from your source at the moment somebody reads it and no copy of your rows is kept."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a seat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A person who connects a source, writes a definition or puts their name on one. Opening a card, reading its definition, checking where the figure came from and passing it on is not a seat and never becomes one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I pay by invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On the Enterprise plan, yes. On Team, payment is by card."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: trust-and-pricing :: to fold into _wf.css */
+/* Nodes 6.2 and 6.3, the public surface. Every value goes through a token in _wf.css.
+   Names are prefixed tp- so the reconcile pass can grep both pages at once. */
+
+/* Section rhythm on a long public page. Both pages, so it folds. */
+.tp-sec{ margin-top:var(--wf-space-5); }
+.tp-sec > h2{ margin-bottom:var(--wf-space-2); padding-bottom:var(--wf-space-1);
+              border-bottom:1px solid var(--wf-rule-strong); }
+.tp-lede{ font-size:var(--wf-size-h2); }
+.tp-ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.tp-ul li{ margin-bottom:var(--wf-space-1); }
+
+/* Two column comparison, one axis. What we hold against what we do not at 6.2, and
+   what a reader can do without paying at 6.3. Stacked pairs at 360 with the column
+   name travelling inside the cell, a real table from 700. Both pages, so it folds. */
+.tp-table{ width:100%; border-collapse:collapse; text-align:left; }
+.tp-table thead{ display:none; }
+.tp-table tr{ display:block; border-bottom:1px solid var(--wf-rule);
+              padding:var(--wf-space-2) 0; }
+.tp-table td{ display:block; padding:0 0 var(--wf-space-1); }
+.tp-lab{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted); }
+@media (min-width:700px){
+  .tp-table thead{ display:table-header-group; }
+  .tp-table tr{ display:table-row; padding:0; border-bottom:0; }
+  .tp-table td, .tp-table th{ display:table-cell; width:50%; vertical-align:top;
+              padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
+              border-bottom:1px solid var(--wf-rule); }
+  .tp-table thead th{ border-bottom:1px solid var(--wf-ink);
+              font-size:var(--wf-size-small); color:var(--wf-muted); font-weight:600; }
+  .tp-lab{ display:none; }
+}
+
+/* Row of links, and the boxed aside. Both pages, so both fold. */
+.tp-links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap;
+           margin-bottom:var(--wf-space-2); }
+.tp-box{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+         padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.tp-box > :last-child{ margin-bottom:0; }
+
+/* Plan cards, node 6.3 block 2. Stacked at 360, side by side from 700. The price is a
+   text node inside the first card, which is the LCP: nothing here waits on an image. */
+.tp-plans{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.tp-plan{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+          padding:var(--wf-space-3); }
+.tp-plan h3{ font-size:var(--wf-size-h2); }
+.tp-price{ font-size:var(--wf-size-h1); font-weight:700; line-height:var(--wf-line-tight);
+           margin:var(--wf-space-1) 0 var(--wf-space-2); }
+.tp-plan > :last-child{ margin-bottom:0; }
+@media (min-width:700px){
+  .tp-plans{ grid-template-columns:1fr 1fr; }
+}
+
+/* FAQ, node 6.3 block 5. It opens with no script, so the FAQPage markup above always
+   describes text that is in the document. */
+.tp-faq{ border-top:1px solid var(--wf-ink); margin-top:var(--wf-space-3); }
+.tp-faq details{ border-bottom:1px solid var(--wf-rule); }
+.tp-faq summary{ font-weight:600; cursor:pointer; min-height:44px; display:flex;
+                 align-items:center; }
+.tp-faq details > p{ margin:0 0 var(--wf-space-3); }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <!-- No analyst header: a public page, and its reader has no account yet. -->
+
+      <!-- 1. Title and one line: what is charged for, in a sentence. -->
+      <header>
+        <h1>What Plumb costs, and what it never charges for</h1>
+        <p class="tp-lede">Seats for the people who write definitions. Everyone who reads a number is free.</p>
+        <p>Plumb charges for the people who define metrics, and for nobody else. An analyst who connects a source, writes what a metric means and puts their name on it holds a seat. Everyone who opens a number card, reads its definition, checks where the figure came from and passes it on does so without an account and without a licence.</p>
+        <p class="wf-muted"><a href="product-page.html">What Plumb is</a>, if you have not seen the product yet.</p>
+      </header>
+
+      <!-- 2. The plans, as cards, WITH the price on them. dbt puts prices in the open,
+           Secoda has three tiers and not one price anywhere: for a product selling
+           defensibility, a price you have to ask for is off-brand.
+           The number itself is open, question 1 in the research, and it is not
+           invented here. No price is ever baked into an image: this is text. -->
+      <section class="tp-sec" id="plans">
+        <h2>The plans</h2>
+        <div class="tp-plans">
+          <article class="tp-plan">
+            <h3>Team</h3>
+            <p class="tp-price">$ per analyst / month</p>
+            <ul class="tp-ul">
+              <li>Unlimited metrics</li>
+              <li>Unlimited readers</li>
+              <li>SSO over OIDC and SAML</li>
+              <li>One workspace</li>
+            </ul>
+          </article>
+          <article class="tp-plan">
+            <h3>Enterprise</h3>
+            <p class="tp-price">Custom</p>
+            <ul class="tp-ul">
+              <li>Everything in Team</li>
+              <li>A SOC 2 report when the certification is held. It is <a href="trust-security.html">not held yet</a></li>
+              <li>Payment by invoice</li>
+              <li>A named contact for support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. What is not charged for. Ours, and no source in the bank has it: every
+           pricing page says what a plan includes, none says what it will never bill. -->
+      <section class="tp-sec" id="never">
+        <h2>What is never charged for</h2>
+        <div class="tp-box">
+          <p class="wf-caps">Never charged for</p>
+          <ul class="tp-ul">
+            <li><strong>Readers.</strong> Any number of them, on any plan.</li>
+            <li><strong>The number of metrics.</strong> There is no cap and no tier that raises one.</li>
+            <li><strong>The number of times a card is opened.</strong> Reading is not metered.</li>
+          </ul>
+        </div>
+        <p>That is a decision about how this product grows rather than a promotion. A number is worth more the more people can see where it came from, so charging the people who look at it would be charging for the thing that makes it useful. The number of metrics in a workspace is not capped for the same reason: a registry that costs more as it fills up is a registry that stays empty.</p>
+      </section>
+
+      <!-- 4. Comparison, ONE axis instead of six feature groups: what a person can do
+           without paying. Two columns, stacked rows at 360. -->
+      <section class="tp-sec" id="free">
+        <h2>What a reader can do without an account</h2>
+        <table class="tp-table">
+          <thead><tr><th scope="col">Without an account, free</th><th scope="col">Needs a seat</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tp-lab">Without an account, free</span>Open a number card at the link somebody sent</td>
+              <td><span class="tp-lab">Needs a seat</span>Connect a warehouse as a source</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">Without an account, free</span>Read the definition, the owner and the date on it</td>
+              <td><span class="tp-lab">Needs a seat</span>Write a definition, or change one</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">Without an account, free</span>Open where the number came from</td>
+              <td><span class="tp-lab">Needs a seat</span>Put your name on a definition as its owner</td>
+            </tr>
+            <tr>
+              <td><span class="tp-lab">Without an account, free</span>Send the number on as a link</td>
+              <td><span class="tp-lab">Needs a seat</span>Invite another analyst into the workspace</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="wf-muted">One axis, and it is the only one that matters here: what a person can do without paying. That list is the whole free tier, and it is also the product's argument.</p>
+      </section>
+
+      <!-- 5. FAQ, carrying FAQPage. It opens with no script. -->
+      <section class="tp-sec" id="questions">
+        <h2>Questions about billing and about what we store</h2>
+        <div class="tp-faq">
+          <details>
+            <summary>Does Plumb store my data?</summary>
+            <p>No. Plumb keeps definitions, owners and connection settings. The value is queried from your source at the moment somebody reads it and no copy of your rows is kept. The detail is on <a href="trust-security.html">trust and security</a>.</p>
+          </details>
+          <details>
+            <summary>What counts as a seat?</summary>
+            <p>A person who connects a source, writes a definition or puts their name on one. Opening a card, reading its definition, checking where the figure came from and passing it on is not a seat and never becomes one.</p>
+          </details>
+          <details>
+            <summary>Can I pay by invoice?</summary>
+            <p>On the Enterprise plan, yes. On Team, payment is by card.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 6. One call to action, and it goes to sign-in rather than to a sign-up that
+           does not exist yet. The legal line carries the two crawlable legal links. -->
+      <section class="tp-sec" id="start">
+        <p class="wf-actions"><a class="wf-btn" href="sign-in.html">Sign in to start a workspace</a></p>
+        <p class="wf-muted">Sign-in is through your identity provider. By signing in you agree to the <a href="terms.html">Terms of service</a>, and what we store is set out in the <a href="privacy.html">Privacy policy</a>.</p>
+      </section>
+
+      <!-- 7. Footer, node 0.2. The IA gives the public surface the FULL variant; the
+           shared component in _nav.js renders the minimal one. The placeholder is used
+           as it stands and the difference is reported to the reconcile pass. -->
+      <div id="wf-footer" data-variant="full"></div>
+    </main>
+
+    <p class="wf-note">Node 6.3, the only state, and the one page in this product that argues with itself. Three decisions of the node are visible here rather than described. <strong>The prices are on the cards</strong>, which is dbt's version taken outright and Secoda's three tiers with no price anywhere refused: the whole claim of this product is that a person can check a thing without asking anybody's permission, so a price you have to ask for is off-brand. <strong>Block 3 exists because no source in the bank has it</strong>: every pricing page says what a plan includes, none says what it will never charge for, and ours states the business hypothesis as a promise. <strong>The comparison runs one axis, not six feature groups</strong>, and that axis is what a person can do without paying. Two things stay open by the node's decision and are not invented to make the page look finished: the number on the card, which is question 1 in the research, and whether seats are the unit at all, since dbt meters queried metrics per month and that is exactly the unit we intend to leave free. The first plan card is the LCP and it is text, so no price is ever baked into an image. Interface wording is draft, stage 05 owns it.</p>
+
+    <div class="wf-routes">
+      <span class="wf-caps">The other public pages of this round</span>
+      <a href="trust-security.html">6.2 Trust and security</a>
+      <a href="product-page.html">6.1 Product page</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

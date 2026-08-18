@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cookie notice - Plumb</title>
+<!-- SEO layer 2, validation only. Node 7.4 has no URL of its own: it is a section on the
+     cluster 6 pages and is not indexed as a page. This wireframe exists so the component
+     can be reviewed, so it carries noindex itself. No schema, no SEO text. -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="_wf.css">
+<style>
+/* INLINE: system-pages :: to fold into _wf.css */
+.sys{ max-width:var(--wf-measure); }
+.sys__lead{ font-size:var(--wf-size-h2); }
+/* The host. 7.4 is a section rather than a page, so the page it sits on is drawn as an
+   empty marked area: the content of the product page belongs to node 6.1 and is not
+   invented here. */
+.sys__host{ border:1px dashed var(--wf-rule-strong); padding:var(--wf-space-4);
+            margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+/* The consent banner itself: one line and two controls, and nothing more. Sticky rather
+   than fixed so that it pins to the foot of the screen without covering the wireframe
+   note underneath; in production it is fixed to the viewport of a cluster 6 page. */
+.sys__banner{ position:sticky; bottom:0; z-index:2; background:var(--wf-surface);
+              border:1px solid var(--wf-ink); padding:var(--wf-space-3);
+              display:flex; gap:var(--wf-space-3); flex-wrap:wrap; align-items:center; }
+.sys__banner p{ margin:0; flex:1; min-width:200px; }
+</style>
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <section class="sys">
+        <h1>Cookie notice</h1>
+        <p class="sys__lead">This notice belongs to the public pages of cluster 6, where a cookie may legitimately exist and the visitor is not mid-task.</p>
+
+        <!-- The host page, drawn as an empty area on purpose: the banner is the screen
+             here, and the page under it is node 6.1 -->
+        <div class="sys__host">
+          <p class="wf-caps">A cluster 6 page, for example the product page</p>
+          <p><a href="product-page.html">Open the product page</a></p>
+        </div>
+
+        <!-- Where it never appears, and this is the decision the node settles rather
+             than a caveat about it -->
+        <section>
+          <h2>It never appears on a number card</h2>
+          <p>The card sets nothing on the reader's device: no cookie, no local storage, no third-party analytics, no tag manager. A consent dialog would be a question about tracking sitting on top of the one page that promises we store nothing about the reader, and it would arrive before the number they came for.</p>
+          <p><a href="number-card.html">Open a number card and check</a></p>
+        </section>
+
+        <!-- The component: one line, two controls -->
+        <section class="sys__banner" aria-label="Cookie notice">
+          <p>Plumb uses cookies on this page to measure how the site is used.</p>
+          <span class="wf-actions">
+            <button class="wf-btn" type="button">Accept</button>
+            <button class="wf-btn wf-btn--quiet" type="button">Decline</button>
+          </span>
+        </section>
+      </section>
+
+      <!-- Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Node 7.4, ПОТІМ, and the node settles the discrepancy the map carried from stage 03a rather than drawing a consent platform. <strong>What is rendered is what the node specifies and nothing else: one line and two controls.</strong> No vendor list, no per-category toggles, no "personalize my choices", because a preference centre is a screen nobody specified and dbt's full platform is the reference this node does not follow. <strong>Two decisions are the whole content of this page.</strong> The banner exists only on cluster 6, and it never exists on cluster 2: the number card sets nothing on the reader's device, so there is nothing to consent to there. The precise position the node corrected upwards into nodes 4.7 and 6.2 also holds: nothing that identifies a reader is stored, an anonymous server-side counter on the metric is allowed because activation could not otherwise be observed, and no count is ever shown in the product. <strong>Two things the node leaves open</strong> and are drawn as draft: which two controls, rendered here as accept and decline because any "manage" label implies a third screen, and the wording of the one line. Stage 05 owns both.</p>
+
+    <div class="wf-routes">
+      <span class="wf-caps">Where the banner does and does not appear</span>
+      <a href="product-page.html">6.1 the product page, cluster 6</a>
+      <a href="number-card.html">2.1 the card, cluster 2, never</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>
