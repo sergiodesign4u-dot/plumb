@@ -107,6 +107,26 @@ Base file is the ordinary condition; every other state is its own page so the pr
 | --- | --- | --- |
 | Step 6, drawing node 2.7 | The bare URL state said **five rows** and then described six, dropping none. No row can be defended as absent on a bare address: the source, the table, the last run, the cadence and the query time all still exist, and the definition row is reworded rather than removed | `ia/docs/pages/source-layer.md` and its render now say six rows, with the definition row worded as the current one. **The count was the error, not the description** |
 
+## What the flow walk found, step 7
+
+The prototype was walked by clicks along `ia/docs/flows.md`, and the link graph was read mechanically as well, because a walk finds what a graph cannot and the reverse is just as true.
+
+**Two pages are exceptional by design, and both are named rather than repaired.**
+
+- **`number-card-owner-only.html` has no exit at all.** It is node 2.10, a partial close: somebody to ask and no number to use. The reader has no home, no menu and no account, so there is genuinely nowhere for them to go. The IA argued this narrowing rather than accepting it, and inventing a way out here would be a fourth route the product does not have. In the prototype the panel is the way back, and the panel is not part of the product.
+- **`number-card-loading.html` has nothing linking to it.** It is an arrival state: a person gets there by opening the address, not by pressing anything. Every other arrival state, the analyst's card and the two combinations, is now reachable from the state it follows, but nothing precedes the first read.
+
+**Two mechanics were decided during the wiring.**
+
+- **Closing the provenance section returns to the card state you came from**, not to the ordinary card. Node 2.7 already required it: the open state is a real URL change and the back button works. Verified by clicks: empty card, open, close, and the empty card comes back.
+- **Closing the send dialog returns to its card explicitly**, without stepping through history. After a copy the previous page is the dialog itself, and a Close that lands on the dialog it just closed is not a close.
+
+### One finding for the matrix, not repaired here
+
+**State combinations across two screens are not in the matrix, and the walk makes them visible.** Opening the provenance section from the empty card shows the ordinary card above the six rows, and copying a link from the source-down card lands on the one "copied" page, whose card is the ordinary one. Neither is drawn wrongly: the matrix carries three states for node 2.7 and one copied state for node 2.8, and those are the states the IA specifies.
+
+**The question this raises is real and belongs to the IA rather than to a wireframe:** whether a state of the card is inherited by the section and the dialog opened on top of it, or whether they are independent. Node 2.7 answers it for one case only, the source being down, which suggests inheritance was intended and was written once rather than as a rule. Carried into the critique at step 9.
+
 ## The two choices, as they were taken
 
 ### Reference screen, the candidates

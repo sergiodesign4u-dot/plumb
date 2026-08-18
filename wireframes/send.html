@@ -40,6 +40,9 @@
         <!-- Node 2.8, and it defines the dialog for the whole product: focus trapped,
              Escape closes, focus returns to the trigger, targets 44 by 44.
              A sheet from the bottom at 360, a centred panel over the card at width -->
+        <!-- Close returns to the card explicitly rather than stepping back through
+             history: after a copy the previous page is the dialog itself, and a Close
+             that lands on the dialog it just closed is not a close -->
         <section class="wf-dialog" role="dialog" aria-modal="true" aria-labelledby="send-title">
           <h2 id="send-title">Send this number</h2>
           <!-- 2. The link, visible and selectable. It wraps rather than truncates:
@@ -49,7 +52,8 @@
           <p class="wf-muted">They will see the metric name, the current definition and its state. The value is not in the preview.</p>
           <p class="wf-actions">
             <a class="wf-btn wf-btn--full" href="send-copied.html">Copy</a>
-            <a class="wf-btn wf-btn--quiet" href="send-copied.html">Share</a>
+            <!-- The native share sheet belongs to the operating system, not to our screen -->
+            <span class="wf-btn wf-btn--quiet wf-pending">Share</span>
             <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
           </p>
         </section>
@@ -62,6 +66,7 @@
 
     <p class="wf-note">Node 2.8, open. <strong>Delivery, not recruitment.</strong> No email field, no invitation, no sign up to see more, and no permission control: access is a workspace question and the card is already open at its link with no account. The dialog earns its place over a plain copy button on one argument, that you should be able to see what you are passing on. The link carries the moment of reading, and pressing send stamps it now rather than propagating the stamp of whoever sent it first.</p>
 
+    <div class="wf-routes"><span class="wf-caps">If the clipboard is unavailable</span><a href="send-clipboard-unavailable.html">2.8 no message, the link is still on screen</a></div>
   </div>
 </div>
 

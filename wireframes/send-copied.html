@@ -40,6 +40,9 @@
         <!-- Node 2.8, and it defines the dialog for the whole product: focus trapped,
              Escape closes, focus returns to the trigger, targets 44 by 44.
              A sheet from the bottom at 360, a centred panel over the card at width -->
+        <!-- Close returns to the card explicitly rather than stepping back through
+             history: after a copy the previous page is the dialog itself, and a Close
+             that lands on the dialog it just closed is not a close -->
         <section class="wf-dialog" role="dialog" aria-modal="true" aria-labelledby="send-title">
           <h2 id="send-title">Send this number</h2>
           <!-- 2. The link, visible and selectable. It wraps rather than truncates:
@@ -53,7 +56,8 @@
           <p class="wf-toast" role="status">Link copied</p>
           <p class="wf-actions">
             <a class="wf-btn wf-btn--full" href="send-copied.html">Copy</a>
-            <a class="wf-btn wf-btn--quiet" href="send-copied.html">Share</a>
+            <!-- The native share sheet belongs to the operating system, not to our screen -->
+            <span class="wf-btn wf-btn--quiet wf-pending">Share</span>
             <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
           </p>
         </section>

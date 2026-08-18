@@ -44,7 +44,7 @@
              section is open, because it is the part that satisfies explanation in place -->
         <p class="wf-src">
           <span>From Snowflake, ANALYTICS.PROD, last run 14:05</span>
-          <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
+          <a class="wf-btn wf-btn--quiet" href="number-card.html" data-wf-back>Close</a>
         </p>
         <!-- 2.7 opens in place, below the card, at #source on the card's own address.
              Not a modal: a modal has no URL, cannot be sent and dies on a refresh -->
@@ -60,7 +60,7 @@
           <div class="wf-row"><dt>The definition it ran against</dt><dd>Distinct accounts with at least one session in the last 7 days. Declared by Dana Reyes, 3 August</dd></div>
           <div class="wf-row"><dt>Queried at</dt><dd>14:25, when you opened this page</dd></div>
         </dl>
-          <p class="wf-actions"><a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a></p>
+          <p class="wf-actions"><a class="wf-btn wf-btn--quiet" href="number-card.html" data-wf-back>Close</a></p>
         </section>
         <!-- 7. Send this number -->
         <p class="wf-actions">
@@ -75,6 +75,7 @@
 
     <p class="wf-note">Node 2.7, the depth half of design principle 4: one line of provenance is on the card from arrival, the rest opens on <strong>one action</strong>, in place, at <code>#source</code> on the card's own address. Not a modal, and the reason is practical rather than stylistic: a modal has no URL, so it cannot be sent, cannot be returned to and disappears on a refresh. This is where the card's single H2 appears. The six rows are the whole hop and the discipline is knowing where to stop: no upstream models, no dependency graph, no column lineage, no SQL, no history of past values. Everything refused there is something a data catalog does well, for a data person, in a place they went to on purpose.</p>
 
+    <div class="wf-routes"><span class="wf-caps">Entered without sent link parameters</span><a href="source-layer-bare-url.html">the same section on a bare address</a></div>
   </div>
 </div>
 

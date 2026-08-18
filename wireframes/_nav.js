@@ -221,6 +221,16 @@ window.WF_GLOBALS = {
     }
   }
 
+  /* Closing a section or a dialog returns to the state you came from, not to the ordinary
+     card. Node 2.7 puts it plainly: the back button works and the open state is a real URL
+     change. The href stays as the honest fallback for a page opened cold. */
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[data-wf-back]') : null;
+    if (!a) return;
+    var sameOrigin = document.referrer && document.referrer.indexOf(location.origin) === 0;
+    if (history.length > 1 && sameOrigin) { e.preventDefault(); history.back(); }
+  });
+
   /* B. The hub. Flow entries, then the coverage map of the whole product. */
   var flowsMount = document.getElementById('wf-flows');
   if (flowsMount) {
