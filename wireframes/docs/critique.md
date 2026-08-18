@@ -113,6 +113,18 @@ Repairs shift neighbours, so the taxonomy was run again. **It found one thing, a
 
 **Measured after the second repair, across all 53 pages: no horizontal overflow anywhere, no control under 44px, no page without an exit, and the placeholder is 38 by 160.**
 
+### The second pass in the second instrument, and it caught what I had just made
+
+Codex was given the touched files again. **The first two attempts did not finish** on a folder this size and were stopped, which is recorded rather than glossed: the pass that landed was scoped to six files and three questions. That is a smaller radius than the first pass had, and the difference is named here so nobody reads the second pass as equal in coverage to the first.
+
+| What it found | Verdict |
+| --- | --- |
+| `.wf-header__mark` defined twice with different declarations | **Confirmed, and I had just created it.** The tap target repair added a second definition beside the original instead of extending it. Additive rather than conflicting, so nothing rendered differently, but two definitions of one selector is exactly the class the consolidation exists to remove. Merged, and two more of the same kind that it did not reach, `.wf-list__name a` and `.pp-bar__mark`, were merged with it |
+| A bare `1px` in a page's inline block | **Withdrawn.** There is no border width token and `_wf.css` writes `1px` as a literal throughout; inventing a token for a hairline would be a decision about the system taken to satisfy a checker |
+| An `aria-labelledby` with no matching id | **Nothing found.** The one such attribute in the batch resolves |
+
+**The useful part is the first row.** A repair pass that removes duplicate definitions can introduce them, and the instrument that caught it is the one that reads source rather than pixels. Ten `44px` literals that predated the token were also removed in the same pass, which the token had made obsolete without anybody going back for them.
+
 ---
 
 ## The stage contract as a checklist, the third instrument

@@ -116,10 +116,11 @@ body{
 .wf-header{ display:flex; align-items:center; gap:var(--wf-space-3);
             border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-2);
             margin-bottom:var(--wf-space-4); flex-wrap:wrap; }
-.wf-header__mark{ font-weight:700; text-decoration:none; }
+.wf-header__mark{ font-weight:700; text-decoration:none; display:inline-flex;
+            align-items:center; min-height:var(--wf-target); }
 .wf-header__nav{ display:flex; gap:var(--wf-space-3); }
-.wf-header__nav a, .wf-header__nav span{ display:inline-block; min-height:44px;
-            line-height:44px; text-decoration:none; }
+.wf-header__nav a, .wf-header__nav span{ display:inline-block; min-height:var(--wf-target);
+            line-height:var(--wf-target); text-decoration:none; }
 .wf-header__search{ flex:1; min-width:140px; }
 .wf-header__account{ position:relative; }
 .wf-header__account > summary{ list-style:none; cursor:pointer; display:inline-flex;
@@ -132,17 +133,15 @@ body{
             min-width:160px; }
 .wf-header__menu a{ display:inline-flex; align-items:center; min-height:var(--wf-target); }
 .wf-header__nav [aria-current="page"]{ font-weight:700; }
-.wf-header__mark{ display:inline-flex; align-items:center; min-height:var(--wf-target); }
 /* The row does one thing, it opens the card, so on a phone the name is the row's target
    and it fills it. Measured at 17px until the critique looked. Links sitting inside a
    sentence are left alone: WCAG exempts an inline link in text, and padding one would
    break the line it lives in. */
-.wf-list__name a{ display:flex; align-items:center; min-height:var(--wf-target); }
 .tp-links a{ display:inline-flex; align-items:center; min-height:var(--wf-target); }
 /* The second pass found the same defect in the places the first fix did not reach: a
    breadcrumb, a public wordmark and a link that is the whole of its paragraph are all
    targets a thumb aims at, not links inside a sentence. */
-.wf-crumb a, .wf-crumbs a, .pp-bar__mark,
+.wf-crumb a, .wf-crumbs a,
 .wf-screen p > a:only-child{ display:inline-flex; align-items:center;
             min-height:var(--wf-target); }
 .wf-footer__col > summary{ list-style:none; cursor:pointer; }
@@ -288,7 +287,8 @@ a{ color:inherit; }
 .wf-list__head th{ font-size:var(--wf-size-small); font-weight:400; color:var(--wf-muted);
                    border-bottom:1px solid var(--wf-ink); }
 .wf-list tbody tr{ border-bottom:1px solid var(--wf-rule); }
-.wf-list__name a{ font-weight:600; }
+.wf-list__name a{ font-weight:600; display:flex; align-items:center;
+            min-height:var(--wf-target); }
 .wf-list__count{ color:var(--wf-muted); }
 .wf-list__total{ margin-top:var(--wf-space-3); }
 /* The ghost row of node 3.5. The field labels survive with no rows under them, so an
@@ -309,7 +309,7 @@ a{ color:inherit; }
 .wf-choice__list{ display:flex; flex-wrap:wrap; gap:var(--wf-space-2); }
 .wf-choice__item{ display:flex; align-items:center; gap:var(--wf-space-2);
                   border:1px solid var(--wf-rule-strong); background:var(--wf-surface);
-                  padding:0 var(--wf-space-3); min-height:44px; flex:1 1 9rem;
+                  padding:0 var(--wf-space-3); min-height:var(--wf-target); flex:1 1 9rem;
                   cursor:pointer; }
 .wf-aside{ background:var(--wf-panel); border:1px solid var(--wf-rule);
            padding:var(--wf-space-3); font-size:var(--wf-size-small); }
@@ -441,7 +441,7 @@ a{ color:inherit; }
                margin:var(--wf-space-2) 0 0; }
 .wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
           margin-bottom:var(--wf-space-4); }
-.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+.wf-rail__item{ display:flex; align-items:center; min-height:var(--wf-target);
                 font-size:var(--wf-size-small); text-decoration:none; }
 .wf-rail__item.is-current{ font-weight:700; }
 .wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
@@ -562,7 +562,7 @@ a{ color:inherit; }
 .wf-settings__rail{ display:flex; gap:var(--wf-space-3);
                     border-bottom:1px solid var(--wf-rule);
                     margin-bottom:var(--wf-space-4); }
-.wf-settings__item{ display:inline-block; min-height:44px; line-height:44px;
+.wf-settings__item{ display:inline-block; min-height:var(--wf-target); line-height:var(--wf-target);
                     text-decoration:none; color:var(--wf-muted); }
 .wf-settings__item[aria-current="page"]{ color:var(--wf-ink); font-weight:700; }
 .wf-settings__panel{ min-width:0; }
@@ -698,7 +698,8 @@ a{ color:inherit; }
 .pp-bar{ display:flex; align-items:center; gap:var(--wf-space-3);
          border-bottom:1px solid var(--wf-rule-strong); padding-bottom:var(--wf-space-2);
          margin-bottom:var(--wf-space-4); flex-wrap:wrap; }
-.pp-bar__mark{ font-weight:700; text-decoration:none; margin-right:auto; }
+.pp-bar__mark{ font-weight:700; text-decoration:none; margin-right:auto;
+            display:inline-flex; align-items:center; min-height:var(--wf-target); }
 .pp-bar__who{ border:1px solid var(--wf-rule-strong); font-size:var(--wf-size-small);
               color:var(--wf-muted); padding:var(--wf-space-1) var(--wf-space-2); }
 .pp-lede{ margin-top:var(--wf-space-3); }
@@ -756,8 +757,8 @@ a{ color:inherit; }
 .wf-label{ display:block; font-weight:600; margin-bottom:var(--wf-space-1); }
 /* Targets at 44 by 44, required by node 1.1 responsive. The control classes in _wf.css
    are sized for dense analyst rows, so the gate raises them rather than redefining them. */
-.wf-gate .wf-field{ min-height:44px; }
-.wf-gate .wf-btn--full{ min-height:44px; margin-top:var(--wf-space-3); }
+.wf-gate .wf-field{ min-height:var(--wf-target); }
+.wf-gate .wf-btn--full{ min-height:var(--wf-target); margin-top:var(--wf-space-3); }
 /* The legal line, block 6, with the prior agreement clause. */
 .wf-legal{ color:var(--wf-muted); font-size:var(--wf-size-small);
            margin-top:var(--wf-space-4); }
