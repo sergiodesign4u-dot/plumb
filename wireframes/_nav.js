@@ -110,6 +110,42 @@ window.WF_FLOWS = [
    component here when the first analyst screen exists, and not before: a renderer with
    no caller is a thing invented ahead of its need. */
 window.WF_GLOBALS = {
+  /* Node 0.1, the analyst's header. The reader never sees it: their guest column in the
+     node's state matrix is empty on purpose, and that is the largest single decision in
+     this IA. Two destinations, no hamburger, no bottom tab bar, and the account corner
+     carries sign out only, because cluster 5 is ПОТІМ and a menu may not offer routes to
+     nodes that do not exist in the current scope. It is built to take them unchanged. */
+  header: function (mount) {
+    function target(node, label, cls) {
+      var s = (window.WF_NAV || []).filter(function (x) { return x.node === node; })[0];
+      var e;
+      if (s && s.file) { e = document.createElement('a'); e.href = s.file; }
+      else { e = document.createElement('span'); e.className = 'wf-pending'; }
+      if (cls) e.className = (e.className ? e.className + ' ' : '') + cls;
+      e.textContent = label;
+      return e;
+    }
+    var h = document.createElement('header');
+    h.className = 'wf-header';
+    h.appendChild(target('4.1', 'Plumb', 'wf-header__mark'));
+    var nav = document.createElement('nav');
+    nav.className = 'wf-header__nav';
+    nav.appendChild(target('4.1', 'Metrics'));
+    nav.appendChild(target('3.1', 'Sources'));
+    h.appendChild(nav);
+    var search = document.createElement('input');
+    search.className = 'wf-field wf-header__search';
+    search.type = 'search';
+    search.placeholder = 'Search metrics';
+    search.setAttribute('aria-label', 'Search metrics');
+    h.appendChild(search);
+    var account = document.createElement('span');
+    account.className = 'wf-header__account';
+    account.textContent = 'Dana R.';
+    h.appendChild(account);
+    mount.appendChild(h);
+  },
+
   /* The minimal footer variant: the only global surface a reader ever sees. It renders a
      target as a LINK when that screen exists in the registry and as TEXT when it does
      not, which is the IA rule about navigational elements applied automatically instead
@@ -144,6 +180,8 @@ window.WF_GLOBALS = {
 
 (function () {
   var NAV = window.WF_NAV || [];
+  var headerMount = document.getElementById('wf-header');
+  if (headerMount) window.WF_GLOBALS.header(headerMount);
   var footerMount = document.getElementById('wf-footer');
   if (footerMount) window.WF_GLOBALS.footer(footerMount);
   var here = (location.pathname.split('/').pop() || '');

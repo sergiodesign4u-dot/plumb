@@ -101,6 +101,45 @@ Base file is the ordinary condition; every other state is its own page so the pr
 
 ---
 
+## The rest of the product, added at step 8
+
+Step 1 filled this file for the main flow only, and from here it is read as the complete list of the product: stage 05 step 4 takes the tone of every state from it, stage 07 step 2 reads the component inventory out of it, and stage 12 takes the structure of everything still to be built. **Sixteen screen rows were added below**, with their states taken from the States section of each node and their scope labels carried over from `ia/docs/sitemap.md` rather than re-derived.
+
+### The analyst, flow 4
+
+| Screen | Node | Job | Scope | States, one page each | Pages |
+| --- | --- | --- | --- | --- | --- |
+| **Sign in through SSO** | 1.1 | Precondition of R5 and R2 | MVP | 1.2 the provider is answering, **with no cancel by decision**; 1.3 authentication failed, which names three different failures with the fix in a different place each time | 3 |
+| **Sources** | 3.1 | The main job as a precondition | MVP | 3.5 no sources connected, **a recovery state and not an onboarding one** | 2 |
+| **Connect a source** | 3.2 | R5, and the precondition | MVP | 3.3 testing, naming which half is being tried; 3.4 failed, where the node found three failures where the map said two | 3 |
+| **Metric registry** | 4.1 | R2 and R5 | MVP | 4.2 no metrics yet, which is the first screen of every workspace; 4.3 search results, including the no-match case that carries the query into the primary action | 3 |
+| **Define a metric** | 4.4 | R5 and R3 | MVP | 4.5 running against the source; 4.6 does not run, three named failure modes of which one does not block; 4.7 editing with the previous version and the consequence banner | 4 |
+
+### The public surface
+
+| Screen | Node | Job | Scope | States, one page each | Pages |
+| --- | --- | --- | --- | --- | --- |
+| **Product page** | 6.1 | Acquisition. **The only indexed page in the product** | MVP | Signed in as an analyst; signed in with no workspace; **the live card cannot load and renders its own source-is-down state in public** | 4 |
+| **Privacy policy** | 6.5 | Legal, and an argument for a metadata-only product | MVP | None. Default is the only state | 1 |
+| **Terms of service** | 6.6 | Legal | MVP | None | 1 |
+| Trust and security | 6.2 | The buyer, who has no product surface | ПОТІМ | A document is requested | 2 |
+| Pricing | 6.3 | Acquisition | ПОТІМ | None. No data behind the page | 1 |
+| Documentation | 6.4 | Both | ПОТІМ | None | 1 |
+| Support and contact | 6.7 | Both | ПОТІМ | Message sent | 2 |
+
+### System and workspace
+
+| Screen | Node | Job | Scope | States, one page each | Pages |
+| --- | --- | --- | --- | --- | --- |
+| **404** | 7.1 | **The reader most of all:** a dead link is their first contact with us | MVP | None, but it routes by role and carries the tombstone of a removed metric | 1 |
+| **500** | 7.2 | Both | MVP | None | 1 |
+| Maintenance | 7.3 | Both | ПОТІМ | None | 1 |
+| Cookie notice | 7.4 | Legal | ПОТІМ | None | 1 |
+| Workspace and people | 5.1 | **No job.** Tenancy | ПОТІМ | The last administrator, blocked inline; invitation pending; no seats left | 4 |
+| Plan and seats | 5.2 | **No job.** Business model | ПОТІМ | None | 1 |
+
+**One global component is still to be built and it is not a screen:** node 0.1, the analyst's header with Metrics, Sources, persistent search and the account corner. It is rendered by the registry, the sources list and both forms, so it becomes a render function in `wireframes/_nav.js` at the start of the round, exactly as the footer did. **The reader never sees it**, and that is the largest single decision in this IA.
+
 ## Repairs made upwards, because a wireframe may not invent
 
 | Found at | What was wrong | The repair |
