@@ -125,6 +125,12 @@ Rules from stage 03a, not a retelling of the map. The map itself is `ia/docs/sit
 
 **Four things about the reader are architecture, not preference.** The card is readable at a permanent URL with no account; nothing that identifies a reader is stored, and the one anonymous counter is never rendered; the reader has no home, header or menu; and the definition, the states, the age and the attribution are all on the first screen.
 
+## Wireframes
+
+**`wireframes/` is grey and stays grey.** Structure and copy live there; colour arrives at stage 06 on COPIES of those screens in `design/`, never on the originals. *Forbids:* painting a wireframe, and editing a screen's structure in a colour copy instead of at its source.
+
+**The reference screen and the first flow are recorded at the top of `wireframes/docs/screens.md`**, and that path is what later stages read. *Forbids:* a second edition of either name anywhere else, including here.
+
 ## Tech stack hypothesis
 
 **Front:** React and TypeScript, Next.js App Router. Reason: Plumb has a public part that needs SEO and server rendering (product page, docs, pricing) and an app behind login. One repo covers both.

@@ -77,3 +77,65 @@ They are repaired upwards or not at all, and they are listed here so the fix is 
 | **Search is specified twice**, in node 0.1 as a persistent affordance in the bar and in node 4.1 as block 2 of the page. One has to go, and the choice changes both nodes | `ia/docs/pages/navigation.md` and `metric-registry.md` |
 | **"No seats left" tells the admin to change the number of seats on a page that has no seat control**, and "the last administrator" tells them to make somebody else an admin, which no screen in the product can do | `ia/docs/pages/workspace.md` |
 | **Node 0.2 has three footer variants and none of them fits a gate.** Sign in is public, carries no number and is not the card | `ia/docs/pages/footer.md` |
+
+
+---
+
+## What was repaired, and what the second pass found
+
+**Most of the thirty findings were one defect seen on many screens**, so most of the repair happened in the two shared files rather than page by page.
+
+| Repair | Where | Screens it reached |
+| --- | --- | --- |
+| The placeholder renders: height and width were being set on an inline span | `_wf.css` | The loading state, and the rule for any state that reserves space |
+| Every control reaches 44px, through `--wf-target`, the one token five screens asked for independently | `_wf.css` | All 53 |
+| The send sheet no longer covers a footer the page cannot scroll clear of | `_wf.css` | Four |
+| The flagged field is visible again: the secret row was setting the whole border five lines after the flag set its colour | `_wf.css` | The connection error |
+| The account corner is a real control carrying the one item MVP allows, and the active destination declares itself | `_nav.js` | Twelve signed-in screens |
+| The footer's trust line is chosen by what the page holds rather than by the variant's name | `_nav.js` | Sign in, the 404, the 500, the cookie notice |
+| The full footer's columns collapse on a phone, as node 0.2 requires | `_nav.js` | Twelve public pages |
+| The card's two actions carry equal weight again | Nine card pages | The screen the IA says has no primary action |
+| The full card renders behind the send sheet | Four | Node 2.8's "stays legible" |
+| Attribution moved above the previous definition, where it belongs to the current one | Three | The changed states |
+| One Close per section, and the second was mine from step 7 | Three | The source layer |
+| The registry gets the width its own reuse already had | Three | The node that defines the listing |
+| "Run it" is a route rather than a dead button, matching its twin on the connection form | Four | Define a metric |
+| Both progress states are visible when they fire, instead of 400px below the fold | Two | Testing, running |
+| The search results state has a heading on screen | One | The no-match rendering |
+| One wording for one column across two states of one node | Two | Sources |
+| The rail asks the registry, so it cannot go stale again | Five | The document shell |
+
+**Two screens were rebuilt rather than patched.** The cookie notice is node 7.4 rendered on the page it lives on, instead of a page about itself with an empty box standing in for the host. The 404 is split by role, so the reader's first contact no longer carries a button into a registry they have no account for, and the analyst's rendering became its own page, registered as a state.
+
+### The second pass, over the touched screens
+
+Repairs shift neighbours, so the taxonomy was run again. **It found one thing, and it was the same defect in the places the first fix did not reach:** a breadcrumb, a public wordmark and a link that is the whole of its paragraph are targets a thumb aims at, and they were still 14 to 21px. Links sitting inside a sentence were left alone deliberately, because the accessibility criterion exempts them and padding one would break the line it lives in.
+
+**Measured after the second repair, across all 53 pages: no horizontal overflow anywhere, no control under 44px, no page without an exit, and the placeholder is 38 by 160.**
+
+---
+
+## The stage contract as a checklist, the third instrument
+
+**A separate table on purpose.** Both instruments above read what exists, so neither can see a step that never happened: it leaves no trace in any file and on any page. This pass walks the pack's own contract instead.
+
+| Contract line | Verdict |
+| --- | --- |
+| Entry gate before step 1: sitemap, flows, the node sources, jtbd, benchmark | **Done.** All five present, listed before anything was drawn |
+| The matrix carries every screen and every dash has a reason | **Done.** Eight reasons in the first round, sixteen screens added at step 8 |
+| The reference screen and the first flow are recorded once, at the top of `screens.md` | **Done.** The path is what `CLAUDE.md` carries, never a copy of the name |
+| A contract written before any screen, and inheritance named rather than reinvented | **Done.** `conventions.md`, with the canonical data set that stopped 36 pages from disagreeing |
+| Navigation built BEFORE the first screen, as a coverage tracker | **Done.** The registry was filled with all 25 rows while nothing was drawn |
+| The hub registered in the root registry at step 3, with `wip` | **Done.** It needed a `wip` flag that did not exist, so the renderer learned one |
+| One screen at a time, shown, then wait | **Done** through step 7. Step 8 is the sanctioned exception |
+| Estimate before the fan-out, and the round agreed with the user | **Done.** 36 pages across 18 screens, and the deferred round was named |
+| Every screen in the agreed scope has a wireframe and all its states | **Done.** 53 pages, and the two deferred states are the ones the IA audit deferred |
+| Flows wired in both directions, no dead ends | **Done**, with node 2.10 as the one recorded exception |
+| Nothing invented outside the IA | **Done**, and three holes were carried back rather than filled |
+| Inline CSS folded back into `_wf.css` with a table and before and after screenshots | **Done.** 233 rules folded, six collisions resolved, five of six pairs byte identical and the sixth explained |
+| Critique in several instruments, verified before repair, second pass over the touched screens | **Done.** Five instruments, six findings withdrawn with reasons |
+| Every screen checked at a measured 360 | **Done.** All 53, three times: before the critique, after the first repair, after the second |
+| `wireframes/CLAUDE.md`, the root rule, the README status, the decision log | **Done** at closing |
+| **The 360 class had never been checked on a live screen before this stage** | **Not done until now, and that is the finding.** The stance was declared at 03b and carried through four stages on trust. The first real check produced four defects, one of which meant a state rendered nothing at all |
+
+**Not everything is green, and the row above is why the checklist is worth running.** The one honest "not done" is that a rule the project had been asserting since the detail layer of the IA had never been tested until the stage whose job it is.

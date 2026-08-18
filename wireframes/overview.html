@@ -48,6 +48,13 @@
   .sw span{ display:block; padding:6px 8px; color:var(--muted); }
   .sw b{ color:var(--ink); display:block; }
   table td.why{ font-size:12.5px; color:var(--muted); }
+  .pairs{ display:grid; gap:14px; margin:16px 0; }
+  @media (min-width:760px){ .pairs{ grid-template-columns:1fr 1fr; } }
+  .pairs figure{ margin:0; }
+  .pairs img{ width:100%; border:1px solid var(--rule-strong); display:block; }
+  .pairs figcaption{ font-family:var(--sans); font-size:12.5px; color:var(--muted);
+                     margin-top:8px; }
+  .pairs figcaption strong{ color:var(--ink); }
 </style>
 </head>
 <body>
@@ -175,6 +182,67 @@
     </div>
   </section>
 
+
+  <!-- Was became ....................................................... -->
+  <section id="audit">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Was &rarr; became</h2></div>
+
+    <p>Step 9, in five instruments, because they have different radii. <strong>Codex read the source and found nothing at 360, three browser auditors found four defects there, and a grep settled the one class both models could have guessed wrong.</strong> Thirty findings stood after verification in the current file, six were withdrawn with their reason kept, and three turned out to be holes in the IA that may only be repaired upwards. Every line is in <code>wireframes/docs/critique.md</code>; this is the half-minute version.</p>
+
+    <div class="tw">
+      <table>
+        <caption>By class</caption>
+        <thead><tr><th>Class</th><th>Found</th><th>Who found it</th><th>Fixed</th><th>Withdrawn</th><th>Left to the IA</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Breaks at 360</strong></td><td>4</td><td>Browser auditors. <strong>Codex could not see this class at all</strong></td><td>4</td><td>0</td><td>0</td></tr>
+          <tr><td><strong>Zone with no role or no next action</strong></td><td>19</td><td>Browser auditors</td><td>17</td><td>1</td><td>2</td></tr>
+          <tr><td>Schema instead of a screen</td><td>2</td><td>Browser auditors</td><td>2</td><td>0</td><td>0</td></tr>
+          <tr><td>Appearance leaked, placeholders, dead ends, screens off the map, navigation</td><td>3</td><td>Codex</td><td>1</td><td>4</td><td>0</td></tr>
+          <tr><td>Appearance living inline</td><td>2</td><td>Codex, and my own grep independently</td><td>2</td><td>1</td><td>0</td></tr>
+          <tr><td>Canonical data out of sync</td><td>1</td><td>Browser auditor</td><td>1</td><td>0</td><td>0</td></tr>
+          <tr><td><strong>Duplicate rule on two or more screens</strong></td><td>0</td><td>Codex and my grep, counted separately</td><td>n/a</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note"><strong>The two instruments disagreed once and it was not a contradiction.</strong> Codex reported the 360 class clean because it reads files, and the class only exists once a browser computes a style. That is the clearest argument in this stage for choosing radii rather than opinions.</p>
+
+    <h3 class="wf-caps">Three pairs, and the first one is why this step exists</h3>
+
+    <div class="pairs">
+      <figure>
+        <img src="screens/loading-360-was.png" alt="The loading state at 360 before the repair: no placeholder where the value goes">
+        <figcaption><strong>Was.</strong> The loading state at 360. <code>.wf-skeleton</code> set height and width on an inline span, so both were ignored: the value slot was 0px tall, the placeholder invisible, and every block below sat 44px higher than on the resolved card. A grep saw the rule and was satisfied.</figcaption>
+      </figure>
+      <figure>
+        <img src="screens/loading-360-now.png" alt="The loading state at 360 after the repair: the placeholder holds the value's space">
+        <figcaption><strong>Became.</strong> The placeholder holds the space the value will take, so nothing shifts when the number arrives, which is what node 2.1's checklist asks for by name. The two actions also carry equal weight now: this card has no primary by decision.</figcaption>
+      </figure>
+    </div>
+
+    <div class="pairs">
+      <figure>
+        <img src="screens/send-copied-360-was.png" alt="The copied state at 360 before: the sheet cuts the footer in half">
+        <figcaption><strong>Was.</strong> The sheet is pinned to the bottom and the page cannot scroll clear of it: the footer sentence is sliced mid-line and can never be revealed. Behind the sheet the card is a three block stub, so the footer became the most prominent thing after the number.</figcaption>
+      </figure>
+      <figure>
+        <img src="screens/send-copied-360-now.png" alt="The copied state at 360 after: the full card behind, the footer clear of the sheet">
+        <figcaption><strong>Became.</strong> The page reserves the room the sheet takes, and the card behind it is the whole canonical card, which is what node 2.8 means by staying legible: the person is about to send this number and may want to check it.</figcaption>
+      </figure>
+    </div>
+
+    <div class="pairs">
+      <figure>
+        <img src="screens/cookie-desktop-was.png" alt="The cookie notice before: a page about the banner, with an empty dashed box standing in for the host page">
+        <figcaption><strong>Was.</strong> Node 7.4 is a section, not a page, and a section with no host cannot be drawn, so the file became a page <em>about</em> the banner: a heading, an essay, and a dashed empty box labelled "a cluster 6 page, for example the product page".</figcaption>
+      </figure>
+      <figure>
+        <img src="screens/cookie-desktop-now.png" alt="The cookie notice after: the banner pinned to the product page it lives on">
+        <figcaption><strong>Became.</strong> The section is rendered where it lives, pinned to the product page, which is unchanged underneath it. The argument that the card never carries this banner moved to the note under the screen, where an argument belongs.</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <footer class="note">
     <p>Plumb, stage 04 of 13. Screens and states are registered in <code>wireframes/_nav.js</code>, the matrix source is <code>wireframes/docs/screens.md</code> and the contract is <code>wireframes/docs/conventions.md</code>. Each screen carries its own wireframe only panel and links back to the IA node it renders.</p>
   </footer>
@@ -194,7 +262,8 @@
     { id:'flows',       label:'Entries by flow' },
     { id:'coverage',    label:'Coverage map' },
     { id:'matrix',      label:'State matrix' },
-    { id:'conventions', label:'Conventions' }
+    { id:'conventions', label:'Conventions' },
+    { id:'audit',       label:'Was to became' }
   ];
 </script>
 <script src="../_nav.js"></script>

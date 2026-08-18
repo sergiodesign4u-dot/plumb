@@ -11,6 +11,7 @@
 - IA Concept map: https://sergiodesign4u-dot.github.io/plumb/ia/concept-map.html
 - IA Sitemap (node tree): https://sergiodesign4u-dot.github.io/plumb/ia/sitemap.html
 - IA Structure (node hub, block bank, audit): https://sergiodesign4u-dot.github.io/plumb/ia/structure.html
+- Wireframes (all screens, coverage, state matrix): https://sergiodesign4u-dot.github.io/plumb/wireframes/overview.html
 
 Metric trust tool for B2B teams. One place holds the canonical definition of every metric, and the provenance, freshness and breakage of a number are shown right where the number is read.
 
@@ -37,6 +38,15 @@ Index only. The conclusions live in the files and on the pages, and a second edi
 
 `personas.md` has one writer after stage 02: the CJM step that mines real feedback. Every other stage reads it and returns a contradiction as a finding rather than editing it or re-describing the persona somewhere else.
 
+## Wireframes
+
+The grey clickable prototype, and the last stop before the product has a visual language. **Open [All screens](https://sergiodesign4u-dot.github.io/plumb/wireframes/overview.html)**: it carries the entries by flow, the coverage map of every screen, the state matrix and the contract.
+
+- `wireframes/<screen>.html` is the ordinary condition of a screen, `wireframes/<screen>-<state>.html` is one state. **Every state is its own page**, so the prototype navigates between them.
+- `wireframes/docs/screens.md` is the state matrix and the top line records the reference screen and the first flow. `conventions.md` is the contract, `critique.md` is the log of the critique.
+- `wireframes/_wf.css` is the single source of appearance and it stays grey. `wireframes/_nav.js` is the registry of screens and the global components.
+- **Stages 05 to 08 read this folder.** Voice rewrites the text here, Concept and UI colour COPIES of these screens in `design/`, and stage 12 rolls out the rest of the product from the same structure.
+
 ## Status
 
 | Stage | Status |
@@ -45,7 +55,7 @@ Index only. The conclusions live in the files and on the pages, and a second edi
 | User Research (Personas + JTBD) | Done. Two behavioural personas with the reader as primary, one main job and five related, matrix, MVP core of two jobs, critique in two instruments, both pages published |
 | CJM (As-Is + To-Be) | Done. Seven As-Is phases with four evidenced barriers and no measured emotion, nine mined sources, four growth zones, six traced To-Be steps, eleven backlog items with one orphan cut, two critiques in two instruments, both pages published |
 | Information Architecture (Base + Detail) | Done. Base: entity inventory, thirteen screens in five clusters by intent, navigation with the main job at zero taps, four flows, traceability matrix, two critiques. Detail: 42 nodes with 33 MVP, a block bank built by page type from live competitor pages plus craft references, eighteen specified node pages with SEO decided ahead of drawing, audit in two instruments over both axes plus a second pass, four scope labels changed by it, and a third pass on 2026-08-18 that ran the stage contract as a checklist and rebuilt the three renders the closing step had left on pre-audit counts, four pages published |
-| Wireframes | Not started |
+| Wireframes | Done. A grey clickable prototype of the whole product: 21 screens on 53 pages, every state its own page, the card as the reference screen and flow 1 assembled end to end. Styles consolidated into one stylesheet with six collisions caught, critique in five instruments with 30 findings repaired, and every page measured at 360 |
 | Voice | Not started |
 | Concept | Not started |
 | UI + Visual | Not started |

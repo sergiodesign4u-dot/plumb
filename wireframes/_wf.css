@@ -139,6 +139,12 @@ body{
    break the line it lives in. */
 .wf-list__name a{ display:flex; align-items:center; min-height:var(--wf-target); }
 .tp-links a{ display:inline-flex; align-items:center; min-height:var(--wf-target); }
+/* The second pass found the same defect in the places the first fix did not reach: a
+   breadcrumb, a public wordmark and a link that is the whole of its paragraph are all
+   targets a thumb aims at, not links inside a sentence. */
+.wf-crumb a, .wf-crumbs a, .pp-bar__mark,
+.wf-screen p > a:only-child{ display:inline-flex; align-items:center;
+            min-height:var(--wf-target); }
 .wf-footer__col > summary{ list-style:none; cursor:pointer; }
 .wf-footer__col > summary::-webkit-details-marker{ display:none; }
 
