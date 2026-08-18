@@ -181,3 +181,56 @@ The prototype was walked by clicks along `ia/docs/flows.md`, and the link graph 
 | --- | --- |
 | **Flow 1, the main job** | It is the flow the reference screen lives in, it closes the job the product exists for, and it is three screens deep with fifteen pages, so it is assembled end to end cheaply |
 | Flow 4, the analyst's setup | Six screens, four loading states and four errors. It is the largest flow in the product and it reuses nothing that exists yet |
+
+---
+
+## Style consolidation, step 8
+
+The fan-out wrote its CSS inline by design, one marked block per screen, because nine agents cannot write into one stylesheet without colliding. This is the pass that folds it back. **Rules were moved, not edited:** each declaration block was carried across byte for byte, and the two places where that was impossible are named below.
+
+| | Count |
+| --- | --- |
+| Screens in the fan-out | 18, on 36 pages |
+| Distinct rules across the inline blocks | 259 |
+| **Folded into `_wf.css`**, appearing on two or more screens | **233** |
+| Stayed inline, genuinely single use | 23 |
+| Inline blocks removed entirely | 30 of 36 |
+
+**What stayed inline, and why each one is genuinely single use.** The tombstone box and the role split on the 404, the consent banner and its host on the cookie notice, the plan cards and the FAQ on pricing, the progress block on the sign-in loading state, the error banner on the sign-in failure, and the gate form on the trust document request. One block stayed by explicit instruction from its author and is marked "prototype only, do not fold": the second title on the search results page, which exists because one file can only be one page.
+
+### Six collisions, which is what the fold exists to find
+
+Folding turned nine private stylesheets into one, and six selectors turned out to be defined twice with different bodies. **This is the defect the consolidation step exists to catch:** left alone it reaches stage 07 as three versions of a card and two grids, and it becomes visible two stages later as a fork in the tokens.
+
+| Selector | Defined by | Resolution |
+| --- | --- | --- |
+| `.wf-list` | Sources and the registry | One definition. The registry defines the canonical listing and sources reuses it, which is what the IA already says |
+| `.wf-list td`, `.wf-list th` | Both, in opposite directions | The registry's mobile-first blocks with a table restored at 700px, which both screens were already rendering |
+| `.wf-label` | Connect a source, define a metric | One. The earlier definition was already dead |
+| `.wf-banner`, `.wf-banner--info` | Connect a source, define a metric | One, carrying the properties the later rule did not set |
+| `.wf-btn[disabled]` | Three groups | One |
+| `.wf-crumb` | Workspace, the document shell | One. The earlier definition was already dead |
+
+**The merge is neutral by construction and was proved rather than asserted.** The surviving rule sits where the last definition sat, and an earlier declaration is carried over only where the later rule did not set that property. Computed styles were read from six pages before and after the merge, across eleven properties: identical everywhere.
+
+### Proof that the fold changed nothing
+
+Six screenshots before, six after, at a measured 360 and on a wide canvas: the registry, the number card and the workspace, chosen as the densest screen, the screen with the most states and one from the last batch of the fan-out.
+
+**Five of the six pairs are byte identical.** The sixth has no proof, and the reason is worth recording rather than hiding: **the registry's wide shot was taken with the viewport still narrow**, so it is a second 360 shot rather than a desktop one, and a before shot cannot be taken twice. It is kept under its honest name. For that one pair the evidence is the computed-style probe above, not pixels.
+
+### New variables the fan-out asked for, not yet added
+
+Every agent was told to use `var(--wf-...)` and to report anything missing rather than invent a token. Seven came back, and **44px came back from five independent screens**, which makes it a fact about the product rather than a request.
+
+| Variable | Value | Why | Asked for by |
+| --- | --- | --- | --- |
+| `--wf-target` | 44px | The tap target the IA fixes at AAA, already hard-coded twice inside `_wf.css` itself | Sign in, connect a source, the document rail, pricing, workspace |
+| `--wf-screen-max-wide` | 880 to 960px | A table with three columns, a form with a panel beside it and a two-column hero are not the reader's one-column card. **Three screens asked, with three different numbers**, which is a decision rather than a token | Sources, the registry, the product page |
+| `--wf-border-strong` | 2px | The heavier border that marks the field that caused a failure. In a grey prototype weight is the only non-hue way to say it | Define a metric, connect a source, the system pages |
+| `--wf-gate-max` | 380px | The sign-in column, narrower than a reading column | Sign in |
+| `--wf-rail-w` | 168px | The document rail | The document shell |
+| `--wf-aside-w` | 260px | The prerequisites panel beside the connection form | Connect a source |
+| `--wf-choice-basis` | 9rem | The flex basis of a warehouse option | Connect a source |
+
+**None has been added.** A token is a decision about the system, and the second row shows why: three screens want a wider canvas and none of them wants the same width, so adding a variable now would freeze a number nobody has argued for. They go to the critique at step 9 with the rest.

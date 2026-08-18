@@ -11,30 +11,21 @@
      returning 200 is refused by name at the node. -->
 <meta name="robots" content="noindex, follow">
 <link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: system-pages :: to fold into _wf.css */
-/* The error page, node 7.1. Canonical here and shared by 7.2 and 7.3: one centred
-   column, capped, and it barely changes at width. .wf-screen already centres and caps,
-   so this only narrows the text to a readable measure. */
-.sys{ max-width:var(--wf-measure); }
-.sys__lead{ font-size:var(--wf-size-h2); }
-/* Block 2 of 7.1 and 7.2: trouble named in words rather than raised as an alarm. Marked
-   by a left rule, the only 2px rule in the prototype, because at 1px it reads as one
-   more paragraph edge instead of the block carrying the honest statement. */
-.sys__said{ border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-3);
-            margin:var(--wf-space-3) 0 var(--wf-space-4); }
-.sys__said p:last-child{ margin-bottom:0; }
-/* The tombstone. Three fields and nothing else, bordered because it is an object rather
+      <!-- What remains here is genuinely single use on this screen. Everything
+           that appeared on two or more screens was folded into _wf.css at the
+           step 8 reconcile, unedited. -->
+      <style>
+        /* The tombstone. Three fields and nothing else, bordered because it is an object rather
    than a sentence about the page. */
 .sys__tomb{ border:1px solid var(--wf-rule-strong); padding:var(--wf-space-3);
             margin:var(--wf-space-3) 0; }
-.sys__tomb p:last-child{ margin-bottom:0; }
-/* The role split, node 7.1, which renders two ways from one node. There is no analyst
+        .sys__tomb p:last-child{ margin-bottom:0; }
+        /* The role split, node 7.1, which renders two ways from one node. There is no analyst
    header on this page: the difference between the two renderings is the ROUTE, so the
    signed-in route is rendered with the condition that shows it. */
 .sys__role{ border-top:1px dashed var(--wf-rule-dashed); margin-top:var(--wf-space-4);
             padding-top:var(--wf-space-2); }
-</style>
+      </style>
 </head>
 <body>
 <div class="wf-shell">

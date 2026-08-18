@@ -9,23 +9,23 @@
      can be reviewed, so it carries noindex itself. No schema, no SEO text. -->
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: system-pages :: to fold into _wf.css */
-.sys{ max-width:var(--wf-measure); }
-.sys__lead{ font-size:var(--wf-size-h2); }
-/* The host. 7.4 is a section rather than a page, so the page it sits on is drawn as an
+      <!-- What remains here is genuinely single use on this screen. Everything
+           that appeared on two or more screens was folded into _wf.css at the
+           step 8 reconcile, unedited. -->
+      <style>
+        /* The host. 7.4 is a section rather than a page, so the page it sits on is drawn as an
    empty marked area: the content of the product page belongs to node 6.1 and is not
    invented here. */
 .sys__host{ border:1px dashed var(--wf-rule-strong); padding:var(--wf-space-4);
             margin:var(--wf-space-3) 0; color:var(--wf-muted); }
-/* The consent banner itself: one line and two controls, and nothing more. Sticky rather
+        /* The consent banner itself: one line and two controls, and nothing more. Sticky rather
    than fixed so that it pins to the foot of the screen without covering the wireframe
    note underneath; in production it is fixed to the viewport of a cluster 6 page. */
 .sys__banner{ position:sticky; bottom:0; z-index:2; background:var(--wf-surface);
               border:1px solid var(--wf-ink); padding:var(--wf-space-3);
               display:flex; gap:var(--wf-space-3); flex-wrap:wrap; align-items:center; }
-.sys__banner p{ margin:0; flex:1; min-width:200px; }
-</style>
+        .sys__banner p{ margin:0; flex:1; min-width:200px; }
+      </style>
 </head>
 <body>
 <div class="wf-shell">

@@ -10,40 +10,18 @@
      here. No canonical, no schema, no SEO text: this page is transactional. -->
 <meta name="robots" content="noindex, follow">
 <link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: sign-in :: to fold into _wf.css */
-
-/* The gate column. Node 1.1 responsive: one centred column at 360 with the field and
-   the action full width, and the same column capped and centred on a wide canvas.
-   Nothing is added at width, so there is no second layout here, only a cap. */
-.wf-gate{ max-width:380px; margin:0 auto; }
-@media (min-width:900px){
-  .wf-gate{ min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
-}
-.wf-gate__brand{ margin-bottom:var(--wf-space-4); }
-.wf-gate h1{ margin-bottom:var(--wf-space-4); }
-
-/* Field label. A real label, above its field, ink rather than muted: it is the name of
-   the only thing being asked for. */
-.wf-label{ display:block; font-weight:600; margin-bottom:var(--wf-space-1); }
-
-/* Targets at 44 by 44, required by node 1.1 responsive. The control classes in _wf.css
-   are sized for dense analyst rows, so the gate raises them rather than redefining them. */
-.wf-gate .wf-field{ min-height:44px; }
-.wf-gate .wf-btn--full{ min-height:44px; margin-top:var(--wf-space-3); }
-
-/* The legal line, block 6, with the prior agreement clause. */
-.wf-legal{ color:var(--wf-muted); font-size:var(--wf-size-small);
-           margin-top:var(--wf-space-4); }
-
-/* Progress in place, state 1.2. It sits under the action rather than over a dimmed
+      <!-- What remains here is genuinely single use on this screen. Everything
+           that appeared on two or more screens was folded into _wf.css at the
+           step 8 reconcile, unedited. -->
+      <style>
+        /* Progress in place, state 1.2. It sits under the action rather than over a dimmed
    page, because the gate underneath it is the route back that a cancel would have
    been. Dashed, so it reads as a report about the page rather than a part of it. */
 .wf-progress{ border:1px dashed var(--wf-rule-dashed); margin-top:var(--wf-space-3);
               padding:var(--wf-space-2) var(--wf-space-3); color:var(--wf-muted); }
-.wf-progress b{ display:block; color:var(--wf-ink); }
-.wf-progress p{ margin:0; }
-</style>
+        .wf-progress b{ display:block; color:var(--wf-ink); }
+        .wf-progress p{ margin:0; }
+      </style>
 </head>
 <body>
 <div class="wf-shell">

@@ -16,50 +16,7 @@
 <meta property="og:description" content="Plumb keeps metric definitions, owners and connection settings. It keeps no copy of your data rows and nothing that identifies the people who read a number.">
 <!-- SEO block D: no structured data on 6.5. There is no schema type for a policy that
      adds anything a crawler needs. -->
-<link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: legal-and-content :: to fold into _wf.css
-   The document shell of node 6.4, canonical for 6.4, 6.5 and 6.6, and reused by 6.7 with
-   the rail and the prose column removed, which is the exception the node names. Identical
-   in all five files of this round. Every value goes through a variable except the two
-   recorded in the step 8 report: the 44px target and the rail width. */
-.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted); margin-bottom:var(--wf-space-2); }
-.wf-doc{ display:block; }
-.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
-               margin-bottom:var(--wf-space-4); }
-.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
-               margin:var(--wf-space-2) 0 0; }
-.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
-          margin-bottom:var(--wf-space-4); }
-.wf-rail__item{ display:flex; align-items:center; min-height:44px;
-                font-size:var(--wf-size-small); text-decoration:none; }
-.wf-rail__item.is-current{ font-weight:700; }
-.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
-               color:var(--wf-muted); }
-.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
-.wf-prose > h2:first-child{ margin-top:0; }
-.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
-.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
-.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
-.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
-          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
-.wf-mark > :last-child{ margin-bottom:0; }
-.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
-             padding-top:var(--wf-space-3); }
-.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
-.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
-@media (min-width:700px){
-  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
-     The rail stays first in the DOM so that it stacks above the prose at 360. */
-  .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
-           gap:var(--wf-space-4); align-items:start; }
-  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
-  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
-            border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
-  .wf-hold{ grid-template-columns:1fr 1fr; }
-}
-</style>
-</head>
+<link rel="stylesheet" href="_wf.css"></head>
 <body>
 <div class="wf-shell">
 

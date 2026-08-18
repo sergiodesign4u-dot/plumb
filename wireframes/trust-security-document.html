@@ -32,63 +32,17 @@
 }
 </script>
 <link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: trust-and-pricing :: to fold into _wf.css */
-/* Nodes 6.2 and 6.3, the public surface. Every value goes through a token in _wf.css.
-   Names are prefixed tp- so the reconcile pass can grep both pages at once. */
-
-/* Section rhythm on a long public page. Both pages, so it folds. */
-.tp-sec{ margin-top:var(--wf-space-5); }
-.tp-sec > h2{ margin-bottom:var(--wf-space-2); padding-bottom:var(--wf-space-1);
-              border-bottom:1px solid var(--wf-rule-strong); }
-.tp-lede{ font-size:var(--wf-size-h2); }
-.tp-ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
-.tp-ul li{ margin-bottom:var(--wf-space-1); }
-
-/* Two column comparison, one axis. What we hold against what we do not at 6.2, and
-   what a reader can do without paying at 6.3. Stacked pairs at 360 with the column
-   name travelling inside the cell, a real table from 700. Both pages, so it folds. */
-.tp-table{ width:100%; border-collapse:collapse; text-align:left; }
-.tp-table thead{ display:none; }
-.tp-table tr{ display:block; border-bottom:1px solid var(--wf-rule);
-              padding:var(--wf-space-2) 0; }
-.tp-table td{ display:block; padding:0 0 var(--wf-space-1); }
-.tp-lab{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted); }
-@media (min-width:700px){
-  .tp-table thead{ display:table-header-group; }
-  .tp-table tr{ display:table-row; padding:0; border-bottom:0; }
-  .tp-table td, .tp-table th{ display:table-cell; width:50%; vertical-align:top;
-              padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
-              border-bottom:1px solid var(--wf-rule); }
-  .tp-table thead th{ border-bottom:1px solid var(--wf-ink);
-              font-size:var(--wf-size-small); color:var(--wf-muted); font-weight:600; }
-  .tp-lab{ display:none; }
-}
-
-/* A badge here is text in a bordered box, never an image and never a logo. Held and
-   not held are told apart by the words first and by the border second. */
-.tp-badges{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap;
-            margin:var(--wf-space-2) 0 var(--wf-space-3); }
-.tp-badge{ border:1px solid var(--wf-ink); background:var(--wf-surface);
-           padding:var(--wf-space-1) var(--wf-space-2); font-size:var(--wf-size-small); }
-.tp-badge--not{ border-style:dashed; border-color:var(--wf-rule-dashed);
-                color:var(--wf-muted); }
-
-/* Row of policy links, and the boxed aside. Both pages, so both fold. */
-.tp-links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap;
-           margin-bottom:var(--wf-space-2); }
-.tp-box{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
-         padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
-.tp-box--gate{ border:1px dashed var(--wf-ink); background:var(--wf-surface); }
-.tp-box > :last-child{ margin-bottom:0; }
-
-/* The gate form, node 6.2 state "a document is requested". A label carries its own
+      <!-- What remains here is genuinely single use on this screen. Everything
+           that appeared on two or more screens was folded into _wf.css at the
+           step 8 reconcile, unedited. -->
+      <style>
+        /* The gate form, node 6.2 state "a document is requested". A label carries its own
    field, so the hit area is the whole row and nothing depends on an id matching. */
 .tp-form h3{ font-size:var(--wf-size-h2); margin-bottom:var(--wf-space-2); }
-.tp-field{ display:block; margin-bottom:var(--wf-space-3); }
-.tp-field > span{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted);
+        .tp-field{ display:block; margin-bottom:var(--wf-space-3); }
+        .tp-field > span{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted);
                   margin-bottom:var(--wf-space-1); }
-</style>
+      </style>
 </head>
 <body>
 <div class="wf-shell">

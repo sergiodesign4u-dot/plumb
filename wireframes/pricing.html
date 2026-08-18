@@ -48,67 +48,30 @@
 }
 </script>
 <link rel="stylesheet" href="_wf.css">
-<style>
-/* INLINE: trust-and-pricing :: to fold into _wf.css */
-/* Nodes 6.2 and 6.3, the public surface. Every value goes through a token in _wf.css.
-   Names are prefixed tp- so the reconcile pass can grep both pages at once. */
-
-/* Section rhythm on a long public page. Both pages, so it folds. */
-.tp-sec{ margin-top:var(--wf-space-5); }
-.tp-sec > h2{ margin-bottom:var(--wf-space-2); padding-bottom:var(--wf-space-1);
-              border-bottom:1px solid var(--wf-rule-strong); }
-.tp-lede{ font-size:var(--wf-size-h2); }
-.tp-ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
-.tp-ul li{ margin-bottom:var(--wf-space-1); }
-
-/* Two column comparison, one axis. What we hold against what we do not at 6.2, and
-   what a reader can do without paying at 6.3. Stacked pairs at 360 with the column
-   name travelling inside the cell, a real table from 700. Both pages, so it folds. */
-.tp-table{ width:100%; border-collapse:collapse; text-align:left; }
-.tp-table thead{ display:none; }
-.tp-table tr{ display:block; border-bottom:1px solid var(--wf-rule);
-              padding:var(--wf-space-2) 0; }
-.tp-table td{ display:block; padding:0 0 var(--wf-space-1); }
-.tp-lab{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted); }
-@media (min-width:700px){
-  .tp-table thead{ display:table-header-group; }
-  .tp-table tr{ display:table-row; padding:0; border-bottom:0; }
-  .tp-table td, .tp-table th{ display:table-cell; width:50%; vertical-align:top;
-              padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
-              border-bottom:1px solid var(--wf-rule); }
-  .tp-table thead th{ border-bottom:1px solid var(--wf-ink);
-              font-size:var(--wf-size-small); color:var(--wf-muted); font-weight:600; }
-  .tp-lab{ display:none; }
-}
-
-/* Row of links, and the boxed aside. Both pages, so both fold. */
-.tp-links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap;
-           margin-bottom:var(--wf-space-2); }
-.tp-box{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
-         padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
-.tp-box > :last-child{ margin-bottom:0; }
-
-/* Plan cards, node 6.3 block 2. Stacked at 360, side by side from 700. The price is a
+      <!-- What remains here is genuinely single use on this screen. Everything
+           that appeared on two or more screens was folded into _wf.css at the
+           step 8 reconcile, unedited. -->
+      <style>
+        /* Plan cards, node 6.3 block 2. Stacked at 360, side by side from 700. The price is a
    text node inside the first card, which is the LCP: nothing here waits on an image. */
 .tp-plans{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-3); }
-.tp-plan{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+        .tp-plan{ border:1px solid var(--wf-ink); background:var(--wf-surface);
           padding:var(--wf-space-3); }
-.tp-plan h3{ font-size:var(--wf-size-h2); }
-.tp-price{ font-size:var(--wf-size-h1); font-weight:700; line-height:var(--wf-line-tight);
+        .tp-plan h3{ font-size:var(--wf-size-h2); }
+        .tp-price{ font-size:var(--wf-size-h1); font-weight:700; line-height:var(--wf-line-tight);
            margin:var(--wf-space-1) 0 var(--wf-space-2); }
-.tp-plan > :last-child{ margin-bottom:0; }
-@media (min-width:700px){
-  .tp-plans{ grid-template-columns:1fr 1fr; }
-}
-
-/* FAQ, node 6.3 block 5. It opens with no script, so the FAQPage markup above always
+        .tp-plan > :last-child{ margin-bottom:0; }
+        /* FAQ, node 6.3 block 5. It opens with no script, so the FAQPage markup above always
    describes text that is in the document. */
 .tp-faq{ border-top:1px solid var(--wf-ink); margin-top:var(--wf-space-3); }
-.tp-faq details{ border-bottom:1px solid var(--wf-rule); }
-.tp-faq summary{ font-weight:600; cursor:pointer; min-height:44px; display:flex;
+        .tp-faq details{ border-bottom:1px solid var(--wf-rule); }
+        .tp-faq summary{ font-weight:600; cursor:pointer; min-height:44px; display:flex;
                  align-items:center; }
-.tp-faq details > p{ margin:0 0 var(--wf-space-3); }
-</style>
+        .tp-faq details > p{ margin:0 0 var(--wf-space-3); }
+        @media (min-width:700px){
+          .tp-plans{ grid-template-columns:1fr 1fr; }
+        }
+      </style>
 </head>
 <body>
 <div class="wf-shell">

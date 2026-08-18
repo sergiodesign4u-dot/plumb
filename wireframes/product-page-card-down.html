@@ -55,71 +55,7 @@
     }
   ]
 }
-</script>
-<style>
-/* INLINE: product-page :: to fold into _wf.css */
-
-/* The one landing on the map, and the only screen whose hero is two columns. Everywhere
-   else the reader's column is 640: a card is one column of content, not a canvas. Here
-   the node asks for the claim and the card side by side on a wide canvas, which 640
-   cannot hold, so this screen widens its own shell and nothing else does. */
-.pp-page{ max-width:960px; }
-
-/* Public bar. NOT the analyst header of node 0.1: the reader never gets one, and this
-   page is read by people who have no workspace. It carries the mark and the one
-   secondary route the node names, sign in, and it renders only targets in scope. */
-.pp-bar{ display:flex; align-items:center; gap:var(--wf-space-3);
-         border-bottom:1px solid var(--wf-rule-strong); padding-bottom:var(--wf-space-2);
-         margin-bottom:var(--wf-space-4); flex-wrap:wrap; }
-.pp-bar__mark{ font-weight:700; text-decoration:none; margin-right:auto; }
-.pp-bar__who{ border:1px solid var(--wf-rule-strong); font-size:var(--wf-size-small);
-              color:var(--wf-muted); padding:var(--wf-space-1) var(--wf-space-2); }
-
-.pp-lede{ margin-top:var(--wf-space-3); }
-.pp-hero__card{ margin-top:var(--wf-space-4); }
-
-/* Block 3, the state dependent strip: one next step, different by who is looking. It is
-   a box rather than a banner so that it reads as a step and not as an announcement. */
-.pp-strip{ border:1px solid var(--wf-ink); padding:var(--wf-space-3);
-           margin-top:var(--wf-space-4); }
-.pp-strip p{ margin-bottom:0; }
-.pp-strip .wf-actions{ margin-top:var(--wf-space-2); }
-
-.pp-sect{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-5);
-          padding-top:var(--wf-space-3); }
-.pp-sect h2{ margin-bottom:var(--wf-space-2); }
-
-/* Block 5. Four things, one sentence each, and four is the point: they are the four
-   capabilities the first test of the riskiest assumption needs. Not a feature grid. */
-.pp-four{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-3); }
-.pp-four p{ margin:0; border-left:1px solid var(--wf-rule-strong);
-            padding-left:var(--wf-space-3); }
-
-/* Block 7. The accordion is a details element, so the FAQ answers are in the document
-   for a crawler whether or not they are open, and the block needs no script. */
-.pp-faq{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-3); }
-.pp-faq details{ border-bottom:1px solid var(--wf-rule); padding:var(--wf-space-2) 0; }
-.pp-faq summary{ cursor:pointer; font-weight:600; }
-.pp-faq p{ margin:var(--wf-space-2) 0 0; }
-
-@media (min-width:600px){
-  .pp-four{ grid-template-columns:1fr 1fr; }
-}
-@media (min-width:900px){
-  /* The claim and the card become two columns, the card on the right, with the strip
-     under the claim. The DOM order stays the 360 order, claim then card then strip, and
-     the grid places them: a wide canvas never reorders what a phone reads.
-     The card takes a column rather than a width of its own, so it cannot grow into a
-     dashboard tile as the canvas widens. */
-  .pp-hero{ display:grid; grid-template-columns:1.15fr 1fr;
-            grid-template-rows:min-content 1fr; gap:var(--wf-space-4) var(--wf-space-5);
-            align-items:start; }
-  .pp-hero__claim{ grid-column:1; grid-row:1; }
-  .pp-strip{ grid-column:1; grid-row:2; }
-  .pp-hero__card{ grid-column:2; grid-row:1 / span 2; margin-top:0; }
-}
-</style>
-</head>
+</script></head>
 <body>
 <div class="wf-shell">
 

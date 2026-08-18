@@ -229,3 +229,495 @@ a{ color:inherit; }
 .wf-note{ max-width:var(--wf-measure); margin-top:var(--wf-space-5);
           padding-top:var(--wf-space-3); border-top:1px solid var(--wf-rule-strong);
           font-size:var(--wf-size-small); color:var(--wf-muted); }
+
+/* ==========================================================================
+   Sources and connect a source, nodes 3.1, 3.2 and their states
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* The analyst's screens are wider than the reader's. --wf-screen-max is 640 because a
+   card is one column of content; a table of three columns and a form with a panel
+   beside it are not. Same shell, one class. */
+.wf-screen--wide{ max-width:880px; }
+/* LISTING, the canonical component of node 4.1 seen for the second time at node 3.1.
+   Kept deliberately plain, a header row plus rows and one column at 360, because 4.1 is
+   drawn in parallel and the two class sets have to reconcile into one. */
+.wf-listing__bar{ display:flex; flex-direction:column; gap:var(--wf-space-3);
+                  margin-bottom:var(--wf-space-4); }
+.wf-listing__count{ font-weight:400; color:var(--wf-muted); }
+.wf-list th, .wf-list td{ padding:var(--wf-space-2) 0; vertical-align:top; }
+.wf-list__head th{ font-size:var(--wf-size-small); font-weight:400; color:var(--wf-muted);
+                   border-bottom:1px solid var(--wf-ink); }
+.wf-list tbody tr{ border-bottom:1px solid var(--wf-rule); }
+.wf-list__name a{ font-weight:600; }
+.wf-list__count{ color:var(--wf-muted); }
+.wf-list__total{ margin-top:var(--wf-space-3); }
+/* The ghost row of node 3.5. The field labels survive with no rows under them, so an
+   empty list keeps the shape of a full one instead of becoming a different screen. */
+.wf-list--ghost .wf-list__head{ display:block;
+                                border-bottom:1px dashed var(--wf-rule-dashed);
+                                padding-bottom:var(--wf-space-2); }
+.wf-list--ghost .wf-list__head th{ border-bottom:0; }
+.wf-empty{ border-bottom:1px solid var(--wf-rule); padding:var(--wf-space-4) 0; }
+/* THE FORM, node 3.2. One column, every field full width, and the prerequisites panel
+   above the fields at 360 because information that unblocks a field is useless after it. */
+.wf-crumbs{ font-size:var(--wf-size-small); color:var(--wf-muted);
+            margin-bottom:var(--wf-space-2); }
+.wf-crumbs + h1{ margin-bottom:var(--wf-space-4); }
+.wf-form-grid{ display:grid; gap:var(--wf-space-4); }
+.wf-choice{ border:0; padding:0; margin:0; min-width:0; }
+.wf-choice legend{ padding:0; margin-bottom:var(--wf-space-2); }
+.wf-choice__list{ display:flex; flex-wrap:wrap; gap:var(--wf-space-2); }
+.wf-choice__item{ display:flex; align-items:center; gap:var(--wf-space-2);
+                  border:1px solid var(--wf-rule-strong); background:var(--wf-surface);
+                  padding:0 var(--wf-space-3); min-height:44px; flex:1 1 9rem;
+                  cursor:pointer; }
+.wf-aside{ background:var(--wf-panel); border:1px solid var(--wf-rule);
+           padding:var(--wf-space-3); font-size:var(--wf-size-small); }
+.wf-aside h2{ margin-bottom:var(--wf-space-2); }
+.wf-aside code{ font-family:var(--wf-mono); }
+.wf-field-row{ margin-bottom:var(--wf-space-3); }
+.wf-help{ font-size:var(--wf-size-small); color:var(--wf-muted);
+          margin:var(--wf-space-1) 0 0; }
+/* The field that caused the failure is told apart by an ink border and by the sentence
+   under it, never by hue: a wireframe has none and this product's states never use one. */
+.wf-field--flagged{ border-color:var(--wf-ink); }
+.wf-inline{ font-size:var(--wf-size-small); margin-top:var(--wf-space-1);
+            border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-2); }
+/* The secret is written to us and never read back, so after a test it shows that a
+   value is set and offers one action to replace it. */
+.wf-secret{ display:flex; align-items:center; gap:var(--wf-space-3); flex-wrap:wrap;
+            border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+            padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-secret > span{ color:var(--wf-muted); }
+.wf-banner b{ display:block; margin-bottom:var(--wf-space-1); }
+.wf-banner p:last-child{ margin-bottom:0; }
+/* The action row is sticky at 360, because a nine field form is longer than a phone. */
+.wf-form__actions{ position:sticky; bottom:0; background:var(--wf-ground);
+                   border-top:1px solid var(--wf-rule-strong);
+                   padding:var(--wf-space-3) 0; margin-top:var(--wf-space-4); }
+/* Progress in place, node 3.3, naming which half is being tried. Not a modal, and the
+   success of a connection is worth saying once, here, rather than in a window. */
+.wf-steps{ list-style:none; margin:0 0 var(--wf-space-2); padding:0; }
+.wf-steps li{ color:var(--wf-muted); padding:var(--wf-space-1) 0;
+              border-bottom:1px solid var(--wf-rule); }
+.wf-steps .is-now{ color:var(--wf-ink); font-weight:600; }
+@media (max-width:699px){
+  .wf-list, .wf-list thead, .wf-list tbody, .wf-list tr,
+    .wf-list th, .wf-list td{ display:block; }
+  .wf-list__head{ display:none; }
+  .wf-list tbody tr{ padding:var(--wf-space-2) 0; }
+  .wf-list th, .wf-list td{ padding:0 0 var(--wf-space-1); }
+}
+@media (min-width:700px){
+  .wf-listing__bar{ flex-direction:row; align-items:baseline; justify-content:space-between; }
+  .wf-narrow-only{ display:none; }
+  .wf-list--ghost .wf-list__head{ display:table-header-group; border-bottom:0;
+                                    padding-bottom:0; }
+  .wf-list--ghost .wf-list__head th{ border-bottom:1px solid var(--wf-ink); }
+}
+@media (min-width:900px){
+  .wf-form-grid{ grid-template-columns:minmax(0,1fr) 260px; align-items:start; }
+  .wf-form-grid__top{ grid-column:1; grid-row:1; }
+  .wf-form-grid > .wf-aside{ grid-column:2; grid-row:1 / span 2; }
+  .wf-form-grid__body{ grid-column:1; grid-row:2; }
+  .wf-form__actions{ position:static; }
+}
+
+/* ==========================================================================
+   System pages, nodes 7.1 to 7.4. The error page component
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+.sys{ max-width:var(--wf-measure); }
+.sys__lead{ font-size:var(--wf-size-h2); }
+/* Block 2 of 7.1 and 7.2: trouble named in words rather than raised as an alarm. Marked
+   by a left rule, the only 2px rule in the prototype, because at 1px it reads as one
+   more paragraph edge instead of the block carrying the honest statement. */
+.sys__said{ border-left:2px solid var(--wf-ink); padding-left:var(--wf-space-3);
+            margin:var(--wf-space-3) 0 var(--wf-space-4); }
+.sys__said p:last-child{ margin-bottom:0; }
+.wf-form{ margin-top:var(--wf-space-4); }
+.wf-fld{ margin-bottom:var(--wf-space-3); }
+.wf-fld > label{ display:block; font-size:var(--wf-size-caps); color:var(--wf-muted);
+                 margin-bottom:var(--wf-space-1); }
+.wf-fld > label b{ font-size:var(--wf-size-body); color:var(--wf-ink); }
+.wf-hint{ font-size:var(--wf-size-small); color:var(--wf-muted);
+          margin:var(--wf-space-1) 0 0; max-width:var(--wf-measure); }
+/* A failure message is told apart by its words and its place, never by hue: it sits on
+   the field that caused it and it is the one hint on the page in full ink. */
+.wf-hint--bad{ color:var(--wf-ink); font-weight:600; }
+/* The definition area is the largest field on the page, and that size is a statement
+   about which field matters. Its height comes from rows in the markup, not from here. */
+.wf-field--big{ resize:vertical; line-height:var(--wf-line); }
+.wf-field--code{ font-family:var(--wf-mono); font-size:var(--wf-size-small);
+                 background:var(--wf-panel); resize:vertical; }
+.wf-field--bad{ border-color:var(--wf-ink); border-width:2px; }
+/* Banner, node 4.4 components: error at the top of the form, info stating a
+   consequence. Never a toast, by node 0.3: what belongs to the thing on screen stays
+   on screen. Solid is the failed attempt, dashed is the consequence of saving. */
+.wf-banner{ margin-bottom:var(--wf-space-4); border:1px solid var(--wf-ink); background:var(--wf-surface);
+            padding:var(--wf-space-2) var(--wf-space-3);
+            margin:var(--wf-space-4) 0; max-width:var(--wf-measure); }
+.wf-banner--info{ border-color:var(--wf-rule-strong); background:var(--wf-panel); border-style:dashed; }
+.wf-banner p{ margin:0; }
+/* 4.5: progress in place, on the field being tried, not a modal and not a progress bar. */
+.wf-run{ border:1px dashed var(--wf-ink); background:var(--wf-surface);
+         padding:var(--wf-space-2) var(--wf-space-3); margin-top:var(--wf-space-2);
+         color:var(--wf-muted); }
+.wf-run b{ display:block; color:var(--wf-ink); }
+/* 4.7: one previous version and only one. Stacked at 360, beside the current text from
+   700px. This is the one place the form goes to two columns, and it puts the definition
+   next to the definition, never next to the query. */
+.wf-versions{ display:grid; gap:var(--wf-space-2); align-items:start; }
+.wf-prev{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+          padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-prev p{ margin:0; }
+.wf-prev .wf-caps{ margin-bottom:var(--wf-space-1); }
+/* Run then Save, sticky so both stay reachable over a long query. Delete sits at the
+   far end of the same row, which is the whole point of the spacer. */
+.wf-formacts{ position:sticky; bottom:0; z-index:1; background:var(--wf-ground);
+              border-top:1px solid var(--wf-rule-strong);
+              padding:var(--wf-space-3) 0; margin-top:var(--wf-space-4);
+              display:flex; gap:var(--wf-space-2); flex-wrap:wrap; align-items:center; }
+.wf-formacts__gap{ flex:1; }
+.wf-btn--danger{ border-style:dashed; }
+@media (min-width:700px){
+  .wf-versions{ grid-template-columns:1fr 1fr; }
+}
+
+/* ==========================================================================
+   The document shell, nodes 6.4 to 6.7
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+.wf-doc{ display:block; }
+.wf-doc__head{ border-bottom:1px solid var(--wf-ink); padding-bottom:var(--wf-space-3);
+               margin-bottom:var(--wf-space-4); }
+.wf-doc__date{ font-size:var(--wf-size-small); color:var(--wf-muted);
+               margin:var(--wf-space-2) 0 0; }
+.wf-rail{ border-bottom:1px solid var(--wf-rule); padding-bottom:var(--wf-space-2);
+          margin-bottom:var(--wf-space-4); }
+.wf-rail__item{ display:flex; align-items:center; min-height:44px;
+                font-size:var(--wf-size-small); text-decoration:none; }
+.wf-rail__item.is-current{ font-weight:700; }
+.wf-rail__out{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-2);
+               color:var(--wf-muted); }
+.wf-prose h2{ margin-top:var(--wf-space-4); margin-bottom:var(--wf-space-2); }
+.wf-prose > h2:first-child{ margin-top:0; }
+.wf-prose ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.wf-prose li{ max-width:var(--wf-measure); margin-bottom:var(--wf-space-1); }
+.wf-hold{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-mark{ border:1px dashed var(--wf-rule-dashed); background:var(--wf-panel);
+          padding:var(--wf-space-3); margin:var(--wf-space-3) 0; color:var(--wf-muted); }
+.wf-mark > :last-child{ margin-bottom:0; }
+.wf-contact{ border-top:1px solid var(--wf-rule-strong); margin-top:var(--wf-space-4);
+             padding-top:var(--wf-space-3); }
+.wf-formrow{ margin:0 0 var(--wf-space-3); max-width:var(--wf-measure); }
+.wf-formrow label{ display:block; margin-bottom:var(--wf-space-1); }
+@media (min-width:700px){
+  /* Wide: the rail beside the column and to the right of it, as the IA mockup draws it.
+       The rail stays first in the DOM so that it stacks above the prose at 360. */
+    .wf-doc{ display:grid; grid-template-columns:minmax(0,1fr) 168px;
+             gap:var(--wf-space-4); align-items:start; }
+  .wf-doc__body{ grid-column:1; grid-row:1; min-width:0; }
+  .wf-rail{ grid-column:2; grid-row:1; border-bottom:0; margin-bottom:0;
+              border-left:1px solid var(--wf-rule); padding:0 0 0 var(--wf-space-3); }
+  .wf-hold{ grid-template-columns:1fr 1fr; }
+}
+
+/* ==========================================================================
+   The metric registry, node 4.1 and its states. The canonical listing
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* Blocks 1 to 3: the title with its count, the search field, the primary action.
+   At 360 they stack in that order, which is the node's correction to the block bank:
+   an action under a list of unbounded length is unreachable on a phone. From 700 the
+   action moves up beside the title and the search field takes the second row. */
+.wf-listhead{ margin-bottom:var(--wf-space-3); }
+.wf-listhead h1{ margin-bottom:var(--wf-space-2); }
+.wf-listhead__count{ color:var(--wf-muted); font-weight:400; }
+.wf-listhead__search{ margin:0 0 var(--wf-space-2); }
+.wf-listhead__action{ margin:0 0 var(--wf-space-3); max-width:none; }
+/* Block 4, the list. One table in the markup and two renderings: at 360 the header row
+   is gone and every row is three lines, because a table that scrolls sideways at 360
+   hides the state column, which is the column the row exists to carry. */
+.wf-list{ text-align:left; width:100%; border-collapse:collapse; border-top:1px solid var(--wf-ink); }
+.wf-list thead{ display:none; }
+.wf-list tr{ display:block; border-bottom:1px solid var(--wf-rule);
+             padding:var(--wf-space-2) 0; }
+.wf-list td{ display:block; padding:0; border:0; }
+.wf-list__name{ font-weight:600; }
+.wf-list__state, .wf-list__owner{ color:var(--wf-muted); font-size:var(--wf-size-small);
+                                  margin-top:var(--wf-space-1); }
+/* The row variant node 4.1 adds by name: when the match was in the definition text and
+   not in the name, the row shows the matching fragment under the name. Grey only, so
+   the match is marked with a rule under it rather than with a highlight colour. */
+.wf-list__frag{ display:block; font-weight:400; color:var(--wf-muted);
+                font-size:var(--wf-size-small); margin-top:var(--wf-space-1); }
+.wf-list__frag mark{ background:none; color:var(--wf-ink);
+                     border-bottom:1px solid var(--wf-ink); }
+/* 4.2 keeps the structure of the list visible. At width the header row survives the
+   emptiness; at 360 there is no header row to survive, so one ghost row carries the
+   field labels instead. Same mechanism, different mechanics. */
+.wf-list tr.wf-ghost{ color:var(--wf-muted); border-bottom:1px dashed var(--wf-rule-strong); }
+.wf-list tr.wf-list__empty{ border-bottom:0; }
+.wf-list tr.wf-list__empty td{ color:var(--wf-muted); padding-top:var(--wf-space-3); }
+/* Block 5, the result count line. */
+.wf-tail{ color:var(--wf-muted); font-size:var(--wf-size-small);
+          margin-top:var(--wf-space-2); }
+/* 4.3, the no-match case. A line saying there is no match, a line of advice and one
+   reset action, which is what stops this being a dead end. */
+.wf-nomatch{ border:1px dashed var(--wf-ink); padding:var(--wf-space-3);
+             margin-top:var(--wf-space-3); }
+.wf-nomatch b{ display:block; margin-bottom:var(--wf-space-1); }
+.wf-nomatch p{ margin:0; }
+.wf-nomatch__reset{ display:inline-block; margin-top:var(--wf-space-2); }
+/* Prototype only, and it lives on metric-registry-search.html: the matched result set
+   and the no-match case are two renderings of the same state, and the file can only be
+   one page. The switch is driven from the dashed route row under the screen, never from
+   a control inside it. */
+#wf-nomatch{ display:none; }
+#wf-nomatch:target{ display:block; }
+#wf-nomatch:target ~ #wf-matches{ display:none; }
+@media (min-width:700px){
+  .wf-listhead{ display:grid; grid-template-columns:1fr auto; align-items:center;
+                  column-gap:var(--wf-space-3); }
+  .wf-listhead h1{ grid-column:1; grid-row:1; margin-bottom:0; }
+  .wf-listhead__action{ grid-column:2; grid-row:1; justify-self:end; margin:0; }
+  .wf-listhead__search{ grid-column:1 / -1; grid-row:2; margin:var(--wf-space-3) 0 0; }
+  .wf-listhead__action .wf-btn{ display:inline-block; width:auto; }
+  .wf-list{ border-top:0; }
+  .wf-list thead{ display:table-header-group; }
+  .wf-list th{ text-align:left; font-size:var(--wf-size-caps); letter-spacing:.09em;
+                 text-transform:uppercase; color:var(--wf-muted); font-weight:600;
+                 border-bottom:1px solid var(--wf-ink);
+                 padding:0 var(--wf-space-3) var(--wf-space-1) 0; }
+  .wf-list tr{ display:table-row; border-bottom:0; padding:0; }
+  .wf-list td{ display:table-cell; vertical-align:top;
+                 border-bottom:1px solid var(--wf-rule);
+                 padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0; }
+  .wf-list__state, .wf-list__owner{ color:var(--wf-ink); font-size:var(--wf-size-body);
+                                      margin-top:0; }
+  .wf-list tr.wf-ghost{ display:none; }
+  .wf-list tr.wf-list__empty td{ border-bottom:0; padding-top:var(--wf-space-4); }
+}
+
+/* ==========================================================================
+   The settings shell, nodes 5.1 and 5.2
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* Breadcrumb of the private zone. Settings > People and Settings > Plan, per the node. */
+.wf-crumb{ font-size:var(--wf-size-small); color:var(--wf-muted);
+           margin-bottom:var(--wf-space-3); }
+.wf-crumb b{ color:var(--wf-ink); font-weight:600; }
+/* The settings shell, node 5.1. Canonical: the only private multi-section zone in the
+   product, and 5.1 and 5.2 are two sections of it rather than two pages designed twice.
+   Exactly two items. At 360 they sit above the panel, from 700 beside it. */
+.wf-settings__rail{ display:flex; gap:var(--wf-space-3);
+                    border-bottom:1px solid var(--wf-rule);
+                    margin-bottom:var(--wf-space-4); }
+.wf-settings__item{ display:inline-block; min-height:44px; line-height:44px;
+                    text-decoration:none; color:var(--wf-muted); }
+.wf-settings__item[aria-current="page"]{ color:var(--wf-ink); font-weight:700; }
+.wf-settings__panel{ min-width:0; }
+.wf-settings__panel > h1{ margin-bottom:var(--wf-space-4); }
+.wf-set-block{ margin-bottom:var(--wf-space-5); }
+.wf-set-block > h2{ margin-bottom:var(--wf-space-2); }
+/* Invite row, node 5.1 block 1. Inline and never a dialog, and it carries no
+   per-permission options: row level permissions are out of scope and a matrix here
+   would promise them. */
+.wf-invite{ display:grid; gap:var(--wf-space-2); }
+.wf-invite label{ display:block; }
+.wf-invite .wf-caps{ display:block; margin-bottom:var(--wf-space-1); }
+/* A refusal that is inline and blocking, per node 0.3: what belongs to the thing on
+   screen stays on screen. It sits at the row or at the invite row, before the action,
+   and it is never a toast fired after one. */
+.wf-blocked{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+             padding:var(--wf-space-2) var(--wf-space-3); margin-top:var(--wf-space-2); }
+.wf-blocked p{ margin:0; max-width:var(--wf-measure); }
+.wf-blocked p + p{ margin-top:var(--wf-space-1); }
+/* A control that is refused stays visible and stays legible. It goes dashed rather than
+   disappearing, because a control that disappears takes its reason with it. */
+.wf-btn[disabled]{ border-color:var(--wf-rule-strong); border-style:dashed; color:var(--wf-muted); cursor:not-allowed; }
+/* Seat counter, node 5.1 block 3 and node 5.2 block 1. One component in both sections:
+   we charge for analysts and not for readers, so the count has to be visible where
+   somebody is added, or the price is discovered on an invoice a month later. */
+.wf-seats{ border:1px dashed var(--wf-ink);
+           padding:var(--wf-space-2) var(--wf-space-3); }
+.wf-seats p{ margin:0; max-width:var(--wf-measure); }
+.wf-seats p + p{ margin-top:var(--wf-space-1); }
+.wf-seats__count{ font-weight:700; }
+.wf-seats .wf-caps{ margin-bottom:var(--wf-space-1); }
+/* Members table, node 5.1 block 2. Not the listing of node 4.1: that one carries state
+   and age, this one carries people. At 360 a row is two lines, from 700 it is a table.
+   There is no reader row here by construction: a reader has no account, so they cannot
+   be a member of anything, and there is no 2FA column because we do not hold identity. */
+.wf-members{ width:100%; border-collapse:collapse; }
+.wf-members thead{ display:none; }
+.wf-members tbody{ display:block; }
+.wf-members tr{ display:block; border-bottom:1px solid var(--wf-rule);
+                padding:var(--wf-space-2) 0; }
+.wf-members td{ display:inline; padding:0; border:0; }
+.wf-members__person{ display:block; font-weight:600; }
+.wf-members__role, .wf-members__status{ color:var(--wf-muted); }
+.wf-members__role::after{ content:","; }
+.wf-members__act{ margin-left:var(--wf-space-2); }
+.wf-members__reason{ display:block; }
+@media (min-width:700px){
+  .wf-settings{ display:grid; grid-template-columns:max-content 1fr;
+                  gap:var(--wf-space-4); align-items:start; }
+  .wf-settings__rail{ display:block; border-bottom:0; margin:0;
+                        border-right:1px solid var(--wf-rule);
+                        padding-right:var(--wf-space-3); }
+  .wf-settings__item{ display:block; min-height:0; line-height:var(--wf-line);
+                        padding:var(--wf-space-2) 0; }
+  .wf-invite{ grid-template-columns:1fr max-content max-content; align-items:end; }
+  .wf-members thead{ display:table-header-group; }
+  .wf-members tbody{ display:table-row-group; }
+  .wf-members th{ text-align:left; padding:0 var(--wf-space-3) var(--wf-space-1) 0;
+                    border-bottom:1px solid var(--wf-ink); }
+  .wf-members tr{ display:table-row; padding:0; border:0; }
+  .wf-members td{ display:table-cell; vertical-align:baseline;
+                    padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
+                    border-bottom:1px solid var(--wf-rule); }
+  .wf-members__role, .wf-members__status{ color:var(--wf-ink); }
+  .wf-members__role::after{ content:none; }
+  .wf-members__act{ margin-left:0; }
+  .wf-members__reason{ display:table-cell; }
+}
+
+/* ==========================================================================
+   Trust and security, pricing, nodes 6.2 and 6.3
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* Nodes 6.2 and 6.3, the public surface. Every value goes through a token in _wf.css.
+   Names are prefixed tp- so the reconcile pass can grep both pages at once. */
+
+/* Section rhythm on a long public page. Both pages, so it folds. */
+.tp-sec{ margin-top:var(--wf-space-5); }
+.tp-sec > h2{ margin-bottom:var(--wf-space-2); padding-bottom:var(--wf-space-1);
+              border-bottom:1px solid var(--wf-rule-strong); }
+.tp-lede{ font-size:var(--wf-size-h2); }
+.tp-ul{ margin:0 0 var(--wf-space-2); padding-left:var(--wf-space-4); }
+.tp-ul li{ margin-bottom:var(--wf-space-1); }
+/* Two column comparison, one axis. What we hold against what we do not at 6.2, and
+   what a reader can do without paying at 6.3. Stacked pairs at 360 with the column
+   name travelling inside the cell, a real table from 700. Both pages, so it folds. */
+.tp-table{ width:100%; border-collapse:collapse; text-align:left; }
+.tp-table thead{ display:none; }
+.tp-table tr{ display:block; border-bottom:1px solid var(--wf-rule);
+              padding:var(--wf-space-2) 0; }
+.tp-table td{ display:block; padding:0 0 var(--wf-space-1); }
+.tp-lab{ display:block; font-size:var(--wf-size-small); color:var(--wf-muted); }
+/* Row of links, and the boxed aside. Both pages, so both fold. */
+.tp-links{ display:flex; gap:var(--wf-space-3); flex-wrap:wrap;
+           margin-bottom:var(--wf-space-2); }
+.tp-box{ border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
+         padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.tp-box > :last-child{ margin-bottom:0; }
+/* A badge here is text in a bordered box, never an image and never a logo. Held and
+   not held are told apart by the words first and by the border second. */
+.tp-badges{ display:flex; gap:var(--wf-space-2); flex-wrap:wrap;
+            margin:var(--wf-space-2) 0 var(--wf-space-3); }
+.tp-badge{ border:1px solid var(--wf-ink); background:var(--wf-surface);
+           padding:var(--wf-space-1) var(--wf-space-2); font-size:var(--wf-size-small); }
+.tp-badge--not{ border-style:dashed; border-color:var(--wf-rule-dashed);
+                color:var(--wf-muted); }
+.tp-box--gate{ border:1px dashed var(--wf-ink); background:var(--wf-surface); }
+@media (min-width:700px){
+  .tp-table thead{ display:table-header-group; }
+  .tp-table tr{ display:table-row; padding:0; border-bottom:0; }
+  .tp-table td, .tp-table th{ display:table-cell; width:50%; vertical-align:top;
+                padding:var(--wf-space-2) var(--wf-space-3) var(--wf-space-2) 0;
+                border-bottom:1px solid var(--wf-rule); }
+  .tp-table thead th{ border-bottom:1px solid var(--wf-ink);
+                font-size:var(--wf-size-small); color:var(--wf-muted); font-weight:600; }
+  .tp-lab{ display:none; }
+}
+
+/* ==========================================================================
+   The product page, node 6.1 and its states
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* The one landing on the map, and the only screen whose hero is two columns. Everywhere
+   else the reader's column is 640: a card is one column of content, not a canvas. Here
+   the node asks for the claim and the card side by side on a wide canvas, which 640
+   cannot hold, so this screen widens its own shell and nothing else does. */
+.pp-page{ max-width:960px; }
+/* Public bar. NOT the analyst header of node 0.1: the reader never gets one, and this
+   page is read by people who have no workspace. It carries the mark and the one
+   secondary route the node names, sign in, and it renders only targets in scope. */
+.pp-bar{ display:flex; align-items:center; gap:var(--wf-space-3);
+         border-bottom:1px solid var(--wf-rule-strong); padding-bottom:var(--wf-space-2);
+         margin-bottom:var(--wf-space-4); flex-wrap:wrap; }
+.pp-bar__mark{ font-weight:700; text-decoration:none; margin-right:auto; }
+.pp-bar__who{ border:1px solid var(--wf-rule-strong); font-size:var(--wf-size-small);
+              color:var(--wf-muted); padding:var(--wf-space-1) var(--wf-space-2); }
+.pp-lede{ margin-top:var(--wf-space-3); }
+.pp-hero__card{ margin-top:var(--wf-space-4); }
+/* Block 3, the state dependent strip: one next step, different by who is looking. It is
+   a box rather than a banner so that it reads as a step and not as an announcement. */
+.pp-strip{ border:1px solid var(--wf-ink); padding:var(--wf-space-3);
+           margin-top:var(--wf-space-4); }
+.pp-strip p{ margin-bottom:0; }
+.pp-strip .wf-actions{ margin-top:var(--wf-space-2); }
+.pp-sect{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-5);
+          padding-top:var(--wf-space-3); }
+.pp-sect h2{ margin-bottom:var(--wf-space-2); }
+/* Block 5. Four things, one sentence each, and four is the point: they are the four
+   capabilities the first test of the riskiest assumption needs. Not a feature grid. */
+.pp-four{ display:grid; gap:var(--wf-space-3); margin-top:var(--wf-space-3); }
+.pp-four p{ margin:0; border-left:1px solid var(--wf-rule-strong);
+            padding-left:var(--wf-space-3); }
+/* Block 7. The accordion is a details element, so the FAQ answers are in the document
+   for a crawler whether or not they are open, and the block needs no script. */
+.pp-faq{ border-top:1px solid var(--wf-rule); margin-top:var(--wf-space-3); }
+.pp-faq details{ border-bottom:1px solid var(--wf-rule); padding:var(--wf-space-2) 0; }
+.pp-faq summary{ cursor:pointer; font-weight:600; }
+.pp-faq p{ margin:var(--wf-space-2) 0 0; }
+@media (min-width:600px){
+  .pp-four{ grid-template-columns:1fr 1fr; }
+}
+@media (min-width:900px){
+  /* The claim and the card become two columns, the card on the right, with the strip
+       under the claim. The DOM order stays the 360 order, claim then card then strip, and
+       the grid places them: a wide canvas never reorders what a phone reads.
+       The card takes a column rather than a width of its own, so it cannot grow into a
+       dashboard tile as the canvas widens. */
+    .pp-hero{ display:grid; grid-template-columns:1.15fr 1fr;
+              grid-template-rows:min-content 1fr; gap:var(--wf-space-4) var(--wf-space-5);
+              align-items:start; }
+  .pp-hero__claim{ grid-column:1; grid-row:1; }
+  .pp-strip{ grid-column:1; grid-row:2; }
+  .pp-hero__card{ grid-column:2; grid-row:1 / span 2; margin-top:0; }
+}
+
+/* ==========================================================================
+   Sign in, node 1.1 and its two states
+   Folded from the screens at stage 04 step 8. Carried across byte for byte:
+   consolidation moves rules, it never tidies them.
+   ========================================================================== */
+/* The gate column. Node 1.1 responsive: one centred column at 360 with the field and
+   the action full width, and the same column capped and centred on a wide canvas.
+   Nothing is added at width, so there is no second layout here, only a cap. */
+.wf-gate{ max-width:380px; margin:0 auto; }
+.wf-gate__brand{ margin-bottom:var(--wf-space-4); }
+.wf-gate h1{ margin-bottom:var(--wf-space-4); }
+/* Field label. A real label, above its field, ink rather than muted: it is the name of
+   the only thing being asked for. */
+.wf-label{ display:block; font-weight:600; margin-bottom:var(--wf-space-1); }
+/* Targets at 44 by 44, required by node 1.1 responsive. The control classes in _wf.css
+   are sized for dense analyst rows, so the gate raises them rather than redefining them. */
+.wf-gate .wf-field{ min-height:44px; }
+.wf-gate .wf-btn--full{ min-height:44px; margin-top:var(--wf-space-3); }
+/* The legal line, block 6, with the prior agreement clause. */
+.wf-legal{ color:var(--wf-muted); font-size:var(--wf-size-small);
+           margin-top:var(--wf-space-4); }
+@media (min-width:900px){
+  .wf-gate{ min-height:60vh; display:flex; flex-direction:column; justify-content:center; }
+}
