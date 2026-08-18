@@ -145,3 +145,21 @@ Full facts in `research/docs/competitors.md`. The grouping is the decision, the 
 **What the audit changed, and it is the argument for auditing before drawing.** The MVP footer could not render its own composition inside the MVP: its minimal variant is the only global surface the reader ever sees and all three of its targets were deferred. Repairing that moved the product page, the privacy policy and the terms of service into MVP, and moved "not readable without an account" out, because restriction is a workspace policy and in MVP every card is readable. **The MVP grew in the public surface rather than in the product.** The second pass then found what the first repair broke, and produced the rule that replaced nine separate annotations: a navigational element renders only the targets that exist in the current scope.
 
 **The finding that says most about the practice.** Node 3.1 quoted node 0.4 as canonical while rewording it, saying "Last answered" and "Source is down since" where the canon says "As of" and "Source is down. Last run". **The drift node 0.4 exists to prevent was committed by the node that cites it**, and it was caught by the second instrument rather than by the author, on a stage where thirty specifications cannot be held in one head.
+
+---
+
+## Stage 03b, the third pass, 2026-08-18
+
+**What the closing step actually closed.** Step 9 is a reconciliation of the map, the registry and the hub, and it was recorded as done in the log and in the commit. It ran on `sitemap.md` and stopped there. The three published pages and the bank table kept asserting the version of the product that existed before the step 8 audit: `sitemap.html` had no node 3.5, still called 2.9 an MVP state and still called the product page, the privacy policy and the terms of service deferred; `structure.html` carried "41 nodes, 30 MVP" in its masthead and, two screens below, an audit row announcing the corrected count; `concept-map.html` said the concept had expanded into 37 nodes on one screen and 42 on another.
+
+**Why it matters more than a typo.** `ia/sitemap.html` is what stage 04 reads as its list of screens. Handing it over unrepaired would have given the wireframes a scope the audit had already corrected, and the correction it would have lost is the one that keeps the MVP footer from shipping three links that 404.
+
+**The rule this produced, and it is now in `CLAUDE.md`.** A repair is finished when the render agrees with its source, not when the source is right. The closing check of every later stage reads what a person opens, not what the author edited.
+
+**The third instrument was the thing that had been skipped, and it is the reason the rest stayed hidden.** The stage contract calls for the contract itself to be walked as a checklist, separately from the defect tables, because both audit instruments read what exists and a step that never happened leaves no trace in any file. It had not been run. Running it produced three of the six repairs above, including the missing start list for the deferred round: nine nodes carried a ПОТІМ label across eight tables and existed as a list nowhere, so the next round would have begun by re-deriving them.
+
+**Two smaller findings, recorded because they are the same class.** The map's heading said "Five nodes with no parent" over a list of six, and the tree page listed five and omitted 0.4, the state vocabulary. Both are sentences that were true when written and were never re-read after the thing they counted changed.
+
+**One defect that no reading would have found.** A tag-balance scan of every published page turned up an unclosed `div` on `concept-map.html`: the build-order note was rendering nested inside the note above it. The scan is now clean across all 22 IA and research pages, and it costs one command, which makes it worth running at the close of every stage that ships html.
+
+**What is now visible on the page.** `structure.html` carries a third table in "Was to became" and a new section, "The stage contract, line by line", with three verdicts of not done in it. A checklist with no "not done" row was filled in formally rather than run, so those rows stay.

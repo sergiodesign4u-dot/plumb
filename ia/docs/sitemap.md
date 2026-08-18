@@ -51,7 +51,7 @@ A metric has one current definition version and a pointer to the previous one; n
 
 **Language fork, checked before the first node.** `CLAUDE.md` records one language, English, so no node multiplies by language.
 
-**How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the five nodes with no parent are named below.
+**How to read a node.** `X.Y` where X is the cluster and Y is a step or a state inside it. Type is page, dialog, state, flow or section. Group is `global` or `pages` and is exactly the value in `ia/_nav.js`, which is what sorts the chips on the hub. Scope is carried over from the base layer, not re-derived; derived nodes inherit the label of the screen they belong to, and the six nodes with no parent are named below.
 
 **Eight clusters, 42 nodes, 33 of them MVP.** Four were added at step 3: three the footer promised, and the state vocabulary, which turned out to be a canonical list consumed by four surfaces rather than a paragraph inside the card. **3.5 was added at step 6** and the counts were revised at step 8. The number rose because states and dialogs are nodes now, not notes. Seven MVP screens in the base layer became 33 MVP nodes, and that is the honest count the two estimates in this stage depend on.
 
@@ -166,7 +166,26 @@ Jobless by construction, and that is recorded rather than repaired.
 | 7.3 | Maintenance | page | pages | Duration if known | Retry | Both | ПОТІМ |
 | 7.4 | Cookie notice | section | global | Consent, only if anything is set | Dismiss | Legal | ПОТІМ |
 
-### Five nodes with no parent, each named out loud
+
+### The nine deferred nodes, collected as a list rather than left as labels
+
+**A scope label scattered across eight tables is not a start list.** The next round would begin by re-deriving it, which is how a deferred node becomes a forgotten one. The nine are here with what each one waits on, and the list is the entry point of the ПОТІМ round.
+
+| Node | Type | What it waits on |
+| --- | --- | --- |
+| **2.9** State: not readable without an account | state | Cluster 5. Restriction is a workspace policy, so this state cannot fire until there is a policy to set it |
+| **5.1** Workspace and people | page | A workspace with more than one analyst. It serves tenancy and closes no job, which is why it earns no MVP surface |
+| **5.2** Plan and seats | page | The business model hypothesis in `research/docs/research.md`, still open: this market has no reader-pricing norm to inherit |
+| **6.2** Trust and security | page | The SOC 2 position becoming real. The page is the buyer's surface and the buyer is deliberately not a persona |
+| **6.3** Pricing | page | The same hypothesis as 5.2. A pricing page written before the model is decided is a claim we would have to withdraw |
+| **6.4** Documentation | page | Enough product for there to be something to document |
+| **6.7** Support and contact | page | A route to a person that actually exists. It is the one node of its type that is not a document |
+| **7.3** Maintenance | page | Nothing structural, it is cheap and rare. It stays deferred rather than dropped because 7.1 and 7.2 already carry the shell it reuses |
+| **7.4** Cookie notice | section | The analytics decision on the public card, which is the discrepancy named below rather than a legal question |
+
+**Two of the nine are specified anyway, and that is deliberate rather than scope creep.** 2.9 is written inside `number-card.md` because a state omitted from its parent's matrix reads as an oversight to stage 04, and 5.2 is written inside `workspace.md` because the settings shell is defined once. Neither gets a wireframe in the MVP round.
+
+### Six nodes with no parent, each named out loud
 
 The scope label was assigned here, because there was nothing to inherit it from.
 

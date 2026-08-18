@@ -32,22 +32,24 @@ Stage 03b, step 4. **This file exists to stop the composition of a page being in
 
 ## Type estimate, agreed at the gate
 
-Nodes are grouped by page type, not one by one. States and dialogs inherit the type of their parent, which is what keeps 41 nodes at eight types instead of forty.
+Nodes are grouped by page type, not one by one. States and dialogs inherit the type of their parent, which is what keeps 42 nodes at eight types instead of forty.
+
+**The table below was agreed at the step 4 gate and is recounted here after the step 8 audit**, which moved 6.1, 6.5 and 6.6 into the MVP and 2.9 out of it, and after step 6 added 3.5. The round column is left as it was decided, because what was collected in the first round is a fact about the work and not a number to be revised.
 
 | Type | Nodes | Total | MVP | In this round |
 | --- | --- | --- | --- | --- |
-| **T1. Object detail, the read surface** | 2.1 to 2.10 | 10 | 10 | Yes |
-| **T2. Listing with search** | 3.1, 4.1, 4.2, 4.3 | 4 | 4 | Yes |
+| **T1. Object detail, the read surface** | 2.1 to 2.10 | 10 | 9 | Yes |
+| **T2. Listing with search** | 3.1, 3.5, 4.1, 4.2, 4.3 | 5 | 5 | Yes |
 | **T3. Form and editor** | 3.2 to 3.4, 4.4 to 4.7 | 7 | 7 | Yes |
 | **T4. Gate (SSO)** | 1.1 to 1.3 | 3 | 3 | Yes |
 | **T8. System page** | 7.1 to 7.4 | 4 | 2 | Yes |
-| **T6. Public landing** | 6.1, 6.2, 6.3 | 3 | 0 | **Yes, for 6.1 only.** 6.2 and 6.3 collected in the ПОТІМ round |
+| **T6. Public landing** | 6.1, 6.2, 6.3 | 3 | 1 | **Yes, for 6.1 only.** 6.2 and 6.3 collected in the ПОТІМ round |
 | T5. Account settings | 5.1, 5.2 | 2 | 0 | Deferred, **collected in the ПОТІМ round** |
-| T7. Content, legal, support | 6.4 to 6.7 | 4 | 0 | Deferred, **collected in the ПОТІМ round** |
+| T7. Content, legal, support | 6.4 to 6.7 | 4 | 2 | Deferred, **collected in the ПОТІМ round**, though 6.5 and 6.6 are MVP after the audit and are specified in the legal map |
 | T0. Global frame | 0.1 to 0.4 | 4 | 4 | Done at steps 2 and 3 |
-| | | **41** | **30** | |
+| | | **42** | **33** | |
 
-**Why an all-ПОТІМ type is in the round anyway.** In the MVP subset there is **not one indexed page**: the card is public but noindex by the decision at node 0.2, and the registry, sources, sign-in and system pages are all noindex. The SEO layer belongs to this stage, and with T6 left out it would have no subject at all. **6.1 is taken in as the SEO reference**, and it shares the canonical card component with T1, so the two are cheaper together than apart.
+**Why a type with no MVP node was in the round anyway.** This was the reasoning at the step 4 gate, when T6 held nothing in the MVP. In the MVP subset there was **not one indexed page**: the card is public but noindex by the decision at node 0.2, and the registry, sources, sign-in and system pages are all noindex. The SEO layer belongs to this stage, and with T6 left out it would have no subject at all. **6.1 is taken in as the SEO reference**, and it shares the canonical card component with T1, so the two are cheaper together than apart.
 
 **Deferred, collected here so they are not lost:** T5 (2 nodes) and T7 (4 nodes). Both are entirely ПОТІМ and neither blocks anything in the MVP round.
 

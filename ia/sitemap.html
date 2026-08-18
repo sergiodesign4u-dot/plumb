@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sitemap - Plumb</title>
-<meta name="description" content="The node map of Plumb as a tree: eight clusters, 41 nodes, 30 of them MVP, with states and dialogs counted as nodes rather than notes.">
+<meta name="description" content="The node map of Plumb as a tree: eight clusters, 42 nodes, 33 of them MVP, with states and dialogs counted as nodes rather than notes.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fcfcfa'/%3E%3Cpath d='M9 7h6a5 5 0 0 1 0 10H9V7zm0 12h14' stroke='%231f5c4e' stroke-width='2.4' fill='none'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../_nav.css">
 <link rel="stylesheet" href="../research/_page.css">
@@ -43,11 +43,11 @@
 
   <header class="masthead">
     <p class="kicker">Plumb &middot; Stage 03b &middot; Information Architecture</p>
-    <h1>Forty-one nodes, because a state is a node and not a note</h1>
-    <p class="standfirst lede">The concept map said which screens exist. This is the tree they expand into: eight clusters, every node numbered, states and dialogs counted separately. Seven MVP screens became 30 MVP nodes, and the map keeps growing as one node promises another.</p>
+    <h1>Forty-two nodes, because a state is a node and not a note</h1>
+    <p class="standfirst lede">The concept map said which screens exist. This is the tree they expand into: eight clusters, every node numbered, states and dialogs counted separately. Seven MVP screens became 33 MVP nodes, and the map keeps growing as one node promises another.</p>
     <div class="dateline">
-      <span>Drawn 2026-08-11</span>
-      <span>41 nodes, 30 MVP</span>
+      <span>Drawn 2026-08-11, rebuilt 2026-08-18</span>
+      <span>42 nodes, 33 MVP</span>
       <span>Source: <code>ia/docs/sitemap.md</code></span>
     </div>
   </header>
@@ -84,20 +84,20 @@ graph TD
     classDef mvp fill:#eaf2ee,stroke:#1f5c4e,color:#14161a;
     classDef later fill:#f6f5f1,stroke:#c9c6bf,color:#6b7076;
     classDef mixed fill:#fcfcfa,stroke:#c9c6bf,color:#14161a;
-    class C0,C1,C2,C3,C4 mvp;
-    class C5,C6 later;
-    class C7 mixed;
+    class C0,C1,C3,C4 mvp;
+    class C5 later;
+    class C2,C6,C7 mixed;
       </pre>
     </div>
 
-    <p class="note">Green clusters are entirely MVP. Grey are entirely ПОТІМ. The system cluster is mixed: 404 and 500 are MVP, maintenance and the cookie notice are not. Dotted arrows are global elements and system pages, which attach to everything rather than sitting in a sequence.</p>
+    <p class="note">Green clusters are entirely MVP. Grey are entirely ПОТІМ. Three are mixed after the step 8 audit: the card carries one deferred state (2.9), the public surface carries the three pages the footer needs (6.1, 6.5, 6.6), and the system cluster holds 404 and 500 in MVP while maintenance and the cookie notice wait. Dotted arrows are global elements and system pages, which attach to everything rather than sitting in a sequence.</p>
 
     <div class="pills" id="pills">
-      <button class="pill" data-c="all" aria-pressed="true">All<i>41</i></button>
+      <button class="pill" data-c="all" aria-pressed="true">All<i>42</i></button>
       <button class="pill" data-c="0" aria-pressed="false">0 Global frame<i>4</i></button>
       <button class="pill" data-c="1" aria-pressed="false">1 Sign in<i>3</i></button>
       <button class="pill" data-c="2" aria-pressed="false">2 Number card<i>10</i></button>
-      <button class="pill" data-c="3" aria-pressed="false">3 Sources<i>4</i></button>
+      <button class="pill" data-c="3" aria-pressed="false">3 Sources<i>5</i></button>
       <button class="pill" data-c="4" aria-pressed="false">4 Registry<i>7</i></button>
       <button class="pill" data-c="5" aria-pressed="false">5 Workspace<i>2</i></button>
       <button class="pill" data-c="6" aria-pressed="false">6 Public<i>7</i></button>
@@ -127,7 +127,7 @@ graph TD
 
     <div class="cl" data-c="2">
       <h3>2. The number card</h3>
-      <p class="meta">10 nodes, 10 MVP. The reader's whole product, and the one thing we have to win on.</p>
+      <p class="meta">10 nodes, 9 MVP. The reader's whole product, and the one thing we have to win on. The exception is 2.9, which moved to ПОТІМ at step 8: it inherits from the workspace policy that produces it, not from the card.</p>
       <div class="nodes">
         <div><span class="n">2.1</span> The number card <span class="ty">page</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">2.2</span> Loading: value queried at read time <span class="ty">state</span><span class="sc mvp">MVP</span></div>
@@ -137,19 +137,20 @@ graph TD
         <div><span class="n">2.6</span> Empty: the query returned nothing <span class="ty">state</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">2.7</span> Where this number came from <span class="ty">section</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">2.8</span> Send this number <span class="ty">dialog</span><span class="sc mvp">MVP</span></div>
-        <div><span class="n">2.9</span> State: not readable without an account <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">2.9</span> State: not readable without an account <span class="ty">state</span><span class="sc later">ПОТІМ</span></div>
         <div><span class="n">2.10</span> State: the owner is named, the number is not shown <span class="ty">state</span><span class="sc mvp">MVP</span></div>
       </div>
     </div>
 
     <div class="cl" data-c="3">
       <h3>3. Sources</h3>
-      <p class="meta">4 nodes, 4 MVP.</p>
+      <p class="meta">5 nodes, 5 MVP. 3.5 was discovered at step 6 and inherits its label from 3.1.</p>
       <div class="nodes">
         <div><span class="n">3.1</span> Sources <span class="ty">page</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">3.2</span> Connect a source <span class="ty">page</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">3.3</span> Loading: testing the connection <span class="ty">state</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">3.4</span> Error: connection failed <span class="ty">state</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">3.5</span> Empty: no sources connected <span class="ty">state</span><span class="sc mvp">MVP</span></div>
       </div>
     </div>
 
@@ -178,14 +179,14 @@ graph TD
 
     <div class="cl" data-c="6">
       <h3>6. Public surface</h3>
-      <p class="meta">7 nodes, 0 MVP. Jobless by construction, and recorded rather than repaired. Three of them were added by the footer, which promised them.</p>
+      <p class="meta">7 nodes, 3 MVP after the step 8 audit. Jobless by construction, and recorded rather than repaired. Three of them were added by the footer, which promised them, and the same three are what the audit moved into the MVP so that footer does not ship pointing at 404s.</p>
       <div class="nodes">
-        <div><span class="n">6.1</span> Product page <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">6.1</span> Product page <span class="ty">page</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">6.2</span> Trust and security <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
         <div><span class="n">6.3</span> Pricing <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
         <div><span class="n">6.4</span> Documentation <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
-        <div><span class="n">6.5</span> Privacy policy <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
-        <div><span class="n">6.6</span> Terms of service <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
+        <div><span class="n">6.5</span> Privacy policy <span class="ty">page</span><span class="sc mvp">MVP</span></div>
+        <div><span class="n">6.6</span> Terms of service <span class="ty">page</span><span class="sc mvp">MVP</span></div>
         <div><span class="n">6.7</span> Support and contact <span class="ty">page</span><span class="sc later">ПОТІМ</span></div>
       </div>
     </div>
@@ -204,7 +205,7 @@ graph TD
 
   <!-- Notes ............................................................. -->
   <section id="notes">
-    <div class="sec-head"><span class="sec-num">02</span><h2>Five nodes with no parent, and one discrepancy</h2></div>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Six nodes with no parent, four labels the audit changed, and one discrepancy</h2></div>
 
     <p>Scope labels are carried over from the base layer, not re-derived. Five nodes had nothing to inherit from, so the label was assigned here and each is named out loud.</p>
 
@@ -214,7 +215,10 @@ graph TD
       <li><strong>0.3 Toast and inline feedback, MVP.</strong> Sending a link, saving a definition and failing at either need somewhere to say what happened.</li>
       <li><strong>7.1 404, MVP, and it matters more here than in most products.</strong> The reader's only entrance is a link, so a broken or expired link is their first contact with us rather than a rare edge.</li>
       <li><strong>7.2 500, MVP</strong>, for the same reason.</li>
+      <li><strong>0.4 State vocabulary, MVP.</strong> Found while looking for what else is global. Three states are consumed by the card, the registry rows, the search results and the definition editor, and a vocabulary that is not canonical drifts: the registry would say "stale", the card "out of date" and the editor "changed".</li>
     </ul>
+
+    <p><strong>Four scope labels changed at the step 8 audit, and the tree above carries the result rather than the original.</strong> The MVP footer could not render its own minimal composition inside the MVP: its minimal variant carries privacy, terms and one route to what Plumb is, and all three targets were ПОТІМ. <strong>6.1, 6.5 and 6.6 moved into the MVP</strong>, because a publicly reachable product cannot ship a footer whose every link is a 404, and node 1.1 already says "you agree to the Terms of Service". In the other direction, <strong>2.9 moved out</strong>: restriction is a workspace policy, cluster 5 is entirely deferred, so in MVP every card is readable and that state cannot fire. The MVP grew from 31 nodes to 33, <strong>in the public surface rather than in the product</strong>, and that is the honest price of shipping a page a stranger can open.</p>
 
     <p><strong>One discrepancy, not corrected silently.</strong> The cookie notice is labelled ПОТІМ because the market is US B2B and GDPR was deliberately deferred. But the public card with no account will almost certainly carry analytics, and at that point the question stops being legal and becomes a product question <strong>on the very screen where we promise to store nothing about the reader</strong>. The label stays, the discrepancy is recorded, and the system-nodes step comes back to it.</p>
   </section>

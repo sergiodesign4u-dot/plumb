@@ -41,8 +41,8 @@
     <h1>Every node, one chip at a time</h1>
     <p class="standfirst lede">The launcher for the detail layer. Each node gets a specification and its own page, and appears here as a chip the moment it is written. This hub fills up as the work proceeds rather than being drawn all at once.</p>
     <div class="dateline">
-      <span>Opened 2026-08-11</span>
-      <span>41 nodes planned, 30 of them MVP</span>
+      <span>Opened 2026-08-11, reconciled 2026-08-18</span>
+      <span>42 nodes, 33 of them MVP, on 18 pages</span>
       <span>Registry: <code>ia/_nav.js</code></span>
     </div>
   </header>
@@ -260,7 +260,92 @@
       </table>
     </div>
 
+    <div class="tw">
+      <table>
+        <caption>Third pass, 2026-08-18, and it is about a repair that was recorded rather than made</caption>
+        <thead><tr><th>Was</th><th>Became</th></tr></thead>
+        <tbody>
+          <tr><td><strong>The tree on <code>sitemap.html</code> was frozen before the audit.</strong> Node 3.5 was absent, 2.9 still read MVP, and 6.1, 6.5 and 6.6 still read ПОТІМ. <strong>This is the page stage 04 reads as its list of screens</strong>, so it would have handed the next stage the scope the audit had already corrected</td><td>The tree rebuilt from <code>sitemap.md</code>: 3.5 added, all four labels carried over, cluster meta lines and the filter counts recounted, and the three mixed clusters coloured as mixed instead of green and grey</td></tr>
+          <tr><td><strong>Four stale counts survived on two published pages</strong>, including the badge on this one, while the row above declares the same counts repaired. The second pass repaired the sentences in the sources and never rebuilt the renders</td><td>42 nodes, 33 MVP everywhere: the badge here, the H1, the standfirst, the meta description and the dateline on the tree, and the type estimate in <code>blocks.md</code></td></tr>
+          <tr><td><code>concept-map.html</code> said the concept expanded into <strong>37 nodes</strong> two screens above its own line saying 42</td><td>One number, and it matches the map</td></tr>
+          <tr><td>The map's heading read <strong>"Five nodes with no parent"</strong> over a list of six, and the tree page listed only five, omitting 0.4</td><td>Six in both, with 0.4 written out: it was found while looking for what else is global, and it has no parent to inherit from</td></tr>
+          <tr><td><strong>The ПОТІМ round had no start list.</strong> Deferred <em>types</em> were collected in the bank, deferred <em>nodes</em> nowhere, so the next round would begin by re-deriving them from scope labels</td><td>The nine deferred nodes collected as a list in <code>sitemap.md</code>, each with what it waits on</td></tr>
+          <tr><td><strong>An unclosed <code>div</code> on <code>concept-map.html</code></strong>, so the build-order note rendered nested inside the note above it. Found by a tag-balance scan of every published page, which is the kind of check no reading catches</td><td>Closed, and the scan is clean across all 22 IA and research pages</td></tr>
+          <tr><td><strong>The contract checklist, the third instrument, was never run.</strong> Both audit instruments read what exists, so a step that did not happen is invisible to both. This whole table is what that gap was hiding</td><td>Run below, as its own section and its own table, deliberately not mixed with the defects above</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <p><strong>One verdict is ours against the second instrument.</strong> Codex read node 4.1's "no loading state for the table" against the map's route from 4.5 into 4.1 and called it an unresolved rule. <strong>Not confirmed:</strong> arriving from 4.5 is a navigation into a rendered list, not a state of the list. The row survives as a clarifying clause in 4.1 rather than as a change, and it is recorded here rather than dropped, because a finding we disagreed with is still evidence about where the documents read ambiguously.</p>
+  </section>
+
+  <!-- Contract .......................................................... -->
+  <section id="contract">
+    <div class="sec-head"><span class="sec-num">04</span><h2>The stage contract, line by line</h2></div>
+
+    <p><strong>The third instrument, and it is deliberately not mixed with the tables above.</strong> Both audit instruments read what exists, so neither can see a step that never happened: there is no file to find it in and no page to find it on. This pass walks the stage contract instead, every input, every gate and every closing condition, and answers done, not done, or deliberately skipped with a reason. <strong>A pass with no "not done" row in it was run formally rather than really</strong>, which is why the two rows below that say not done are the ones worth reading.</p>
+
+    <div class="tw">
+      <table>
+        <caption>Inputs and outputs</caption>
+        <thead><tr><th>The contract line</th><th>Verdict</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Reads the base sitemap, flows, jtbd, cjm-as-is and competitors</td><td><strong>Done</strong></td><td>Scope labels carried over rather than re-derived, blocks traced to As-Is barriers by their S-numbers, and the competitor set is where every domain source in the bank comes from</td></tr>
+          <tr><td>Hands stage 04 the A to E copy, the state sets and the component decisions per node</td><td><strong>Done</strong></td><td>18 node sources in <code>ia/docs/pages/</code>, all built on the same template, four of them carrying a full A to E block and the rest declaring noindex with a reason</td></tr>
+          <tr><td>Hands stage 04 the node map as its list of screens</td><td><strong>Not done, repaired 2026-08-18</strong></td><td>The tree render was frozen before the step 8 audit. See the third-pass table above: this is the finding that justified running this checklist at all</td></tr>
+          <tr><td>Hands stage 04 the B/W tokens to inherit rather than a new visual language</td><td><strong>Done</strong></td><td>Every node page renders from the shared <code>research/_page.css</code>, and colour appears only in flow diagrams and page chrome, never in a mockup</td></tr>
+          <tr><td>The bank is read by steps 5 and 6 of this stage</td><td><strong>Done</strong></td><td>Node sources cite their bank rows; the blocks added past the bank were given rows rather than kept quiet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Gates</caption>
+        <thead><tr><th>The gate</th><th>Verdict</th><th>Evidence</th></tr></thead>
+        <tbody>
+          <tr><td>Entry gate: the five input files present before step 1</td><td><strong>Done</strong></td><td>All five existed and were closed stages</td></tr>
+          <tr><td>One node at a time, shown, then wait</td><td><strong>Done</strong></td><td>The commit sequence of the stage is one node or one step per commit, never a batch</td></tr>
+          <tr><td>Structure first, pages second</td><td><strong>Done</strong></td><td>Map, navigation, footer and the remaining globals were written before any page, and the four global nodes carry state matrices rather than decoration</td></tr>
+          <tr><td>Two estimates, both gated: types at step 4, clusters at step 6</td><td><strong>Done, one of them recorded thinly</strong></td><td>The type estimate is a table in the bank. The cluster estimate was agreed at the gate in session and never written down as a table of its own; its numbers now live in the cluster meta lines of the tree, which is where the next stage would look anyway</td></tr>
+          <tr><td>Scope labels carried, never re-derived, and a wrong inheritance named rather than fixed quietly</td><td><strong>Done</strong></td><td>2.9 is the case: it does not inherit from its parent card, and the exception is written in the map, in the bank and in the node source</td></tr>
+          <tr><td>Refero available, or stop and ask</td><td><strong>Done, it was available</strong></td><td>Craft sources R1 to R4 and more, each a dated Refero page, including one kept as a counter-reference</td></tr>
+          <tr><td>A page type nobody publishes: stop, name the substitute, do not imitate</td><td><strong>Done</strong></td><td>T1, T2 and T3 carry 21 MVP nodes and have no openable competitor page. The substitute is named as documentation plus our own research, and the comparison column holds a barrier instead of a comparison</td></tr>
+          <tr><td>SEO decided here, layout validated later, real volumes in production</td><td><strong>Done</strong></td><td>Every indexed node carries finished copy, headings, schema and a canonical; private and transactional zones say noindex and why</td></tr>
+          <tr><td>B/W until the concept stage</td><td><strong>Done</strong></td><td>No colour in any mockup, verified across all 18 node pages</td></tr>
+          <tr><td>Canonical components defined once, with the list of copies recorded</td><td><strong>Done</strong></td><td>2.1 the card, 4.1 the listing, 2.8 the dialog, 7.1 the error page, 6.4 the document shell, 5.1 the settings shell, 0.4 the state wording, each naming where it is reused</td></tr>
+          <tr><td>Discover-as-you-go, registered twice: in the map and in the chip registry</td><td><strong>Done</strong></td><td>The four nodes the footer and the state work produced are in both, and so is 3.5, which appeared at step 6</td></tr>
+          <tr><td>Two registries, separate namespaces, the hub loading both</td><td><strong>Done</strong></td><td>The roadmap renders from the root registry, the chips from <code>ia/_nav.js</code>, and no node page loads the second one</td></tr>
+          <tr><td>Every node page cross-links back with its hash</td><td><strong>Done</strong></td><td>All 18 carry <code>structure.html#X.Y</code>, which is what makes the active chip light up</td></tr>
+          <tr><td>One source of truth per artefact: md first, then the render</td><td><strong>Not done, repaired 2026-08-18</strong></td><td>The step 8 repairs went into the md sources and stopped there. Three published pages and one bank table kept asserting the pre-audit version, which is the same defect class the second pass was created to catch, one layer further out</td></tr>
+          <tr><td>Real data, uncertainty left as a marker</td><td><strong>Done</strong></td><td>Competitor pages opened and dated in session, the cookie question grounded in the actual market decision, and the open holes left as markers rather than filled with plausible text</td></tr>
+          <tr><td>Audit in two instruments over both axes, plus a second pass over the touched nodes</td><td><strong>Done</strong></td><td>Thirteen findings, then nine, every one verified in the file before repair, with one verdict recorded against the second instrument</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tw">
+      <table>
+        <caption>Closing conditions</caption>
+        <thead><tr><th>Condition</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>The node map is complete and every node carries a scope label</td><td><strong>Done.</strong> 42 nodes, 33 MVP, counted from the tables rather than from prose</td></tr>
+          <tr><td>The tree matches the map and the hub carries every node as a chip</td><td><strong>Done after today's repair.</strong> The chips were always right; the tree was not</td></tr>
+          <tr><td>Every node in the agreed scope has an md source and a B/W render, desktop and 360</td><td><strong>Done.</strong> 18 sources, 18 renders, 18 chips. The single node without device frames is 0.4, which is a wording vocabulary and has no layout of its own, and the template records that deviation for the global sections</td></tr>
+          <tr><td>Deferred nodes collected as a list rather than left as labels</td><td><strong>Not done, repaired 2026-08-18.</strong> The nine are now a table in the map, each with what it waits on</td></tr>
+          <tr><td>Structural nodes carry a state matrix, anatomy, transitions and an accessibility note</td><td><strong>Done</strong> for all four global nodes</td></tr>
+          <tr><td>Every indexed page carries A to E; private zones carry noindex and no schema</td><td><strong>Done.</strong> The legal bodies stay a marker on purpose: they are counsel's deliverable</td></tr>
+          <tr><td>System nodes exist and none is a dead end</td><td><strong>Done.</strong> 7.1 routes by role, and the tombstone object exists so that a dead link can still name an owner</td></tr>
+          <tr><td>The bank works as a source, and its weaknesses are stated rather than smoothed</td><td><strong>Done.</strong> The missing domain half for three types is the first thing the bank says about itself</td></tr>
+          <tr><td>The audit is visible on the page as "was to became"</td><td><strong>Done</strong>, now in three passes</td></tr>
+          <tr><td>The concept map has not frozen</td><td><strong>Done after today's repair.</strong> Its expansion line contradicted its own matrix by five nodes</td></tr>
+          <tr><td>Closing ritual: rules in the project file, one status line in the readme, grounds in the decision log</td><td><strong>Done</strong></td></tr>
+          <tr><td>The contract walked as a checklist by a third instrument</td><td><strong>Not done at closing, done 2026-08-18.</strong> This section is it, and it found three of the six rows in the third-pass table above</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>What this pass says about the practice, and it is not comfortable.</strong> The step 8 audit was thorough where it looked: two instruments, both axes, a second pass, every finding verified. <strong>It looked at the sources and not at what a reader opens.</strong> The counts it corrected were corrected in the md and announced as repaired on a page that still carried the old ones two screens above the announcement. The rule that comes out of this is narrow enough to be useful: <strong>a repair is not done when the source is right, it is done when the render agrees with the source</strong>, and the closing step of a stage checks the render.</p>
   </section>
 
   <footer class="note">
@@ -281,7 +366,8 @@
   window.NAV_SECTIONS = [
     { id:'hub',  label:'Nodes' },
     { id:'bank',  label:'Block bank by type' },
-    { id:'audit', label:'Was to became' }
+    { id:'audit', label:'Was to became' },
+    { id:'contract', label:'Stage contract' }
   ];
 </script>
 <script src="../_nav.js"></script>
