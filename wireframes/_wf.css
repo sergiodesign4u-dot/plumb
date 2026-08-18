@@ -166,10 +166,16 @@ a{ color:inherit; }
   .wf-row{ grid-template-columns:180px 1fr; gap:var(--wf-space-3); align-items:baseline; }
 }
 
-/* Dialog, node 2.8. A sheet from the bottom on a phone, a panel over the card on a wide
-   canvas, and the card stays legible behind it in both. */
+/* Dialog, node 2.8. A sheet from the bottom on a phone, a centred panel over the card on
+   a wide canvas, and the card stays legible behind it in both. Node 2.8 defines the
+   dialog for the whole product, so later dialogs reuse this rather than restating it. */
 .wf-dialog{ border:1px solid var(--wf-ink); background:var(--wf-surface);
-            padding:var(--wf-space-3); margin-top:var(--wf-space-3); }
+            padding:var(--wf-space-3); position:fixed; left:0; right:0; bottom:0;
+            z-index:2; max-height:80vh; overflow:auto; }
+@media (min-width:700px){
+  .wf-dialog{ left:50%; right:auto; bottom:auto; top:40%; transform:translate(-50%,-40%);
+              width:min(420px, calc(100vw - 2 * var(--wf-space-4))); }
+}
 .wf-dialog__link{ font-family:var(--wf-mono); font-size:var(--wf-size-small);
                   border:1px solid var(--wf-rule-strong); background:var(--wf-panel);
                   padding:var(--wf-space-2); word-break:break-all; }

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly active accounts - Plumb</title>
+<!-- SEO layer 2, validation only. Decided at node 2.1 block A: noindex because indexing
+     a card would publish a customer's numbers, follow because every link leaving this
+     page goes to one of our own public pages. No canonical, no schema. -->
+<meta name="robots" content="noindex, follow">
+<meta property="og:title" content="Weekly active accounts">
+<meta property="og:description" content="Distinct accounts with at least one session in the last 7 days. The current value and where it came from are one click away.">
+<link rel="stylesheet" href="_wf.css">
+</head>
+<body>
+<div class="wf-shell">
+
+  <details class="wf-nav" id="wf-navshell" open>
+    <summary>Screens</summary>
+    <div id="wf-sidebar"></div>
+  </details>
+
+  <div class="wf-main">
+    <main class="wf-screen">
+
+      <article class="wf-card">
+        <!-- The card stays legible behind the dialog: the person is about to send this
+             number and may want to check it while the dialog is open -->
+        <div class="wf-behind">
+        <!-- 1. Metric name, the only H1 on the page -->
+        <h1 class="wf-card__name">Weekly active accounts</h1>
+        <!-- 2. The value -->
+        <p class="wf-value">18,432</p>
+        <!-- 3. The state line, directly beside the value. Wording from node 0.4 -->
+        <p class="wf-state">
+          <b>As of 14:05, 20 minutes ago</b>
+          <span>Expected hourly</span>
+        </p>
+        </div>
+        <!-- Node 2.8, and it defines the dialog for the whole product: focus trapped,
+             Escape closes, focus returns to the trigger, targets 44 by 44.
+             A sheet from the bottom at 360, a centred panel over the card at width -->
+        <section class="wf-dialog" role="dialog" aria-modal="true" aria-labelledby="send-title">
+          <h2 id="send-title">Send this number</h2>
+          <!-- 2. The link, visible and selectable. It wraps rather than truncates:
+               a truncated URL cannot be checked by eye -->
+          <p class="wf-dialog__link">plumb.app/m/8f2c41?v=7&amp;t=2026-08-12T14:25</p>
+          <!-- 3. What the recipient will see. The unfurl promise, made honest -->
+          <p class="wf-muted">They will see the metric name, the current definition and its state. The value is not in the preview.</p>
+          <!-- Feedback, node 0.3. The reader's only message in the entire product, and it
+               auto dismisses because nothing is lost: the link is in the clipboard and still
+               on screen -->
+          <p class="wf-toast" role="status">Link copied</p>
+          <p class="wf-actions">
+            <a class="wf-btn wf-btn--full" href="send-copied.html">Copy</a>
+            <a class="wf-btn wf-btn--quiet" href="send-copied.html">Share</a>
+            <a class="wf-btn wf-btn--quiet" href="number-card.html">Close</a>
+          </p>
+        </section>
+
+      </article>
+
+      <!-- 8. Footer, node 0.2, minimal variant, rendered by the global component -->
+      <div id="wf-footer"></div>
+    </main>
+
+    <p class="wf-note">Copied. The message is the reader's only one in the whole product, it announces politely rather than assertively, and it dismisses itself because nothing is lost: the link is in the clipboard and still on the screen. The dialog stays open, so the person can check what they just took.</p>
+
+  </div>
+</div>
+
+<script>
+  (function(){
+    var mq = window.matchMedia('(min-width:900px)'), el = document.getElementById('wf-navshell');
+    var sync = function(){ el.open = mq.matches; };
+    sync();
+    mq.addEventListener ? mq.addEventListener('change', sync) : mq.addListener(sync);
+  })();
+</script>
+<script src="_nav.js"></script>
+</body>
+</html>

@@ -46,10 +46,10 @@ window.WF_NAV = [
     { label:'Open on a bare URL', node:'2.7', file:'source-layer-bare-url.html' },
     { label:'Open with restricted visibility', node:'2.7', file:null, deferred:true }
   ]},
-  { cluster:'2. The number card', label:'Send this number', node:'2.8', scope:'MVP', file:null, spec:'send.html', status:'spec', flow:1, states:[
-    { label:'Copied', node:'0.3', file:null },
-    { label:'Clipboard unavailable', node:'2.8', file:null },
-    { label:'Sending a card that is down', node:'2.4', file:null }
+  { cluster:'2. The number card', label:'Send this number', node:'2.8', scope:'MVP', file:'send.html', spec:'send.html', status:'built', flow:1, states:[
+    { label:'Copied', node:'0.3', file:'send-copied.html' },
+    { label:'Clipboard unavailable', node:'2.8', file:'send-clipboard-unavailable.html' },
+    { label:'Sending a card that is down', node:'2.4', file:'send-source-down.html' }
   ]},
 
   { cluster:'3. Sources', label:'Sources', node:'3.1', scope:'MVP', file:null, spec:'sources.html', status:'spec', states:[
